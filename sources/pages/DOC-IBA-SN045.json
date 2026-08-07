@@ -5559,59 +5559,222 @@
     },
     {
       "page": 97,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 20 z 23'. 5.3 'Zadost o zpravu o stavu': der Statusbericht wird mit der SMS stav angefordert oder per Anruf, ausser in den Betriebsarten 2 und 3. Ohne gueltige Position meldet der Bericht \"Zadna pozice\", sendet aber die letzte gueltige Position; zusaetzlich Zustand beider Ausgaenge und Umgebungstemperatur. 5.4 'Dotaz na polohu pomoci smartphonu': die SMS poloha liefert eine Positionsmeldung mit Kartenlink. 5.5 'Ovladani vystupu prostrednictvim SMS' leitet die Ausgangssteuerung ein.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift und Einzug ausgezeichnet, nicht als Eingabewert semantisch markiert.",
+        "Zwischen 5.3 und dem GPS-Absatz steht ein unmotivierter Leerraum von rund zwei Zeilen.",
+        "Paginierungs-Diskrepanz: PDF-Seite 97 traegt die interne Nummer 'Strana 20 z 23'."
+      ],
+      "discrepancies": [
+        "Derselbe Befehlskonflikt wie in den anderen drei Sprachfassungen (DSC-014): Die Hilfe-SMS auf PDF-Seite 94 nennt \"STAV\" und \"POS\" in Grossschreibung, die Abschnitte 5.3 und 5.4 dagegen \"stav\" und \"poloha\". \"POS\" und \"poloha\" sind zudem verschiedene Woerter. Der Konflikt steht damit in vier von vier geprueften Fassungen.",
+        "Der Berichtstext ist als \"Zadna pozice\" ohne Diakritika gesetzt - dasselbe ASCII-Muster wie alle uebrigen Geraeteausgaben."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": [
+        "5.3 Zadost o zpravu o stavu",
+        "5.4 Dotaz na polohu pomoci smartphonu",
+        "5.5 Ovladani vystupu prostrednictvim SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "stav",
+          "context": "Exakter tschechischer SMS-Befehl fuer den Statusbericht. Deutsch und englisch: status, franzoesisch: rapport d etat.",
+          "safety_critical": true
+        },
+        {
+          "value": "poloha",
+          "context": "Exakter tschechischer SMS-Befehl fuer die Positionsmeldung. In allen anderen Fassungen: position.",
+          "safety_critical": true
+        },
+        {
+          "value": "ausser in den Betriebsarten 2 und 3",
+          "context": "Der Statusbericht kann alternativ per Anruf angefordert werden.",
+          "safety_critical": true
+        },
+        {
+          "value": "zwei getrennt steuerbare Ausgaenge",
+          "context": "Schaltbar dauerhaft, gepulst fuer eine Sekunde oder fuer eine frei waehlbare Dauer.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 9, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen zurueckhaltend; gemeldet werden nur Befunde aus dem Sprachvergleich oder aus Widerspruechen innerhalb derselben Seite. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 98,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 21 z 23'. Die drei Unterabschnitte von 5.5 zur Ausgangssteuerung: a zap und a vyp schalten Ausgang A dauerhaft ein und aus, a impuls schaltet ihn fuer eine Sekunde, a %min% fuer 1 bis 120 Minuten. Roter Abschlusshinweis: fuer Ausgang B wird der Buchstabe A in der SMS durch B ersetzt.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift und Einzug ausgezeichnet.",
+        "Der Hinweis zur Steuerung von Ausgang B ist nur durch rote Schrift und Trennlinien markiert.",
+        "Paginierungs-Diskrepanz: PDF-Seite 98 traegt die interne Nummer 'Strana 21 z 23'."
+      ],
+      "discrepancies": [
+        "Die Lokalisierung ist auch innerhalb der tschechischen Fassung nicht durchgaengig: a zap und a vyp sind uebersetzt, a impuls ist wortgleich mit dem Deutschen, und a %min% steht in allen Fassungen gleich. Dasselbe Muster wie im Franzoesischen, dort mit a %min% als einzigem unveraenderten Befehl.",
+        "In den Unterueberschriften 5.5.2 und 5.5.3 fehlt das Leerzeichen zwischen Nummer und Titel; 5.5.1 hat es. Derselbe Vorlagenfehler wie in den anderen Sprachfassungen, hier inkonsistent angewandt.",
+        "Satzumbruch mitten in der Angabe: \"poslete SMS s nasledujicim textem na cislo zarizeni.\" und in der Folgezeile allein \"Pro-finder:\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [
+        "Poznamka: Chcete-li ovladat vystup B, nahradte pismeno A v SMS zprave pismenem B."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "5.5.1 Trvale zapnuti vystupu",
+        "5.5.2 Zapinani vystupu pulzne (po dobu jedne sekundy)",
+        "5.5.3 Zapnuti vystupu na libovolne zvolenou dobu"
+      ],
+      "technical_values": [
+        {
+          "value": "a zap / a vyp",
+          "context": "Tschechische SMS-Befehle zum dauerhaften Ein- und Ausschalten von Ausgang A. Deutsch: a an / a aus, englisch: a on / a off, franzoesisch: activer / desactiver la sortie A.",
+          "safety_critical": true
+        },
+        {
+          "value": "a impuls",
+          "context": "Schaltet Ausgang A fuer eine Sekunde - wortgleich mit der deutschen Fassung, waehrend die englische a pulse setzt.",
+          "safety_critical": true
+        },
+        {
+          "value": "a %min% / 1 bis 120 Minuten",
+          "context": "Zeitgesteuerter Befehl; in allen vier geprueften Fassungen identisch.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 9, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen zurueckhaltend; gemeldet werden nur Befunde aus dem Sprachvergleich oder aus Widerspruechen innerhalb derselben Seite. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 99,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 22 z 23'. 5.6 'Spusteni rezimu vyuky': der Anlernmodus der WiPro III (safe.lock) wird mit uceni zap aktiviert und mit uceni vyp deaktiviert. 5.7 'Ziskat vozidlo': die Positionsangaben lassen sich in Kartenprogramme uebernehmen; ohne GPS-Empfang wartet der Pro-finder bis zu zehn Minuten auf eine gueltige Position und sendet danach den Statusbericht mit der letzten empfangenen Position. Bei Alarm und laufender Lichtmaschine wird die Position laufend erfasst; die UTC-Zeit entspricht immer der zuletzt empfangenen Position.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift ausgezeichnet.",
+        "Zwischen 5.6 und 5.7 steht ein unmotivierter Leerraum ohne strukturelle Bedeutung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 99 traegt die interne Nummer 'Strana 22 z 23'."
+      ],
+      "discrepancies": [
+        "Drei Bezeichnungen fuer denselben Modus auf einer Seite: die Ueberschrift nennt \"rezim vyuky\", der Fliesstext \"rezim uceni\" und zusaetzlich das englische \"rezim teach-in\". Der Befehl selbst lautet uceni zap."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [
+        "Der Anlernmodus heisst in Ueberschrift, Fliesstext und Befehl jeweils anders (vyuka, uceni, teach-in)."
+      ],
+      "headings": ["5.6 Spusteni rezimu vyuky", "5.7 Ziskat vozidlo"],
+      "technical_values": [
+        {
+          "value": "uceni zap / uceni vyp",
+          "context": "Tschechische SMS-Befehle fuer den Anlernmodus. Deutsch: anlernmodus an / aus, englisch: teach mode on / off, franzoesisch: activer / desactiver le mode d appairage.",
+          "safety_critical": true
+        },
+        {
+          "value": "bis zu zehn Minuten",
+          "context": "Wartezeit auf eine gueltige GPS-Position; danach Statusbericht mit der letzten empfangenen Position.",
+          "safety_critical": true
+        },
+        {
+          "value": "UTC entspricht der zuletzt empfangenen Position",
+          "context": "Die Uhrzeit bezieht sich auf die letzte Positionsbestimmung, nicht auf den Versand.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 9, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen zurueckhaltend; gemeldet werden nur Befunde aus dem Sprachvergleich oder aus Widerspruechen innerhalb derselben Seite. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 100,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["cs"],
+      "summary": "Letzte tschechische Inhaltsseite, intern 'Strana 23 z 23'. Kapitel 6 'Ruzne' mit 6.1 'Technicke udaje' (9-30 V, ca. 37 mA Netzsuche, ca. 16-21 mA Normalbetrieb, 2G/3G/4G (LTE) mit Baendern, zehn Zielrufnummern, GPS/QZSS, Ausgaenge 2 x 12 V/500 mA, -10 bis +80 Grad C, Nano SIM), 6.2 'Pokyny k likvidaci' mit WEEE-Symbol, 6.3 'Shoda/pokyny' mit CE-Zeichen und Richtlinie 2014/53/EU sowie 6.4 'Technicka podpora' mit Fachhaendlerhinweis, Website, Telefonnummer und E-Mail.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die technischen Daten sind eine Einzugsliste ohne Tabellenstruktur.",
+        "Die Zuordnung der eingerueckten Band-Zeilen entsteht allein durch den Einzug.",
+        "Die Links zur Konformitaetserklaerung und zum Support sind reiner Bildinhalt und weder kopierbar noch vorlesbar noch anklickbar.",
+        "Paginierungs-Diskrepanz: PDF-Seite 100 traegt die interne Nummer 'Strana 23 z 23'."
+      ],
+      "discrepancies": [
+        "Die Supportnummer ist hier korrekt (+49 4351 76744-112). Damit ist die beschaedigte Nummer der franzoesischen Fassung (DSC-032) fassungsspezifisch und kein Vorlagenfehler.",
+        "Die Links sind nicht lokalisiert: 6.3 verweist auf http://www.thitronik.de/en/support/downloads und 6.4 auf www.thitronik.de/en - beide auf die englische Seite. Die franzoesische Fassung verweist an denselben Stellen auf /fr/.",
+        "Der Fundort der Seriennummer bleibt auch hier unbestimmt. Damit ist DSC-023 in vier von vier geprueften Sprachfassungen belegt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "WEEE-Symbol (durchgestrichene Muelltonne) und CE-Zeichen neben den jeweiligen Texten.",
+          "has_text_equivalent": true,
+          "relies_on": "Beide Symbole stehen neben erklaerendem Text; die Aussage steht im Fliesstext."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Technicke udaje",
+          "columns": 2,
+          "rows": 13,
+          "has_header_row": false,
+          "note": "Zweispaltige Einzugsliste, nicht als Tabelle ausgezeichnet."
+        }
+      ],
+      "warnings_found": ["Po vyrazeni spotrebice z provozu jej nevyhazujte do domovniho odpadu."],
+      "terminology_findings": [],
+      "headings": [
+        "6 Ruzne",
+        "6.1 Technicke udaje",
+        "6.2 Pokyny k likvidaci",
+        "6.3 Shoda/pokyny",
+        "6.4 Technicka podpora"
+      ],
+      "technical_values": [
+        {
+          "value": "ca. 16-21 mA (Normalbetrieb)",
+          "context": "Stimmt mit der deutschen und der franzoesischen Fassung ueberein. Drei von vier Fassungen nennen den Bereich - die englische mit nur 21 mA ist der Ausreisser (DSC-020).",
+          "safety_critical": true
+        },
+        {
+          "value": "9-30 V / 2 x 12 V/500 mA / -10 bis +80 Grad C / Nano SIM / GPS/QZSS",
+          "context": "Uebrige technische Daten, deckungsgleich mit allen anderen Sprachfassungen.",
+          "safety_critical": true
+        },
+        {
+          "value": "+49 4351 76744-112",
+          "context": "Supportnummer - hier korrekt. Die franzoesische Fassung nennt an derselben Stelle eine beschaedigte Nummer (DSC-032).",
+          "safety_critical": false
+        }
+      ],
+      "inspected_note": "Batch 9, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen zurueckhaltend; gemeldet werden nur Befunde aus dem Sprachvergleich oder aus Widerspruechen innerhalb derselben Seite. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 101,

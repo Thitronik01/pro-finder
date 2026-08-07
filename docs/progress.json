@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 18.5,
+  "overall_percent": 18.8,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,7 +19,7 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 7.7,
+      "percent": 8,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
@@ -49,8 +49,8 @@
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 20,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF-Struktur und Resume-Protokoll angelegt; Staging-Abnahme offen."
+      "percent": 25,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF und Resume-Protokoll stehen; am 2026-08-07 kam RUECKFRAGEN_THITRONIK.md hinzu, das die belegten Befunde zu acht entscheidungsreifen Fragen buendelt. Staging-Abnahme weiterhin offen."
     }
   },
   "pdf_documents": [
@@ -65,10 +65,10 @@
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 9.7,
+      "percent": 10.1,
       "status_counts": {
-        "inspected": 96,
-        "not_started": 151
+        "inspected": 100,
+        "not_started": 147
       }
     },
     {
@@ -129,5 +129,5 @@
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8.",
     "Der tschechische Geofencing-Hinweis nennt zweimal denselben Zustand („odjištěn\") für Aktivierung und Deaktivierung (DSC-038); die Beschreibung des LED-Normalbetriebs ist sinnentstellt („rezervováno (recepce)\", DSC-039). Beide brauchen einen muttersprachlichen Review."
   ],
-  "next_action": "PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise prüfen (Ende des tschechischen Teils mit den fehlenden Ausgangs- und Anlernbefehlen sowie der Supportnummer, danach Beginn des dänischen Sprachteils)."
+  "next_action": "Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md, acht Fragen). Erst danach PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110, Beginn des dänischen Sprachteils."
 }

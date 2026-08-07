@@ -29,6 +29,11 @@ Stand: 2026-08-07. Der Pilot ist nicht freigabefähig; Details und Prozentwerte 
 - PDF-Batch 7: Seiten 77–86 – Beginn des tschechischen Teils bis interne Strana 9 z 23.
 - PDF-Batch 8: Seiten 87–96 – tschechischer Teil bis interne Strana 19 z 23, einschließlich
   LED-Tabelle, Kapitel 4 und dem Beginn der Funktionen.
+- PDF-Batch 9: Seiten 97–100 – Abschluss des tschechischen Teils. Damit sind vier
+  vollständige Sprachteile geprüft.
+- `docs/RUECKFRAGEN_THITRONIK.md` angelegt: acht entscheidungsreife Fragen mit wörtlichen
+  Belegen, sortiert nach Dringlichkeit. Das ist der Punkt, an dem der Pilot ohne Antworten
+  nicht sinnvoll weiterläuft.
 - CI ist erstmals vollständig grün: `npm ci`, Prüfkette, Produktions-Build, der
   Supabase-Job mit `db reset`, `db lint` und pgTAP sowie Playwright/axe mit 32 Tests.
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: **1 von 247 Seiten** enthält
@@ -137,11 +142,12 @@ Zwei weitere Befunde treffen Projektannahmen:
 
 ```text
 Resume from:
-Dokument DOC-IBA-SN045, PDF-Seite 97, Segment –, Sprache cs (danach da).
+Dokument DOC-IBA-SN045, PDF-Seite 101, Segment –, Sprache da.
 
 First action:
-PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise visuell prüfen. Dort stehen die noch
-fehlenden tschechischen Ausgangs- und Anlernbefehle (Tabelle in DSC-033 vervollständigen)
-und auf interner Strana 23 die Supportnummer – zu vergleichen mit der beschädigten
-französischen Angabe (DSC-032).
+RUECKFRAGEN_THITRONIK.md an THITRONIK geben. Die acht Fragen sind mit vier Sprachfassungen
+belegt; weitere Sprachteile schärfen sie nicht mehr wesentlich, sondern bestätigen nur das
+Muster. Erst nach den Antworten lohnt PDF-Batch 10 (Seiten 101–110, dänischer Teil) –
+oder vorgezogen die Segment-Extraktion des deutschen Masters, sobald die Befehlsfrage
+geklärt ist.
 ```

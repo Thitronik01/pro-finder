@@ -189,14 +189,19 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
 | --------------- | ---------------- | --------------- | ----------------------------- | --------------- |
 | Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      |
 | Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      |
-| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `STAV`          |
-| Position        | `position`       | `position`      | `position`                    | `POS`           |
-| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | noch offen      |
-| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | noch offen      |
-| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | noch offen      |
-| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | noch offen      |
-| Anlernmodus     | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | noch offen      |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`          |
+| Position        | `position`       | `position`      | `position`                    | `poloha`        |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`         |
+| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | `a vyp`         |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`      |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`       |
+| Anlernmodus ein | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap`     |
 | Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT |
+
+Vier geprüfte Sprachfassungen, vier eigene Befehlssätze. Nur `a %min%` lautet in allen
+vier gleich; `a impuls` ist in Deutsch und Tschechisch identisch, im Englischen aber
+übersetzt. Die Lokalisierung ist damit **nicht einmal in sich konsistent** – weder
+sprachübergreifend noch innerhalb einer Fassung.
 
 Die tschechischen Ausgangs- und Anlernbefehle stehen auf den internen Seiten 20–22
 (PDF-Seiten 97–99) und werden in Batch 9 ergänzt. `POS` ist bislang der einzige Befehl,

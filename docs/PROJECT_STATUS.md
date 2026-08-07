@@ -5,38 +5,40 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 18.5 %**
+**Gesamtfortschritt: 18.8 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 7.7 %       |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 8 %         |
 | Content-Modell und deutscher Master      | 20 %    | 10 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 25 %        |
 | Übersetzungspilot                        | 10 %    | 5 %         |
 | Accessibility-, Security- und Content-QA | 10 %    | 12 %        |
-| Staging und Übergabe                     | 5 %     | 20 %        |
+| Staging und Übergabe                     | 5 %     | 25 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 0 %         |
-| DOC-IBA-SN045 | 247    | 9.7 %       |
+| DOC-IBA-SN045 | 247    | 10.1 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise prüfen (Ende des tschechischen Teils mit den fehlenden Ausgangs- und Anlernbefehlen sowie der Supportnummer, danach Beginn des dänischen Sprachteils).
+Offene Blocker: 5 · Nächste Aktion: Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md, acht Fragen). Erst danach PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110, Beginn des dänischen Sprachteils.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon 100 visuell geprüft (`inspected`): DOC-IBA-SN045
-  Seiten 1–96 sowie beide Kurzanleitungen. Der deutsche, der englische und der
-  französische Sprachteil sind vollständig geprüft, der tschechische bis interne Seite 19;
+- 323 Seitenrecords angelegt; davon 104 visuell geprüft (`inspected`): DOC-IBA-SN045
+  Seiten 1–100 sowie beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
+  Englisch, Französisch, Tschechisch) sind damit geprüft; sechs stehen aus;
+- die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu acht
+  entscheidungsreifen Fragen gebündelt;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
   lesbaren Text, 34 Seiten liefern ausschließlich Steuerzeichen (Details in
   `IST_AUDIT.md`);
@@ -76,8 +78,9 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106
 
 1. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
    DSC-014, DSC-026, DSC-033). Vier geprüfte Sprachfassungen dokumentieren **vier
-   vollständig eigene Befehlssätze**; nur `POS` lautet überall gleich — die
-   Vergleichstabelle steht in DSC-033. Innerhalb einer Fassung
+   vollständig eigene Befehlssätze**; nur `a %min%` lautet überall gleich. Die
+   Vergleichstabelle steht in DSC-033, die Frage an THITRONIK in
+   [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) Punkt 1. Innerhalb einer Fassung
    stehen zudem `POS` und `position` nebeneinander, und im Französischen sind drei von vier
    Ausgangsbefehlen lokalisiert, der vierte nicht. Kein Befehl darf ohne technische Klärung
    veröffentlicht werden.

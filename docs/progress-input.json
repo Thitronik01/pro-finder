@@ -26,8 +26,8 @@
       "note": "npm run check läuft am 2026-08-07 erstmals vollständig grün (Format, Lint, Types, Unit, Content, Tokens, Karte, Referenz, Secrets, Fortschritt); dabei zwei stille Fehler behoben: Fehlalarm des Secret-Scanners auf leere .env.example und nie ersetzter Fortschrittsblock in PROJECT_STATUS.md. Playwright/axe-Browserlauf und die manuelle AT-Testmatrix bleiben vollständig offen."
     },
     "handoff": {
-      "percent": 20,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF-Struktur und Resume-Protokoll angelegt; Staging-Abnahme offen."
+      "percent": 25,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF und Resume-Protokoll stehen; am 2026-08-07 kam RUECKFRAGEN_THITRONIK.md hinzu, das die belegten Befunde zu acht entscheidungsreifen Fragen buendelt. Staging-Abnahme weiterhin offen."
     }
   },
   "blockers": [
@@ -70,5 +70,5 @@
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8.",
     "Der tschechische Geofencing-Hinweis nennt zweimal denselben Zustand („odjištěn\") für Aktivierung und Deaktivierung (DSC-038); die Beschreibung des LED-Normalbetriebs ist sinnentstellt („rezervováno (recepce)\", DSC-039). Beide brauchen einen muttersprachlichen Review."
   ],
-  "next_action": "PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise prüfen (Ende des tschechischen Teils mit den fehlenden Ausgangs- und Anlernbefehlen sowie der Supportnummer, danach Beginn des dänischen Sprachteils)."
+  "next_action": "Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md, acht Fragen). Erst danach PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110, Beginn des dänischen Sprachteils."
 }
