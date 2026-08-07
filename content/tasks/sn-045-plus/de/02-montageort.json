@@ -3,23 +3,136 @@
   "title": "Montageort wählen",
   "generation": "sn-045-plus",
   "language": "de",
-  "goal": "Einen geeigneten Montageort für den Pro-finder im Fahrzeug festlegen.",
-  "prerequisites": [],
-  "warnings": [],
-  "steps": [],
-  "expected_result": null,
-  "error_cases": [],
-  "figures": [],
+  "goal": "Einen Montageort für den Pro-finder finden, der gegen unbefugten Zugriff geschützt ist, GPS-Empfang zulässt und für spätere Servicearbeiten erreichbar bleibt.",
+  "prerequisites": [
+    "Der Lieferumfang ist vollständig und geprüft.",
+    "Das Fahrzeug steht so, dass Sie den vorgesehenen Einbauort erreichen können."
+  ],
+  "warnings": [
+    {
+      "text": "Der Montageort muss sich im Fahrzeuginneren befinden. Keinesfalls darf das Gerät im Motorraum montiert werden.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1 „Montageort wählen“, zweiter Absatz (aufgedruckt „Seite 5 von 23“)"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Wählen Sie einen Ort, der ausreichend gegen unbefugten Zugriff gesichert ist und dennoch für spätere Servicearbeiten zugänglich bleibt – zum Beispiel für einen späteren Austausch der SIM-Karte.",
+      "expected": "Der Ort ist von außen nicht ohne Weiteres erreichbar, für Sie aber ohne Ausbau zugänglich.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, erster Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Richten Sie das Gerät so aus, dass die Geräteoberseite nach oben zeigt. Der Pro-finder hat einen integrierten GPS-Empfänger; die Ausrichtung entscheidet über den Empfang.",
+      "expected": "Die Oberseite mit dem GPS-Emblem zeigt nach oben.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, zweiter Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Stellen Sie „freie Sicht“ zum Satelliten sicher. Kunststoffe, Glas und Holz werden vom GPS-Signal durchdrungen und beeinträchtigen die freie Sicht nicht.",
+      "expected": "Über dem Gerät liegen höchstens Kunststoff, Glas oder Holz – kein Metall.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, dritter Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Falls der gewählte Ort keinen GPS-Empfang zulässt, planen Sie eine externe GPS-Antenne ein. Beachten Sie dabei, dass die Kabellänge zwischen GSM-Modul und GPS-Antenne zwei Meter beträgt und auch die externe Antenne möglichst freie Sicht zu den Satelliten benötigt.",
+      "expected": "Der Abstand zwischen Einbauort und geplantem Antennenort ist mit zwei Metern Kabel erreichbar.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, vierter Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Als Ort für die externe GPS-Antenne kommen Kunststoffverkleidungen des Armaturenbretts infrage, zum Beispiel die Abdeckung des Kombiinstruments.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, fünfter Absatz"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Der Pro-finder sitzt im Fahrzeuginneren, mit der Oberseite nach oben, an einer gegen Zugriff gesicherten und für Service erreichbaren Stelle mit freier Sicht zum Himmel.",
+  "error_cases": [
+    {
+      "problem": "Am gewünschten Einbauort ist kein GPS-Empfang möglich.",
+      "correction": "Schließen Sie die optional erhältliche externe GPS-Antenne an. Das Kabel zwischen GSM-Modul und Antenne ist zwei Meter lang; die Antenne braucht ihrerseits möglichst freie Sicht zu den Satelliten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, vierter Absatz"
+        }
+      ]
+    },
+    {
+      "problem": "Der einzige zugängliche Ort liegt im Motorraum.",
+      "correction": "Dieser Ort ist ausgeschlossen. Die Anleitung untersagt die Montage im Motorraum ausdrücklich; suchen Sie einen Platz im Fahrzeuginneren.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Abschnitt 1.1, zweiter Absatz"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s07-einbaulage",
+      "alt": "Drei Abbildungen zur Einbaulage: richtige Lage, falsche Lage und ein Reisemobil mit markiertem Antennenort.",
+      "long_description": "Links das Pro-finder-Modul mit nach oben zeigender Oberseite, erkennbar am blauen GPS-Emblem, umrahmt von einem grünen Kreis – die richtige Lage. In der Mitte dasselbe Modul mit der roten Unterseite nach oben, umrahmt von einem roten Kreis mit Schrägstrich – die falsche Lage. Rechts die Strichzeichnung eines Reisemobils; ein Satellitensymbol weist über eine gestrichelte Linie auf einen grün markierten Bereich im Armaturenbrett, den möglichen Ort für die externe GPS-Antenne.",
+      "steps_text": [
+        "Richtig: Geräteoberseite mit dem GPS-Emblem zeigt nach oben.",
+        "Falsch: Gerät liegt auf dem Kopf, die Oberseite zeigt nach unten.",
+        "Die externe GPS-Antenne kann unter der Kunststoffverkleidung des Armaturenbretts liegen."
+      ],
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "7",
+        "region": "Abschnitt 1.1, Abbildungsleiste unterhalb des Fließtextes",
+        "note": "Die Quelle unterscheidet richtig und falsch allein über grünen Kreis gegenüber rotem Durchstreichkreis. Welche Geräteseite nach oben zeigt, ist dort nur im Bild erkennbar; diese Langbeschreibung ergänzt es als Text."
+      }
+    }
+  ],
   "tables_md": [],
   "sources": [
     {
       "doc": "DOC-IBA-SN045",
-      "pages": null,
-      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+      "pages": "7",
+      "region": "Abschnitt 1.1 „Montageort wählen“ (aufgedruckt „Seite 5 von 23“)",
+      "note": "Seite am 2026-08-07 gerendert und vollständig visuell geprüft; die Seite hat keine nutzbare Textebene."
     }
   ],
-  "safety_class": "sicherheitsrelevant",
+  "safety_class": "sicherheitskritisch",
   "review_status": "entwurf",
-  "placeholder": true,
-  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus der geprüften deutschen Quellseite. Der Einbauort entscheidet über GPS-Empfang und Sabotageschutz; das Motorraum-Verbot ist als sicherheitskritische Warnung geführt. Technischer Review steht aus."
 }

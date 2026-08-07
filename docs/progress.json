@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 18.8,
+  "overall_percent": 21.2,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -24,8 +24,8 @@
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
-      "percent": 10,
-      "note": "Content-Schema und Aufgabenskelette stehen; erste Segmente mit Seitenquellen aus Batch 1, Rest wartet auf weitere Seitenprüfung."
+      "percent": 22,
+      "note": "Content-Schema und Aufgabenskelette stehen. Am 2026-08-07 sind vier weitere Aufgaben aus geprueften deutschen Quellseiten extrahiert: Montageort (S. 7), SIM-Karte (S. 13), Technische Daten und Support (beide S. 25). Zusammen mit der Status-LED sind damit 5 von 14 Aufgaben inhaltlich gefuellt, jede mit Seitenquelle und Aenderungsgrund. Die uebrigen neun haengen an der offenen Befehlsfrage (BLK-005) oder am unbekannten Seriennummern-Fundort (DSC-023) und bleiben Platzhalter. Alle gefuellten Aufgaben stehen auf review_status entwurf; ein technischer Review hat nicht stattgefunden."
     },
     "card": {
       "label": "Setup-Karte",
@@ -129,5 +129,5 @@
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8.",
     "Der tschechische Geofencing-Hinweis nennt zweimal denselben Zustand („odjištěn\") für Aktivierung und Deaktivierung (DSC-038); die Beschreibung des LED-Normalbetriebs ist sinnentstellt („rezervováno (recepce)\", DSC-039). Beide brauchen einen muttersprachlichen Review."
   ],
-  "next_action": "Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md, acht Fragen). Erst danach PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110, Beginn des dänischen Sprachteils."
+  "next_action": "Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md). Ohne Antworten sind die restlichen neun deutschen Aufgaben nicht extrahierbar. Parallel moeglich: Aufgabe 03 Anschluesse aus den deutschen Seiten 8 und 11 extrahieren - sie haengt an keiner offenen Frage."
 }

@@ -5,13 +5,13 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 18.8 %**
+**Gesamtfortschritt: 21.2 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
 | Quelleninventar und PDF-Prüfung          | 20 %    | 8 %         |
-| Content-Modell und deutscher Master      | 20 %    | 10 %        |
+| Content-Modell und deutscher Master      | 20 %    | 22 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 25 %        |
 | Übersetzungspilot                        | 10 %    | 5 %         |
@@ -27,7 +27,7 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md, acht Fragen). Erst danach PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110, Beginn des dänischen Sprachteils.
+Offene Blocker: 5 · Nächste Aktion: Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md). Ohne Antworten sind die restlichen neun deutschen Aufgaben nicht extrahierbar. Parallel moeglich: Aufgabe 03 Anschluesse aus den deutschen Seiten 8 und 11 extrahieren - sie haengt an keiner offenen Frage.
 
 <!-- PROGRESS:END -->
 

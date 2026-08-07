@@ -3,23 +3,43 @@
   "title": "Technische Daten",
   "generation": "sn-045-plus",
   "language": "de",
-  "goal": "Die technischen Daten des Pro-finder nachschlagen.",
+  "goal": "Die technischen Eckwerte des Pro-finder ab Seriennummer -045 nachschlagen – etwa vor der Auslegung der Spannungsversorgung oder beim Anschluss von Verbrauchern.",
   "prerequisites": [],
-  "warnings": [],
+  "warnings": [
+    {
+      "text": "Die beiden Ausgänge sind mit je 12 V und höchstens 500 mA belastbar. Verbraucher mit höherem Strom müssen über ein Relais geschaltet werden; bei Überlastung entfällt die Garantie.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.1, Zeile „Ausgänge“ (aufgedruckt „Seite 23 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4 „Modul anschließen“, Absatz zu den Transistorausgängen"
+        }
+      ]
+    }
+  ],
   "steps": [],
   "expected_result": null,
   "error_cases": [],
   "figures": [],
-  "tables_md": [],
+  "tables_md": [
+    "| Merkmal | Wert |\n| --- | --- |\n| Spannungsversorgung | 9–30 V |\n| Stromaufnahme Netzsuche | ca. 37 mA |\n| Stromaufnahme Normalbetrieb | ca. 16–21 mA |\n| Sendefrequenz | 2G/3G/4G (LTE) |\n| 2G-Bänder | Quad |\n| 3G-Bänder | 1, 2, 5, 8 |\n| 4G-Bänder | 1, 2, 3, 4, 5, 7, 8, 18, 19, 20, 26, 28 |\n| Anzahl Zielrufnummern | 10 |\n| Schnittstellen | GPS/QZSS |\n| Ausgänge | 2 × 12 V/500 mA |\n| Temperaturbereich | −10 bis +80 °C |\n| SIM-Format | Nano-SIM |"
+  ],
   "sources": [
     {
       "doc": "DOC-IBA-SN045",
-      "pages": null,
-      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+      "pages": "25",
+      "region": "Abschnitt 6.1 „Technische Daten“ (aufgedruckt „Seite 23 von 23“)",
+      "note": "Seite am 2026-08-07 gerendert und vollständig visuell geprüft; die Seite hat keine nutzbare Textebene. Die Quelle setzt die Werte als zweispaltige Einzugsliste ohne Tabellenauszeichnung – hier als echte Tabelle wiedergegeben."
     }
   ],
-  "safety_class": "normal",
+  "safety_class": "sicherheitskritisch",
   "review_status": "entwurf",
-  "placeholder": true,
-  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus der geprüften deutschen Quellseite. Ein Wert ist zwischen den Sprachfassungen strittig: Die Stromaufnahme im Normalbetrieb lautet deutsch, französisch und tschechisch „ca. 16–21 mA“, englisch dagegen nur „approx. 21 mA“ (DSC-020, Rückfrage 2). Übernommen ist der Wert der drei übereinstimmenden Fassungen; er bleibt bis zur technischen Bestätigung Entwurf."
 }

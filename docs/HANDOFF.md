@@ -34,6 +34,10 @@ Stand: 2026-08-07. Der Pilot ist nicht freigabefähig; Details und Prozentwerte 
 - `docs/RUECKFRAGEN_THITRONIK.md` angelegt: acht entscheidungsreife Fragen mit wörtlichen
   Belegen, sortiert nach Dringlichkeit. Das ist der Punkt, an dem der Pilot ohne Antworten
   nicht sinnvoll weiterläuft.
+- Vier deutsche Aufgaben aus geprüften Quellseiten extrahiert: Montageort (S. 7),
+  SIM-Karte (S. 13), Technische Daten und Support (beide S. 25). Zusammen mit der
+  Status-LED sind 5 von 14 Aufgaben inhaltlich gefüllt. Ausgewählt wurden gezielt die
+  Aufgaben, die an **keiner** offenen Rückfrage hängen.
 - CI ist erstmals vollständig grün: `npm ci`, Prüfkette, Produktions-Build, der
   Supabase-Job mit `db reset`, `db lint` und pgTAP sowie Playwright/axe mit 32 Tests.
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: **1 von 247 Seiten** enthält
@@ -145,9 +149,13 @@ Resume from:
 Dokument DOC-IBA-SN045, PDF-Seite 101, Segment –, Sprache da.
 
 First action:
-RUECKFRAGEN_THITRONIK.md an THITRONIK geben. Die acht Fragen sind mit vier Sprachfassungen
-belegt; weitere Sprachteile schärfen sie nicht mehr wesentlich, sondern bestätigen nur das
-Muster. Erst nach den Antworten lohnt PDF-Batch 10 (Seiten 101–110, dänischer Teil) –
-oder vorgezogen die Segment-Extraktion des deutschen Masters, sobald die Befehlsfrage
-geklärt ist.
+RUECKFRAGEN_THITRONIK.md an THITRONIK geben. Ohne Antworten sind die restlichen neun
+deutschen Aufgaben nicht extrahierbar – sieben hängen an der Befehlsfrage (BLK-005), eine
+am unbekannten Seriennummern-Fundort (DSC-023).
+
+Ohne Antworten weiterhin möglich, in dieser Reihenfolge:
+1. Aufgabe 03 „Anschlüsse“ aus den deutschen Seiten 8 und 11 extrahieren – sie hängt an
+   keiner offenen Frage. Beide Seiten sind bereits als `inspected` erfasst.
+2. PDF-Batch 10 (Seiten 101–110, dänischer Teil) – erhöht die Belegdichte, schärft die
+   acht Fragen aber nicht mehr wesentlich.
 ```
