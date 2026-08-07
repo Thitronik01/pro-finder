@@ -1,0 +1,132 @@
+{
+  "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
+  "overall_percent": 18,
+  "weights": {
+    "bootstrap": 0.05,
+    "source_audit": 0.2,
+    "german_master": 0.2,
+    "card": 0.1,
+    "application": 0.2,
+    "translation": 0.1,
+    "qa": 0.1,
+    "handoff": 0.05
+  },
+  "workstreams": {
+    "bootstrap": {
+      "label": "Bootstrap",
+      "percent": 85,
+      "note": "Repo, Branch, Basisdokumente, Stack, CI, Netlify-Konfiguration stehen; offen: verifizierter Deploy Preview und lokaler Supabase-Stack (Docker-Daemon lief in Sitzung 1 nicht)."
+    },
+    "source_audit": {
+      "label": "Quelleninventar und PDF-Prüfung",
+      "percent": 5.4,
+      "note": "Automatisch aus 323 Seitenrecords berechnet."
+    },
+    "german_master": {
+      "label": "Content-Modell und deutscher Master",
+      "percent": 10,
+      "note": "Content-Schema und Aufgabenskelette stehen; erste Segmente mit Seitenquellen aus Batch 1, Rest wartet auf weitere Seitenprüfung."
+    },
+    "card": {
+      "label": "Setup-Karte",
+      "percent": 30,
+      "note": "Anforderungen, SVG-Entwürfe v0.1, Print-Spec und Testplan als Entwurf; alle physischen Tests offen, Braille nur als ungeprüfte Zone."
+    },
+    "application": {
+      "label": "Webanleitung und Review-UI",
+      "percent": 25,
+      "note": "Startseite, Versionsrouten, Wechselbestätigung, Aufgabenseiten, Dashboard als Fixture-basierte Erstfassung; Review-UI und Supabase-Anbindung offen."
+    },
+    "translation": {
+      "label": "Übersetzungspilot",
+      "percent": 5,
+      "note": "Workflow und Schutzregeln definiert, EN-Pilotstruktur angelegt; kein unabhängiger Sprachreview erfolgt."
+    },
+    "qa": {
+      "label": "Accessibility-, Security- und Content-QA",
+      "percent": 12,
+      "note": "npm run check läuft am 2026-08-07 erstmals vollständig grün (Format, Lint, Types, Unit, Content, Tokens, Karte, Referenz, Secrets, Fortschritt); dabei zwei stille Fehler behoben: Fehlalarm des Secret-Scanners auf leere .env.example und nie ersetzter Fortschrittsblock in PROJECT_STATUS.md. Playwright/axe-Browserlauf und die manuelle AT-Testmatrix bleiben vollständig offen."
+    },
+    "handoff": {
+      "label": "Staging und Übergabe",
+      "percent": 20,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF-Struktur und Resume-Protokoll angelegt; Staging-Abnahme offen."
+    }
+  },
+  "pdf_documents": [
+    {
+      "doc_id": "DOC-BMA-SN044",
+      "page_count": 72,
+      "percent": 0,
+      "status_counts": {
+        "not_started": 72
+      }
+    },
+    {
+      "doc_id": "DOC-IBA-SN045",
+      "page_count": 247,
+      "percent": 6.7,
+      "status_counts": {
+        "inspected": 66,
+        "not_started": 181
+      }
+    },
+    {
+      "doc_id": "DOC-KA-SN044",
+      "page_count": 2,
+      "percent": 25,
+      "status_counts": {
+        "inspected": 2
+      }
+    },
+    {
+      "doc_id": "DOC-KA-SN045",
+      "page_count": 2,
+      "percent": 25,
+      "status_counts": {
+        "inspected": 2
+      }
+    }
+  ],
+  "pdf_pages_total": 323,
+  "blockers": [
+    {
+      "id": "BLK-001",
+      "title": "Docker-Daemon lief nicht – lokaler Supabase-Stack ungetestet",
+      "detail": "supabase start / db reset / test db konnten lokal nicht ausgeführt werden; Migrationen und RLS-Tests sind versioniert, laufen aber erst in CI bzw. nach Docker-Start. Am 2026-08-07 erneut versucht: Docker Desktop ist installiert, startet in dieser Umgebung aber keinen Daemon (kein Prozess, npipe fehlt). Die Härtungsmigration und die behavioral pgTAP-Tests sind damit ausschließlich statisch geprüft.",
+      "severity": "hoch"
+    },
+    {
+      "id": "BLK-002",
+      "title": "Kein GitHub-CLI/Token für automatische PR-Erstellung",
+      "detail": "Branch-Push über Git Credential Manager; Draft-PR muss ggf. über die GitHub-Weboberfläche erstellt werden (Compare-URL in HANDOFF).",
+      "severity": "niedrig"
+    },
+    {
+      "id": "BLK-003",
+      "title": "Netlify-Site nicht verbunden",
+      "detail": "netlify.toml und Kontexte sind vorbereitet; das Verknüpfen des Repos mit einer Netlify-Site und der Zugriffsschutz erfordern Kontozugang.",
+      "severity": "mittel"
+    },
+    {
+      "id": "BLK-004",
+      "title": "Supporttelefon/-kontakt für Karte und Startseite unbestätigt",
+      "detail": "Barrierefreier Supporthinweis benötigt von THITRONIK bestätigte Kontaktdaten; bis dahin Platzhalter. Aus DOC-IBA-SN045 Abschnitt 6.4 (deutsche Seite 25, englische Seite 49) liegt jetzt ein quellenbelegter Kandidat vor: +49 4351 76744-112, kontakt@thitronik.de, www.thitronik.de. Ob dieser Kanal für die barrierefreie Karte der richtige ist, muss THITRONIK bestätigen.",
+      "severity": "niedrig"
+    },
+    {
+      "id": "BLK-005",
+      "title": "Befehlssprache der SMS-Kommandos ungeklärt (DSC-013/DSC-014)",
+      "detail": "DOC-IBA-SN045 dokumentiert dieselbe Funktion je Sprachfassung mit unterschiedlichen SMS-Befehlen (fence an/aus gegenüber fence on/off, a an/aus/impuls gegenüber a on/off/pulse, anlernmodus an/aus gegenüber teach mode on/off, SCHARF/UNSCHARF gegenüber ARM/DISARM) und innerhalb einer Fassung mit widersprüchlicher Schreibweise (POS gegenüber position). Die französische Fassung nennt an derselben Stelle statt eines Befehls die Wortgruppe « desactiver le gardiennage » – ohne Akzent und über einen anderen Sendeweg (DSC-026). Ohne technische Klärung durch THITRONIK darf kein Befehl in den Master oder in eine Übersetzung übernommen werden.",
+      "severity": "hoch"
+    }
+  ],
+  "safety_critical_open": [
+    "Alle sicherheitskritischen Inhalte (SMS-Befehle, PIN-Regeln, Anschlüsse, Spannungen) sind ungeprüft bzw. noch nicht extrahiert – technischer Review steht vollständig aus.",
+    "Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013, DSC-014). Ein nicht akzeptierter Befehl lässt Geofencing unbemerkt aktiv oder inaktiv; der Nutzer erhält keine Fehlermeldung, sondern nur die Hilfe-SMS.",
+    "Die Spannungsschwellen 11,2 V (Standby) und 12,5 V (Rückkehr) sowie der Geofencing-Radius von ca. 900 m sind aus DOC-IBA-SN045 erfasst, aber fachlich nicht bestätigt.",
+    "Die Stromaufnahme im Normalbetrieb ist in den Sprachfassungen unterschiedlich angegeben (DE ca. 16–21 mA, EN approx. 21 mA; DSC-020). Der gültige Wert ist technisch zu bestätigen.",
+    "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8."
+  ],
+  "next_action": "PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 seitenweise prüfen (Rest des französischen Teils ab interner Page 17 de 25, danach Beginn des tschechischen Sprachteils)."
+}
