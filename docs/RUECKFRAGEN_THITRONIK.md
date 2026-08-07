@@ -2,10 +2,16 @@
 
 Stand: 2026-08-07 · Grundlage: seitenweise Prüfung von 104 der 323 PDF-Seiten
 
-Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf** und die
-den weiteren Fortschritt blockieren. Es ist bewusst kurz gehalten und nach Dringlichkeit
-sortiert. Jede Position nennt den wörtlichen Beleg und die Fundstelle; die vollständige
-Herleitung steht in [DISCREPANCIES.md](DISCREPANCIES.md).
+Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
+bewusst kurz gehalten und nach Dringlichkeit sortiert. Jede Position nennt den wörtlichen
+Beleg und die Fundstelle; die vollständige Herleitung steht in
+[DISCREPANCIES.md](DISCREPANCIES.md).
+
+> **Arbeitsregel ab 2026-08-07:** Dieses Dokument ist die **einzige Sammelstelle** für
+> offene Fragen an THITRONIK. Neue Funde blockieren die Arbeit nicht mehr – sie werden hier
+> unter „Laufend ergänzt" eingetragen, im Seitenrecord belegt und bei Bedarf in
+> `DISCREPANCIES.md` hergeleitet. Der Pilot arbeitet an allem weiter, was ohne Antwort
+> möglich ist, und markiert Betroffenes als Entwurf.
 
 Geprüft sind bisher der deutsche, englische, französische und tschechische Sprachteil von
 `pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf` (DOC-IBA-SN045)
@@ -185,3 +191,23 @@ Wortdopplung „via SMS via SMS", beide ebenfalls sprachübergreifend.
 
 Bis dahin bleiben die betroffenen Inhalte als Entwurf markiert oder verborgen – so, wie der
 Projektauftrag es verlangt.
+
+---
+
+## Laufend ergänzt
+
+Hier sammeln sich Funde aus den noch ausstehenden Sprachteilen und Dokumenten, ohne dass sie
+die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber belegt.
+
+| Fund                                                                                                                                  | Beleg                          |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| Kabelbezeichnung uneinheitlich: „Verbindungskabel WiPro III" (Deutsch, Tschechisch) gegenüber „câble de connexion RJ10" (Französisch) | DSC-036, S. 11, 59, 86         |
+| Produktname im tschechischen Teil mehrfach verstümmelt („hledáček Pro", „vyhledávač Pro")                                             | DSC-036, S. 86, 89, 93, 96     |
+| Vier tschechische Substantive für dasselbe Gerät; drei Bezeichnungen für den Anlernmodus                                              | DSC-037, DSC-039               |
+| Links im tschechischen Teil verweisen auf `/en/` statt `/cs/`                                                                         | S. 100, Abschnitte 6.3 und 6.4 |
+| Französischer Teil hat 26 statt 23 interne Seiten; letzte Seite trägt „Page 26 de 25"                                                 | DSC-021                        |
+| Rotes X in der Anschlussabbildung – in vier Sprachfassungen ohne Legendeneintrag                                                      | S. 8, 32, 56, 83               |
+
+**Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
+SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue
+Befehlssätze werden in die Tabelle in DSC-033 eingetragen; alles Übrige kommt hierher.

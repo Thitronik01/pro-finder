@@ -5,18 +5,18 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 21.2 %**
+**Gesamtfortschritt: 22.3 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
 | Quelleninventar und PDF-Prüfung          | 20 %    | 8 %         |
-| Content-Modell und deutscher Master      | 20 %    | 22 %        |
+| Content-Modell und deutscher Master      | 20 %    | 26 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 25 %        |
 | Übersetzungspilot                        | 10 %    | 5 %         |
 | Accessibility-, Security- und Content-QA | 10 %    | 12 %        |
-| Staging und Übergabe                     | 5 %     | 25 %        |
+| Staging und Übergabe                     | 5 %     | 30 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -27,7 +27,7 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md). Ohne Antworten sind die restlichen neun deutschen Aufgaben nicht extrahierbar. Parallel moeglich: Aufgabe 03 Anschluesse aus den deutschen Seiten 8 und 11 extrahieren - sie haengt an keiner offenen Frage.
+Offene Blocker: 5 · Nächste Aktion: PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110 (daenischer Teil). Die Seitenpruefung ist der groesste Fortschrittshebel (20 Prozent Gewicht, aktuell 8 Prozent; 219 von 323 Seiten noch not_started). Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
@@ -38,7 +38,13 @@ Offene Blocker: 5 · Nächste Aktion: Zwischenbilanz an THITRONIK geben (docs/RU
   Seiten 1–100 sowie beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
   Englisch, Französisch, Tschechisch) sind damit geprüft; sechs stehen aus;
 - die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu acht
-  entscheidungsreifen Fragen gebündelt;
+  entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende Sammelstelle
+  für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
+- sechs von vierzehn deutschen Aufgaben sind aus geprüften Quellseiten gefüllt (Montageort,
+  Anschlüsse, SIM-Karte, Status-LED, Technische Daten, Support) – jede mit Seitenquelle,
+  Änderungsgrund und Status `entwurf`;
+- [HANDOVER_PROMPT.md](HANDOVER_PROMPT.md) enthält einen wörtlich übergebbaren Startprompt
+  für die Folgesitzung;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
   lesbaren Text, 34 Seiten liefern ausschließlich Steuerzeichen (Details in
   `IST_AUDIT.md`);

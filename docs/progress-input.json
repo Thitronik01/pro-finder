@@ -6,8 +6,8 @@
       "note": "Repo, Branch, Basisdokumente, Stack, CI, Netlify-Konfiguration stehen; offen: verifizierter Deploy Preview und lokaler Supabase-Stack (Docker-Daemon lief in Sitzung 1 nicht)."
     },
     "german_master": {
-      "percent": 22,
-      "note": "Content-Schema und Aufgabenskelette stehen. Am 2026-08-07 sind vier weitere Aufgaben aus geprueften deutschen Quellseiten extrahiert: Montageort (S. 7), SIM-Karte (S. 13), Technische Daten und Support (beide S. 25). Zusammen mit der Status-LED sind damit 5 von 14 Aufgaben inhaltlich gefuellt, jede mit Seitenquelle und Aenderungsgrund. Die uebrigen neun haengen an der offenen Befehlsfrage (BLK-005) oder am unbekannten Seriennummern-Fundort (DSC-023) und bleiben Platzhalter. Alle gefuellten Aufgaben stehen auf review_status entwurf; ein technischer Review hat nicht stattgefunden."
+      "percent": 26,
+      "note": "Content-Schema und Aufgabenskelette stehen. Am 2026-08-07 sind fuenf Aufgaben aus geprueften deutschen Quellseiten extrahiert: Montageort (S. 7), Anschluesse (S. 8 und 11), SIM-Karte (S. 13), Technische Daten und Support (beide S. 25). Zusammen mit der Status-LED sind damit 6 von 14 Aufgaben inhaltlich gefuellt, jede mit Seitenquelle und Aenderungsgrund. Die uebrigen acht haengen an der offenen Befehlsfrage (BLK-005) oder am unbekannten Seriennummern-Fundort (DSC-023); sie lassen sich teilweise fuellen - alles ausser dem Befehl selbst, siehe 03-anschluesse.json als Vorbild. Alle gefuellten Aufgaben stehen auf entwurf."
     },
     "card": {
       "percent": 30,
@@ -26,8 +26,8 @@
       "note": "npm run check läuft am 2026-08-07 erstmals vollständig grün (Format, Lint, Types, Unit, Content, Tokens, Karte, Referenz, Secrets, Fortschritt); dabei zwei stille Fehler behoben: Fehlalarm des Secret-Scanners auf leere .env.example und nie ersetzter Fortschrittsblock in PROJECT_STATUS.md. Playwright/axe-Browserlauf und die manuelle AT-Testmatrix bleiben vollständig offen."
     },
     "handoff": {
-      "percent": 25,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF und Resume-Protokoll stehen; am 2026-08-07 kam RUECKFRAGEN_THITRONIK.md hinzu, das die belegten Befunde zu acht entscheidungsreifen Fragen buendelt. Staging-Abnahme weiterhin offen."
+      "percent": 30,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF und Resume-Protokoll stehen. Am 2026-08-07 kamen RUECKFRAGEN_THITRONIK.md (einzige Sammelstelle fuer offene Fragen) und HANDOVER_PROMPT.md (woertlich uebergebbarer Startprompt fuer die Folgesitzung) hinzu; das Renderwerkzeug der Seitenpruefung liegt jetzt als scripts/render-pdf-pages.py im Repo. Staging-Abnahme weiterhin offen."
     }
   },
   "blockers": [
@@ -70,5 +70,5 @@
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8.",
     "Der tschechische Geofencing-Hinweis nennt zweimal denselben Zustand („odjištěn\") für Aktivierung und Deaktivierung (DSC-038); die Beschreibung des LED-Normalbetriebs ist sinnentstellt („rezervováno (recepce)\", DSC-039). Beide brauchen einen muttersprachlichen Review."
   ],
-  "next_action": "Zwischenbilanz an THITRONIK geben (docs/RUECKFRAGEN_THITRONIK.md). Ohne Antworten sind die restlichen neun deutschen Aufgaben nicht extrahierbar. Parallel moeglich: Aufgabe 03 Anschluesse aus den deutschen Seiten 8 und 11 extrahieren - sie haengt an keiner offenen Frage."
+  "next_action": "PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110 (daenischer Teil). Die Seitenpruefung ist der groesste Fortschrittshebel (20 Prozent Gewicht, aktuell 8 Prozent; 219 von 323 Seiten noch not_started). Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
 }

@@ -34,10 +34,16 @@ Stand: 2026-08-07. Der Pilot ist nicht freigabefähig; Details und Prozentwerte 
 - `docs/RUECKFRAGEN_THITRONIK.md` angelegt: acht entscheidungsreife Fragen mit wörtlichen
   Belegen, sortiert nach Dringlichkeit. Das ist der Punkt, an dem der Pilot ohne Antworten
   nicht sinnvoll weiterläuft.
-- Vier deutsche Aufgaben aus geprüften Quellseiten extrahiert: Montageort (S. 7),
-  SIM-Karte (S. 13), Technische Daten und Support (beide S. 25). Zusammen mit der
-  Status-LED sind 5 von 14 Aufgaben inhaltlich gefüllt. Ausgewählt wurden gezielt die
-  Aufgaben, die an **keiner** offenen Rückfrage hängen.
+- Fünf deutsche Aufgaben aus geprüften Quellseiten extrahiert: Montageort (S. 7),
+  Anschlüsse (S. 8 und 11), SIM-Karte (S. 13), Technische Daten und Support (beide S. 25).
+  Zusammen mit der Status-LED sind 6 von 14 Aufgaben inhaltlich gefüllt. Ausgewählt wurden
+  gezielt die Aufgaben, die an **keiner** offenen Rückfrage hängen.
+- `docs/HANDOVER_PROMPT.md` angelegt: ein wörtlich übergebbarer Startprompt für die
+  Folgesitzung, mit Vorgehen, bekanntem Quellenmuster und Umgebungsbesonderheiten.
+- `scripts/render-pdf-pages.py` ins Repository aufgenommen. Das Werkzeug lag bisher nur im
+  Scratchpad; ohne es müsste jede Folgesitzung die Seitenprüfung neu einrichten.
+- `docs/RUECKFRAGEN_THITRONIK.md` ist jetzt die laufende Sammelstelle: neue Funde halten
+  die Arbeit nicht mehr auf, sondern werden dort unter „Laufend ergänzt" eingetragen.
 - CI ist erstmals vollständig grün: `npm ci`, Prüfkette, Produktions-Build, der
   Supabase-Job mit `db reset`, `db lint` und pgTAP sowie Playwright/axe mit 32 Tests.
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: **1 von 247 Seiten** enthält
@@ -149,13 +155,15 @@ Resume from:
 Dokument DOC-IBA-SN045, PDF-Seite 101, Segment –, Sprache da.
 
 First action:
-RUECKFRAGEN_THITRONIK.md an THITRONIK geben. Ohne Antworten sind die restlichen neun
-deutschen Aufgaben nicht extrahierbar – sieben hängen an der Befehlsfrage (BLK-005), eine
-am unbekannten Seriennummern-Fundort (DSC-023).
+PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110 (dänischer Teil). Die Seitenprüfung ist der
+größte Fortschrittshebel – 20 % Gewicht bei aktuell 8 %, 219 von 323 Seiten stehen noch
+auf `not_started`. Vorgehen, bekanntes Quellenmuster und Umgebungsbesonderheiten stehen
+in `docs/HANDOVER_PROMPT.md`.
 
-Ohne Antworten weiterhin möglich, in dieser Reihenfolge:
-1. Aufgabe 03 „Anschlüsse“ aus den deutschen Seiten 8 und 11 extrahieren – sie hängt an
-   keiner offenen Frage. Beide Seiten sind bereits als `inspected` erfasst.
-2. PDF-Batch 10 (Seiten 101–110, dänischer Teil) – erhöht die Belegdichte, schärft die
-   acht Fragen aber nicht mehr wesentlich.
+Parallel möglich, ohne auf THITRONIK zu warten: die acht verbliebenen deutschen Aufgaben
+teilweise füllen – alles außer dem SMS-Befehl selbst. Vorbild ist
+`content/tasks/sn-045-plus/de/03-anschluesse.json`.
+
+RUECKFRAGEN_THITRONIK.md sollte parallel an THITRONIK gehen; die Arbeit wartet aber nicht
+mehr darauf.
 ```
