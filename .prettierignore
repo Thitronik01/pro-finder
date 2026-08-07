@@ -1,0 +1,12 @@
+.next/
+node_modules/
+.agent/
+sources/pdf/
+coverage/
+playwright-report/
+test-results/
+package-lock.json
+
+# Von Next.js generiert und bei jedem `next typegen` neu geschrieben.
+# Formatieren würde bei jedem Lauf gegen die Regeneration laufen.
+next-env.d.ts
