@@ -1,0 +1,128 @@
+/*
+ * Design-Tokens des Piloten.
+ * Grundsätze: hoher Kontrast (Ziel ≥ 7:1 für Fließtext), keine Information nur über
+ * Farbe, sichtbarer Fokus, Reflow bis 400 % Zoom, Touchziele ≥ 44 px,
+ * reduzierte Animation wird respektiert.
+ */
+
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f4f4f2;
+  --color-text: #1a1a1a;
+  --color-text-muted: #444444;
+  --color-accent: #00509e;
+  --color-accent-contrast: #ffffff;
+  --color-border: #767676;
+  --color-warning-bg: #fff4e0;
+  --color-warning-border: #8a5300;
+  --color-focus: #b35c00;
+
+  --font-sans:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, sans-serif;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+
+  --measure: 70ch;
+  --touch-target: 44px;
+  --radius: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-surface: #1f1f1f;
+    --color-text: #f2f2f2;
+    --color-text-muted: #c9c9c9;
+    --color-accent: #7ab8ff;
+    --color-accent-contrast: #0b1f33;
+    --color-border: #8a8a8a;
+    --color-warning-bg: #3a2a00;
+    --color-warning-border: #ffc766;
+    --color-focus: #ffb366;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+/* Sichtbarer Fokus auf allen interaktiven Elementen (WCAG 2.4.7, 2.4.11) */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 0.15em;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  max-width: var(--measure);
+}
+
+p,
+li {
+  max-width: var(--measure);
+}
+
+/* Skip-Link: erst bei Fokus sichtbar */
+.skip-link {
+  position: absolute;
+  left: var(--space-2);
+  top: var(--space-2);
+  transform: translateY(-200%);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+  z-index: 100;
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* Reduzierte Animation respektieren (WCAG 2.3.3); der Pilot nutzt ohnehin keine Autoplay-Medien. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Forced Colors (Windows-Kontrastmodi): Systemfarben nicht überschreiben */
+@media (forced-colors: active) {
+  .badge,
+  .version-banner {
+    border: 1px solid;
+  }
+}

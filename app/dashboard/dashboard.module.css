@@ -1,0 +1,30 @@
+.progress {
+  width: 100%;
+  max-width: var(--measure);
+  height: 1.25rem;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-2);
+  text-align: left;
+  vertical-align: top;
+}
+
+.caption {
+  text-align: left;
+  color: var(--color-text-muted);
+  padding-block: var(--space-2);
+  caption-side: top;
+}
+
+/* Tabellen scrollen bei Platzmangel im eigenen Container, die Seite nie horizontal */
+.scrollSection {
+  overflow-x: auto;
+}
