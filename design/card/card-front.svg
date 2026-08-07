@@ -1,0 +1,87 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="85.6mm"
+  height="53.98mm"
+  viewBox="0 0 85.6 53.98"
+  data-card-status="draft"
+  data-min-font-size-mm="2.25"
+>
+  <title>THITRONIK Pro-finder Setup-Karte - Vorderseite (Entwurf v0.2-draft)</title>
+  <desc>
+    Entwurf der Vorderseite einer barrierefreien Setup-Karte im Format ISO/IEC 7810 ID-1.
+    Sichtbar sind der Produktname, der Zugang zur digitalen Anleitung, ein eindeutig als
+    Platzhalter gekennzeichneter QR-Bereich, die noch nicht freigegebene Kurzadresse und
+    eine reservierte Braille-Flaeche. Der QR-Platzhalter ist nicht scanbar. Die gekappte
+    Ecke oben rechts dient der taktilen Orientierung. Alle sichtbaren Texte sind mindestens
+    2,25 Millimeter beziehungsweise rund 6,38 Punkt gross.
+  </desc>
+
+  <g font-family="Arial, Helvetica, 'DejaVu Sans', sans-serif" fill="#1a1a1a">
+    <!-- Kartenkontur mit gekappter Ecke oben rechts. -->
+    <path
+      d="M 0.2 0.2 H 78.52 L 85.4 7.08 V 53.78 H 0.2 Z"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.4"
+    />
+
+    <!-- Primäre Hierarchie. -->
+    <text x="4" y="8.2" font-size="4.4" font-weight="700">THITRONIK Pro-finder</text>
+    <text x="4" y="13.2" font-size="2.7" font-weight="600">Anleitung / Manual</text>
+    <text x="75.5" y="12.9" font-size="2.25" font-weight="700" text-anchor="end">ENTWURF</text>
+
+    <!-- Durchgezogener Rahmen: vorgesehene taktile QR-Zone. -->
+    <rect
+      x="4"
+      y="16.3"
+      width="27.5"
+      height="28.2"
+      rx="0.8"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.65"
+    />
+
+    <!-- Kein QR-Muster: Ziel-URL ist noch nicht freigegeben. -->
+    <rect
+      x="5.75"
+      y="18.05"
+      width="24"
+      height="24"
+      data-placeholder="qr"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.35"
+      stroke-dasharray="1.4 1.1"
+    />
+    <text x="17.75" y="26.6" font-size="2.65" font-weight="700" text-anchor="middle">QR-FLÄCHE</text>
+    <text x="17.75" y="30.35" font-size="2.25" font-weight="700" text-anchor="middle">PLATZHALTER</text>
+    <text x="17.75" y="34.05" font-size="2.25" text-anchor="middle">URL OFFEN</text>
+    <text x="17.75" y="38.05" font-size="2.25" text-anchor="middle">NICHT SCANNBAR</text>
+
+    <!-- Gedruckte Kurzadresse: sichtbar als unfreigegebener Entwurf markiert. -->
+    <text x="34.5" y="20.1" font-size="3.15" font-weight="700">Zugang zur Anleitung</text>
+    <text x="34.5" y="24.6" font-size="2.3" font-weight="700">URL-ENTWURF:</text>
+    <text x="34.5" y="29.1" font-size="3" font-weight="700">thitronik.de/</text>
+    <text x="34.5" y="33.3" font-size="3" font-weight="700">pro-finder/start</text>
+    <text x="34.5" y="37.4" font-size="2.3">Noch nicht freigegeben</text>
+    <text x="34.5" y="41.3" font-size="2.3">NFC auf der Rückseite</text>
+
+    <!-- Reservierte Fläche, keine erfundene Braille-Punktgeometrie. -->
+    <rect
+      x="4"
+      y="45.3"
+      width="77.6"
+      height="5.6"
+      data-placeholder="braille"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.35"
+      stroke-dasharray="1.4 1.1"
+    />
+    <text x="42.8" y="49.05" font-size="2.25" font-weight="700" text-anchor="middle">
+      BRAILLE-FLÄCHE · PLATZHALTER
+    </text>
+  </g>
+</svg>

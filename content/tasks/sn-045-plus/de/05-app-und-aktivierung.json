@@ -1,0 +1,25 @@
+{
+  "slug": "app-und-aktivierung",
+  "title": "THITRONIK App verbinden und Gerät aktivieren",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Den Pro-finder mit der THITRONIK App verbinden und in Betrieb nehmen.",
+  "prerequisites": [],
+  "warnings": [],
+  "steps": [],
+  "expected_result": null,
+  "error_cases": [],
+  "figures": [],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": null,
+      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": true,
+  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+}

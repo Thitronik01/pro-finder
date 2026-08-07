@@ -1,0 +1,25 @@
+{
+  "slug": "technische-daten",
+  "title": "Technische Daten",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Die technischen Daten des Pro-finder nachschlagen.",
+  "prerequisites": [],
+  "warnings": [],
+  "steps": [],
+  "expected_result": null,
+  "error_cases": [],
+  "figures": [],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": null,
+      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": true,
+  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+}

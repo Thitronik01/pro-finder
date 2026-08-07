@@ -1,0 +1,25 @@
+{
+  "slug": "support",
+  "title": "Support kontaktieren",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Den THITRONIK Support barrierefrei erreichen.",
+  "prerequisites": [],
+  "warnings": [],
+  "steps": [],
+  "expected_result": null,
+  "error_cases": [],
+  "figures": [],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "PRODUKTSEITE",
+      "pages": null,
+      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": true,
+  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+}

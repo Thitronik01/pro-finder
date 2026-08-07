@@ -1,0 +1,25 @@
+{
+  "slug": "determine-device-generation",
+  "title": "Determine your device generation",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Find out whether the manual „up to SN-044“ or „from SN-045“ applies to your device.",
+  "prerequisites": [],
+  "warnings": [],
+  "steps": [],
+  "expected_result": null,
+  "error_cases": [],
+  "figures": [],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": null,
+      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": true,
+  "change_reason": "Initial English pilot skeleton; awaiting reviewed German master."
+}
