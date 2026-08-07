@@ -14,12 +14,12 @@ name: Lockfile
 # committet es zurueck. Der Push nutzt GITHUB_TOKEN und loest deshalb keinen
 # weiteren Workflowlauf aus - eine Schleife ist ausgeschlossen.
 #
-# Nach dem Merge wieder entfernen; die dauerhafte Absicherung ist
-# scripts/check-lockfile.mjs in `npm run check`.
+# Bewusst nur manuell ausloesbar: Der Workflow ist das Reparaturwerkzeug,
+# nicht Teil jedes Laufs. Erkennt `npm run check` lokal eine Luecke
+# (scripts/check-lockfile.mjs), wird er ueber "Run workflow" gestartet und
+# traegt das korrigierte Lockfile zurueck.
 
 on:
-  push:
-    branches: ['bootstrap/**']
   workflow_dispatch:
 
 permissions:
