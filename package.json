@@ -19,11 +19,12 @@
     "card:check": "node design/card/check-card-svg.mjs",
     "reference:check": "node scripts/check-reference-clean.mjs",
     "secrets:check": "node scripts/check-secrets.mjs",
+    "lockfile:check": "node scripts/check-lockfile.mjs",
     "progress": "node scripts/progress.mjs",
     "progress:check": "node scripts/progress.mjs --check",
     "supabase:reset": "supabase db reset --local",
     "supabase:test": "supabase test db --local",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run content:check && npm run tokens:check && npm run card:check && npm run reference:check && npm run secrets:check && npm run progress:check",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test && npm run content:check && npm run tokens:check && npm run card:check && npm run reference:check && npm run secrets:check && npm run lockfile:check && npm run progress:check",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
