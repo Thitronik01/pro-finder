@@ -59,66 +59,77 @@ export default function DashboardPage() {
         className={styles.progress}
       />
 
-      <section aria-labelledby="ws-heading" className={styles.scrollSection}>
+      <section aria-labelledby="ws-heading">
         <h2 id="ws-heading">Workstreams</h2>
-        <table className={styles.table}>
-          <caption className={styles.caption}>
-            Fortschritt je Workstream mit Gewicht laut Projektauftrag
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Workstream</th>
-              <th scope="col">Gewicht</th>
-              <th scope="col">Fortschritt</th>
-              <th scope="col">Anmerkung</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.entries(p.workstreams).map(([key, ws]) => (
-              <tr key={key}>
-                <th scope="row">{ws.label}</th>
-                <td>{Math.round((p.weights[key] ?? 0) * 100)} %</td>
-                <td>
-                  {ws.percent} % <progress max={100} value={ws.percent} aria-hidden="true" />
-                </td>
-                <td>{ws.note}</td>
+        {/* Scrollbereich mit Tastaturfokus und eigenem Namen: die Sektion selbst
+            darf nicht scrollen, sonst ist der Inhalt ohne Maus unerreichbar. */}
+        <div className={styles.tableRegion} role="region" aria-labelledby="ws-caption" tabIndex={0}>
+          <table className={styles.table}>
+            <caption id="ws-caption" className={styles.caption}>
+              Fortschritt je Workstream mit Gewicht laut Projektauftrag
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Workstream</th>
+                <th scope="col">Gewicht</th>
+                <th scope="col">Fortschritt</th>
+                <th scope="col">Anmerkung</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {Object.entries(p.workstreams).map(([key, ws]) => (
+                <tr key={key}>
+                  <th scope="row">{ws.label}</th>
+                  <td>{Math.round((p.weights[key] ?? 0) * 100)} %</td>
+                  <td>
+                    {ws.percent} % <progress max={100} value={ws.percent} aria-hidden="true" />
+                  </td>
+                  <td>{ws.note}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <section aria-labelledby="pdf-heading" className={styles.scrollSection}>
+      <section aria-labelledby="pdf-heading">
         <h2 id="pdf-heading">PDF-Seitenprüfung ({p.pdf_pages_total} Seiten gesamt)</h2>
-        <table className={styles.table}>
-          <caption className={styles.caption}>
-            Seitenweise Prüfung der Original-PDFs; Zähler je Status
-          </caption>
-          <thead>
-            <tr>
-              <th scope="col">Dokument</th>
-              <th scope="col">Seiten</th>
-              <th scope="col">Fortschritt</th>
-              <th scope="col">Status-Zähler</th>
-            </tr>
-          </thead>
-          <tbody>
-            {p.pdf_documents.map((d) => (
-              <tr key={d.doc_id}>
-                <th scope="row">{d.doc_id}</th>
-                <td>{d.page_count}</td>
-                <td>
-                  {d.percent} % <progress max={100} value={d.percent} aria-hidden="true" />
-                </td>
-                <td>
-                  {Object.entries(d.status_counts)
-                    .map(([status, n]) => `${status}: ${n}`)
-                    .join(', ')}
-                </td>
+        <div
+          className={styles.tableRegion}
+          role="region"
+          aria-labelledby="pdf-caption"
+          tabIndex={0}
+        >
+          <table className={styles.table}>
+            <caption id="pdf-caption" className={styles.caption}>
+              Seitenweise Prüfung der Original-PDFs; Zähler je Status
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Dokument</th>
+                <th scope="col">Seiten</th>
+                <th scope="col">Fortschritt</th>
+                <th scope="col">Status-Zähler</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {p.pdf_documents.map((d) => (
+                <tr key={d.doc_id}>
+                  <th scope="row">{d.doc_id}</th>
+                  <td>{d.page_count}</td>
+                  <td>
+                    {d.percent} % <progress max={100} value={d.percent} aria-hidden="true" />
+                  </td>
+                  <td>
+                    {Object.entries(d.status_counts)
+                      .map(([status, n]) => `${status}: ${n}`)
+                      .join(', ')}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section aria-labelledby="blocker-heading">

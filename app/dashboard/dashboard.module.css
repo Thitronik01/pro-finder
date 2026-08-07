@@ -25,6 +25,15 @@
 }
 
 /* Tabellen scrollen bei Platzmangel im eigenen Container, die Seite nie horizontal */
-.scrollSection {
+/* Der Scrollbereich liegt bewusst nicht auf der <section>: ein scrollbarer
+   Landmark ohne Tastaturfokus ist ohne Maus unerreichbar (axe:
+   scrollable-region-focusable). Das Element traegt role="region",
+   tabindex="0" und wird ueber die Tabellen-Caption benannt. */
+.tableRegion {
+  max-width: 100%;
   overflow-x: auto;
+}
+
+.tableRegion:focus-visible {
+  outline-offset: 4px;
 }

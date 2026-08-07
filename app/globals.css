@@ -61,6 +61,14 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background: var(--color-bg);
+
+  /* Deutsche Komposita sind regelmaessig breiter als eine schmale Spalte.
+     „Reviewoberflaeche" als h1 war bei 320 CSS-Pixeln 301 px breit in einem
+     272-px-Kasten und hat die Seite ueber den Rand geschoben - Verstoss gegen
+     WCAG 1.4.10 Reflow. `hyphens: auto` trennt sprachrichtig (das Dokument
+     setzt `lang` serverseitig korrekt), `overflow-wrap` faengt den Rest ab. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Sichtbarer Fokus auf allen interaktiven Elementen (WCAG 2.4.7, 2.4.11) */

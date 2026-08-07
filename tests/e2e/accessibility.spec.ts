@@ -87,7 +87,9 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
   await expect(page.getByText('Git-Fixtures', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Freigaben bleiben gesperrt' })).toBeVisible();
 
-  await page.getByLabel('Gerätegeneration').selectOption('sn-001-044');
+  // exact: true, weil getByLabel per Teilzeichenkette sucht und die
+  // Tabellen-Caption der Warteschlange den Begriff ebenfalls enthaelt.
+  await page.getByLabel('Gerätegeneration', { exact: true }).selectOption('sn-001-044');
   await page.getByRole('button', { name: 'Filter anwenden' }).click();
   await expect(page).toHaveURL(/generation=sn-001-044/);
   await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText(

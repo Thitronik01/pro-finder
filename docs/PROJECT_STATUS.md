@@ -49,21 +49,22 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 
 - Produktions-Build lokal erfolgreich;
 - Referenzklon sauber und Push-URL `DISABLED`;
 - Setup-Karten-Lieferdateien als klar markierte Entwürfe vorhanden;
-- Supabase CLI und Client-Bibliotheken exakt gepinnt; CI-Reset und pgTAP konfiguriert.
+- Supabase CLI und Client-Bibliotheken exakt gepinnt;
+- **Supabase-Härtung in CI gegen eine echte Datenbank bewiesen.** Der Job
+  `Supabase reset and RLS tests` ist grün: `supabase start`, `db reset` (Schema, Migrationen
+  und Fixtures), `db lint --fail-on error` und der pgTAP-Lauf mit den Negativtests aus
+  `security_behavior_test.sql`. Damit sind die beiden früher ausnutzbaren Umgehungen des
+  Vier-Augen-Prinzips nicht mehr nur konstruktiv adressiert, sondern im Verhalten geprüft;
+- CI-Jobs `Code, content, security and build` (Prüfkette und Produktions-Build) grün;
+- **Playwright und axe laufen: 32 von 32 Tests bestanden**, davon axe-Prüfungen auf
+  WCAG-A/AA-Regeln über Chromium und ein 375-px-Mobilprofil. Der erste echte Browserlauf
+  hat drei reale Mängel aufgedeckt und behoben (siehe unten).
 
 ## Nicht als bestanden behaupten
 
-- lokaler Supabase-Reset und pgTAP: Docker-Daemon läuft nicht. Docker Desktop ist
-  installiert, startet in dieser Umgebung aber keinen Daemon. Die Härtungsmigration
-  `20260806204417_security_hardening.sql` und die Negativtests in
-  `supabase/tests/security_behavior_test.sql` sind damit **ausschließlich statisch
-  geprüft**. Erst ein grüner CI-Job `Supabase reset and RLS tests` zählt als Nachweis;
-- Supabase-Security: die Härtung adressiert die beiden Umgehungen (schmale
-  `private.transition_*`-Funktionen, entzogene Direktrechte, spaltenweise Grants,
-  projektgebundene Mitgliedschaften, Prüfsummen-Trigger und `CHECK`-Constraints für das
-  Vier-Augen-Prinzip). Ohne ausgeführten pgTAP-Lauf ist das eine Konstruktionsaussage,
-  keine Verhaltensaussage;
-- Playwright/axe: Browserlauf wird erst nach Installation des Chromium-Binaries gewertet;
+- automatische Tests ersetzen keine Konformitätsaussage: axe deckt erfahrungsgemäß nur
+  einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
+  Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
 - Netlify Preview, Zugriffsschutz und internes Staging: nicht verbunden/nicht abgenommen;
 - Karten-Andruck, QR, NFC, Braille, Reflexion und Tests mit betroffenen Personen: offen;
@@ -72,24 +73,21 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 
 
 ## Release-Blocker
 
-1. Die Härtung der `translations`- und `content_segments`-Freigaben ist geschrieben, aber
-   nie gegen eine laufende Datenbank ausgeführt. Bis CI `supabase db reset` und
-   `supabase test db` grün meldet, bleibt Staging gesperrt.
-2. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
+1. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
    DSC-014, DSC-026). Dieselbe Funktion heißt je Sprachfassung anders; innerhalb einer
    Fassung stehen `POS` und `position` nebeneinander; und die französische Fassung nennt
    statt eines Befehls die Wortgruppe « desactiver le gardiennage ». Kein Befehl darf ohne
    technische Klärung veröffentlicht werden.
-3. Die Sprachfassungen sind inhaltlich nicht gleichwertig: die SIM-Anbieterempfehlung
+2. Die Sprachfassungen sind inhaltlich nicht gleichwertig: die SIM-Anbieterempfehlung
    lautet deutsch t-mobile/Vodafone, englisch nur allgemein „M2M-Karte" und französisch
    namentlich DOMOTEC (DSC-027). Zusätzlich weicht ein technischer Wert ab (DSC-020).
    Solange unklar ist, welche Fassung gilt, kann kein sprachübergreifender Master
    entstehen.
-4. Der genaue Fundort und die Leseregel der Seriennummer am Gerät sind nicht technisch
+3. Der genaue Fundort und die Leseregel der Seriennummer am Gerät sind nicht technisch
    bestätigt; die Startseite darf deshalb keine Ziffernregel behaupten (DSC-023).
-5. Karte: finale URL, Supportdaten, Mindestschrift, Braille-Dienstleister und physische
+4. Karte: finale URL, Supportdaten, Mindestschrift, Braille-Dienstleister und physische
    Tests fehlen.
-6. Kein geschützter Netlify-Deploy und keine menschliche Preview-Abnahme.
+5. Kein geschützter Netlify-Deploy und keine menschliche Preview-Abnahme.
 
 ## Statusdisziplin
 

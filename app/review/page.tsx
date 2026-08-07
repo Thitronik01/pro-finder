@@ -207,10 +207,14 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
           <div
             className={styles.tableRegion}
             role="region"
-            aria-label="Content-Warteschlange"
+            aria-labelledby="queue-caption"
             tabIndex={0}
           >
             <table className={styles.table}>
+              <caption id="queue-caption" className={styles.caption}>
+                Segmente der Warteschlange mit Gerätegeneration, Sprache, Reviewstatus,
+                Sicherheitsklasse und Quelle
+              </caption>
               <thead>
                 <tr>
                   <th scope="col">Segment</th>
@@ -251,10 +255,13 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
         <div
           className={styles.tableRegion}
           role="region"
-          aria-label="PDF-Seitenstatus"
+          aria-labelledby="sources-caption"
           tabIndex={0}
         >
           <table className={styles.table}>
+            <caption id="sources-caption" className={styles.caption}>
+              Original-PDFs mit Seitenzahl und Anzahl der Seiten je Prüfstatus
+            </caption>
             <thead>
               <tr>
                 <th scope="col">Dokument</th>

@@ -152,6 +152,13 @@
   align-items: center;
 }
 
+.caption {
+  text-align: left;
+  color: var(--color-text-muted);
+  padding-block: var(--space-2);
+  caption-side: top;
+}
+
 .tableRegion {
   max-width: 100%;
   overflow-x: auto;
@@ -259,7 +266,12 @@
 @media (max-width: 48rem) {
   .pageHeader,
   .filters {
-    grid-template-columns: 1fr;
+    /* minmax(0, 1fr) statt 1fr: `1fr` bedeutet `minmax(auto, 1fr)`, und `auto`
+       ist hier min-content. Die Spalte schrumpft dann nicht unter den
+       breitesten unteilbaren Inhalt und schiebt die Seite ueber den Rand
+       hinaus - bei 320 CSS-Pixeln waren es 325. Verstoss gegen WCAG 1.4.10
+       Reflow. */
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
