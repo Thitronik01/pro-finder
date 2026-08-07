@@ -4,6 +4,7 @@ on:
   pull_request:
   push:
     branches: [main, 'bootstrap/**']
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,7 +28,23 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: npm
           package-manager-cache: true
-      - run: npm ci
+      # Installationsfehler zusaetzlich in die Job-Zusammenfassung schreiben. Die
+      # Rohlogs sind nur fuer angemeldete Personen lesbar, die Zusammenfassung
+      # dagegen erscheint in der Check-Run-Ausgabe und ist damit auch ohne
+      # Anmeldung auswertbar.
+      - name: Install dependencies
+        run: |
+          set -o pipefail
+          if ! npm ci 2>&1 | tee /tmp/npm-ci.log; then
+            {
+              echo '### npm ci fehlgeschlagen'
+              echo ''
+              echo '```'
+              tail -n 60 /tmp/npm-ci.log
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
       - run: npm run check
       - run: npm run build
 
