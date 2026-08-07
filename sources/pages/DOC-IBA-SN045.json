@@ -4484,143 +4484,496 @@
     },
     {
       "page": 77,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "titel",
+      "languages": ["cs"],
+      "summary": "Deckblatt des tschechischen Sprachteils: dunkelblaue Seite mit THITRONIK-Logo, Titel 'Pro-finder (od serioveho cisla -045)', tschechische Flagge und 'Navod k instalaci a obsluze'. Unten der Adressblock: Thitronik GmbH, Finkenweg 9-15, 24340 Eckernfoerde, Germany, mit Web, E-Mail und Telefonnummer +49 (0) 4351 76744-112.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Weisser Text auf dunkelblauem Grund; der Adressblock ist deutlich kleiner und kontrastaermer.",
+        "Sprachkennzeichnung ueber eine Flagge ohne Textalternative.",
+        "Das Deckblatt traegt keine interne Seitennummer und ist nicht als Abschnittsanfang ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Der Adressblock nennt das Land englisch \"Germany\", waehrend das franzoesische Deckblatt \"Allemagne\" setzt. Die Landesangabe ist zwischen den Sprachfassungen uneinheitlich."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Tschechische Flagge als kleines Rechteck vor der Zeile mit der Dokumentart; im Hintergrund eine dekorative Leiterbahngrafik.",
+          "has_text_equivalent": false,
+          "relies_on": "Die Sprache wird zusaetzlich ueber die Flagge signalisiert; ohne Alternativtext ist sie nicht wahrnehmbar."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": ["Pro-finder (od serioveho cisla -045)", "Navod k instalaci a obsluze"],
+      "technical_values": [
+        {
+          "value": "od serioveho cisla -045",
+          "context": "Geltungsbereich des Sprachteils; entspricht dem Seriennummernbereich ab SN-045.",
+          "safety_critical": true
+        },
+        {
+          "value": "+49 (0) 4351 76744-112",
+          "context": "Supportnummer auf dem Deckblatt - hier korrekt, im Gegensatz zur franzoesischen Seite 76 (DSC-032).",
+          "safety_critical": false
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 78,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 161,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 129,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["cs"],
+      "summary": "Erste Seite des tschechischen Inhaltsverzeichnisses ('Obsah', intern 'Strana 1 z 23') mit den Kapiteln 1 bis 5.7 und Punktfuehrungslinien. Der tschechische Teil umfasst 23 interne Seiten - wie der deutsche und der englische; der franzoesische mit 26 bleibt der Ausreisser. Die Kapitelanfaenge 3 auf 15, 4 auf 16 und 5 auf 19 entsprechen der englischen Fassung.",
+      "accessibility_issues": [
+        "Die Textebene enthaelt ausschliesslich Steuerzeichen U+0003, keine lesbaren Buchstaben. Werkzeuge melden faelschlich vorhandenen Text.",
+        "Die Eintraege sind nicht verlinkt; das PDF besitzt keine Lesezeichen.",
+        "Die Punktfuehrungslinien verbinden Titel und Seitenzahl rein visuell.",
+        "Die Verzeichniseintraege nennen interne Seitenzahlen, die nicht mit den PDF-Seitenzahlen uebereinstimmen (interne Seite 1 = PDF-Seite 78).",
+        "Paginierungs-Diskrepanz: PDF-Seite 78 traegt die interne Nummer 'Strana 1 z 23'."
+      ],
+      "discrepancies": [
+        "Abschnitt 2.4 heisst hier \"Aktivace nastroje Pro-finder\" und traegt damit - anders als in der franzoesischen Fassung (DSC-024) - ein Verb. Das Wort \"nastroj\" (Werkzeug) ist fuer ein Ortungsgeraet allerdings ungewoehnlich und durch einen tschechischen Sprachreview zu bewerten.",
+        "Abschnitt 5.5 heisst korrekt \"Ovladani vystupu prostrednictvim SMS\" - der englische Fehler DSC-015 tritt hier nicht auf."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [
+        {
+          "caption": "Obsah (Inhaltsverzeichnis, Teil 1)",
+          "columns": 3,
+          "rows": 30,
+          "has_header_row": false,
+          "note": "Nummer, Titel und interne Seitenzahl, verbunden durch Punktfuehrungslinien."
+        }
+      ],
+      "warnings_found": [],
+      "terminology_findings": [
+        "Die tschechische Fassung verwendet mehrere Substantive fuer dasselbe Geraet (vyhledavac, pristroj, zarizeni, hledacek). Eine einheitliche Benennung fehlt."
+      ],
+      "headings": ["Obsah"],
+      "technical_values": [],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 79,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 24,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "extractable_chars": 19,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["cs"],
+      "summary": "Zweite und letzte Seite des tschechischen Inhaltsverzeichnisses (intern 'Strana 2 z 23'): nur Kapitel 6 'Ruzne' mit 6.1 'Technicke udaje', 6.2 'Pokyny k likvidaci', 6.3 'Shoda/pokyny' und 6.4 'Technicka podpora', alle mit Verweis auf die interne Seite 23. Die unteren rund fuenfundachtzig Prozent der Seite sind leer.",
+      "accessibility_issues": [
+        "Die Textebene enthaelt ausschliesslich Steuerzeichen U+0003, keine lesbaren Buchstaben. Werkzeuge melden faelschlich vorhandenen Text.",
+        "Die Fortsetzung ist nicht gekennzeichnet; die Ueberschrift 'Obsah' steht nur auf der Vorseite.",
+        "Eintraege nicht verlinkt, keine Lesezeichen.",
+        "Grossflaechiger Leerraum ohne Hinweis, dass das Verzeichnis hier endet.",
+        "Paginierungs-Diskrepanz: PDF-Seite 79 traegt die interne Nummer 'Strana 2 z 23'."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [
+        {
+          "caption": "Obsah (Inhaltsverzeichnis, Teil 2)",
+          "columns": 3,
+          "rows": 5,
+          "has_header_row": false,
+          "note": "Kapitel 6 und vier Unterabschnitte, alle mit interner Seitenzahl 23."
+        }
+      ],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": [],
+      "technical_values": [],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 80,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "warnhinweise",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 3 z 23'. Reine Textseite mit zwei Abschnitten. 'Odmitnuti odpovednosti' erklaert, dass der Pro-finder Diebstahl nur melden, nicht verhindern kann, mahnt zu vorsichtigem Verhalten und schliesst die Haftung fuer Diebstahl, Einbruchschaeden sowie Folgen einer Tiefentladung der Starterbatterie aus; bei entladener Batterie laesst sich das Fahrzeug nicht entriegeln. 'Zamyslene pouziti' beschreibt den Pro-finder als Ortungssystem fuer Freizeitfahrzeuge auf GPS- und GSM-Basis, das die Position ausschliesslich per SMS als Google-Maps-Link oder Koordinaten sendet, keine Routen aufzeichnet und kein Echtzeit-Tracking bietet.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die beiden rechtlich relevanten Abschnitte sind ausschliesslich als Bild vorhanden und weder vorlesbar noch durchsuchbar noch kopierbar.",
+        "Die Ueberschriften sind nur durch Farbe und Schriftgroesse ausgezeichnet, nicht als Ueberschriftenebene getaggt.",
+        "Paginierungs-Diskrepanz: PDF-Seite 80 traegt die interne Nummer 'Strana 3 z 23'."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [
+        "Spolecnost Thitronik GmbH nerucí za skody zpusobene hlubokym vybitim startovaci baterie.",
+        "Upozornujeme, ze vozidlo nelze odemknout, pokud je baterie vybita."
+      ],
+      "terminology_findings": [
+        "Die tschechische Fassung verwendet mehrere Substantive fuer dasselbe Geraet (vyhledavac, pristroj, zarizeni, hledacek). Eine einheitliche Benennung fehlt."
+      ],
+      "headings": ["Odmitnuti odpovednosti", "Zamyslene pouziti"],
+      "technical_values": [
+        {
+          "value": "Tiefentladung der Starterbatterie",
+          "context": "Haftungsausschluss; bei entladener Batterie ist das Fahrzeug nicht entriegelbar. Inhaltlich deckungsgleich mit der deutschen Seite 5, der englischen Seite 29 und der franzoesischen Seite 53.",
+          "safety_critical": true
+        },
+        {
+          "value": "GPS und GSM, Benachrichtigung ausschliesslich per SMS",
+          "context": "Bestimmungsgemaesser Gebrauch: kein Live-Tracking, keine Routenaufzeichnung.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 81,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "tabelle",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 4 z 23'. Seite 'Rozsah dodavky' mit dem Produktfoto aller Lieferbestandteile und einer neunzeiligen nummerierten Liste: 1. Pro-finder, 2. Antena, 3. Gelovy konektor, 4. Upevnovaci srouby, 5. Drzak pojistek, 6. Plocha pojistka (3 A), 7. Strucny pruvodce, 8. Pripojovaci kabel WiPro III, 9. Pripojovaci kabel. Auf der abgebildeten Kurzanleitung ist 'Pro-finder SN 0699-045+' erkennbar.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die nummerierte Liste hat keine Entsprechung im Foto; ohne Vorkenntnis laesst sich kein Listeneintrag einem abgebildeten Teil zuordnen.",
+        "Aehnliche Teile sind im Foto nur ueber Farbe und Form unterscheidbar.",
+        "Paginierungs-Diskrepanz: PDF-Seite 81 traegt die interne Nummer 'Strana 4 z 23'."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Produktfoto auf weissem Grund: Kurzanleitung mit Sprachliste und Flaggen, Stabantenne, schwarzes Pro-finder-Modul mit GPS-inside-Emblem, zwei blaue Gelverbinder, eine rosafarbene Flachsicherung, ein blauer Sicherungshalter, zwei Schrauben, ein schwarzes Anschlusskabel und ein mehrfarbiger Kabelbaum.",
+          "has_text_equivalent": false,
+          "relies_on": "Das Foto traegt keine Bildmarken. Die Liste ist 1 bis 9 nummeriert, im Foto fehlen die zugehoerigen Nummern vollstaendig - dieselbe Luecke wie in allen anderen Sprachfassungen."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Rozsah dodavky",
+          "columns": 2,
+          "rows": 9,
+          "has_header_row": false,
+          "note": "Nummer und Bezeichnung, als Liste mit Trennlinien gesetzt."
+        }
+      ],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": ["Rozsah dodavky"],
+      "technical_values": [
+        {
+          "value": "Plocha pojistka (3 A)",
+          "context": "Mitgelieferte Flachsicherung; Absicherung der Spannungsversorgung.",
+          "safety_critical": true
+        },
+        {
+          "value": "SN 0699-045+",
+          "context": "Auf der abgebildeten Kurzanleitung sichtbare Seriennummernangabe (vgl. TERM-003).",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 82,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 1,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 5 z 23'. Kapitel 1 'Instalace a pripojeni' mit 1.1 'Vyber mista instalace'. Der Einbauort muss gegen unbefugten Zugriff gesichert und fuer Service erreichbar sein, liegt zwingend im Fahrzeuginneren und nie im Motorraum. Wegen des integrierten GPS-Empfaengers muss die Oberseite nach oben zeigen und freie Sicht zum Satelliten bestehen; Kunststoff, Glas und Holz sind durchlaessig. Bei externer GPS-Antenne betraegt die Kabellaenge zwischen GSM-Modul und Antenne zwei Meter. Die Antenne kann unter Kunststoffverkleidungen des Armaturenbretts liegen.",
+      "accessibility_issues": [
+        "Die Textebene enthaelt ausschliesslich Steuerzeichen U+0003, keine lesbaren Buchstaben. Werkzeuge melden faelschlich vorhandenen Text.",
+        "Die Unterscheidung richtige gegenueber falscher Einbaulage ist ausschliesslich bildlich.",
+        "Die drei Abbildungen haben weder Bildunterschrift noch Nummerierung noch Legende.",
+        "Paginierungs-Diskrepanz: PDF-Seite 82 traegt die interne Nummer 'Strana 5 z 23'."
+      ],
+      "discrepancies": [
+        "Zwei Begriffe fuer dieselbe Anforderung in aufeinanderfolgenden Saetzen: \"volny vyhled\" und \"cisty vyhled\" auf den Satelliten."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Drei Bilder nebeneinander: links das Modul mit blauem Pluszeichen nach oben in einem gruenen Kreis, in der Mitte dasselbe Modul mit rotem Feld nach oben, durchgestrichen in einem roten Kreis, rechts die Strichzeichnung eines Reisemobils mit Satellitensymbol.",
+          "has_text_equivalent": false,
+          "relies_on": "Richtig und falsch werden durch gruenen Kreis gegenueber rotem Durchstreichkreis unterschieden. Das entscheidende Detail - welche Geraeteseite nach oben zeigt - ist nur im Bild erkennbar."
+        }
+      ],
+      "tables": [],
+      "warnings_found": ["Spotrebic nesmi byt nikdy instalovan v motorovem prostoru."],
+      "terminology_findings": [
+        "Die tschechische Fassung verwendet mehrere Substantive fuer dasselbe Geraet (vyhledavac, pristroj, zarizeni, hledacek). Eine einheitliche Benennung fehlt."
+      ],
+      "headings": ["1 Instalace a pripojeni", "1.1 Vyber mista instalace"],
+      "technical_values": [
+        {
+          "value": "Einbau nur im Fahrzeuginneren, nie im Motorraum",
+          "context": "Zwingende Einbauvorgabe.",
+          "safety_critical": true
+        },
+        {
+          "value": "zwei Meter Kabellaenge",
+          "context": "Vorgeschriebene Laenge zwischen GSM-Modul und externer GPS-Antenne.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 83,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["cs", "de"],
+      "summary": "Intern 'Strana 6 z 23'. Abschnitt 1.2 'Pripojeni, displeje a ovladaci prvky' mit dem grossen annotierten Foto und einer zwoelfzeiligen Legende: A Prepinac provozniho rezimu, B Pripojeni WiPro III, C Externi antena GPS (volitelna), D Stavova LED dioda sowie Pin 1 Zem (GND), Pin 2 bis 5 Merici vstup (U2 bis U5), Pin 6 Vystup B, Pin 7 Vystup A und Pin 8 Permanentni plus 12 V.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die gesamte Legende ist Bildinhalt und damit nicht vorlesbar.",
+        "Die Pin-Kreise sind zusaetzlich farbcodiert, ohne dass die Farben in der Legende benannt werden.",
+        "Die Position der Status-LED ist nur ueber eine gepunktete Linie und einen sehr kleinen gruenen Punkt erkennbar.",
+        "Das rote X-Symbol hat keinen Legendeneintrag und bleibt unerklaert.",
+        "Paginierungs-Diskrepanz: PDF-Seite 83 traegt die interne Nummer 'Strana 6 z 23'."
+      ],
+      "discrepancies": [
+        "Die Bildbeschriftung der optionalen Antenne ist auch hier deutsch ('GPS-Antenne (Optional)'), waehrend die Legende C tschechisch 'Externi antena GPS (volitelna)' lautet. Damit ist DSC-022 in vier Sprachfassungen belegt (DE, EN, FR, CS) - die eingebettete Grafik wurde in keiner lokalisiert.",
+        "Rotes X auf einem Anschluss zwischen B und C ohne Legendeneintrag (wie auf den PDF-Seiten 8, 32 und 56)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Annotiertes Foto der Anschlussseite mit gelben Kreismarken A bis D, farbigen Nummernkreisen 1 bis 8 auf dem achtpoligen Stecker, Fotos der WiPro III und der GPS-Antenne 'GPS-pro' mit Etikett SN686-001 sowie einem roten X zwischen B und C.",
+          "has_text_equivalent": true,
+          "relies_on": "Buchstaben- und Nummernmarken sind redundant zur Legende. Die Farbcodierung der Pin-Kreise, die Position der Status-LED und das rote X haben keine Textentsprechung; die Legende selbst ist Bildinhalt."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Legende zu Anschluessen, Anzeigen und Bedienelementen",
+          "columns": 2,
+          "rows": 12,
+          "has_header_row": false,
+          "note": "Bildmarke beziehungsweise Pin-Nummer links, Bedeutung rechts."
+        }
+      ],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": ["1.2 Pripojeni, displeje a ovladaci prvky"],
+      "technical_values": [
+        {
+          "value": "Pin 1 Zem (GND), Pin 2-5 Merici vstup (U2-U5), Pin 6 Vystup B, Pin 7 Vystup A, Pin 8 Permanentni plus 12 V",
+          "context": "Pinbelegung des achtpoligen Steckers; deckungsgleich mit der deutschen, englischen und franzoesischen Fassung.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 84,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 7 z 23'. Abschnitt 1.3 'Vyber provozniho rezimu' beschreibt sechs schalterabhaengige Funktionen: Anruf loest Statusbericht aus (nur berechtigte Nummern), automatische Statusberichte, Statusbericht mit U1 bis U5, Geofencing schaltbar ueber Pin 3, Anruf aktiviert oder deaktiviert die WiPro III (safe.lock) und manueller Panikalarm bei Spannung an Pin 3 in Betriebsart A.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die sechs Funktionen sind nur durch Fettung als Zwischenueberschriften erkennbar.",
+        "Der Verweis 'viz vyse' auf den Betriebsartenschalter ist unpraezise; die Abbildung steht auf der Vorseite in Abschnitt 1.2.",
+        "Paginierungs-Diskrepanz: PDF-Seite 84 traegt die interne Nummer 'Strana 7 z 23'."
+      ],
+      "discrepancies": [
+        "Derselbe falsche Querverweis wie in allen anderen Sprachfassungen: fuer die Ausgangssteuerung wird auf \"5.4 Dotaz na polohu pomoci smartphonu\" verwiesen, richtig waere 5.5. Damit ist DSC-028 in vier Sprachfassungen belegt - der Fehler stammt aus dem deutschen Master und wurde ueberall korrekt mituebersetzt.",
+        "Doppelter Satz im ersten Block: \"Zarizeni Pro-finder automaticky ukonci hovor.\" steht zweimal unmittelbar hintereinander. In der deutschen und englischen Fassung steht die Aussage nur einmal."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [
+        {
+          "caption": "Sechs schalterabhaengige Funktionen",
+          "columns": 1,
+          "rows": 6,
+          "has_header_row": false,
+          "note": "Als Folge fett gesetzter Zwischenzeilen mit Fliesstext, nicht als Liste ausgezeichnet."
+        }
+      ],
+      "warnings_found": [],
+      "terminology_findings": [
+        "Auf dieser einen Seite erscheinen drei verschiedene Substantive fuer das Geraet: \"zarizeni Pro-finder\", \"Vyhledavac Pro-finder\" und \"pristroj Pro-finder\"."
+      ],
+      "headings": ["1.3 Vyber provozniho rezimu"],
+      "technical_values": [
+        {
+          "value": "Anruf loest Statusbericht aus (nur berechtigte Nummern)",
+          "context": "Der Pro-finder legt automatisch auf und sendet einen Statusbericht; vgl. 2.7.",
+          "safety_critical": true
+        },
+        {
+          "value": "Geofencing schaltbar ueber Pin 3",
+          "context": "Bei anliegenden Spannungen laut Tabelle kontrolliert ein- und ausschaltbar.",
+          "safety_critical": true
+        },
+        {
+          "value": "Panikalarm bei Spannung an Pin 3 in Betriebsart A",
+          "context": "Manueller Alarm, ausloesbar zum Beispiel ueber einen Taster.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 85,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 8 z 23'. Ganzseitige 'Tabulka provoznich rezimu' fuer die Schalterstellungen 0 bis 9 und A bis F mit denselben Werten wie in den anderen Sprachfassungen: Intervalle 15 minut, 60 minut, 6 hodin, 24 hodin, 90 sekund und 8 minut; Stellung 8 aktiviert Geofencing ueber 6 V und deaktiviert unter 5 V, Stellung B umgekehrt; Stellung A Panikalarm, E Loeschen der Zielrufnummern, F GPS-Diagnose.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die gesamte Tabelle ist Bildinhalt ohne Tabellenstruktur und ohne Kopfzeilenauszeichnung.",
+        "Zellwerte sind \"Ano\" und \"-\"; der Bindestrich als Verneinung ist ohne Legende nicht eindeutig.",
+        "Bei elf Spalten auf Hochformat ist kein Reflow moeglich.",
+        "Die Zeilen 8 und B sind sehr eng gesetzt; die zweizeiligen Schwellenwerte beruehren einander nahezu.",
+        "Paginierungs-Diskrepanz: PDF-Seite 85 traegt die interne Nummer 'Strana 8 z 23'."
+      ],
+      "discrepancies": [
+        "Dieselben Wortumbrueche ohne Trennstrich in den Kopfzellen wie in der franzoesischen Fassung: \"Aktivovan y/deaktivo vany hovor WiPro\", \"Geofencing prepinateln y pres pin 3\". Der Fehler ist damit ein Vorlagen-, kein Uebersetzungsfehler."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [
+        {
+          "caption": "Tabulka provoznich rezimu",
+          "columns": 11,
+          "rows": 16,
+          "has_header_row": true,
+          "note": "Zweistufiger Tabellenkopf; die Spalte fuer die im Statusbericht enthaltenen Spannungen ist ueber fuenf Unterspalten U1 bis U5 zusammengefasst. Zellwerte sind \"Ano\" und \"-\"."
+        }
+      ],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": ["Tabulka provoznich rezimu:"],
+      "technical_values": [
+        {
+          "value": "15 minut / 60 minut / 6 hodin / 24 hodin",
+          "context": "Automatische Statusberichtsintervalle der Betriebsarten 4, 5, 6 und 7.",
+          "safety_critical": true
+        },
+        {
+          "value": "90 sekund (C) / 8 minut (D)",
+          "context": "Kurzintervalle; ab Betriebsbereitschaft sucht der Pro-finder das GPS-Signal.",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart 8: ueber 6 V zapnuto, unter 5 V vypnuto; Betriebsart B umgekehrt",
+          "context": "Geofencing-Schaltschwellen an Pin 3; identisch mit den anderen Sprachfassungen.",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart E: Zielrufnummern loeschen / F: GPS-Diagnose",
+          "context": "Servicestellungen; vgl. 2.9 und 1.5.2.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 86,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 9 z 23'. Abschnitt 1.4 'Pripojeni modulu': Pin 1 und Pin 8 werden polrichtig an 12 V DC angeschlossen, die Plusleitung mit der beiliegenden Sicherung abgesichert. Pin 2 bis 5 sind Messeingaenge fuer 0 bis 30 V, ueber Pin 3 laesst sich je nach Betriebsart Geofencing schalten. Pin 6 und 7 sind Transistorausgaenge mit 12 V und maximal 500 mA; groessere Lasten erfordern ein hochwertiges Kfz-Relais mit Freilaufdiode, bei Ueberlast entfaellt die Garantie. Danach 1.5 'Antena GPS (volitelne prislusenstvi)' und 1.5.1 'Montaz anteny GPS' mit Klebepad, sabotagegeschuetztem Ort und der Vorgabe, die Klebeflaeche unter 15 Grad C zu erwaermen.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die drei Schaltarten der Ausgaenge sind als Aufzaehlung mit sehr kleinen Punkten gesetzt.",
+        "Die Pinbezeichnungen setzen die Legende aus Abschnitt 1.2 voraus, die selbst nur Bildinhalt ist.",
+        "Der Text zu 1.5.1 steht zweispaltig neben dem Foto; die Lesereihenfolge zwischen Textspalte und Bild ist nicht ausgezeichnet.",
+        "Paginierungs-Diskrepanz: PDF-Seite 86 traegt die interne Nummer 'Strana 9 z 23'."
+      ],
+      "discrepancies": [
+        "Verstuemmelter Produktname: \"propojte WiPro III (safe.lock) a hledacek Pro pomoci prilozeneho pripojovaciho kabelu WiPro III\". Statt \"Pro-finder\" steht dort \"hledacek Pro\".",
+        "Abweichende Bezeichnung desselben Kabels: hier \"pripojovaci kabel WiPro III\", in der franzoesischen Fassung (Seite 59) dagegen \"cable de connexion RJ10\".",
+        "Doppelter Punkt am Ende des roten Hinweises (\"...prostrednictvim SMS..\").",
+        "Der rote Hinweis verweist korrekt auf 5.5, waehrend Abschnitt 1.3 auf der Vorseite fuer dieselbe Sache 5.4 nennt - dieselbe dokumentinterne Inkonsistenz wie im franzoesischen Teil."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Foto der optionalen GPS-Antenne mit weisser Empfangsflaeche, Kabel und vierpoligem Stecker; magentafarbene gestrichelte Linien markieren Kabel, Adern und Stecker.",
+          "has_text_equivalent": false,
+          "relies_on": "Position und Magenta-Markierungen ohne Bildunterschrift oder Legende. Welche Seite die Klebeseite ist, ist im Foto nicht erkennbar."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [
+        "Pouzivejte vysoce kvalitni automobilova rele s volnobeznou diodou. Pretezovanim zanika zaruka.",
+        "Montazni plocha musi byt sucha, cista a zbavena mastnoty. Pri teplotach nizsich nez 15 °C je treba lepeny povrch zahrat."
+      ],
+      "terminology_findings": [
+        "Die tschechische Fassung verwendet mehrere Substantive fuer dasselbe Geraet (vyhledavac, pristroj, zarizeni, hledacek). Eine einheitliche Benennung fehlt."
+      ],
+      "headings": [
+        "1.4 Pripojeni modulu",
+        "1.5 Antena GPS (volitelne prislusenstvi)",
+        "1.5.1 Montaz anteny GPS"
+      ],
+      "technical_values": [
+        {
+          "value": "12 V DC",
+          "context": "Spannungsversorgung an Pin 1 (Plus, abgesichert) und Pin 8, polrichtig anzuschliessen.",
+          "safety_critical": true
+        },
+        {
+          "value": "0 bis 30 V",
+          "context": "Messbereich der Eingaenge an Pin 2 bis 5.",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V / 500 mA je Ausgang",
+          "context": "Transistorausgaenge Pin 6 und 7. Ueber 500 mA ist ein Kfz-Relais mit Freilaufdiode erforderlich; Ueberlast hebt die Garantie auf.",
+          "safety_critical": true
+        },
+        {
+          "value": "unter 15 Grad C Klebeflaeche erwaermen",
+          "context": "Montagebedingung fuer das Klebepad der GPS-Antenne.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 7, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend: Struktur, Terminologie, technische Werte und Layout sind geprueft, Grammatik und Stil bleiben einem tschechischen Sprachreview vorbehalten. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 87,

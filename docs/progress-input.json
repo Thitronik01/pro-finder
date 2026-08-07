@@ -69,5 +69,5 @@
     "Die Stromaufnahme im Normalbetrieb ist in den Sprachfassungen unterschiedlich angegeben (DE ca. 16–21 mA, EN approx. 21 mA; DSC-020). Der gültige Wert ist technisch zu bestätigen.",
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8."
   ],
-  "next_action": "PDF-Batch 7: DOC-IBA-SN045 Seiten 77–86 seitenweise prüfen (Beginn des tschechischen Sprachteils; der französische Teil ist mit Seite 76 abgeschlossen)."
+  "next_action": "PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 seitenweise prüfen (tschechischer Teil ab interner Strana 10 z 23; dort stehen ab interner Seite 19 die SMS-Befehle – Vergleich gegen DSC-033 erforderlich)."
 }

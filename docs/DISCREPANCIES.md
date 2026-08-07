@@ -152,6 +152,10 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   selbst ist falsch, die Übersetzungen sind korrekte Übertragungen eines fehlerhaften
   Originals. Auf derselben französischen Seite 59 wird für dieselbe Sache korrekt auf 5.5
   verwiesen – der Fehler ist also auch dokumentintern inkonsistent.
+- **Nachtrag 2026-08-07:** Auch die tschechische Fassung (Seite 84) nennt 5.4, und auch
+  dort verweist Abschnitt 1.4 auf der Folgeseite korrekt auf 5.5. Damit ist der Fehler in
+  **vier von vier** geprüften Sprachfassungen belegt, samt derselben dokumentinternen
+  Inkonsistenz.
 - **Folge für das Projekt:** Der deutsche Master darf nicht als geprüfte Wahrheit behandelt
   werden. Auch er braucht einen eigenen technischen Review, nicht nur die Übersetzungen.
 - **Schwere:** hoch (Projektannahme betroffen; inhaltlich mittel) · **Status:** offen
@@ -239,8 +243,8 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   „GPS-Antenne (Optional)", während die Legende danebensteht als „External GPS antenna
   (optional)" (EN) beziehungsweise „Antenne GPS externe (en option)" (FR).
 - **Bewertung:** Die Grafik wurde offenbar als fertiges Bild in alle Sprachteile übernommen.
-  Damit ist zu erwarten, dass alle zehn Sprachfassungen betroffen sind; bestätigt sind
-  bisher DE, EN und FR.
+  Bestätigt sind DE, EN, FR und CS (tschechische Seite 83) – vier von vier geprüften
+  Fassungen. Dass alle zehn betroffen sind, ist damit sehr wahrscheinlich.
 - **Schwere:** mittel (Terminologie und Verständlichkeit; verschärft, weil die Legende
   ohnehin nur Bildinhalt ist) · **Status:** offen
 
@@ -438,6 +442,29 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   gemeint ist die Programmier-SMS an den Pro-finder, nicht an die Alarmzentrale.
 - **Status:** offen (redaktionell)
 
+### DSC-036 – Verstümmelter Produktname und abweichende Kabelbezeichnung im tschechischen Teil (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, tschechische Seite 86, Abschnitt 1.4
+- **Beleg:** „propojte WiPro III (safe.lock) a **hledáček Pro** pomocí přiloženého
+  _připojovacího kabelu WiPro III_". Statt „Pro-finder" steht dort „hledáček Pro" – der
+  Produktname ist abgeschnitten.
+- **Zusatz:** Dasselbe Kabel heißt hier „připojovací kabel WiPro III", in der französischen
+  Fassung (Seite 59) dagegen „câble de connexion **RJ10**". Zwei verschiedene Benennungen
+  für denselben Lieferbestandteil.
+- **Schwere:** mittel (Produktname und Ersatzteilbezeichnung) · **Status:** offen
+
+### DSC-037 – Uneinheitliche tschechische Gerätebenennung (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, tschechische Seiten 80, 82, 84 und 86
+- **Beleg:** Für dasselbe Gerät stehen nebeneinander „vyhledávač Pro-finder", „přístroj
+  Pro-finder", „zařízení Pro-finder" und „hledáček Pro-finder" – auf Seite 84 sogar drei
+  davon auf einer einzigen Seite. Zusätzlich „volný výhled" gegenüber „čistý výhled" für
+  dieselbe Anforderung in aufeinanderfolgenden Sätzen (Seite 82).
+- **Hinweis zur Prüftiefe:** Diese Positionen betreffen Terminologie und sind ohne
+  Tschechischkenntnisse belegbar. Grammatik und Stil des tschechischen Teils sind
+  **nicht** geprüft und brauchen einen muttersprachlichen Review.
+- **Schwere:** mittel · **Status:** offen
+
 ### DSC-035 – Redaktionelle Befunde aus dem Rest des französischen Teils (ab SN-045)
 
 - Seite 67: „tel que comme décrit **sous dans** les sections 2.8" – zwei fehlerhafte
@@ -458,6 +485,6 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   Übernahme erforderlich – auch für Textbausteine, die nur als Referenz dienen.
 - **Status:** offen
 
-> Die Befunde der Seiten 1–76 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
+> Die Befunde der Seiten 1–86 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
 > in den Seitenrecords unter [sources/pages/](../sources/pages/) erfasst und werden bei
 > der Segment-Extraktion in dieses Register übernommen, sobald sie inhaltlich bewertet sind.

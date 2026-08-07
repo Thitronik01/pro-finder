@@ -5,12 +5,12 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 18.2 %**
+**Gesamtfortschritt: 18.3 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 6.2 %       |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 7 %         |
 | Content-Modell und deutscher Master      | 20 %    | 10 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 25 %        |
@@ -23,20 +23,20 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 0 %         |
-| DOC-IBA-SN045 | 247    | 7.7 %       |
+| DOC-IBA-SN045 | 247    | 8.7 %       |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: PDF-Batch 7: DOC-IBA-SN045 Seiten 77–86 seitenweise prüfen (Beginn des tschechischen Sprachteils; der französische Teil ist mit Seite 76 abgeschlossen).
+Offene Blocker: 5 · Nächste Aktion: PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 seitenweise prüfen (tschechischer Teil ab interner Strana 10 z 23; dort stehen ab interner Seite 19 die SMS-Befehle – Vergleich gegen DSC-033 erforderlich).
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon 80 visuell geprüft (`inspected`): DOC-IBA-SN045
-  Seiten 1–76 sowie beide Kurzanleitungen. Der deutsche, der englische und der
-  französische Sprachteil sind damit vollständig geprüft;
+- 323 Seitenrecords angelegt; davon 90 visuell geprüft (`inspected`): DOC-IBA-SN045
+  Seiten 1–86 sowie beide Kurzanleitungen. Der deutsche, der englische und der
+  französische Sprachteil sind vollständig geprüft, der tschechische bis interne Seite 9;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
   lesbaren Text, 34 Seiten liefern ausschließlich Steuerzeichen (Details in
   `IST_AUDIT.md`);

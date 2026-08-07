@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 18.2,
+  "overall_percent": 18.3,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,7 +19,7 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 6.2,
+      "percent": 7,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
@@ -65,10 +65,10 @@
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 7.7,
+      "percent": 8.7,
       "status_counts": {
-        "inspected": 76,
-        "not_started": 171
+        "inspected": 86,
+        "not_started": 161
       }
     },
     {
@@ -128,5 +128,5 @@
     "Die Stromaufnahme im Normalbetrieb ist in den Sprachfassungen unterschiedlich angegeben (DE ca. 16–21 mA, EN approx. 21 mA; DSC-020). Der gültige Wert ist technisch zu bestätigen.",
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8."
   ],
-  "next_action": "PDF-Batch 7: DOC-IBA-SN045 Seiten 77–86 seitenweise prüfen (Beginn des tschechischen Sprachteils; der französische Teil ist mit Seite 76 abgeschlossen)."
+  "next_action": "PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 seitenweise prüfen (tschechischer Teil ab interner Strana 10 z 23; dort stehen ab interner Seite 19 die SMS-Befehle – Vergleich gegen DSC-033 erforderlich)."
 }
