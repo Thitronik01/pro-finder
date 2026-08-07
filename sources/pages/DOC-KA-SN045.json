@@ -1,0 +1,352 @@
+{
+  "doc_id": "DOC-KA-SN045",
+  "page_count": 2,
+  "status_note": "Seitenstatus: not_started(0) -> inspected(25) -> extracted(50) -> validated(75) -> approved(100); blocked behaelt letzten Wert in progress_percent.",
+  "pages": [
+    {
+      "page": 1,
+      "status": "inspected",
+      "progress_percent": 25,
+      "width_mm": 415.0,
+      "height_mm": 298.0,
+      "extractable_chars": 17770,
+      "content_type": "anleitung",
+      "languages": ["de", "en", "fr", "it", "nl", "da", "sv", "cs"],
+      "summary": "Aussenseite der mehrsprachigen Faltblatt-Kurzanleitung (415x298mm, Rev. 1.3.2) mit den Abschnitten 5 (Status-LED-Betriebszustaende 1-9 mit farbigen Blinkmuster-Balken), 6 (THITRONIK App laden + programmieren mit Smartphone-Mockup), 7 (Statusbericht-Inhalte in 8 Sprachbloecken) sowie Alarm-SMS-Beispieltabelle, englischsprachigem Technical-specifications-Panel (inkl. CE-Erklaerung 2014/53/EU, Entsorgung, Support, Disclaimer) und Titelpanel 'Pro-finder SN 0699-045+' mit Produktfoto, Sprachlegende, Seriennummernfeld und Herstelleradresse. Alle Anleitungstexte liegen parallel in 8 Sprachen vor (DE, EN, FR, IT, NL, DA, SV, CZ), der Grossteil des Fliesstexts ist nur 4,8-5,0 pt klein.",
+      "accessibility_issues": [
+        "Extrem kleine Schrift: Der Grossteil des Fliesstexts ist 4,8-5,0 pt (ca. 10.700 Zeichen), weitere Bloecke 5,5-6,0 pt; nur Ueberschriften erreichen 8-10 pt. Weit unter jeder Lesbarkeitsempfehlung, auch fuer normalsichtige Leser nur mit Muehe lesbar",
+        "PDF ist nicht getaggt (kein StructTreeRoot, kein MarkInfo): keine Lesereihenfolge, keine Alternativtexte, fuer Screenreader auf dem komplexen 3-Spalten-Faltlayout praktisch unbrauchbar",
+        "8 Sprachen werden zeilenweise gemischt (z.B. 'DE: Blinkt rot/gelb | EN: Flashes red/yellow | ...') ohne Sprachauszeichnung - Screenreader koennen die Sprache nicht wechseln",
+        "Sprachidentifikation in vielen Bloecken ausschliesslich ueber Flaggen-Icons (Statusbericht-Raster, Alarm-SMS-Tabelle, App-Texte, Hinweiskasten, Sprachlegende) - nicht farbfehlsichtigen- und screenreader-tauglich",
+        "Status-LED-Blinkbalken sind rein farbcodiert (rot/gelb/gruen); die Rot/Gruen-Muster der Zustaende 5 und 9 sind fuer Farbfehlsichtige kaum unterscheidbar - Textbeschreibungen nennen die Farben zwar, die Balken tragen aber keine Muster-/Formunterscheidung",
+        "Technical specifications, CE-Erklaerung, Entsorgungshinweise, Technical support und Disclaimer existieren nur auf Englisch, obwohl das Dokument 8 Sprachen bedient",
+        "URLs (maps.google.com, thitronik.de/support/downloads, www.thitronik.de) sind nicht als Hyperlinks hinterlegt (0 Link-Annotationen auf der Seite)",
+        "QR-Code ohne ausgeschriebene Ziel-URL als Textalternative",
+        "Zuordnung der App-Funktionsbeschriftungen zu den Icons erfolgt nur ueber gepunktete Linien und Position (Mockup-Grafik)",
+        "Grossformat 415x298mm mit dreispaltigem Faltlayout: visuelle Lesereihenfolge (Abschnitt 5 links, 7 Mitte, Titelpanel rechts, Abschnitt 6 unten links) ist ohne Faltung nicht selbsterklaerend; Seite 1 beginnt mit Abschnitt 5, Abschnitte 1-4 liegen auf Seite 2"
+      ],
+      "discrepancies": [
+        "Sachlicher Uebersetzungsfehler bei LED-Zustand 2: Schwedisch nennt GPS statt GSM - 'SV: Naetsoekning/Ingen GPS-mottagning' waehrend alle anderen Sprachen GSM-Empfang meinen ('DE: Netzsuche/kein GSM Empfang', 'EN: Network search/no GSM reception')",
+        "Tippfehler im englischen Disclaimer: 'be wise and do not leave any valuables on viewor where they are easily accessible in the vehicle' - 'on viewor' statt 'in view or'",
+        "Inkonsistente Grossschreibung bei LED-Zustand 9: 'DE: Blinkt Gruen' (grossgeschrieben) gegenueber Zustand 6 'DE: Blinkt gelb' und Zustand 1 'DE: Blinkt rot/gelb'",
+        "Uneinheitliche CAN-Bus-Schreibweise in der Alarm-SMS-Tabelle: '(CAN-Bus)' (DE/SV/CZ), '(CAN bus)' (EN/IT), '(CAN-bus)' (DA/NL)",
+        "Deutscher Beispiel-Alarmgrund ohne Umlaut: 'Einbruch Tuer (CAN-Bus)' statt 'Einbruch Tuer' mit Umlaut 'Tür' (moeglicherweise SMS-Zeichensatz-bedingt, aber nicht erlaeutert)",
+        "Fehlender Bindestrich in 'DE: Netzsuche/kein GSM Empfang' (korrekt: GSM-Empfang)",
+        "Franzoesische Titelbezeichnung 'Instruction brève' im Singular (ueblich waere 'Instructions brèves')",
+        "Anglizismus-Fehler im App-Kasten: 'Full functionality is only available on the latest hard- and software.' - deutsche Kompositum-Kuerzung ('hard- and software') ist im Englischen nicht idiomatisch",
+        "Technisches Panel wirbt mit Satz 'With the THITRONIK(R) App you have all the functions of your WiPro III and Pro-finder simple and compact at a glance.' - grammatisch unvollstaendig (fehlendes Verb/Komma)"
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "headings": [
+        "5 - DE: Anzeigen der Betriebszustaende (Status LED) / EN: Displaying the operating states (status LED) / ... (8 Sprachen)",
+        "6 - DE: App laden + programmieren / EN: Load app + programming / ... (8 Sprachen)",
+        "7 - DE: Empfangene Meldungen / EN: Received messages / ... (8 Sprachen)",
+        "DE: Statusbericht / EN: Status report / FR: Rapport d'etat / IT: Relazione sullo stato / DA: Statusrapport / NL: Statusbericht / SV: Statusrapport / CZ: Stavova zprava",
+        "DE: Alarm-SMS / EN: SMS alarm / FR: Alarme SMS / IT: Allarme SMS / DA: Alarm SMS / NL: Alarm SMS / SV: Alarm SMS / CZ: Alarm SMS",
+        "THITRONIK(R)App - available in the following languages",
+        "Technical specifications",
+        "Main unit",
+        "Disposal instructions",
+        "Technical support",
+        "Disclaimer",
+        "Pro-finder SN 0699-045+ (Titelpanel)"
+      ],
+      "figures": [
+        {
+          "description": "Neun horizontale Blinkmuster-Balken zu den Status-LED-Zustaenden 1-9 (rot/gelb, rot, gelb, gruen, rot/gruen, gruen/gelb usw.), jeweils mit kleinem LED-Piktogramm",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe (rot/gelb/gruen) und Blinkrhythmus; Textbeschreibung nennt die Farben in 8 Sprachen, die Balken selbst sind rein farbcodiert, Rot/Gruen-Kombinationen (Zustand 5 und 9) fuer Farbfehlsichtige kritisch"
+        },
+        {
+          "description": "Smartphone-Mockup der THITRONIK App ('My Vehicles', 'Wohnmobil') mit 9 Funktions-Icons, die ueber gepunktete Linien mit 8-sprachigen Beschriftungskaesten verbunden sind (scharf/unscharf, Fahrzeug orten, Geofencing, verriegeln/entriegeln, Statusbericht, Ausgang A/B, Kopplungsmodus, Anleitungen)",
+          "has_text_equivalent": true,
+          "relies_on": "Position und gepunktete Verbindungslinien zur Zuordnung von Label zu Icon"
+        },
+        {
+          "description": "QR-Code neben 'THITRONIK(R) App'-Text ('For more information visit our website.')",
+          "has_text_equivalent": false,
+          "relies_on": "QR-Code ohne ausgeschriebene Ziel-URL; Zieladresse nicht als Text angegeben"
+        },
+        {
+          "description": "Produktfoto des Pro-finder Grundmoduls mit aufgeklappter Antenne, Drehschalter, RJ-Buchse und weissem Molex-Steckplatz",
+          "has_text_equivalent": false,
+          "relies_on": "rein illustrativ; keine Beschriftung der sichtbaren Anschluesse, kein Alternativtext (PDF ungetaggt)"
+        },
+        {
+          "description": "Laenderflaggen als alleinige Sprachkennzeichnung in vielen Bloecken (Statusbericht-Raster, Hinweiskasten unter Zustand 9, Alarm-SMS-Tabelle, App-Anleitungstexte, Sprachlegende auf dem Titelpanel)",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe/Flaggenbild zur Sprachidentifikation; nur im Kopf der Abschnitte 5/6/7 stehen zusaetzlich Sprachkuerzel DE/EN/FR/..."
+        },
+        {
+          "description": "CE-Zeichen, Recycling-Symbol, durchgestrichene Muelltonne (WEEE) neben den englischen Konformitaets- und Entsorgungstexten",
+          "has_text_equivalent": true,
+          "relies_on": "Symbole mit englischem Begleittext"
+        },
+        {
+          "description": "App Store- und Google Play-Badges mit Hinweis 'Full functionality is only available on the latest hard- and software.'",
+          "has_text_equivalent": true,
+          "relies_on": "Logos mit Text"
+        }
+      ],
+      "tables": [
+        "Status-LED-Uebersicht (Abschnitt 5): 9 nummerierte Zustaende als Liste mit Farb-Blinkbalken, je Zustand LED-Verhalten und Bedeutung in 8 Sprachen - eine Status-LED-Tabelle im engeren Sinn (mit Kopfzeile) existiert nicht, die Funktion wird durch diese Listenstruktur erfuellt",
+        "Technical specifications / Main unit: zweispaltige Label-Wert-Liste (Power supply, Current consumption, Radio Access Technology, Bands, Destination numbers, GNSS, Outputs, Temperature range, SIM card type) - nur Englisch",
+        "Alarm-SMS-Beispieltabelle: 8 Sprachzeilen (DE, EN, FR, IT, DA, NL, SV, CZ) mit Erlaeuterung und identischen Beispielwerten (Alarmgrund, UTC-Zeit, Google-Maps-Link, Geschwindigkeit); Layouttabelle ohne Kopfzeile",
+        "Statusbericht-Raster (Abschnitt 7): 8 Sprachbloecke in 2 Spalten x 4 Zeilen, nur per Flagge unterschieden"
+      ],
+      "warnings_found": [
+        "Disclaimer (nur Englisch): 'As with any other alarm system, Pro-finder can only report a break-in or attempted break-in, but it cannot prevent it.' sowie Haftungsausschluss 'Thitronik does not accept any liability for stolen valuables and/or vehicles due to a break-in, or for damage that occurs due to vehicle break-in or improper handling of the device.'",
+        "Disposal instructions (nur Englisch): 'When decommissioning the device, do not dispose of it with household waste.'",
+        "Hinweis unter LED-Zustand 9 (8-sprachig): 'Nach abgeschlossener Installation und Programmierung blinkt die Status LED im Normalbetrieb gruen.'"
+      ],
+      "technical_values": [
+        {
+          "value": "Power supply: 9 - 30 V",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": true
+        },
+        {
+          "value": "Current consumption network search: approx. 37 mA",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": false
+        },
+        {
+          "value": "Current consumption during normal operation: approx. 16 - 21 mA",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": false
+        },
+        {
+          "value": "Radio Access Technology: 2G / 3G / 4G (LTE); 2G bands: Quad; 3G bands: 1, 2, 5, 8; 4G (LTE) bands: 1, 2, 3, 4, 5, 7, 8, 18, 19, 20, 26, 28",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": false
+        },
+        {
+          "value": "Number of destination numbers: 10",
+          "context": "Technical specifications - maximal 10 Zielrufnummern",
+          "safety_critical": false
+        },
+        {
+          "value": "GNSS: GPS / QZSS",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": false
+        },
+        {
+          "value": "Outputs: 2 x 12 V / 500 mA",
+          "context": "Technical specifications - Belastbarkeit der Schaltausgaenge A/B",
+          "safety_critical": true
+        },
+        {
+          "value": "Temperature range: -10 °C to +80 °C",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": true
+        },
+        {
+          "value": "SIM card type: Nano-SIM",
+          "context": "Technical specifications / Main unit",
+          "safety_critical": false
+        },
+        {
+          "value": "Einbruch Tuer (CAN-Bus)",
+          "context": "Beispiel-Alarmgrund in der deutschen Alarm-SMS (ohne Umlaut geschrieben)",
+          "safety_critical": false
+        },
+        {
+          "value": "UTC: 06:43",
+          "context": "Beispielwert Uhrzeit des Alarms in allen 8 Sprachzeilen der Alarm-SMS-Tabelle; Zeitangabe erfolgt in UTC, nicht Ortszeit",
+          "safety_critical": false
+        },
+        {
+          "value": "http://maps.google.com maps?q=54.4903653,9.8020052",
+          "context": "Beispiel-Google-Maps-Link in der Alarm-SMS (Koordinaten Eckernfoerde); http statt https, durch Umbruch getrennt dargestellt",
+          "safety_critical": false
+        },
+        {
+          "value": "0 km/h",
+          "context": "Beispielwert aktuelle Geschwindigkeit in der Alarm-SMS",
+          "safety_critical": false
+        },
+        {
+          "value": "SN 0699 - 045 +",
+          "context": "Titelpanel 'Pro-finder SN 0699-045+': Geraeteversion ab Seriennummer 045 (Artikel 0699)",
+          "safety_critical": false
+        },
+        {
+          "value": "directive 2014/53/EU",
+          "context": "CE-Konformitaetserklaerung, Download unter http://www.thitronik.de/support/downloads",
+          "safety_critical": false
+        },
+        {
+          "value": "Rev. 1.3.2",
+          "context": "Revisionsstand unten rechts",
+          "safety_critical": false
+        },
+        {
+          "value": "Thitronik GmbH, Finkenweg 9 - 15, 24340 Eckernfoerde, kontakt@thitronik.de, www.thitronik.de",
+          "context": "Herstelleradresse im Fusspanel",
+          "safety_critical": false
+        },
+        {
+          "value": "Serial number: (leeres Eintragsfeld)",
+          "context": "Feld zum handschriftlichen Eintragen der Seriennummer; laut Support-Text soll die Seriennummer 'on the front side of this manual' notiert werden",
+          "safety_critical": false
+        }
+      ],
+      "terminology_findings": [
+        "'Status LED' bzw. 'status LED' durchgaengig OHNE Bindestrich (3x 'Status LED', 5x 'status LED', 0x 'Status-LED') - weicht von der Soll-Schreibweise 'Status-LED' ab; z.B. 'blinkt die Status LED im Normalbetrieb gruen'",
+        "'Pro-finder' 24x korrekt in Soll-Schreibweise; keine Varianten 'Pro-Finder' oder 'Profinder' auf dieser Seite",
+        "Seriennummern-Kennzeichnung als 'SN 0699 - 045 +' (Titelpanel, mit schmalen Leerzeichen) - abweichendes Format gegenueber Soll-Terminologie 'ab SN-045'; die Formulierung 'bis SN-044' kommt auf dieser Seite nicht vor",
+        "'THITRONIK(R)App' ohne Leerzeichen zwischen Markenzeichen und 'App' in der Abschnitt-6-Ueberschrift, an anderer Stelle 'THITRONIK(R) App' mit Leerzeichen",
+        "Firmierung wechselt zwischen Logo-Schreibweise 'THITRONIK' und juristischer Schreibweise 'Thitronik GmbH' (letzteres in CE-Text und Adresse - vertretbar)"
+      ],
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+    },
+    {
+      "page": 2,
+      "status": "inspected",
+      "progress_percent": 25,
+      "width_mm": 415.0,
+      "height_mm": 298.0,
+      "extractable_chars": 18844,
+      "content_type": "anleitung",
+      "languages": ["de", "en", "fr", "it", "da", "nl", "sv", "cs"],
+      "summary": "Querformatige, dicht gepackte Innenseite der internationalen Kurzanleitung mit vier nummerierten Abschnitten: (1) Montageort waehlen, (2) SIM Karte vorbereiten, (3) Anschluesse/Anzeigen/Bedienelemente, (4) Betriebsarten. Jeder Abschnitt liegt in 8 Sprachen (DE, EN, FR, IT, DA, NL, SV, CZ) mit Flaggen-Icons vor. Enthalten sind Montage-Piktogramme (gruener Kreis / roter Verbotskreis), eine Wohnmobil-Zeichnung mit 'Recommended mounting Area', eine Fotosequenz 1.-6. zum SIM-Einlegen, ein Verdrahtungsdiagramm (WiPro III, GPS-Antenne, 8-poliger Stecker, Batterie mit Sicherung) sowie eine Betriebsarten-Tabelle (Modi 0-3 gegen U1-U5). Die vermutete 'Status-LED-Tabelle' ist tatsaechlich die Betriebsarten-Tabelle; deren Sprachzeilen sind alle korrekt zugeordnet. Die Vertauschungs-Hypothese bestaetigt sich nicht als Flaggen-Vertauschung, aber der schwedische Anleitungsblock in Abschnitt 2 besteht groesstenteils aus franzoesischem Text.",
+      "accessibility_issues": [
+        "Extrem dichte 8-Sprachen-Mehrspalten-Seite mit sehr kleiner Schrift; im Druck (A3/A2 gefaltet) kaum barrierefrei lesbar.",
+        "Richtig/Falsch-Montage wird primaer ueber Farbe kommuniziert (gruener Kreis = richtig ohne zusaetzliches Haekchen-Symbol; roter Kreis mit Strich = falsch) - fuer farbfehlsichtige Nutzer ist die 'richtig'-Variante nur an der Farbe erkennbar.",
+        "Label 'Recommended mounting Area' existiert ausschliesslich auf Englisch (gruene Schrift, gruene Schraffur) - keine Uebersetzung, Farb-/Positionsabhaengigkeit.",
+        "Pin-Identifikation im Verdrahtungsdiagramm ueber kleine farbige Nummernkreise (rot/gruen/gelb/orange/rosa/blau/weiss/schwarz); Nummern gleichen das aus, sind aber sehr klein.",
+        "Rotes X auf dem nicht zu belegenden Anschluss ist ein reines Farb-/Symbolzeichen ohne Textentsprechung in der Legende.",
+        "Status-LED (Marker D) im Diagramm nur als kleiner gruener Punkt dargestellt.",
+        "Flaggen-Icons dienen in Tabellen, Legenden und Intro-Absaetzen als einzige Sprachkennzeichnung (keine Sprachkuerzel wie in den Kopfzeilen) - fuer Screenreader/SW-Druck problematisch.",
+        "Sprachmischung (SV-Block ueberwiegend franzoesisch, EN-Block mit franzoesischer Ueberschrift) macht korrektes Sprach-Tagging fuer Screenreader unmoeglich und schliesst rein schwedischsprachige Nutzer von den Schritten 2-9 aus.",
+        "Fotosequenz 1.-6. ohne Bildunterschriften oder Textreferenzen; Zuordnung zu den Anleitungsschritten muss erraten werden.",
+        "Haekchen-/Strich-Matrix der Betriebsarten-Tabelle sehr klein; Zuordnung der Spalten U1-U5 zu den Pin-Definitionen (U1 = Betriebsspannung an Pin 8) muss aus einem anderen Seitenabschnitt kombiniert werden."
+      ],
+      "discrepancies": [
+        "SCHWERWIEGEND - SV-Anleitungsblock (Abschnitt 2, unter schwedischem Intro) besteht groesstenteils aus Franzoesisch: Ueberschrift \"ATTENTION !\" (statt schwedisch), Zwischenueberschrift \"Configurer la carte SIM :\", Schritte 2-4 franzoesisch (\"Désactivez la boîte de réception et toutes les lignes d'appel.\", \"Désactivez les fonctions de confort.\", \"Activez le roaming (s'il n'est pas pré-réglé)\") und Schritte 5-9 komplett franzoesisch (\"Mettez Pro-finder hors tension.\" ... \"Commencez maintenant la programmation Utilisez l'application THITRONIK® pour cela.\"). Nur Einleitungssatz (\"För steg 1 - 4 måste iMessage-funktionen vara avaktiverad när du använder en iPhone.\") und Schritt 1 (\"Det är obligatoriskt att avaktivera PIN-koden för SIM-kortet!\") sind schwedisch. Schwedische Nutzer erhalten die Schritte 2-9 nicht in ihrer Sprache.",
+        "EN-Block (Abschnitt 2) traegt die franzoesische Zwischenueberschrift \"Configurer la carte SIM :\" statt einer englischen (z.B. 'Configure SIM card:'), der Schrittinhalt darunter ist englisch (\"It is mandatory to deactivate the PIN request for the SIM!\").",
+        "Abschnittstitel 2 FR: \"Préparer carte la SIM\" - Wortstellungsfehler, korrekt \"Préparer la carte SIM\".",
+        "IT-Schritt 8: \"Aspetta che arrivi Pro-finder.\" ('Warte bis Pro-finder ankommt') - Fehluebersetzung von \"Warten Sie bis der Pro-finder eingebucht hat.\"",
+        "Doppelung im DA-Intro: \"SIM-kortet skal understøtte SMS, telefoni og mobildata (4G/LTE). (4G/LTE).\" und im IT-Intro: \"... e dati mobili (4G/LTE). (4G/LTE).\"",
+        "NL-Intro mit doppeltem Verb: \"De SIM-kaart moet ondersteuning bieden voor SMS, telefonie en mobiele data (4G/LTE) ONDERSTEUNEN.\"",
+        "Inhaltliche Abweichung DE vs. uebrige Sprachen: Nur DE empfiehlt \"die vorkonfigurierte THITRONIK® Vertragskarte der Telekom\"; die Paketempfehlung '100 SMS, 100 Minuten, 500 MB' fehlt im DE-Intro, waehrend die Telekom-Empfehlung in allen anderen Sprachen fehlt.",
+        "NL-Schritt 3: \"(Teugbellen bij Bezet, rappels per sms etc.)\" - Tippfehler 'Teugbellen' (korrekt 'Terugbellen') und franzoesisches Wort 'rappels' im niederlaendischen Text.",
+        "Verweis \"(Siehe 5.9 Betriebszustaende Status LED)\" (in allen Sprachen) zielt auf ein Kapitel, das in dieser zweiseitigen Kurzanleitung nicht existiert.",
+        "Fotonummerierung 1.-6. in Abschnitt 2 kollidiert mit der Schritt-Nummerierung 1.-9. der Textanleitung (SIM-Einlegen ist Textschritt 5.-7.).",
+        "DA-Block: \"Konfigurer SIM -kort:\" - fehlerhaftes Leerzeichen vor '-kort'.",
+        "Sprachreihenfolge der Kopfzeilen inkonsistent: Abschnitt 2 endet mit NL, Abschnitt 3 nennt NL an dritter Stelle, Abschnitte 1 und 4 nutzen wieder andere Reihenfolgen.",
+        "CZ-Schritt 2 stark abgekuerzt: \"Deaktivujte mail. schránku a všechna přes. volání.\""
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "headings": [
+        "1 DE : Montageort waehlen / EN : Selecting the installation location / FR : Choisir le lieu de montage / IT : Selezionare la posizione di montaggio / NL : Montageplaats kiezen / DA : Vaelg monteringssted / SV : Vaelj montageplats / CZ : Zvolte montazni misto",
+        "2 DE : SIM Karte vorbereiten / EN : Prepare SIM card / FR : Préparer carte la SIM / IT : Preparare la scheda SIM / DA : Klargoer SIM-kort / SV : Foerbered SIM-kort / CZ : Pripravte SIM kartu / NL : SIM-kaart voorbereiden",
+        "3 DE : Anschluesse, Anzeigen und Bedienelemente / EN : Connections, displays and control elements / NL : Aansluitingen, displays en bedieningselementen / FR : Raccordements, affichages et éléments de commande / IT : Collegamenti, visualizzazione ed elementi di comando / DA : Tilslutning, visninger og taster / SV : Anslutningar, visningar och manoeverelement / CZ : Pripojeni, signalizace a ovladaci prvky",
+        "4 DE : Betriebsarten / EN : Operating modes / FR : Modes de fonctionnement / IT : Modalità di esercizio / NL : Modi / DA : Funktioner / SV : Driftsaett / CZ : Provozni rezimy",
+        "ACHTUNG! / ATTENTION! / ATTENTION ! / ATTENZIONE! / BEMAERK! / LET OP! / POZOR! (Warnblöcke Abschnitt 2)",
+        "SIM-Karte konfigurieren: / Pro-finder aktivieren: (und Entsprechungen je Sprache)"
+      ],
+      "figures": [
+        {
+          "description": "Abschnitt 1: Zwei Geraete-Renderings, korrekt montiertes Geraet im gruenen Kreis, falsch orientiertes Geraet im roten durchgestrichenen Kreis, dazu Satelliten-Piktogramm.",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe (gruen=richtig nur ueber Farbe markiert, rot+Diagonalstrich=falsch); Textabsaetze erklaeren die Ausrichtung, aber die Bildaussage selbst ist farbcodiert"
+        },
+        {
+          "description": "Abschnitt 1: Wohnmobil-Strichzeichnung mit gruen schraffiertem Montagebereich hinter dem Armaturenbrett, rotem Markierungskreis und gepunktetem Pfeil vom Label 'Recommended mounting Area'.",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe (gruene Schraffur, roter Kreis) und Position; Beschriftung nur auf Englisch, keine Uebersetzung in die anderen 7 Sprachen"
+        },
+        {
+          "description": "Abschnitt 2: Fotosequenz mit blauen Nummernmarken 1. bis 6. (Geraet oeffnen, SIM-Slot, Einsetzen, Schliessen) plus gelbe Markierungskreise und Pfeile; separates NANO-SIM-Piktogramm mit Beschriftung 'NANO-SIM'.",
+          "has_text_equivalent": false,
+          "relies_on": "Nummernmarken, Pfeile und gelbe Farbmarkierungen; keine Bildunterschriften; Fotonummern 1.-6. decken sich nicht mit den Textschritten 5.-7."
+        },
+        {
+          "description": "Abschnitt 3: Verdrahtungsdiagramm: WiPro III-Box, GPS-pro-Antenne (Aufkleber 'GPS-pro THITRONIK ... SN686-001', Label 'GPS Antenne (Optional)'), Geraeterueckseite mit gelben Markern A-D, Drehschalter 0-F, 8-poliger Stecker mit farbigen Nummernkreisen 1-8, rotes X auf ungenutztem Anschluss, Batterie mit rotem/schwarzem Kabel und violetter Mini-Sicherung '3'.",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe UND Nummernmarken (Pins 1-8 farbcodiert: 1 schwarz, 2 rosa, 3 weiss, 4 orange, 5 blau, 6 gruen, 7 gelb, 8 rot); das rote X (nicht belegen) ist reines Farbsymbol ohne Textentsprechung; Status-LED als kleiner gruener Punkt (D)"
+        },
+        {
+          "description": "Abschnitt 4: Foto der Geraeterueckseite mit gelbem Kreis um den Betriebsartenschalter (Drehschalter 0-F).",
+          "has_text_equivalent": true,
+          "relies_on": "gelbe Farbmarkierung und Position"
+        }
+      ],
+      "tables": [
+        "Betriebsarten-Tabelle (Abschnitt 4): 8 Sprachzeilen mit Flaggen (DE/EN/FR/IT/DA/NL/SV/CZ) und Spalten 'Betriebsart', 'Anruf loest Statusbericht aus', 'Anruf aktiviert/deaktiviert WiPro', 'Statusbericht enthaelt folgende Spannungen'; darunter Matrix Modi 0-3 gegen U1-U5 mit Haekchen/Strich-Symbolen. Alle Sprachzeilen korrekt zugeordnet (DA-Flagge: 'Opkald udloeser statusrapport' = Daenisch; NL-Flagge: 'Oproep activeert statusrapport' = Niederlaendisch; SV-Flagge: 'Anrop utloeser statusrapport' = Schwedisch; IT-Flagge: 'La chiamata attiva il report sullo stato' = Italienisch).",
+        "Legende Abschnitt 3: 8 Sprachbloecke mit je A-D (Betriebsartenschalter, Anschluss WiPro III, Externe GPS-Antenne, Status LED) und Pin 1-8 (Masse GND, Messeingaenge U2-U5, Ausgang A/B, Betriebsspannung U1); Flaggen-Sprach-Zuordnung durchgehend korrekt."
+      ],
+      "warnings_found": [
+        "ACHTUNG! Fuer die Schritte 1 - 4 muss bei der Verwendung eines iPhones die Funktion iMessage deaktiviert sein. (analog in EN/FR/IT/DA/NL/SV/CZ)",
+        "Die PIN-Abfrage der SIM ist zwingend zu deaktivieren!",
+        "Keinesfalls darf das Geraet im Motorraum montiert werden. (in allen 8 Sprachen)",
+        "Rotes X im Diagramm auf nicht zu belegendem Anschluss (nur grafisch, ohne Textwarnung)"
+      ],
+      "technical_values": [
+        {
+          "value": "\"die Kabellaenge zwischen Pro-finder und GPS-Antenne 2 Meter betraegt\"",
+          "context": "Abschnitt 1, DE-Absatz; ebenso EN \"2 metres\", DA \"2 m\"",
+          "safety_critical": false
+        },
+        {
+          "value": "\"Die PIN-Abfrage der SIM ist zwingend zu deaktivieren!\"",
+          "context": "Abschnitt 2, Schritt 1; ohne Deaktivierung bucht sich das Ortungs-/Alarmgeraet nicht ein - Funktion des Sicherheitsprodukts faellt aus",
+          "safety_critical": true
+        },
+        {
+          "value": "\"100 SMS, 100 call minutes, 500 MB data volume\" / \"100 SMS, 100 opkaldsminutter, 500 MB datavolumen\"",
+          "context": "SIM-Empfehlung in EN/FR/IT/DA/NL/SV/CZ-Intros (fehlt im DE-Intro)",
+          "safety_critical": false
+        },
+        {
+          "value": "\"4G/LTE\"",
+          "context": "SIM-Anforderung; DE-Intro: \"eine Restguthabenabfrage wird durch 4G nicht unterstuetzt\"",
+          "safety_critical": false
+        },
+        {
+          "value": "\"Pin 1 Masse (GND)\", \"Pin 2 Messeingang (U2)\", \"Pin 3 Messeingang (U3)\", \"Pin 4 Messeingang (U4)\", \"Pin 5 Messeingang (U5)\", \"Pin 6 Ausgang B\", \"Pin 7 Ausgang A\", \"Pin 8 Betriebsspannung (U1)\"",
+          "context": "Pinbelegung Abschnitt 3 (in 8 Sprachen); Fehlverdrahtung kann Geraet/Fahrzeugelektrik beschaedigen",
+          "safety_critical": true
+        },
+        {
+          "value": "Mini-Flachsicherung mit Aufdruck \"3\" (violett, entspricht 3 A) in der Plusleitung zu Pin 8",
+          "context": "Verdrahtungsdiagramm Abschnitt 3, Batterieanschluss; nur grafisch, nirgends im Text genannt",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsartenschalter mit Positionen \"0123456789ABCDEF\" (hex 0-F); Tabelle beschreibt nur \"0 - 3\"",
+          "context": "Abschnitt 3/4; \"Die Betriebsarten 0 - 3 sind die am haeufigsten verwendeten Modi ...\"",
+          "safety_critical": false
+        },
+        {
+          "value": "Betriebsarten-Matrix: Modus 0: Statusbericht ja, keine Spannungen; Modus 1: Statusbericht ja, U1+U2; Modus 2: nur Aktivieren/Deaktivieren WiPro; Modus 3: Aktivieren/Deaktivieren, U1+U2",
+          "context": "Tabelle Abschnitt 4",
+          "safety_critical": false
+        },
+        {
+          "value": "\"(Siehe 5.9 Betriebszustaende Status LED)\"",
+          "context": "Abschnitt 2, Schritt 8; Kapitel 5.9 existiert in dieser zweiseitigen Kurzanleitung nicht (nur im ausfuehrlichen Handbuch)",
+          "safety_critical": false
+        },
+        {
+          "value": "\"SN686-001\"",
+          "context": "Typenaufkleber der GPS-pro-Antenne im Diagramm (Foto)",
+          "safety_critical": false
+        }
+      ],
+      "terminology_findings": [
+        "\"Activer Pro-Finder :\" (FR-Block, Abschnitt 2) - Grossschreibung 'Pro-Finder' statt Soll 'Pro-finder'",
+        "\"Attiva Pro-Finder:\" (IT-Block, Abschnitt 2) - 'Pro-Finder' statt 'Pro-finder'",
+        "\"Activer Pro-Finder :\" auch im franzoesisch kontaminierten SV-Block",
+        "\"Status LED\" ohne Bindestrich in DE-Legende (D) und in \"(Siehe 5.9 Betriebszustaende Status LED)\" - Soll: \"Status-LED\"",
+        "\"SIM Karte vorbereiten\" und \"Legen Sie die SIM Karte in den Pro-finder.\" ohne Bindestrich vs. \"SIM-Karte konfigurieren:\" im selben Block - inkonsistente DE-Schreibweise",
+        "IT-Terminologie inkonsistent: Abschnittstitel \"Modalità di esercizio\" vs. Tabellenzeile \"Modalità di funzionamento\"",
+        "DA-Legende \"Udvendig antenne (ekstraudstyr)\" laesst 'GPS' weg (alle anderen Sprachen: GPS-Antenne)",
+        "GPS-pro-Aufkleber (Foto): \"Unter Amaturenbrett ...\" - Tippfehler, korrekt 'Armaturenbrett'",
+        "\"THITRONIK®\" durchgehend korrekt geschrieben; \"WiPro III\" in Legenden, aber Tabelle Abschnitt 4 nur \"WiPro\""
+      ],
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+    }
+  ]
+}
