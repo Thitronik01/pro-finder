@@ -98,6 +98,9 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   Alle übrigen Werte der Tabelle (9–30 V, ca. 37 mA Netzsuche, 2 × 12 V/500 mA, −10 bis
   +80 °C, Bänder, GPS/QZSS, zehn Zielrufnummern, Nano-SIM) stimmen überein.
 - **Prüfweg:** Beide Seiten unabhängig gerendert und Wert für Wert verglichen, 2026-08-07.
+- **Nachtrag:** Die französische Fassung (Seite 76) nennt ebenfalls „env. 16–21 mA".
+  Zwei von drei Fassungen stimmen überein – **die englische ist der Ausreißer**, nicht die
+  deutsche.
 - **Schwere:** hoch (technische Spezifikation; relevant für Strombudget und Auslegung der
   Absicherung) · **Status:** offen – technischer Review
 
@@ -153,6 +156,62 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   werden. Auch er braucht einen eigenen technischen Review, nicht nur die Übersetzungen.
 - **Schwere:** hoch (Projektannahme betroffen; inhaltlich mittel) · **Status:** offen
 
+### DSC-032 – Fehlerhafte Supporttelefonnummer in der französischen Fassung (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, französische Seite 76, Abschnitt 6.4
+- **Beleg:** „contacter notre support technique gratuitement par téléphone au
+  **+49 4351800 902 104 76744-112**". Die deutsche Seite 25 und die englische Seite 49
+  nennen übereinstimmend „+49 4351 76744-112".
+- **Befund:** In die Rufnummer ist offenbar eine zweite Nummer hineingeraten
+  („800 902 104" – der Form nach eine Servicenummer). Die Nummer ist in dieser Gestalt
+  nicht wählbar.
+- **Warum das zählt:** Es ist genau der Kontakt, den Nutzer im Störungsfall wählen. Für
+  einen Barrierefreiheitspiloten, dessen Setup-Karte einen Supporthinweis tragen soll, ist
+  ein unbrauchbarer Supportkanal ein harter Mangel.
+- **Zusatz:** Nur die französische Fassung bezeichnet den Support als kostenfrei
+  („gratuitement"); deutsch und englisch treffen diese Aussage nicht.
+- **Schwere:** hoch · **Status:** offen – an THITRONIK zu melden
+
+### DSC-033 – Französischer Befehlssatz ist vollständig eigenständig – mit einer Lücke (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, französische Seiten 61, 71, 72, 73, 74 und 75
+- **Befund:** Die französische Fassung dokumentiert durchgängig eigene Befehle, nicht nur
+  an einer Stelle. Damit ist DSC-026 präzisiert: es ist kein einmaliger Ausrutscher im
+  Fließtext.
+
+| Funktion        | Deutsch          | Englisch        | Französisch                   |
+| --------------- | ---------------- | --------------- | ----------------------------- |
+| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      |
+| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              |
+| Position        | `position`       | `position`      | `position`                    |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         |
+| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     |
+| Anlernmodus     | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` |
+| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            |
+
+- **Der Widerspruch:** Auf Seite 74 sind drei der vier Ausgangsbefehle lokalisiert, der
+  zeitgesteuerte bleibt `a %min%`. Entweder akzeptiert das Gerät gemischte Befehlssätze,
+  oder eine der beiden Formen ist falsch. Dasselbe gilt für `position`, das als einziger
+  Befehl in allen drei Fassungen gleich lautet.
+- **Beobachtung:** Alle französischen Befehle sind konsequent **ohne Akzent** gesetzt
+  („desactiver", „rapport d etat", „mode d appairage"), im Fließtext daneben aber mit
+  Akzent. Das spricht dafür, dass die ASCII-Form beabsichtigt ist – bestätigt ist es nicht.
+- **Schwere:** hoch · **Status:** offen – technischer Review; gehört zu BLK-005
+
+### DSC-034 – Doppelte Verneinung kehrt eine sicherheitsrelevante Aussage um (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, französische Seite 70, Abschnitt 4
+- **Beleg:** „Avertissement de tension (**pas non applicable** en mode de fonctionnement B"
+  gegenüber DE „Spannungswarnung (nicht in Betriebsart B" und EN „Voltage warning (not in
+  operating mode B".
+- **Befund:** „pas non applicable" ist eine doppelte Verneinung. Ob die Spannungswarnung
+  in Betriebsart B gilt oder nicht, ist aus der französischen Fassung nicht ableitbar –
+  bei einer Warnung, die vor Tiefentladung schützt.
+- **Schwere:** hoch · **Status:** offen
+
 ## Mittel
 
 ### DSC-021 – Französischer Sprachteil hat 25 statt 23 interne Seiten (ab SN-045)
@@ -162,11 +221,13 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
 - **Befund:** Die interne Paginierung ist kein sprachübergreifender Anker. Kapitel liegen ab
   Kapitel 3 auf abweichenden internen Seiten (FR: Kapitel 3 auf 18, Kapitel 4 auf 19,
   Kapitel 5 auf 21; DE/EN: 16/15, 17/16, 19/19).
-- **Bewertung:** Der Inhalt ist stichprobenweise deckungsgleich (Haftungsausschluss und
-  bestimmungsgemäßer Gebrauch stehen in allen drei Fassungen auf interner Seite 3 und
-  enthalten denselben Tiefentladungsabsatz). Die Differenz ist bislang typografisch
-  erklärbar, nicht inhaltlich – abschließend geprüft ist das erst nach dem vollständigen
-  französischen Teil.
+- **Geklärt am 2026-08-07** nach Prüfung des vollständigen französischen Teils: Es gibt
+  **keine** zusätzlichen Inhalte. Der Text läuft an drei Stellen auf Folgeseiten über –
+  1.5.3 bekommt eine eigene interne Seite 11, die Abschnitte 2.4 und 2.9 enden jeweils
+  mitten im Satz und werden auf einer fast leeren Folgeseite fortgesetzt (interne Seiten
+  14 und 18). Die Differenz ist rein typografisch.
+- **Zusätzlich:** Der Teil umfasst tatsächlich **26** interne Seiten, nicht 25. Die letzte
+  Seite trägt die Fußzeile „Page 26 de 25" – die Zählung im Dokument ist selbst falsch.
 - **Folge:** Segment-Mapping darf nicht über die interne Seitenzahl erfolgen, sondern nur
   über Kapitelnummer und PDF-Seite. **Status:** offen
 
@@ -377,6 +438,26 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   gemeint ist die Programmier-SMS an den Pro-finder, nicht an die Alarmzentrale.
 - **Status:** offen (redaktionell)
 
-> Die Befunde der Seiten 1–66 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
+### DSC-035 – Redaktionelle Befunde aus dem Rest des französischen Teils (ab SN-045)
+
+- Seite 67: „tel que comme décrit **sous dans** les sections 2.8" – zwei fehlerhafte
+  Fügungen in einem Satz. Seite 68: Komma zwischen Subjekt und Prädikat.
+- Seite 69: Terminologiebruch – die Zielrufnummern heißen hier „numéros **favoris**", in
+  Kapitel 2.7 dagegen „numéros de destination". Fehlender Akzent in „pas desactivé".
+- Seite 71: „Accessoires **anti-vol** (boucle de cable radio)" kehrt die Bedeutung um –
+  gemeint ist der Diebstahl von Zubehör, die Überschrift „Vol d'accessoires" ist korrekt.
+  Fehlende Akzente in „fenetre", „detecteur", „cable".
+- Seite 72: Tippfehler „la e géolocalisation"; mehrfach verunglückte Fügungen („sur le
+  site sur le précédent", „Ce n'est qu'alors qu'à ce moment-là que").
+- Seite 73: „détaillées **dans décrite dans** le chapitre 1.4".
+- Seite 75: Absatz mit doppelten Wortgruppen und Großschreibung mitten im Satz („…, Pour
+  obtenir … après avoir reçu … à tout moment demander à tout moment …").
+- Seite 76: Abschnittstitel 6.2 „Consignes de tri recyclage" unvollständig formuliert.
+- **Bewertung:** Die Dichte dieser Fehler im französischen Teil ist deutlich höher als im
+  deutschen und englischen. Ein unabhängiger französischer Sprachreview ist vor jeder
+  Übernahme erforderlich – auch für Textbausteine, die nur als Referenz dienen.
+- **Status:** offen
+
+> Die Befunde der Seiten 1–76 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
 > in den Seitenrecords unter [sources/pages/](../sources/pages/) erfasst und werden bei
 > der Segment-Extraktion in dieses Register übernommen, sobald sie inhaltlich bewertet sind.

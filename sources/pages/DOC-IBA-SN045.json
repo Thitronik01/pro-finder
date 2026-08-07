@@ -3932,143 +3932,555 @@
     },
     {
       "page": 67,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 10,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 17 de 25'. Abschnitt 2.9 'Supprimer les numeros de destination'. Roter Hinweis mit Warndreieck: die Nano-SIM muss eingelegt sein. Danach die Loeschprozedur als Aufzaehlung: Kabelbaum trennen, Betriebsartenschalter (A) auf E, Kabelbaum wieder anschliessen und warten, bis die Status-LED gelb-gruen blinkt, Schalter zurueckstellen. Der Speicher ist danach leer. Alternativ kann die Masternummer den Speicher per Programmier-SMS ohne Schalterbedienung ueberschreiben; der Satz bricht am Seitenende ab.",
+      "accessibility_issues": [
+        "Textebene praktisch nicht vorhanden (10 Zeichen, nur Aufzaehlungszeichen).",
+        "Die zwingend sequentielle Loeschprozedur ist als ungeordnete Aufzaehlung gesetzt; die Reihenfolge ist sicherheitsrelevant.",
+        "Der Verweis auf den 'commutateur de mode (A)' setzt die Bildmarke A aus Abschnitt 1.2 voraus, die dort selbst nur Bildinhalt ist.",
+        "Der Hinweis zur eingelegten SIM-Karte ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 67 traegt die interne Nummer 'Page 17 de 25'."
+      ],
+      "discrepancies": [
+        "Grammatikfehler: \"un SMS de programmation, tel que comme decrit sous dans les sections 2.8\" - die Fuegungen \"tel que comme\" und \"sous dans\" sind beide fehlerhaft.",
+        "Der Abschnitt endet mitten im Satz und wird ohne Kennzeichnung auf der Folgeseite fortgesetzt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Rotes Warndreieck mit Ausrufezeichen ueber dem Hinweistext.",
+          "has_text_equivalent": false,
+          "relies_on": "Symbol ohne Alternativtext; Warnstufe nur ueber Form und Farbe."
+        }
+      ],
+      "tables": [],
+      "warnings_found": ["Remarque : La carte Nano-SIM doit etre inseree dans l appareil !"],
+      "terminology_findings": [],
+      "headings": ["2.9 Supprimer les numeros de destination"],
+      "technical_values": [
+        {
+          "value": "Betriebsartenschalter (A) auf Position E",
+          "context": "Schalterstellung zum Loeschen des gesamten Zielrufnummernspeichers.",
+          "safety_critical": true
+        },
+        {
+          "value": "warten, bis die Status-LED gelb-gruen blinkt",
+          "context": "Bedingung vor dem Zurueckstellen des Schalters.",
+          "safety_critical": true
+        },
+        {
+          "value": "Nano-SIM muss eingelegt sein",
+          "context": "Voraussetzung fuer das Loeschen.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 68,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 18 de 25'. Nur zwei Zeilen als Fortsetzung von 2.9: die Programmier-SMS muss von der Nummer des Hauptnutzers an den Pro-finder gesendet werden. Rund neunzig Prozent der Seite sind leer.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die Seite beginnt mitten im Satz der Vorseite ohne Fortsetzungskennzeichnung.",
+        "Der kursive Querverweis bricht mitten in der Wortgruppe ab (\"Programmer les numeros de\" kursiv, \"destination\" nicht mehr).",
+        "Grossflaechiger Leerraum ohne Hinweis, dass der Abschnitt hier endet.",
+        "Paginierungs-Diskrepanz: PDF-Seite 68 traegt die interne Nummer 'Page 18 de 25'."
+      ],
+      "discrepancies": [
+        "Kommafehler zwischen Subjekt und Praedikat: \"Programmer les numeros de destination, doit etre envoye\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": [],
+      "technical_values": [
+        {
+          "value": "Programmier-SMS von der Masternummer",
+          "context": "Nur von der Nummer des Hauptnutzers kann der Speicher ohne Schalterbedienung ueberschrieben werden.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 69,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 19 de 25'. Kapitel 3 'Etats de fonctionnement (LED d etat)' mit denselben neun Zustaenden wie im deutschen und englischen Teil, jeweils als Balkenmuster mit Bezeichnung und Bedeutung. Roter Abschlusshinweis: nach Installation und Programmierung blinkt die LED im Normalbetrieb gruen.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die Unterscheidung beruht auf Rot, Gelb und Gruen; Rot-Gelb gegen Rot-Gruen und Dauergruen gegen Dauergelb sind ohne Farbwahrnehmung nicht trennbar.",
+        "Die neun Zustaende sind nicht als Tabelle ausgezeichnet.",
+        "Zustand 5 ist als einziger rechtsbuendig gesetzt, waehrend alle anderen Bedeutungen unmittelbar auf den Doppelpunkt folgen - die Zeilenzuordnung wird dadurch unruhig.",
+        "Der Abschlusshinweis zum Normalbetrieb ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 69 traegt die interne Nummer 'Page 19 de 25'."
+      ],
+      "discrepancies": [
+        "Terminologiebruch innerhalb der franzoesischen Fassung: hier heissen die Zielrufnummern \"numeros favoris\", in Kapitel 2.7 dagegen \"numeros de destination\".",
+        "Fehlender Akzent im Zustand 5: \"SIM-PIN pas desactive\" statt \"desactive\" mit Akzent.",
+        "Die englische Fassung hat in Zustand 8 eine nicht geschlossene Klammer (DSC-018); die franzoesische Fassung setzt sie korrekt - der Fehler ist englischspezifisch."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Neun waagerechte Balkenreihen aus roten, gelben und gruenen Segmenten; lange Balken fuer Dauerlicht, kurze wiederkehrende fuer Blinken, Farbwechsel fuer Wechselblinken.",
+          "has_text_equivalent": true,
+          "relies_on": "Die Musterbezeichnung links benennt Farbe und Muster ausgeschrieben; die Grafik ist dazu redundant."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Etats de fonctionnement (LED d etat)",
+          "columns": 2,
+          "rows": 9,
+          "has_header_row": false,
+          "note": "Freies Layout ohne Tabellenstruktur und ohne Kopfzeile."
+        }
+      ],
+      "warnings_found": [
+        "Une fois l installation et la programmation terminees, la LED d etat clignote en vert en mode normal."
+      ],
+      "terminology_findings": [],
+      "headings": ["3 Etats de fonctionnement (LED d etat)"],
+      "technical_values": [
+        {
+          "value": "Rouge allumee = carte SIM absente ou defectueuse",
+          "context": "Fehlerzustand: keine oder defekte SIM-Karte.",
+          "safety_critical": true
+        },
+        {
+          "value": "Rouge-verte clignote = SIM-PIN pas desactive",
+          "context": "Fehlerzustand: PIN-Abfrage nicht deaktiviert, Modul nicht betriebsbereit.",
+          "safety_critical": true
+        },
+        {
+          "value": "Verte clignote = connecte + numeros favoris existants",
+          "context": "Normalbetrieb nach Installation und Programmierung.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 70,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 20 de 25'. Beginn von Kapitel 4 'Rapports, messages et alertes' mit den SMS-Bestandteilen GPS, UTC, Pos und La vitesse, danach drei Meldungstypen mit Beispiel-SMS: Rapport d etat (Statusbericht mit U1 bis U5 und Temperatur), Declaration Alerte de vol (stiller Alarm ab ca. 900 m bei aktivierter WiPro III) und Avertissement de tension (unter 11,2 V Standby, ueber 12,5 V zurueck in den Normalbetrieb).",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die Beispiel-SMS sind reine Bildinhalte und nicht vorlesbar.",
+        "Die Zuordnung Sprechblase zu Erlaeuterung entsteht nur ueber die zweispaltige Anordnung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 70 traegt die interne Nummer 'Page 20 de 25'."
+      ],
+      "discrepancies": [
+        "Doppelte Verneinung mit Bedeutungsumkehr: \"Avertissement de tension (pas non applicable en mode de fonctionnement B\". Deutsch und Englisch sagen eindeutig \"nicht in Betriebsart B\" beziehungsweise \"not in operating mode B\". Ob die Spannungswarnung in Betriebsart B gilt, ist aus der franzoesischen Fassung nicht ableitbar.",
+        "Dieselbe Wortdopplung wie in der englischen Fassung (DSC-018): \"comme decrit sous dans 5.1 Piloter le systeme d alarme par SMS par SMS.\" Der Fehler ist damit ein Vorlagen-, kein Uebersetzungsfehler. Zusaetzlich ist \"sous dans\" fehlerhaft.",
+        "Die englische Fassung setzt \"U2: 0 VU3: 0 V\" ohne Zeilenumbruch (DSC-018); die franzoesische trennt korrekt - auch dieser Fehler ist englischspezifisch.",
+        "SMS-Feldnamen uneinheitlich behandelt: GPS, UTC und Pos bleiben unveraendert, \"Speed\" wird dagegen zu \"La vitesse\" uebersetzt. Ob der Geraetetext tatsaechlich lokalisiert ist, ist unbestaetigt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Drei schwarze SMS-Sprechblasen mit weissem Text und blauen unterstrichenen Kartenlinks.",
+          "has_text_equivalent": false,
+          "relies_on": "Bildinhalt ohne Textentsprechung; der Wortlaut wird im Fliesstext nicht wiederholt."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Bestandteile einer Meldungs-SMS",
+          "columns": 2,
+          "rows": 4,
+          "has_header_row": false,
+          "note": "GPS / UTC / Pos / La vitesse links, Erlaeuterung rechts; als Einzugsliste gesetzt."
+        }
+      ],
+      "warnings_found": [
+        "Une alerte de vol est une alarme silencieuse. Cela signifie que ni les clignotants ni la sirene ne sont actives."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "4 Rapports, messages et alertes",
+        "Rapport d etat :",
+        "Declaration Alerte de vol :",
+        "Avertissement de tension :"
+      ],
+      "technical_values": [
+        {
+          "value": "unter 11,2 V / ueber 12,5 V",
+          "context": "Schwellen fuer Standby und Rueckkehr in den Normalbetrieb; deckungsgleich mit der deutschen und englischen Fassung.",
+          "safety_critical": true
+        },
+        {
+          "value": "ca. 900 m",
+          "context": "Entfernung fuer die Diebstahlmeldung bei aktivierter WiPro III (safe.lock).",
+          "safety_critical": true
+        },
+        {
+          "value": "U1 bis U5 und Temperatur",
+          "context": "Zusatzinhalte des Statusberichts je nach Betriebsart.",
+          "safety_critical": false
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 71,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 21 de 25'. Fortsetzung von Kapitel 4 mit fuenf weiteren Meldungstypen: SMS de position pour smartphones, SMS d assistance (Hilfe-SMS bei ungueltigem Befehl), Alerte d effraction, Alarme gaz und Alarme manuelle. Bei Einbruch-, Gas- und manuellem Alarm wird nach der SMS zusaetzlich die Nummer des Hauptnutzers angerufen. Zuletzt Vol d accessoires zur Funk-Kabelschleife.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Alle sechs Beispiel-SMS sind reine Bildinhalte; die Meldungstexte sind nicht vorlesbar.",
+        "Der dreimal wiederholte Hinweis zum zusaetzlichen Anruf der Masternummer ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 71 traegt die interne Nummer 'Page 21 de 25'."
+      ],
+      "discrepancies": [
+        "Dritter eigenstaendiger Befehlssatz: Die franzoesische Hilfe-SMS nennt ACTIVER, DESACTIVER, RAPPORT D ETAT und POS. Damit dokumentieren drei Sprachfassungen drei verschiedene Befehlssaetze fuer dieselben Funktionen (vgl. DSC-013).",
+        "Bedeutungsfehler im SMS-Text der Zubehoermeldung: \"Accessoires anti-vol (boucle de cable radio)\" heisst \"Diebstahlschutz-Zubehoer\", gemeint ist der Diebstahl von Zubehoer. Die Ueberschrift \"Vol d accessoires\" ist dagegen korrekt.",
+        "Fehlende Akzente in den Sprechblasen: \"Effraction porte/fenetre\", \"Alarme par detecteur de gaz\", \"boucle de cable radio\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Sechs schwarze SMS-Sprechblasen mit UTC-Zeit, Kartenlink und Geschwindigkeit.",
+          "has_text_equivalent": false,
+          "relies_on": "Bildinhalt ohne Textentsprechung."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [
+        "Apres l envoi du SMS, le numero de l utilisateur principal est appele en plus. (Effraction, gaz, alarme manuelle)"
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "SMS de position pour smartphones :",
+        "SMS d assistance :",
+        "Alerte d effraction :",
+        "Alarme gaz :",
+        "Alarme manuelle :",
+        "Vol d accessoires :"
+      ],
+      "technical_values": [
+        {
+          "value": "ACTIVER, DESACTIVER, RAPPORT D ETAT, POS",
+          "context": "Grossgeschriebene Befehle in der automatischen franzoesischen Hilfe-SMS. Deutsch: SCHARF/UNSCHARF/STATUS/POS, englisch: ARM/DISARM/STATUS/POS.",
+          "safety_critical": true
+        },
+        {
+          "value": "Masternummer wird zusaetzlich angerufen",
+          "context": "Zusaetzliche Alarmierung nach Einbruch-, Gas- und manuellem Alarm.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 72,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 22 de 25'. Kapitel 5 'Fonctions' beginnt. 5.1 'Piloter le systeme d alarme par SMS': in den Betriebsarten 2 und 3 schaltet ein Anruf die WiPro III (safe.lock) in den naechsten Zustand; das Geraet beendet den Anruf vor einer kostenpflichtigen Verbindung. Roter Hinweis: nur berechtigte Nummern haben Zugriff. 5.2 'Geolocalisation' beschreibt den virtuellen Zaun von 900 Metern. In Schalterstellung 8 und B ueber Pin 3, sonst per SMS mit den Texten activer le gardiennage und desactiver le gardiennage. Roter Hinweis: bei scharfgeschalteter WiPro III ist Geofencing automatisch aktiv.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Beide Hinweisbloecke ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift ausgezeichnet, nicht als Eingabewert semantisch markiert.",
+        "Paginierungs-Diskrepanz: PDF-Seite 72 traegt die interne Nummer 'Page 22 de 25'."
+      ],
+      "discrepancies": [
+        "Bestaetigt DSC-026 und praezisiert es: \"desactiver le gardiennage\" ist kein einmaliger Uebersetzungsfehler im Fliesstext, sondern der hier durchgaengig dokumentierte franzoesische Befehl - auf beiden Seiten identisch und beide Male bewusst ohne Akzent. Die Frage ist damit nicht mehr, ob jemand einen Befehl versehentlich uebersetzt hat, sondern ob das Geraet drei verschiedene Befehlssaetze kennt.",
+        "Tippfehler: \"la e geolocalisation\".",
+        "Mehrfach verunglueckte Satzfuegungen: \"la desactiver sur le site sur le precedent\", \"Ce n est qu alors qu a ce moment-la que\", \"sur un nouveau site avec le nouvel emplacement\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [
+        "Remarque : Seuls les numeros autorises peuvent piloter le Pro-finder.",
+        "Remarque : Lorsque la WiPro III est activee, la geolocalisation l est automatiquement et n a pas besoin d etre activee par SMS."
+      ],
+      "terminology_findings": [],
+      "headings": ["5 Fonctions", "5.1 Piloter le systeme d alarme par SMS", "5.2 Geolocalisation"],
+      "technical_values": [
+        {
+          "value": "Betriebsarten 2 und 3",
+          "context": "Nur dort schaltet ein Anruf die WiPro III (safe.lock) in den naechsten Zustand.",
+          "safety_critical": true
+        },
+        {
+          "value": "900 Meter",
+          "context": "Geofencing-Radius um den urspruenglichen Standort.",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellung 8 und B ueber Pin 3",
+          "context": "Hardwareseitiges Schalten von Geofencing; sonst per SMS.",
+          "safety_critical": true
+        },
+        {
+          "value": "activer le gardiennage / desactiver le gardiennage",
+          "context": "Exakte franzoesische SMS-Befehle fuer Geofencing, beide ohne Akzent gesetzt. Deutsch: fence an / fence aus, englisch: fence on / fence off.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 73,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 23 de 25'. 5.3 'Demander un rapport d etat': der Statusbericht wird mit der SMS rapport d etat angefordert oder per Anruf, ausser in den Betriebsarten 2 und 3. Ohne gueltige Position meldet der Bericht \"pas de position\", sendet aber die letzte gueltige Position; zusaetzlich Zustand beider Ausgaenge und Umgebungstemperatur. 5.4 'Demander la position avec un smartphone': die SMS position liefert eine Positionsmeldung mit Kartenlink. 5.5 'Commander les sorties par SMS' leitet die Ausgangssteuerung ein.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift und Einzug ausgezeichnet.",
+        "Zwischen 5.3 und dem GPS-Absatz steht ein unmotivierter Leerraum von rund zwei Zeilen.",
+        "Paginierungs-Diskrepanz: PDF-Seite 73 traegt die interne Nummer 'Page 23 de 25'."
+      ],
+      "discrepancies": [
+        "Der franzoesische Statusbefehl lautet \"rapport d etat\" - deutsch und englisch dagegen \"status\". Die Hilfe-SMS auf PDF-Seite 71 nennt denselben Befehl in Grossschreibung (\"RAPPORT D ETAT\"); die Gross-/Kleinschreibungsfrage aus DSC-014 besteht damit auch im Franzoesischen.",
+        "Verunglueckte Fuegung in 5.5: \"Les instructions pour les connecter sont detaillees dans decrite dans le chapitre 1.4\".",
+        "Fehlender Punkt am Ende des Verweises auf 5.7 Localiser un vehicule.",
+        "Der Berichtstext \"pas de position\" ist uebersetzt; ob das Geraet ihn lokalisiert ausgibt oder wie in der englischen Fassung \"No position\" sendet, ist unbestaetigt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": [
+        "5.3 Demander un rapport d etat",
+        "5.4 Demander la position avec un smartphone",
+        "5.5 Commander les sorties par SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "rapport d etat",
+          "context": "Exakter franzoesischer SMS-Befehl fuer den Statusbericht. Deutsch und englisch lautet er status.",
+          "safety_critical": true
+        },
+        {
+          "value": "position",
+          "context": "Exakter franzoesischer SMS-Befehl fuer die Positionsmeldung; in allen drei Fassungen identisch.",
+          "safety_critical": true
+        },
+        {
+          "value": "ausser in den Betriebsarten 2 und 3",
+          "context": "Der Statusbericht kann alternativ per Anruf angefordert werden.",
+          "safety_critical": true
+        },
+        {
+          "value": "zwei getrennt steuerbare Ausgaenge",
+          "context": "Schaltbar dauerhaft, gepulst fuer eine Sekunde oder fuer eine frei waehlbare Dauer.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 74,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 24 de 25'. Die drei Unterabschnitte von 5.5 zur Ausgangssteuerung. 5.5.1: activer la sortie A und desactiver la sortie A schalten Ausgang A dauerhaft ein und aus. 5.5.2: sortie A impulsion schaltet ihn fuer eine Sekunde. 5.5.3: a %min% schaltet ihn fuer 1 bis 120 Minuten. Roter Abschlusshinweis: fuer Ausgang B wird der Buchstabe A in der SMS durch B ersetzt.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift und Einzug ausgezeichnet.",
+        "Der Hinweis zur Steuerung von Ausgang B ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 74 traegt die interne Nummer 'Page 24 de 25'."
+      ],
+      "discrepancies": [
+        "Widerspruch innerhalb der franzoesischen Fassung: Drei der vier Ausgangsbefehle sind vollstaendig uebersetzt (activer la sortie A, desactiver la sortie A, sortie A impulsion), der vierte bleibt unveraendert bei \"a %min%\". Entweder akzeptiert das Geraet gemischte Befehlssaetze, oder eine der beiden Formen ist falsch.",
+        "Der Hinweis \"remplacez la lettre A par la lettre B\" ist bei \"a %min%\" mehrdeutig, weil dort ein kleines a steht.",
+        "In allen drei Unterueberschriften fehlt das Leerzeichen zwischen Nummer und Titel (\"5.5.1Activer\"). Derselbe Fehler steht in der deutschen und englischen Fassung - ein Vorlagenfehler."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [
+        "Remarque : Pour activer la sortie B, remplacez la lettre A par la lettre B dans le SMS."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "5.5.1 Activer les sorties de maniere continue",
+        "5.5.2 Activer les sorties par impulsions (pendant une seconde)",
+        "5.5.3 Activer les sorties pour une duree personnalisable"
+      ],
+      "technical_values": [
+        {
+          "value": "activer la sortie A / desactiver la sortie A",
+          "context": "Franzoesische SMS-Befehle zum dauerhaften Ein- und Ausschalten von Ausgang A. Deutsch: a an / a aus, englisch: a on / a off.",
+          "safety_critical": true
+        },
+        {
+          "value": "sortie A impulsion",
+          "context": "Franzoesischer Befehl; schaltet Ausgang A fuer eine Sekunde.",
+          "safety_critical": true
+        },
+        {
+          "value": "a %min% / 1 bis 120 Minuten",
+          "context": "Zeitgesteuerter Befehl - als einziger in allen drei Sprachfassungen identisch, obwohl die drei uebrigen franzoesischen Befehle vollstaendig lokalisiert sind.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 75,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern 'Page 25 de 25'. 5.6 'Demarrer le mode d appairage': der Anlernmodus der WiPro III (safe.lock) wird mit activer le mode d appairage aktiviert und mit desactiver le mode d appairage wieder deaktiviert. 5.7 'Localiser un vehicule': die Positionsangaben lassen sich in Kartenprogramme uebernehmen; ohne GPS-Empfang wartet der Pro-finder bis zu zehn Minuten auf eine gueltige Position und sendet danach den Statusbericht mit der letzten bekannten Position. Bei Alarm und laufender Lichtmaschine wird die Position laufend erfasst; die UTC-Zeit entspricht immer der zuletzt empfangenen Position.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift ausgezeichnet.",
+        "Zwischen 5.6 und 5.7 steht ein unmotivierter Leerraum ohne strukturelle Bedeutung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 75 traegt die interne Nummer 'Page 25 de 25'."
+      ],
+      "discrepancies": [
+        "Vierter lokalisierter Befehlssatz: activer/desactiver le mode d appairage gegenueber anlernmodus an/aus und teach mode on/off.",
+        "Stark verunglueckter Absatz in 5.7 mit doppelten Wortgruppen und Grossschreibung mitten im Satz: \"Apres avoir recu une alerte de vol, Pour obtenir des informations de position supplementaires apres avoir recu une declaration de vol, vous pouvez a tout moment demander a tout moment des rapports d etat supplementaires\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": ["5.6 Demarrer le mode d appairage", "5.7 Localiser un vehicule"],
+      "technical_values": [
+        {
+          "value": "activer le mode d appairage / desactiver le mode d appairage",
+          "context": "Franzoesische SMS-Befehle fuer den Anlernmodus. Deutsch: anlernmodus an / aus, englisch: teach mode on / off.",
+          "safety_critical": true
+        },
+        {
+          "value": "bis zu zehn Minuten",
+          "context": "Wartezeit auf eine gueltige GPS-Position; danach Statusbericht mit der letzten bekannten Position.",
+          "safety_critical": true
+        },
+        {
+          "value": "UTC entspricht der zuletzt empfangenen Position",
+          "context": "Die Uhrzeit bezieht sich auf die letzte Positionsbestimmung, nicht auf den Versand.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 76,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["fr"],
+      "summary": "Letzte franzoesische Inhaltsseite, Fusszeile 'Page 26 de 25'. Kapitel 6 'Autres' mit 6.1 'Donnees techniques' (9-30 V, ca. 37 mA Netzsuche, ca. 16-21 mA Normalbetrieb, 2G/3G/4G (LTE) mit Baendern, zehn Zielrufnummern, GPS/QZSS, Ausgaenge 2 x 12 V/500 mA, -10 bis +80 Grad C, Nano-SIM), 6.2 'Consignes de tri recyclage' mit WEEE-Symbol, 6.3 'Conformite/directives' mit CE-Zeichen und Richtlinie 2014/53/UE sowie 6.4 'Assistance technique' mit Fachhaendlerhinweis, Website, Telefonnummer und E-Mail.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die technischen Daten sind eine Einzugsliste ohne Tabellenstruktur.",
+        "Die Zuordnung der eingerueckten Band-Zeilen entsteht allein durch den Einzug.",
+        "Die Links zur Konformitaetserklaerung und zum Support sind reiner Bildinhalt und weder kopierbar noch vorlesbar noch anklickbar.",
+        "Paginierungs-Diskrepanz: PDF-Seite 76 traegt die interne Nummer 'Page 26 de 25'."
+      ],
+      "discrepancies": [
+        "Fehlerhafte Supporttelefonnummer: \"+49 4351800 902 104 76744-112\". Die deutsche und die englische Fassung nennen \"+49 4351 76744-112\". In die Nummer ist offenbar eine zweite Rufnummer hineingeraten. Betroffen ist der Kontakt, den Nutzer im Stoerungsfall waehlen.",
+        "Nur die franzoesische Fassung bezeichnet den Support als kostenfrei (\"gratuitement\"); deutsch und englisch treffen diese Aussage nicht.",
+        "Paginierungsfehler: Die Fusszeile lautet \"Page 26 de 25\". Der franzoesische Teil umfasst damit 26 interne Seiten, die Zaehlung nennt aber 25 (vgl. DSC-021).",
+        "Abschnittstitel 6.2 \"Consignes de tri recyclage\" ist unvollstaendig formuliert."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "WEEE-Symbol (durchgestrichene Muelltonne) und CE-Zeichen neben den jeweiligen Texten.",
+          "has_text_equivalent": true,
+          "relies_on": "Beide Symbole stehen neben erklaerendem Text; die Aussage steht im Fliesstext."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Donnees techniques",
+          "columns": 2,
+          "rows": 13,
+          "has_header_row": false,
+          "note": "Zweispaltige Einzugsliste, nicht als Tabelle ausgezeichnet."
+        }
+      ],
+      "warnings_found": [
+        "Lors de la mise hors service de l appareil, veuillez ne pas le jeter avec les ordures menageres."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "6 Autres",
+        "6.1 Donnees techniques",
+        "6.2 Consignes de tri recyclage",
+        "6.3 Conformite/directives",
+        "6.4 Assistance technique"
+      ],
+      "technical_values": [
+        {
+          "value": "ca. 16-21 mA (Normalbetrieb)",
+          "context": "Stimmt mit der deutschen Fassung ueberein. Die englische nennt nur ca. 21 mA - damit ist die englische Fassung der Ausreisser (DSC-020).",
+          "safety_critical": true
+        },
+        {
+          "value": "9-30 V / 2 x 12 V/500 mA / -10 bis +80 Grad C / Nano-SIM / GPS/QZSS",
+          "context": "Uebrige technische Daten, deckungsgleich mit den anderen Sprachfassungen.",
+          "safety_critical": true
+        },
+        {
+          "value": "Richtlinie 2014/53/UE",
+          "context": "Konformitaetsgrundlage; Erklaerung unter http://www.thitronik.de/fr/support/downloads.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 6, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 77,

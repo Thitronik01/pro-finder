@@ -24,6 +24,10 @@ Stand: 2026-08-07. Der Pilot ist nicht freigabefähig; Details und Prozentwerte 
   (Deckblatt, Inhaltsverzeichnis, intern Page 3–6 de 25).
 - PDF-Batch 5: Seiten 57–66 – französischer Teil, intern Page 7–16 de 25, einschließlich
   der vollständigen Betriebsartentabelle und der GPS-Diagnose.
+- PDF-Batch 6: Seiten 67–76 – Rest des französischen Teils. Damit sind Deutsch, Englisch
+  und Französisch vollständig geprüft; ab Seite 77 folgt Tschechisch.
+- CI ist erstmals vollständig grün: `npm ci`, Prüfkette, Produktions-Build, der
+  Supabase-Job mit `db reset`, `db lint` und pgTAP sowie Playwright/axe mit 32 Tests.
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: **1 von 247 Seiten** enthält
   lesbaren Text; 34 Seiten liefern ausschließlich Steuerzeichen U+0003 und werden von
   zeichenzählenden Prüfungen fälschlich für zugänglich gehalten. Tabelle in `IST_AUDIT.md`.
@@ -130,11 +134,11 @@ Zwei weitere Befunde treffen Projektannahmen:
 
 ```text
 Resume from:
-Dokument DOC-IBA-SN045, PDF-Seite 67, Segment –, Sprache fr (danach cs).
+Dokument DOC-IBA-SN045, PDF-Seite 77, Segment –, Sprache cs.
 
 First action:
-PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 seitenweise visuell prüfen und Seitenrecords
-aktualisieren. Dabei klären, ob die zwei zusätzlichen internen Seiten des französischen
-Teils rein typografisch entstehen (DSC-021). Sobald Docker verfügbar ist, hat der
-Supabase-Lauf Vorrang.
+PDF-Batch 7: DOC-IBA-SN045 Seiten 77–86 seitenweise visuell prüfen und Seitenrecords
+aktualisieren. Der französische Teil ist mit Seite 76 abgeschlossen; ab 77 beginnt der
+tschechische. Besonders zu prüfen: ob die SMS-Befehle auch dort lokalisiert sind
+(DSC-033) und ob die Supportnummer korrekt ist (DSC-032).
 ```

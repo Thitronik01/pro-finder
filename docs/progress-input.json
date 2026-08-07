@@ -52,12 +52,12 @@
     {
       "id": "BLK-004",
       "title": "Supporttelefon/-kontakt für Karte und Startseite unbestätigt",
-      "detail": "Barrierefreier Supporthinweis benötigt von THITRONIK bestätigte Kontaktdaten; bis dahin Platzhalter. Aus DOC-IBA-SN045 Abschnitt 6.4 (deutsche Seite 25, englische Seite 49) liegt jetzt ein quellenbelegter Kandidat vor: +49 4351 76744-112, kontakt@thitronik.de, www.thitronik.de. Ob dieser Kanal für die barrierefreie Karte der richtige ist, muss THITRONIK bestätigen.",
+      "detail": "Barrierefreier Supporthinweis benötigt von THITRONIK bestätigte Kontaktdaten; bis dahin Platzhalter. Aus DOC-IBA-SN045 Abschnitt 6.4 (deutsche Seite 25, englische Seite 49) liegt ein quellenbelegter Kandidat vor: +49 4351 76744-112, kontakt@thitronik.de, www.thitronik.de. Die französische Fassung (Seite 76) nennt jedoch eine andere, offensichtlich beschädigte Nummer (DSC-032). Welche Nummer gilt und ob dieser Kanal für die barrierefreie Karte der richtige ist, muss THITRONIK bestätigen.",
       "severity": "niedrig"
     },
     {
       "id": "BLK-005",
-      "title": "Befehlssprache der SMS-Kommandos ungeklärt (DSC-013/DSC-014)",
+      "title": "Befehlssprache der SMS-Kommandos ungeklärt (DSC-013/DSC-014/DSC-033)",
       "detail": "DOC-IBA-SN045 dokumentiert dieselbe Funktion je Sprachfassung mit unterschiedlichen SMS-Befehlen (fence an/aus gegenüber fence on/off, a an/aus/impuls gegenüber a on/off/pulse, anlernmodus an/aus gegenüber teach mode on/off, SCHARF/UNSCHARF gegenüber ARM/DISARM) und innerhalb einer Fassung mit widersprüchlicher Schreibweise (POS gegenüber position). Die französische Fassung nennt an derselben Stelle statt eines Befehls die Wortgruppe « desactiver le gardiennage » – ohne Akzent und über einen anderen Sendeweg (DSC-026). Ohne technische Klärung durch THITRONIK darf kein Befehl in den Master oder in eine Übersetzung übernommen werden.",
       "severity": "hoch"
     }
@@ -69,5 +69,5 @@
     "Die Stromaufnahme im Normalbetrieb ist in den Sprachfassungen unterschiedlich angegeben (DE ca. 16–21 mA, EN approx. 21 mA; DSC-020). Der gültige Wert ist technisch zu bestätigen.",
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8."
   ],
-  "next_action": "PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 seitenweise prüfen (Rest des französischen Teils ab interner Page 17 de 25, danach Beginn des tschechischen Sprachteils)."
+  "next_action": "PDF-Batch 7: DOC-IBA-SN045 Seiten 77–86 seitenweise prüfen (Beginn des tschechischen Sprachteils; der französische Teil ist mit Seite 76 abgeschlossen)."
 }

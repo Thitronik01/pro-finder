@@ -5,12 +5,12 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 18 %**
+**Gesamtfortschritt: 18.2 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 5.4 %       |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 6.2 %       |
 | Content-Modell und deutscher Master      | 20 %    | 10 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 25 %        |
@@ -23,19 +23,20 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 0 %         |
-| DOC-IBA-SN045 | 247    | 6.7 %       |
+| DOC-IBA-SN045 | 247    | 7.7 %       |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 seitenweise prüfen (Rest des französischen Teils ab interner Page 17 de 25, danach Beginn des tschechischen Sprachteils).
+Offene Blocker: 5 · Nächste Aktion: PDF-Batch 7: DOC-IBA-SN045 Seiten 77–86 seitenweise prüfen (Beginn des tschechischen Sprachteils; der französische Teil ist mit Seite 76 abgeschlossen).
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon 70 visuell geprüft (`inspected`): DOC-IBA-SN045
-  Seiten 1–66 sowie beide Kurzanleitungen;
+- 323 Seitenrecords angelegt; davon 80 visuell geprüft (`inspected`): DOC-IBA-SN045
+  Seiten 1–76 sowie beide Kurzanleitungen. Der deutsche, der englische und der
+  französische Sprachteil sind damit vollständig geprüft;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
   lesbaren Text, 34 Seiten liefern ausschließlich Steuerzeichen (Details in
   `IST_AUDIT.md`);
@@ -74,10 +75,11 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 
 ## Release-Blocker
 
 1. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
-   DSC-014, DSC-026). Dieselbe Funktion heißt je Sprachfassung anders; innerhalb einer
-   Fassung stehen `POS` und `position` nebeneinander; und die französische Fassung nennt
-   statt eines Befehls die Wortgruppe « desactiver le gardiennage ». Kein Befehl darf ohne
-   technische Klärung veröffentlicht werden.
+   DSC-014, DSC-026, DSC-033). Drei Sprachfassungen dokumentieren **drei vollständig
+   eigene Befehlssätze** — die Vergleichstabelle steht in DSC-033. Innerhalb einer Fassung
+   stehen zudem `POS` und `position` nebeneinander, und im Französischen sind drei von vier
+   Ausgangsbefehlen lokalisiert, der vierte nicht. Kein Befehl darf ohne technische Klärung
+   veröffentlicht werden.
 2. Die Sprachfassungen sind inhaltlich nicht gleichwertig: die SIM-Anbieterempfehlung
    lautet deutsch t-mobile/Vodafone, englisch nur allgemein „M2M-Karte" und französisch
    namentlich DOMOTEC (DSC-027). Zusätzlich weicht ein technischer Wert ab (DSC-020).
@@ -86,7 +88,8 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 6: DOC-IBA-SN045 Seiten 67–76 
 3. Der genaue Fundort und die Leseregel der Seriennummer am Gerät sind nicht technisch
    bestätigt; die Startseite darf deshalb keine Ziffernregel behaupten (DSC-023).
 4. Karte: finale URL, Supportdaten, Mindestschrift, Braille-Dienstleister und physische
-   Tests fehlen.
+   Tests fehlen. Die Supportnummer ist zusätzlich unklar: die französische Fassung nennt
+   eine offensichtlich beschädigte Rufnummer (DSC-032).
 5. Kein geschützter Netlify-Deploy und keine menschliche Preview-Abnahme.
 
 ## Statusdisziplin
