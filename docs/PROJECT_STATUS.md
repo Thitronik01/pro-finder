@@ -5,12 +5,12 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 18.3 %**
+**Gesamtfortschritt: 18.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 7 %         |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 7.7 %       |
 | Content-Modell und deutscher Master      | 20 %    | 10 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 25 %        |
@@ -23,20 +23,20 @@ Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 0 %         |
-| DOC-IBA-SN045 | 247    | 8.7 %       |
+| DOC-IBA-SN045 | 247    | 9.7 %       |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 seitenweise prüfen (tschechischer Teil ab interner Strana 10 z 23; dort stehen ab interner Seite 19 die SMS-Befehle – Vergleich gegen DSC-033 erforderlich).
+Offene Blocker: 5 · Nächste Aktion: PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise prüfen (Ende des tschechischen Teils mit den fehlenden Ausgangs- und Anlernbefehlen sowie der Supportnummer, danach Beginn des dänischen Sprachteils).
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon 90 visuell geprüft (`inspected`): DOC-IBA-SN045
-  Seiten 1–86 sowie beide Kurzanleitungen. Der deutsche, der englische und der
-  französische Sprachteil sind vollständig geprüft, der tschechische bis interne Seite 9;
+- 323 Seitenrecords angelegt; davon 100 visuell geprüft (`inspected`): DOC-IBA-SN045
+  Seiten 1–96 sowie beide Kurzanleitungen. Der deutsche, der englische und der
+  französische Sprachteil sind vollständig geprüft, der tschechische bis interne Seite 19;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
   lesbaren Text, 34 Seiten liefern ausschließlich Steuerzeichen (Details in
   `IST_AUDIT.md`);
@@ -75,8 +75,9 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 
 ## Release-Blocker
 
 1. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
-   DSC-014, DSC-026, DSC-033). Drei Sprachfassungen dokumentieren **drei vollständig
-   eigene Befehlssätze** — die Vergleichstabelle steht in DSC-033. Innerhalb einer Fassung
+   DSC-014, DSC-026, DSC-033). Vier geprüfte Sprachfassungen dokumentieren **vier
+   vollständig eigene Befehlssätze**; nur `POS` lautet überall gleich — die
+   Vergleichstabelle steht in DSC-033. Innerhalb einer Fassung
    stehen zudem `POS` und `position` nebeneinander, und im Französischen sind drei von vier
    Ausgangsbefehlen lokalisiert, der vierte nicht. Kein Befehl darf ohne technische Klärung
    veröffentlicht werden.

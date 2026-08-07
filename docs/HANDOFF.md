@@ -27,6 +27,8 @@ Stand: 2026-08-07. Der Pilot ist nicht freigabefähig; Details und Prozentwerte 
 - PDF-Batch 6: Seiten 67–76 – Rest des französischen Teils. Damit sind Deutsch, Englisch
   und Französisch vollständig geprüft.
 - PDF-Batch 7: Seiten 77–86 – Beginn des tschechischen Teils bis interne Strana 9 z 23.
+- PDF-Batch 8: Seiten 87–96 – tschechischer Teil bis interne Strana 19 z 23, einschließlich
+  LED-Tabelle, Kapitel 4 und dem Beginn der Funktionen.
 - CI ist erstmals vollständig grün: `npm ci`, Prüfkette, Produktions-Build, der
   Supabase-Job mit `db reset`, `db lint` und pgTAP sowie Playwright/axe mit 32 Tests.
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: **1 von 247 Seiten** enthält
@@ -135,11 +137,11 @@ Zwei weitere Befunde treffen Projektannahmen:
 
 ```text
 Resume from:
-Dokument DOC-IBA-SN045, PDF-Seite 87, Segment –, Sprache cs.
+Dokument DOC-IBA-SN045, PDF-Seite 97, Segment –, Sprache cs (danach da).
 
 First action:
-PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 seitenweise visuell prüfen und Seitenrecords
-aktualisieren. Ab interner Strana 19 z 23 stehen die SMS-Befehle – dort entscheidet sich,
-ob der tschechische Teil einen vierten eigenen Befehlssatz führt (DSC-033). Die
-Supportnummer folgt auf interner Strana 23 (DSC-032).
+PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise visuell prüfen. Dort stehen die noch
+fehlenden tschechischen Ausgangs- und Anlernbefehle (Tabelle in DSC-033 vervollständigen)
+und auf interner Strana 23 die Supportnummer – zu vergleichen mit der beschädigten
+französischen Angabe (DSC-032).
 ```

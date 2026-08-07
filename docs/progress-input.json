@@ -67,7 +67,8 @@
     "Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013, DSC-014). Ein nicht akzeptierter Befehl lässt Geofencing unbemerkt aktiv oder inaktiv; der Nutzer erhält keine Fehlermeldung, sondern nur die Hilfe-SMS.",
     "Die Spannungsschwellen 11,2 V (Standby) und 12,5 V (Rückkehr) sowie der Geofencing-Radius von ca. 900 m sind aus DOC-IBA-SN045 erfasst, aber fachlich nicht bestätigt.",
     "Die Stromaufnahme im Normalbetrieb ist in den Sprachfassungen unterschiedlich angegeben (DE ca. 16–21 mA, EN approx. 21 mA; DSC-020). Der gültige Wert ist technisch zu bestätigen.",
-    "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8."
+    "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8.",
+    "Der tschechische Geofencing-Hinweis nennt zweimal denselben Zustand („odjištěn\") für Aktivierung und Deaktivierung (DSC-038); die Beschreibung des LED-Normalbetriebs ist sinnentstellt („rezervováno (recepce)\", DSC-039). Beide brauchen einen muttersprachlichen Review."
   ],
-  "next_action": "PDF-Batch 8: DOC-IBA-SN045 Seiten 87–96 seitenweise prüfen (tschechischer Teil ab interner Strana 10 z 23; dort stehen ab interner Seite 19 die SMS-Befehle – Vergleich gegen DSC-033 erforderlich)."
+  "next_action": "PDF-Batch 9: DOC-IBA-SN045 Seiten 97–106 seitenweise prüfen (Ende des tschechischen Teils mit den fehlenden Ausgangs- und Anlernbefehlen sowie der Supportnummer, danach Beginn des dänischen Sprachteils)."
 }

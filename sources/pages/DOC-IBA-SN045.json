@@ -4977,143 +4977,585 @@
     },
     {
       "page": 87,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 10 z 23'. Abschnitt 1.5.2 'Pripojeni anteny GPS': der Pro-finder muss spannungsfrei sein, der GPS-Stecker kommt in den vierpoligen Anschluss, danach Kabelbaum wieder anschliessen. Die Versorgungsspannung muss nach der Installation mindestens fuenf Minuten ueber 13,5 V liegen. Abschnitt 1.5.3 'Kontrola funkce anteny GPS' beschreibt die GPS-Diagnose in Schalterstellung F mit dreizeiliger LED-Tabelle (rot, gelb blinkend, gruen). Abschliessend der Hinweis auf GPS-Reflexionen in Hallen und die Empfehlung, Geofencing dann per SMS zu deaktivieren.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die drei Diagnosezustaende unterscheiden sich ueber die Farben Rot, Gelb und Gruen; nur bei Gelb ist zusaetzlich das Blinken genannt.",
+        "Dieselbe LED-Farbe Rot bedeutet im Diagnosemodus \"GPS nicht angeschlossen\" und nach dem Zurueckstellen \"keine SIM-Karte eingelegt\".",
+        "Die Zustandstabelle ist nicht als Tabelle ausgezeichnet.",
+        "Paginierungs-Diskrepanz: PDF-Seite 87 traegt die interne Nummer 'Strana 10 z 23'."
+      ],
+      "discrepancies": [
+        "Vierter eigenstaendiger Befehlssatz: Der Geofencing-Ausschaltbefehl lautet hier \"plot vyp\". Bemerkenswert ist die Schreibweise: Die tschechische Fassung setzt als einzige eine englische Glosse dahinter - \"plot vyp\" (plot off). Ob damit zwei gueltige Formen gemeint sind oder nur eine Lesehilfe, ist nicht ableitbar.",
+        "Uneinheitliche Anfuehrungszeichen um den Befehl: oeffnendes gerades und schliessendes typografisches Zeichen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [
+        {
+          "caption": "GPS-Diagnose ueber die Status-LED in Schalterstellung F",
+          "columns": 2,
+          "rows": 3,
+          "has_header_row": false,
+          "note": "LED-Zustand links, Bedeutung rechts; als Liste mit Trennlinien gesetzt."
+        }
+      ],
+      "warnings_found": [
+        "K odrazum signalu GPS muze dochazet v halach nebo jinych budovach a pod pristresky. To muze vyrazne zhorsit presnost urceni polohy a muze dojit ke spusteni alarmu kradeze, i kdyz se vozidlo nepohybovalo."
+      ],
+      "terminology_findings": [],
+      "headings": ["1.5.2 Pripojeni anteny GPS", "1.5.3 Kontrola funkce anteny GPS"],
+      "technical_values": [
+        {
+          "value": "ueber 13,5 V fuer mindestens fuenf Minuten",
+          "context": "Voraussetzung, damit die GPS-Antenne nach der Installation Satellitendaten speichern kann.",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellung F = GPS-Diagnose",
+          "context": "Diagnosemodus; LED rot = GPS nicht angeschlossen, gelb blinkend = kein gueltiger Fix, gruen = Einbauort in Ordnung.",
+          "safety_critical": true
+        },
+        {
+          "value": "plot vyp",
+          "context": "Tschechischer SMS-Befehl zum Deaktivieren von Geofencing, an die Nummer des GSM-Moduls. Deutsch: fence aus, englisch: fence off, franzoesisch: desactiver le gardiennage.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 88,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 11 z 23'. Kapitel 2 'Programovani a konfigurace' mit 2.1 'Konfigurace karty SIM': erforderlich ist eine vom Mobilfunkanbieter freigeschaltete Nano-SIM. Ein roter Empfehlungsblock nennt 2G/3G/4G, SMS, Telefonie und mobile Daten (4G/LTE), verbietet Multi-Operator-Karten und empfiehlt allgemein eine M2M-Karte mit Verweis auf die Produkt-FAQ. Vier nummerierte Schritte an der SIM-Karte, danach ein roter Pozor-Block zu iMessages. Abschnitt 2.2 'Vlozeni karty SIM do modulu Pro-finder' zeigt das Platinenfoto mit SIM-Halter und ESD-Warnsymbol.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Der SIM-Empfehlungsblock und der iPhone-Pozor-Block ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Beide Hinweisbloecke sind zentriert ueber die volle Satzbreite gesetzt.",
+        "Der Pozor-Block verweist positional auf \"kroky 1 az 4\" statt auf benannte Schritte.",
+        "Das gelbe ESD-Warnsymbol hat keine Textentsprechung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 88 traegt die interne Nummer 'Strana 11 z 23'."
+      ],
+      "discrepancies": [
+        "Die Anbieterempfehlung ist hier allgemein gehalten wie in der englischen Fassung. Damit gibt es ueber vier geprueft Sprachfassungen drei Varianten: deutsch namentlich t-mobile und Vodafone, franzoesisch namentlich DOMOTEC, englisch und tschechisch allgemein (DSC-027).",
+        "Uneinheitliche Listenform: Schritt 1 steht im Imperativ (\"Deaktivujte\"), die Schritte 2 bis 4 als Substantive (\"Deaktivace\", \"Aktivace\")."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Farbfoto der gruenen Platine mit geoeffnetem SIM-Halter, weisser Beschriftung SIM und gelbem ESD-Warnsymbol.",
+          "has_text_equivalent": false,
+          "relies_on": "Einbauort und Einschubrichtung nur ueber das Foto; keine textliche Schrittfolge zu 2.2."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [
+        "Doporucujeme pouzivat nano SIM kartu, ktera je vyhradne kompatibilni s 2G/3G/4G a podporuje SMS, telefonovani a mobilni data (4G/LTE). Pouziti SIM karty s vice poskytovateli neni povoleno.",
+        "Pozor: Pokud pouzivate iPhone, musi byt funkce iMessages pro vyse uvedene kroky 1 az 4 deaktivovana!"
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "2 Programovani a konfigurace",
+        "2.1 Konfigurace karty SIM",
+        "2.2 Vlozeni karty SIM do modulu Pro-finder"
+      ],
+      "technical_values": [
+        {
+          "value": "Nano SIM, vom Anbieter freigeschaltet",
+          "context": "Voraussetzung fuer den Betrieb.",
+          "safety_critical": true
+        },
+        {
+          "value": "PIN-Abfrage, Mailbox, Rufumleitungen und Komfortfunktionen deaktivieren; Roaming aktivieren",
+          "context": "Vier Pflichtschritte; bei iPhone zusaetzlich iMessages deaktivieren.",
+          "safety_critical": true
+        },
+        {
+          "value": "allgemeine M2M-Kartenempfehlung ohne Anbieternamen",
+          "context": "Wie die englische Fassung; die deutsche nennt t-mobile und Vodafone, die franzoesische die Firma DOMOTEC (DSC-027).",
+          "safety_critical": false
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 89,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 12 z 23'. Drei Abschnitte: 2.3 'Stahnout aplikaci THITRONIK' mit zwei QR-Codes fuer App Store und Google Play, 2.4 'Aktivace nastroje Pro-finder' und 2.5 'Ulozeni cisla Pro-finder'. Nach Einlegen der SIM und Anschluss der Spannungsversorgung blinkt die Status-LED kurz rot, dann gelb-gruen. Die App-gefuehrte Aktivierung macht die Kapitel 2.5 bis 2.8 entbehrlich. Die Pro-finder-Nummer soll im Telefonbuch gespeichert werden, zwingend mit Landesvorwahl (Beispiel +420 fuer die Tschechische Republik).",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Der App-Bezug ist ausschliesslich ueber QR-Codes zugaenglich - derselbe Einkanal-Zugang wie in allen anderen Sprachfassungen.",
+        "Der Tipp zur Speicherung als AAlarm ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Die Store-Badges sind Bildmarken ohne Alternativtext.",
+        "Paginierungs-Diskrepanz: PDF-Seite 89 traegt die interne Nummer 'Strana 12 z 23'."
+      ],
+      "discrepancies": [
+        "Derselbe Widerspruch wie in der englischen und franzoesischen Fassung (DSC-016): Der Fliesstext empfiehlt die Speicherung unter \"ALARM\", der unmittelbar folgende rote Tipp dagegen unter \"AAlarm\". Der Fehler steht damit in drei von vier geprueften Sprachfassungen - er wurde konsequent mituebersetzt statt bemerkt.",
+        "Der Produktname erscheint verkuerzt als \"vyhledavac Pro\" beziehungsweise \"hledacek Pro\" statt \"Pro-finder\" (vgl. DSC-036). Hier: \"aplikaci k aktivaci vyhledavace Pro\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Zwei quadratische QR-Codes nebeneinander mit den Store-Badges App Store und Google play.",
+          "has_text_equivalent": false,
+          "relies_on": "Visuelle QR-Erkennung mit einer Kamera; keine Klartext-URL, keine Kurzadresse, kein Suchbegriff."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [
+        "Tip: Pokud ulozite cislo Pro-finderu pod oznacenim AAlarm, bude zaznam vzdy na prvnim miste."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "2.3 Stahnout aplikaci THITRONIK",
+        "2.4 Aktivace nastroje Pro-finder",
+        "2.5 Ulozeni cisla Pro-finder"
+      ],
+      "technical_values": [
+        {
+          "value": "LED blinkt kurz rot, danach gelb-gruen",
+          "context": "Erwartete Reaktion nach Anschluss der Spannungsversorgung.",
+          "safety_critical": true
+        },
+        {
+          "value": "Landesvorwahl, z. B. +420 fuer die Tschechische Republik",
+          "context": "Die Nummer muss mit Landesvorwahl gespeichert werden.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 90,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 13 z 23'. 2.6 'Ovladani vyhledavace Pro-finder prostrednictvim SMS nebo volani' weist auf die Kosten jeder gesendeten SMS hin. 2.7 'Ruzna cisla urceni' unterscheidet in einer Definitionstabelle Hlavni cislo, Autorizovana cisla und Nepovolena cisla; bis zu zehn Nummern sind speicherbar. 2.8 'Programovani cilovych cisel' erklaert den Aufbau der Programmier-SMS ueber eine Grafik mit Verbindungslinien.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die komplette SMS-Syntax ist nur als Grafik mit Verbindungslinien vermittelt.",
+        "Die Definitionstabelle in 2.7 hat keine Ueberschriftenzeile.",
+        "Der Hinweis zum Zeichen S ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 90 traegt die interne Nummer 'Strana 13 z 23'."
+      ],
+      "discrepancies": [
+        "Wie in der englischen und franzoesischen Fassung (DSC-019) ist die Erlaeuterung lokalisiert (\"+420 pro Ceskou republiku\"), die Beispielnummern sind aber durchgaengig deutsch (+49). Der Fehler steht damit in drei von vier geprueften Sprachfassungen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Syntaxgrafik der Programmier-SMS mit Unterstreichungen, eckigen Verbindungslinien zu vier Beschriftungen und einem roten Hinweis zum Zeichen S.",
+          "has_text_equivalent": false,
+          "relies_on": "Raeumliche Zuordnung ueber Verbindungslinien; die Syntaxregel ist nirgends als Fliesstext oder Tabelle wiedergegeben."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Definitionstabelle der Zielrufnummerntypen (ohne Ueberschriftenzeile)",
+          "columns": 2,
+          "rows": 3,
+          "has_header_row": false,
+          "note": "Hlavni cislo / Autorizovana cisla / Nepovolena cisla links, Bedeutung rechts."
+        }
+      ],
+      "warnings_found": ["Pouzijte pouze v pripade, ze koncove zarizeni je smartphone."],
+      "terminology_findings": [],
+      "headings": [
+        "2.6 Ovladani vyhledavace Pro-finder prostrednictvim SMS nebo volani",
+        "2.7 Ruzna cisla urceni",
+        "2.8 Programovani cilovych cisel"
+      ],
+      "technical_values": [
+        {
+          "value": "bis zu zehn Zielrufnummern",
+          "context": "Maximale Anzahl speicherbarer Zielrufnummern.",
+          "safety_critical": true
+        },
+        {
+          "value": "Hlavni cislo (Masternummer)",
+          "context": "Zuerst gespeicherte Nummer; kann jederzeit ohne Schalterbedienung neue Zielrufnummern programmieren. Anders als im Franzoesischen durchgaengig einheitlich benannt.",
+          "safety_critical": true
+        },
+        {
+          "value": "Zeichen S vor der Nummer",
+          "context": "Schaltet die Positionsuebertragung auf einen Link um; nur bei Smartphones.",
+          "safety_critical": true
+        },
+        {
+          "value": "keine Leerzeichen in der SMS",
+          "context": "Die Leerzeichen der Abbildung dienen nur der Darstellung.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 91,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 10,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "tabelle",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 14 z 23'. Oben die Tabelle 'Priklady ruznych programovacich SMS' mit drei Beispielen (dieselben Nummern wie in allen anderen Sprachfassungen). Danach 2.9 'Odstraneni cilovych cisel' mit rotem Warndreieck-Hinweis, dass die Nano-SIM eingelegt sein muss, und der Loeschprozedur als Aufzaehlung: Kabelbaum trennen, Betriebsartenschalter (A) auf E, Kabelbaum wieder anschliessen und warten, bis die LED gelb-gruen blinkt, Schalter zurueckstellen.",
+      "accessibility_issues": [
+        "Textebene praktisch nicht vorhanden (10 Zeichen, nur Aufzaehlungszeichen).",
+        "Die zwingend sequentielle Loeschprozedur ist als ungeordnete Aufzaehlung gesetzt.",
+        "Der Verweis auf den Betriebsartenschalter (A) setzt die Bildmarke aus Abschnitt 1.2 voraus.",
+        "Das rote Warndreieck ist ein reines Bildsymbol ohne Alternativtext.",
+        "Paginierungs-Diskrepanz: PDF-Seite 91 traegt die interne Nummer 'Strana 14 z 23'."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Rotes Warndreieck mit Ausrufezeichen ueber dem Hinweistext.",
+          "has_text_equivalent": false,
+          "relies_on": "Symbol ohne Alternativtext; Warnstufe nur ueber Form und Farbe."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Priklady ruznych programovacich SMS",
+          "columns": 2,
+          "rows": 3,
+          "has_header_row": true,
+          "note": "Kopfzeile nur typografisch fett, nicht als Tabellenkopf ausgezeichnet."
+        }
+      ],
+      "warnings_found": ["Poznamka: Karta nano SIM musi byt vlozena v zarizeni!"],
+      "terminology_findings": [],
+      "headings": ["2.9 Odstraneni cilovych cisel"],
+      "technical_values": [
+        {
+          "value": "Betriebsartenschalter (A) auf Position E",
+          "context": "Schalterstellung zum Loeschen des gesamten Zielrufnummernspeichers.",
+          "safety_critical": true
+        },
+        {
+          "value": "warten, bis die Status-LED gelb-gruen blinkt",
+          "context": "Bedingung vor dem Zurueckstellen des Schalters.",
+          "safety_critical": true
+        },
+        {
+          "value": "+ = berechtigt, - = unberechtigt, S = Smartphone",
+          "context": "Aus den Tabellenbeispielen ableitbare Syntaxregeln; auch hier nicht ausformuliert (vgl. DSC-017).",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 92,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 15 z 23'. Kapitel 3 'Provozni stavy (stavova LED)' mit denselben neun Zustaenden wie in den anderen Sprachfassungen, jeweils als Balkenmuster mit Bezeichnung und Bedeutung. Roter Abschlusshinweis: nach Installation und Programmierung blinkt die LED im Normalbetrieb gruen.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die Unterscheidung beruht auf Rot, Gelb und Gruen; Rot-Gelb gegen Rot-Gruen und Dauergruen gegen Dauergelb sind ohne Farbwahrnehmung nicht trennbar.",
+        "Die neun Zustaende sind nicht als Tabelle ausgezeichnet.",
+        "Der Abschlusshinweis zum Normalbetrieb ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 92 traegt die interne Nummer 'Strana 15 z 23'."
+      ],
+      "discrepancies": [
+        "Widerspruch innerhalb derselben Tabelle: Zustand 8 lautet \"Blika zlutozelene: Prihlasen (prijem) + nejsou k dispozici zadna cilova cisla\", Zustand 9 dagegen \"Blika zelene: rezervovano (recepce) + dostupna cilova cisla\". Beide Zustaende meinen dieselbe Lage \"im Netz eingebucht, Signal vorhanden\". In Zustand 8 ist sie mit \"Prihlasen (prijem)\" zutreffend wiedergegeben, in Zustand 9 mit \"rezervovano (recepce)\" - woertlich \"reserviert (Rezeption)\". Betroffen ist ausgerechnet der Normalbetrieb.",
+        "Zustand 6 verwendet ebenfalls \"Rezervovano\" statt einer Entsprechung von \"eingebucht\".",
+        "Zustand 9 beginnt als einziger klein (\"rezervovano\"), alle anderen gross."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Neun waagerechte Balkenreihen aus roten, gelben und gruenen Segmenten; lange Balken fuer Dauerlicht, kurze fuer Blinken, Farbwechsel fuer Wechselblinken.",
+          "has_text_equivalent": true,
+          "relies_on": "Die Musterbezeichnung links benennt Farbe und Muster ausgeschrieben."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Provozni stavy (stavova LED)",
+          "columns": 2,
+          "rows": 9,
+          "has_header_row": false,
+          "note": "Freies Layout ohne Tabellenstruktur und ohne Kopfzeile."
+        }
+      ],
+      "warnings_found": [
+        "Po dokonceni instalace a programovani blika stavova kontrolka behem bezneho provozu zelene."
+      ],
+      "terminology_findings": [
+        "Fuer denselben Netzzustand stehen in einer Tabelle zwei Begriffspaare: \"Prihlasen (prijem)\" und \"rezervovano (recepce)\". Ein tschechischer Sprachreview muss klaeren, welche Form gilt; die zweite ist dem Vergleich nach eine Fehluebersetzung."
+      ],
+      "headings": ["3 Provozni stavy (stavova LED)"],
+      "technical_values": [
+        {
+          "value": "Sviti cervene = karta SIM chybi nebo je vadna",
+          "context": "Fehlerzustand: keine oder defekte SIM-Karte.",
+          "safety_critical": true
+        },
+        {
+          "value": "Blika cerveno-zelene = PIN SIM karty neni deaktivovan",
+          "context": "Fehlerzustand: PIN-Abfrage nicht deaktiviert.",
+          "safety_critical": true
+        },
+        {
+          "value": "Blika zelene = Normalbetrieb mit vorhandenen Zielrufnummern",
+          "context": "Der Zustand ist in der tschechischen Fassung als \"rezervovano (recepce)\" beschrieben - siehe Widerspruch.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 93,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 16 z 23'. Beginn von Kapitel 4 'Hlaseni, zpravy a varovani' mit den SMS-Bestandteilen GPS, UTC, Poz und Rychlost, danach drei Meldungstypen mit Beispiel-SMS: Zprava o stavu (Statusbericht mit U1 bis U5 und Temperatur), Zprava o kradezi (stiller Alarm ab ca. 900 m bei aktivierter WiPro III) und Voltazni vystraha (unter 11,2 V Standby, ueber 12,5 V zurueck in den Normalbetrieb).",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die Beispiel-SMS sind reine Bildinhalte und nicht vorlesbar.",
+        "Die Zuordnung Sprechblase zu Erlaeuterung entsteht nur ueber die zweispaltige Anordnung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 93 traegt die interne Nummer 'Strana 16 z 23'."
+      ],
+      "discrepancies": [
+        "Dieselbe Wortdopplung wie in der englischen und franzoesischen Fassung: \"...jak je popsano v casti 5.1 Ovladani poplasneho systemu prostrednictvim SMS SMS.\" Der Fehler steht damit in drei von vier geprueften Sprachfassungen und ist ein Vorlagenfehler.",
+        "Die englische Fassung setzt \"U2: 0 VU3: 0 V\" ohne Zeilenumbruch (DSC-018); die tschechische trennt korrekt - der Fehler bleibt englischspezifisch.",
+        "Die Warnung ist hier korrekt formuliert (\"neni v provoznim rezimu B\"), waehrend die franzoesische Fassung eine doppelte Verneinung enthaelt (DSC-034). Allerdings folgt auf die Klammer die Zeichenfolge \":.\" - Doppelpunkt und Punkt hintereinander.",
+        "Der Produktname erscheint verkuerzt als \"vyhledavac Pro\" beziehungsweise \"hledacek Pro\" statt \"Pro-finder\" (vgl. DSC-036). Hier steht \"prepne se hledacek Pro do pohotovostniho rezimu\", im unmittelbar folgenden Satz dagegen \"Pro-finder se vrati do normalniho provozu\".",
+        "SMS-Feldnamen sind lokalisiert: \"Pos\" wird zu \"Poz\", \"Speed\" zu \"Rychlost\". Ob das Geraet diese Bezeichner tatsaechlich lokalisiert ausgibt, ist unbestaetigt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Drei schwarze SMS-Sprechblasen mit weissem Text und blauen unterstrichenen Kartenlinks.",
+          "has_text_equivalent": false,
+          "relies_on": "Bildinhalt ohne Textentsprechung; der Wortlaut wird im Fliesstext nicht wiederholt."
+        }
+      ],
+      "tables": [
+        {
+          "caption": "Bestandteile einer Meldungs-SMS",
+          "columns": 2,
+          "rows": 4,
+          "has_header_row": false,
+          "note": "GPS / UTC / Poz / Rychlost links, Erlaeuterung rechts; als Einzugsliste gesetzt."
+        }
+      ],
+      "warnings_found": [
+        "Alarm proti kradezi je tichy alarm. To znamena, ze se neaktivuji indikatory ani sirena."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "4 Hlaseni, zpravy a varovani",
+        "Zprava o stavu:",
+        "Zprava o kradezi:",
+        "Voltazni vystraha:"
+      ],
+      "technical_values": [
+        {
+          "value": "unter 11,2 V / ueber 12,5 V",
+          "context": "Schwellen fuer Standby und Rueckkehr in den Normalbetrieb; deckungsgleich mit allen anderen Sprachfassungen.",
+          "safety_critical": true
+        },
+        {
+          "value": "ca. 900 m",
+          "context": "Entfernung fuer die Diebstahlmeldung bei aktivierter WiPro III (safe.lock).",
+          "safety_critical": true
+        },
+        {
+          "value": "U1 bis U5 und Temperatur",
+          "context": "Zusatzinhalte des Statusberichts je nach Betriebsart.",
+          "safety_critical": false
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 94,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 17 z 23'. Fortsetzung von Kapitel 4 mit fuenf weiteren Meldungstypen: Pozicni SMS pro chytre telefony, Napoveda SMS (Hilfe-SMS bei ungueltigem Befehl), Hlaseni o vloupani, Plynovy alarm und Rucni alarm. Bei Einbruch-, Gas- und manuellem Alarm wird nach der SMS zusaetzlich die Masternummer angerufen.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Alle fuenf Beispiel-SMS sind reine Bildinhalte; die Meldungstexte sind nicht vorlesbar.",
+        "Der dreimal wiederholte Hinweis zum zusaetzlichen Anruf der Masternummer ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Paginierungs-Diskrepanz: PDF-Seite 94 traegt die interne Nummer 'Strana 17 z 23'."
+      ],
+      "discrepancies": [
+        "Vierter eigenstaendiger Befehlssatz in der Hilfe-SMS: ZAPNOUT, VYPNOUT, STAV, POS. Ueber vier geprueft Sprachfassungen ist damit nur POS in allen vier identisch (vgl. DSC-033).",
+        "Saemtliche Geraete-SMS sind ohne Diakritika gesetzt (\"Neplatny povel! Mozne povely\", \"Vloupani dvere/okno\", \"Manualni alarm\"), waehrend der umgebende Fliesstext diakritische Zeichen verwendet. Dasselbe Muster wie die akzentlosen franzoesischen Befehle - das stuetzt die Annahme, dass Geraeteein- und -ausgaben ASCII sind.",
+        "Die Einbruchmeldung setzt die Klammer korrekt (\"Vloupani dvere/okno (Magneticky kontakt)\"); in der englischen Fassung fehlt die schliessende Klammer (DSC-018)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Fuenf schwarze SMS-Sprechblasen mit UTC-Zeit, Kartenlink und Geschwindigkeit.",
+          "has_text_equivalent": false,
+          "relies_on": "Bildinhalt ohne Textentsprechung."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [
+        "Po odeslani SMS je rovnez volano hlavni cislo. (Vloupani, plynovy alarm, rucni alarm)"
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "Pozicni SMS pro chytre telefony:",
+        "Napoveda SMS:",
+        "Hlaseni o vloupani:",
+        "Plynovy alarm:",
+        "Rucni alarm:"
+      ],
+      "technical_values": [
+        {
+          "value": "ZAPNOUT, VYPNOUT, STAV, POS",
+          "context": "Grossgeschriebene Befehle in der automatischen tschechischen Hilfe-SMS. Deutsch: SCHARF/UNSCHARF/STATUS/POS, englisch: ARM/DISARM/STATUS/POS, franzoesisch: ACTIVER/DESACTIVER/RAPPORT D ETAT/POS.",
+          "safety_critical": true
+        },
+        {
+          "value": "Masternummer wird zusaetzlich angerufen",
+          "context": "Zusaetzliche Alarmierung nach Einbruch-, Gas- und manuellem Alarm.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 95,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 18 z 23'. Abschlussseite von Kapitel 4 mit einem einzigen Meldungstyp: 'Prislusenstvi pro kradeze' meldet das Ausloesen der Funk-Kabelschleife, zum Beispiel beim Diebstahl damit gesicherten Campingzubehoers. Die unteren rund achtzig Prozent der Seite sind leer.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Die Beispiel-SMS ist reiner Bildinhalt ohne Textentsprechung.",
+        "Die Seite enthaelt nur wenige Zeilen Inhalt und danach grossflaechigen Leerraum; ein Hinweis, dass Kapitel 4 hier endet, fehlt.",
+        "Paginierungs-Diskrepanz: PDF-Seite 95 traegt die interne Nummer 'Strana 18 z 23'."
+      ],
+      "discrepancies": [
+        "Die Ueberschrift \"Prislusenstvi pro kradeze\" bedeutet woertlich \"Zubehoer fuer Diebstaehle\"; gemeint ist der Diebstahl von Zubehoer. Dieselbe Bedeutungsumkehr wie in der franzoesischen Fassung, dort im SMS-Text statt in der Ueberschrift (DSC-035)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [
+        {
+          "description": "Eine schwarze SMS-Sprechblase mit Kartenlink und Geschwindigkeitsangabe.",
+          "has_text_equivalent": false,
+          "relies_on": "Bildinhalt ohne Textentsprechung."
+        }
+      ],
+      "tables": [],
+      "warnings_found": [],
+      "terminology_findings": [],
+      "headings": ["Prislusenstvi pro kradeze:"],
+      "technical_values": [
+        {
+          "value": "Funk-Kabelschleife (bezdratova kabelova smycka)",
+          "context": "Ausloeser der Zubehoer-Diebstahlmeldung.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 96,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["cs"],
+      "summary": "Intern 'Strana 19 z 23'. Kapitel 5 'Funkce' beginnt. 5.1 'Ovladani poplasneho systemu prostrednictvim SMS': in den Betriebsarten 2 und 3 schaltet ein Anruf die WiPro III (safe.lock) in den naechsten Zustand; das Geraet beendet den Anruf vor einer kostenpflichtigen Verbindung. Roter Hinweis: nur berechtigte Nummern haben Zugriff. 5.2 'Geofencing' beschreibt den virtuellen Zaun von 900 Metern. In Schalterstellung 8 und B ueber Pin 3, sonst per SMS mit den Texten plot zap und plot vyp.",
+      "accessibility_issues": [
+        "Keine nutzbare Textebene (0 Zeichen). Der Seiteninhalt ist fuer Screenreader und Textsuche unzugaenglich.",
+        "Beide Hinweisbloecke ist nur durch rote Schrift und Trennlinien als Hinweis markiert; ohne Farbwahrnehmung fehlt die Gewichtung.",
+        "Die SMS-Befehle sind nur durch kursive blaue Schrift ausgezeichnet, nicht als Eingabewert semantisch markiert.",
+        "Der Befehl \"plot zap\" steht am Absatzende auf einer eigenen Zeile, durch eine Leerzeile vom zugehoerigen Satz getrennt - der Satzzusammenhang bricht optisch auf.",
+        "Paginierungs-Diskrepanz: PDF-Seite 96 traegt die interne Nummer 'Strana 19 z 23'."
+      ],
+      "discrepancies": [
+        "Der rote Hinweis ist in sich widerspruechlich: \"Kdyz je WiPro III odjisten, je geofencing automaticky aktivovan ... Geofencing se proto automaticky deaktivuje, kdyz je zarizeni WiPro III odjisteno.\" Beide Male steht dieselbe Bedingung (odjisten - entschaerft), einmal fuer die Aktivierung und einmal fuer die Deaktivierung. Die deutsche, englische und franzoesische Fassung nennen an diesen Stellen gegensaetzliche Zustaende (scharfgeschaltet gegenueber unscharf).",
+        "Der Produktname erscheint verkuerzt als \"vyhledavac Pro\" beziehungsweise \"hledacek Pro\" statt \"Pro-finder\" (vgl. DSC-036). Hier: \"dokud vyhledavac Pro neprijme SMS\".",
+        "Zwei Begriffe fuer dieselbe Funktion auf einer Seite: \"geofencing\" als Lehnwort und \"geograficke ohraniceni\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "figures": [],
+      "tables": [],
+      "warnings_found": [
+        "Poznamka: Pristup k vyhledavaci Pro-finder maji pouze autorizovana cisla.",
+        "Poznamka: Kdyz je WiPro III odjisten, je geofencing automaticky aktivovan a neni treba jej zapinat prostrednictvim SMS."
+      ],
+      "terminology_findings": [],
+      "headings": [
+        "5 Funkce",
+        "5.1 Ovladani poplasneho systemu prostrednictvim SMS",
+        "5.2 Geofencing"
+      ],
+      "technical_values": [
+        {
+          "value": "Betriebsarten 2 und 3",
+          "context": "Nur dort schaltet ein Anruf die WiPro III (safe.lock) in den naechsten Zustand.",
+          "safety_critical": true
+        },
+        {
+          "value": "900 metru",
+          "context": "Geofencing-Radius um den urspruenglichen Standort.",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellung 8 und B ueber Pin 3",
+          "context": "Hardwareseitiges Schalten von Geofencing; sonst per SMS.",
+          "safety_critical": true
+        },
+        {
+          "value": "plot zap / plot vyp",
+          "context": "Exakte tschechische SMS-Befehle fuer Geofencing. Deutsch: fence an / fence aus, englisch: fence on / fence off, franzoesisch: activer / desactiver le gardiennage.",
+          "safety_critical": true
+        }
+      ],
+      "inspected_note": "Batch 8, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft. Sprachliche Bewertung des Tschechischen bewusst zurueckhaltend; gemeldet werden nur Befunde, die sich aus dem Vergleich mit den anderen Sprachfassungen oder aus Widerspruechen innerhalb derselben Seite ergeben. Kein unabhaengiger Review, daher Status nur inspected."
     },
     {
       "page": 97,

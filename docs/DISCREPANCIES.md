@@ -132,7 +132,9 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   card" mit Verweis auf die Produkt-FAQ; FR empfiehlt namentlich „une carte « machine to
   machine » de la société **DOMOTEC**".
 - **Befund:** Die Sprachfassungen sind inhaltlich nicht gleichwertig. Nur die französische
-  Fassung nennt einen konkreten Drittanbieter, der in keiner anderen Fassung vorkommt.
+  Fassung nennt einen konkreten Drittanbieter, der in keiner anderen Fassung vorkommt. Die
+  tschechische Fassung (Seite 88) bleibt wie die englische allgemein; über vier geprüfte
+  Fassungen ergeben sich damit drei Varianten.
   Zusätzlich weicht die Liste der abzuschaltenden Zusatzfunktionen ab (FR nennt zusätzlich
   „la mise en attente" und „le double appel par SMS") und die Prepaid-Empfehlung nennt
   französisch zusätzlich das Aufladen „via internet".
@@ -183,18 +185,22 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   an einer Stelle. Damit ist DSC-026 präzisiert: es ist kein einmaliger Ausrutscher im
   Fließtext.
 
-| Funktion        | Deutsch          | Englisch        | Französisch                   |
-| --------------- | ---------------- | --------------- | ----------------------------- |
-| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      |
-| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   |
-| Statusbericht   | `status`         | `status`        | `rapport d etat`              |
-| Position        | `position`       | `position`      | `position`                    |
-| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         |
-| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      |
-| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          |
-| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     |
-| Anlernmodus     | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` |
-| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            |
+| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch     |
+| --------------- | ---------------- | --------------- | ----------------------------- | --------------- |
+| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      |
+| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `STAV`          |
+| Position        | `position`       | `position`      | `position`                    | `POS`           |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | noch offen      |
+| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | noch offen      |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | noch offen      |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | noch offen      |
+| Anlernmodus     | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | noch offen      |
+| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT |
+
+Die tschechischen Ausgangs- und Anlernbefehle stehen auf den internen Seiten 20–22
+(PDF-Seiten 97–99) und werden in Batch 9 ergänzt. `POS` ist bislang der einzige Befehl,
+der in allen vier geprüften Fassungen identisch lautet.
 
 - **Der Widerspruch:** Auf Seite 74 sind drei der vier Ausgangsbefehle lokalisiert, der
   zeitgesteuerte bleibt `a %min%`. Entweder akzeptiert das Gerät gemischte Befehlssätze,
@@ -202,7 +208,19 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   Befehl in allen drei Fassungen gleich lautet.
 - **Beobachtung:** Alle französischen Befehle sind konsequent **ohne Akzent** gesetzt
   („desactiver", „rapport d etat", „mode d appairage"), im Fließtext daneben aber mit
-  Akzent. Das spricht dafür, dass die ASCII-Form beabsichtigt ist – bestätigt ist es nicht.
+  Akzent. Der tschechische Teil zeigt dasselbe Muster von der anderen Seite: sämtliche
+  **Geräte-SMS** sind dort ohne Diakritika gesetzt („Neplatny povel! Mozne povely",
+  „Vloupani dvere/okno", „Napajeni mene nez 11.2 V"), während der umgebende Fließtext
+  diakritische Zeichen verwendet. Auch die Beispielwerte nutzen den Dezimalpunkt („11.2 V")
+  statt des im Fließtext üblichen Kommas.
+- **Was daraus folgt:** Das Gerät scheint sowohl Eingaben als auch Ausgaben zu lokalisieren,
+  dabei aber durchgängig ASCII zu verwenden. Das macht die vier unterschiedlichen
+  Befehlssätze plausibler – und die Projektregel „SMS-Befehle sind sprachneutrale geschützte
+  Token" entsprechend unhaltbarer. Bestätigt ist beides nicht; genau deshalb braucht es den
+  technischen Review.
+- **Zusatzbeleg:** Die tschechische Seite 87 setzt als einzige eine englische Glosse hinter
+  den Befehl – „plot vyp" (plot off). Ob damit zwei gültige Formen gemeint sind oder nur
+  eine Lesehilfe, ist nicht ableitbar.
 - **Schwere:** hoch · **Status:** offen – technischer Review; gehört zu BLK-005
 
 ### DSC-034 – Doppelte Verneinung kehrt eine sicherheitsrelevante Aussage um (ab SN-045)
@@ -215,6 +233,38 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   in Betriebsart B gilt oder nicht, ist aus der französischen Fassung nicht ableitbar –
   bei einer Warnung, die vor Tiefentladung schützt.
 - **Schwere:** hoch · **Status:** offen
+
+### DSC-038 – Tschechischer Geofencing-Hinweis widerspricht sich selbst (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, tschechische Seite 96, Abschnitt 5.2
+- **Beleg:** „Když je WiPro III **odjištěn**, je geofencing automaticky aktivován …
+  Geofencing se proto automaticky deaktivuje, když je zařízení WiPro III **odjištěno**."
+- **Befund:** Beide Sätze nennen dieselbe Bedingung – „odjištěn" (entschärft) –, der eine
+  für die Aktivierung, der andere für die Deaktivierung des Geofencings. Die deutsche,
+  englische und französische Fassung nennen an diesen Stellen **gegensätzliche** Zustände:
+  scharfgeschaltet aktiviert, unscharf deaktiviert.
+- **Prüfweg:** Der Widerspruch ergibt sich aus der Wortwiederholung innerhalb desselben
+  Absatzes und dem Vergleich mit drei anderen Sprachfassungen – dafür sind keine
+  vertieften Tschechischkenntnisse nötig. Welche Formulierung korrekt ist, muss ein
+  muttersprachlicher Review entscheiden.
+- **Schwere:** hoch (der Hinweis regelt, wann Geofencing ohne SMS aktiv ist; er ist in
+  dieser Form nicht befolgbar) · **Status:** offen
+
+### DSC-039 – Fehlübersetzung des Normalbetriebs in der tschechischen LED-Tabelle (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, tschechische Seite 92, Kapitel 3, Zustände 6, 8 und 9
+- **Beleg:** Zustand 8 lautet „Bliká žlutozeleně: **Přihlášen (příjem)** + nejsou k
+  dispozici žádná cílová čísla", Zustand 9 dagegen „Bliká zeleně: **rezervováno (recepce)**
+  - dostupná cílová čísla".
+- **Befund:** Beide meinen dieselbe Lage „im Netz eingebucht, Signal vorhanden". In
+  Zustand 8 ist sie mit „Přihlášen (příjem)" zutreffend wiedergegeben, in Zustand 9 mit
+  „rezervováno (recepce)" – wörtlich „reserviert (Rezeption)". Zustand 6 verwendet
+  ebenfalls „Rezervováno". Die Übersetzungskette dürfte über „eingebucht" → „booked" →
+  „reserviert" und „signal/reception" → „Rezeption" gelaufen sein.
+- **Warum das zählt:** Betroffen ist ausgerechnet **Zustand 9 – der Normalbetrieb**. Wer
+  prüfen will, ob das Gerät ordnungsgemäß arbeitet, findet dort eine sinnentstellte
+  Beschreibung. Die Status-LED ist zudem der einzige Rückkanal des Geräts ohne SMS.
+- **Schwere:** hoch · **Status:** offen – tschechischer Sprachreview
 
 ## Mittel
 
@@ -311,8 +361,10 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   alphabetischen Erstposition.
 - **Nachtrag 2026-08-07:** Der Widerspruch ist nicht englischspezifisch. Die französische
   Seite 65 zeigt dasselbe Muster in lokalisierter Form – Fließtext „sous la désignation
-  « ALARME »", Conseil dagegen „sous le nom du contact _AAlarme_". Der Fehler wurde also
-  mitübersetzt statt bemerkt.
+  « ALARME »", Conseil dagegen „sous le nom du contact _AAlarme_". Die tschechische Seite 89
+  ebenso: Fließtext „pod štítek ALARM", Tip dagegen „pod označením _AAlarm_". Damit steht der
+  Fehler in drei von vier geprüften Sprachfassungen – er wurde konsequent mitübersetzt statt
+  bemerkt.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-017 – Syntaxbedeutung des Minuszeichens nur implizit (ab SN-045)
@@ -405,9 +457,10 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   englischen Dokument.
 - Seite 39: Die Erläuterung nennt „Country code starting with + (+44 for England)", das
   Beispiel verwendet durchgängig deutsche Vorwahlen („+49 …"). Erläuterung und Beispiel
-  passen nicht zusammen. Dasselbe auf der französischen Seite 66 („+33 pour la France"
-  neben deutschen Beispielnummern) – die Erläuterung wird lokalisiert, die Beispielgrafik
-  nicht.
+  passen nicht zusammen. Dasselbe auf der französischen Seite 66 („+33 pour la France")
+  und der tschechischen Seite 90 („+420 pro Českou republiku") – jeweils neben deutschen
+  Beispielnummern. Die Erläuterung wird lokalisiert, die Beispielgrafik nicht; belegt in
+  drei von vier geprüften Fassungen.
 - Seite 42: Spannungen uneinheitlich gesetzt – „11.2V"/„12.5V" ohne Leerzeichen im
   Fließtext, „11.2 V" mit Leerzeichen in der Beispiel-SMS.
 - **Status:** offen (redaktionell)
@@ -485,6 +538,6 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   Übernahme erforderlich – auch für Textbausteine, die nur als Referenz dienen.
 - **Status:** offen
 
-> Die Befunde der Seiten 1–86 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
+> Die Befunde der Seiten 1–96 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
 > in den Seitenrecords unter [sources/pages/](../sources/pages/) erfasst und werden bei
 > der Segment-Extraktion in dieses Register übernommen, sobald sie inhaltlich bewertet sind.
