@@ -1483,143 +1483,719 @@
     },
     {
       "page": 17,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1528,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1272,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 15\". Abschnitt 2.8 \"Fahrzeug wiederfinden\" - die Überschrift ist im Seitenbild bestätigt und schließt den offenen Punkt aus DSC-055 ab. Inhalt: Die Positionsangaben aus den Meldungen können in beliebige Kartenprogramme und Navigationsgeräte eingegeben werden und zeigen je nach Kartenart oft hausnummerngenau den Standort; die Angabe wird exakt wie auf dem Mobiltelefon angezeigt in die Suchzeile eines Kartenprogramms wie z.B. Google Maps eingegeben; Smartphonenutzer können die Positionsabfrage nach 2.6 verwenden; nach einer Diebstahlmeldung lassen sich nach 2.5 jederzeit weitere Statusberichte anfordern. Steht das Fahrzeug in einem Gebäude oder an einem Ort ohne GPS-Empfang, wartet Pro-finder bis zu 10 Minuten auf eine gültige Position; danach wird der Statusbericht mit der zuletzt empfangenen Position verschickt. Bei einem Alarm und aktiver Lichtmaschine wird die Position permanent abgefragt, die zuletzt empfangene ist also die unmittelbar vor Abbruch des GPS-Empfangs gespeicherte; die Uhrzeit in der SMS (UTC) entspricht immer der Zeit der zuletzt empfangenen Position. Zwei Bildschirmfotos: die Positionsanzeige in Google Maps auf einem stationären PC und in einer Karten-App auf einem Smartphone.",
+      "headings": ["Handbuch Pro-finder", "Seite 15", "2.8 Fahrzeug wiederfinden"],
+      "technical_values": [
+        {
+          "value": "Ohne GPS-Empfang wartet Pro-finder bis zu 10 Minuten auf eine gültige Position; danach wird der Statusbericht mit der zuletzt empfangenen Position verschickt",
+          "context": "Sicherheitsrelevant, weil die übermittelte Position dann veraltet sein kann. Ergänzt die Aussage von PDF-Seite 15, wonach im Statusbericht dann \"GPS kein Empfang\" steht",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei einem Alarm und aktiver Lichtmaschine wird die Position permanent abgefragt",
+          "context": "Die Bedingung \"aktive Lichtmaschine\" erscheint nur an dieser Stelle des Dokuments; weder Abschnitt 2.1 noch 2.5 nennen sie. Was ohne laufenden Motor gilt, sagt die Quelle nicht",
+          "safety_critical": true
+        },
+        {
+          "value": "Die Uhrzeit in der SMS ist UTC und entspricht immer der Zeit der zuletzt empfangenen Position",
+          "context": "Wer die Uhrzeit als Empfangszeit der SMS liest, unterschätzt das Alter der Position. Der Hinweis steht unausgezeichnet im Fließtext",
+          "safety_critical": true
+        },
+        {
+          "value": "Positionsangaben zeigen je nach Kartenart oft hausnummerngenau den Standort",
+          "context": "Einschränkende Formulierung (\"oft\", \"je nach verwendeter Kartenart\"); keine Genauigkeitsangabe in Metern",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Bildschirmfoto von Google Maps in einem Desktop-Browser (Oberfläche im Stand von etwa 2010, Domain maps.google.de). In der Suchzeile stehen Koordinaten im Grad-Dezimalminuten-Format, die Karte zeigt die Kieler Förde mit einer Ortsmarke und einem Adressfenster mit einer Kieler Straßenadresse samt Postleitzahl",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild. Die Abbildung ist die einzige Stelle des Dokuments, die zeigt, wie eine eingegebene Positionsangabe in einem Kartenprogramm aussieht. Koordinaten und Adresse werden hier bewusst nicht wiedergegeben"
+        },
+        {
+          "description": "Bildschirmfoto eines Smartphones (Statusleiste \"Telekom 3G\", Uhrzeit 13:09) mit derselben Koordinatensuche in einer Karten-App, Kartenausschnitt Schleswig-Holstein mit Ortsmarke und Adressfahne",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene enthalten. Auch hier werden Koordinaten und Adresse bewusst nicht übernommen"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Bildunterschrift verwendet zwei Dreieckssymbole (aufwärts nach dem Wort \"PC\", abwärts am Zeilenende), um die Zuordnung zu den beiden Bildschirmfotos herzustellen. In der Textebene erscheinen die Symbole als die Buchstaben \"p\" und \"q\" - Symbolschrift ohne Unicode-Zuordnung. Vorgelesen wird also \"PC pund auf einem mobilen Endgerät (Smart Phone) q\"; zusätzlich fehlt das Leerzeichen zwischen Symbol und \"und\". Die Zuordnung der Beispiele zu den Bildern geht damit nicht-visuell vollständig verloren.",
+        "Beide Bildschirmfotos haben keinen Alternativtext und keine Entsprechung in der Textebene. Der in ihnen enthaltene Text (Suchzeile, Adressfenster, Bedienelemente) ist bei Druckgröße winzig und teils unter 1 mm Zeichenhöhe.",
+        "Die Information, dass eine übermittelte Position bis zu 10 Minuten alt oder älter sein kann, steht ohne jede Hervorhebung im Fließtext der unteren Seitenhälfte, im Umbruch neben dem Smartphone-Foto.",
+        "Die Lesereihenfolge der Textebene ist gestört: Kopfzeile (\"Handbuch Pro-finder\", \"Seite 15\") und Bildunterschrift werden erst nach dem gesamten Fließtext ausgegeben; die Bildunterschrift steht damit textlich nicht bei den Bildern, die sie erklärt.",
+        "Der Fließtext der unteren Seitenhälfte ist um das Smartphone-Foto herum in eine schmale Spalte umbrochen (im Mittel vier bis fünf Wörter je Zeile); die letzten beiden Zeilen laufen unter dem Bild wieder über die volle Breite.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 15\", tatsächlich PDF-Seite 17 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Bestätigung zu DSC-055: Der Abschnitt \"Fahrzeug wiederfinden\" trägt im Seitenbild die Nummer 2.8 und steht auf der aufgedruckten Seite 15. Der Verweis auf PDF-Seite 15, das Wiederfinden des Fahrzeugs werde \"in Kapitel 2.6 erklärt\", ist damit endgültig als falsch belegt (2.6 ist die Positionsabfrage mit Smartphone). Das deutsche Inhaltsverzeichnis (PDF-Seite 2) führt 2.8 korrekt als \"Fahrzeug wiederfinden\" mit Seite 15.",
+        "Die Bedingung \"bei einem Alarm und aktiver Lichtmaschine\" für die permanente Positionsabfrage steht nur hier. Abschnitt 2.1 (PDF-Seite 12) beschreibt die Diebstahlmeldung ohne diese Einschränkung; was bei stehendem Motor gilt - also im typischen Diebstahlfall durch Abschleppen -, bleibt offen.",
+        "\"Die in der SMS enthaltene Uhrzeit in UTC entspricht immer der Zeit, der zuletzt empfangenen Position.\" - falsches Komma zwischen \"Zeit\" und \"der zuletzt empfangenen Position\".",
+        "\"ohne GPS Empfang\" ohne Bindestrich gegen \"des GPS-Empfanges\" mit Bindestrich im selben Absatz.",
+        "\"(Smart Phone)\" in der Bildunterschrift getrennt geschrieben, gegen \"Smartphone\" und \"Smartphonenutzer\" im Fließtext derselben Seite.",
+        "Die Karten-Bildschirmfotos zeigen als Beispieladresse eine Kieler Straßenadresse, das Impressum auf PDF-Seite 72 nennt als Herstelleradresse eine Anschrift in Eckernförde - das Beispiel zeigt offenbar einen früheren oder anderen Firmenstandort.",
+        "\"die einen anklickbaren Link enthält um die Darstellung ... zu vereinfachen\" - fehlendes Komma vor \"um\"."
+      ],
+      "terminology_findings": [
+        "\"Smart Phone\" (Bildunterschrift) als dritte Schreibweise neben \"Smartphone\" und \"Smartphonenutzer\"/\"Smartphone Nutzer\".",
+        "\"Kartenprogramme und Navigationsgeräte\" hier; PDF-Seite 13 schreibt \"Kartenansicht\", PDF-Seite 15 \"Kartenprogramm\".",
+        "\"GPS Empfang\" und \"GPS-Empfanges\" in zwei Schreibweisen auf derselben Seite."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Die Abschnittsnummer 2.8 und die aufgedruckte Seite 15 sind im Seitenbild bestätigt; damit ist der in DSC-055 offen gebliebene Punkt geschlossen. Koordinaten und Adressen aus den Bildschirmfotos wurden bewusst nicht in den Record übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 18,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1712,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1430,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 16\", letzte Inhaltsseite des deutschen Teils. Vier Abschnitte. 3.1 \"Technische Daten\": neun Zeilen als zweispaltige Liste - Spannungsversorgung 9-30 V, Stromaufnahme Netzsuche ca. 37mA, Stromaufnahme Normalbetrieb ca. 21mA, Sendefrequenz 900/1800/850/1900Mhz, Anzahl Zielrufnummern 10, Schnittstellen NMEA (Eingang GPS), Ausgänge 2 x 12V/500mA, Temperaturbereich -10°C bis +80°C, SIM Format Micro-SIM. 3.2 \"Konformität / Richtlinien\": CE-Zeichen, Konformitätserklärung der Thitronik GmbH nach Richtlinie 1999/5/EG, Downloadlink auf thitronik-automotive.de. 3.3 \"Entsorgungshinweise\": durchgestrichene Mülltonne und Recyclingsymbol, Gerät nicht in den Hausmüll, Verpackung zum Wertstoffrecycling. 3.4 \"Technische Unterstützung\": erst Fachhändler, dann Website, dann telefonischer Support montags bis freitags 9.00-16.00 Uhr unter der genannten Kieler Rufnummer; abschließend ein Feld \"SN :\" zum Eintragen der eigenen Seriennummer.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 16",
+        "3.1 Technische Daten",
+        "3.2 Konformität / Richtlinien",
+        "3.3 Entsorgungshinweise",
+        "3.4 Technische Unterstützung"
+      ],
+      "technical_values": [
+        {
+          "value": "Spannungsversorgung 9-30 V",
+          "context": "Stimmt mit der Fassung ab SN-045 überein (dort 9-30 V, deutsche Seite 25)",
+          "safety_critical": true
+        },
+        {
+          "value": "Stromaufnahme Netzsuche ca. 37mA",
+          "context": "Im Original ohne Leerzeichen vor der Einheit und als einzige Zeile der Liste ohne Doppelpunkt nach der Bezeichnung (bei 400 dpi bestätigt). Stimmt mit der Fassung ab SN-045 überein (ca. 37 mA)",
+          "safety_critical": true
+        },
+        {
+          "value": "Stromaufnahme Normalbetrieb ca. 21mA",
+          "context": "Fester Wert. Die Fassung ab SN-045 nennt deutsch und französisch die Spanne ca. 16-21 mA; nur die englische SN-045-Fassung nennt wie hier ca. 21mA - der in DSC-020 dokumentierte Ausreißer entspricht wörtlich dem Wert dieser älteren Fassung (DSC-069)",
+          "safety_critical": true
+        },
+        {
+          "value": "Sendefrequenz 900/1800/850/1900Mhz",
+          "context": "Einheit im Original als \"Mhz\" statt MHz; Reihenfolge der Bänder 900/1800/850/1900 (europäische vor amerikanischen). GSM-Bänder, im Dokument ohne Technologieangabe",
+          "safety_critical": false
+        },
+        {
+          "value": "Anzahl Zielrufnummern: 10",
+          "context": "Deckt sich mit Abschnitt 1.8 (bis zu zehn Zielrufnummern) und mit der Fassung ab SN-045",
+          "safety_critical": false
+        },
+        {
+          "value": "Ausgänge 2 x 12V/500mA",
+          "context": "Deckt sich mit PDF-Seite 6 (Transistorausgänge, Relaispflicht über 500 mA) und mit der Fassung ab SN-045",
+          "safety_critical": true
+        },
+        {
+          "value": "Temperaturbereich -10°C bis +80°C",
+          "context": "Stimmt mit der Fassung ab SN-045 überein",
+          "safety_critical": true
+        },
+        {
+          "value": "SIM Format: Micro-SIM",
+          "context": "Die Fassung ab SN-045 nennt Nano-SIM - der Wert unterscheidet sich zwischen den Generationen (DSC-069). Für Nutzer beim SIM-Tausch unmittelbar relevant",
+          "safety_critical": true
+        },
+        {
+          "value": "Konformität nach Richtlinie 1999/5/EG",
+          "context": "R&TTE-Richtlinie; die Fassung ab SN-045 erklärt die Konformität nach Richtlinie 2014/53/EU, die die 1999/5/EG abgelöst hat. Zeittypisch für das Dokument, aber als Generationsunterschied festzuhalten (DSC-069)",
+          "safety_critical": false
+        },
+        {
+          "value": "Telefonischer Support montags bis freitags 9.00-16.00 Uhr, Rufnummer mit Kieler Vorwahl 0431",
+          "context": "Historische Supportangabe des Dokuments samt Domain thitronik-automotive.de; die heutige Kontaktangabe des Piloten stammt ausschließlich aus 14-support.json. Rufnummer hier nicht als aktuelle Kontaktangabe übernehmen",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "CE-Zeichen als Grafik neben dem Konformitätstext",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; die Zeichenfolge \"CE\" kommt in der Textebene nicht vor"
+        },
+        {
+          "description": "Symbol der durchgestrichenen Mülltonne mit Balken (WEEE) und Recyclingsymbol mit \"R\"-Vermerk neben den Entsorgungshinweisen",
+          "has_text_equivalent": false,
+          "relies_on": "die Bedeutung ergibt sich nur aus dem nebenstehenden Text; die Symbole selbst fehlen in der Textebene"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die technischen Daten sind keine Tabelle, sondern eine zweispaltige Tab-Liste ohne Kopfzeile; die Zuordnung von Bezeichnung und Wert entsteht nur über die horizontale Position. In der Textebene stehen Bezeichnung und Wert zeilenweise untereinander, dort bleibt die Zuordnung erhalten.",
+        "Die Zeile \"Stromaufnahme Netzsuche\" ist die einzige der neun Zeilen ohne Doppelpunkt (bei 400 dpi bestätigt) - die einheitliche Struktur, an der sich eine nicht-visuelle Nutzung orientieren könnte, bricht in der zweiten Zeile.",
+        "Der Downloadlink zur Konformitätserklärung steht als bloßer Text; die maschinelle Prüfung weist für die Seite keine Verknüpfung aus. Er verwendet http statt https und die Domain thitronik-automotive.de, nicht die heutige thitronik.de.",
+        "Das CE-Zeichen existiert nur als Grafik ohne Textentsprechung; wer die Seite vorgelesen bekommt, erfährt nicht, dass das Produkt die CE-Kennzeichnung trägt - der nebenstehende Satz nennt die Richtlinie, nicht das Zeichen.",
+        "Das Feld \"SN :\" zum Eintragen der Seriennummer ist ein reines Papierformular ohne Beschriftung, wozu die Angabe dient - die Erklärung steht im Absatz darüber und ist mit dem Feld nur räumlich verbunden.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 16\", tatsächlich PDF-Seite 18 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Generationsunterschiede in den technischen Daten (DSC-069): SIM Format Micro-SIM gegen Nano-SIM ab SN-045; Stromaufnahme Normalbetrieb fest ca. 21mA gegen die Spanne ca. 16-21 mA ab SN-045; Konformität nach 1999/5/EG gegen 2014/53/EU ab SN-045. Spannungsversorgung, Netzsuche, Ausgänge, Temperaturbereich und Zielrufnummernzahl stimmen überein.",
+        "Der Wert \"ca. 21mA\" entspricht wörtlich der englischen SN-045-Fassung (\"approx. 21mA\"), die in DSC-020 als Ausreißer gegenüber DE/FR (\"ca. 16-21 mA\") dokumentiert ist. Das stützt die Lesart, dass die englische SN-045-Tabelle den Wert der älteren Generation unverändert fortschreibt.",
+        "\"Mhz\" statt \"MHz\" in der Sendefrequenz-Zeile.",
+        "\"Wertstoffrecyling\" statt \"Wertstoffrecycling\".",
+        "\"Bei Ausserbetriebnahme\" mit ss, während das Dokument sonst vorreformiert mit ß schreibt (\"muß\", \"Anschluß\"); dieselbe Inkonsistenz wie \"ausser\" auf PDF-Seite 15.",
+        "\"Montags bis Freitags\" großgeschrieben statt \"montags bis freitags\".",
+        "\"gezielt weiter helfen\" getrennt statt \"weiterhelfen\".",
+        "\"SN :\" mit Leerzeichen vor dem Doppelpunkt.",
+        "Die Supportkette nennt Website und Rufnummer der Domain thitronik-automotive.de; das Impressum auf PDF-Seite 72 nennt www.thitronik.de - zwei Domains in einem Dokument."
+      ],
+      "terminology_findings": [
+        "\"SIM Format\" ohne Bindestrich - neben \"SIM-Karte\" (S. 8), \"SIM Karte\" (S. 11), \"Simkarte\" (S. 12) die vierte Schreibvariante der SIM-Begriffe im Dokument.",
+        "\"Micro-SIM\" hier mit Bindestrich korrekt; PDF-Seite 8 schreibt \"(Micro -SIM Format)\" mit versetztem Leerzeichen.",
+        "\"Thitronik GmbH\" im Konformitätstext in Gemischtschreibung; die Projektschreibweise THITRONIK betrifft die Marke, der Firmenname bleibt als Zitat unverändert."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi; die Zeilen der technischen Daten bei 400 dpi nachgerendert (fehlender Doppelpunkt, \"Mhz\", Leerzeichen vor Einheiten). Alle neun Werte wurden gegen die bereits erfassten Werte der Generation ab SN-045 (DOC-IBA-SN045, deutsche Seite 25, englische Seite 49, französische Seite 76) gehalten; Abweichungen in DSC-069. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 19,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 42,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 32,
+      "content_type": "notizen",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 17\", letzte Seite des deutschen Teils. Notizseite: unter der Kopfzeile ein seitenfüllender, abgerundeter Rahmen mit der fett gesetzten Beschriftung \"Notizen\" oben links, sonst leer. Die 32 Zeichen der Textebene sind Kopfzeile und das Wort \"Notizen\". Kein Abschluss- oder Übergangshinweis; die nächste PDF-Seite beginnt unvermittelt den englischen Teil.",
+      "headings": ["Handbuch Pro-finder", "Seite 17", "Notizen"],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Der deutsche Teil endet ohne jeden Hinweis darauf, dass ab der nächsten Seite ein anderssprachiger Teil beginnt. Wer das Dokument linear liest oder vorgelesen bekommt, wechselt ohne Ankündigung von einer deutschen Notizseite in ein englisches Inhaltsverzeichnis.",
+        "Der Notizrahmen ist ein reines Papierformular ohne Funktion im digitalen Dokument.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 17\", tatsächlich PDF-Seite 19 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Das deutsche Inhaltsverzeichnis (PDF-Seite 2) führt die Notizseite nicht auf; es endet mit 3.4 auf der internen Seite 16. Die Seite existiert also außerhalb der eigenen Gliederung."
+      ],
+      "terminology_findings": [],
+      "next_action": "keine Inhalte zu extrahieren; Seite bleibt dokumentiert",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Vollständig angesehen; bis auf Kopfzeile, Rahmen und das Wort \"Notizen\" leer. Sprache Deutsch."
     },
     {
       "page": 20,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1432,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1161,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["en"],
+      "summary": "Erste Seite des englischen Teils, ohne aufgedruckte Seitenzahl (Kopfzeile nur \"Pro-finder Manual\"). Englisches Inhaltsverzeichnis \"Contents\" mit den Spaltenköpfen \"Chapter\", \"Page\", \"Contents\": Kapitel 1 \"Installation\" (1.1 bis 1.10, interne Seiten 1 bis 9), Kapitel 2 \"Operation of the module\" (2.1 bis 2.8, interne Seiten 10 bis 15), Kapitel 3 \"Miscellaneous\" (3.1 bis 3.4, interne Seite 16). Darunter der \"Disclaimer:\" mit zwei Absätzen: Pro-finder kann einen Einbruch nur melden, nicht verhindern; Thitronik übernimmt keine Haftung für entwendete Wertgegenstände und/oder Fahrzeuge oder Schäden durch Einbruch oder unsachgemäße Handhabung. Der englische Teil hat keine eigene Titelseite; er beginnt unmittelbar mit diesem Verzeichnis. Interne Seitenzählung des englischen Teils: aufgedruckte Seite = PDF-Seite minus 20.",
+      "headings": [
+        "Pro-finder Manual",
+        "Contents",
+        "1 Installation",
+        "2 Operation of the module",
+        "3 Miscellaneous",
+        "Disclaimer:"
+      ],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Dreispaltiges Inhaltsverzeichnis (Chapter, Page, Contents) mit 22 Einträgen; als Tab-Layout gesetzt, nicht als Tabelle ausgezeichnet",
+          "columns": ["Chapter", "Page", "Contents"]
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Der Sprachwechsel von Deutsch nach Englisch wird nirgends angekündigt oder ausgezeichnet; das Dokument trägt keine Tags und keine Sprachauszeichnung, ein Screenreader liest den englischen Teil mit deutscher Sprachausgabe weiter.",
+        "Mit dem englischen Teil beginnt die aufgedruckte Seitenzählung erneut bei 1. Im selben PDF existieren damit \"Seite 15\" (deutsch, PDF-Seite 17) und \"Page 15\" (englisch, PDF-Seite 35) nebeneinander; Zitate und interne Verweise sind nur mit Sprachteil und Versatz (+2 deutsch, +20 englisch) eindeutig.",
+        "Das Inhaltsverzeichnis ist ein Tab-Layout ohne Tabellenauszeichnung und ohne Verknüpfungen zu den Zielseiten.",
+        "Diese Seite ist die einzige Inhaltsseite des Dokuments ohne aufgedruckte Seitenzahl in der Kopfzeile - das deutsche Verzeichnis (PDF-Seite 2) teilt diese Eigenschaft.",
+        "Der Disclaimer ist nur durch das Wort \"Disclaimer:\" eingeleitet, ohne strukturelle Auszeichnung als rechtlich bedeutsamer Hinweis."
+      ],
+      "discrepancies": [
+        "Der Eintrag 2.4 lautet \"Installation instructions\". Das deutsche Inhaltsverzeichnis führt 2.4 als \"Geofencing\" (im Seitenbild von PDF-Seite 2 bestätigt), und die deutsche Abschnittsüberschrift auf PDF-Seite 15 lautet \"2.4 Geofencing\". Auch die Textebene des englischen Teils behandelt in 2.4 (PDF-Seite 33) Geofencing. Der englische Verzeichniseintrag benennt den Abschnitt falsch (DSC-068); die englische Abschnittsüberschrift auf PDF-Seite 33 ist noch im Seitenbild zu bestätigen.",
+        "Das Verzeichnis nennt 1.8 und 1.9 \"target phone numbers\", die Abschnittsüberschrift auf PDF-Seite 26 und die Tabellenzeile E auf PDF-Seite 23 schreiben \"destination phone numbers\" - zwei Benennungen für die Zielrufnummern innerhalb des englischen Teils (DSC-068).",
+        "Der Eintrag 1.7 lautet \"Connecting the GPS receiver (optional)\", die Abschnittsüberschrift auf den PDF-Seiten 24 und 25 \"Connection of the GPS receiver\" ohne den Zusatz; bei 1.6 steht im Verzeichnis \"Installation of the GPS receiver (optional)\" gegen die Überschrift \"Installing the GPS receiver (optional)\" (DSC-068).",
+        "\"unauthorised use\" im Disclaimer (britisch) gegen \"unauthorized access\" auf PDF-Seite 21 (amerikanisch) - gemischte Rechtschreibvarianten im selben Teil (DSC-070).",
+        "Der Disclaimer entspricht inhaltlich dem deutschen \"Haftungsausschluß\" auf PDF-Seite 2; die deutsche Fassung nennt zusätzlich \"bzw. Installation\", die englische nur \"improper handling of the device\" - die englische Haftungsklausel ist enger formuliert als die deutsche."
+      ],
+      "terminology_findings": [
+        "\"Operation of the module\" für deutsch \"Handhabung des Moduls\".",
+        "\"target phone numbers\" gegen \"destination phone numbers\" - beide für \"Zielrufnummern\".",
+        "\"GPS receiver\" durchgehend für die deutsche \"GPS-Antenne\" - der englische Teil benennt das Bauteil als Empfänger, der deutsche als Antenne."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi; die Zeile 2.4 bei 400 dpi nachgerendert und mit dem ebenfalls nachgerenderten deutschen Verzeichnis (PDF-Seite 2, 300 dpi) verglichen. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 21,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1296,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1042,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page1\" (in der Kopfzeile ohne Leerzeichen). Englisches Gegenstück zu PDF-Seite 3. Einleitungssatz \"Please read the following instructions carefully to avoid faulty operation.\" zwischen zwei grauen Warndreiecken. Abschnitt \"1.1 Scope of delivery\" mit demselben Produktfoto wie im deutschen Teil, Bildmarken 1 bis 7 und der Legende \"1 Pro-finder / 2 Antenna / 3 Cable assembly / 4 Fuse holder / 5 Blade-type fuse 3 A / 6 Mounting screws / 7 Connection cable WiPro III / \\\"all in one\\\"\". Abschnitt \"1.2 Selecting the installation location\": gegen unbefugten Zugriff gesicherter, aber für Servicearbeiten (etwa Kartentausch) zugänglicher Ort im Fahrzeuginneren; nie im Motorraum; Geräteoberseite nach oben mit \"clear view\" zum Satelliten, Kunststoff, Glas und Holz stören nicht; bei externem GPS-Empfänger maximal 2 m Kabellänge zum GSM-Modul und freie Sicht, Montage unter Kunststoffabdeckungen des Armaturenbretts möglich.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page1",
+        "1.1 Scope of delivery",
+        "1.2 Selecting the installation location"
+      ],
+      "technical_values": [
+        {
+          "value": "Blade-type fuse 3 A",
+          "context": "Deckt sich mit der deutschen Legende \"Flachsicherung 3A\" (PDF-Seite 3); englisch mit, deutsch ohne Leerzeichen vor der Einheit",
+          "safety_critical": true
+        },
+        {
+          "value": "Kabellänge zwischen GSM-Modul und GPS-Empfänger maximal 2 m",
+          "context": "Deckt sich mit der deutschen Fassung (PDF-Seite 3: 2m). \"the GPS receiver must not exceed 2 m\"",
+          "safety_critical": true
+        },
+        {
+          "value": "Montage nie im Motorraum, Geräteoberseite nach oben, freie Sicht zum Satelliten",
+          "context": "Wortgleiche Anforderungen wie im deutschen Teil; \"clear view\" dreimal in Anführungszeichen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Produktfoto mit Antenne, Kabelbaum, Sicherungshalter, Flachsicherung, Befestigungsschrauben und Anschlusskabel, beschriftet mit den fett gesetzten Bildmarken 1 bis 7",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung der Legende zu den Teilen entsteht nur über die räumliche Position der Ziffern im Foto; die Ziffern der Legende stehen in der Textebene, ihre Position im Bild nicht"
+        }
+      ],
+      "warnings_found": [
+        "\"Please read the following instructions carefully to avoid faulty operation.\" - zwischen zwei grauen Warndreiecken, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die Kopfzeile lautet \"Page1\" ohne Leerzeichen - auf allen übrigen englischen Seiten \"Page 2\" bis \"Page 6\" mit Leerzeichen. Der Fehler ist zugleich der einzige Unterschied zur deutschen Kopfzeilenstruktur (\"Seite 1\").",
+        "Die Zuordnung der sieben Legendeneinträge zu den Bildteilen trägt allein die räumliche Lage der Ziffern im Foto; die beiden Warndreiecke haben keine Textentsprechung.",
+        "\"clear view\" steht dreimal in Anführungszeichen - eine technische Anforderung wird typografisch wie ein umgangssprachlicher Ausdruck behandelt; für maschinelle Auswertung und Übersetzung ist nicht erkennbar, dass es ein definierter Begriff ist.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page1\", tatsächlich PDF-Seite 21 (Versatz +20 im englischen Teil)."
+      ],
+      "discrepancies": [
+        "\"secured against unauthorized access\" (amerikanisch) gegen \"unauthorised use\" im Disclaimer auf PDF-Seite 20 (britisch) - gemischte Rechtschreibvarianten (DSC-070).",
+        "Die englische Legende schreibt \"Blade-type fuse 3 A\" mit Leerzeichen, die deutsche \"Flachsicherung 3A\" ohne; ebenso \"2 m\" englisch gegen \"2m\" deutsch. Die Werte selbst stimmen überein.",
+        "\"such as replacing the card\" nennt als Servicearbeit nur den Kartentausch; die deutsche Fassung (PDF-Seite 3) spricht allgemein von Servicezugänglichkeit. Inhaltlich deckungsgleich, die englische Fassung ist konkreter."
+      ],
+      "terminology_findings": [
+        "\"Antenna\" in der Legende (Position 2) für die Stabantenne des GSM-Teils, \"GPS receiver\" im Fließtext für die deutsche \"GPS-Antenne\" - der englische Teil unterscheidet die beiden Antennen terminologisch sauberer als der deutsche.",
+        "\"Cable assembly\" für \"Kabelbaum\".",
+        "\"Blade-type fuse\" für \"Flachsicherung\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Foto und Bildmarken mit dem deutschen Gegenstück (PDF-Seite 3) verglichen: identisches Foto, identische Marken, übersetzte Legende. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 22,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1445,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1171,
+      "content_type": "abbildung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 2\". Englisches Gegenstück zu PDF-Seite 4. Obere Seitenhälfte: Abschnitt \"1.3 Connections, displays and control elements\" mit dem beschrifteten Foto der Geräteschmalseite. Beschriftungen wörtlich: \"Connection – external GPS receiver (option)\", \"Not used\", \"Connection WiPro III / \\\"all in one\\\"\", \"Operating mode switch\", \"Status LED\", \"Pin 1 ground (GND)\", \"Pin 2 measurement input (U2)\", \"Pin 3 measurement input (U3)\", \"Pin 4 measurement input (U4)\", \"Pin 5 measurement input (U5)\", \"Pin 6 output B\", \"Pin 7 output A\", \"Pin 8 operating voltage (U1) +12 V\". Untere Seitenhälfte: Abschnitt \"1.4 Selecting the operating mode\" mit dem Hinweis, dass die Ausgänge in allen Betriebsarten nach 2.7 schaltbar sind, und den ersten vier unterstrichenen Zwischentiteln: \"Call triggers status report:\" (Anruf wird beendet, Statusbericht an den Anrufer, nur autorisierte Nummern, mit Verweis \"(see 2.1, Fig. 1)\"), \"Automatic status reports:\" (Berichte in den unten gelisteten Intervallen), \"Status report contains U1, U2, U3, U4, U5:\" (Betriebsspannung und Messeingänge je nach Schalterstellung), \"Geofencing switchable via pin 3:\" (ereignisgesteuert über Spannung an Pin 3, z. B. Zündung oder Innenlicht).",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 2",
+        "1.3 Connections, displays and control elements",
+        "1.4 Selecting the operating mode",
+        "Call triggers status report:",
+        "Automatic status reports:",
+        "Status report contains U1, U2, U3, U4, U5:",
+        "Geofencing switchable via pin 3:"
+      ],
+      "technical_values": [
+        {
+          "value": "Anschlussbelegung: Pin 1 Masse (GND), Pin 2-5 Messeingänge (U2-U5), Pin 6 Ausgang B, Pin 7 Ausgang A, Pin 8 Betriebsspannung (U1) +12 V",
+          "context": "Deckt sich mit der deutschen Belegung auf PDF-Seite 4. Grundlage aller Anschluss- und Ausgangsaufgaben der Generation bis SN-044",
+          "safety_critical": true
+        },
+        {
+          "value": "Geofencing über Pin 3 ereignisgesteuert schaltbar, z. B. über Zündung oder Innenbeleuchtung",
+          "context": "\"If the voltages cited in the table are applied on pin 3\" - verweist auf die Schaltschwellen der Tabelle auf PDF-Seite 23 (>6 V / <5 V)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto der Geräteschmalseite mit Drehcodierschalter, Westernbuchse, nicht belegter Rundbuchse, GPS-Anschluss, zehnpoligem Steckverbinder und Status-LED. Die Pinbeschriftungen sind über farbige Linien mit den Steckerpositionen verbunden (blau, grün, gelb, rot, schwarz, orange u. a.), die übrigen Beschriftungen über graue Linien; \"Not used\" ist hellgrau gesetzt",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung von Beschriftung zu Position läuft ausschließlich über die farbigen Verbindungslinien; die Linienfarben entsprechen dabei sichtbar den Aderfarben des Kabelbaums, ohne dass diese Farben im Text benannt würden"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Anders als im deutschen Gegenstück (PDF-Seite 4) stehen die Pinbeschriftungen hier vollständig in der Textebene - die Zuordnung zur Steckerposition bleibt aber auch hier ausschließlich visuell über die farbigen Verbindungslinien. Die Aderfarben, die die Linienfarben offenbar abbilden, werden weiterhin an keiner Stelle benannt.",
+        "\"Not used\" ist wie im deutschen Teil in hellem Grau gesetzt; der Status \"nicht belegt\" wird zusätzlich allein über die Textfarbe transportiert.",
+        "Die vier Zwischentitel sind nur durch Unterstreichung ausgezeichnet und ergeben keine Strukturebene; Unterstreichung ist von einer Verknüpfung nicht zu unterscheiden.",
+        "Der Verweis \"(see 2.1, Fig. 1)\" nummeriert eine Abbildung, die im Zielabschnitt voraussichtlich keine Nummer trägt - die Beispiel-SMS-Abbildungen des deutschen Teils (PDF-Seiten 12-13) sind unnummeriert. Beim Prüfen der englischen Seiten 30-31 zu bestätigen.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 2\", tatsächlich PDF-Seite 22 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "\"Connection – external GPS receiver (option)\" mit \"(option)\" gegen \"(optional)\" im Inhaltsverzeichnis - dieselbe Inkonsistenz wie im deutschen Teil, dort \"Anschluß externe GPS-Antenne (option)\" (DSC-068).",
+        "Der Verweis \"(see 2.1, Fig. 1)\" führt eine Abbildungsnummer ein, die es im deutschen Gegenstück nicht gibt; die deutsche Fassung von PDF-Seite 4 verweist ohne Nummer. Ob der englische Abschnitt 2.1 eine \"Fig. 1\" ausweist, ist auf den PDF-Seiten 30-31 zu prüfen.",
+        "\"authorised numbers only\" (britisch) auf derselben Seite wie \"unauthorized\" auf PDF-Seite 21 (amerikanisch) - gemischte Varianten (DSC-070).",
+        "Die englische Beschriftung nennt Pin 5 \"measurement input (U5)\" ohne das versetzte Leerzeichen des deutschen Originals (\"(U5 )\", PDF-Seite 4) - der deutsche Satzfehler wurde nicht übernommen."
+      ],
+      "terminology_findings": [
+        "\"Operating mode switch\" für \"Betriebsartenschalter\"; im deutschen Teil konkurriert dort zusätzlich \"Programmwahlschalter\" (PDF-Seite 12).",
+        "\"ground (GND)\" für \"Masse (GND)\".",
+        "\"external GPS receiver\" für \"externe GPS-Antenne\" - durchgehende Empfänger/Antenne-Divergenz zwischen den Sprachteilen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Beschriftungen wörtlich mit dem deutschen Gegenstück (PDF-Seite 4) verglichen; identisches Foto, identische Linienführung. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 23,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1666,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1259,
+      "content_type": "tabelle",
+      "languages": ["en"],
+      "summary": "Intern \"Page 3\". Englisches Gegenstück zu PDF-Seite 5. Fortsetzung von \"1.4 Selecting the operating mode\" mit zwei unterstrichenen Zwischentiteln: \"Call arms / disarms WiPro and triggers status report:\" (Anruf wird beendet, WiPro wird scharf bzw. unscharf geschaltet, danach Statusbericht an den Anrufer, nur autorisierte Nummern) und \"Help SMS with voltage on pin 3:\" (Spannung an Pin 3, etwa über einen Taster, löst eine Hilfe-SMS aus). Danach der Absatz \"Information: The modes 7 through D are intended for use without WiPro. A connection with Wipro is not possible with this. From Pro-finder SN 0686-010 a WiPro can also be connected in these modes.\" Untere Seitenhälfte: \"Table – operating modes\" mit 16 Zeilen für die Schalterstellungen 0 bis F und den Spalten Betriebsart, Anruf löst Statusbericht aus, Anruf schärft/entschärft WiPro, Intervall der automatischen Statusberichte, Statusbericht enthält U1-U5 (fünf Unterspalten), Geofencing über Pin 3 schaltbar, Hilfe-SMS bei Spannung an Pin 3.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 3",
+        "1.4 Selecting the operating mode",
+        "Call arms / disarms WiPro and triggers status report:",
+        "Help SMS with voltage on pin 3:",
+        "Table – operating modes"
+      ],
+      "technical_values": [
+        {
+          "value": "Ab Pro-finder SN 0686-010 kann auch in den Betriebsarten 7 bis D eine WiPro angeschlossen werden",
+          "context": "Bei 500 dpi bestätigt, führende Null erhalten. Wortgleich mit der deutschen Fassung (PDF-Seite 5); dieselbe dritte Seriennummerngrenze innerhalb der Generation bis SN-044",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart D: Intervall der automatischen Statusberichte 8 seconds (sobald Spannung anliegt und Pro-finder eingebucht ist)",
+          "context": "Bei 400 dpi bestätigt. Die deutsche Tabelle (PDF-Seite 5) nennt für dieselbe Betriebsart 8 Minuten (bei 300 dpi bestätigt) - Faktor 60 zwischen den Sprachfassungen (DSC-066). Welcher Wert stimmt, ist aus der Quelle nicht zu entscheiden",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart C: Intervall 90 seconds (sobald Spannung anliegt und Pro-finder eingebucht ist)",
+          "context": "Stimmt mit der deutschen Tabelle überein (90 Sekunden)",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart 8: Geofencing über Pin 3 \">6 V on / <5 V off\"; Betriebsart B: \">6 V off / <5 V on\"",
+          "context": "Invertierte Schaltlogik zwischen 8 und B, deckungsgleich mit der deutschen Tabelle; auch hier bleibt der Bereich zwischen 5 V und 6 V undefiniert",
+          "safety_critical": true
+        },
+        {
+          "value": "Intervalle der Betriebsarten 4 bis 7: 15 minutes, 60 minutes, 6 hours, 24 hours",
+          "context": "Deckungsgleich mit der deutschen Tabelle",
+          "safety_critical": false
+        },
+        {
+          "value": "Betriebsart E: Deleting the destination phone numbers (see 1.9); Betriebsart F: GPS diagnosis (see 1.7)",
+          "context": "Beide Verweise decken sich mit der deutschen Tabelle",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Betriebsartentabelle mit 16 Zeilen (0-9, A-F) und acht Spalten, davon eine mit fünf Unterspalten (U1-U5) unter dem gemeinsamen Kopf \"Status report contains the following voltages\"; die Zeilen C-F verbinden mehrere Spalten zu einer Zelle",
+          "columns": [
+            "Operating mode",
+            "Call triggers status report",
+            "Call arms / disarms WiPro",
+            "Interval of the automatic status reports",
+            "U1",
+            "U2",
+            "U3",
+            "U4",
+            "U5",
+            "Geofencing switchable via pin 3",
+            "Help SMS with voltage on pin 3"
+          ]
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Tabelle hat einen zweizeiligen, gruppierten Kopf (fünf Unterspalten unter einem gemeinsamen Obertitel) und verbundene Zellen in den Zeilen C bis F; ohne Tags ist die Zuordnung von Zelle zu Spaltenkopf nicht-visuell nicht nachvollziehbar.",
+        "Im Spaltenkopf \"Help SMS with voltage on pin 3\" steht in der Textebene ein weiches Trennzeichen mitten im Wort (\"­voltage\"); beim Kopieren oder Vorlesen zerfällt das Wort.",
+        "Die Betriebsarten 0 und 9 sind in keiner Tabellenspalte unterscheidbar - wie in der deutschen Tabelle liefern beide nur \"Call triggers status report: yes\". Worin sich die beiden Stellungen unterscheiden, sagt auch der englische Teil nicht.",
+        "Die beiden Zwischentitel sind nur durch Unterstreichung ausgezeichnet.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 3\", tatsächlich PDF-Seite 23 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Betriebsart D: \"8 seconds\" gegen \"8 Minuten\" in der deutschen Tabelle (PDF-Seite 5) - derselbe Wert unterscheidet sich zwischen den Sprachfassungen um den Faktor 60. Beide Angaben sind hochauflösend nachgerendert und zeichengenau gesichert. Betriebsart C stimmt dagegen überein (90 Sekunden/90 seconds). Sicherheitsrelevant: Die Betriebsarten C und D sind die Ortungsmodi mit dem dichtesten Meldeintervall (DSC-066, Rückfrage 16).",
+        "\"with Wipro\" mit kleinem p mitten im Information-Absatz, während derselbe Absatz zweimal \"WiPro\" schreibt (bei 500 dpi bestätigt; DSC-070).",
+        "Der Widerspruch des deutschen Information-Absatzes ist wörtlich mitübersetzt: \"A connection with Wipro is not possible with this\" steht unmittelbar vor \"From Pro-finder SN 0686-010 a WiPro can also be connected in these modes\" - Verbot und Erlaubnis in aufeinanderfolgenden Sätzen, wie im deutschen Original (PDF-Seite 5).",
+        "Die Tabellenzeile E schreibt \"destination phone numbers\", das Inhaltsverzeichnis \"target phone numbers\" (DSC-068)."
+      ],
+      "terminology_findings": [
+        "\"arms / disarms\" für \"aktiviert/deaktiviert\" bzw. \"schärft/entschärft\"; der deutsche Teil wechselt zwischen \"aktivieren/deaktivieren\" (PDF-Seite 5) und \"scharf/unscharf\" (PDF-Seite 14).",
+        "\"operating mode\" durchgehend für \"Betriebsart\".",
+        "\"GPS diagnosis\" für \"GPS Diagnose\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi; der Information-Absatz mit der Seriennummerngrenze bei 500 dpi, die Tabellenzeilen C und D bei 400 dpi nachgerendert. Zum Vergleich wurde die deutsche Tabelle (PDF-Seite 5) bei 300 dpi erneut gerendert; der Widerspruch 8 Minuten gegen 8 seconds ist damit auf beiden Seiten bildlich gesichert. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 24,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2189,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1763,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 4\". Englisches Gegenstück zu PDF-Seite 6. Drei Abschnitte. \"1.5 Connecting the module\": Pin 1 (schwarz) und Pin 8 (rot) polrichtig an 12 VDC, Pluskabel mit der beiliegenden Sicherung absichern; Pins 2-5 sind Messeingänge (0-30 V), Geofencing je nach Betriebsart über Pin 3; bei Bedarf WiPro III oder WiPro \"all in one\" über das beiliegende Kabel verbinden, in rot \"!!! WiPro \\\"all in one\\\" and Pro-finder must be connected to the same battery !!!\"; Pin 6 und Pin 7 sind Transistorausgänge mit 12 V und 500 mA Belastbarkeit, darüber Relais mit Freilaufdiode, Überlast führt zum Garantieverlust; drei Schaltarten der Ausgänge (dauerhaft bis Widerruf, 1 Sekunde Impuls, frei wählbare Zeit); in rot der Verweis auf Kapitel 2.7. \"1.6 Installing the GPS receiver (optional)\": Montage mit Klebepad an sabotagegeschützter Stelle, Klebeseite (Empfangsseite) nach oben, Fläche sauber, trocken, fettfrei, unter 15 °C vorwärmen, möglichst waagerecht. \"1.7 Connection of the GPS receiver\": Pro-finder spannungsfrei schalten, Hauptkabelbaum trennen, GPS-Stecker in den vierpoligen Anschluss, Kabelbaum wieder anschließen; damit der Empfänger Satellitendaten speichert, muss die Betriebsspannung nach der Installation mindestens 5 Minuten über 13,5 V liegen (Fahrzeug starten), sonst ist die exakte Positionsbestimmung nicht sichergestellt; GPS-Empfang sicherstellen (Hallen und Überdachungen verlassen). Rechts ein Foto des GPS-Empfängers mit Klebepad und Stecker, verbunden über zwei rote Linien.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 4",
+        "1.5 Connecting the module",
+        "1.6 Installing the GPS receiver (optional)",
+        "1.7 Connection of the GPS receiver"
+      ],
+      "technical_values": [
+        {
+          "value": "Pin 1 schwarz, Pin 8 rot, Versorgung 12 VDC, Pluskabel über die beiliegende Sicherung",
+          "context": "Deckt sich mit der deutschen Fassung (PDF-Seite 6). Die einzigen im Text benannten Aderfarben des Kabelbaums - wie im deutschen Teil",
+          "safety_critical": true
+        },
+        {
+          "value": "Messeingänge Pins 2-5 für 0-30 V",
+          "context": "Deckt sich mit der deutschen Fassung",
+          "safety_critical": true
+        },
+        {
+          "value": "Ausgänge Pin 6 und Pin 7: 12 V, maximal 500 mA; darüber Relais mit Freilaufdiode (\"recovery diode\"), Überlast führt zum Garantieverlust",
+          "context": "Deckt sich mit der deutschen Fassung und mit den technischen Daten (PDF-Seite 18: 2 x 12V/500mA)",
+          "safety_critical": true
+        },
+        {
+          "value": "Nach der Installation muss die Betriebsspannung mindestens 5 Minuten über 13,5 V liegen, damit der GPS-Empfänger Satellitendaten empfangen und speichern kann",
+          "context": "Deckt sich mit der deutschen Fassung; der Wert steht auf der Liste der technisch freizugebenden Größen. \"To achieve this, start the vehicle.\"",
+          "safety_critical": true
+        },
+        {
+          "value": "Unter 15 °C Kontaktfläche des Klebepads vorwärmen",
+          "context": "Deckt sich mit der deutschen Fassung",
+          "safety_critical": false
+        },
+        {
+          "value": "WiPro \"all in one\" und Pro-finder müssen an derselben Batterie angeschlossen sein",
+          "context": "Roter Warnhinweis mit dreifachen Ausrufezeichen, ohne Signalwort - wie im deutschen Original",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des optionalen GPS-Empfängers mit weißem Klebepad und vierpoligem Stecker; zwei rote Linien verbinden die Fließtexte von 1.6 und 1.7 mit Pad und Stecker",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung der Texte zu den Bildteilen läuft ausschließlich über die roten Linien; das Foto hat keine Beschriftung und keinen Alternativtext"
+        },
+        {
+          "description": "Zwei Zeigehand-Piktogramme vor den Handlungsabsätzen von 1.5",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"!!! WiPro \\\"all in one\\\" and Pro-finder must be connected to the same battery !!!\" - rot, dreifache Ausrufezeichen, ohne Signalwort",
+        "\"Overloads will void the warranty.\" - schwarz im Fließtext",
+        "\"Chapter 2.7 describes how to control the outputs via SMS\" - rot gesetzt, obwohl es ein bloßer Querverweis ist"
+      ],
+      "accessibility_issues": [
+        "Rot wird auf dieser Seite für zwei verschiedene Dinge verwendet: für die sicherheitsrelevante Batteriewarnung und für einen gewöhnlichen Querverweis auf Kapitel 2.7. Die Farbe trägt damit keine verlässliche Bedeutung; in der Textebene sind beide von normalem Text nicht zu unterscheiden - derselbe Befund wie im deutschen Teil.",
+        "Die roten Verbindungslinien zum Foto haben dieselbe Farbe wie die Warnung; Zuordnung von Text zu Bildteil nur über die Linien.",
+        "Die drei Schaltarten der Ausgänge stehen als Spiegelstrichliste mit einfachen Bindestrichen; keine Listenauszeichnung.",
+        "Die Warnung zur selben Batterie und der 13,5-V-Absatz stehen in der Textebene als gewöhnliche Absätze; die dreifachen Ausrufezeichen sind das einzige nicht-visuelle Signal.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 4\", tatsächlich PDF-Seite 24 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Die Abschnittsnummern wiederholen die Unstimmigkeit des deutschen Teils: 1.6 heißt \"Installing...\", 1.7 \"Connection of the GPS receiver\", und 1.7 wird auf PDF-Seite 25 unter derselben Überschrift fortgesetzt - im deutschen Teil trägt die Fortsetzung die abweichende Überschrift \"1.7 Anschluß der GPS-Antenne\" auf zwei Seiten (PDF-Seiten 6 und 7).",
+        "\"de-energised\" und \"cancelled\" (britisch) auf derselben Seite wie \"unauthorized\" (PDF-Seite 21, amerikanisch) - gemischte Varianten (DSC-070).",
+        "Alle technischen Werte der Seite (12 VDC, 0-30 V, 500 mA, Freilaufdiode, 13,5 V, 5 Minuten, 15 °C) stimmen mit der deutschen Fassung überein; ein Gegenstück zum Faktor-60-Widerspruch der Tabellenseite findet sich hier nicht."
+      ],
+      "terminology_findings": [
+        "\"recovery diode\" für \"Freilaufdiode\" - fachlich üblich wäre \"flyback diode\" oder \"freewheeling diode\"; \"recovery diode\" bezeichnet sonst eine Diodenbauart, nicht die Schutzbeschaltung.",
+        "\"main cable assembly\" für \"Hauptkabelbaum\"; auf PDF-Seite 21 heißt derselbe Kabelbaum in der Legende nur \"Cable assembly\".",
+        "\"de-energised\" für \"spannungsfrei\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Werte gegen die deutsche Fassung (PDF-Seite 6, bereits geprüft) gehalten; alle deckungsgleich. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 25,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1371,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1107,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 5\". Englisches Gegenstück zu PDF-Seite 7, Fortsetzung von \"1.7 Connection of the GPS receiver\". GPS-Diagnose: Betriebsartenschalter in Stellung F (GPS diagnosis), die Status-LED zeigt den GPS-Betriebszustand. Drei Zustände, jeweils mit einem farbigen Balken unter der Zustandszeile: \"LED is illuminated red:\" GPS nicht angeschlossen (Anschlussvorgang spannungsfrei wiederholen, sonst ist der Empfänger möglicherweise defekt; durchgehender roter Balken), \"LED flashes yellow:\" GPS-Daten werden empfangen, aber ohne gültige Position (blinkt die LED nach 5 Minuten noch, ist der Montageort ungeeignet oder das Fahrzeug steht z. B. unter einem Dach; gestrichelter gelber Balken), \"LED is illuminated green:\" GPS-Position okay (Schalter zurück in die Ausgangsstellung; leuchtet die LED dann rot, fehlt die SIM-Karte; weitere LED-Zustände in Kapitel 1.10; durchgehender grüner Balken). Abschließend der Absatz zu Reflexionen des GPS-Signals in Hallen und unter Überdachungen, die die Ortungsgenauigkeit erheblich beeinträchtigen und Diebstahlmeldungen ohne Fahrzeugbewegung auslösen können, mit der Empfehlung, die Geofence-Funktion dort zu deaktivieren - und der Anweisung, dazu eine SMS mit \"fence av\" an die Nummer des GSM-Moduls zu senden.",
+      "headings": ["Pro-finder Manual", "Page 5", "1.7 Connection of the GPS receiver"],
+      "technical_values": [
+        {
+          "value": "Betriebsartenschalter Stellung F = GPS diagnosis; LED rot = GPS nicht angeschlossen, LED blinkt gelb = Daten ohne gültige Position, LED grün = Position okay",
+          "context": "Deckt sich mit der deutschen Fassung (PDF-Seite 7). Nach Rückstellung des Schalters zeigt Rot eine fehlende SIM-Karte an",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt die LED nach 5 Minuten noch gelb, ist der Montageort ungeeignet oder das Fahrzeug überdacht abgestellt",
+          "context": "Die deutsche Fassung nennt nur den ungeeigneten Montageort; die englische ergänzt \"or the vehicle is parked under a roofed area, for example\"",
+          "safety_critical": false
+        },
+        {
+          "value": "SMS-Befehl dieser Seite, wörtlich: \"fence av\" zum Deaktivieren des Geofencings",
+          "context": "Bei 500 dpi zeichengenau gesichert. Die deutsche Fassung schreibt an gleicher Stelle \"fence aus\" (PDF-Seite 7), der englische Abschnitt 2.4 laut Textebene \"Fence on\"/\"Fence off\" (PDF-Seite 33, noch ungeprüft), der schwedische Teil an gleicher Stelle \"fence av\" (PDF-Seite 59, noch ungeprüft) - \"av\" ist das schwedische Wort für \"aus\". Ausdrücklich nur als Quellenzitat für BLK-005/DSC-067 festgehalten; nicht für den Content-Layer bestimmt",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei farbige Balken unter den drei LED-Zustandszeilen: durchgehend rot, gelb gestrichelt (acht Striche), durchgehend grün - eine grafische Nachbildung von Dauerleuchten und Blinken",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und Strichmuster; die Balken fehlen in der Textebene vollständig. Das Blinken ist immerhin zusätzlich zum Farbton über das Muster (gestrichelt gegen durchgehend) unterscheidbar - die einzige Stelle beider bisher geprüfter Sprachteile, an der ein LED-Verhalten nicht allein über Farbe dargestellt wird",
+          "has_text_equivalent_note": "die Zustände selbst stehen als Text (\"illuminated red\", \"flashes yellow\"), die Balken nicht"
+        },
+        {
+          "description": "Ein Pfeil-Piktogramm, ein Uhr-Piktogramm (bei den 5 Minuten) und zwei Zeigehand-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"theft alerts can be triggered although the vehicle has not been moved\" - schwarz im Fließtext, ohne Hervorhebung"
+      ],
+      "accessibility_issues": [
+        "Die drei LED-Zustände sind primär über Farbwörter und Farbbalken unterschieden; positiv: das Blinken ist über das Strichmuster des gelben Balkens auch ohne Farbwahrnehmung erkennbar, und die Zustände stehen vollständig als Text. Der gelbe Balken auf weißem Grund hat allerdings sehr geringen Kontrast.",
+        "Die Anweisung mit dem SMS-Befehl ist die einzige Handlungsanweisung der Seite und nur durch das Zeigehand-Piktogramm als solche gekennzeichnet; der Befehl selbst steht in Anführungszeichen im Fließtext.",
+        "Der Hinweis, dass Reflexionen Fehlalarme (Diebstahlmeldungen ohne Bewegung) auslösen können, steht ohne jede Hervorhebung im Fließtext.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 5\", tatsächlich PDF-Seite 25 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Der Geofencing-Ausschaltbefehl lautet hier \"fence av\" - das ist weder das deutsche \"fence aus\" (PDF-Seite 7) noch das englische \"Fence off\", das die Textebene des eigenen englischen Teils in Abschnitt 2.4 (PDF-Seite 33) verwendet, noch das \"FENCE OFF\" der Geräte-Hilfe-SMS (PDF-Seite 13), noch das \"fence off\" der englischen SN-045-Fassung (DSC-033). \"av\" ist das schwedische Wort für \"aus\", und der schwedische Teil dieses Dokuments verwendet laut Textebene an exakt gleicher Stelle denselben Befehl \"fence av\" (PDF-Seite 59). Der englische Teil widerspricht sich damit selbst, und die wahrscheinlichste Erklärung ist eine Vorlagenkontamination aus der schwedischen Fassung (DSC-067). Wer den Befehl wie gedruckt sendet, sendet mutmaßlich einen für das englischsprachige Gerät ungültigen Befehl - mit der Folge einer Hilfe-SMS statt der gewünschten Abschaltung, oder schlimmer: das Geofencing bleibt aktiv und liefert Fehlalarme, die der Nutzer gerade abstellen wollte.",
+        "Die englische Fassung ergänzt gegenüber der deutschen die zweite Ursache für dauerhaft gelbes Blinken (überdachtes Fahrzeug); die deutsche Fassung nennt nur den Montageort. Inhaltlich plausibel, aber ein Zusatz ohne deutsches Gegenstück.",
+        "\"disarming the geofence function\" verwendet das Verb \"disarm\", das sonst für das Entschärfen der WiPro steht (\"Call arms / disarms WiPro\", PDF-Seite 23) - zwei verschiedene Vorgänge teilen sich ein Verb."
+      ],
+      "terminology_findings": [
+        "\"geofence function\" hier gegen \"Geofencing\" auf den PDF-Seiten 22 und 23 - dieselbe Doppelform wie im deutschen Teil (\"Geofence Funktion\"/\"Geofencing\").",
+        "\"GPS diagnosis\" für \"GPS Diagnose\".",
+        "\"receiver\" durchgehend; die deutsche Parallelseite schreibt \"Antenne\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi; die Befehlszeile mit \"fence av\" bei 500 dpi zeichengenau nachgerendert, weil an ihr DSC-067 hängt. Die Parallelstellen (deutsch PDF-Seite 7 geprüft; englisch PDF-Seite 33 und schwedisch PDF-Seiten 59/67 nur Textebene, Seiten noch ungeprüft) sind im Record entsprechend gekennzeichnet. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 26,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1989,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1605,
+      "content_type": "warnhinweise",
+      "languages": ["en"],
+      "summary": "Intern \"Page 6\". Englisches Gegenstück zu PDF-Seite 8. Beginn von \"1.8 Programming the destination phone numbers\". Einleitung: Vor dem Programmieren muss eine gültige SIM-Karte (Micro-SIM) eines Mobilfunkanbieters eingelegt sein; der Satz endet ohne Punkt. Links ein rosa Kasten mit sechs Warndreiecken und sechs Vorgaben: PIN der Karte vor dem Einlegen auf 0000 ändern; PIN-Abfrage muss aktiviert sein; alle Rufumleitungen und die Mailbox deaktivieren; Komfortfunktionen der Karte deaktivieren (Rückruf bei besetzt, SMS-Erinnerungen etc.); beim Einlegen muss Pro-finder spannungsfrei sein; für Auslandsnutzung muss die Karte roamingfähig sein. Rechts ein Foto des geöffneten Geräts mit eingelegter SIM, verbunden über eine rote Linie mit der fett gesetzten Erwähnung der SIM-Karte im Einleitungssatz; darüber schwebt das gelbe ESD-Warnsymbol ohne jeden erklärenden Text. Untere Seitenhälfte, drei fett betitelte Absätze: \"SIM card used:\" (Karte eines Mobilfunkanbieters nötig, Empfehlung T-mobile oder Vodafone, andere Anbieter grundsätzlich geeignet; Prepaid ideal, da keine monatlichen Kosten; das aktuelle Guthaben wird mit jeder SMS übertragen; Karte so wählen, dass sie zum Aufladen nicht entnommen werden muss, sondern z. B. von einem anderen Mobiltelefon oder am Automaten aufladbar ist), \"Saving the number of the Pro-finder:\" (Nummer im Adressbuch unter einem Namen speichern, idealerweise ALARM, damit sie am Listenanfang steht; immer mit Landesvorwahl speichern, z. B. +44 für Großbritannien, um auch aus dem Ausland zugreifen zu können), \"Controlling by SMS or phone call:\" (jede vom Pro-finder gesendete SMS kostet je nach Netzbetreiber; Steuerung per SMS oder Anruf erzeugt immer eine Status-SMS).",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 6",
+        "1.8 Programming the destination phone numbers",
+        "SIM card used:",
+        "Saving the number of the Pro-finder:",
+        "Controlling by SMS or phone call:"
+      ],
+      "technical_values": [
+        {
+          "value": "Die PIN der verwendeten SIM-Karte muss vor dem Einlegen auf 0000 geändert werden, und die PIN-Abfrage muss aktiviert sein",
+          "context": "Wortgleiches Gegenstück zur deutschen Vorgabe (PDF-Seite 8). Das Vorgabenpaar - feste PIN und zugleich aktive Abfrage - steht damit in beiden Sprachteilen und ist kein deutscher Einzelfehler; die sicherheitskritische Rückfrage 15 bleibt bestehen (Nachtrag)",
+          "safety_critical": true
+        },
+        {
+          "value": "SIM-Format Micro-SIM",
+          "context": "Deckt sich mit den technischen Daten (PDF-Seite 18); die Generation ab SN-045 verwendet Nano-SIM (DSC-069)",
+          "safety_critical": false
+        },
+        {
+          "value": "Beim Einlegen der Karte muss Pro-finder spannungsfrei sein",
+          "context": "Deckt sich mit der deutschen Fassung",
+          "safety_critical": true
+        },
+        {
+          "value": "Rufumleitungen, Mailbox und Komfortfunktionen der Karte müssen deaktiviert sein; für Auslandsnutzung Roamingfähigkeit erforderlich",
+          "context": "Deckt sich mit der deutschen Fassung",
+          "safety_critical": true
+        },
+        {
+          "value": "Die Zielrufnummer immer mit Landesvorwahl speichern (Beispiel der englischen Fassung: +44 für Großbritannien)",
+          "context": "Das Beispiel ist auf das Vereinigte Königreich lokalisiert; die deutsche Fassung verwendet an entsprechender Stelle ein deutsches Beispiel. Reine Beispiel-Lokalisierung, kein Wertunterschied",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des geöffneten Geräts (Platine mit GPS-Modul, Antenne, weißem Steckverbinder) mit eingelegter SIM-Karte; eine rote Linie verbindet die fett gesetzte Erwähnung \"SIM card (Micro-SIM)\" im Einleitungssatz mit der SIM im Foto",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung läuft ausschließlich über die rote Linie; das Foto hat keine Beschriftung"
+        },
+        {
+          "description": "Gelbes ESD-Warnsymbol (durchgestrichene Hand mit Punkt) oberhalb des Fotos",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Symbol. Wie im deutschen Teil (PDF-Seite 8) steht auf der gesamten Seite kein Wort zu elektrostatischer Entladung; das Symbol ist die einzige ESD-Warnung des englischen Teils (Nachtrag zu DSC-063)"
+        },
+        {
+          "description": "Sechs graue Warndreiecke am linken Rand des rosa Kastens, je eines pro Vorgabe",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "Rosa Kasten mit sechs Vorgaben zur SIM-Karte, je mit Warndreieck, ohne Signalwort - die Vorgaben stehen in der Textebene als gewöhnliche Absätze"
+      ],
+      "accessibility_issues": [
+        "Das ESD-Symbol hat weder Text noch Bildunterschrift noch eine Erwähnung im Fließtext - wie im deutschen Teil. Wer das Symbol nicht sieht oder nicht kennt, erfährt nichts von der Gefährdung des Geräts durch elektrostatische Entladung beim SIM-Tausch.",
+        "Die sechs Vorgaben des rosa Kastens sind nur durch Kastenfarbe und Warndreiecke als Pflichtvorgaben erkennbar; in der Textebene sind sie von gewöhnlichem Text nicht zu unterscheiden.",
+        "Die Zuordnung von Einleitungssatz, Foto und SIM-Position läuft allein über die rote Linie.",
+        "\"ideally you should label name it ALARM\" - der Grammatikfehler (doppeltes Verb) macht die Anweisung, deren Befolgung im Alarmfall Zeit spart, schwer verständlich; zusätzlich steht am Absatzende das Beispiel \"Alarm\" mit einem weichen Trennzeichen in der Textebene (\"­Alarm\"), das beim Vorlesen oder Kopieren stört.",
+        "\"as shown below\" verweist nach unten, das Gemeinte steht aber am Ende desselben Absatzes in derselben Zeile - der räumliche Verweis führt ins Leere.",
+        "Der Einleitungssatz endet ohne Satzzeichen.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 6\", tatsächlich PDF-Seite 26 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Das Vorgabenpaar \"PIN auf 0000 ändern\" und \"PIN-Abfrage aktiviert lassen\" steht wortgleich auch im englischen Teil. Damit ist ausgeschlossen, dass die deutsche Formulierung (PDF-Seite 8) ein einzelner Übersetzungs- oder Satzfehler ist - das Paar ist Vorlage. Ob es technisch so gemeint ist, bleibt die sicherheitskritische Rückfrage 15 (Nachtrag).",
+        "\"label name it ALARM\" - doppeltes Verb (DSC-070).",
+        "\"T-mobile\" mit kleinem m; der Markenname lautet T-Mobile (DSC-070).",
+        "Der Einleitungssatz endet ohne Punkt - im deutschen Gegenstück (PDF-Seite 8) fehlt das Satzzeichen ebenfalls; der Vorlagenfehler ist mitübersetzt.",
+        "Das Landesvorwahl-Beispiel ist auf \"+44 for the UK\" lokalisiert - die einzige inhaltliche Lokalisierung, die im englischen Teil bisher gefunden wurde; alle übrigen Inhalte sind Eins-zu-eins-Übertragungen."
+      ],
+      "terminology_findings": [
+        "\"destination phone numbers\" in der Überschrift gegen \"target phone numbers\" im Inhaltsverzeichnis (DSC-068).",
+        "\"mobile phone provider\" im Einleitungssatz gegen \"mobile phone supplier\" im Absatz \"SIM card used:\" - zwei Benennungen für den Mobilfunkanbieter auf einer Seite.",
+        "\"de-energised\" wie auf PDF-Seite 24; konsistent britisch, im Kontrast zu \"unauthorized\" (PDF-Seite 21)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Die sechs Vorgaben des rosa Kastens wurden einzeln mit der deutschen Fassung (PDF-Seite 8, bereits geprüft) verglichen; alle sechs decken sich inhaltlich. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 27,

@@ -29,16 +29,22 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 14,8 %): 132 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 15,6 %): 122 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 17–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, geprüft sind 16 von 72 Seiten. Als **einziges** Dokument mit echter Textebene
+- **DOC-BMA-SN044, Seiten 27–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, geprüft sind 26 von 72 Seiten. Die Struktur ist seit dem 2026-08-08 bekannt:
+  Deutsch 1–19 (**vollständig geprüft**), Englisch 20–36 (geprüft bis 26), Französisch
+  37–53, Schwedisch 54–71, Impressum 72. Als **einziges** Dokument mit echter Textebene
   erlaubt es die Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus
-  entsteht hier der Erkenntnisgewinn, nicht aus „Textebene vorhanden". Beide bisherigen
-  Batches haben ihre stärksten Funde aus genau diesem Vergleich gezogen.
+  entsteht hier der Erkenntnisgewinn, nicht aus „Textebene vorhanden". Alle drei
+  bisherigen Batches haben ihre stärksten Funde aus genau diesem Vergleich gezogen.
+  Im nächsten Batch (27–36) sind mitzuerledigen: auf Seite 33 die englische
+  Abschnittsüberschrift 2.4 (DSC-068) und die Befehle `Fence on`/`Fence off` (DSC-067)
+  im Seitenbild bestätigen; später im schwedischen Teil die Befehle `fence pa`/`fence av`
+  (Seiten 59 und 67) und das Impressum (Seite 72, Herstelleradresse).
 - **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
 
 Vorgehen je Batch von 9–10 Seiten:
@@ -72,7 +78,7 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 191 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
+Geprüft sind 201 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
 Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
 Das Muster ist stabil und wiederholt sich erwartbar:
 
@@ -94,11 +100,21 @@ Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, te
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
 
-**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–16 geprüft, einsprachig deutsch):
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–26 geprüft; das Dokument ist
+**viersprachig**: Deutsch 1–19, Englisch 20–36, Französisch 37–53, Schwedisch 54–71,
+Impressum 72):
 
-- Die aufgedruckte Seitenzahl liegt durchgehend **zwei unter** der PDF-Seite. Die Quelle
-  verweist intern auf die **aufgedruckten** Zahlen – beim Prüfen eines Seitenverweises
+- Die aufgedruckte Seitenzahl liegt im deutschen Teil **zwei unter** der PDF-Seite, im
+  englischen Teil **zwanzig** (die Zählung beginnt je Sprachteil neu bei 1; „Seite 15"
+  und „Page 15" existieren im selben PDF). Die Quelle verweist intern auf die
+  **aufgedruckten** Zahlen des jeweiligen Sprachteils – beim Prüfen eines Seitenverweises
   immer umrechnen.
+- **Der englische Teil ist keine verlässliche Übersetzung.** Belegt sind: der schwedische
+  Befehl `fence av` auf der englischen Seite 25 (DSC-067), „8 seconds" gegen „8 Minuten"
+  in der Betriebsartentabelle (DSC-066), der Verzeichniseintrag 2.4 „Installation
+  instructions" statt Geofencing (DSC-068) und gemischte britisch/amerikanische
+  Schreibungen (DSC-070). Jeden Wert des englischen Teils gegen den deutschen halten;
+  Abweichungen sind Funde, keine Flüchtigkeit.
 - **Die Textebene ist nicht vollständig.** Sie enthält keine Piktogramme, keine
   Farbauszeichnung, keine Warndreiecke, kein einziges der neun Beispiel-SMS-Bilder und an
   einer Stelle ein fehlendes Sternzeichen mitten in einem Befehlscode (DSC-058). Nichts
@@ -121,8 +137,11 @@ in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht 
 **Content-Modell und deutscher Master** (20 % Gewicht, aktuell 52 %). Alle vierzehn
 deutschen Aufgaben sind gefüllt, keine ist mehr Platzhalter. Was jetzt fehlt:
 
-1. **Die Generation bis SN-044**: nur 1 von 14 Aufgaben existiert. Die Quelle dafür ist
-   DOC-BMA-SN044 – deshalb hat dessen Seitenprüfung Vorrang.
+1. **Die Generation bis SN-044**: nur 1 von 14 Aufgaben existiert. Die deutsche
+   Quellenlage dafür ist seit dem 2026-08-08 **komplett** (deutscher Teil von
+   DOC-BMA-SN044 vollständig geprüft) – die dreizehn Aufgaben können jetzt geschrieben
+   werden, parallel zur restlichen Seitenprüfung. Die Befehlssperre aus BLK-005 gilt
+   unverändert; Vorbild ist `content/tasks/sn-045-plus/de/03-anschluesse.json`.
 2. **Die Segment-Extraktion** als Grundlage für die Übersetzung (Status `extracted` statt
    `inspected`).
 3. **Der technische Review** aller sicherheitskritischen Werte. Der kann nicht im Pilot

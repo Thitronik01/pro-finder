@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-08 · Grundlage: seitenweise Prüfung von 191 der 323 PDF-Seiten sowie die
+Stand: 2026-08-08 · Grundlage: seitenweise Prüfung von 201 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -19,12 +19,15 @@ Geprüft sind bisher der deutsche, englische, französische und tschechische Spr
 sowie beide Kurzanleitungen. Sechs Sprachteile stehen aus.
 
 **Neu am 2026-08-08:** Erstmals ist auch die Generation **bis SN-044** in nennenswertem
-Umfang geprüft (DOC-BMA-SN044, Seiten 1–16 von 72). Mehrere der unten stehenden Fragen
-haben dadurch eine zweite Belegquelle bekommen – teils bestätigend, teils mit abweichenden
-Werten. Diese Ergänzungen stehen als **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie
-sind für Sie vermutlich der aufschlussreichste Teil dieses Dokuments, weil sich daran
-ablesen lässt, welche Punkte seit zwei Gerätegenerationen unverändert offen sind und welche
-erst mit der neueren Fassung entstanden.
+Umfang geprüft (DOC-BMA-SN044, Seiten 1–26 von 72, darunter der komplette deutsche Teil
+und der Beginn des englischen). Mehrere der unten stehenden Fragen haben dadurch eine
+zweite Belegquelle bekommen – teils bestätigend, teils mit abweichenden Werten. Diese
+Ergänzungen stehen als **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie sind für Sie
+vermutlich der aufschlussreichste Teil dieses Dokuments, weil sich daran ablesen lässt,
+welche Punkte seit zwei Gerätegenerationen unverändert offen sind und welche erst mit der
+neueren Fassung entstanden. Mit dem englischen Teil kam Frage 16 hinzu (Betriebsart D:
+8 Minuten oder 8 Sekunden), und Frage 1 hat einen zweiten Nachtrag erhalten (der englische
+Teil druckt den schwedischen Geofencing-Befehl).
 
 ---
 
@@ -93,7 +96,20 @@ Was bewirken `GPS ON` und `GPS OFF`, die im Handbuch nirgends vorkommen? Und: **
 Hilfe-SMS die maßgebliche Auskunft?** Falls ja, wäre sie die verlässlichste Quelle für die
 Befehlsliste beider Generationen – und das Handbuch wäre an mehreren Stellen falsch.
 
-_Belege: DSC-013, DSC-014, DSC-026, DSC-033, DSC-054_
+**Zweiter Nachtrag bis SN-044 – der englische Teil nennt den schwedischen Befehl.** Die
+englische Seite 25 (intern „Page 5") weist zum Abschalten des Geofencings wörtlich
+`fence av` an – das ist weder das englische `Fence off` des eigenen Abschnitts 2.4 noch das
+`FENCE OFF` der Geräte-Hilfe-SMS, sondern der Befehl des **schwedischen** Teils desselben
+Dokuments („av" = schwedisch „aus"). Zusätzlich zeigt die Textebene: Auch bis SN-044 hat
+jede Sprachfassung einen eigenen Befehlssatz (DE `Fence an`/`fence aus`, EN
+`Fence on`/`Fence off`, SV `fence pa`/`fence av`, FR `gardiennage active`/`gardiennage
+desactive`) – und die französischen Befehle unterscheiden sich von denen der SN-045-Fassung
+(`activer/desactiver le gardiennage`). **Derselbe Befehl hat sich also innerhalb einer
+Sprache zwischen den Generationen geändert.** Welche Befehle akzeptiert ein Gerät bis
+SN-044 in welcher Sprache tatsächlich – und ist `fence av` auf der englischen Seite ein
+Druckfehler?
+
+_Belege: DSC-013, DSC-014, DSC-026, DSC-033, DSC-054, DSC-067_
 
 ---
 
@@ -437,7 +453,32 @@ allgemein bekannten PIN auffordert, muss diesen Schritt begründen und seine Tra
 benennen können. Solange die Vorgabe nicht bestätigt ist, nennt die Webanleitung sie nicht.
 Der Punkt gehört zusätzlich in den sicherheitstechnischen Review.
 
-_Beleg: Seitenrecords DOC-BMA-SN044, S. 8 und 11_
+**Nachtrag 2026-08-08:** Der englische Teil desselben Handbuchs (Seite 26, intern „Page 6")
+wiederholt das Vorgabenpaar wortgleich („must be changed to 0000" und „The PIN query
+function must be activated"). Ein einzelner deutscher Satz- oder Übersetzungsfehler ist
+damit ausgeschlossen – das Paar ist Vorlage. Die Frage, ob es technisch so gemeint ist,
+bleibt unverändert offen.
+
+_Beleg: Seitenrecords DOC-BMA-SN044, S. 8, 11 und 26_
+
+---
+
+## 16. Betriebsart D: Statusberichte alle 8 Minuten oder alle 8 Sekunden? (sicherheitskritisch)
+
+Die Betriebsartentabelle des Handbuchs bis SN-044 nennt für die Schalterstellung D das
+Intervall der automatischen Statusberichte **deutsch als „8 Minuten"** (Seite 5, intern
+„Seite 3") und **englisch als „8 seconds"** (Seite 23, intern „Page 3") – derselbe Wert,
+Faktor 60 dazwischen. Beide Zellen sind hochauflösend nachgerendert und zeichengenau
+gesichert. Die Nachbarzeile C stimmt in beiden Fassungen überein (90 Sekunden).
+
+**Die Frage:** Welches Intervall gilt in Betriebsart D?
+
+**Warum das drängt:** C und D sind die Ortungsmodi mit dem dichtesten Meldeintervall. Wer
+nach der falschen Fassung plant, erhält im Ernstfall sechzigmal seltener eine Position als
+erwartet – oder produziert sechzigmal mehr kostenpflichtige SMS als kalkuliert. Solange der
+Wert nicht bestätigt ist, nennt der Pilot für die Betriebsart D kein Intervall.
+
+_Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5 und 23_
 
 ---
 
@@ -481,6 +522,9 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** kein einziger Warnhinweis trägt ein Signalwort; ein ESD-Symbol ohne jeden Begleittext ist alleinige Warnungsträgerin  | DSC-063, S. 6–16               |
 | **bis SN-044:** die gekoppelte Alarmanlage heißt „WiPro „all in one"", ab SN-045 „WiPro III safe.lock" – verschiedene Produktnamen    | DSC-065, S. 6 und 14           |
 | **bis SN-044:** Gerätetexte ersetzen Umlaute durch Vokal plus e („Ungueltiger", „Tuer") – Zeichensatzgrenze, vor Übersetzung schützen | DSC-054, S. 13                 |
+| **bis SN-044:** englisches Inhaltsverzeichnis nennt 2.4 „Installation instructions"; der Abschnitt ist Geofencing                     | DSC-068, S. 20                 |
+| **bis SN-044:** SIM-Format Micro-SIM gegen Nano-SIM ab SN-045; Konformität 1999/5/EG gegen 2014/53/EU – Werte nicht übertragbar       | DSC-069, S. 18                 |
+| **bis SN-044:** aufgedruckte Seitenzählung beginnt im englischen Teil neu bei „Page1"; „Seite 15" und „Page 15" im selben PDF         | DSC-068, S. 20–26              |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

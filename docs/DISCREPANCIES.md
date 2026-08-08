@@ -101,6 +101,12 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
 - **Nachtrag:** Die französische Fassung (Seite 76) nennt ebenfalls „env. 16–21 mA".
   Zwei von drei Fassungen stimmen überein – **die englische ist der Ausreißer**, nicht die
   deutsche.
+- **Nachtrag 2026-08-08 (Generationenvergleich):** Das Handbuch bis SN-044 nennt in den
+  technischen Daten (DOC-BMA-SN044, Seite 18) für den Normalbetrieb den festen Wert
+  „ca. 21mA" – wörtlich der Wert, den die englische SN-045-Fassung als „approx. 21mA"
+  fortführt. Das stützt die Lesart, dass die englische SN-045-Tabelle den Wert der älteren
+  Generation unverändert übernommen hat und nie auf die Spanne 16–21 mA aktualisiert
+  wurde. Siehe auch DSC-069.
 - **Schwere:** hoch (technische Spezifikation; relevant für Strombudget und Auslegung der
   Absicherung) · **Status:** offen – technischer Review
 
@@ -835,9 +841,11 @@ belegt, nicht aus einer Zusammenfassung.
   - Seite 13 verweist für die Positionsabfrage auf „2.4"; das ist „Geofencing". Gemeint
     ist 2.6.
   - Zusätzlich kündigt Seite 15 unter 2.5 an, das Wiederfinden des Fahrzeugs werde „in
-    Kapitel 2.6 erklärt"; 2.6 ist die Positionsabfrage, ein Abschnitt „Fahrzeug
-    wiederfinden" trägt laut Textebene die Nummer 2.8. Abschließend zu prüfen, sobald
-    Seite 17 gerendert ist.
+    Kapitel 2.6 erklärt"; 2.6 ist die Positionsabfrage. **Abgeschlossen 2026-08-08:**
+    Seite 17 ist im Seitenbild geprüft; der Abschnitt „Fahrzeug wiederfinden" trägt dort
+    die Nummer **2.8** (aufgedruckte Seite 15), ebenso im deutschen Inhaltsverzeichnis auf
+    Seite 2. Der vierte falsche Verweis ist damit belegt – auch er nennt eine zu niedrige
+    Nummer und passt in das Muster.
 - **Muster:** Alle drei falschen Verweise nennen eine **zu niedrige** Nummer (2.5 statt
   2.6, 2.3 statt 2.5, 2.4 statt 2.6). Das spricht dafür, dass die Abschnittsnummerierung
   nachträglich verschoben wurde und die Verweise nicht mitgezogen sind.
@@ -1036,11 +1044,20 @@ belegt, nicht aus einer Zusammenfassung.
   einzige Warnung dieses Handbuchs als Warnung erkennbar. Das bestätigt die im Pilot
   bereits umgesetzte Entscheidung, die Sicherheitsklasse in der Oberfläche als **Wort**
   auszugeben, und begründet sie für diese Generation zusätzlich.
+- **Nachtrag 2026-08-08 (englischer Teil, Seiten 20–26):** Das Muster ist Vorlage, nicht
+  Sprachfassung. Der englische Teil wiederholt es vollständig: das ESD-Symbol steht auch
+  dort (Seite 26) ohne ein einziges Wort zur elektrostatischen Entladung, der rosa Kasten
+  mit sechs Warndreiecken trägt die SIM-Vorgaben ohne Signalwort, rote Schrift kennzeichnet
+  auf Seite 24 sowohl die Batteriewarnung als auch einen bloßen Querverweis, und die
+  Zwischentitel sind weiterhin nur unterstrichen. Einzige positive Abweichung: Auf Seite 25
+  ist das Blinken der Status-LED zusätzlich zur Farbe über ein Strichmuster dargestellt
+  (gestrichelter gegen durchgehenden Balken) – die bislang einzige Stelle beider
+  Sprachteile, an der ein LED-Verhalten nicht allein an der Farbe hängt.
 - **Schwere:** hoch (Sicherheitshinweise) · **Status:** offen
 
 ### DSC-064 – Redaktionelle Befunde im Handbuch bis SN-044 (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, Seiten 6 bis 16
+- **Dokument:** DOC-BMA-SN044, Seiten 6 bis 18
 - **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite. Alle unverändert in
   den Seitenrecords übernommen, keiner still korrigiert.
   - Seite 6: „(0-30V)kontrolliert" ohne Leerzeichen (bei 400 dpi bestätigt); „WiPro III"
@@ -1072,26 +1089,36 @@ belegt, nicht aus einer Zusammenfassung.
   - Seite 16: „1 Sek." abgekürzt gegen „1 Sekunde" ausgeschrieben auf derselben Seite; alle
     drei Zwischentitel im Plural, obwohl die Befehle jeweils einen einzelnen Ausgang
     betreffen.
+  - Seite 17: „der Zeit, der zuletzt empfangenen Position" – falsches Komma; „ohne GPS
+    Empfang" gegen „des GPS-Empfanges" im selben Absatz; fehlendes Komma vor „um die
+    Darstellung … zu vereinfachen".
+  - Seite 18: „Wertstoffrecyling" statt „Wertstoffrecycling"; „Bei Ausserbetriebnahme" mit
+    ss gegen die sonst vorreformierte ß-Schreibung; „Montags bis Freitags" großgeschrieben;
+    „gezielt weiter helfen" getrennt; „Mhz" statt „MHz"; die Zeile „Stromaufnahme
+    Netzsuche" als einzige der neun Datenzeilen ohne Doppelpunkt (bei 400 dpi bestätigt);
+    „SN :" mit Leerzeichen vor dem Doppelpunkt.
 - **Schwere:** gering · **Status:** offen – gesammelt für den redaktionellen Review
 
 ### DSC-065 – Uneinheitliche Benennungen im Handbuch bis SN-044 (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, Seiten 6 bis 16
+- **Dokument:** DOC-BMA-SN044, Seiten 6 bis 18
 - **Befund:** Dieselbe Sache trägt im deutschen Handbuch mehrere Namen. Das ist für die
   spätere Segmentextraktion und für jede Übersetzung erheblich, weil sich nicht entscheiden
   lässt, welche Form die maßgebliche ist.
 
-  | Sache                      | Schreibweisen in der Quelle                                                                       |
-  | -------------------------- | ------------------------------------------------------------------------------------------------- |
-  | SIM-Karte                  | „SIM-Karte" (S. 8), „SIM Karte" (S. 11), „Simkarte" (S. 12)                                       |
-  | Bedienelement am Gerät     | „Betriebsartenschalter" (S. 4, 7, 11), „Programmwahlschalter" (S. 12)                             |
-  | Guthaben                   | „Restguthaben" (S. 10), „Guthaben" (S. 8), „Kontostand" (S. 12, 13), „Aktuelles Guthaben" (S. 12) |
-  | Prepaid                    | „pre-paid Karte" (S. 8), „Pre-paid Karte" (S. 10), „Prepaidkarte" (S. 9)                          |
-  | Smartphone-Zusammensetzung | „Smartphone Nummern" (S. 9), „Smartphonenutzer" (S. 13), „Smartphone Nutzer" (S. 15)              |
-  | gekoppelte Alarmanlage     | „WiPro III" (S. 6), „WiPro „all in one"" (S. 6, 14), „WiPro" ohne Zusatz (S. 12, 13, 15)          |
-  | Zugriffsberechtigung       | „autorisierte" / „nicht autorisierte Nummern" (S. 9), „berechtigte Nummern" (S. 14)               |
-  | GPS-Antenne                | „GPS Antenne" (S. 6), „GPS-Antenne" (S. 6, 7)                                                     |
-  | Status-LED                 | durchgehend „Status LED" ohne Bindestrich; projektkonform wäre „Status-LED"                       |
+  | Sache                      | Schreibweisen in der Quelle                                                                                       |
+  | -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+  | SIM-Karte                  | „SIM-Karte" (S. 8), „SIM Karte" (S. 11), „Simkarte" (S. 12), „SIM Format" (S. 18)                                 |
+  | Bedienelement am Gerät     | „Betriebsartenschalter" (S. 4, 7, 11), „Programmwahlschalter" (S. 12)                                             |
+  | Guthaben                   | „Restguthaben" (S. 10), „Guthaben" (S. 8), „Kontostand" (S. 12, 13), „Aktuelles Guthaben" (S. 12)                 |
+  | Prepaid                    | „pre-paid Karte" (S. 8), „Pre-paid Karte" (S. 10), „Prepaidkarte" (S. 9)                                          |
+  | Smartphone-Zusammensetzung | „Smartphone Nummern" (S. 9), „Smartphonenutzer" (S. 13, 17), „Smartphone Nutzer" (S. 15), „(Smart Phone)" (S. 17) |
+  | gekoppelte Alarmanlage     | „WiPro III" (S. 6), „WiPro „all in one"" (S. 6, 14), „WiPro" ohne Zusatz (S. 12, 13, 15)                          |
+  | Zugriffsberechtigung       | „autorisierte" / „nicht autorisierte Nummern" (S. 9), „berechtigte Nummern" (S. 14)                               |
+  | GPS-Antenne                | „GPS Antenne" (S. 6), „GPS-Antenne" (S. 6, 7)                                                                     |
+  | GPS-Empfang                | „GPS Empfang" und „GPS-Empfanges" (beide S. 17)                                                                   |
+  | Kartenanwendung            | „Kartenansicht" (S. 13), „Kartenprogramm" (S. 15, 17), „Kartenprogramme und Navigationsgeräte" (S. 17)            |
+  | Status-LED                 | durchgehend „Status LED" ohne Bindestrich; projektkonform wäre „Status-LED"                                       |
 
 - **Erheblich davon:** Die Fassung ab SN-045 führt die gekoppelte Alarmanlage als „WiPro III
   safe.lock", diese Generation als „WiPro „all in one"" – **die Generationen benennen das
@@ -1100,3 +1127,132 @@ belegt, nicht aus einer Zusammenfassung.
   gleichzusetzen.
 - **Schwere:** gering bis mittel · **Status:** offen – für Terminologieliste und
   Segmentextraktion vorgemerkt
+
+### DSC-066 – Betriebsart D: „8 Minuten" gegen „8 seconds" – Faktor 60 zwischen den Sprachfassungen (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, deutsche Seite 5 (intern „Seite 3") und englische Seite 23
+  (intern „Page 3"), Betriebsartentabelle, Zeile D
+- **Beleg:** DE „8 Minuten (sobald Spannung anliegt und Pro-finder eingebucht ist)" gegen
+  EN „8 seconds (as soon as voltage is applied and Pro-finder is logged in)". Beide Zellen
+  hochauflösend nachgerendert (300 bzw. 400 dpi) und zeichengenau gesichert.
+- **Befund:** Das Intervall der automatischen Statusberichte in Betriebsart D unterscheidet
+  sich zwischen der deutschen und der englischen Fassung um den **Faktor 60**. Die
+  Nachbarzeile C stimmt dagegen überein (90 Sekunden/90 seconds) – der Fehler ist auf die
+  Zeile D begrenzt. Welche Angabe stimmt, ist aus der Quelle nicht zu entscheiden: 8
+  Sekunden ergäben zusammen mit C (90 Sekunden) eine plausible Staffelung zweier
+  Verfolgungsmodi, 8 Minuten eine plausible Fortsetzung der Reihe 15/60 Minuten, 6/24
+  Stunden. Nichts davon ist belegt.
+- **Warum das zählt:** C und D sind die Ortungsmodi mit dem dichtesten Meldeintervall –
+  wer sie nach der falschen Sprachfassung wählt, erhält im Ernstfall sechzigmal seltener
+  eine Position als erwartet, oder produziert sechzigmal mehr kostenpflichtige SMS als
+  kalkuliert.
+- **Schwere:** hoch (sicherheitsrelevanter technischer Wert) · **Status:** offen –
+  Rückfrage 16 an THITRONIK
+
+### DSC-067 – Der englische Teil nennt den schwedischen Geofencing-Befehl „fence av" (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, englische Seite 25 (intern „Page 5"), Abschnitt 1.7
+- **Beleg:** „To do this, send an SMS with “fence av” to the number of the GSM module." –
+  bei 500 dpi zeichengenau gesichert.
+- **Befund:** Der Befehl „fence av" ist kein Englisch. Er ist an dieser Stelle mit keiner
+  anderen Angabe des Dokuments vereinbar:
+  - die deutsche Parallelstelle (Seite 7, geprüft) schreibt „fence aus";
+  - der englische **eigene** Abschnitt 2.4 verwendet laut Textebene „Fence on" und
+    „Fence off" (Seite 33, noch ungeprüft);
+  - die Hilfe-SMS des Geräts (Seite 13, geprüft) führt „FENCE ON"/„FENCE OFF";
+  - die englische SN-045-Fassung schreibt „fence off" (DSC-033).
+    „av" ist das schwedische Wort für „aus", und der schwedische Teil dieses Dokuments
+    verwendet laut Textebene an exakt gleicher Stelle denselben Befehl: „Skicka då ett SMS
+    med innehållet ”fence av” …" (Seite 59) sowie „fence pa"/„fence av" (Seite 67; beide
+    Seiten noch ungeprüft). Die wahrscheinlichste Erklärung ist eine
+    **Vorlagenkontamination aus der schwedischen Fassung** – dieselbe Fehlerklasse wie die
+    verunglückte norwegisch-dänische Flaggenüberlagerung in der Fassung ab SN-045 (DSC-025).
+- **Folge für Nutzer:** Wer den Befehl wie gedruckt sendet, sendet mutmaßlich einen
+  ungültigen Befehl. Im besten Fall antwortet das Gerät mit einer Hilfe-SMS; im schlechteren
+  bleibt das Geofencing aktiv und liefert genau die Fehlalarme weiter, die der Abschnitt
+  abstellen will.
+- **Generationenvergleich der Befehlssätze (Stand der Textebene, Seiten teils ungeprüft):**
+  Auch bis SN-044 hat jede Sprachfassung einen eigenen Befehlssatz – DE „Fence an"/„fence
+  aus", EN „Fence on"/„Fence off", SV „fence pa"/„fence av", FR „gardiennage
+  active"/„gardiennage desactive". Die französischen Befehle unterscheiden sich zudem von
+  denen der SN-045-Fassung („activer/desactiver le gardiennage", DSC-033) – **derselbe
+  Befehl hat sich innerhalb einer Sprache zwischen den Generationen geändert.**
+- **Schwere:** hoch (sicherheitsrelevanter Befehl) · **Status:** offen – gehört zu
+  BLK-005; Nachtrag zu Rückfrage 1
+
+### DSC-068 – Englisches Inhaltsverzeichnis und Teilstruktur weichen vom Inhalt ab (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, englische Seiten 20 bis 26
+- **Befund:**
+  - Der Verzeichniseintrag **2.4 lautet „Installation instructions"**. Das deutsche
+    Verzeichnis (Seite 2) führt 2.4 als „Geofencing" (im Seitenbild bestätigt), die
+    deutsche Abschnittsüberschrift auf Seite 15 ebenso, und auch die Textebene des
+    englischen Teils behandelt in 2.4 Geofencing (Seite 33). Der Eintrag benennt den
+    Abschnitt schlicht falsch; die englische Abschnittsüberschrift auf Seite 33 ist noch im
+    Seitenbild zu bestätigen.
+  - Das Verzeichnis nennt 1.8/1.9 „**target** phone numbers", Abschnittsüberschrift
+    (Seite 26) und Tabellenzeile E (Seite 23) schreiben „**destination** phone numbers".
+  - Verzeichnis 1.6 „Installation of the GPS receiver (optional)" gegen Überschrift
+    „Installing the GPS receiver (optional)" (Seite 24); Verzeichnis 1.7 „Connecting the
+    GPS receiver (optional)" gegen Überschrift „Connection of the GPS receiver" ohne
+    Zusatz (Seiten 24, 25).
+  - **Doppelte Seitenzählung im selben PDF:** Mit dem englischen Teil beginnt die
+    aufgedruckte Zählung neu bei „Page1"; „Seite 15" (deutsch, PDF-Seite 17) und „Page 15"
+    (englisch, PDF-Seite 35) existieren nebeneinander. Interne Verweise gelten jeweils nur
+    innerhalb des eigenen Sprachteils (Versatz deutsch +2, englisch +20).
+  - **Unangekündigter Sprachwechsel:** Zwischen der deutschen Notizseite (Seite 19) und dem
+    englischen Verzeichnis (Seite 20) gibt es keinerlei Übergangshinweis; das Dokument
+    trägt keine Sprachauszeichnung.
+- **Schwere:** mittel (der 2.4-Eintrag führt Nutzer in die Irre; Zitierfähigkeit) ·
+  **Status:** offen
+
+### DSC-069 – Technische Daten unterscheiden sich zwischen den Generationen (bis SN-044 / ab SN-045)
+
+- **Dokument:** DOC-BMA-SN044, Seite 18 (intern „Seite 16"), Abschnitt 3.1–3.2; Vergleich
+  gegen DOC-IBA-SN045, deutsche Seite 25, englische Seite 49, französische Seite 76
+- **Befund:** Drei Werte weichen zwischen den Generationen ab, die übrigen stimmen überein:
+
+  | Wert                        | bis SN-044 (S. 18)   | ab SN-045 (S. 25/49/76)                       |
+  | --------------------------- | -------------------- | --------------------------------------------- |
+  | SIM-Format                  | **Micro-SIM**        | **Nano-SIM**                                  |
+  | Stromaufnahme Normalbetrieb | ca. 21mA (fest)      | ca. 16–21 mA (Spanne; EN abweichend, DSC-020) |
+  | Konformität                 | Richtlinie 1999/5/EG | Richtlinie 2014/53/EU                         |
+  | Spannungsversorgung         | 9-30 V               | 9-30 V (gleich)                               |
+  | Stromaufnahme Netzsuche     | ca. 37mA             | ca. 37 mA (gleich)                            |
+  | Ausgänge                    | 2 x 12V/500mA        | 2 × 12 V/500 mA (gleich)                      |
+  | Temperaturbereich           | -10°C bis +80°C      | −10 bis +80 °C (gleich)                       |
+  | Zielrufnummern              | 10                   | 10 (gleich)                                   |
+
+  Zusätzlich nennt nur die ältere Fassung eine Sendefrequenz („900/1800/850/1900Mhz");
+  die 1999/5/EG (R&TTE) ist seit 2017 durch die 2014/53/EU abgelöst – zeittypisch für das
+  ältere Dokument, für den Pilot aber als Beleg, dass die Konformitätsangaben **nicht
+  zwischen Generationen übertragbar** sind.
+
+- **Warum das zählt:** Das SIM-Format ist die unmittelbar nutzerrelevante Abweichung –
+  wer nach der falschen Generationsanleitung eine SIM beschafft, hält die falsche
+  Kartengröße in der Hand. Zusammen mit dem Geofencing-Radius (DSC-061) und den
+  Befehlssätzen (DSC-067) ist das der dritte Beleg, dass technische Werte zwischen den
+  Generationen abweichen und keine Angabe ungeprüft übernommen werden darf.
+- **Schwere:** mittel bis hoch · **Status:** offen – technischer Review; Generationswerte
+  strikt getrennt halten
+
+### DSC-070 – Redaktionelle Befunde im englischen Teil bis SN-044 (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, englische Seiten 20 bis 26
+- **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite, analog DSC-064.
+  - **Gemischte Rechtschreibvarianten:** „unauthorised" (S. 20) gegen „unauthorized"
+    (S. 21); daneben durchgehend britisch „de-energised", „cancelled" (S. 24, 26).
+  - Seite 21: Kopfzeile „Page1" ohne Leerzeichen – einzige Seite; alle übrigen schreiben
+    „Page 2" bis „Page 6".
+  - Seite 22: „(option)" gegen „(optional)" im Verzeichnis – wie im deutschen Teil.
+  - Seite 23: „with Wipro" mit kleinem p zwischen zwei korrekten „WiPro" im selben Absatz
+    (bei 500 dpi bestätigt).
+  - Seite 26: „ideally you should label name it ALARM" – doppeltes Verb; „T-mobile" statt
+    „T-Mobile"; der Einleitungssatz endet ohne Punkt (wie sein deutsches Gegenstück auf
+    Seite 8 – der Vorlagenfehler ist mitübersetzt); weiches Trennzeichen in der Textebene
+    („­Alarm", auch „­voltage" im Tabellenkopf auf Seite 23).
+  - Terminologie innerhalb des Teils: „mobile phone provider" gegen „mobile phone
+    supplier" (beide S. 26); „Cable assembly" (S. 21) gegen „main cable assembly" (S. 24);
+    „recovery diode" für die Freilaufdiode (fachlich üblich wäre „flyback/freewheeling
+    diode", S. 24).
+- **Schwere:** gering · **Status:** offen – gesammelt für den redaktionellen Review
