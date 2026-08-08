@@ -43,9 +43,9 @@ erfasst. Das Diagramm der Programmier-SMS, das seine Information über Verbindun
 transportiert, ist als Abbildung mit Alternativtext, Langbeschreibung und
 Bestandteilliste aufgelöst – ohne die Beispielrufnummern zu übernehmen.
 
-### Dreizehn neue Registerpositionen, alle im deutschen Original
+### Vierzehn neue Registerpositionen, dreizehn davon im deutschen Original
 
-DSC-040 bis DSC-052. Sie betreffen **den deutschen Text selbst**, nicht seine
+DSC-040 bis DSC-053. Dreizehn davon betreffen **den deutschen Text selbst**, nicht seine
 Übersetzungen:
 
 - **drei falsche Querverweise** (5.4 statt 5.5 auf Seite 9; 1.5.2 statt 1.5.3 in der
@@ -65,6 +65,12 @@ DSC-040 bis DSC-052. Sie betreffen **den deutschen Text selbst**, nicht seine
 Fünf davon sind als Fragen 9 bis 13 in `RUECKFRAGEN_THITRONIK.md` entscheidungsreif
 formuliert, die übrigen unter „Laufend ergänzt".
 
+DSC-053 betrifft als einzige nicht den Text, sondern die Sprachmarken: die Marke vor dem
+dänischen Titel ist eine zusammengesetzte Flagge – links die norwegische, rechts die rechte
+Hälfte der dänischen, dazu ein Diagonalstrich. Da die zehn Sprachen des Dokuments
+ausschließlich über Flaggen markiert sind und kein Sprachname ausgeschrieben ist, führt das
+aktiv in die Irre.
+
 ### Vier neue Prüfungen – jede hat sofort einen realen Fehler gefunden
 
 1. **Jede Markdown-Tabelle muss darstellbar sein.** `TaskView` rendert eine unparsbare
@@ -82,7 +88,7 @@ formuliert, die übrigen unter „Laufend ergänzt".
    Nummern gefunden (DSC-038 und DSC-039) – beim Anlegen der neuen Positionen war an die
    _letzte_ Überschrift der Datei angeknüpft worden statt an die _höchste_ Nummer. Die
    Datei ist nicht durchgehend aufsteigend sortiert; DSC-035 steht am Ende, DSC-038 und
-   DSC-039 weiter oben. Die neuen Positionen tragen jetzt DSC-040 bis DSC-052, das
+   DSC-039 weiter oben. Die neuen Positionen tragen jetzt DSC-040 bis DSC-053, das
    Register ist lückenlos.
 
 Der Tabellenparser liegt jetzt einmal in `lib/content/markdown-table.ts` statt in zwei
@@ -116,13 +122,9 @@ norwegischen und der dänischen Flagge mit einem zusätzlichen diagonalen Strich
   Records lief **kein** zweiter Agent, der jede Behauptung gegen das Seitenbild geprüft
   hätte. Der Status `inspected` bedeutet ohnehin nur „visuell angesehen", aber die
   eingebaute zweite Meinung fehlt hier. Bei der nächsten Berührung dieser Seiten – also
-  spätestens bei der Segment-Extraktion – ist sie nachzuholen.
-- **Eine der acht Aufgaben ist nicht gegengeprüft.** `10-statusbericht.json` wurde
-  gefüllt, aber der zweite Agent, der jede Aussage gegen das Seitenbild hält, lief für sie
-  nicht mehr durch. Die Datei ist daran erkennbar, dass ihr `change_reason` keinen
-  Gegenprüfungsvermerk trägt. Bei den sieben geprüften hat dieser Schritt reale Fehler
-  entfernt – unter anderem ein frei erfundenes erwartetes Ergebnis –, er ist also nicht
-  formal. Das ist der erste Punkt für die nächste Sitzung.
+  spätestens bei der Segment-Extraktion – ist sie nachzuholen. Bei den Aufgaben, wo sie
+  gelaufen ist, hat sie in jeder einzelnen Datei etwas gefunden; der Schritt ist also
+  nicht verzichtbar.
 - **Die drei Synthese-Auswertungen fehlen**: der sprachübergreifende Befehlsvergleich für
   die neuen Sprachteile, die Gegenüberstellung SN-044 gegen SN-045 und die
   Accessibility-Gesamtzählung über beide Dokumente. Sie waren als Abschluss der
@@ -152,7 +154,7 @@ norwegischen und der dänischen Flagge mit einem zusätzlichen diagonalen Strich
 - **Segmente:** keine neuen Segmente extrahiert; alle neuen Seiten bleiben auf
   `inspected`.
 - **Aufgaben:** acht deutsche Aufgaben von Platzhalter auf Entwurf gefüllt; damit alle 14.
-- **Neue Widersprüche:** DSC-040 bis DSC-052, davon DSC-042, DSC-043, DSC-044, DSC-045,
+- **Neue Widersprüche:** DSC-040 bis DSC-053, davon DSC-042, DSC-043, DSC-044, DSC-045,
   DSC-047 und DSC-048 mit hoher Schwere. Zwei neue Blocker: BLK-006 und BLK-007. Keiner
   still gelöst.
 - **Geänderte Dateien:** `content/tasks/sn-045-plus/de/*.json` (acht Aufgaben),

@@ -764,3 +764,23 @@ belegt, nicht aus einer Zusammenfassung.
     zum Speichern der Satellitendaten fehlte bisher in der Liste der wiederkehrenden
     Werte dieser Generation. Sie ist unverändert übernommen.
 - **Status:** offen – für den technischen Review gesammelt
+
+### DSC-053 – Die Sprachmarke des dänischen Teils ist eine zusammengesetzte Flagge (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 1 und 101
+- **Befund:** Die Flaggenmarke vor dem dänischen Titel ist keine dänische Flagge. Bei
+  hoher Auflösung ist sie diagonal geteilt: links die **norwegische** Flagge (blaues Kreuz
+  mit weißem Rand), rechts ein rot-weiß-rotes Feld entsprechend der rechten Hälfte der
+  **dänischen** Flagge, dazu ein durchgehender weißer Diagonalstrich. Auf Seite 101, dem
+  Deckblatt des dänischen Sprachteils, steht dieselbe verunglückte Marke.
+- **Prüfweg:** Mit `scripts/crop-pdf-region.py` bei 500 dpi (Seite 101) und 1400 dpi
+  (Seite 1) nachgerendert. Bei den 150 dpi der regulären Seitenprüfung ist die
+  Zusammensetzung nicht erkennbar – der Seitenrecord zu Seite 1 nannte sie deshalb bisher
+  schlicht „die norwegische Flagge", was nur die halbe Marke trifft.
+- **Warum das zählt:** Die zehn Sprachen des Dokuments sind **ausschließlich** über
+  Flaggen markiert; kein Sprachname ist ausgeschrieben. Wer die Marke nicht sieht oder
+  nicht zuordnen kann, findet seinen Sprachteil nicht. Eine falsche Marke führt zusätzlich
+  aktiv in die Irre. Für die HTML-Anleitung folgt daraus, dass die Sprachauswahl den
+  Sprachnamen als Text führen muss und eine Flagge allenfalls schmückt.
+- **Schwere:** mittel (Auffindbarkeit des richtigen Sprachteils) · **Status:** offen – an
+  THITRONIK zu melden

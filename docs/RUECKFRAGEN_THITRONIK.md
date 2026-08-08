@@ -327,6 +327,7 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Revisionsstände der Kurzanleitung widersprechen sich (Rev. 1.3.2 gegenüber Rev. 1.0 auf dem abgebildeten Umschlag)                    | DSC-049                        |
 | Google-Play-Abzeichen so grob gerastert, dass es auch bei 900 dpi unlesbar bleibt                                                     | DSC-051, S. 14                 |
 | Vier Fragen zu den Ausgängen, die die Quelle gar nicht beantwortet (Empfänger, Grenzwerte, Abbruch, Zustand nach Neustart)            | DSC-052, S. 23                 |
+| Sprachmarke des dänischen Teils ist eine zusammengesetzte Flagge (links norwegisch, rechts dänisch, plus Diagonalstrich)              | DSC-053, S. 1 und 101          |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

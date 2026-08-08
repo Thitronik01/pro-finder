@@ -49,12 +49,15 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 143 ungeprueften Seiten i
   sind bewusst **ohne** die SMS-Befehle geschrieben (BLK-005); wo eine Aufgabe dadurch
   unvollständig bleibt – Ausgänge, Geofencing, Zielrufnummern, Fehlerbehebung – steht das
   ausdrücklich im `change_reason`, statt die Lücke zu verdecken;
-- die Extraktion hat **dreizehn neue Registerpositionen** erzeugt (DSC-040 bis DSC-052),
-  die ausschließlich **den deutschen Text selbst** betreffen: drei falsche Querverweise,
-  ein Verweis, der inhaltlich ins Leere führt, ein Statusbericht mit Feldern, die das
+- die Extraktion hat **vierzehn neue Registerpositionen** erzeugt (DSC-040 bis DSC-053).
+  Dreizehn davon betreffen **den deutschen Text selbst**: drei falsche Querverweise, ein
+  Verweis, der inhaltlich ins Leere führt, ein Statusbericht mit Feldern, die das
   zugehörige Kapitel nicht erklärt, und eine Berechtigungsregel, die nirgends
   ausgeschrieben ist. Das bestätigt die mit DSC-016 begonnene Linie: „geprüfter deutscher
-  Master" heißt nicht „übernommener deutscher Text";
+  Master" heißt nicht „übernommener deutscher Text". DSC-053 betrifft dagegen die
+  Sprachmarken: die Marke des dänischen Teils ist eine zusammengesetzte Flagge aus
+  norwegischer und dänischer Hälfte – bei 150 dpi nicht erkennbar, mit dem neuen
+  Ausschnittswerkzeug auf den Seiten 1 und 101 belegt;
 - [HANDOVER_PROMPT.md](HANDOVER_PROMPT.md) enthält einen wörtlich übergebbaren Startprompt
   für die Folgesitzung;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
@@ -106,13 +109,12 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 143 ungeprueften Seiten i
   Seitenbild gehalten. Der Status `inspected` bedeutet ohnehin nur „visuell angesehen";
   hier fehlt zusätzlich die eingebaute zweite Meinung. Nachzuholen spätestens bei der
   Segment-Extraktion;
-- von den acht neu gefüllten deutschen Aufgaben sind **sieben** einzeln gegen die
-  Quellseiten gegengeprüft worden. Dabei wurden unter anderem ein erfundenes erwartetes
-  Ergebnis, eine nicht belegbare Farbangabe und zwei Kartenlinks entfernt – der Schritt
-  ist also nicht formal. **`10-statusbericht.json` ist noch nicht gegengeprüft**; der Lauf
-  ist vorher abgebrochen. Die Datei ist daran erkennbar, dass ihr `change_reason` keinen
-  Gegenprüfungsvermerk trägt. Auch eine bestandene Gegenprüfung ersetzt keinen fachlichen
-  Review: sämtliche technischen Werte sind weiterhin unbestätigt;
+- **alle acht** neu gefüllten deutschen Aufgaben sind einzeln gegen die Quellseiten
+  gegengeprüft worden; der Vermerk steht je Datei im `change_reason`. Der Schritt ist
+  nicht formal: entfernt wurden unter anderem ein frei erfundenes erwartetes Ergebnis,
+  eine nicht belegbare Farbangabe, zwei Kartenlinks und – im Statusbericht – ein zugedeckter
+  Widerspruch zwischen der Betriebsartentabelle und dem Fließtext. Das ersetzt trotzdem
+  keinen fachlichen Review: sämtliche technischen Werte sind weiterhin unbestätigt;
 - Netlify Preview, Zugriffsschutz und internes Staging: nicht verbunden/nicht abgenommen;
 - Karten-Andruck, QR, NFC, Braille, Reflexion und Tests mit betroffenen Personen: offen;
 - englischer Pilot: nur Struktur/Platzhalter, kein unabhängiger Sprachreview;
