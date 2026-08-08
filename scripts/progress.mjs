@@ -13,7 +13,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { computeOverall, documentProgress, WEIGHTS, WORKSTREAM_LABELS } from '../lib/progress.mjs';
+import {
+  computeOverall,
+  documentProgress,
+  PROGRESS_END,
+  PROGRESS_START,
+  replaceProgressBlock,
+  WEIGHTS,
+  WORKSTREAM_LABELS,
+} from '../lib/progress.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAGES_DIR = path.join(ROOT, 'sources', 'pages');
@@ -92,11 +100,8 @@ if (process.argv.includes('--check')) {
 fs.writeFileSync(OUTPUT, json);
 
 // PROJECT_STATUS.md-Abschnitt zwischen Markern neu schreiben
-const START =
-  '<!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->';
-const END = '<!-- PROGRESS:END -->';
-let md = fs.readFileSync(STATUS_MD, 'utf8');
-const lines = [START, ''];
+const md = fs.readFileSync(STATUS_MD, 'utf8');
+const lines = [PROGRESS_START, ''];
 lines.push(`**Gesamtfortschritt: ${result.overall_percent} %**`, '');
 lines.push('| Workstream | Gewicht | Fortschritt |');
 lines.push('| --- | --- | --- |');
@@ -113,30 +118,14 @@ for (const d of documents) {
 }
 lines.push('');
 lines.push(`Offene Blocker: ${result.blockers.length} · Nächste Aktion: ${result.next_action}`);
-lines.push('', END);
+lines.push('', PROGRESS_END);
 const block = lines.join('\n');
-// Die Marker enthalten Klammern und Punkte. Ohne Maskierung würde
-// „(generiert … editieren)“ zur Capture-Group und der Ausdruck träfe seinen eigenen
-// Quelltext nie – der replace liefe stillschweigend ins Leere.
-const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-if (md.includes(START) && md.includes(END)) {
-  // Ersetzung ueber eine Funktion, nicht ueber einen String: in einem
-  // String-Replacement waeren $&, $1 und $` Sonderzeichen. Der Block enthaelt mit
-  // next_action freien Text aus progress-input.json, in dem ein $ vorkommen kann.
-  md = md.replace(new RegExp(`${escapeRegExp(START)}[\\s\\S]*?${escapeRegExp(END)}`), () => block);
-  // Geprueft wird, ob der Block jetzt dort steht - nicht, ob sich die Datei geaendert
-  // hat. Ein wiederholter Lauf mit unveraenderten Daten schreibt denselben Block und
-  // laesst die Datei zu Recht unberuehrt; die fruehere Bedingung (md === before)
-  // hielt genau diesen Normalfall faelschlich fuer einen Fehlschlag und brach die
-  // vorgeschriebene Abschlussreihenfolge progress -> format -> check ab.
-  if (!md.includes(block)) {
-    console.error('FEHLER: Der Fortschrittsblock in PROJECT_STATUS.md wurde nicht ersetzt.');
-    process.exit(1);
-  }
-} else {
-  md += `\n\n${block}\n`;
+const nextMd = replaceProgressBlock(md, block, PROGRESS_START, PROGRESS_END);
+if (nextMd === null) {
+  console.error('FEHLER: Der Fortschrittsblock in PROJECT_STATUS.md wurde nicht ersetzt.');
+  process.exit(1);
 }
-fs.writeFileSync(STATUS_MD, md);
+fs.writeFileSync(STATUS_MD, nextMd);
 
 console.log(
   `Gesamtfortschritt: ${result.overall_percent} % · PDF-Audit: ${streams.source_audit} % über ${allPages.length} Seiten`,
