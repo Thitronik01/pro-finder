@@ -176,9 +176,13 @@ ist als eigene Aufgabe vorgemerkt.
   `docs/RUECKFRAGEN_THITRONIK.md`, `docs/HANDOVER_PROMPT.md`, `docs/progress-input.json`,
   `docs/progress.json`, `docs/PROJECT_STATUS.md`, `docs/HANDOFF.md` sowie
   `scripts/progress.mjs` (ein Fehler, siehe unten). Kein Anwendungscode geändert.
-- **Tests:** `npm run check` grün (Format, Lint, Types, 17 Unit-Tests, Content, Tokens,
-  Karte, Referenz, Secrets, Lockfile, Fortschritt). Kein Playwright/axe-Lauf, keine
-  manuelle AT-Matrix, kein Produktions-Build.
+- **Tests:** `npm run check` lokal grün (Format, Lint, Types, 17 Unit-Tests, Content,
+  Tokens, Karte, Referenz, Secrets, Lockfile, Fortschritt). **CI zu Commit `4290171` ist
+  vollständig grün**, alle drei Jobs: „Code, content, security and build" (Prüfkette und
+  Produktions-Build), „Supabase reset and RLS tests" und „Playwright and axe". Die beiden
+  letzten sind lokal nicht gelaufen – Docker startet hier nicht, und ein Browserlauf war
+  nicht Teil dieser Sitzung; belegt sind sie damit ausschließlich durch CI. Keine manuelle
+  AT-Matrix.
 - **Fortschritt:** gesamt 30,7 %; PDF-Audit 14,8 % über 323 Seiten.
 
 ```text
