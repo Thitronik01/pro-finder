@@ -1,169 +1,196 @@
 # Handoff
 
-Stand: 2026-08-07. Der Pilot ist nicht freigabefähig; Details und Prozentwerte stehen in
+Stand: 2026-08-08. Der Pilot ist nicht freigabefähig; Details und Prozentwerte stehen in
 `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-- `npm run check` läuft erstmals vollständig grün. Dabei zwei stille Fehler behoben:
-  - der Secret-Scanner meldete die korrekte, leere `.env.example` als belegten Secret-Wert,
-    weil `\s*` im Muster über den Zeilenumbruch hinweg auf den Namen der Folgezeile traf;
-  - der generierte Fortschrittsblock in `PROJECT_STATUS.md` wurde nie ersetzt, weil die
-    Klammern im Marker-Text unmaskiert in ein `RegExp` gingen und der Ausdruck seinen
-    eigenen Quelltext nicht traf. Der `includes`-Guard schlug an, der `replace` lief ins
-    Leere, die Datei wurde unverändert zurückgeschrieben – ohne Fehlermeldung. Der Fall
-    bricht jetzt hart ab.
-- `next-env.d.ts` von Prettier ausgenommen: die Datei wird von `next typegen` mit CRLF und
-  doppelten Anführungszeichen regeneriert, sodass `format:check` nach jedem `typecheck`
-  im selben `npm run check` erneut fehlgeschlagen wäre.
-- `tmp/` in `.gitignore` aufgenommen (gerenderte PDF-Seiten der Seitenprüfung).
-- PDF-Batch 3: DOC-IBA-SN045 Seiten 37–46 (englischer Teil, intern Page 11–20 von 23)
-  vollständig visuell geprüft und als `inspected` erfasst.
-- PDF-Batch 4: Seiten 47–56 – Ende des englischen Teils (intern Page 21–23 von 23,
-  einschließlich der vollständigen technischen Daten) und Beginn des französischen Teils
-  (Deckblatt, Inhaltsverzeichnis, intern Page 3–6 de 25).
-- PDF-Batch 5: Seiten 57–66 – französischer Teil, intern Page 7–16 de 25, einschließlich
-  der vollständigen Betriebsartentabelle und der GPS-Diagnose.
-- PDF-Batch 6: Seiten 67–76 – Rest des französischen Teils. Damit sind Deutsch, Englisch
-  und Französisch vollständig geprüft.
-- PDF-Batch 7: Seiten 77–86 – Beginn des tschechischen Teils bis interne Strana 9 z 23.
-- PDF-Batch 8: Seiten 87–96 – tschechischer Teil bis interne Strana 19 z 23, einschließlich
-  LED-Tabelle, Kapitel 4 und dem Beginn der Funktionen.
-- PDF-Batch 9: Seiten 97–100 – Abschluss des tschechischen Teils. Damit sind vier
-  vollständige Sprachteile geprüft.
-- `docs/RUECKFRAGEN_THITRONIK.md` angelegt: acht entscheidungsreife Fragen mit wörtlichen
-  Belegen, sortiert nach Dringlichkeit. Das ist der Punkt, an dem der Pilot ohne Antworten
-  nicht sinnvoll weiterläuft.
-- Fünf deutsche Aufgaben aus geprüften Quellseiten extrahiert: Montageort (S. 7),
-  Anschlüsse (S. 8 und 11), SIM-Karte (S. 13), Technische Daten und Support (beide S. 25).
-  Zusammen mit der Status-LED sind 6 von 14 Aufgaben inhaltlich gefüllt. Ausgewählt wurden
-  gezielt die Aufgaben, die an **keiner** offenen Rückfrage hängen.
-- `docs/HANDOVER_PROMPT.md` angelegt: ein wörtlich übergebbarer Startprompt für die
-  Folgesitzung, mit Vorgehen, bekanntem Quellenmuster und Umgebungsbesonderheiten.
-- `scripts/render-pdf-pages.py` ins Repository aufgenommen. Das Werkzeug lag bisher nur im
-  Scratchpad; ohne es müsste jede Folgesitzung die Seitenprüfung neu einrichten.
-- `docs/RUECKFRAGEN_THITRONIK.md` ist jetzt die laufende Sammelstelle: neue Funde halten
-  die Arbeit nicht mehr auf, sondern werden dort unter „Laufend ergänzt" eingetragen.
-- CI ist erstmals vollständig grün: `npm ci`, Prüfkette, Produktions-Build, der
-  Supabase-Job mit `db reset`, `db lint` und pgTAP sowie Playwright/axe mit 32 Tests.
-- Textebene von DOC-IBA-SN045 vollständig ausgewertet: **1 von 247 Seiten** enthält
-  lesbaren Text; 34 Seiten liefern ausschließlich Steuerzeichen U+0003 und werden von
-  zeichenzählenden Prüfungen fälschlich für zugänglich gehalten. Tabelle in `IST_AUDIT.md`.
-- Neunzehn neue Registereinträge DSC-013 bis DSC-031, darunter sechs mit hoher Schwere.
-- Härtungsmigration und pgTAP-Negativtests statisch durchgesehen (siehe unten).
+### Seitenprüfung: 104 → 180 von 323 Seiten
 
-## Kritischer technischer Wiedereinstieg
+- 76 neue Seitenrecords: DOC-IBA-SN045 Seiten 121–144, 151–172, 191–197, 221–232 und
+  241–246 sowie DOC-BMA-SN044 Seiten 1–5.
+- Die Records sind **maschinell gegen die Original-PDF abgeglichen**: Seitenmaße und
+  Zeichenzahl je Seite müssen mit `tmp/pagestats.json` übereinstimmen, Seiten dürfen sich
+  nicht doppeln, und eine bereits geprüfte Seite wird nie überschrieben. Das erledigt das
+  neue `scripts/merge-page-records.mjs`.
+- **DOC-BMA-SN044 ist erstmals angefasst** und unterscheidet sich grundlegend: es hat eine
+  echte Textebene mit über 1000 lesbaren Zeichen je Seite, während DOC-IBA-SN045 auf 247
+  Seiten genau eine Seite mit lesbarem Text hat. Bei diesem Dokument ist deshalb nicht die
+  Frage „gibt es Text", sondern ob die Textebene Lesereihenfolge, Tabellenstruktur und
+  Bildbeschriftungen korrekt wiedergibt.
+- Der Seitenrecord zu DOC-BMA-SN044 Seite 4 zeigt, worauf es dabei ankommt: die
+  Klemmenbelegung ist dort über **Aderfarben** codiert (Pin 2 rot mit rosa Streifen, Pin 3
+  schwarz mit weißem Streifen …). Diese Information trägt allein die Abbildung; sie ist
+  jetzt als Text erfasst. Auch der Tippfehler der Quelle – „Pin 5 Messeingang (U5 )" mit
+  überzähligem Leerzeichen – ist unverändert übernommen.
 
-Die Härtungsmigration `20260806204417_security_hardening.sql` und
-`supabase/tests/security_behavior_test.sql` sind vorhanden und statisch geprüft. Die
-Migration ersetzt die umgehbaren Freigaben durch schmale `private.transition_*`-Funktionen
-(`security definer`, `search_path = ''`), entzieht `authenticated` die Direktrechte,
-vergibt nur spaltenweise `grant`s, bindet Autorisierung an `project_memberships`, berechnet
-Prüfsummen per Trigger und erzwingt das Vier-Augen-Prinzip zusätzlich über
-`CHECK`-Constraints.
+### Alle vierzehn deutschen Aufgaben sind gefüllt
 
-**Das ist bisher eine Konstruktionsaussage, keine Verhaltensaussage.** Docker Desktop ist
-installiert, startet in dieser Umgebung aber keinen Daemon; `supabase db reset --local` und
-`supabase test db --local` konnten erneut nicht ausgeführt werden. Erst ein grüner CI-Job
-`Supabase reset and RLS tests` gilt als Nachweis. Bis dahin bleibt Staging gesperrt.
+Die acht verbliebenen Platzhalter sind aus geprüften Quellseiten geschrieben:
+Gerätegeneration bestimmen, App und Aktivierung, Zielrufnummern, Meldungen, Geofencing,
+Statusbericht, Ausgänge, Fehlerbehebung. Jede Aussage nennt Dokument, PDF-Seite und
+Seitenregion; jede Datei begründet im `change_reason`, was bewusst fehlt.
 
-Erste Aktion für die nächste Sitzung mit funktionierendem Docker:
+Konsequent durchgehalten wurde die **Befehlssperre**: kein SMS-Befehl steht in `steps`,
+`warnings`, `error_cases`, `goal`, `expected_result` oder `tables_md`. Wo eine Aufgabe
+dadurch unvollständig bleibt, steht das ausdrücklich in der Datei statt die Lücke zu
+verdecken – bei „Ausgänge" etwa: ohne Befehl lässt sich kein Ausgang schalten.
 
-```bash
-npx supabase start --exclude studio,imgproxy,mailpit,edge-runtime,logflare,vector,supavisor,realtime --yes
-npx supabase db reset --local
-npx supabase db lint --local --level warning --fail-on error
-npx supabase test db --local
-```
+Was dabei trotzdem entstand, ist der eigentliche Ertrag: die **Betriebsartentabelle**, die
+**Rollentabelle der Zielrufnummern**, die **LED-Diagnosetabelle** und die **Pinbelegung**
+liegen in der Quelle nur als Bild vor und sind jetzt als Text und als Markdown-Tabelle
+erfasst. Das Diagramm der Programmier-SMS, das seine Information über Verbindungslinien
+transportiert, ist als Abbildung mit Alternativtext, Langbeschreibung und
+Bestandteilliste aufgelöst – ohne die Beispielrufnummern zu übernehmen.
 
-Statisch aufgefallen und beim ersten echten Lauf zu prüfen: `security_behavior_test.sql`
-setzt voraus, dass `seed.sql` ein Projekt mit dem Slug `pro-finder-pilot` anlegt und dass
-auf `auth.users` kein Trigger existiert, der `profiles` automatisch befüllt. Beides trifft
-im aktuellen Stand zu, ist aber nicht durch einen Testlauf bestätigt.
+### Dreizehn neue Registerpositionen, alle im deutschen Original
 
-Ein Restrisiko bleibt bewusst offen: eine Person, deren Projektrolle zwischen
-`technically_validated` und `language_reviewed` von `technical_reviewer` auf
-`language_reviewer` geändert wird, könnte beide Reviews derselben Übersetzung abgeben. Das
-erfordert Adminrechte und ist im Auditlog sichtbar, ist aber nicht technisch verhindert.
+DSC-040 bis DSC-052. Sie betreffen **den deutschen Text selbst**, nicht seine
+Übersetzungen:
 
-## Inhaltlicher Wiedereinstieg
+- **drei falsche Querverweise** (5.4 statt 5.5 auf Seite 9; 1.5.2 statt 1.5.3 in der
+  Betriebsartentabelle; dazu der schon bekannte Fall). Die Ortsangabe zu DSC-028 war
+  falsch und ist berichtigt: der Fehler steht im Fließtext von Abschnitt 1.3 auf Seite 9,
+  nicht im roten Kasten auf Seite 11 – der verweist korrekt;
+- **ein Verweis, der ins Leere führt**: Seite 19 verweist für Blinker und Sirene auf
+  Abschnitt 5.1, der beides nicht erwähnt und außerdem einen Anruf beschreibt, obwohl
+  seine Überschrift SMS ankündigt;
+- **ein Statusbericht, der nicht zu seiner eigenen Beschreibung passt**: die Einleitung
+  definiert Felder, die in keiner der neun Beispiel-SMS vorkommen, und die Beispiele
+  enthalten Felder, die das Kapitel nicht erklärt;
+- **eine Berechtigungsregel, die nirgends ausgeschrieben ist** – siehe Blocker;
+- **eine Barriere am Gerät statt am Dokument**: die GPS-Diagnose unterscheidet zwei ihrer
+  drei Zustände ausschließlich über die LED-Farbe.
 
-Der Seiten-Audit hat einen Befund erzeugt, der eine Projektregel widerlegt: SMS-Befehle
-sind **nicht** sprachneutral. Dieselbe interne Seite 19 von 23 nennt auf Deutsch
-`fence an`/`fence aus` und auf Englisch `fence on`/`fence off`; die Hilfe-SMS nennt
-`SCHARF`/`UNSCHARF` gegenüber `ARM`/`DISARM`. Batch 4 hat das Muster erhärtet:
-`a an`/`a aus`/`a impuls` gegenüber `a on`/`a off`/`a pulse` und `anlernmodus an`/`aus`
-gegenüber `teach mode on`/`off`. Umgekehrt sind alle rein alphanumerischen Befehle
-(`status`, `position`, `a %min%`) identisch – betroffen ist also genau das, was Wörter
-enthält. Das spricht für bewusste Lokalisierung, bestätigt ist es nicht.
+Fünf davon sind als Fragen 9 bis 13 in `RUECKFRAGEN_THITRONIK.md` entscheidungsreif
+formuliert, die übrigen unter „Laufend ergänzt".
 
-Konsequenz: `scripts/check-tokens.mjs` darf für Befehle keine Gleichheit über Sprachen
-erzwingen – der Kommentar behauptete das, das Muster fehlte ohnehin; beides ist jetzt
-klargestellt. Bis THITRONIK die Befehlssprache klärt (BLK-005), wird kein Befehl
-übersetzt und keiner unverändert übernommen.
+### Vier neue Prüfungen – jede hat sofort einen realen Fehler gefunden
 
-Batch 5 hat den Befund noch einmal verschärft: Die französische Fassung nennt an derselben
-Stelle, an der Deutsch `fence aus` und Englisch `fence off` steht, die Wortgruppe
-« desactiver le gardiennage » – ohne Akzent und laut Text über die THITRONIK App statt per
-SMS an die Modulnummer (DSC-026). Das sieht aus, als sei ein Befehl wie Fließtext
-übersetzt worden.
+1. **Jede Markdown-Tabelle muss darstellbar sein.** `TaskView` rendert eine unparsbare
+   Tabelle als `null`: kein Fehler, keine Lücke, der Inhalt ist einfach weg. Gefunden
+   wurde eine LED-Tabelle in `05-app-und-aktivierung.json`, an die ein Fließtext-Absatz
+   angehängt war – sie wäre in der Oberfläche spurlos verschwunden. Genau die Tabellen
+   tragen hier die Information, die in der Quelle nur als Bild vorliegt.
+2. **Keine Koordinaten, Kartenlinks oder Rufnummern** aus den Beispiel-SMS im
+   Content-Layer. Gefunden wurden zwei Kartenlinks in `09-geofencing.json`.
+3. **Jeder Schritt, Warnhinweis und Fehlerfall** einer Nicht-Platzhalter-Aufgabe braucht
+   eine eigene Quelle. Das Schema erzwingt bisher nur eine Quelle je Aufgabe.
+4. **Jeder DSC-Verweis muss zeigen, wohin er sagt.** Ein toter Verweis ist schlimmer als
+   ein fehlender: sobald das Register bis zu dieser Nummer wächst, zeigt er stillschweigend
+   auf einen fremden Sachverhalt. Die Prüfung hat beim ersten Lauf zwei doppelt vergebene
+   Nummern gefunden (DSC-038 und DSC-039) – beim Anlegen der neuen Positionen war an die
+   _letzte_ Überschrift der Datei angeknüpft worden statt an die _höchste_ Nummer. Die
+   Datei ist nicht durchgehend aufsteigend sortiert; DSC-035 steht am Ende, DSC-038 und
+   DSC-039 weiter oben. Die neuen Positionen tragen jetzt DSC-040 bis DSC-052, das
+   Register ist lückenlos.
 
-Zwei weitere Befunde treffen Projektannahmen:
+Der Tabellenparser liegt jetzt einmal in `lib/content/markdown-table.ts` statt in zwei
+Kopien in Renderer und Prüfung, damit beide nicht auseinanderlaufen können.
 
-1. **Der deutsche Master ist nicht fehlerfrei.** Der Verweis auf die Ausgangssteuerung
-   nennt schon im Deutschen Kapitel 5.4 statt 5.5; Englisch und Französisch haben ihn
-   korrekt übersetzt (DSC-028). Ebenso wurde der Widerspruch „ALARM"/„AAlarm" in beide
-   Übersetzungen mitgeführt (DSC-016). Der deutsche Text braucht denselben technischen
-   Review wie die Übersetzungen – „geprüfter deutscher Master" darf nicht heißen
-   „übernommener deutscher Text".
-2. **Die Sprachfassungen transportieren nicht denselben Inhalt.** Die SIM-Empfehlung
-   lautet deutsch t-mobile/Vodafone, englisch nur allgemein „M2M-Karte", französisch
-   namentlich die Firma DOMOTEC (DSC-027). Dazu kommen ein abweichender technischer Wert
-   (DSC-020) und zwei zusätzliche interne Seiten im Französischen (DSC-021). Vor der
-   Segment-Extraktion muss geklärt sein, welche Fassung gilt.
+### Barrierefreiheit der Anwendung
+
+Die Sicherheitsklasse eines Warnhinweises steht jetzt als **Wort** in der Ausgabe
+(„Hinweis", „Achtung", „Warnung, sicherheitskritisch"). Vorher unterschieden sich ein
+normaler und ein sicherheitskritischer Hinweis nur durch Rahmenbreite und
+Hintergrundfarbe – für Screenreader, Forced-Colors-Modi und Schwarzweißdruck also gar
+nicht. Mit den jetzt gefüllten Aufgaben stehen erstmals echte sicherheitskritische
+Warnungen auf den Seiten, an denen das sichtbar wird.
+
+### Neues Werkzeug für die Seitenprüfung
+
+`scripts/crop-pdf-region.py` rendert einen Seitenausschnitt in relativen Koordinaten hoch
+aufgelöst. Ohne das wurde bei Flaggen, LED-Farben, Kabelfarben und Fußnoten geraten – und
+genau das verbietet der Projektauftrag. Beim ersten Einsatz hat es belegt, dass die Flagge
+auf Seite 101 keine dänische ist, sondern eine **verunglückte Überlagerung der
+norwegischen und der dänischen Flagge mit einem zusätzlichen diagonalen Strich**. Bei
+150 dpi war das nicht zu erkennen.
+
+## Was in dieser Sitzung NICHT gelungen ist
+
+- **Die Seitenprüfung ist nicht durchgelaufen.** Geplant waren alle 219 offenen Seiten in
+  23 Batches; das Nutzungslimit der Sitzung hat 21 Batches abgebrochen. Übernommen wurden
+  nur die Seiten, deren Records vollständig und maschinell geprüft vorlagen. Offen bleiben
+  143 Seiten.
+- **Die adversariale Gegenprüfung der Seitenrecords ist ausgefallen.** Für die 76 neuen
+  Records lief **kein** zweiter Agent, der jede Behauptung gegen das Seitenbild geprüft
+  hätte. Der Status `inspected` bedeutet ohnehin nur „visuell angesehen", aber die
+  eingebaute zweite Meinung fehlt hier. Bei der nächsten Berührung dieser Seiten – also
+  spätestens bei der Segment-Extraktion – ist sie nachzuholen.
+- **Eine der acht Aufgaben ist nicht gegengeprüft.** `10-statusbericht.json` wurde
+  gefüllt, aber der zweite Agent, der jede Aussage gegen das Seitenbild hält, lief für sie
+  nicht mehr durch. Die Datei ist daran erkennbar, dass ihr `change_reason` keinen
+  Gegenprüfungsvermerk trägt. Bei den sieben geprüften hat dieser Schritt reale Fehler
+  entfernt – unter anderem ein frei erfundenes erwartetes Ergebnis –, er ist also nicht
+  formal. Das ist der erste Punkt für die nächste Sitzung.
+- **Die drei Synthese-Auswertungen fehlen**: der sprachübergreifende Befehlsvergleich für
+  die neuen Sprachteile, die Gegenüberstellung SN-044 gegen SN-045 und die
+  Accessibility-Gesamtzählung über beide Dokumente. Sie waren als Abschluss der
+  Seitenprüfung vorgesehen und sind mit ihr ausgefallen.
+- Ein parallel arbeitender Agent hat **gemeinsam genutzten Code umgebaut**, obwohl sein
+  Auftrag auf eine einzige Datei begrenzt war (Auslagerung des Tabellenparsers, zwei neue
+  Unit-Tests, eine CSS-Klasse). Das Ergebnis ist geprüft und besser als der vorherige
+  Stand – es wurde nachvollzogen und behalten, nicht blind übernommen. Für künftige
+  Parallelläufe steht die Konsequenz in `HANDOVER_PROMPT.md`: nach jedem Lauf `git status`
+  auf Dateien prüfen, die niemand anfassen sollte.
 
 ## Externe/menschliche Blocker
 
-- Docker-Daemon lokal nicht startbar;
+- Docker-Daemon lokal nicht startbar; Supabase läuft ausschließlich in CI (Job ist grün);
 - Netlify-Site und Zugriffsschutz nicht verbunden;
 - finale Karten-URL und Supportkontakt unbestätigt;
 - Braille-Dienstleister und physische Testpersonen fehlen;
 - keine technische Freigabe sicherheitskritischer Inhalte, insbesondere der SMS-Befehle,
-  der Spannungsschwellen 11,2 V / 12,5 V und des Geofencing-Radius von ca. 900 m;
+  der Spannungsschwellen 11,2 V / 12,5 V, der 13,5 V für fünf Minuten zum Speichern der
+  Satellitendaten und des Geofencing-Radius von ca. 900 m;
 - keine unabhängige englische Sprachprüfung.
 
 ## Abschlussprotokoll
 
-- Bearbeitete PDF-Seiten: DOC-IBA-SN045 Seiten 37–46 (Batch 3), 47–56 (Batch 4) und 57–66
-  (Batch 5), zusätzlich die deutschen Seiten 9, 21, 24 und 25 zur Gegenprüfung.
-  Gesamtstand `inspected`: 70 von 323 Seiten.
-- Segmente: keine neuen Segmente extrahiert; alle drei Batches bleiben auf `inspected`.
-- Neue Widersprüche: DSC-013 bis DSC-031, davon DSC-013, DSC-014, DSC-020, DSC-026,
-  DSC-027 und DSC-028 mit hoher Schwere. Keiner still gelöst.
-- Geänderte Dateien: `scripts/check-secrets.mjs`, `scripts/progress.mjs`,
-  `scripts/check-tokens.mjs`, `.prettierignore`, `.gitignore`,
-  `sources/pages/DOC-IBA-SN045.json`, `docs/DISCREPANCIES.md`,
-  `docs/TERMINOLOGY_CONFLICTS.md`, `docs/progress-input.json`, `docs/progress.json`,
-  `docs/PROJECT_STATUS.md`, `docs/HANDOFF.md` sowie eine projektweite Prettier-Formatierung.
-- Tests: `npm run check` grün (Format, Lint, Types, 15 Unit-Tests, Content, Tokens, Karte,
-  Referenz, Secrets, Fortschritt). Kein Supabase-Lauf, kein Playwright/axe-Browserlauf,
-  keine manuelle AT-Matrix.
-- Fortschritt: gesamt 18,0 %; PDF-Audit 5,4 % über 323 Seiten.
+- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045 Seiten 121–144, 151–172, 191–197, 221–232,
+  241–246; DOC-BMA-SN044 Seiten 1–5. Gesamtstand `inspected`: **180 von 323**.
+- **Segmente:** keine neuen Segmente extrahiert; alle neuen Seiten bleiben auf
+  `inspected`.
+- **Aufgaben:** acht deutsche Aufgaben von Platzhalter auf Entwurf gefüllt; damit alle 14.
+- **Neue Widersprüche:** DSC-040 bis DSC-052, davon DSC-042, DSC-043, DSC-044, DSC-045,
+  DSC-047 und DSC-048 mit hoher Schwere. Zwei neue Blocker: BLK-006 und BLK-007. Keiner
+  still gelöst.
+- **Geänderte Dateien:** `content/tasks/sn-045-plus/de/*.json` (acht Aufgaben),
+  `sources/pages/DOC-IBA-SN045.json`, `sources/pages/DOC-BMA-SN044.json`,
+  `scripts/check-content.mjs`, `scripts/crop-pdf-region.py` (neu),
+  `scripts/merge-page-records.mjs` (neu), `lib/content/markdown-table.ts` (neu),
+  `components/TaskView.tsx`, `components/TaskView.module.css`,
+  `tests/unit/content.test.ts`, `docs/DISCREPANCIES.md`,
+  `docs/RUECKFRAGEN_THITRONIK.md`, `docs/HANDOVER_PROMPT.md`, `docs/progress-input.json`,
+  `docs/progress.json`, `docs/PROJECT_STATUS.md`, `docs/HANDOFF.md`.
+- **Tests:** `npm run check` grün (Format, Lint, Types, 17 Unit-Tests, Content, Tokens,
+  Karte, Referenz, Secrets, Lockfile, Fortschritt), Produktions-Build grün. Kein
+  Playwright/axe-Lauf in dieser Sitzung, keine manuelle AT-Matrix.
+- **Fortschritt:** gesamt 30,5 %; PDF-Audit 13,9 % über 323 Seiten.
 
 ```text
 Resume from:
-Dokument DOC-IBA-SN045, PDF-Seite 101, Segment –, Sprache da.
+Dokument DOC-BMA-SN044, PDF-Seite 6, Segment –, Sprache de.
 
 First action:
-PDF-Batch 10: DOC-IBA-SN045 Seiten 101–110 (dänischer Teil). Die Seitenprüfung ist der
-größte Fortschrittshebel – 20 % Gewicht bei aktuell 8 %, 219 von 323 Seiten stehen noch
-auf `not_started`. Vorgehen, bekanntes Quellenmuster und Umgebungsbesonderheiten stehen
-in `docs/HANDOVER_PROMPT.md`.
+Zuerst die fehlende Gegenprüfung von `content/tasks/sn-045-plus/de/10-statusbericht.json`
+nachholen: Quellseiten 9, 10, 19 und 22 selbst rendern, jede Aussage gegen das Seitenbild
+halten, Nicht-Belegbares entfernen statt abschwächen, dann den Vermerk „Gegengeprüft gegen
+die Quellseiten am <Datum>." an den change_reason hängen. Das ist eine überschaubare Datei
+und der einzige Punkt, an dem gerade unbelegter Inhalt im Content-Layer stehen könnte.
 
-Parallel möglich, ohne auf THITRONIK zu warten: die acht verbliebenen deutschen Aufgaben
-teilweise füllen – alles außer dem SMS-Befehl selbst. Vorbild ist
-`content/tasks/sn-045-plus/de/03-anschluesse.json`.
+Danach: DOC-BMA-SN044 Seiten 6–14 prüfen. Dieses Dokument hat Vorrang vor den restlichen
+Sprachteilen von DOC-IBA-SN045: es ist die einzige Quelle für die Generation bis SN-044
+(von der bisher nur 1 der 14 Aufgaben existiert), es ist erst mit 5 von 72 Seiten geprüft,
+und als einziges Dokument mit echter Textebene erlaubt es die Gegenüberstellung von
+extrahiertem Text und Seitenbild. Der Text liegt vollständig in `tmp/bma-sn044-text.txt`
+(je Seite eingeleitet durch „===== PAGE n ====="), neu erzeugbar mit PyMuPDF.
 
-RUECKFRAGEN_THITRONIK.md sollte parallel an THITRONIK gehen; die Arbeit wartet aber nicht
-mehr darauf.
+Vorgehen, Werkzeuge und verbindliche Regeln stehen in `docs/HANDOVER_PROMPT.md`.
+
+Danach: die restlichen 76 Seiten von DOC-IBA-SN045 (101–120, 145–150, 173–190, 198–220,
+233–240, 247) und die drei ausgefallenen Synthese-Auswertungen.
+
+RUECKFRAGEN_THITRONIK.md enthält jetzt dreizehn entscheidungsreife Fragen und sollte an
+THITRONIK gehen; die Arbeit wartet aber nicht darauf.
 ```

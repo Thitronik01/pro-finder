@@ -1,25 +1,534 @@
 {
   "slug": "zielrufnummern",
-  "title": "Zielrufnummern einrichten",
+  "title": "Zielrufnummern einrichten und löschen",
   "generation": "sn-045-plus",
   "language": "de",
-  "goal": "Die Rufnummern festlegen, an die der Pro-finder Meldungen sendet.",
-  "prerequisites": [],
-  "warnings": [],
-  "steps": [],
-  "expected_result": null,
-  "error_cases": [],
-  "figures": [],
-  "tables_md": [],
+  "goal": "Sie legen fest, welche Telefonnummern der Pro-finder im Alarmfall benachrichtigt, kennen die drei Rollen dieser Nummern und können den gesamten Zielrufnummernspeicher wieder löschen.",
+  "prerequisites": [
+    "Die Nano-SIM-Karte ist in das Gerät eingelegt.",
+    "Der Pro-finder ist angeschlossen und an die Spannungsversorgung gelegt.",
+    "Sie wissen, welche Telefonnummern im Alarmfall benachrichtigt werden sollen. Bis zu zehn Nummern sind möglich.",
+    "Sie wissen für jede dieser Nummern, ob das Endgerät ein Smartphone ist.",
+    "Für das Löschen des Speichers: Sie kommen an den Hauptkabelbaum und an den Betriebsartenschalter des Geräts heran.",
+    "Für das Löschen des Speichers: Sie wissen, auf welcher Stellung der Betriebsartenschalter jetzt steht. Die Anleitung verlangt am Ende die Rückkehr auf die „Ausgangsposition“, nennt dafür aber keine Zahl."
+  ],
+  "warnings": [
+    {
+      "text": "Der Löschvorgang löscht immer den gesamten Zielrufnummernspeicher; einzelne Nummern lassen sich damit nicht entfernen. Zielrufnummern sind die Telefonnummern, die im Alarmfall benachrichtigt werden sollen – solange keine gespeichert ist, benachrichtigt der Pro-finder niemanden. Die Quelle sagt zum Zustand danach nur: „Der Speicher ist nun leer und kann mit einer neuen Programmier-SMS neu programmiert werden.“ Eine Frist nennt sie nicht. Diese digitale Anleitung ergänzt deshalb: Programmieren Sie neue Zielrufnummern, bevor Sie sich auf den Alarm des Geräts verlassen.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9 „Zielrufnummern löschen“, Einleitungssatz, Aufzählung der vier Schritte und Folgesatz (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, erster Absatz (aufgedruckt „Seite 13 von 23“)",
+          "note": "Dort steht, dass Zielrufnummern die im Alarmfall zu benachrichtigenden Telefonnummern sind."
+        }
+      ]
+    },
+    {
+      "text": "Über die Masternummer lassen sich laut Quelle „jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren“; auf demselben Weg lässt sich der Speicher auch überschreiben. Wer die Masternummer benutzen kann, kann den gesamten Zielrufnummernspeicher also ersetzen, ohne den Betriebsartenschalter zu betätigen. Ob dabei eine Bestätigung oder ein Kennwort verlangt wird, sagt die Quelle nicht. Diese digitale Anleitung ergänzt deshalb: Nehmen Sie als Masternummer nur eine Nummer, über die Sie selbst verfügen.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7, Tabellenzeile „Masternummer:“ (aufgedruckt „Seite 13 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, letzter Absatz „Mit der Masternummer können Sie den Speicher auch ohne Betätigung des Betriebsartenschalters überschreiben.“ (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Ob eine Zielrufnummer die Anlage steuern darf oder nur Meldungen erhält, entscheidet sich beim Programmieren an der Schreibweise: In der Beispieltabelle der Quelle steht vor einer autorisierten Nummer ein anderes Trennzeichen als vor einer nicht autorisierten. Im Fließtext wird diese Regel an keiner Stelle genannt – sie ist nur aus den drei Beispielen erschließbar. Ein falsches Zeichen macht aus einer steuerberechtigten Nummer eine reine Empfängernummer. Welche Zeichen gelten, gibt diese digitale Anleitung im Pilotstand nicht wieder; richten Sie die Nummern deshalb über die THITRONIK App ein oder arbeiten Sie mit Abschnitt 2.8 und der Beispieltabelle der Originalanleitung.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Tabelle unter „Beispiele für verschiedene Programmier-SMS:“, Zeilen 2 und 3 im Vergleich (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitte 2.7 und 2.8; beide beschreiben die Rollen beziehungsweise den SMS-Aufbau, ohne das Trennzeichen zu benennen (aufgedruckt „Seite 13 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Eine Zielrufnummer als Smartphone-Nummer zu kennzeichnen, ändert die Übertragung der Fahrzeugposition in einen anklickbaren Link. Die Quelle hebt dazu fett hervor: „Nur verwenden, wenn das Endgerät ein Smartphone ist.“",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "Roter Erläuterungstext im beschrifteten SMS-Diagramm, Fortsetzung von Abschnitt 2.8 (aufgedruckt „Seite 14 von 23“)",
+          "note": "Der zitierte Satz ist in der Quelle rot und fett gesetzt."
+        }
+      ]
+    },
+    {
+      "text": "Vor dem Löschen des Zielrufnummernspeichers muss die Nano-SIM-Karte im Gerät liegen. Die Quelle stellt diesen Hinweis dem Löschvorgang als roten Kasten mit Warndreieck voran: „Die Nano-SIM-Karte muss in das Gerät eingelegt sein!“",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9 „Zielrufnummern löschen“, roter Kasten mit Warndreieck und Signalwort „Hinweis:“ unmittelbar unter der Überschrift, vor dem Einleitungssatz (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Jede vom Pro-finder versendete SMS verursacht Kosten für Sie; deren Höhe hängt von Ihrem Netzbetreiber ab. Wenn Sie die Anlage per SMS oder Anruf steuern, sendet der Pro-finder jedes Mal eine Status-SMS.",
+      "safety_class": "normal",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.6 „Pro-finder per SMS oder Anruf steuern“ (aufgedruckt „Seite 13 von 23“)"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Sammeln Sie die Telefonnummern, die im Alarmfall benachrichtigt werden sollen. Genau das sind die Zielrufnummern; bis zu zehn Nummern können Sie speichern.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, erster Absatz (aufgedruckt „Seite 13 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie jeder dieser Nummern eine der drei Rollen zu. Die Masternummer steht beim Speichern an erster Stelle; über sie lassen sich jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren. Autorisierte Nummern dürfen die Ausgänge des Pro-finder per SMS steuern und Statusberichte anfordern. Nicht autorisierte Nummern haben keinen Zugriff auf die Funktionen der Anlage, sondern erhalten lediglich Statusmeldungen. Dieselbe Aufstellung steht als Tabelle in den Tabellen zu dieser Aufgabe.",
+      "expected": "Für jede Nummer steht fest, ob sie den Pro-finder steuern darf oder nur Meldungen erhält.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7, dreizeilige Tabelle ohne Kopfzeile (aufgedruckt „Seite 13 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Legen Sie fest, welche Nummer die Masternummer wird. Es ist die Telefonnummer, die beim Speichern der Zielrufnummern an erster Stelle steht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7, Tabellenzeile „Masternummer:“ (aufgedruckt „Seite 13 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "SMS-Diagramm, Beschriftung „1. Zielrufnummer (Masternummer)“ (aufgedruckt „Seite 14 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Notieren Sie jede Nummer mit ihrer Landesvorwahl, beginnend mit einem Pluszeichen – für Deutschland +49.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "SMS-Diagramm, Beschriftung „Landesvorwahl mit + beginnend (+49 für Deutschland)“ (aufgedruckt „Seite 14 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Richten Sie die Zielrufnummern mit der THITRONIK App ein. Die Quelle empfiehlt diesen Weg ausdrücklich: Die App führt Sie durch die einzelnen Schritte, und die Schritte der Kapitel 2.5 bis 2.8 – darunter das Programmieren der Zielrufnummern – entfallen dadurch.",
+      "expected": "Die Zielrufnummern sind gespeichert, ohne dass Sie eine SMS zusammenstellen müssen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4 „Pro-finder aktivieren“, zweiter Absatz (aufgedruckt „Seite 12 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Ohne App führt der Weg über eine Programmier-SMS an die Nummer des Pro-finder. Aus welchen Bestandteilen diese SMS besteht und in welcher Reihenfolge sie stehen, beschreibt die Abbildung weiter unten. Die genaue Zeichenfolge gibt diese digitale Anleitung im Pilotstand nicht wieder: Die Befehlssprache des Geräts ist bei THITRONIK noch offen, und Rufnummern gehören nicht in diese Inhalte. Nutzen Sie für diesen Schritt die THITRONIK App oder Abschnitt 2.8 der Originalanleitung.",
+      "expected": "Sobald die SMS empfangen wurden und die Nummern gespeichert wurden, blinkt die Status-LED grün, und es wird eine Status-SMS an den Absender der Programmier-SMS versendet.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, dritter Absatz (aufgedruckt „Seite 12 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.8 „Zielrufnummern programmieren“ (aufgedruckt „Seite 13 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Verwenden Sie in der Programmier-SMS keine Leerzeichen. Die Leerzeichen in der Abbildung dienen nur zu Darstellungszwecken. Auch bei mehr Empfängern erfolgt die Eingabe fortlaufend ohne Leerzeichen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.8, zweiter und dritter Satz (aufgedruckt „Seite 13 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Satz unter der Beispieltabelle: „Bei entsprechend mehr Empfängern erfolgt die Eingabe fortlaufend ohne Leerzeichen.“ (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Beachten Sie beim Übertragen der Abbildung: Das dort gezeigte Beispiel ist eines, bei dem alle Zielrufnummern autorisierte Nummern sind. Für eine nicht autorisierte Nummer sieht die Schreibweise anders aus – das zeigt erst die Beispieltabelle der Quelle, die als Tabelle zu dieser Aufgabe wiedergegeben ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.8, erster Satz: „Beispielhafter Aufbau einer Programmier-SMS, bei der alle Zielrufnummern ‚autorisierte Nummern‘ sind (bis zu zehn Zielrufnummern sind möglich).“ (aufgedruckt „Seite 13 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Tabelle unter „Beispiele für verschiedene Programmier-SMS:“, dritte Zeile (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Die Anleitung führt unter der Überschrift „Beispiele für verschiedene Programmier-SMS:“ drei Kombinationen als Beispiel: eine einzelne Masternummer; eine Masternummer zusammen mit einer autorisierten Nummer; eine Masternummer als Smartphone-Nummer zusammen mit einer nicht autorisierten Nummer. Die linke Spalte dieser Tabelle ist unten wiedergegeben, die rechte nicht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Tabelle unter „Beispiele für verschiedene Programmier-SMS:“, linke Spalte „Programmier-SMS bei“ (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie das Ergebnis an der Status-LED. Blinkt sie grün, ist das Gerät eingebucht (Empfang) und es sind Zielrufnummern vorhanden. Blinkt sie abwechselnd gelb und grün, ist es zwar eingebucht, es sind aber keine Zielrufnummern vorhanden. Blinkt sie abwechselnd rot und gelb, sucht das Gerät noch das Netz und es sind ebenfalls keine Zielrufnummern vorhanden. Leuchtet sie dauerhaft grün, ohne zu blinken, empfängt oder versendet der Pro-finder gerade eine SMS.",
+      "expected": "Die Status-LED blinkt grün. Laut Quelle blinkt sie „nach abgeschlossener Installation und Programmierung … im Normalbetrieb grün“.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3 „Betriebszustände (Status-LED)“, Zeilen „Blinkt rot/gelb“, „Leuchtet grün“, „Blinkt gelb/grün“ und „Blinkt grün“ sowie roter Abschlusshinweis (aufgedruckt „Seite 16 von 23“)",
+          "note": "Die Quelle zeigt neben jeder Zeile ein farbiges Blinkmuster als Balkengrafik. Ein farbunabhängiges Merkmal – etwa Frequenz oder Rhythmus – nennt sie nicht; die Balken der blinkenden Zustände unterscheiden sich nur in der Farbfolge."
+        }
+      ]
+    },
+    {
+      "text": "Führen Sie die folgenden Schritte nur aus, wenn Sie alle gespeicherten Zielrufnummern entfernen wollen. Sie löschen den gesamten Zielrufnummernspeicher.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, Einleitungssatz „Um den gesamten Zielrufnummernspeicher zu löschen, gehen Sie wie folgt vor:“ (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Notieren Sie sich, auf welcher Stellung der Betriebsartenschalter jetzt steht. Diesen Schritt verlangt die Originalanleitung nicht ausdrücklich – sie fordert am Ende aber die Rückkehr auf die „Ausgangsposition“, ohne irgendwo zu sagen, welche Stellung das ist. Laut der Tabelle der Betriebsarten sind die Stellungen 0 bis D die Betriebsarten, E ist das Löschen der Zielrufnummern und F die GPS-Diagnose.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, vierter Aufzählungspunkt „Stellen Sie den Betriebsartenschalter (A) zurück auf die Ausgangsposition“ (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spalte „Betriebsarten“ mit den Zeilen 0 bis F; Zeile E lautet „Löschen der Zielrufnummern (siehe 2.9 Zielrufnummern löschen)“ (aufgedruckt „Seite 8 von 23“)",
+          "note": "Welche der Stellungen 0 bis D die „Ausgangsposition“ ist, hängt von der eingestellten Betriebsart ab und steht in der Anleitung nirgends."
+        }
+      ]
+    },
+    {
+      "text": "Ziehen Sie den Hauptkabelbaum ab.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, erster Aufzählungspunkt (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Stellen Sie den Betriebsartenschalter (A) auf Position E. Der Betriebsartenschalter ist der weiße Drehschalter auf der Anschlussseite des Geräts, in der Abbildung der Anleitung mit der Marke A bezeichnet. Ringsum trägt er die Stellungen 0 bis 9 und A bis F; ein Schlitz mit Pfeilspitze zeigt die eingestellte Stellung an.",
+      "expected": "Der Pfeil des Drehschalters zeigt auf die Markierung E.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, zweiter Aufzählungspunkt (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeile E: „Löschen der Zielrufnummern (siehe 2.9 Zielrufnummern löschen)“ (aufgedruckt „Seite 8 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Abschnitt 1.2 „Anschlüsse, Anzeigen und Bedienelemente“, Marke A im Foto und Legendenzeile „A – Betriebsartenschalter“ (aufgedruckt „Seite 6 von 23“)",
+          "note": "Die Legende ordnet der Marke A den Betriebsartenschalter zu. Die Beschriftung des Schalterrings mit 0 bis 9 und A bis F sowie der Schlitz mit Pfeilspitze sind nur auf dem Foto ablesbar; der Text führt sie nicht auf."
+        }
+      ]
+    },
+    {
+      "text": "Stecken Sie den Hauptkabelbaum wieder ein und warten Sie, bis die Status-LED gelb/grün blinkt, also abwechselnd gelb und grün aufleuchtet.",
+      "expected": "Die Status-LED blinkt abwechselnd gelb und grün. Laut Kapitel 3 bedeutet dieses Muster: eingebucht (Empfang) und keine Zielrufnummern vorhanden.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, dritter Aufzählungspunkt (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeile „Blinkt gelb/grün: Eingebucht (Empfang) + keine Zielrufnummern vorhanden“ (aufgedruckt „Seite 16 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Stellen Sie den Betriebsartenschalter (A) zurück auf die Ausgangsposition, also auf die Stellung, die Sie sich vorher notiert haben.",
+      "expected": "Der Speicher ist nun leer und kann mit einer neuen Programmier-SMS neu programmiert werden.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, vierter Aufzählungspunkt und Folgesatz (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Wenn Sie an den Betriebsartenschalter nicht herankommen: Von der Masternummer aus lässt sich der Speicher auch ohne Betätigung des Betriebsartenschalters überschreiben. Dazu muss von der Masternummer eine Programmier-SMS an den Pro-finder gesendet werden, wie sie Abschnitt 2.8 der Originalanleitung beschreibt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, letzter Absatz (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Der Pro-finder kennt die Telefonnummern, die er im Alarmfall benachrichtigt, und jede dieser Nummern hat eine bekannte Rolle. Die Status-LED blinkt grün: eingebucht (Empfang) und Zielrufnummern vorhanden. Nach einem Löschvorgang ist der Speicher leer, die Status-LED blinkt abwechselnd gelb und grün, und es ist keine Nummer mehr gespeichert, die im Alarmfall benachrichtigt wird.",
+  "error_cases": [
+    {
+      "problem": "Die Status-LED blinkt abwechselnd gelb und grün statt grün.",
+      "correction": "Dieses Muster bedeutet: eingebucht (Empfang), aber keine Zielrufnummern vorhanden. Die Nummern sind also nicht gespeichert. Richten Sie die Zielrufnummern erneut ein – am einfachsten über die THITRONIK App.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeilen „Blinkt gelb/grün“ und „Blinkt grün“ (aufgedruckt „Seite 16 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, zweiter und dritter Absatz (aufgedruckt „Seite 12 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt abwechselnd rot und gelb.",
+      "correction": "Dieses Muster bedeutet zweierlei: Das Gerät sucht noch das Netz, und es sind keine Zielrufnummern vorhanden. Warten Sie zuerst ab, bis das Gerät eingebucht ist – erst dann kann es eine Programmier-SMS empfangen. Bleibt die LED bei diesem Muster, prüfen Sie die SIM-Karte und den Empfang, bevor Sie die Zielrufnummern erneut senden.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeile „Blinkt rot/gelb: Netzsuche + keine Zielrufnummern vorhanden“ (aufgedruckt „Seite 16 von 23“)",
+          "note": "Dass zuerst das Einbuchen abgewartet werden muss, steht so nicht in der Quelle; es folgt aus der Bedeutung des Musters und ist hier als Schluss dieser Anleitung gekennzeichnet."
+        }
+      ]
+    },
+    {
+      "problem": "Die Zielrufnummern wurden per Programmier-SMS nicht übernommen.",
+      "correction": "Prüfen Sie zwei Formatregeln der Quelle: In der SMS dürfen keine Leerzeichen verwendet werden – die Leerzeichen der Abbildung dienen nur zu Darstellungszwecken –, und jede Nummer beginnt mit der Landesvorwahl und einem Pluszeichen (+49 für Deutschland).",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.8, zweiter und dritter Satz (aufgedruckt „Seite 13 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "SMS-Diagramm, Beschriftung „Landesvorwahl mit + beginnend (+49 für Deutschland)“ (aufgedruckt „Seite 14 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Eine Nummer, die die Anlage steuern soll, erhält nur Statusmeldungen – oder umgekehrt.",
+      "correction": "Die Rolle einer Nummer hängt an der Schreibweise in der Programmier-SMS: In der Beispieltabelle steht vor der autorisierten Nummer ein anderes Trennzeichen als vor der nicht autorisierten. Der Fließtext benennt diese Regel nirgends. Programmieren Sie die Nummern neu und nutzen Sie dafür die THITRONIK App; das Trennzeichen gibt diese digitale Anleitung im Pilotstand nicht wieder, weil die Befehlssprache des Geräts bei THITRONIK offen ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Tabelle unter „Beispiele für verschiedene Programmier-SMS:“, Zeilen 2 und 3 im Vergleich (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7, Tabellenzeilen „Autorisierte Nummern:“ und „Nicht autorisierte Nummern:“ (aufgedruckt „Seite 13 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Eine Zielrufnummer gehört zu einem Mobiltelefon ohne Smartphone-Funktion.",
+      "correction": "Kennzeichnen Sie diese Nummer nicht als Smartphone-Nummer. Die Kennzeichnung ändert die Übertragung der Fahrzeugposition in einen anklickbaren Link; die Quelle schreibt dazu hervorgehoben: „Nur verwenden, wenn das Endgerät ein Smartphone ist.“",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "Roter Erläuterungstext im SMS-Diagramm (aufgedruckt „Seite 14 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie kommen an den Betriebsartenschalter nicht heran, etwa weil der Pro-finder verdeckt eingebaut ist.",
+      "correction": "Nutzen Sie die Masternummer. Über sie lassen sich jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren, und der Speicher lässt sich auf demselben Weg überschreiben.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7, Tabellenzeile „Masternummer:“ (aufgedruckt „Seite 13 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, letzter Absatz (aufgedruckt „Seite 15 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Es ist unklar, welches Kabel der „Hauptkabelbaum“ ist.",
+      "correction": "Die Anleitung verwendet den Begriff im deutschen Teil an zwei Stellen – in Abschnitt 1.5.2 beim Anschließen der GPS-Antenne und in Abschnitt 2.9 – erklärt ihn aber an keiner von beiden. Auch die beschriftete Abbildung der Anschlussseite ordnet ihm keine Marke zu. Raten Sie nicht, sondern fragen Sie beim Einbaubetrieb nach. Der Punkt ist an THITRONIK zu melden.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, erster und dritter Aufzählungspunkt (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.2 „GPS-Antenne anschließen“, erster Absatz: „Ziehen Sie hierzu den Hauptkabelbaum ab …“ (aufgedruckt „Seite 10 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Abschnitt 1.2, Legende A bis D und Pin 1 bis Pin 8 (aufgedruckt „Seite 6 von 23“)",
+          "note": "Die Legende nennt Betriebsartenschalter, Anschluss WiPro III, externe GPS-Antenne (Optional), Status-LED und die acht Pins – einen Hauptkabelbaum führt sie nicht."
+        }
+      ]
+    },
+    {
+      "problem": "Nach dem Löschen ist unklar, auf welche Stellung der Betriebsartenschalter zurückgestellt werden soll.",
+      "correction": "Die Anleitung nennt für die „Ausgangsposition“ keine Zahl. Gemeint ist die Betriebsart, die vor dem Löschen eingestellt war; die Tabelle der Betriebsarten führt dafür die Stellungen 0 bis D. E ist das Löschen, F die GPS-Diagnose – auf keiner dieser beiden Stellungen darf der Schalter stehen bleiben. Wenn Sie sich die vorherige Stellung nicht notiert haben, klären Sie die richtige Betriebsart mit dem Einbaubetrieb.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Abschnitt 2.9, vierter Aufzählungspunkt (aufgedruckt „Seite 15 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen 0 bis F (aufgedruckt „Seite 8 von 23“)",
+          "note": "Die Tabelle beschreibt die Stellungen 0 bis D als Betriebsarten mit jeweils eigenen Funktionen; E und F sind Sonderstellungen. Welche der Betriebsarten die Ausgangsposition ist, steht in der Anleitung nicht."
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s16-programmier-sms-aufbau",
+      "alt": "Beschriftetes Diagramm zum Aufbau einer Programmier-SMS mit drei Zielrufnummern; Winkellinien verbinden einzelne Teile einer SMS-Zeile mit vier Beschriftungen.",
+      "long_description": "Das Diagramm besteht aus einer einzigen waagerechten Zeile mit dem Beispielinhalt einer Programmier-SMS und vier darunter angeordneten Beschriftungen. Laut dem einleitenden Satz von Abschnitt 2.8 auf der Vorseite zeigt es ein Beispiel, bei dem alle Zielrufnummern autorisierte Nummern sind. Jeder erklärte Teil der Zeile ist einzeln unterstrichen; von der Unterstreichung führt eine Winkellinie – erst senkrecht nach unten, dann waagerecht – zur zugehörigen Beschriftung. Die Zeile enthält der Reihe nach: ein Pluszeichen, einen einzelnen, rot gesetzten Großbuchstaben als Smartphone-Kennzeichnung, die Landesvorwahl der ersten Nummer, die erste Rufnummer und danach zwei weitere Rufnummern, die jeweils wieder mit Pluszeichen und Landesvorwahl beginnen. Die im Original abgedruckten Beispiel-Rufnummern und der Buchstabe selbst sind hier bewusst nicht wiedergegeben. Vom Pluszeichen ganz links führt eine schwarze Linie bis unter das Diagramm zur Beschriftung „Landesvorwahl mit + beginnend (+49 für Deutschland)“. Von dem Großbuchstaben führt eine rote Linie zu einem roten Erläuterungstext; der Buchstabe selbst ist ebenfalls rot gesetzt und damit der einzige farbige Teil der Zeile. Der Bezug zwischen Zeichen, Linie und Text wird in der Quelle allein über die Farbe Rot hergestellt – bei Farbfehlsichtigkeit oder im Schwarz-Weiß-Druck geht er verloren. Der rote Text lautet, ohne das genannte Zeichen: „Handelt es sich bei der Zielrufnummer um die Nummer eines Smartphones, wird durch Verwendung des Zeichens […] in der Programmier-SMS die Übertragung der Fahrzeugposition in einen anklickbaren Link geändert.“ Rot und fett hervorgehoben folgt: „Nur verwenden, wenn das Endgerät ein Smartphone ist.“ Von der ersten Rufnummer führt eine Linie zur Beschriftung „1. Zielrufnummer (Masternummer)“, von der zweiten zu „2. Zielrufnummer“, von der dritten zu „3. Zielrufnummer“. Drei Ungereimtheiten der Zeichnung: Die Landesvorwahl der ersten Nummer ist zwar unterstrichen, hat aber als einziger Teil weder eine Linie noch eine eigene Beschriftung. Die Unterstreichung der ersten Zielrufnummer umfasst nur den Teil hinter der Landesvorwahl, während sie bei der zweiten und dritten Nummer die Landesvorwahl einschließt – der gleiche Sachverhalt ist also unterschiedlich markiert. Und die drei Beispielnummern sind unterschiedlich mit Leerzeichen gesetzt: die erste durchgehend getrennt, die zweite nur nach der Landesvorwahl, die dritte zusätzlich innerhalb der Rufnummer.",
+      "steps_text": [
+        "Die Programmier-SMS ist eine einzige Zeichenfolge ohne Leerzeichen.",
+        "Sie beginnt mit einem Pluszeichen; darauf bezieht sich die Beschriftung „Landesvorwahl mit + beginnend (+49 für Deutschland)“.",
+        "Gehört die erste Zielrufnummer zu einem Smartphone, steht an dieser Stelle zusätzlich ein einzelner Großbuchstabe. Er bewirkt, dass die Fahrzeugposition an diese Nummer als anklickbarer Link übertragen wird. Die Quelle warnt, ihn nur zu verwenden, wenn das Endgerät ein Smartphone ist.",
+        "Es folgen die Landesvorwahl und die eigentliche Rufnummer der ersten Zielrufnummer. Die erste Zielrufnummer ist die Masternummer.",
+        "Danach folgen weitere Zielrufnummern, jede wieder mit Landesvorwahl. Das Beispiel zeigt drei; bis zu zehn sind möglich.",
+        "Im gezeigten Beispiel sind alle Zielrufnummern autorisierte Nummern. Für eine nicht autorisierte Nummer ist die Schreibweise eine andere; das zeigt nur die Beispieltabelle des folgenden Abschnitts.",
+        "Die konkrete Zeichenfolge, das Smartphone-Zeichen und die Beispiel-Rufnummern sind in dieser Anleitung nicht wiedergegeben."
+      ],
+      "data_table_md": "| Bestandteil der SMS-Zeile, in dieser Reihenfolge | Beschriftung im Diagramm |\n| --- | --- |\n| Pluszeichen am Anfang | Landesvorwahl mit + beginnend (+49 für Deutschland) |\n| einzelner, rot gesetzter Großbuchstabe, nur bei Smartphone-Nummern | roter Erläuterungstext zum Smartphone-Zeichen |\n| Landesvorwahl der ersten Nummer | unterstrichen, aber ohne Linie und ohne eigene Beschriftung |\n| erste Rufnummer | 1. Zielrufnummer (Masternummer) |\n| zweite Nummer mit Landesvorwahl | 2. Zielrufnummer |\n| dritte Nummer mit Landesvorwahl | 3. Zielrufnummer |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "16",
+        "region": "Ganzseitiges beschriftetes Diagramm als Fortsetzung von Abschnitt 2.8 „Zielrufnummern programmieren“, ohne eigene Überschrift (aufgedruckt „Seite 14 von 23“)",
+        "note": "Das Smartphone-Zeichen ist im Original der Großbuchstabe „S“; die Zeile beginnt mit „+ S 49 …“. Beides ist im sichtbaren Text bewusst nicht wiedergegeben: Die Befehlssprache des Geräts ist ungeklärt (Blocker BLK-005, Rückfrage 1 an THITRONIK) – vier geprüfte Sprachfassungen zeigen vier eigene Befehlssätze, und ob dieses Zeichen in allen Fassungen gleich lautet, ist nicht geprüft. Zusätzlich verbietet der Projektauftrag Rufnummerndaten in Inhalten; die drei Beispiel-Rufnummern des Originals sind deshalb ebenfalls nicht übernommen. Die Seite hat keine nutzbare Textebene; alle Angaben wurden aus dem Seitenbild und aus einem Ausschnitt bei 500 dpi abgelesen."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Art der Zielrufnummer | Bedeutung laut Abschnitt 2.7 der Anleitung |\n| --- | --- |\n| Masternummer | Dies ist die Telefonnummer, die beim Speichern der Zielrufnummern an erster Stelle steht. Über diese Nummer können Sie jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren. |\n| Autorisierte Nummern | Diese Zielrufnummern haben die Berechtigung, die Ausgänge des Pro-finder per SMS zu steuern und Statusberichte anzufordern. |\n| Nicht autorisierte Nummern | Diese Zielrufnummern haben keinen Zugriff auf die Funktionen der Anlage, sondern erhalten lediglich Statusmeldungen. |",
+    "| Programmier-SMS bei | Inhalt der Programmier-SMS in Pro-finder |\n| --- | --- |\n| einem Empfänger (Masternummer) | Zeichenfolge im Pilotstand nicht wiedergegeben; Rückfrage an THITRONIK offen |\n| Masternummer + einer autorisierten Nummer | Zeichenfolge im Pilotstand nicht wiedergegeben; Rückfrage an THITRONIK offen |\n| Masternummer als Smartphone-Nummer + eine nicht autorisierte Nummer | Zeichenfolge im Pilotstand nicht wiedergegeben; Rückfrage an THITRONIK offen |"
+  ],
   "sources": [
     {
       "doc": "DOC-IBA-SN045",
-      "pages": null,
-      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+      "pages": "15",
+      "region": "Abschnitte 2.6 „Pro-finder per SMS oder Anruf steuern“, 2.7 „Unterschiedliche Zielrufnummern“ mit Tabelle und 2.8 „Zielrufnummern programmieren“ (aufgedruckt „Seite 13 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft. Die Seite hat keine nutzbare Textebene; die Tabelle in 2.7 ist reiner Bildinhalt und nur über Position und waagerechte Linien als Tabelle erkennbar, eine Kopfzeile hat sie nicht."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "16",
+      "region": "Ganzseitiges beschriftetes SMS-Diagramm zu Abschnitt 2.8, ohne eigene Überschrift (aufgedruckt „Seite 14 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft; Zeile, Unterstreichungen und Linienführung zusätzlich als Ausschnitt bei 500 dpi kontrolliert. Keine nutzbare Textebene."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "17",
+      "region": "Tabelle unter „Beispiele für verschiedene Programmier-SMS:“, Abschnitt 2.9 „Zielrufnummern löschen“ mit rotem Hinweiskasten zur Nano-SIM-Karte (aufgedruckt „Seite 15 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft, Tabelle zusätzlich als Ausschnitt bei 500 dpi. Keine nutzbare Textebene. Der rote Hinweiskasten steht unmittelbar unter der Überschrift 2.9, nicht darüber; der vierte Aufzählungspunkt endet ohne Punkt."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "14",
+      "region": "Abschnitt 2.4 „Pro-finder aktivieren“, zweiter und dritter Absatz (aufgedruckt „Seite 12 von 23“)",
+      "note": "Seite gerendert und visuell geprüft. Belegt den empfohlenen Weg über die THITRONIK App, der die Kapitel 2.5 bis 2.8 ersetzt, sowie die Rückmeldung nach erfolgreicher Programmierung ohne App."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Kapitel 3 „Betriebszustände (Status-LED)“, neun Zeilen mit Blinkmuster-Grafik, davon „Blinkt rot/gelb“, „Leuchtet grün“, „Blinkt gelb/grün“ und „Blinkt grün“ sowie roter Abschlusshinweis (aufgedruckt „Seite 16 von 23“)",
+      "note": "Seite gerendert und visuell geprüft. Belegt, woran sich das Vorhandensein von Zielrufnummern ablesen lässt: Zwei der neun Zustände melden ausdrücklich „keine Zielrufnummern vorhanden“."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "10",
+      "region": "„Tabelle der Betriebsarten“ mit den Zeilen 0 bis F; Zeile E „Löschen der Zielrufnummern (siehe 2.9 Zielrufnummern löschen)“ (aufgedruckt „Seite 8 von 23“)",
+      "note": "Seite gerendert und visuell geprüft. Belegt, dass Stellung E des Betriebsartenschalters dem Löschen der Zielrufnummern zugeordnet ist und dass 0 bis D die eigentlichen Betriebsarten sind."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "12",
+      "region": "Abschnitt 1.5.2 „GPS-Antenne anschließen“, erster Absatz (aufgedruckt „Seite 10 von 23“)",
+      "note": "Seite gerendert und visuell geprüft. Belegt, dass der Begriff „Hauptkabelbaum“ im deutschen Teil auch außerhalb von Abschnitt 2.9 vorkommt und auch dort nicht erklärt wird."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "8",
+      "region": "Abschnitt 1.2 „Anschlüsse, Anzeigen und Bedienelemente“, Marke A im Foto und Legendenzeile „A – Betriebsartenschalter“ (aufgedruckt „Seite 6 von 23“)",
+      "note": "Seite gerendert und visuell geprüft, Drehschalter zusätzlich als Ausschnitt bei 900 dpi. Belegt, dass die Marke A der Betriebsartenschalter ist und dass sein Ring die Stellungen 0 bis 9 und A bis F trägt, zu denen Position E gehört; die Stellung wird durch einen Schlitz mit Pfeilspitze angezeigt."
     }
   ],
   "safety_class": "sicherheitskritisch",
   "review_status": "entwurf",
-  "placeholder": true,
-  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus den geprüften deutschen Quellseiten 15, 16 und 17 (Abschnitte 2.6 bis 2.9), ergänzt um Seite 14 für den App-Weg, Seite 18 für die Rückmeldung der Status-LED, Seite 10 für die Tabelle der Betriebsarten (Stellung E) und die Seiten 8 und 12 für den Betriebsartenschalter und den Begriff „Hauptkabelbaum“. Bewusste Auslassungen: (1) Der Inhalt der Programmier-SMS ist nirgends ausgeschrieben. Die Befehlssprache des Geräts ist ungeklärt (Blocker BLK-005, Rückfrage 1 an THITRONIK), und der Projektauftrag verbietet Rufnummerndaten in Inhalten. Weder die Beispielzeile der Seite 16 noch die drei Zeichenfolgen der Beispieltabelle auf Seite 17 sind übernommen; von der Beispieltabelle bleibt die linke Spalte, weil sie eine reine Funktionsbeschreibung ist. (2) Auch das Smartphone-Zeichen der Seite 16 – im Original der Großbuchstabe „S“, die Zeile beginnt mit „+ S 49 …“ – steht nur noch in figures[0].source.note; im sichtbaren Text ist es als „einzelner, rot gesetzter Großbuchstabe“ beschrieben. Grund: Ob dieses Zeichen in allen Sprachfassungen gleich lautet, ist nicht geprüft, und die vier geprüften Fassungen zeigen sonst vier eigene Befehlssätze. Damit bleibt diese Aufgabe für Nutzende ohne THITRONIK App inhaltlich unvollständig: Der Aufbau der SMS ist beschrieben, die auszuführende Zeichenfolge nicht. Der einzige hier vollständig gangbare Weg zum Programmieren ist die THITRONIK App, die die Quelle selbst empfiehlt und die laut Abschnitt 2.4 die Kapitel 2.5 bis 2.8 ersetzt. Das Löschen des Speichers ist dagegen vollständig wiedergegeben, weil es über Hauptkabelbaum und Betriebsartenschalter läuft und keinen Befehl braucht. (3) Die Beispieltabelle auf Seite 17 unterscheidet autorisierte von nicht autorisierten Nummern erkennbar durch das Trennzeichen vor der jeweiligen Nummer. Der Fließtext benennt diese Regel an keiner Stelle – sie ist nur aus den Beispielen erschließbar. Weil sie Teil der ungeklärten Befehlssyntax ist und zugleich sicherheitsrelevant (ein falsches Zeichen macht aus einer steuerberechtigten Nummer eine bloße Empfängernummer), sind die Zeichen hier nicht wiedergegeben; die Regel selbst ist als Warnung und als Fehlerfall benannt und für THITRONIK zu registrieren. Ausdrücklich gekennzeichnete Ergänzungen dieser Anleitung, die so nicht in der Quelle stehen: die Aufforderung, vor dem Löschen die aktuelle Schalterstellung zu notieren; der Hinweis, vor dem erneuten Senden das Einbuchen abzuwarten; die Empfehlung, als Masternummer nur eine selbst verfügbare Nummer zu nehmen; und die Aufforderung, nach dem Löschen neue Zielrufnummern zu programmieren, bevor man sich auf den Alarm verlässt. Neue Funde, die in keinem Register stehen: Im Diagramm auf Seite 16 ist die Landesvorwahl der ersten Nummer zwar unterstrichen, hat aber als einziger Bestandteil keine Verbindungslinie und keine Beschriftung; die Unterstreichung der ersten Zielrufnummer umfasst nur den Teil hinter der Landesvorwahl, bei der zweiten und dritten dagegen die Landesvorwahl mit; und die drei Beispielnummern sind unterschiedlich mit Leerzeichen gesetzt, obwohl 2.8 die Leerzeichen als reine Darstellungshilfe bezeichnet. Die Beispielnummern des Diagramms auf Seite 16 sind zudem andere als die der Tabelle auf Seite 17. Der Begriff „Hauptkabelbaum“ kommt im deutschen Teil an zwei Stellen vor – Abschnitt 1.5.2 auf Seite 12 und Abschnitt 2.9 auf Seite 17 – und wird an keiner von beiden erklärt oder einer Marke der Anschlussabbildung zugeordnet, obwohl ein Löschvorgang daran hängt. Die „Ausgangsposition“ des Betriebsartenschalters wird in der gesamten Anleitung nirgends beziffert, obwohl 1.5.3 und 2.9 die Rückkehr dorthin verlangen. Die Spaltenüberschrift der Beispieltabelle lautet „Inhalt der Programmier-SMS in Pro-finder“ statt „an Pro-finder“. In der Tabelle der Betriebsarten auf Seite 10 verweist Zeile F für die GPS-Diagnose auf „1.5.2 GPS-Antenne anschließen“; beschrieben ist die GPS-Diagnose aber in 1.5.3 „Funktion der GPS-Antenne prüfen“ – ein zweiter falscher Kapitelverweis im deutschen Original neben dem bereits registrierten 5.4/5.5. Auf Seite 15 heißt die Landesvorwahl im letzten Satz von 2.5 „Ländervorwahl“, im Diagramm auf Seite 16 dagegen „Landesvorwahl“; Abschnitt 1.3 auf Seite 9 spricht von „berechtigten Nummern“, wo 2.7 „Autorisierte Nummern“ sagt. Alle diese Stellen sind bewusst nicht geglättet. Barrierefreiheit: Der Bezug zwischen dem Smartphone-Zeichen, seiner Verbindungslinie und dem Erläuterungstext wird in der Quelle allein über die Farbe Rot hergestellt; die Abbildung ist deshalb hier zusätzlich als Langbeschreibung, als geordnete Bestandteilliste und als Tabelle wiedergegeben. Die Status-LED-Zustände tragen ihre Information über Farbe und über eine Balkengrafik; sie sind hier zusätzlich sprachlich als „abwechselnd gelb und grün“, „abwechselnd rot und gelb“, „grün blinkend“ und „dauerhaft grün“ mit ihrer Bedeutung ausgeschrieben. Ein farbunabhängiges Merkmal (Blinkfrequenz, Rhythmus) nennt die Quelle nicht. Technischer Review steht aus. Gegengeprüft gegen die Quellseiten am 2026-08-07 – dabei korrigiert: die falsche Behauptung, „Hauptkabelbaum“ komme nur in 2.9 vor (er steht auch in 1.5.2 auf Seite 12); die Ortsangabe des roten Nano-SIM-Hinweises (er steht unter der Überschrift 2.9, nicht darüber); die Formulierung „ohne Zugriff auf das Gerät“ bei der Masternummer, die die Quelle nicht deckt (sie sagt „ohne Zugriff auf den Betriebsartenschalter“); die Beschreibung des Betriebsartenschalters („Rastungen“ und „Zeiger“ ersetzt durch die am Foto belegbaren Stellungen 0 bis 9 und A bis F und den Schlitz mit Pfeilspitze); ergänzt wurden der LED-Zustand „Blinkt rot/gelb: Netzsuche + keine Zielrufnummern vorhanden“ und der Zustand „Leuchtet grün“, die Aussage aus 2.8, dass das Diagramm ein Beispiel mit ausschließlich autorisierten Nummern zeigt, die Stellung E aus der Tabelle der Betriebsarten auf Seite 10, die undefinierte „Ausgangsposition“, das Trennzeichen als Warnung und Fehlerfall im sichtbaren Text, die inkonsistente Leerzeichensetzung im Diagramm und die fehlenden aufgedruckten Seitenzahlen in mehreren Quellenangaben; entfernt wurde das Zeichen „S“ aus Langbeschreibung, Schrittliste und Bildtabelle. Ebenfalls geändert: Die Schritte verwiesen auf „die erste“ und „die zweite Tabelle weiter unten“ – Information, die allein an der Position hing. Die drei Rollen und die drei Beispielkombinationen stehen jetzt im Schritttext selbst; die Tabellen wiederholen sie nur noch."
 }

@@ -3,23 +3,338 @@
   "title": "Fehlerbehebung",
   "generation": "sn-045-plus",
   "language": "de",
-  "goal": "Häufige Probleme mit dem Pro-finder erkennen und beheben.",
-  "prerequisites": [],
-  "warnings": [],
+  "goal": "Sie ordnen ein auffälliges Verhalten des Pro-finder dem passenden Fall zu, erkennen, was davon normal ist, und wissen, was Sie selbst ändern können und wann Sie Unterstützung brauchen.",
+  "prerequisites": [
+    "Der Pro-finder ist eingebaut, angeschlossen und mit Spannung versorgt.",
+    "Sie können die Status-LED am Gerät sehen oder sich ihr Verhalten beschreiben lassen.",
+    "Sie wissen, in welcher Stellung der Betriebsartenschalter steht.",
+    "Für die Fälle rund um Meldungen: Der Pro-finder ist über seine Rufnummer erreichbar, und mindestens eine Zielrufnummer ist gespeichert."
+  ],
+  "warnings": [
+    {
+      "text": "Deuten Sie die Status-LED immer zusammen mit der Stellung des Betriebsartenschalters. In der Stellung F (GPS-Diagnose) bedeutet dauerhaftes Rot „GPS nicht angeschlossen“ und dauerhaftes Grün „Die Einbauposition der GPS-Antenne ist in Ordnung“. Zurück in der Ausgangsposition des Betriebsartenschalters bedeutet dauerhaftes Rot dagegen, dass die SIM-Karte fehlt oder defekt ist, und dauerhaftes Grün, dass der Pro-finder gerade eine SMS empfängt oder versendet. Dieselbe Farbe steht also je nach Schalterstellung für etwas anderes. Die Anleitung stellt nur diese beiden Lagen gegenüber – Stellung F und Ausgangsposition; für welche der übrigen Schalterstellungen die neun Zustände aus Kapitel 3 im Einzelnen gelten, sagt sie nicht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3 „Funktion der GPS-Antenne prüfen“, LED-Zustandstabelle und der Absatz darunter (aufgedruckt „Seite 10 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3 „Betriebszustände (Status-LED)“, Zustände „Leuchtet rot“ und „Leuchtet grün“ (aufgedruckt „Seite 16 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Die Überschrift des Abschnitts nimmt die Spannungswarnung für die Betriebsart B ausdrücklich aus. Ob der Pro-finder dort bei sinkender Spannung trotzdem in den Standby-Modus wechselt, sagt die Anleitung nicht. Verlassen Sie sich in der Betriebsart B deshalb nicht darauf, dass Sie eine sinkende Versorgungsspannung gemeldet bekommen.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, Überschrift „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen)“ und der Absatz darunter (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Eine Diebstahlmeldung ist ein stiller Alarm: Weder Blinker noch Sirene werden aktiviert. Sie bemerken diesen Alarm nur an der SMS, nicht am Fahrzeug. Sorgen Sie deshalb dafür, dass Sie SMS des Pro-finder zuverlässig empfangen und bemerken.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Erläuterung „Diebstahlmeldung“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    }
+  ],
   "steps": [],
-  "expected_result": null,
-  "error_cases": [],
-  "figures": [],
-  "tables_md": [],
+  "expected_result": "Diese Aufgabe hat keinen festen Ablauf und deshalb keine Schrittfolge. Suchen Sie stattdessen unter den Fällen die Beobachtung, die auf Ihr Gerät zutrifft, und arbeiten Sie die dort genannte Abhilfe ab. Danach wissen Sie, ob das Verhalten Ihres Pro-finder normal ist, was Sie selbst ändern können und wann Sie Unterstützung brauchen.",
+  "error_cases": [
+    {
+      "problem": "Der Pro-finder reagiert nicht mehr wie gewohnt, oder Sie erhalten eine SMS, die eine Spannung unter 11,2 V meldet.",
+      "correction": "Das ist in der Regel kein Defekt, sondern der Batterieschutz. Sinkt die Versorgungsspannung dauerhaft unter 11,2 V, schaltet der Pro-finder in den Standby-Modus, um die Batterie zu schonen, und versendet dazu eine SMS mit einem entsprechenden Hinweis. Erst wenn die Spannung wieder über 12,5 V steigt, wechselt er zurück in den Normalbetrieb. Sorgen Sie also dafür, dass die Versorgungsspannung wieder dauerhaft über 12,5 V liegt. Ein Wert knapp über 11,2 V genügt nicht: Die Anleitung nennt für die Rückkehr allein die Schwelle 12,5 V. Beachten Sie außerdem, dass die Überschrift des Abschnitts die Spannungswarnung für die Betriebsart B ausnimmt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen)“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED zeigt etwas, das Sie nicht einordnen können.",
+      "correction": "Prüfen Sie zuerst, in welcher Stellung der Betriebsartenschalter steht. In der Stellung F gelten die abweichenden Bedeutungen der GPS-Diagnose aus der ersten Tabelle unten. Für die Ausgangsposition verweist die Anleitung auf Kapitel 3; dort sind neun Betriebszustände der Status-LED aufgeführt. Für welche Schalterstellungen diese neun Zustände im Einzelnen gelten, sagt die Anleitung nicht. Nach abgeschlossener Installation und Programmierung blinkt sie im Normalbetrieb grün; das bedeutet: eingebucht mit Empfang und Zielrufnummern vorhanden. Die vollständige Übersicht aller neun Zustände steht als Text in der Aufgabe „Status-LED verstehen“.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3 „Betriebszustände (Status-LED)“, neun Zustände und roter Abschlusshinweis (aufgedruckt „Seite 16 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, LED-Zustandstabelle (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie erhalten keine Meldungen vom Pro-finder.",
+      "correction": "Sehen Sie sich die Status-LED an; sie nennt den Grund. Blinkt sie abwechselnd gelb und grün, ist das Gerät im Mobilfunknetz eingebucht, es sind aber keine Zielrufnummern vorhanden – dann gibt es niemanden, an den eine Meldung gehen könnte. Blinkt sie abwechselnd rot und gelb, sucht das Gerät zusätzlich noch das Netz, und es sind ebenfalls keine Zielrufnummern vorhanden. Blinkt sie gelb, ist das Gerät eingebucht, die letzte SMS konnte aber nicht versendet werden. Blinkt sie rot, sucht das Gerät das Netz oder hat keinen GSM-Empfang. Leuchtet sie dauerhaft rot, fehlt die SIM-Karte oder sie ist defekt. Blinkt sie abwechselnd rot und grün, ist die SIM-PIN nicht deaktiviert. Leuchtet sie gelb, baut das Gerät gerade die Verbindung mit dem Modem auf.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zustände „Blinkt gelb/grün“, „Blinkt rot/gelb“, „Blinkt gelb“, „Blinkt rot“, „Leuchtet rot“, „Blinkt rot/grün“ und „Leuchtet gelb“ (aufgedruckt „Seite 16 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie können die Farben der Status-LED nicht sicher unterscheiden.",
+      "correction": "In der GPS-Diagnose unterscheiden sich Rot und Grün nur durch die Farbe: Beide leuchten dauerhaft, allein Gelb blinkt. Auch in Kapitel 3 treten Rot, Gelb und Grün jeweils sowohl leuchtend als auch blinkend auf; ein farbunabhängiges Merkmal nennt die Anleitung an keiner der beiden Stellen. Lassen Sie sich die Anzeige im Zweifel von einer zweiten Person beschreiben – diese Empfehlung stammt aus dieser barrierefreien Fassung, nicht aus der Originalanleitung. Die Bedeutungen stehen vollständig als Text in den Tabellen unten und in der Aufgabe „Status-LED verstehen“.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, LED-Zustandstabelle – „LED leuchtet rot“, „LED blinkt gelb“, „LED leuchtet grün“ (aufgedruckt „Seite 10 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, neun Zustände in den Kombinationen leuchtend und blinkend (aufgedruckt „Seite 16 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie wollen prüfen, ob GPS-Daten empfangen werden.",
+      "correction": "Schalten Sie den Betriebsartenschalter in die Stellung F (GPS-Diagnose). Die Status-LED zeigt dann den Betriebszustand des GPS an: dauerhaftes Rot, blinkendes Gelb oder dauerhaftes Grün. Was die drei Zustände bedeuten, steht in der ersten Tabelle unten. Schalten Sie den Betriebsartenschalter danach zurück in die Ausgangsposition.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3 „Funktion der GPS-Antenne prüfen“, erster Absatz, LED-Zustandstabelle und Absatz danach (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED leuchtet in der Schalterstellung F (GPS-Diagnose) dauerhaft rot.",
+      "correction": "In dieser Stellung bedeutet dauerhaftes Rot: GPS nicht angeschlossen. Prüfen Sie zuerst, ob überhaupt eine GPS-Antenne verbaut ist – sie ist optionales Zubehör. Ohne Antenne ist dauerhaftes Rot in der Stellung F die zu erwartende Anzeige und kein Defekt. Ist eine Antenne vorhanden, prüfen Sie ihre Steckverbindung. Der Pro-finder muss dafür spannungsfrei sein: Ziehen Sie zuerst den Hauptkabelbaum ab, stecken Sie dann den GPS-Stecker in den vierpoligen Anschluss für die GPS-Antenne und stecken Sie anschließend den Hauptkabelbaum wieder ein. Welches Kabel die Anleitung „Hauptkabelbaum“ nennt, erklärt sie an dieser Stelle nicht. Schalten Sie den Betriebsartenschalter danach zurück in die Ausgangsposition. Leuchtet die LED dort rot, hat das eine andere Ursache: Dann ist noch keine SIM-Karte eingesetzt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, LED-Zustandstabelle, Zeile „LED leuchtet rot“, sowie der Absatz nach der Tabelle (aufgedruckt „Seite 10 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.2 „GPS-Antenne anschließen“, erster Absatz: „Zum Anschließen der optionalen GPS-Antenne muss der Pro-finder spannungsfrei sein.“ (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt in der Schalterstellung F auch nach fünf Minuten noch gelb.",
+      "correction": "Gelbes Blinken heißt: GPS-Daten werden empfangen, jedoch ohne gültige Position. Blinkt die Status-LED auch nach fünf Minuten noch, ist die Antenne an einer Stelle montiert, die den GPS-Empfang unmöglich macht, oder das Fahrzeug steht zum Beispiel unter einem Dach. Stellen Sie das Fahrzeug ins Freie und prüfen Sie erneut. Bleibt es beim gelben Blinken, versetzen Sie die Antenne an eine Stelle mit freier Sicht zum Himmel. Leuchtet die LED dauerhaft grün, ist die Einbauposition der GPS-Antenne in Ordnung.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, LED-Zustandstabelle, Zeilen „LED blinkt gelb“ und „LED leuchtet grün“ (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die gemeldete Position ist ungenau, obwohl die Einbauposition der GPS-Antenne in Ordnung ist.",
+      "correction": "Nach der Installation muss die Betriebsspannung mindestens fünf Minuten lang über 13,5 V betragen, damit die GPS-Antenne die aktuellen Satellitendaten empfangen und speichern kann. Starten Sie dazu das Fahrzeug. Dieser Speichervorgang muss abgeschlossen werden, und währenddessen muss GPS-Empfang gewährleistet sein; das Fahrzeug sollte dabei nach Formulierung der Anleitung nicht in einer Halle oder unter einer Überdachung stehen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.2 „GPS-Antenne anschließen“, zweiter und dritter Absatz (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Der Pro-finder meldet einen Diebstahl, obwohl das Fahrzeug nicht bewegt wurde.",
+      "correction": "In Hallen, anderen Gebäuden und unter Überdachungen kann es zu Reflektionen des GPS-Signals kommen. Das kann die Genauigkeit der Positionsbestimmung stark beeinträchtigen, und es können Diebstahlmeldungen ausgelöst werden, obwohl das Fahrzeug nicht bewegt wurde. Eine Diebstahlmeldung entsteht, wenn sich das Fahrzeug bei aktivierter WiPro III (safe.lock) weiter als ca. 900 m vom ursprünglichen Standort entfernt – eine scheinbar verschobene Position genügt dafür. Die Anleitung empfiehlt, die Geofencing-Funktion zu deaktivieren, wenn das Fahrzeug in einem Gebäude oder unter einem Dach abgestellt wird. Vorgesehen ist dafür eine SMS an die Nummer des GSM-Moduls; der Befehlstext ist in dieser Fassung bewusst nicht abgedruckt, weil die Befehlssprache des Geräts noch nicht geklärt ist. Bis zur Klärung führt dieser Weg nur über die Originalanleitung oder den Support. Ob ein Pro-finder ohne angeschlossene WiPro III (safe.lock) überhaupt eine Diebstahlmeldung sendet, lässt die Anleitung offen: Kapitel 4 knüpft die Meldung an eine aktivierte WiPro III, Abschnitt 5.2 beschreibt Geofencing ohne diesen Bezug. Diese Frage ist an THITRONIK gestellt und hier nicht beantwortet. Wie Geofencing geschaltet wird, steht in der Aufgabe „Geofencing nutzen“.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, vorletzter und letzter Absatz: Reflektionen des GPS-Signals und Empfehlung zur Deaktivierung der Geofencing-Funktion (aufgedruckt „Seite 10 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Erläuterung „Diebstahlmeldung“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2 „Geofencing“, erster und zweiter Absatz (aufgedruckt „Seite 19 von 23“)",
+          "note": "Seite bei der Gegenprüfung am 2026-08-07 zusätzlich gerendert und gelesen, um den Bezug zur WiPro III zu prüfen. Dort ist Geofencing ohne Bezug auf die WiPro III beschrieben und der Radius lautet „ein Bereich von 900 Metern“ statt „weiter als ca. 900 m“ wie auf Seite 19."
+        }
+      ]
+    },
+    {
+      "problem": "Sie haben eine Diebstahlmeldung erhalten, am Fahrzeug war aber weder ein Blinken noch ein Ton zu bemerken.",
+      "correction": "Das ist kein Defekt. Bei einer Diebstahlmeldung handelt es sich um einen stillen Alarm: Weder Blinker noch Sirene werden aktiviert. Die Anleitung schreibt, beides lasse sich per SMS aktivieren, und verweist dafür auf den Abschnitt 5.1 „Alarmanlage per SMS steuern“. Dieser Verweis führt jedoch ins Leere: Abschnitt 5.1 beschreibt ausschließlich, wie sich die WiPro III (safe.lock) in den Betriebsarten 2 und 3 per Anruf in den jeweils nächsten Zustand schalten lässt. Blinker und Sirene kommen dort nicht vor, und einen SMS-Befehl nennt der Abschnitt trotz seiner Überschrift nicht. Wie sich Blinker und Sirene zuschalten lassen, ist aus der Anleitung damit nicht ableitbar. Dieser Widerspruch ist hier benannt und nicht aufgelöst; die Frage liegt bei THITRONIK.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Erläuterung „Diebstahlmeldung“, letzter Satz mit Verweis auf „5.1 Alarmanlage per SMS steuern“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, beide Absätze und roter Hinweiskasten (aufgedruckt „Seite 19 von 23“)",
+          "note": "Seite bei der Gegenprüfung am 2026-08-07 zusätzlich gerendert und gelesen, um das Ziel des Querverweises zu prüfen. Der Abschnitt nennt nur das Schalten per Anruf, den automatischen Verbindungsabbruch vor einer kostenpflichtigen Verbindung und den Hinweis, dass nur berechtigte Nummern auf den Pro-finder zugreifen können."
+        }
+      ]
+    },
+    {
+      "problem": "Nach einer Alarm-SMS ruft Sie das Gerät zusätzlich an – oder Sie warten nach einer Diebstahlmeldung vergeblich auf einen Anruf.",
+      "correction": "Beides ist so vorgesehen. Nach einer Einbruchmeldung, einem Gasalarm und einem manuellen Alarm (Panikalarm) wird nach dem Versenden der SMS zusätzlich die Masternummer angerufen. Welche Ihrer Zielrufnummern die Masternummer ist, erklärt Kapitel 4 an dieser Stelle nicht; der Begriff ist in der Aufgabe „Zielrufnummern einrichten und löschen“ beschrieben. Für die Diebstahlmeldung über Geofencing und für die Meldung „Diebstahl Zubehör“ nennen die gelesenen Seiten keinen zusätzlichen Anruf; die Diebstahlmeldung ist ausdrücklich ein stiller Alarm. Verlassen Sie sich bei einem Diebstahl also nicht auf einen Anruf, sondern auf die SMS.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Erläuterungen „Einbruchmeldung“, „Gasalarm“, „Manueller Alarm“ und „Diebstahl Zubehör“ (aufgedruckt „Seite 18 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Erläuterung „Diebstahlmeldung“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "In einer SMS des Geräts steht beim Feld „GPS“ der Wert „Standby“.",
+      "correction": "Das ist kein Fehler. Die Angabe bedeutet, dass sich die GPS-Antenne im Standby-Modus befindet. Bei einem Ereignis wird sie automatisch reaktiviert. Sie müssen nichts tun. Beachten Sie dabei einen Widerspruch der Quelle: Die Einleitung von Kapitel 4 führt das Feld „GPS:“ auf, in keiner der abgebildeten Beispiel-SMS des Kapitels kommt es jedoch vor – ebenso wenig der dort genannte Bezeichner „Pos:“, unter dem die Position stehen soll. Wann Ihr Gerät dieses Feld sendet und wie die Zeile genau aussieht, ist aus der Anleitung nicht ableitbar.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Feldliste, Einträge „GPS:“ und „Pos:“, sowie die drei Beispiel-SMS derselben Seite (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, die sechs Beispiel-SMS (aufgedruckt „Seite 18 von 23“)",
+          "note": "Auch hier trägt keine Sprechblase ein Feld „GPS:“ oder „Pos:“."
+        }
+      ]
+    },
+    {
+      "problem": "Sie haben dem Gerät eine SMS geschickt und bekommen statt der erwarteten Antwort eine Meldung mit Eingabehilfen zurück.",
+      "correction": "Der gesendete Inhalt war kein gültiger Befehl. Wird von einer Zielrufnummer eine SMS mit ungültigem Inhalt empfangen, versendet der Pro-finder eine Meldung mit den möglichen korrekten Befehlen, um die Bedienung zu erleichtern. Diese Meldung nennt vier Befehle und verweist für alles Weitere auf das Handbuch. Eine eigene Fehlermeldung gibt es nicht – die Eingabehilfe ist die Fehlermeldung. Welche Befehle das Gerät tatsächlich annimmt, ist derzeit ungeklärt; deshalb steht in dieser Fassung kein Befehlstext. Vergleichen Sie den gesendeten Text mit der Originalanleitung oder fragen Sie beim Support nach. Was geschieht, wenn die SMS von einer Nummer kommt, die nicht als Zielrufnummer gespeichert ist, sagt die Anleitung an dieser Stelle nicht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Abschnitt „SMS mit Eingabehilfen“, Beispiel-SMS und Erläuterung (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Keiner der beschriebenen Fälle passt, oder das Problem bleibt bestehen.",
+      "correction": "Nehmen Sie zuerst Kontakt mit Ihrem Fachhändler auf. Treten dennoch Schwierigkeiten auf, die sich mithilfe des Handbuches nicht beheben lassen, verweist die Anleitung auf die Website des Herstellers sowie auf den technischen Support per Telefon und per E-Mail. Halten Sie für den Anruf die Seriennummer Ihres Pro-finder und die Softwareversion bereit; beide finden Sie laut Anleitung entweder auf dem Gerät selbst oder in der THITRONIK App. Die Kontaktwege im Einzelnen stehen in der Aufgabe „Hilfe und Support“.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, erster und zweiter Absatz (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s19-spannungswarnung-sms",
+      "alt": "Beispiel einer Spannungswarnung als SMS, dargestellt als schwarze Sprechblase mit weißer Schrift.",
+      "long_description": "Schwarze Sprechblase mit abgerundeten Ecken und einer Spitze unten links, wie eine empfangene Nachricht in einem SMS-Verlauf. Sie enthält fünf Zeilen untereinander: zuerst den Hinweis auf eine Spannung unter 11.2 V, geschrieben mit Dezimalpunkt; darunter den Zustand der WiPro III, im Beispiel „WiPro ON“; darunter die Uhrzeit des Vorfalls in koordinierter Weltzeit, eingeleitet mit „UTC:“; darunter eine blau unterstrichene Webadresse zu einem Kartendienst, die die Koordinaten des Fahrzeugs enthält und über zwei Zeilen umbricht; zuletzt die Geschwindigkeit in Kilometern pro Stunde, im Beispiel 0 km/h. Alle Werte sind Beispielwerte; die Adresse und die Koordinaten sind hier bewusst nicht wiedergegeben. Die Erläuterung mit den Schwellen 11,2 V und 12,5 V steht in der Quelle rechts neben der Sprechblase, nicht in der Abbildung selbst; die Zuordnung ergibt sich dort allein aus der Anordnung nebeneinander.",
+      "steps_text": [
+        "Die schwarze Sprechblase stellt eine SMS des Geräts dar, keine Eingabe.",
+        "Die erste Zeile nennt den Grund der Meldung: Die Spannung liegt unter der Schwelle.",
+        "Die weiteren Zeilen nennen den Zustand der WiPro III, die Uhrzeit in koordinierter Weltzeit, die Position und die Geschwindigkeit.",
+        "Die Bedeutung der beiden Schwellen steht in der zweiten Tabelle dieser Aufgabe als Text."
+      ],
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "19",
+        "region": "Kapitel 4, Beispiel-SMS zur Spannungswarnung (aufgedruckt „Seite 17 von 23“)",
+        "note": "Die Sprechblase schreibt die Schwelle mit Dezimalpunkt („Spannung unter 11.2 V“), der Fließtext daneben mit Dezimalkomma („unter 11,2 V“). Beide Schreibweisen sind so wiedergegeben, wie sie in der Quelle stehen. Die Kartenadresse ist blau unterstrichen wie ein Link, auf dieser Seite aber nicht als Link hinterlegt und deshalb weder anklickbar noch mit der Tastatur erreichbar. Die Sprechblase trägt keinen Alternativtext; ihre Rolle als SMS ist in der Quelle nur an der Form erkennbar."
+      }
+    },
+    {
+      "asset_key": "iba-sn045-s20-eingabehilfe-sms",
+      "alt": "Beispiel der automatischen Eingabehilfe als SMS, dargestellt als schwarze Sprechblase mit weißer Schrift.",
+      "long_description": "Schwarze Sprechblase mit abgerundeten Ecken und einer Spitze unten links, wie eine empfangene Nachricht in einem SMS-Verlauf. Der Text besteht aus drei Teilen: einem Ausruf, dass der Befehl ungültig war; einer Aufzählung von vier möglichen Befehlen, durchgehend in Großbuchstaben; und dem Schlusssatz, dass weitere Befehle im Handbuch stehen. Der gesamte Wortlaut ist ohne Umlaute gesetzt, obwohl der Fließtext daneben Umlaute verwendet – ein Hinweis darauf, dass das Gerät reine ASCII-Zeichen ausgibt. Die vier Befehlswörter sind in dieser Fassung bewusst nicht wiedergegeben, weil die Befehlssprache des Geräts ungeklärt ist; die Begründung steht am Ende dieser Aufgabe.",
+      "steps_text": [
+        "Die schwarze Sprechblase stellt eine SMS des Geräts dar, keine Eingabe.",
+        "Der erste Teil meldet, dass der gesendete Befehl ungültig war.",
+        "Der zweite Teil zählt vier mögliche Befehle in Großbuchstaben auf; sie sind hier bewusst nicht abgedruckt.",
+        "Der dritte Teil verweist für alle weiteren Befehle auf das Handbuch."
+      ],
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "20",
+        "region": "Kapitel 4, Abschnitt „SMS mit Eingabehilfen“, Beispiel-SMS (aufgedruckt „Seite 18 von 23“)",
+        "note": "Die Sprechblase liegt wie die gesamte Seite nur als Bild vor und trägt keinen Alternativtext. Sie schreibt die Befehle in Großbuchstaben, während die zugehörigen Kapitel dieselben Funktionen klein schreiben; diese Unstimmigkeit ist als Zusatzfrage zu Rückfrage 1 an THITRONIK gemeldet. Der Wortlaut ist in dieser Fassung nur im change_reason zitiert, und zwar ausschließlich zur Begründung der Auslassung."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Farbe der Status-LED in der Schalterstellung F (GPS-Diagnose) | Muster | Bedeutung |\n| --- | --- | --- |\n| Rot | leuchtet dauerhaft | GPS nicht angeschlossen |\n| Gelb | blinkt | GPS-Daten werden empfangen, jedoch ohne gültige Position. Blinkt die Status-LED auch nach fünf Minuten noch, ist die Antenne an einer Stelle montiert, die den GPS-Empfang unmöglich macht, oder das Fahrzeug steht z. B. unter einem Dach. |\n| Grün | leuchtet dauerhaft | Die Einbauposition der GPS-Antenne ist in Ordnung. |",
+    "| Versorgungsspannung | Verhalten des Pro-finder (Spannungswarnung; laut Überschrift nicht in Betriebsart B) |\n| --- | --- |\n| dauerhaft unter 11,2 V | Wechsel in den Standby-Modus, um die Batterie zu schonen; es wird eine SMS mit einem entsprechenden Hinweis versendet |\n| zwischen 11,2 V und 12,5 V | Für die Rückkehr in den Normalbetrieb nennt die Anleitung allein die Schwelle 12,5 V; ein Wert darunter beendet den Standby-Modus nicht |\n| über 12,5 V | Wechsel zurück in den Normalbetrieb |"
+  ],
   "sources": [
     {
       "doc": "DOC-IBA-SN045",
-      "pages": null,
-      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+      "pages": "12",
+      "region": "Abschnitte 1.5.2 „GPS-Antenne anschließen“ und 1.5.3 „Funktion der GPS-Antenne prüfen“ (aufgedruckt „Seite 10 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig visuell gelesen; die LED-Tabelle, der Wert 13,5 V und die beiden Schlussabsätze zusätzlich als 400-dpi-Ausschnitte gegengelesen. Die Seite hat keine nutzbare Textebene. Die LED-Tabelle ist entgegen der Erwartung nicht farbig gesetzt: Sie nennt die Farben in schwarzer Schrift als Text und hat keine Kopfzeile."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Kapitel 3 „Betriebszustände (Status-LED)“, neun Zustände und roter Abschlusshinweis (aufgedruckt „Seite 16 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig visuell gelesen; die Zustände 4 bis 9 zusätzlich als 400-dpi-Ausschnitt. Die Blinkfolgen liegen nur als farbige Balken vor, die Bedeutung steht daneben als Text. Zeitwerte für den Blinkrhythmus nennt die Quelle nicht."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, Feldliste sowie die Erläuterungen „Statusbericht“, „Diebstahlmeldung“ und „Spannungswarnung“ (aufgedruckt „Seite 17 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig visuell gelesen; der Block „Spannungswarnung“ zusätzlich als 400-dpi-Ausschnitt, um 11,2 V und 12,5 V zweimal abzulesen. Die Seite hat keine nutzbare Textebene."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "20",
+      "region": "Kapitel 4, Abschnitte „SMS mit Eingabehilfen“, „Einbruchmeldung“, „Gasalarm“, „Manueller Alarm“ und „Diebstahl Zubehör“ (aufgedruckt „Seite 18 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig visuell gelesen; der Block „SMS mit Eingabehilfen“ zusätzlich als 400-dpi-Ausschnitt. Die Beispiel-SMS enthält eine Befehlsliste; sie ist hier bewusst nicht wiedergegeben. Der Zusatz „Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen“ ist in der Quelle allein durch rote Schrift hervorgehoben und trägt keine Warnrolle. Der sechste Block der Seite, „Positions-SMS für Smartphones“, ist hier nicht ausgewertet; er gehört in die Aufgaben „Meldungen verstehen“ und „Fahrzeug wiederfinden“."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "21",
+      "region": "Abschnitte 5.1 „Alarmanlage per SMS steuern“ und 5.2 „Geofencing“ (aufgedruckt „Seite 19 von 23“)",
+      "note": "Nicht Teil der ursprünglich zugewiesenen Seiten; bei der Gegenprüfung am 2026-08-07 gerendert und gelesen, weil zwei Aussagen dieser Aufgabe von dieser Seite abhängen: das Ziel des Querverweises auf 5.1 und die Frage, ob Geofencing eine WiPro III (safe.lock) voraussetzt. Beide Befunde stehen in den zugehörigen Fehlerfällen. Die SMS-Befehle des Abschnitts 5.2 sind hier nicht wiedergegeben."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Abschnitt 6.4 „Technische Unterstützung“, erster und zweiter Absatz (aufgedruckt „Seite 23 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig visuell gelesen; Abschnitt 6.4 zusätzlich als 400-dpi-Ausschnitt. Rufnummer und E-Mail-Adresse stehen dort, sind hier aber bewusst nicht übernommen; sie gehören in die Aufgabe „Hilfe und Support“. Ebenfalls nicht ausgewertet sind die übrigen Abschnitte der Seite – 6.1 Technische Daten, 6.2 Entsorgungshinweise und 6.3 Konformität/Richtlinien; sie gehören in die Aufgabe „Technische Daten“."
     }
   ],
-  "safety_class": "normal",
+  "safety_class": "sicherheitsrelevant",
   "review_status": "entwurf",
-  "placeholder": true,
-  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+  "placeholder": false,
+  "change_reason": "Erstbefüllung des Platzhalters. Diese Aufgabe hat keinen eigenen Quellabschnitt: Sie ist eine Synthese aus Fehlerfällen, die im PDF über die Abschnitte 1.5.2, 1.5.3, Kapitel 3, Kapitel 4 und Abschnitt 6.4 verteilt stehen. Im PDF gibt es diese Zusammenstellung nicht. Grundlage sind die fünf zugewiesenen deutschen Seiten 12, 18, 19, 20 und 25, jede selbst gerendert und als Bild gelesen; LED-Tabelle, Spannungsschwellen, der Wert 13,5 V, die Zustände 4 bis 9 auf Seite 18, die Eingabehilfe auf Seite 20 und Abschnitt 6.4 wurden zusätzlich als 400-dpi-Ausschnitte gegengelesen. Aufgebaut ist die Aufgabe über error_cases; steps bleibt leer, weil es keinen linearen Ablauf gibt – expected_result erklärt das ausdrücklich.\n\nBewusst ausgelassen: alle SMS-Befehle (Blocker BLK-005, Rückfrage 1 an THITRONIK; vier geprüfte Sprachfassungen zeigen vier eigene Befehlssätze, und die Hilfe-SMS schreibt die Befehle groß, während die Kapitel sie klein schreiben). Betroffen sind zwei Fälle. Erstens die Empfehlung auf Seite 12, vor dem Abstellen in einer Halle das Geofencing zu deaktivieren; die Quelle nennt dafür wörtlich eine SMS mit dem Inhalt „fence aus“ an die Nummer des GSM-Moduls. Zweitens die Eingabehilfe auf Seite 20; ihre Sprechblase lautet dort wörtlich: „Ungueltiger Befehl! Moeglich: SCHARF, UNSCHARF, STATUS, POS. Weitere Befehle siehe Handbuch.“ Beide Stellen sind hier nur beschrieben, nicht ausgeführt. Die Zitate stehen ausschließlich in diesem change_reason und dienen allein der Begründung der Auslassung. Folge: Der Fall „ungültiger Befehl“ bleibt inhaltlich unvollständig – Nutzende erfahren, dass ihre SMS nicht angenommen wurde, aber nicht, wie ein gültiger Befehl lautet. Ebenso unvollständig bleibt der Fehlalarm-Fall: Der einzige in der Quelle genannte Weg, Geofencing vor dem Abstellen in einem Gebäude abzuschalten, ist ohne Befehlstext nicht ausführbar.\n\nEbenfalls nicht übernommen: Rufnummer und E-Mail-Adresse aus Abschnitt 6.4 – das ist Kontaktdatenpflege und in der Aufgabe „Hilfe und Support“ geregelt, auf die hier verwiesen wird. Nicht übernommen sind außerdem die Beispielkoordinaten und die Kartenadressen aus den Beispiel-SMS.\n\nNicht dupliziert: die neun LED-Zustände aus Kapitel 3. Sie sind über die Aufgabe „Status-LED verstehen“ verknüpft; hier stehen nur die für die Diagnose nötigen Einzelzustände. Wichtig für den technischen Review: Die verknüpfte Aufgabe bezieht ihre Tabelle aus DOC-KA-SN045 (Kurzanleitung), nicht aus dieser Seite. Die neun Zustände stimmen inhaltlich überein, weichen aber im Wortlaut ab – DOC-IBA-SN045 schreibt „Blinkt gelb/grün“, DOC-KA-SN045 „Blinkt grün/gelb“ (vertauschte Farbreihenfolge), außerdem „fehlt oder ist defekt“ gegenüber „fehlt bzw. ist defekt“. Diese Abweichung ist bereits als DSC-061 registriert; die Gegenprüfung hat die gegenteilige Behauptung dieses Feldes gestrichen.\n\nNicht geglättete Widersprüche und Lücken der Quelle: (1) Dieselbe LED-Farbe bedeutet in der Schalterstellung F etwas anderes als in den übrigen Stellungen – Rot heißt dort „GPS nicht angeschlossen“, sonst „SIM-Karte fehlt oder ist defekt“; Grün heißt dort „Die Einbauposition der GPS-Antenne ist in Ordnung“, sonst „Pro-finder empfängt/versendet eine SMS“. Die Quelle stellt diese Doppelbedeutung nirgends gegenüber; hier steht sie als Warnung. (2) Die Überschrift auf Seite 19 nimmt die Spannungswarnung für die Betriebsart B aus, sagt aber nicht, ob dort auch der Wechsel in den Standby-Modus entfällt. Die Lücke ist benannt, nicht gefüllt. (3) Die Beispiel-Sprechblase schreibt „11.2 V“ mit Dezimalpunkt, der Fließtext daneben „11,2 V“ mit Dezimalkomma; beides ist so wiedergegeben, wie es in der Quelle steht. (4) Die Quelle schreibt „Reflektionen“ (statt „Reflexionen“) und in der gelben Tabellenzeile auf Seite 12 „Status LED“ ohne Bindestrich, zwei Zeilen darüber jedoch „Status-LED“. Der Fließtext dieser Aufgabe verwendet durchgängig die Soll-Schreibweise „Status-LED“; die Abweichung der Quelle ist hier vermerkt und dort nicht korrigiert. (5) Der Wert 13,5 V für mindestens fünf Minuten steht so auf Seite 12; er gehört nicht zu den wiederkehrenden Werten dieser Generation und ist unverändert übernommen.\n\nZu den erwarteten wiederkehrenden Werten: 11,2 V, 12,5 V und ca. 900 m bestätigen sich auf Seite 19 unverändert. Die auf Seite 12 genannten „fünf Minuten“ sind nicht die bekannte GPS-Wartezeit von bis zu zehn Minuten, sondern eine andere Angabe – einmal die Mindestdauer über 13,5 V zum Speichern der Satellitendaten, einmal die Beobachtungsdauer für das gelbe Blinken in der GPS-Diagnose. Hier liegt also kein Widerspruch vor, sondern eine Verwechslungsgefahr; sie ist hier festgehalten, damit sie im Review nicht als Abweichung gewertet wird.\n\nGegenüber der Aufgabenbeschreibung, nicht gegenüber dem Seitenbefund: Die LED-Zustandstabelle auf Seite 12 ist nicht farbig gesetzt, sondern nennt die Farben in schwarzer Schrift als Text – der Seitenbefund hält das bereits fest. Die Barrierefreiheitslücke liegt nicht in der Tabelle, sondern an der Geräte-LED selbst: Rot und Grün leuchten dort beide dauerhaft und unterscheiden sich allein durch die Farbe, ein farbunabhängiges Merkmal ist nirgends dokumentiert. Dafür gibt es einen eigenen Fehlerfall. Die Empfehlung, sich die Anzeige im Zweifel von einer zweiten Person beschreiben zu lassen, stammt aus dieser barrierefreien Fassung und nicht aus der Quelle; sie ist im Text als solche gekennzeichnet.\n\nAbgrenzung und bekannte Lücke: Das Lesen der Meldungen selbst gehört in die Aufgabe „Meldungen verstehen“, das Schalten des virtuellen Zauns in die Aufgabe „Geofencing nutzen“. Diese Aufgabe deckt nur die fünf zugewiesenen Seiten ab. Laut Seitenregister steht in Abschnitt 5.7 auf PDF-Seite 24 ein weiterer fehlerrelevanter Sachverhalt zum GPS-Verhalten bei fehlendem Empfang; diese Seite wurde für diese Aufgabe nicht gelesen und ist deshalb bewusst nicht aufgenommen. Sie ist nachzutragen, sobald sie selbst geprüft ist.\n\nHochstufung der safety_class von „normal“ (Platzhalter) auf „sicherheitsrelevant“: Die Aufgabe deutet die Signale eines Diebstahlwarn- und Überwachungsgeräts. Wer den Standby-Modus für einen Defekt hält, wer den stillen Alarm für ein ausgebliebenes Alarmieren hält oder wer die LED-Farbe in der falschen Schalterstellung liest, hält ein unüberwachtes Fahrzeug für überwacht. Sicherheitskritisch ist die Aufgabe dennoch nicht: Sie beschreibt keine Arbeiten an der Bordelektrik und keine Belastungsgrenzen. Technischer Review steht aus; review_status bleibt „entwurf“.\n\nGegengeprüft gegen die Quellseiten am 2026-08-07. Dabei korrigiert: der Verweis auf Abschnitt 5.1 war geglättet – die Datei gab ihn als gangbaren Weg wieder und begründete das Fehlen des Befehls mit der Befehlssperre, obwohl Abschnitt 5.1 (Seite 21, bei der Gegenprüfung eigens gelesen) nur das Schalten per Anruf beschreibt und Blinker und Sirene gar nicht erwähnt; der Widerspruch ist jetzt benannt (registriert als DSC-052). Ebenfalls geöffnet: die offene Frage, ob ein Pro-finder ohne WiPro III (safe.lock) überhaupt eine Diebstahlmeldung sendet (DSC-053, Rückfrage 9), und der Widerspruch, dass die Feldliste von Kapitel 4 die Felder „GPS:“ und „Pos:“ nennt, die in keiner Beispiel-SMS der Seiten 19 und 20 vorkommen (Rückfrage 11). Zurückgenommen: die Behauptung, die Abweichung der LED-Wortlaute zwischen DOC-IBA-SN045 und DOC-KA-SN045 stehe in keinem Register – sie steht als DSC-061 darin; ebenso die Angabe, die schwarz gesetzte LED-Tabelle sei neu gegenüber dem Seitenbefund. Abgeschwächt auf den Quellwortlaut: „das Fahrzeug darf nicht in einer Halle stehen“ zu „sollte … nicht“, weil Abschnitt 1.5.2 „sollte sich nicht … befinden“ schreibt. Enger an die Quelle gebunden: die Aussage über die LED-Bedeutungen außerhalb der Stellung F – die Anleitung stellt nur Stellung F und Ausgangsposition gegenüber und trifft für die übrigen Schalterstellungen keine Aussage. Ergänzt: der neunte LED-Zustand „Blinkt rot/gelb“ (Netzsuche und keine Zielrufnummern) im Fall ausbleibender Meldungen; der Hinweis, dass die GPS-Antenne optionales Zubehör ist und dauerhaftes Rot in Stellung F ohne verbaute Antenne die zu erwartende Anzeige ist; der Hinweis, dass die Anleitung „Hauptkabelbaum“ nicht erklärt (DSC-061); der Hinweis, dass Kapitel 4 den Begriff „Masternummer“ nicht erklärt. Nachgetragen im Quellenverzeichnis: die aufgedruckte Seitenzahl bei der Fundstelle zu Abschnitt 1.5.2 sowie die auf den Seiten 20 und 25 bewusst nicht ausgewerteten Abschnitte. Geprüft und unverändert bestätigt: 11,2 V, 12,5 V, ca. 900 m, 13,5 V für mindestens fünf Minuten, die drei GPS-Diagnosezustände, alle neun LED-Zustände, die drei Meldungen mit zusätzlichem Anruf der Masternummer und der Inhalt von Abschnitt 6.4."
 }

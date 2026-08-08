@@ -4,25 +4,23 @@ import { VersionBanner } from './VersionBanner';
 import { StatusBadge } from './StatusBadge';
 import { SourceRefList } from './SourceRefList';
 import { DOC_LABELS } from '@/lib/content/schema';
+import { parseMarkdownTable } from '@/lib/content/markdown-table';
 import styles from './TaskView.module.css';
 
-function parseMarkdownTable(markdown: string) {
-  const lines = markdown
-    .trim()
-    .split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter(Boolean);
-
-  const cells = (line: string) =>
-    line
-      .replace(/^\|/, '')
-      .replace(/\|$/, '')
-      .split('|')
-      .map((cell) => cell.trim());
-
-  if (lines.length < 3) return null;
-  return { headers: cells(lines[0]), rows: lines.slice(2).map(cells) };
-}
+/**
+ * Die Sicherheitsklasse eines Warnhinweises wird als Wort ausgegeben, nicht nur über
+ * Rahmen und Hintergrund. Sonst wäre ein sicherheitskritischer Hinweis von einem
+ * normalen ausschließlich optisch zu unterscheiden – für Screenreader, Forced-Colors
+ * und Schwarzweißdruck gar nicht.
+ */
+const WARNUNG_LABEL: Record<string, { de: string; en: string }> = {
+  normal: { de: 'Hinweis:', en: 'Note:' },
+  sicherheitsrelevant: { de: 'Achtung:', en: 'Caution:' },
+  sicherheitskritisch: {
+    de: 'Warnung, sicherheitskritisch:',
+    en: 'Warning, safety-critical:',
+  },
+};
 
 /**
  * Detailseite einer Aufgabe: Ziel, Voraussetzungen, Warnungen, Schritte, erwartetes
@@ -68,13 +66,20 @@ export function TaskView({
       {task.warnings.length > 0 && (
         <section aria-labelledby="warnungen">
           <h2 id="warnungen">{de ? 'Warnhinweise' : 'Warnings'}</h2>
-          {task.warnings.map((w, i) => (
-            <div key={i} className={styles.warning} role="note">
-              <p>
-                <strong>{de ? 'Achtung:' : 'Caution:'}</strong> {w.text}
-              </p>
-            </div>
-          ))}
+          {task.warnings.map((w, i) => {
+            const label = WARNUNG_LABEL[w.safety_class] ?? WARNUNG_LABEL.sicherheitskritisch;
+            return (
+              <div
+                key={i}
+                className={`${styles.warning} ${w.safety_class !== 'normal' ? styles.warningKritisch : ''}`}
+                role="note"
+              >
+                <p>
+                  <strong>{de ? label.de : label.en}</strong> {w.text}
+                </p>
+              </div>
+            );
+          })}
         </section>
       )}
 

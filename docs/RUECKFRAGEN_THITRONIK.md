@@ -1,6 +1,7 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-07 · Grundlage: seitenweise Prüfung von 104 der 323 PDF-Seiten
+Stand: 2026-08-08 · Grundlage: seitenweise Prüfung von 180 der 323 PDF-Seiten sowie die
+Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
 bewusst kurz gehalten und nach Dringlichkeit sortiert. Jede Position nennt den wörtlichen
@@ -109,7 +110,14 @@ Nutzerin, ob ihr Gerät zu „bis SN-044" oder „ab SN-045" gehört?
 damit. Ohne bestätigte Leseregel darf die Startseite keine Ziffernregel behaupten – der
 Pilot zeigt deshalb bewusst keine.
 
-_Beleg: DSC-023_
+_Beleg: DSC-023, ergänzt durch DSC-048_
+
+**Nachtrag aus der deutschen Master-Extraktion:** Der Bereich wird in drei Schreibweisen
+angegeben („ab Seriennr. -045", „as of serial no. -045", „SN 0699 - 045 +"), das
+mehrsprachige Gesamtdeckblatt nennt gar keinen, und die Dokumente der alten Generation
+tragen überhaupt keine Seriennummernkennzeichnung. Das Feld „Serial number:" auf der
+Kurzanleitung – der einzige belegte Notizort – ist auch im deutschen Lieferumfang nur
+englisch beschriftet.
 
 ---
 
@@ -181,6 +189,111 @@ Wortdopplung „via SMS via SMS", beide ebenfalls sprachübergreifend.
 
 ---
 
+---
+
+## 9. Meldet der Pro-finder einen Diebstahl auch ohne WiPro III? (blockierend für Geofencing)
+
+Die Quelle sagt an zwei Stellen Unterschiedliches. Seite 19 knüpft die Diebstahlmeldung an
+eine „aktivierte WiPro III (safe.lock)". Seite 21 beschreibt Geofencing dagegen ohne jeden
+Bezug darauf – geschaltet über Pin 3 oder per SMS.
+
+**Die Fragen:**
+
+1. Sendet ein Pro-finder **ohne** angeschlossene WiPro III (safe.lock) eine
+   Diebstahlmeldung, wenn der 900-Meter-Bereich verlassen wird?
+2. Was gilt vor: die Schaltung über Pin 3 in den Stellungen 8 und B oder die automatische
+   Kopplung an den Scharf-/Unscharfzustand der WiPro III?
+3. Ist Geofencing in den Schalterstellungen C bis F verfügbar? Abschnitt 5.2 sagt „in
+   allen anderen Schalterstellungen", die Betriebsartentabelle trifft für C bis F wegen
+   verbundener Zellen keine Aussage.
+
+**Warum das drängt:** Davon hängt ab, ob eine Diebstahlmeldung überhaupt erfolgt. Die
+Aufgabe „Geofencing" der Webanleitung kann die Voraussetzungen bis dahin nicht
+abschließend nennen.
+
+_Beleg: DSC-042_
+
+---
+
+## 10. Woran erkennt das Gerät eine autorisierte Zielrufnummer? (sicherheitskritisch)
+
+In den Beispielen der Programmier-SMS unterscheiden sich autorisierte und nicht
+autorisierte Zielrufnummern erkennbar nur durch das Zeichen vor der Nummer. Der Fließtext
+benennt diese Regel an keiner Stelle des deutschen Teils; sie ist ausschließlich aus dem
+Vergleich der Beispielzeilen erschließbar.
+
+**Die Frage:** Welches Zeichen bewirkt welche Berechtigung, und was geschieht bei einer
+fehlerhaften Eingabe – wird die SMS abgewiesen oder die Nummer mit falscher Berechtigung
+gespeichert?
+
+**Warum das drängt:** Ein falsches Zeichen kippt die Steuerberechtigung einer Rufnummer.
+Eine Anleitung, die diese Regel nicht nennen darf, weil sie unbelegt ist, kann Nutzende
+in genau den Fehler laufen lassen, den sie verhindern soll.
+
+_Beleg: DSC-044_
+
+---
+
+## 11. Welche Felder enthält der Statusbericht wirklich?
+
+Einleitung und Beispiele von Kapitel 4 decken sich nicht:
+
+| Laut Einleitung           | In den neun Beispiel-SMS                       |
+| ------------------------- | ---------------------------------------------- |
+| Feld „GPS:"               | kommt in keiner Beispiel-SMS vor               |
+| Feld „Pos:"               | Position steht überall ohne diesen Bezeichner  |
+| Temperatur nahe dem Gerät | keine Temperaturzeile vorhanden                |
+| U2 bis U5                 | zusätzlich „U1:13,53 V", im Text nicht erwähnt |
+| –                         | „WiPro ON" und „Fence ON", nirgends erklärt    |
+
+**Die Fragen:** Welche Felder enthält ein Statusbericht in welcher Betriebsart? Wie lauten
+die Feldbezeichner genau? Und wie schreibt das Gerät den **ausgeschalteten**
+Geofencing-Zustand – „Fence ON" ist die einzige belegte Rückmeldung, das Gegenstück zeigt
+keine geprüfte Seite.
+
+**Warum das drängt:** Die Aufgabe „Meldungen" soll Nutzenden erklären, was in einer SMS
+steht. Solange die Quelle sich selbst widerspricht, kann sie das nur mit Vorbehalt.
+
+_Beleg: DSC-045_
+
+---
+
+## 12. Die GPS-Diagnose ist am Gerät nicht barrierefrei durchführbar
+
+Die GPS-Diagnose in Schalterstellung F unterscheidet drei Zustände über die Status-LED:
+Rot und Grün leuchten **beide dauerhaft**, nur Gelb blinkt. Zwei der drei Zustände sind
+damit ausschließlich über die Farbe unterscheidbar. Erschwerend bedeutet dieselbe Farbe in
+Stellung F etwas anderes als im Normalbetrieb (Rot: GPS-Antenne nicht angeschlossen
+gegenüber SIM-Karte fehlt oder ist defekt).
+
+**Die Fragen:** Gibt es ein farbunabhängiges Merkmal – eine Blinkfrequenz, eine Folge, eine
+SMS-Rückmeldung –, mit dem sich die drei Diagnosezustände unterscheiden lassen? Falls
+nicht: ist eine textliche Rückmeldung vorgesehen?
+
+**Warum das drängt:** Das ist die einzige bisher gefundene Stelle, an der die
+Barrierefreiheit **am Gerät** endet und nicht am Dokument. Die HTML-Anleitung kann sie
+beschreiben, aber nicht auflösen. Sie wird in der Aufgabe „Fehlerbehebung" ausdrücklich
+als Grenze benannt.
+
+_Beleg: DSC-047_
+
+---
+
+## 13. Ersetzt die THITRONIK App wirklich die Kapitel 2.5 bis 2.8?
+
+Abschnitt 2.4 erklärt bei Nutzung der App die Schritte der Kapitel 2.5 bis 2.8 für
+entbehrlich. Kapitel 2.5 ist aber der Eintrag der Modulnummer im Adressbuch des
+Mobiltelefons, und seine Fortsetzung verlangt dafür ausdrücklich die Ländervorwahl, damit
+das Gerät aus dem Ausland erreichbar bleibt. Das ist eine Handlung am Telefon, die eine
+App nicht übernimmt.
+
+**Die Frage:** Welche Schritte entfallen bei Nutzung der App tatsächlich – und bleibt der
+Adressbucheintrag mit Ländervorwahl nötig?
+
+_Beleg: DSC-043_
+
+---
+
 ## Was der Pilot ohne diese Antworten nicht tun kann
 
 - **Keinen SMS-Befehl veröffentlichen** – weder im deutschen Master noch in einer Übersetzung.
@@ -203,10 +316,17 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | Kabelbezeichnung uneinheitlich: „Verbindungskabel WiPro III" (Deutsch, Tschechisch) gegenüber „câble de connexion RJ10" (Französisch) | DSC-036, S. 11, 59, 86         |
 | Produktname im tschechischen Teil mehrfach verstümmelt („hledáček Pro", „vyhledávač Pro")                                             | DSC-036, S. 86, 89, 93, 96     |
-| Vier tschechische Substantive für dasselbe Gerät; drei Bezeichnungen für den Anlernmodus                                              | DSC-037, DSC-039               |
+| Vier tschechische Substantive für dasselbe Gerät; drei Bezeichnungen für den Anlernmodus                                              | DSC-037; S. 99 (Seitenrecord)  |
 | Links im tschechischen Teil verweisen auf `/en/` statt `/cs/`                                                                         | S. 100, Abschnitte 6.3 und 6.4 |
 | Französischer Teil hat 26 statt 23 interne Seiten; letzte Seite trägt „Page 26 de 25"                                                 | DSC-021                        |
 | Rotes X in der Anschlussabbildung – in vier Sprachfassungen ohne Legendeneintrag                                                      | S. 8, 32, 56, 83               |
+| Zwei weitere falsche Querverweise im **deutschen** Original (5.4 statt 5.5 auf S. 9; 1.5.2 statt 1.5.3 in der Betriebsartentabelle)   | DSC-040                        |
+| Verweis auf 5.1 für Blinker und Sirene führt ins Leere; 5.1 beschreibt nur einen Anruf, obwohl die Überschrift SMS ankündigt          | DSC-041                        |
+| „Hauptkabelbaum" wird nirgends erklärt – der gesamte Löschvorgang der Zielrufnummern hängt daran                                      | DSC-050, S. 17                 |
+| Dezimaltrennzeichen der Gerätemeldungen uneinheitlich (11.2 V mit Punkt, 13,53 V mit Komma) – schon im deutschen Original             | DSC-046                        |
+| Revisionsstände der Kurzanleitung widersprechen sich (Rev. 1.3.2 gegenüber Rev. 1.0 auf dem abgebildeten Umschlag)                    | DSC-049                        |
+| Google-Play-Abzeichen so grob gerastert, dass es auch bei 900 dpi unlesbar bleibt                                                     | DSC-051, S. 14                 |
+| Vier Fragen zu den Ausgängen, die die Quelle gar nicht beantwortet (Empfänger, Grenzwerte, Abbruch, Zustand nach Neustart)            | DSC-052, S. 23                 |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

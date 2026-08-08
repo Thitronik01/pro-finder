@@ -546,3 +546,221 @@ der in allen vier geprüften Fassungen identisch lautet.
 > Die Befunde der Seiten 1–96 von DOC-IBA-SN045 und der Seiten 1–2 von DOC-KA-SN044 sind
 > in den Seitenrecords unter [sources/pages/](../sources/pages/) erfasst und werden bei
 > der Segment-Extraktion in dieses Register übernommen, sobald sie inhaltlich bewertet sind.
+
+---
+
+## Batch 2026-08-08 – deutsche Master-Extraktion (DOC-IBA-SN045, Seiten 1–25)
+
+Diese Positionen sind bei der Extraktion der vierzehn deutschen Aufgaben entstanden. Sie
+betreffen **den deutschen Text selbst**, nicht seine Übersetzungen, und setzen damit die
+mit DSC-016 und DSC-028 begonnene Linie fort: „geprüfter deutscher Master" darf nicht
+„übernommener deutscher Text" heißen. Jede Position ist aus dem gerenderten Seitenbild
+belegt, nicht aus einer Zusammenfassung.
+
+### DSC-040 – Zwei weitere falsche Querverweise im deutschen Original (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 9 und 10 (aufgedruckt „Seite 7 von 23" und „Seite 8
+  von 23")
+- **Befund:** Neben dem bereits als DSC-028 geführten Fehler stehen zwei weitere
+  Fehlverweise im deutschen Text.
+  1. Seite 9, Abschnitt 1.3: „In allen Betriebsarten können die Ausgänge, wie unter
+     **5.4** … beschrieben, gesteuert werden." Richtig ist 5.5 „Ausgänge per SMS steuern";
+     5.4 ist „Position mit dem Smartphone abfragen".
+  2. Seite 10, Betriebsartentabelle, Zeile F: Verweis auf „**1.5.2** GPS-Antenne
+     anschließen". Die GPS-Diagnose in Schalterstellung F steht in 1.5.3.
+- **Präzisierung zu DSC-028:** Der Fehlverweis auf 5.4 sitzt im Fließtext von Abschnitt
+  1.3 auf **Seite 9**. Der rote Hinweiskasten auf Seite 11 verweist dagegen **korrekt**
+  auf 5.5. Die frühere Ortsangabe ist damit berichtigt.
+- **Schwere:** mittel (Nutzende landen im falschen Kapitel) · **Status:** offen
+
+### DSC-041 – Querverweis auf 5.1 führt inhaltlich ins Leere (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 19 und 21
+- **Befund:** Seite 19 verweist für die Ansteuerung von Blinker und Sirene auf Abschnitt
+  5.1. Abschnitt 5.1 „Alarmanlage per SMS steuern" (Seite 21) beschreibt ausschließlich
+  das Scharf- und Unscharfschalten der WiPro III (safe.lock) **per Anruf** und nennt
+  weder Blinker noch Sirene. Auch die Überschrift trifft den Inhalt nicht: sie kündigt
+  eine SMS-Steuerung an, der Abschnitt beschreibt einen Anruf.
+- **Schwere:** mittel · **Status:** offen
+
+### DSC-042 – Geofencing: Abhängigkeit von der WiPro III ist widersprüchlich (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 19 und 21
+- **Befund:** Seite 19 knüpft die Diebstahlmeldung an eine „aktivierte WiPro III
+  (safe.lock)". Seite 21 beschreibt Geofencing dagegen unabhängig davon, geschaltet über
+  Pin 3 oder per SMS. Ob ein Pro-finder **ohne** WiPro III überhaupt eine Diebstahlmeldung
+  sendet, ist aus keiner der beiden Stellen ableitbar.
+- **Zusätzlich ungeregelt:** der Vorrang zwischen der Schaltung über Pin 3 (Stellungen 8
+  und B) und der automatischen Kopplung an den Scharf-/Unscharfzustand der WiPro III.
+- **Weiterer Widerspruch:** Abschnitt 5.2 sagt pauschal „in allen anderen
+  Schalterstellungen"; die Betriebsartentabelle auf Seite 10 trifft für die Zeilen C bis F
+  wegen verbundener Zellen gar keine Geofencing-Aussage.
+- **Randbefund:** Die Radiusangabe lautet auf Seite 21 „einen Bereich von 900 Metern"
+  ohne Einschränkung, auf Seite 19 „weiter als ca. 900 m". Beide Formulierungen sind
+  unverändert übernommen.
+- **Schwere:** hoch (betrifft, ob eine Diebstahlmeldung überhaupt erfolgt) ·
+  **Status:** offen – gehört in den technischen Review
+
+### DSC-043 – Die App ersetzt laut Quelle Schritte, die sie nicht ersetzen kann (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 14 und 15
+- **Befund:** Abschnitt 2.4 erklärt bei Nutzung der THITRONIK App die Schritte der
+  Kapitel „2.5 bis 2.8" für entbehrlich. Kapitel 2.5 ist jedoch der Eintrag der
+  Modulnummer im Adressbuch des Mobiltelefons, und seine Fortsetzung auf Seite 15 verlangt
+  dafür ausdrücklich die Ländervorwahl, damit das Gerät aus dem Ausland erreichbar bleibt.
+  Das ist eine Handlung am Telefon, die eine App nicht übernimmt.
+- **Schwere:** hoch (die Erreichbarkeit des Geräts hängt daran) · **Status:** offen
+
+### DSC-044 – Die Steuerberechtigung hängt an einem nirgends erklärten Zeichen (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seite 17, Tabelle „Beispiele für verschiedene
+  Programmier-SMS"
+- **Befund:** Autorisierte und nicht autorisierte Zielrufnummern unterscheiden sich in den
+  Beispielen erkennbar nur durch das Zeichen vor der Nummer. Der Fließtext benennt diese
+  Regel an keiner Stelle des deutschen Teils; sie ist ausschließlich aus dem Vergleich der
+  Beispielzeilen erschließbar. Ein falsches Zeichen kippt die Steuerberechtigung einer
+  Rufnummer.
+- **Schwere:** hoch (sicherheitskritisch: eine nicht autorisierte Nummer könnte
+  Steuerrechte erhalten) · **Status:** offen – gehört in den technischen Review
+
+### DSC-045 – Der Statusbericht enthält Felder, die das Kapitel nicht erklärt (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 19 und 20, Kapitel 4
+- **Befund:** Einleitung und Beispiele decken sich nicht.
+  - Die Einleitung definiert die Felder „GPS:" und „Pos:". In **keiner** der neun
+    Beispiel-SMS erscheint eine GPS-Zeile; die Position steht überall ohne den
+    Bezeichner „Pos".
+  - Der Fließtext nennt für den Statusbericht die Temperatur nahe dem Gerät sowie U2 bis
+    U5. Die Beispiel-SMS enthält keine Temperaturzeile, dafür die im Text nirgends
+    erwähnte Zeile „U1:13,53 V".
+  - Die Zeilen „WiPro ON" und „Fence ON" erscheinen im Beispiel, werden aber in Kapitel 4
+    nicht erklärt. „Fence ON" ist zugleich die einzige belegte textliche Rückmeldung zum
+    Geofencing-Zustand; wie der ausgeschaltete Zustand geschrieben wird, zeigt keine
+    geprüfte Seite.
+- **Schwere:** hoch (Nutzende können den Bericht nicht vollständig deuten) ·
+  **Status:** offen
+
+### DSC-046 – Dezimaltrennzeichen im Gerätetext uneinheitlich (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 19 und 20
+- **Befund:** Die Gerätemeldungen schreiben „Spannung unter 11.2 V" mit Punkt und
+  „U1:13,53 V" mit Komma. Der deutsche Fließtext daneben schreibt durchgehend 11,2 V und
+  12,5 V.
+- **Bezug:** Dieselbe Beobachtung ist im tschechischen Teil unter DSC-033 vermerkt. Es
+  ist damit kein Übersetzungsartefakt, sondern betrifft schon das deutsche Original.
+- **Schwere:** niedrig, für den Token-Vergleich der Übersetzungen aber relevant ·
+  **Status:** offen
+
+### DSC-047 – Status-LED: dieselbe Farbe bedeutet in Stellung F etwas anderes (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 12 und 18
+- **Befund:** Die GPS-Diagnose in Schalterstellung F (Abschnitt 1.5.3, Seite 12) belegt
+  die Farben der Status-LED anders als der Normalbetrieb (Kapitel 3, Seite 18):
+  Rot heißt dort „GPS-Antenne nicht angeschlossen" statt „SIM-Karte fehlt oder ist
+  defekt", Grün „Einbauposition in Ordnung" statt „SMS-Verkehr", Gelb „keine gültige
+  Position" statt „letzte SMS nicht versendet".
+- **Barrierefreiheit:** In der Diagnosetabelle leuchten Rot und Grün beide dauerhaft, nur
+  Gelb blinkt. Damit sind zwei der drei Zustände **ausschließlich** über die Farbe
+  unterscheidbar; ein farbunabhängiges Merkmal ist nicht dokumentiert. Für die
+  HTML-Anleitung heißt das: die Diagnose ist am Gerät selbst nicht barrierefrei
+  durchführbar. Das ist eine Grenze der Lösung, keine Lücke der Umsetzung, und wird in
+  der Aufgabe „Fehlerbehebung" ausdrücklich benannt.
+- **Randbefund:** Die Tabelle auf Seite 12 ist entgegen der Arbeitsannahme **nicht**
+  farbig gesetzt – sie nennt die Farben in schwarzer Schrift. Die Barriere sitzt am
+  Gerät, nicht im Dokument.
+- **Schwere:** hoch · **Status:** offen – an THITRONIK zu melden
+
+### DSC-048 – Seriennummer: drei Schreibweisen, kein belegter Fundort (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 1, 2, 6 und 26; DOC-KA-SN045, Seite 1
+- **Befund:** Ergänzung zu DSC-023.
+  - Derselbe Seriennummernbereich erscheint in drei Schreibweisen: „(ab Seriennr. -045)"
+    (Seite 2), „(as of serial no. -045)" (Seite 26) und „SN 0699 - 045 +" auf dem
+    Umschlag der Kurzanleitung, der auf Seite 6 abgebildet ist.
+  - Das mehrsprachige Gesamtdeckblatt (Seite 1) nennt **keinen** Seriennummernbereich.
+    Wer die Anleitung von vorn öffnet, findet die Bereichsangabe erst auf dem Deckblatt
+    des jeweiligen Sprachteils.
+  - Die Dokumente der alten Generation (DOC-BMA-SN044, DOC-KA-SN044) tragen **gar keine**
+    Seriennummernkennzeichnung. Das Fehlen einer Bereichsangabe beweist also nichts.
+  - Die Kurzanleitung ab SN-045 enthält ein leeres Feld „Serial number:" mit der
+    Aufforderung, die Nummer dort einzutragen. Diese Aufforderung steht **nur auf
+    Englisch**, auch im deutschen Lieferumfang. Der einzige belegte Notizort für die
+    Seriennummer ist damit sprachlich nicht für alle zugänglich.
+- **Präzisierung zu DSC-023:** Das Präfix „SN 0699-045+" war bisher über ein Foto auf der
+  französischen Seite 54 belegt. Dieselbe Aufschrift ist auf der **deutschen Seite 6**
+  lesbar (bei 900 dpi geprüft) und ist damit die bessere Fundstelle für den deutschen
+  Master.
+- **Schwere:** hoch (die Versionsauswahl der Webanleitung hängt daran) · **Status:** offen
+
+### DSC-049 – Revisionsstände der Kurzanleitung widersprechen sich (ab SN-045)
+
+- **Dokument:** DOC-KA-SN045 (Titel) gegenüber DOC-IBA-SN045, Seite 6 (Abbildung)
+- **Befund:** DOC-KA-SN045 trägt den Revisionsvermerk „Rev. 1.3.2". Der auf Seite 6 der
+  Installationsanleitung abgebildete Umschlag derselben Kurzanleitung zeigt „Rev. 1.0".
+- **Schwere:** mittel (unklar, welche Kurzanleitung dem Gerät beiliegt) · **Status:** offen
+
+### DSC-050 – Unerklärte und uneinheitliche Benennungen im deutschen Teil (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 12, 15, 16, 18, 21, 22, 23
+- **Befund:** Sammelposition für Benennungen, die denselben Gegenstand unterschiedlich
+  bezeichnen oder gar nicht erklärt werden.
+  - „Ländervorwahl" (Seite 15) gegenüber „Landesvorwahl" (Seite 16, Diagramm).
+  - „Nummer des Pro-finder" (Abschnitt 5.2) gegenüber „Nummer des GSM-Moduls"
+    (Abschnitt 1.5.3) für dasselbe SMS-Ziel.
+  - „Hauptkabelbaum" kommt im gesamten geprüften deutschen Teil nur in Abschnitt 2.9 vor,
+    wird nirgends erklärt und keiner Marke der Anschlussabbildung zugeordnet – obwohl der
+    gesamte Löschvorgang der Zielrufnummern daran hängt.
+  - Drei Schreibweisen für denselben LED-Zustand: „gelb-grün" (Abschnitt 2.4), „Blinkt
+    gelb/grün" (Kapitel 3, Seite 18), „Blinkt grün/gelb" (DOC-KA-SN045). Ebenso „fehlt
+    oder ist defekt" gegenüber „fehlt bzw. ist defekt".
+  - Seite 11 „bis der Befehl aufgehoben wird" gegenüber Seite 23 „bis auf Widerruf" für
+    dieselbe Dauereinschaltung.
+- **Schwere:** mittel (Terminologie; betrifft Glossar und Übersetzungsbasis) ·
+  **Status:** offen · siehe auch [TERMINOLOGY_CONFLICTS.md](TERMINOLOGY_CONFLICTS.md)
+
+### DSC-051 – Redaktionelle Befunde im deutschen Teil (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 14, 16, 17, 19, 20, 22, 23
+- Seite 22, Abschnitt 5.5: überzähliges Komma – „Sie können die Ausgänge, dauerhaft,
+  gepulst …".
+- Seite 17: Spaltenüberschrift „Inhalt der Programmier-SMS **in** Pro-finder" statt „an".
+- Seite 23: Die Überschriften 5.5.1 bis 5.5.3 stehen im Plural („Ausgänge"), jeder
+  Fließtext behandelt aber nur Ausgang A; erst der rote Kasten holt Ausgang B nach.
+  Überschrift 5.5.1 „Ausgänge dauerhaft einschalten" deckt den Abschnitt nur halb ab –
+  er beschreibt auch das Ausschalten.
+- Seite 20: Zwei Beispiel-SMS öffnen eine Klammer ohne Schließung – „Einbruch
+  Tuer/Fenster (Funk-Magnetkontakt" und „Diebstahl Zubehoer (Funk-Kabelschleife".
+  „Diebstahl Zubehoer" ist zugleich die einzige der neun Beispiel-SMS ohne
+  Geschwindigkeitszeile.
+- Seite 19: Die Einbruchmeldung ist im Fließtext weiter gefasst als ihre Überschrift –
+  „immer, wenn die WiPro III (safe.lock) einen Alarm meldet", während das Beispiel nur den
+  Funk-Magnetkontakt zeigt.
+- Seite 16: Die Landesvorwahl der ersten Zielrufnummer ist unterstrichen, hat als einziger
+  Bestandteil des Diagramms aber weder Verbindungslinie noch Beschriftung. Zusätzlich
+  umfasst die Unterstreichung bei der 1. Zielrufnummer nur den Teil hinter der
+  Landesvorwahl, bei der 2. und 3. dagegen die Landesvorwahl mit – derselbe Sachverhalt,
+  zwei Markierungen.
+- Seite 14: „wie oben dargestellt" in Abschnitt 2.4 verweist auf eine Abbildung der
+  **vorherigen** Seite. Das Google-Play-Abzeichen ist so grob gerastert, dass seine
+  Kopfzeile auch bei 900 dpi unlesbar bleibt, während das App-Store-Abzeichen daneben
+  scharf ist.
+- **Status:** offen
+
+### DSC-052 – Lücken der Quelle, die keine Widersprüche sind (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Seiten 12, 19, 20, 23
+- **Befund:** Fragen, die sich beim Schreiben der Aufgaben gestellt haben und die die
+  Quelle **gar nicht** beantwortet. Sie sind keine Fehler, aber sie begrenzen, was die
+  HTML-Anleitung sagen darf.
+  - Ausgänge (Seite 23): Wer erhält den Statusbericht nach einem Schaltbefehl, und darf
+    jede berechtigte Nummer schalten? Was geschieht bei einer Minutenzahl außerhalb
+    1 bis 120? Lässt sich eine laufende Zeitschaltung vorzeitig abbrechen? In welchem
+    Zustand sind die Ausgänge nach Spannungsausfall oder Neustart?
+  - Spannungswarnung (Seite 19): Der Text nimmt Betriebsart B von der Warnung aus, sagt
+    aber nicht, ob dort auch der Wechsel in den Standby entfällt.
+  - Eingabehilfe (Seite 20): beschrieben ist nur die Antwort auf eine SMS **von einer
+    Zielrufnummer**; was bei anderen Absendern geschieht, sagt die Quelle nicht.
+  - GPS (Seite 12): Die Mindest-Betriebsspannung von 13,5 V für mindestens fünf Minuten
+    zum Speichern der Satellitendaten fehlte bisher in der Liste der wiederkehrenden
+    Werte dieser Generation. Sie ist unverändert übernommen.
+- **Status:** offen – für den technischen Review gesammelt

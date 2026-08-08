@@ -1,25 +1,399 @@
 {
   "slug": "statusbericht",
-  "title": "Statusbericht abrufen",
+  "title": "Statusbericht anfordern und lesen",
   "generation": "sn-045-plus",
   "language": "de",
-  "goal": "Einen Statusbericht des Pro-finder anfordern und lesen.",
-  "prerequisites": [],
-  "warnings": [],
-  "steps": [],
-  "expected_result": null,
-  "error_cases": [],
-  "figures": [],
-  "tables_md": [],
+  "goal": "Sie fordern einen Statusbericht des Pro-finder an und lesen die Angaben darin richtig – auch dann, wenn Position und Uhrzeit im Bericht nicht die aktuellen sind.",
+  "prerequisites": [
+    "Der Pro-finder ist betriebsbereit, und Sie kennen die Rufnummer der eingelegten Nano-SIM.",
+    "Ihre Rufnummer ist im Pro-finder als Zielrufnummer gespeichert und als autorisierte Nummer eingerichtet. Nur autorisierte Nummern dürfen Statusberichte anfordern; nicht autorisierte Nummern erhalten lediglich Statusmeldungen.",
+    "Sie wissen, welche Betriebsart am Betriebsartenschalter eingestellt ist. Die Betriebsart entscheidet darüber, ob ein Anruf einen Statusbericht auslöst und welche Spannungen der Bericht enthält."
+  ],
+  "warnings": [
+    {
+      "text": "Rufen Sie den Pro-finder in den Betriebsarten 2 und 3 nicht an, um den Status abzufragen. In diesen beiden Stellungen ist der Anruf keine Abfrage, sondern ein Schaltbefehl: Er schaltet die WiPro III (safe.lock) in den jeweils nächsten Zustand, also von unscharf nach scharf oder von scharf nach unscharf. Den Statusbericht erhalten Sie dort erst als Quittung dieses Schaltvorgangs. Wer nur nachsehen wollte, hat damit die Alarmanlage umgeschaltet.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, Absatz zum Anruf (aufgedruckt „Seite 20 von 23“)",
+          "note": "Wörtlich: „Rufen Sie die Nummer des Pro-finder an (außer in Betriebsart 2 und 3).“ Abschnitt 5.3 nennt die Ausnahme, erklärt aber nicht, was der Anruf dort stattdessen bewirkt."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3 „Betriebsart auswählen“, Absatz „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus:“ (aufgedruckt „Seite 7 von 23“)",
+          "note": "Wörtlich: „Die WiPro wird von unscharf nach scharf bzw. von scharf nach unscharf geschaltet.“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, erster und zweiter Absatz (aufgedruckt „Seite 19 von 23“)",
+          "note": "Wörtlich: „In den Betriebsarten 2 und 3 … kann die WiPro III (safe.lock) per Anruf in den jeweils nächsten Zustand geschaltet (aktiviert/deaktiviert) werden.“ und „… versendet nach erfolgreichem Schaltvorgang einen Statusbericht an den Anrufer.“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen 2 und 3, Spalten „Anruf löst Statusbericht aus“ und „Anruf aktiviert/deaktiviert WiPro“ (aufgedruckt „Seite 8 von 23“)",
+          "note": "In beiden Zeilen steht in der Spalte „Anruf löst Statusbericht aus“ ein „-“. Das widerspricht der Überschrift derselben Funktion in Abschnitt 1.3 – sie lautet „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus“ – und dem Satz in 5.1, der einen Statusbericht nach erfolgreichem Schaltvorgang nennt. Der Widerspruch ist nicht aufgelöst."
+        }
+      ]
+    },
+    {
+      "text": "Steht im Statusbericht „GPS kein Empfang“, ist die mitgesendete Position nicht die aktuelle, sondern die letzte gültige. Sie kann beliebig alt sein und muss nicht der Standort des Fahrzeugs sein. Verlassen Sie sich für eine Ortung nicht auf einen Bericht mit dieser Angabe.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, letzter Absatz (aufgedruckt „Seite 20 von 23“)",
+          "note": "Wörtlich: „Wenn keine gültige Position empfangen wird, steht im Statusbericht ‚GPS kein Empfang‘; es wird jedoch die letzte gültige Position gesendet.“"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie die Uhrzeit im Statusbericht nicht als Sendezeitpunkt. Sie ist in koordinierter Weltzeit (UTC) angegeben und bezeichnet immer den Zeitpunkt der zuletzt empfangenen Position. Steht das Fahrzeug ohne GPS-Empfang, liegt dieser Zeitpunkt entsprechend weit zurück, ohne dass der Bericht das kenntlich macht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, letzter Absatz (aufgedruckt „Seite 22 von 23“)",
+          "note": "Wörtlich: „Die in der SMS enthaltene Uhrzeit in UTC (Koordinierter Weltzeit) entspricht immer der Zeit der zuletzt empfangenen Position.“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, Feldzeile „UTC:“ (aufgedruckt „Seite 17 von 23“)",
+          "note": "Kapitel 4 sagt an derselben Stelle nur „Uhrzeit des Vorfalls (Angabe in koordinierter Weltzeit)“. Beide Angaben stehen unverbunden nebeneinander."
+        }
+      ]
+    },
+    {
+      "text": "Jede vom Pro-finder versendete SMS verursacht Kosten, deren Höhe von Ihrem Netzbetreiber abhängt. Steuern Sie die Anlage per SMS oder Anruf, sendet der Pro-finder jedes Mal eine Status-SMS. In den Betriebsarten 4 bis 7 kommen die automatischen Berichte hinzu. Auch für die Stellungen C und D trägt die Tabelle einen Wert in der Spalte „Intervall der automatischen Statusberichte“ ein: 90 Sekunden bei C und 8 Minuten bei D.",
+      "safety_class": "normal",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.6 „Pro-finder per SMS oder Anruf steuern“, einziger Absatz (aufgedruckt „Seite 13 von 23“)",
+          "note": "Wörtlich: „Jede vom Pro-finder versendete SMS verursacht Kosten für Sie, deren Höhe von Ihrem Netzbetreiber abhängt. Wenn Sie die Anlage per SMS oder Anruf steuern, sendet der Pro-finder jedes Mal eine Status-SMS.“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spalte „Intervall der automatischen Statusberichte“, Zeilen 4 bis 7 sowie C und D (aufgedruckt „Seite 8 von 23“)",
+          "note": "Die Werte 90 Sekunden (C) und 8 Minuten (D) stehen in derselben Spalte wie die Intervalle der Zeilen 4 bis 7; ihr Klammerzusatz nennt jedoch das Suchen des GPS-Signals. Was dort im genannten Takt geschieht, ist aus der Quelle nicht eindeutig."
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Sehen Sie am Betriebsartenschalter nach, welche Stellung eingestellt ist.",
+      "expected": "Sie kennen die Stellung – eine Ziffer von 0 bis 9 oder ein Buchstabe von A bis F. Die erste Übersicht unten zeigt Stellung für Stellung, ob ein Anruf einen Statusbericht auslöst, in welchem Intervall automatische Berichte kommen und welche Spannungen im Bericht stehen. Die Quelle stellt dort „ja“ und „-“ ohne Legende gegenüber; „-“ ist in der Übersicht als „nein“, „keines“ beziehungsweise „keine“ ausgeschrieben, und die Quellschreibweise steht jeweils dabei. Ausgenommen sind die Zeilen 2 und 3: Dort widerspricht der Fließtext dem „-“, und der Widerspruch steht in der Zelle statt einer Lesart.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Einleitung „Durch Einstellen des Betriebsartenschalters (siehe oben) lassen sich folgende Funktionen aktivieren:“ (aufgedruckt „Seite 7 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, alle 16 Zeilen (aufgedruckt „Seite 8 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Rufen Sie mit Ihrem Telefon die Rufnummer der im Pro-finder eingelegten Nano-SIM an. Rufen Sie in den Betriebsarten 2 und 3 nicht an.",
+      "expected": "Der Pro-finder beendet den Anruf nach wenigen Freizeichen selbst und antwortet mit einem Statusbericht als SMS an die anrufende Nummer. Nur berechtigte Nummern erhalten ihn.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, Absatz „Rufen Sie die Nummer des Pro-finder an (außer in Betriebsart 2 und 3). Der Pro-finder wird nach wenigen Freizeichen den Anruf beenden und mit einem Statusbericht reagieren.“ (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Anruf löst Statusbericht aus:“ (aufgedruckt „Seite 7 von 23“)",
+          "note": "Wörtlich: „Wenn Sie die Rufnummer der im Pro-finder eingelegten Nano SIM-Karte wählen, beendet der Pro-finder den Anruf automatisch und sendet einen Statusbericht an den Anrufer (nur berechtigte Nummern).“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1, roter Hinweiskasten „Nur berechtigte Nummern können auf Pro-finder zugreifen.“ (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Fordern Sie den Statusbericht ersatzweise per SMS an die Rufnummer des Pro-finder an. Der Pro-finder antwortet auf diese SMS mit einem Statusbericht. Welcher Text in der SMS stehen muss, ist ungeklärt und steht deshalb nicht in dieser Anleitung; nutzen Sie bis zur Klärung den Anruf.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, Absätze „Senden Sie eine SMS mit folgendem Text an die Nummer des Pro-finder:“ und „Pro-finder reagiert auf diese SMS mit einem Statusbericht.“ (aufgedruckt „Seite 20 von 23“)",
+          "note": "Der dazwischen blau und kursiv gesetzte Befehl ist bewusst nicht übernommen; die Begründung steht im change_reason."
+        }
+      ]
+    },
+    {
+      "text": "Warten Sie auf die Antwort-SMS. Steht das Fahrzeug in einem Gebäude oder an einem anderen Ort ohne GPS-Empfang, wartet der Pro-finder bis zu zehn Minuten auf eine gültige Position, bevor er den Bericht sendet.",
+      "expected": "Der Statusbericht trifft ein. Kommt bis dahin keine gültige Position zustande, sendet der Pro-finder den Bericht mit der zuletzt empfangenen Position.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, vierter Absatz (aufgedruckt „Seite 22 von 23“)",
+          "note": "Wörtlich: „… wartet der Pro-finder bis zu zehn Minuten auf den Empfang einer gültigen Position. Wird auch nach zehn Minuten keine Position empfangen, versendet der Pro-finder den Statusbericht mit der zuletzt empfangenen Position.“ Abschnitt 5.3 nennt diese Wartezeit nicht."
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie die eingegangene SMS Zeile für Zeile. Die zweite Übersicht unten erklärt jede Angabe, die darin vorkommen kann.",
+      "expected": "Sie erkennen die Uhrzeit in koordinierter Weltzeit, die Position, die Geschwindigkeit, den Zustand der beiden Ausgänge und – je nach Betriebsart – die Spannungen U1 bis U5.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Feldzeilen „GPS:“, „UTC:“, „Pos:“ und „Geschwindigkeit:“ sowie Erläuterung „Statusbericht:“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, letzter Absatz (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Statusbericht enthält U1, U2, U3, U4, U5:“ (aufgedruckt „Seite 7 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie Positionsangabe und Uhrzeit, bevor Sie danach handeln.",
+      "expected": "Empfängt der Pro-finder eine gültige Position, steht nur diese Position im Bericht. Wird keine gültige Position empfangen, steht im Bericht „GPS kein Empfang“, und der Pro-finder sendet stattdessen die letzte gültige Position. Die Uhrzeit gehört immer zu der Position, die zuletzt empfangen wurde.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, letzter Absatz (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7, letzter Absatz (aufgedruckt „Seite 22 von 23“)"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Sie haben einen Statusbericht als SMS erhalten. Er nennt die Uhrzeit in koordinierter Weltzeit (UTC), die Position des Fahrzeugs – je nach mobilem Endgerät als Link auf einen Kartendienst oder als Koordinaten –, die Geschwindigkeit sowie den Zustand der beiden Ausgänge A und B. Zusätzlich überträgt der Pro-finder den GPS-Status und die Umgebungstemperatur in unmittelbarer Nähe des Geräts. Je nach Betriebsart kommen die Betriebsspannung U1 und die Spannungen an den Messeingängen U2 bis U5 hinzu; welche das sind, zeigt die erste Übersicht. Steht statt einer aktuellen Position „GPS kein Empfang“ im Bericht, ist die mitgesendete Position die letzte gültige und damit möglicherweise veraltet.",
+  "error_cases": [
+    {
+      "problem": "Sie rufen den Pro-finder an, es kommt kein Statusbericht.",
+      "correction": "Prüfen Sie zuerst die Betriebsart. Zu den Stellungen 2 und 3 widerspricht sich die Quelle: Die Betriebsartentabelle setzt dort in der Spalte „Anruf löst Statusbericht aus“ ein „-“, während Abschnitt 1.3 dieselbe Funktion mit „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus“ überschreibt und Abschnitt 5.1 einen Statusbericht „nach erfolgreichem Schaltvorgang“ nennt. Sicher ist nur: Der Anruf schaltet dort die WiPro III (safe.lock) um. Bleibt der Bericht aus, kann das also auch bedeuten, dass der Schaltvorgang nicht zustande kam. Für die Stellungen E und F macht die Betriebsartentabelle zum Anruf überhaupt keine Angabe: Beide Zeilen sind von der Anruf-Spalte an über alle Spalten hinweg zu einer Zelle verbunden und nennen nur die Sonderfunktion – Löschen der Zielrufnummern (E) und GPS-Diagnose (F). Prüfen Sie außerdem, ob Ihre Rufnummer als autorisierte Zielrufnummer gespeichert ist; nur berechtigte Nummern können auf den Pro-finder zugreifen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, Absatz zum Anruf (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen 2, 3, E und F (aufgedruckt „Seite 8 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 mit rotem Hinweiskasten (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, Zeile „Autorisierte Nummern:“ (aufgedruckt „Seite 13 von 23“)",
+          "note": "Wörtlich: „Diese Zielrufnummern haben die Berechtigung, die Ausgänge des Pro-finder per SMS zu steuern und Statusberichte anzufordern.“"
+        }
+      ]
+    },
+    {
+      "problem": "Der Statusbericht kommt erst nach mehreren Minuten.",
+      "correction": "Das ist kein Fehler. Steht das Fahrzeug ohne GPS-Empfang, etwa in einer Halle oder Tiefgarage, wartet der Pro-finder bis zu zehn Minuten auf eine gültige Position. Erst danach sendet er den Bericht mit der zuletzt empfangenen Position. Abschnitt 5.3 erwähnt diese Wartezeit nicht; sie steht nur in Abschnitt 5.7.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7, vierter Absatz (aufgedruckt „Seite 22 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Statt eines Statusberichts kommt eine SMS zurück, die auf einen ungültigen Befehl hinweist.",
+      "correction": "Der gesendete Text wurde nicht als Befehl erkannt. Empfängt der Pro-finder von einer Zielrufnummer eine SMS mit ungültigem Inhalt, antwortet er mit einer Meldung, die die möglichen korrekten Befehle nennt und auf das Handbuch verweist. Diese Befehle sind in dieser Anleitung bewusst nicht abgedruckt, weil ihre Schreibweise ungeklärt ist. Fordern Sie den Bericht deshalb per Anruf an.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Erläuterung „SMS mit Eingabehilfen:“ mit zugehöriger Beispiel-SMS (aufgedruckt „Seite 18 von 23“)",
+          "note": "Wörtlich: „Wird von einer Zielrufnummer eine SMS mit ungültigem Inhalt empfangen, wird diese Meldung mit den möglichen korrekten Befehlen versendet, um dem Nutzer die Bedienung zu erleichtern.“"
+        }
+      ]
+    },
+    {
+      "problem": "Im Statusbericht steht „GPS kein Empfang“.",
+      "correction": "Der Pro-finder hat zu diesem Zeitpunkt keine gültige GPS-Position empfangen. Er sendet dann die letzte gültige Position mit. Behandeln Sie diese Angabe als veraltet und fordern Sie den Bericht später erneut an. Abschnitt 5.3 nennt an dieser Stelle keine weitere Abhilfe.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3, letzter Absatz (aufgedruckt „Seite 20 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Uhrzeit im Statusbericht liegt weit in der Vergangenheit.",
+      "correction": "Die Uhrzeit bezeichnet nicht den Sendezeitpunkt, sondern den Zeitpunkt der zuletzt empfangenen Position. Bei einem Alarm und bei laufender Lichtmaschine fragt der Pro-finder die Position laufend ab; die zuletzt empfangene Position ist dann diejenige, die unmittelbar vor dem Abbruch des GPS-Empfangs gespeichert wurde. Eine alte Uhrzeit ist also ein Hinweis darauf, wie lange der GPS-Empfang schon fehlt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7, letzter Absatz (aufgedruckt „Seite 22 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Der Statusbericht enthält keine oder weniger Spannungswerte als erwartet.",
+      "correction": "Welche Spannungen im Bericht stehen, hängt allein von der Betriebsart ab: In den Stellungen 0, 2, 8, A und B führt die Tabelle für U1 bis U5 keinen Wert, in 1 und 3 nur U1 und U2, in 4 bis 7 sowie in 9 alle fünf. Für die Stellungen C bis F macht die Tabelle zu den Spannungen keine Angabe, weil die Zellen dort mit den Nachbarspalten verbunden sind. Wollen Sie mehr Werte sehen, wählen Sie eine andere Betriebsart.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spaltengruppe „Statusbericht enthält folgende Spannungen“ mit den Unterspalten U1 bis U5 (aufgedruckt „Seite 8 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Statusbericht enthält U1, U2, U3, U4, U5:“ – „Je nach Schalterstellung werden verschiedene Spannungen angezeigt.“ (aufgedruckt „Seite 7 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie erhalten Statusberichte, ohne einen angefordert zu haben.",
+      "correction": "Dafür gibt es zwei belegte Gründe. Erstens die automatischen Berichte: In den Betriebsarten 4 bis 7 sendet der Pro-finder von sich aus Statusberichte an die gespeicherten Zielrufnummern – alle 15 Minuten (4), alle 60 Minuten (5), alle 6 Stunden (6) oder alle 24 Stunden (7). In den Stellungen C und D steht in derselben Spalte 90 Sekunden beziehungsweise 8 Minuten; der Klammerzusatz dort nennt aber das Suchen des GPS-Signals, sodass unklar bleibt, ob in diesem Takt tatsächlich Statusberichte versendet werden. Zweitens die Quittung: Nach jedem erfolgreichen Schaltvorgang an einem Ausgang und nach dem Schalten der WiPro III (safe.lock) per Anruf sendet der Pro-finder ebenfalls einen Statusbericht. Wollen Sie die automatischen Berichte nicht, wählen Sie eine Betriebsart ohne Intervall.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Automatische Statusberichte:“ (aufgedruckt „Seite 7 von 23“)",
+          "note": "Wörtlich: „Der Pro-finder sendet in den unten aufgeführten Intervallen Statusberichte an die gespeicherten Zielrufnummern.“ Der Satz bezieht sich auf alle Intervalle der Tabelle, also auch auf C und D."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spalte „Intervall der automatischen Statusberichte“, Zeilen 4 bis 7 sowie C und D (aufgedruckt „Seite 8 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitte 5.5.1 bis 5.5.3 zur Ausgangssteuerung, jeweils der Satz zur Antwort des Geräts (aufgedruckt „Seite 21 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1, zweiter Absatz (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s19-statusbericht-sms",
+      "alt": "Beispiel eines Statusberichts als schwarze SMS-Sprechblase mit zwölf Angaben.",
+      "long_description": "Die Quelle zeigt den Statusbericht als schwarze Sprechblase mit weißer Schrift, wie eine empfangene SMS auf einem Telefon. Dass es sich um eine SMS handelt, geht allein aus der Form der Sprechblase hervor; eine Beschriftung dazu gibt es nicht. Die Sprechblase enthält zwölf Angaben in dieser Reihenfolge: „WiPro“ mit dem Wert „ON“; „Fence“ mit dem Wert „ON“; „UTC“ mit einer Uhrzeit; eine blau unterstrichene Adresse eines Kartendienstes samt Koordinaten, hier bewusst nicht wiedergegeben; eine Geschwindigkeit in Kilometern pro Stunde, im Beispiel null; „U1“ mit einem Spannungswert, im Beispiel 13,53 V mit Dezimalkomma; „U2“, „U3“, „U4“ und „U5“ mit je einem Spannungswert, im Beispiel jeweils 0 V; „A“ mit dem Wert „OFF“; „B“ mit dem Wert „OFF“. Gezählt werden dreizehn gedruckte Zeilen, weil die Adresse über zwei Zeilen umbricht. Die Zeile zu U1 ist als einzige ohne Leerzeichen nach dem Doppelpunkt gesetzt; „WiPro ON“ und „Fence ON“ haben als einzige gar keinen Doppelpunkt, und die Geschwindigkeit steht ohne Bezeichner. Rechts neben der Sprechblase steht die Erläuterung; zugeordnet sind beide nur durch ihre Höhe auf der Seite und durch dünne Trennlinien. Drei Dinge fehlen dem Beispiel, obwohl die Anleitung sie nennt: eine Zeile mit der Temperatur, eine Zeile mit dem GPS-Status und der Bezeichner „Pos“ vor der Position. Umgekehrt erklärt die Anleitung die beiden ersten Zeilen zu WiPro und Fence an keiner Stelle – was „ON“ dort bedeutet, ist deshalb nicht belegt. Für die WiPro III (safe.lock) verwendet die Anleitung sonst durchgehend die Begriffe scharf und unscharf, nicht ein und aus.",
+      "steps_text": [
+        "Zeile 1 nennt einen Zustand der WiPro III (safe.lock); der Wert im Beispiel lautet „ON“. Was er bedeutet, erklärt die Anleitung nicht.",
+        "Zeile 2 nennt einen Zustand des Geofencings; der Wert im Beispiel lautet „ON“. Auch diese Zeile erklärt die Anleitung nicht.",
+        "Zeile 3 nennt die Uhrzeit in koordinierter Weltzeit.",
+        "Zeile 4 ist die Position, im Beispiel als Adresse eines Kartendienstes.",
+        "Zeile 5 ist die Geschwindigkeit in Kilometern pro Stunde.",
+        "Zeilen 6 bis 10 sind die Spannungen U1 bis U5, jede mit einem Wert in Volt.",
+        "Zeilen 11 und 12 sind die beiden Ausgänge A und B mit ihrem Schaltzustand."
+      ],
+      "data_table_md": "| Zeile im Beispiel | Bedeutung |\n| --- | --- |\n| WiPro ON | Ein Zustand der WiPro III (safe.lock). Kapitel 4 erklärt diese Zeile nicht; ob „ON“ scharf oder eingeschaltet meint, ist unbelegt. |\n| Fence ON | Ein Zustand des Geofencings. Kapitel 4 erklärt diese Zeile nicht; Abschnitt 5.2 spricht beim Geofencing von ein- und ausschalten. |\n| UTC mit Uhrzeit | Zeitpunkt der zuletzt empfangenen Position, in koordinierter Weltzeit. |\n| Adresse eines Kartendienstes | Position des Fahrzeugs. Der Bezeichner „Pos“ fehlt im Beispiel. |\n| Geschwindigkeit in km/h | Aktuelle Geschwindigkeit des Fahrzeugs. |\n| U1 mit Spannungswert | Betriebsspannung. |\n| U2 bis U5 mit je einem Spannungswert | Spannungen an den vier Messeingängen. |\n| A mit Schaltzustand | Zustand von Ausgang A, im Beispiel „OFF“. |\n| B mit Schaltzustand | Zustand von Ausgang B, im Beispiel „OFF“. |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "19",
+        "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, erste Sprechblase mit der Erläuterung „Statusbericht:“ (aufgedruckt „Seite 17 von 23“)",
+        "note": "Die Sprechblase hat in der Quelle keinen Alternativtext; die Zuordnung zur Erläuterung entsteht allein über die Position auf der Seite. Koordinaten und Kartenadresse sind bewusst nicht übernommen. Die Erläuterung daneben nennt ausdrücklich „die Temperatur in unmittelbarer Nähe des Geräts“, die abgebildete Beispiel-SMS enthält aber keine Temperaturzeile. Die abgebildeten Kartenadressen verwenden den Parameter „g=“ und sind im PDF nicht als Link hinterlegt, obwohl sie blau und unterstrichen gesetzt sind; ob „g=“ funktioniert, ist aus dem Dokument nicht prüfbar. Bei 400 dpi nachvergrößert am 2026-08-07."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Betriebsart (Schalterstellung) | Anruf löst Statusbericht aus | Anruf schaltet die WiPro III (safe.lock) | Intervall der automatischen Statusberichte | Spannungen im Statusbericht |\n| --- | --- | --- | --- | --- |\n| 0 | ja | nein (Quelle: „-“) | keines (Quelle: „-“) | keine (Quelle: U1 bis U5 je „-“) |\n| 1 | ja | nein (Quelle: „-“) | keines (Quelle: „-“) | U1 und U2 |\n| 2 | Quelle: „-“. Nicht als „nein“ gelesen: Abschnitt 1.3 überschreibt die Funktion dieser Stellung mit „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus“, und 5.1 nennt einen Statusbericht nach erfolgreichem Schaltvorgang. Widerspruch ungeklärt. | ja | keines (Quelle: „-“) | keine (Quelle: U1 bis U5 je „-“) |\n| 3 | Quelle: „-“. Nicht als „nein“ gelesen: Abschnitt 1.3 überschreibt die Funktion dieser Stellung mit „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus“, und 5.1 nennt einen Statusbericht nach erfolgreichem Schaltvorgang. Widerspruch ungeklärt. | ja | keines (Quelle: „-“) | U1 und U2 |\n| 4 | ja | nein (Quelle: „-“) | 15 Minuten | U1 bis U5 |\n| 5 | ja | nein (Quelle: „-“) | 60 Minuten | U1 bis U5 |\n| 6 | ja | nein (Quelle: „-“) | 6 Stunden | U1 bis U5 |\n| 7 | ja | nein (Quelle: „-“) | 24 Stunden | U1 bis U5 |\n| 8 | ja | nein (Quelle: „-“) | keines (Quelle: „-“) | keine (Quelle: U1 bis U5 je „-“) |\n| 9 | ja | nein (Quelle: „-“) | keines (Quelle: „-“) | U1 bis U5 |\n| A | ja | nein (Quelle: „-“) | keines (Quelle: „-“) | keine (Quelle: U1 bis U5 je „-“) |\n| B | ja | nein (Quelle: „-“) | keines (Quelle: „-“) | keine (Quelle: U1 bis U5 je „-“) |\n| C | ja | nein (Quelle: „-“) | 90 Sekunden. Der Klammerzusatz der Quelle lautet „(sobald Spannung anliegt und Pro-finder hochgefahren ist nach dem GPS-Signal sucht)“ und ist grammatisch unvollständig. | keine eigene Angabe; die Zelle des Intervalls reicht über alle folgenden Spalten |\n| D | ja | nein (Quelle: „-“) | 8 Minuten. Der Klammerzusatz der Quelle lautet „(sobald Spannung anliegt und Pro-finder Pro-finder hochgefahren ist nach dem GPS-Signal sucht)“ – grammatisch unvollständig, „Pro-finder“ steht doppelt. | keine eigene Angabe; die Zelle des Intervalls reicht über alle folgenden Spalten |\n| E | keine Angabe; die Zeile ist ab dieser Spalte zu einer Zelle verbunden und nennt nur „Löschen der Zielrufnummern“ | keine Angabe | keine Angabe | keine Angabe |\n| F | keine Angabe; die Zeile ist ab dieser Spalte zu einer Zelle verbunden und nennt nur „GPS-Diagnose“ | keine Angabe | keine Angabe | keine Angabe |",
+    "| Angabe im Statusbericht | Bedeutung |\n| --- | --- |\n| GPS | Zustand der GPS-Antenne. Kapitel 4 erklärt dazu nur den Wert „Standby“: Die GPS-Antenne ist im Standby-Modus und wird bei einem Ereignis automatisch reaktiviert. Abschnitt 5.3 nennt zusätzlich die Angabe „GPS kein Empfang“. |\n| UTC | Uhrzeit in koordinierter Weltzeit. Kapitel 4 nennt sie „Uhrzeit des Vorfalls“, Abschnitt 5.7 dagegen die Zeit der zuletzt empfangenen Position. |\n| Pos | Position des Fahrzeugs, je nach mobilem Endgerät als Link auf einen Kartendienst oder als Koordinaten. |\n| Geschwindigkeit | Aktuelle Geschwindigkeit des Fahrzeugs. |\n| U1 | Betriebsspannung. Nur in den Betriebsarten, die die erste Übersicht nennt. Kapitel 4 lässt U1 in seiner Aufzählung aus, Abschnitt 1.3 und die Betriebsartentabelle führen ihn. |\n| U2 bis U5 | Spannungen an den vier Messeingängen. Nur in den Betriebsarten, die die erste Übersicht nennt. |\n| A und B | Zustand der beiden Ausgänge. |\n| Umgebungstemperatur | Temperatur in unmittelbarer Nähe des Geräts. Abschnitt 5.3 schreibt „Umgebungstemperatur“, Kapitel 4 nur „Temperatur“. |"
+  ],
   "sources": [
     {
       "doc": "DOC-IBA-SN045",
-      "pages": null,
-      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+      "pages": "22",
+      "region": "Abschnitt 5.3 „Statusbericht anfordern“, vollständig (aufgedruckt „Seite 20 von 23“)",
+      "note": "Seite am 2026-08-08 bei 150 dpi gerendert, vollständig visuell geprüft und in zwei Ausschnitten bei 400 dpi nachvergrößert. Keine nutzbare Textebene; alle Angaben sind vom Seitenbild abgelesen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Abschnitt 1.3 „Betriebsart auswählen“, Absätze „Anruf löst Statusbericht aus:“, „Automatische Statusberichte:“, „Statusbericht enthält U1, U2, U3, U4, U5:“ und „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus:“ (aufgedruckt „Seite 7 von 23“)",
+      "note": "Seite am 2026-08-08 gerendert, visuell geprüft und im oberen Drittel bei 400 dpi nachgelesen. Der einleitende Querverweis auf „5.4 Position mit dem Smartphone abfragen“ ist der bekannte Fehlverweis: Gemeint ist die Ausgangssteuerung in 5.5."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "10",
+      "region": "„Tabelle der Betriebsarten“, alle 16 Zeilen 0 bis 9 und A bis F (aufgedruckt „Seite 8 von 23“)",
+      "note": "Seite am 2026-08-08 gerendert und in drei Ausschnitten bei 400 dpi Zelle für Zelle nachgelesen. Die Tabelle liegt nur als Bild vor und ist hier als Markdown-Tabelle wiedergegeben. Die Spalten „Geofencing über Pin 3 schaltbar“ und „Manueller Alarm bei Spannung an Pin 3“ sind nicht übernommen, weil sie den Statusbericht nicht betreffen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, Feldzeilen GPS, UTC, Pos und Geschwindigkeit sowie Erläuterung „Statusbericht:“ mit Beispiel-SMS (aufgedruckt „Seite 17 von 23“)",
+      "note": "Seite am 2026-08-08 gerendert und in zwei Ausschnitten bei 400 dpi nachgelesen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "24",
+      "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, dritter bis fünfter Absatz (aufgedruckt „Seite 22 von 23“)",
+      "note": "Von Abschnitt 5.3 ausdrücklich als Ziel des Querverweises genannt. Beleg für die Wartezeit von bis zu zehn Minuten und dafür, worauf sich die Uhrzeit im Bericht bezieht. Seite am 2026-08-08 gerendert und bei 400 dpi nachgelesen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "21",
+      "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, erster und zweiter Absatz mit rotem Hinweiskasten (aufgedruckt „Seite 19 von 23“)",
+      "note": "Erklärt, was der Anruf in den Betriebsarten 2 und 3 tatsächlich auslöst – die Stelle, die 5.3 nur als Ausnahme erwähnt. Seite am 2026-08-08 gerendert und visuell geprüft."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "20",
+      "region": "Kapitel 4, Erläuterung „SMS mit Eingabehilfen:“ mit Beispiel-SMS (aufgedruckt „Seite 18 von 23“)",
+      "note": "Nur als Beleg dafür herangezogen, was der Pro-finder auf eine SMS mit ungültigem Inhalt antwortet. Seite am 2026-08-08 gerendert und visuell geprüft."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "15",
+      "region": "Abschnitt 2.6 „Pro-finder per SMS oder Anruf steuern“ und Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, Zeilen „Autorisierte Nummern:“ und „Nicht autorisierte Nummern:“ (aufgedruckt „Seite 13 von 23“)",
+      "note": "Beleg für die Kosten jeder versendeten SMS und dafür, dass nur autorisierte Nummern Statusberichte anfordern dürfen. Seite am 2026-08-08 gerendert und visuell geprüft."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "23",
+      "region": "Abschnitte 5.5.1 bis 5.5.3 zur Ausgangssteuerung, jeweils der Satz zur Antwort des Geräts (aufgedruckt „Seite 21 von 23“)",
+      "note": "Beleg dafür, dass jede erfolgreiche Schaltaktion an einem Ausgang einen Statusbericht erzeugt. Die dort abgedruckten Befehle sind nicht übernommen. Seite am 2026-08-08 gerendert und visuell geprüft."
     }
   ],
-  "safety_class": "normal",
+  "safety_class": "sicherheitsrelevant",
   "review_status": "entwurf",
-  "placeholder": true,
-  "change_reason": "Initiales Aufgabenskelett; Inhalt folgt aus der Seitenprüfung."
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus neun selbst gerenderten und gelesenen deutschen Quellseiten: PDF-Seite 22 (Abschnitt 5.3, der Kern der Aufgabe), 9 (1.3), 10 (Tabelle der Betriebsarten), 19 (Kapitel 4), 24 (5.7), 21 (5.1), 20 (Meldung „SMS mit Eingabehilfen“), 15 (2.6 und 2.7) und 23 (5.5.1 bis 5.5.3). Keine dieser Seiten hat eine nutzbare Textebene; alle Angaben sind vom Seitenbild abgelesen und für Tabelle, Zahlen und wörtliche Zitate bei 400 dpi nachvergrößert. Kein Wert und keine Aussage stammt aus der Generation bis SN-044. HOCHSTUFUNG DER SICHERHEITSKLASSE auf „sicherheitsrelevant“: Drei Aussagen schlagen unmittelbar auf den Schutz von Fahrzeug und Ladung durch. Erstens die Positionsangabe: Steht „GPS kein Empfang“ im Bericht, sendet der Pro-finder die letzte gültige Position, und sie sieht im Bericht aus wie eine aktuelle. Zweitens die Uhrzeit: Sie ist laut 5.7 immer die Zeit der zuletzt empfangenen Position, nicht die Sendezeit – wer sie als Sendezeit liest, hält eine alte Position für frisch. Drittens der Anruf in den Betriebsarten 2 und 3: Dort ist der Anruf keine Abfrage, sondern schaltet die WiPro III (safe.lock) in den jeweils nächsten Zustand; eine vermeintliche Statusabfrage kann die Alarmanlage unscharf schalten. Nicht „sicherheitskritisch“, weil aus dieser Aufgabe weder eine unmittelbare Gefahr für Personen noch ein Geräteschaden folgt. AUSGELASSEN – SMS-BEFEHL: In goal, prerequisites, steps, warnings, error_cases, figures und Tabellen steht kein einziger SMS-Befehl. Die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1 an THITRONIK; vier geprüfte Sprachfassungen zeigen vier vollständig eigene Befehlssätze). Nur hier zur Begründung der Auslassung zitiert: Abschnitt 5.3 auf PDF-Seite 22 nennt für den Statusbericht „status“ in blauer Kursivschrift, die automatische Hilfe-SMS auf PDF-Seite 20 dagegen „STATUS“ in einer Aufzählung mit „SCHARF, UNSCHARF, … POS“ in Großbuchstaben – dieselbe Funktion, zwei Schreibweisen, im selben Dokument, ohne dass eine Regel zur Groß- und Kleinschreibung angegeben wäre. FOLGE, AUSDRÜCKLICH BENANNT: Der SMS-Weg ist mit dieser Aufgabe nicht ausführbar; Schritt 3 beschreibt ihn, kann ihn aber nicht anleiten. Die Aufgabe trägt deshalb der Anruf-Weg, der ohne jeden Befehl vollständig belegbar ist. WIDERSPRÜCHE UND FUNDE, NICHT GEGLÄTTET: (1) Kapitel 4 auf Seite 19 zählt als zusätzliche Werte nur „die Spannungen der Messeingänge U2 bis U5“ auf und lässt U1 aus. Abschnitt 1.3 nennt dagegen ausdrücklich „die Betriebsspannung (U1) und die Spannungen an den Messeingängen U2 bis U5“, die Betriebsartentabelle führt eine eigene Spalte U1, und die Beispiel-SMS derselben Seite 19 zeigt eine U1-Zeile. Der Widerspruch ist in der zweiten Tabelle benannt statt geglättet. Er steht bereits im Register: DSC-056 und Rückfrage 11 an THITRONIK führen ihn (die Erstextraktion behauptete hier fälschlich, er sei neu; in der Gegenprüfung berichtigt). (2) Kapitel 4 sagt zum Statusbericht: „Diese Meldung erhalten Sie nur auf Anforderung oder je nach gewählter Betriebsart in Intervallen.“ Das ist nicht vollständig: 5.1 und 5.5.1 bis 5.5.3 belegen, dass ein Statusbericht auch als Quittung nach jedem erfolgreichen Schaltvorgang entsteht. Der Fehlerfall „Sie erhalten Statusberichte, ohne einen angefordert zu haben“ nennt beide Wege; das Wort „nur“ der Quelle ist nicht übernommen. Steht bisher in keinem Register. (3) Die Uhrzeit ist zweifach definiert: Kapitel 4 sagt „Uhrzeit des Vorfalls (Angabe in koordinierter Weltzeit)“, Abschnitt 5.7 sagt, sie entspreche „immer der Zeit der zuletzt empfangenen Position“. Beide Sätze stehen unverbunden im selben Dokument. Übernommen ist die engere Aussage aus 5.7, weil sie die für Nutzende folgenreiche ist; die Doppeldeutigkeit ist in der zweiten Tabelle und in der Warnung benannt. Steht bisher in keinem Register. (4) Abschnitt 5.3 nennt die Wartezeit von bis zu zehn Minuten ohne GPS-Empfang nicht; sie steht nur in 5.7. Wer nur 5.3 liest, hält einen verspäteten Bericht für einen Ausfall. Als eigener Fehlerfall aufgenommen. (5) Abschnitt 5.3 nimmt vom Anruf-Weg nur die Betriebsarten 2 und 3 aus. Die Betriebsartentabelle führt aber auch für E und F keinen Wert in der Anruf-Spalte: Beide Zeilen sind von dieser Spalte an über alle übrigen Spalten hinweg zu einer Zelle verbunden und nennen nur die Sonderfunktion. Ob ein Anruf dort einen Statusbericht auslöst, ist unbelegt; Tabelle und Fehlerfall sagen deshalb „keine Angabe“, nicht „nein“. Registriert ist das Problem der verbundenen Zellen in C bis F bisher nur für das Geofencing (DSC-053, Rückfrage 9); für die Anruf-Spalte in E und F steht es in keinem Register. (6) Die Quelle benennt dieselbe Sache vierfach: 2.6 sagt „Status-SMS“, 2.7 sagt „Statusmeldungen“, Kapitel 4 und 5.3 sagen „Statusbericht“, 5.3 zusätzlich „Umgebungstemperatur“ gegenüber „Temperatur“ in Kapitel 4. Übernommen ist durchgängig „Statusbericht“; die Abweichungen sind vermerkt und stehen bisher in keinem Register. Ebenso stehen „berechtigte Nummern“ (1.3, 5.1) und „Autorisierte Nummern“ (2.7) nebeneinander für dieselbe Berechtigung. (7) Die Überschrift von Abschnitt 5.1 lautet „Alarmanlage per SMS steuern“, der gesamte Abschnitt beschreibt aber ausschließlich die Steuerung per Anruf und enthält keinen SMS-Befehl. Das ist bereits als DSC-052 registriert (die Erstextraktion behauptete auch hier fälschlich, es sei neu; in der Gegenprüfung berichtigt). (8) Abschnitt 5.1 sagt für den WiPro-Schaltanruf ausdrücklich, das Gerät beende den Anruf, „bevor eine kostenpflichtige Verbindung zustande kommt“. Für den Statusbericht-Anruf sagen weder 5.3 noch 1.3 das; dort steht nur „nach wenigen Freizeichen“. Diese Kostenzusage ist deshalb nicht auf den Statusbericht-Anruf übertragen worden, obwohl das technisch naheläge. (9) Der Klammerzusatz der Betriebsarten C und D ist im Original grammatisch unvollständig, in Zeile D steht zusätzlich „Pro-finder“ doppelt; beides ist in der Tabelle zitiert statt repariert. (10) Der Bindestrich der Betriebsartentabelle hat in der Quelle keine Legende. Er ist hier als „nein“ beziehungsweise „keines“ und „keine“ gelesen, und die Quellschreibweise steht in jeder betroffenen Zelle mit dabei. Ausgenommen sind die Zeilen 2 und 3 in der Spalte „Anruf löst Statusbericht aus“: Dort ist das „-“ in der Gegenprüfung NICHT mehr als „nein“ gelesen, weil der Fließtext ihm widerspricht (siehe Punkt 13). Für die übrigen Spalten ist die Lesart plausibel, aber unbelegt. (11) Die Beispiel-SMS auf Seite 19 enthält keine Temperaturzeile und keine GPS-Zeile, obwohl Erläuterungstext und 5.3 beides nennen; der Bezeichner „Pos“ fehlt ebenfalls. Umgekehrt erklärt Kapitel 4 die beiden Zeilen zu WiPro und Fence nicht. Das ist in der Abbildungsbeschreibung benannt; registriert als DSC-056. (12) Der einleitende Querverweis von 1.3 auf „5.4 Position mit dem Smartphone abfragen“ für die Ausgangssteuerung ist der bereits registrierte Fehlverweis; richtig wäre 5.5. Er ist unverändert als Quellenlage vermerkt und nicht korrigiert. (13) NEUER FUND AUS DER GEGENPRÜFUNG: Die Betriebsartentabelle auf Seite 10 setzt in den Zeilen 2 und 3 in der Spalte „Anruf löst Statusbericht aus“ ein „-“. Genau diese Stellungen überschreibt Abschnitt 1.3 auf Seite 9 aber mit „Anruf aktiviert/deaktiviert WiPro und löst Statusbericht aus“, und Abschnitt 5.1 auf Seite 21 sagt, das Gerät „versendet nach erfolgreichem Schaltvorgang einen Statusbericht an den Anrufer“. Tabelle und Fließtext sagen also Gegenteiliges darüber, ob ein Anruf in den Stellungen 2 und 3 einen Statusbericht auslöst. Die Erstextraktion hatte den Widerspruch mit der Lesart „-“ = „nein“ zugedeckt; Übersichtstabelle, Warnhinweis und Fehlerfall benennen ihn jetzt. Steht in keinem Register. (14) NEUER FUND AUS DER GEGENPRÜFUNG: Die Erstextraktion nannte automatische Statusberichte nur für die Betriebsarten 4 bis 7. Die Tabelle trägt aber auch in den Zeilen C und D einen Wert in der Spalte „Intervall der automatischen Statusberichte“: 90 Sekunden und 8 Minuten. Ob dort Statusberichte in diesem Takt versendet werden, ist offen, weil der Klammerzusatz derselben Zellen das Suchen des GPS-Signals nennt und grammatisch unvollständig ist. Warnhinweis und Fehlerfall nennen C und D jetzt samt dieser Unklarheit. Steht in keinem Register. (15) REIHENFOLGE UMGEKEHRT, HIER OFFENGELEGT: Abschnitt 5.3 führt den SMS-Weg als den gewöhnlichen und leitet den Anruf mit „Alternativ können Sie einen Statusbericht auch wie folgt anfordern:“ ein. Diese Aufgabe kehrt die Reihenfolge um und stellt den Anruf voran, weil der SMS-Weg wegen der gesperrten Befehlssprache nicht anleitbar ist. Das ist eine Entscheidung dieser Anleitung, keine Aussage der Quelle. (16) NICHT BELEGT, DESHALB ZURÜCKGENOMMEN: Die Erstextraktion las die Beispielzeile „WiPro ON“ als „die WiPro III (safe.lock) ist eingeschaltet“. Kapitel 4 erklärt diese Zeile nicht, und die Anleitung spricht bei der WiPro III sonst durchgehend von scharf und unscharf, nicht von ein und aus. Abbildungsbeschreibung und Bildtabelle geben den Wert jetzt wieder, ohne ihn zu deuten. BARRIEREFREIHEIT: Die Betriebsartentabelle liegt in der Quelle nur als Bild vor, hat eine zweistufige Kopfzeile, im Kopf getrennte Wörter („Status-bericht“) und verbundene Zellen; sie ist hier zu einer flachen Markdown-Tabelle mit einer Zeile je Betriebsart aufgelöst, jede verbundene Zelle ist als solche benannt, und der ohne Legende gesetzte Bindestrich ist in Worte gefasst. Die Angabe „GPS kein Empfang“ steht in der Quelle nur im Fließtext von 5.3, während Kapitel 4 für dasselbe Feld allein „Standby“ erklärt; beide Werte sind in der zweiten Tabelle zusammengeführt und mit ihrer Fundstelle gekennzeichnet. Die Beispiel-SMS ist eine schwarze Sprechblase ohne Alternativtext, deren Zuordnung zur Erläuterung nur räumlich entsteht; sie hat hier Alternativtext, sichtbare Langbeschreibung, eine Zeilenliste und eine Tabelle als Textentsprechung. AUSGELASSEN – ORTS- UND KONTAKTDATEN: Die Beispiel-SMS der Quelle enthält Koordinaten und die Adresse eines Kartendienstes. Weder Koordinaten noch Links noch Rufnummern sind übernommen; beschrieben ist ausschließlich der Aufbau der Meldung. Technischer Review steht aus; review_status bleibt „entwurf“. Gegengeprüft gegen die Quellseiten am 2026-08-07. Dabei korrigiert: der zugedeckte Widerspruch zwischen dem „-“ der Betriebsartentabelle und dem Fließtext für die Stellungen 2 und 3 (Punkt 13, wirkt auf Übersichtstabelle, Warnhinweis 1, Schritt 1 und den ersten Fehlerfall), die fehlenden Intervalle der Stellungen C und D (Punkt 14, wirkt auf Warnhinweis 4 und den Fehlerfall zu unangeforderten Berichten), die unbelegte Deutung von „WiPro ON“ als „eingeschaltet“ (Punkt 16), zwei falsche Behauptungen, ein Fund stehe in keinem Register – er steht als DSC-056 beziehungsweise DSC-052 dort (Punkte 1 und 7) –, die aus dem Seitenrecord hinausgehende Behauptung, die Kartenadressen nutzten „g=“ statt „q=“, und die unausgesprochene Umkehrung der Reihenfolge von SMS- und Anruf-Weg gegenüber Abschnitt 5.3 (Punkt 15). Geprüft und unverändert bestätigt: die Betriebsartentabelle Zelle für Zelle, die zwölf Angaben der Beispiel-SMS einschließlich „U1:13,53 V“, die Wartezeit von bis zu zehn Minuten aus 5.7, die wörtlichen Zitate aus 5.1, 5.3 und 2.6 sowie die Befehlssperre in goal, steps, warnings, error_cases, expected_result, figures und tables_md."
 }

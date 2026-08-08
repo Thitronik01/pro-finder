@@ -7,6 +7,12 @@
   margin-block: var(--space-2);
 }
 
+/* Zusätzliche optische Auszeichnung – die Sicherheitsklasse steht daneben immer als
+   Wort im Text, damit sie nicht allein über die Darstellung transportiert wird. */
+.warningKritisch {
+  border-left-width: 12px;
+}
+
 .expected {
   margin: var(--space-1) 0 0;
   color: var(--color-text-muted);

@@ -28,11 +28,19 @@ Beleg in den Seitenrecord.
 
 ### Der schnellste Weg, den Fortschritt zu heben
 
-Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel ist die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 8 %): 219 der 323 Seiten sind noch
+Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 13,9 %): 143 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
-Vorgehen je Batch von 10 Seiten:
+Offen sind:
+
+- **DOC-BMA-SN044, Seiten 6–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, erst zu 7 % geprüft. Als **einziges** Dokument mit echter Textebene erlaubt es
+  die Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus entsteht hier
+  der Erkenntnisgewinn, nicht aus „Textebene vorhanden".
+- **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
+
+Vorgehen je Batch von 9–10 Seiten:
 
 1. Rendern (poppler fehlt in dieser Umgebung, PyMuPDF ist vorhanden):
    ```
@@ -41,31 +49,45 @@ Vorgehen je Batch von 10 Seiten:
    `tmp/` ist ignoriert; die Renderings sind jederzeit reproduzierbar.
 2. Jede Seite mit dem Read-Tool als Bild ansehen. Nicht überspringen, auch nicht bei
    Leer- oder Wiederholungsseiten.
-3. Seitenrecords in `sources/pages/DOC-*.json` setzen: `status: "inspected"`,
-   `progress_percent: 25`, plus `summary`, `headings`, `figures`, `tables`,
-   `warnings_found`, `technical_values`, `accessibility_issues`, `discrepancies`,
-   `terminology_findings`, `inspected_note`.
-4. `npm run progress`, dann `npm run format`, dann `npm run check` – **in dieser
+3. Reicht 150 dpi für ein Detail nicht (Flaggen, LED-Farben, Kabelfarben, Fußnoten,
+   aufgedruckte Seitenzahlen, Tabellenköpfe), **nicht raten**, sondern nachrendern:
+   ```
+   python scripts/crop-pdf-region.py <pdf-pfad> 101 0.28 0.31 0.60 0.37 tmp/zoom/x.png 400
+   ```
+   Koordinaten relativ (0.0–1.0), 0,0 oben links. Das Werkzeug hat beim ersten Einsatz
+   belegt, dass die Flagge auf Seite 101 eine verunglückte Überlagerung der norwegischen
+   und der dänischen Flagge ist – bei 150 dpi war das nicht zu sehen.
+4. Records als JSON-Array nach `tmp/records/<doc-id>-<von>-<bis>.json` schreiben, dann:
+   ```
+   node scripts/merge-page-records.mjs --dry-run   # prüft
+   node scripts/merge-page-records.mjs             # trägt ein
+   ```
+   Das Werkzeug gleicht Seitenmaße und Zeichenzahlen gegen die echte PDF ab, meldet
+   doppelte Seiten und überschreibt keine bereits geprüfte Seite. Es verträgt auch
+   abgebrochene Batches mit abweichenden Dateinamen.
+5. `npm run progress`, dann `npm run format`, dann `npm run check` – **in dieser
    Reihenfolge**, sonst schlägt `format:check` fehl.
-5. Committen und pushen. CI abwarten.
-
-Als Nächstes ansteht: **DOC-IBA-SN045 Seiten 101–110** (dänischer Teil). Danach die
-weiteren Sprachteile, anschließend **DOC-BMA-SN044** (72 Seiten, bislang unberührt).
+6. Committen und pushen. CI abwarten.
 
 ### Was du über die Quellen schon weißt
 
-Vier Sprachteile sind vollständig geprüft: Deutsch, Englisch, Französisch, Tschechisch
-(Seiten 1–100). Das Muster ist stabil und wiederholt sich erwartbar:
+Geprüft sind 180 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
+Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
+Das Muster ist stabil und wiederholt sich erwartbar:
 
 - **Jede Sprache hat einen eigenen SMS-Befehlssatz.** Tabelle in `DISCREPANCIES.md`
   DSC-033. Neue Sätze dort eintragen.
 - **Vorlagenfehler** treten in allen Fassungen auf: unübersetzte Bildbeschriftung
   „GPS-Antenne (Optional)", unerklärtes rotes X in der Anschlussabbildung, zerrissene
-  Wörter in Tabellenköpfen, Wortdopplung „via SMS via SMS", falscher Verweis auf 5.4 statt
-  5.5. Diese einmal zentral vermerken, nicht je Sprache neu aufmachen.
+  Wörter in Tabellenköpfen, Wortdopplung „via SMS via SMS", falscher Verweis auf 5.4
+  statt 5.5. Diese einmal zentral vermerken, nicht je Sprache neu aufmachen.
 - **Je Sprache** kommen ein bis zwei eigene Übersetzungsfehler hinzu.
 - Von 247 Seiten hat **genau eine** lesbaren Text. 34 Seiten liefern nur Steuerzeichen
   U+0003 – zeichenzählende Prüfungen halten sie fälschlich für zugänglich.
+- **Der deutsche Master ist nicht fehlerfrei.** Die Extraktion der Aufgaben hat allein im
+  deutschen Teil drei falsche Querverweise, mehrere Selbstwidersprüche und eine
+  unerklärte Berechtigungsregel gefunden (DSC-040 bis DSC-052). „Geprüfter deutscher
+  Master" heißt nicht „übernommener deutscher Text".
 
 Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, technische
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
@@ -73,18 +95,18 @@ in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht 
 
 ### Der zweite Hebel
 
-**Content-Modell und deutscher Master** (20 % Gewicht, aktuell 26 %). Sechs von vierzehn
-deutschen Aufgaben sind gefüllt. Die verbleibenden acht hängen an offenen Fragen:
+**Content-Modell und deutscher Master** (20 % Gewicht, aktuell 52 %). Alle vierzehn
+deutschen Aufgaben sind gefüllt, keine ist mehr Platzhalter. Was jetzt fehlt:
 
-- sieben an der ungeklärten Befehlssprache (BLK-005),
-- eine am unbekannten Fundort der Seriennummer (DSC-023).
+1. **Die Generation bis SN-044**: nur 1 von 14 Aufgaben existiert. Die Quelle dafür ist
+   DOC-BMA-SN044 – deshalb hat dessen Seitenprüfung Vorrang.
+2. **Die Segment-Extraktion** als Grundlage für die Übersetzung (Status `extracted` statt
+   `inspected`).
+3. **Der technische Review** aller sicherheitskritischen Werte. Der kann nicht im Pilot
+   erledigt werden.
 
-Sie lassen sich **teilweise** füllen: alles außer dem Befehl selbst. Vorbild ist
-`content/tasks/sn-045-plus/de/03-anschluesse.json` – dort sind die drei Schaltarten der
-Ausgänge beschrieben, die SMS-Befehle aber bewusst ausgelassen und im `change_reason`
-begründet.
-
-Jede Aussage braucht Dokument, Seite und Seitenregion. **Quellseite immer selbst rendern und
+Vorbild für neue Aufgaben ist `content/tasks/sn-045-plus/de/03-anschluesse.json`. Jede
+Aussage braucht Dokument, Seite und Seitenregion. **Quellseite immer selbst rendern und
 lesen** – niemals aus einer Zusammenfassung schreiben.
 
 ### Verbindliche Regeln
@@ -93,6 +115,16 @@ lesen** – niemals aus einer Zusammenfassung schreiben.
 - Sicherheitsrelevante Inhalte können in diesem Pilotstand nicht `freigegeben` sein.
 - Widersprüche werden dokumentiert, nie still korrigiert.
 - SN-044 und SN-045 niemals vermischen.
+- **Kein SMS-Befehl** in `steps`, `warnings`, `error_cases`, `goal`, `expected_result`
+  oder `tables_md` – die Befehlssprache ist ungeklärt (BLK-005). Zitieren erlaubt nur in
+  `change_reason` und `figures[].source.note`, und dort nur als Begründung der Auslassung.
+- Keine Koordinaten, Kartenlinks oder Rufnummern aus den Beispiel-SMS im Content-Layer.
+  `npm run content:check` erzwingt das; die Herstellernummer steht ausschließlich in
+  `14-support.json`.
+- Neue Einträge in `DISCREPANCIES.md` bekommen die **höchste bisher vergebene Nummer + 1**,
+  nicht die der letzten Überschrift in der Datei. Die Datei ist nicht durchgehend
+  aufsteigend sortiert; `npm run content:check` bricht bei doppelten Nummern und bei
+  Verweisen auf nicht existierende Nummern ab.
 - Keine Secrets, keine echten Kundendaten, auch nicht in Fixtures.
 - Das Referenz-Repository unter `.agent/reference/` ist read-only; vor und nach jeder
   Analyse muss `git -C .agent/reference/thitronik-haendlerplattform status --porcelain`
@@ -109,6 +141,11 @@ lesen** – niemals aus einer Zusammenfassung schreiben.
 - `npm run check` enthält `lockfile:check`. Meldet es eine Lücke, hilft der manuell
   auslösbare Workflow `.github/workflows/lockfile.yml` – ein vollständiges Lockfile lässt
   sich unter Windows nicht erzeugen.
+- Wenn du mit Subagenten parallel arbeitest: gib jedem **genau eine** Ausgabedatei und
+  sage ausdrücklich, dass er nichts anderes im Repository anfassen darf. In der Sitzung
+  vom 2026-08-08 hat ein Agent trotzdem gemeinsam genutzten Code umgebaut. Das Ergebnis
+  war brauchbar, aber es war nicht abgesprochen – prüfe nach einem Parallellauf immer
+  `git status` auf Dateien, die niemand anfassen sollte.
 
 ### Am Sitzungsende
 

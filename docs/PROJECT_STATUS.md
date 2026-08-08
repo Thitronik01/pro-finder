@@ -1,48 +1,60 @@
 # Projektstatus
 
-Stand: 2026-08-07. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-08. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 22.3 %**
+**Gesamtfortschritt: 30.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 8 %         |
-| Content-Modell und deutscher Master      | 20 %    | 26 %        |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 13.9 %      |
+| Content-Modell und deutscher Master      | 20 %    | 52 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
-| Webanleitung und Review-UI               | 20 %    | 25 %        |
+| Webanleitung und Review-UI               | 20 %    | 30 %        |
 | Übersetzungspilot                        | 10 %    | 5 %         |
-| Accessibility-, Security- und Content-QA | 10 %    | 12 %        |
-| Staging und Übergabe                     | 5 %     | 30 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 18 %        |
+| Staging und Übergabe                     | 5 %     | 35 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 0 %         |
-| DOC-IBA-SN045 | 247    | 10.1 %      |
+| DOC-BMA-SN044 | 72     | 1.7 %       |
+| DOC-IBA-SN045 | 247    | 17.3 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 5 · Nächste Aktion: PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110 (daenischer Teil). Die Seitenpruefung ist der groesste Fortschrittshebel (20 Prozent Gewicht, aktuell 8 Prozent; 219 von 323 Seiten noch not_started). Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 143 ungeprueften Seiten in Batches abarbeiten: DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247 sowie DOC-BMA-SN044 Seiten 6-72. Die Seitenpruefung bleibt der groesste Hebel (20 Prozent Gewicht, aktuell 13,9 Prozent). Vorrangig ist DOC-BMA-SN044: es ist die einzige Quelle fuer die Generation bis SN-044, erst mit 5 von 72 Seiten geprueft, und als einziges Dokument mit echter Textebene erlaubt es die Gegenueberstellung von Text und Bild. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon 104 visuell geprüft (`inspected`): DOC-IBA-SN045
-  Seiten 1–100 sowie beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
-  Englisch, Französisch, Tschechisch) sind damit geprüft; sechs stehen aus;
-- die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu acht
-  entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende Sammelstelle
-  für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
-- sechs von vierzehn deutschen Aufgaben sind aus geprüften Quellseiten gefüllt (Montageort,
-  Anschlüsse, SIM-Karte, Status-LED, Technische Daten, Support) – jede mit Seitenquelle,
-  Änderungsgrund und Status `entwurf`;
+- 323 Seitenrecords angelegt; davon **180 visuell geprüft** (`inspected`): DOC-IBA-SN045
+  Seiten 1–100 und 76 weitere Seiten aus den Batches 121–246, dazu 5 Seiten
+  DOC-BMA-SN044 und beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
+  Englisch, Französisch, Tschechisch) sind geprüft; die übrigen Sprachteile sind
+  angefangen. Die 76 neuen Records sind maschinell gegen die Original-PDF abgeglichen
+  (Seitenmaße und Zeichenzahlen je Seite) – siehe `scripts/merge-page-records.mjs`;
+- die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu
+  dreizehn entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende
+  Sammelstelle für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
+- **alle vierzehn deutschen Aufgaben sind aus geprüften Quellseiten gefüllt**; keine ist
+  mehr Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Seitenregion, jede Datei
+  einen Änderungsgrund, alle stehen auf `entwurf`. Die acht zuletzt gefüllten Aufgaben
+  sind bewusst **ohne** die SMS-Befehle geschrieben (BLK-005); wo eine Aufgabe dadurch
+  unvollständig bleibt – Ausgänge, Geofencing, Zielrufnummern, Fehlerbehebung – steht das
+  ausdrücklich im `change_reason`, statt die Lücke zu verdecken;
+- die Extraktion hat **dreizehn neue Registerpositionen** erzeugt (DSC-040 bis DSC-052),
+  die ausschließlich **den deutschen Text selbst** betreffen: drei falsche Querverweise,
+  ein Verweis, der inhaltlich ins Leere führt, ein Statusbericht mit Feldern, die das
+  zugehörige Kapitel nicht erklärt, und eine Berechtigungsregel, die nirgends
+  ausgeschrieben ist. Das bestätigt die mit DSC-016 begonnene Linie: „geprüfter deutscher
+  Master" heißt nicht „übernommener deutscher Text";
 - [HANDOVER_PROMPT.md](HANDOVER_PROMPT.md) enthält einen wörtlich übergebbaren Startprompt
   für die Folgesitzung;
 - Textebene von DOC-IBA-SN045 vollständig ausgewertet: nur 1 von 247 Seiten enthält
@@ -55,6 +67,19 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110
 - Versionsrouten, bestätigter Wechsel, korrekte serverseitige Seitensprache, Skip-Link,
   sichtbarer Fokus und semantische Status-LED-Tabelle implementiert;
 - Content-Schema, Unit-Tests, Terminologie-, Token-, Secret- und Referenzchecks vorhanden;
+- **vier neue Prüfungen, die jeweils sofort einen realen Fehler gefunden haben:**
+  jede Markdown-Tabelle des Content-Layers muss darstellbar sein (fand eine LED-Tabelle,
+  die in der Oberfläche spurlos verschwunden wäre, weil ein Fließtext-Absatz in der
+  Tabelle stand); keine Koordinaten, Kartenlinks oder Rufnummern aus den Beispiel-SMS im
+  Content-Layer (fand zwei Kartenlinks); jeder Schritt, Warnhinweis und Fehlerfall einer
+  Nicht-Platzhalter-Aufgabe braucht eine eigene Quelle; jeder DSC-Verweis in `docs/` muss
+  existieren und jede Nummer darf nur einmal vergeben sein (fand zwei doppelt
+  vergebene Nummern). Der Tabellenparser liegt jetzt einmal in
+  `lib/content/markdown-table.ts` statt in zwei Kopien, damit Renderer und Prüfung nicht
+  auseinanderlaufen;
+- die Sicherheitsklasse eines Warnhinweises steht in der Oberfläche als **Wort**
+  („Hinweis", „Achtung", „Warnung, sicherheitskritisch") und nicht mehr nur als Rahmen und
+  Hintergrundfarbe;
 - Produktions-Build lokal erfolgreich;
 - Referenzklon sauber und Push-URL `DISABLED`;
 - Setup-Karten-Lieferdateien als klar markierte Entwürfe vorhanden;
@@ -75,6 +100,19 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110
   einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
   Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
+- **die 76 neuen Seitenrecords haben keine unabhängige Gegenprüfung durchlaufen.** Sie
+  sind maschinell gegen die Original-PDF abgeglichen (Seitenmaße, Zeichenzahlen, keine
+  Dopplungen), aber kein zweiter Prüfer hat die inhaltlichen Behauptungen gegen das
+  Seitenbild gehalten. Der Status `inspected` bedeutet ohnehin nur „visuell angesehen";
+  hier fehlt zusätzlich die eingebaute zweite Meinung. Nachzuholen spätestens bei der
+  Segment-Extraktion;
+- von den acht neu gefüllten deutschen Aufgaben sind **sieben** einzeln gegen die
+  Quellseiten gegengeprüft worden. Dabei wurden unter anderem ein erfundenes erwartetes
+  Ergebnis, eine nicht belegbare Farbangabe und zwei Kartenlinks entfernt – der Schritt
+  ist also nicht formal. **`10-statusbericht.json` ist noch nicht gegengeprüft**; der Lauf
+  ist vorher abgebrochen. Die Datei ist daran erkennbar, dass ihr `change_reason` keinen
+  Gegenprüfungsvermerk trägt. Auch eine bestandene Gegenprüfung ersetzt keinen fachlichen
+  Review: sämtliche technischen Werte sind weiterhin unbestätigt;
 - Netlify Preview, Zugriffsschutz und internes Staging: nicht verbunden/nicht abgenommen;
 - Karten-Andruck, QR, NFC, Braille, Reflexion und Tests mit betroffenen Personen: offen;
 - englischer Pilot: nur Struktur/Platzhalter, kein unabhängiger Sprachreview;
@@ -101,6 +139,22 @@ Offene Blocker: 5 · Nächste Aktion: PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110
    Tests fehlen. Die Supportnummer ist zusätzlich unklar: die französische Fassung nennt
    eine offensichtlich beschädigte Rufnummer (DSC-032).
 5. Kein geschützter Netlify-Deploy und keine menschliche Preview-Abnahme.
+6. **Die Berechtigungsregel für Zielrufnummern ist nicht belegt (DSC-044, BLK-006).**
+   Autorisierte und nicht autorisierte Nummern unterscheiden sich in der Quelle erkennbar
+   nur durch ein Zeichen vor der Nummer, das der Fließtext nirgends erklärt. Ein falsches
+   Zeichen kippt die Steuerberechtigung. Die Webanleitung darf die Regel nicht nennen,
+   solange sie unbelegt ist – und lässt Nutzende damit in genau den Fehler laufen, den sie
+   verhindern soll. Das ist keine redaktionelle Lücke, sondern ein Sicherheitsproblem.
+7. **Unklar, ob Geofencing ohne WiPro III überhaupt meldet (DSC-042, BLK-007).** Die
+   Quelle knüpft die Diebstahlmeldung an einer Stelle an eine aktivierte WiPro III
+   (safe.lock) und beschreibt Geofencing an anderer Stelle unabhängig davon. Ebenso
+   ungeregelt: der Vorrang zwischen Pin 3 und der automatischen Kopplung an den
+   Scharf-/Unscharfzustand.
+8. **Die GPS-Diagnose ist am Gerät nicht barrierefrei durchführbar (DSC-047).** Zwei ihrer
+   drei Zustände sind ausschließlich über die LED-Farbe unterscheidbar; ein
+   farbunabhängiges Merkmal ist nicht dokumentiert. Das ist die bisher einzige gefundene
+   Barriere, die **am Gerät** sitzt und nicht am Dokument – die HTML-Anleitung kann sie
+   beschreiben, aber nicht auflösen.
 
 ## Statusdisziplin
 

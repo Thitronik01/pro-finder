@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 22.3,
+  "overall_percent": 30.5,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,13 +19,13 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 8,
+      "percent": 13.9,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
-      "percent": 26,
-      "note": "Content-Schema und Aufgabenskelette stehen. Am 2026-08-07 sind fuenf Aufgaben aus geprueften deutschen Quellseiten extrahiert: Montageort (S. 7), Anschluesse (S. 8 und 11), SIM-Karte (S. 13), Technische Daten und Support (beide S. 25). Zusammen mit der Status-LED sind damit 6 von 14 Aufgaben inhaltlich gefuellt, jede mit Seitenquelle und Aenderungsgrund. Die uebrigen acht haengen an der offenen Befehlsfrage (BLK-005) oder am unbekannten Seriennummern-Fundort (DSC-023); sie lassen sich teilweise fuellen - alles ausser dem Befehl selbst, siehe 03-anschluesse.json als Vorbild. Alle gefuellten Aufgaben stehen auf entwurf."
+      "percent": 52,
+      "note": "Am 2026-08-08 sind alle 14 deutschen Aufgaben aus geprueften Quellseiten gefuellt; kein Platzhalter mehr. Jede Aussage hat Dokument, Seite und Seitenregion, jede Datei einen Aenderungsgrund. Die acht zuletzt gefuellten Aufgaben wurden bewusst OHNE die SMS-Befehle geschrieben (BLK-005) - der Verzicht ist je Datei begruendet, und wo eine Aufgabe dadurch unvollstaendig bleibt (Ausgaenge, Geofencing, Zielrufnummern, Fehlerbehebung), steht das ausdruecklich im change_reason. Nicht bei 100 Prozent, weil drei Dinge fehlen: der technische Review saemtlicher sicherheitskritischer Werte, die Segment-Extraktion als Uebersetzungsgrundlage, und die Aufgaben der Generation bis SN-044 (nur 1 von 14 vorhanden; die Quelle DOC-BMA-SN044 ist erst mit 5 von 72 Seiten geprueft). Alle Aufgaben stehen auf entwurf."
     },
     "card": {
       "label": "Setup-Karte",
@@ -34,8 +34,8 @@
     },
     "application": {
       "label": "Webanleitung und Review-UI",
-      "percent": 25,
-      "note": "Startseite, Versionsrouten, Wechselbestätigung, Aufgabenseiten, Dashboard als Fixture-basierte Erstfassung; Review-UI und Supabase-Anbindung offen."
+      "percent": 30,
+      "note": "Startseite, Versionsrouten, Wechselbestätigung, Aufgabenseiten, Dashboard als Fixture-basierte Erstfassung; Review-UI und Supabase-Anbindung offen. Am 2026-08-08 zeigt die Aufgabenseite die Sicherheitsklasse eines Warnhinweises als Wort („Hinweis“, „Achtung“, „Warnung, sicherheitskritisch“) statt nur über Rahmen und Hintergrund – vorher waren ein normaler und ein sicherheitskritischer Hinweis für Screenreader, Forced-Colors und Schwarzweißdruck nicht unterscheidbar. Die Aufgabenseiten tragen jetzt echten Inhalt statt Platzhaltern; damit ist erstmals sichtbar, wie sich die Seiten mit Tabellen, Abbildungen und langen Fehlerfallisten verhalten."
     },
     "translation": {
       "label": "Übersetzungspilot",
@@ -44,31 +44,32 @@
     },
     "qa": {
       "label": "Accessibility-, Security- und Content-QA",
-      "percent": 12,
-      "note": "npm run check läuft am 2026-08-07 erstmals vollständig grün (Format, Lint, Types, Unit, Content, Tokens, Karte, Referenz, Secrets, Fortschritt); dabei zwei stille Fehler behoben: Fehlalarm des Secret-Scanners auf leere .env.example und nie ersetzter Fortschrittsblock in PROJECT_STATUS.md. Playwright/axe-Browserlauf und die manuelle AT-Testmatrix bleiben vollständig offen."
+      "percent": 18,
+      "note": "npm run check und der Playwright/axe-Lauf sind gruen (Stand 2026-08-07). Am 2026-08-08 kamen vier Pruefungen dazu, die jeweils sofort einen realen Fehler gefunden haben: (1) jede Markdown-Tabelle des Content-Layers muss darstellbar sein - fand eine LED-Tabelle, die in der Oberflaeche spurlos verschwunden waere, weil ein Fliesstext-Absatz in der Tabelle stand; (2) keine Koordinaten, Kartenlinks oder Rufnummern aus den Beispiel-SMS im Content-Layer - fand zwei Kartenlinks in 09-geofencing.json; (3) jeder Schritt, Warnhinweis und Fehlerfall einer Nicht-Platzhalter-Aufgabe braucht eine eigene Quelle; (4) jeder DSC-Verweis in docs/ muss existieren und jede Nummer darf nur einmal vergeben sein - fand zwei doppelt vergebene Nummern. Der Tabellenparser liegt jetzt einmal in lib/content/markdown-table.ts statt in zwei Kopien, damit Renderer und Pruefung nicht auseinanderlaufen. Die manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix bleibt vollstaendig offen; sie ist der groesste verbliebene Posten dieses Workstreams."
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 30,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF und Resume-Protokoll stehen. Am 2026-08-07 kamen RUECKFRAGEN_THITRONIK.md (einzige Sammelstelle fuer offene Fragen) und HANDOVER_PROMPT.md (woertlich uebergebbarer Startprompt fuer die Folgesitzung) hinzu; das Renderwerkzeug der Seitenpruefung liegt jetzt als scripts/render-pdf-pages.py im Repo. Staging-Abnahme weiterhin offen."
+      "percent": 35,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. Am 2026-08-08 sind zwei Werkzeuge dazugekommen, ohne die jede Folgesitzung die Seitenpruefung neu einrichten muesste: scripts/crop-pdf-region.py (Ausschnitte hoeher aufgeloest rendern, statt bei Flaggen, LED-Farben und Fussnoten zu raten - hat schon beim ersten Einsatz die verunglueckte Flagge auf Seite 101 belegt) und scripts/merge-page-records.mjs (Batch-Ergebnisse kontrolliert in die Seitenrecords eintragen, mit Abgleich von Seitenmassen und Zeichenzahlen gegen die echte PDF; vertraegt auch abgebrochene Batches). Staging-Abnahme weiterhin offen."
     }
   },
   "pdf_documents": [
     {
       "doc_id": "DOC-BMA-SN044",
       "page_count": 72,
-      "percent": 0,
+      "percent": 1.7,
       "status_counts": {
-        "not_started": 72
+        "inspected": 5,
+        "not_started": 67
       }
     },
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 10.1,
+      "percent": 17.3,
       "status_counts": {
-        "inspected": 100,
-        "not_started": 147
+        "inspected": 171,
+        "not_started": 76
       }
     },
     {
@@ -119,9 +120,26 @@
       "title": "Befehlssprache der SMS-Kommandos ungeklärt (DSC-013/DSC-014/DSC-033)",
       "detail": "DOC-IBA-SN045 dokumentiert dieselbe Funktion je Sprachfassung mit unterschiedlichen SMS-Befehlen (fence an/aus gegenüber fence on/off, a an/aus/impuls gegenüber a on/off/pulse, anlernmodus an/aus gegenüber teach mode on/off, SCHARF/UNSCHARF gegenüber ARM/DISARM) und innerhalb einer Fassung mit widersprüchlicher Schreibweise (POS gegenüber position). Die französische Fassung nennt an derselben Stelle statt eines Befehls die Wortgruppe « desactiver le gardiennage » – ohne Akzent und über einen anderen Sendeweg (DSC-026). Ohne technische Klärung durch THITRONIK darf kein Befehl in den Master oder in eine Übersetzung übernommen werden.",
       "severity": "hoch"
+    },
+    {
+      "id": "BLK-006",
+      "title": "Berechtigung der Zielrufnummern haengt an einem nirgends erklaerten Zeichen (DSC-044)",
+      "detail": "In den Beispielen der Programmier-SMS auf DOC-IBA-SN045 Seite 17 unterscheiden sich autorisierte und nicht autorisierte Zielrufnummern erkennbar nur durch das Zeichen vor der Nummer. Der Fliesstext benennt diese Regel im gesamten geprueften deutschen Teil nicht; sie ist ausschliesslich aus dem Vergleich der Beispielzeilen erschliessbar. Ein falsches Zeichen kippt die Steuerberechtigung einer Rufnummer - wer steuern darf, entscheidet sich daran. Solange die Regel unbelegt ist, darf die Webanleitung sie nicht nennen und kann Nutzende damit in genau den Fehler laufen lassen, den sie verhindern soll.",
+      "severity": "hoch"
+    },
+    {
+      "id": "BLK-007",
+      "title": "Unklar, ob Geofencing ohne WiPro III ueberhaupt meldet (DSC-042)",
+      "detail": "DOC-IBA-SN045 Seite 19 knuepft die Diebstahlmeldung an eine aktivierte WiPro III (safe.lock); Seite 21 beschreibt Geofencing unabhaengig davon ueber Pin 3 oder SMS. Ob ein Pro-finder ohne WiPro III eine Diebstahlmeldung sendet, ist aus keiner Stelle ableitbar. Ebenso ungeregelt: der Vorrang zwischen Pin 3 und der automatischen Kopplung an den Scharf-/Unscharfzustand, sowie die Verfuegbarkeit in den Schalterstellungen C bis F. Die Aufgabe Geofencing kann ihre Voraussetzungen bis zur Klaerung nicht abschliessend nennen.",
+      "severity": "hoch"
     }
   ],
   "safety_critical_open": [
+    "Die Berechtigungsregel fuer Zielrufnummern ist nicht belegt (DSC-044, BLK-006): autorisiert und nicht autorisiert unterscheiden sich in der Quelle nur durch ein Zeichen, das nirgends erklaert wird.",
+    "Ob Geofencing ohne WiPro III (safe.lock) ueberhaupt eine Diebstahlmeldung ausloest, ist widerspruechlich dokumentiert (DSC-042, BLK-007).",
+    "Der Statusbericht enthaelt Felder, die Kapitel 4 nicht erklaert, und laesst angekuendigte Felder weg (DSC-045). Nutzende koennen die Meldung nicht vollstaendig deuten.",
+    "Die GPS-Diagnose in Schalterstellung F unterscheidet zwei ihrer drei Zustaende ausschliesslich ueber die LED-Farbe; ein farbunabhaengiges Merkmal ist nicht dokumentiert (DSC-047). Das ist die bisher einzige gefundene Barriere am Geraet selbst, nicht am Dokument.",
+    "Die Mindest-Betriebsspannung 13,5 V fuer fuenf Minuten zum Speichern der Satellitendaten (DOC-IBA-SN045 Seite 12) ist erfasst, aber fachlich nicht bestaetigt.",
     "Alle sicherheitskritischen Inhalte (SMS-Befehle, PIN-Regeln, Anschlüsse, Spannungen) sind ungeprüft bzw. noch nicht extrahiert – technischer Review steht vollständig aus.",
     "Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013, DSC-014). Ein nicht akzeptierter Befehl lässt Geofencing unbemerkt aktiv oder inaktiv; der Nutzer erhält keine Fehlermeldung, sondern nur die Hilfe-SMS.",
     "Die Spannungsschwellen 11,2 V (Standby) und 12,5 V (Rückkehr) sowie der Geofencing-Radius von ca. 900 m sind aus DOC-IBA-SN045 erfasst, aber fachlich nicht bestätigt.",
@@ -129,5 +147,5 @@
     "Weitere sicherheitskritische Werte aus Batch 4 sind erfasst, aber ungeprüft: 9–30 V Versorgung, 2 × 12 V/500 mA Ausgänge, Flachsicherung 3 A, zwei Meter Kabellänge zur externen GPS-Antenne, zehn Minuten GPS-Wartezeit, Pinbelegung 1–8.",
     "Der tschechische Geofencing-Hinweis nennt zweimal denselben Zustand („odjištěn\") für Aktivierung und Deaktivierung (DSC-038); die Beschreibung des LED-Normalbetriebs ist sinnentstellt („rezervováno (recepce)\", DSC-039). Beide brauchen einen muttersprachlichen Review."
   ],
-  "next_action": "PDF-Batch 10: DOC-IBA-SN045 Seiten 101-110 (daenischer Teil). Die Seitenpruefung ist der groesste Fortschrittshebel (20 Prozent Gewicht, aktuell 8 Prozent; 219 von 323 Seiten noch not_started). Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
+  "next_action": "Die verbliebenen 143 ungeprueften Seiten in Batches abarbeiten: DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247 sowie DOC-BMA-SN044 Seiten 6-72. Die Seitenpruefung bleibt der groesste Hebel (20 Prozent Gewicht, aktuell 13,9 Prozent). Vorrangig ist DOC-BMA-SN044: es ist die einzige Quelle fuer die Generation bis SN-044, erst mit 5 von 72 Seiten geprueft, und als einziges Dokument mit echter Textebene erlaubt es die Gegenueberstellung von Text und Bild. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
 }
