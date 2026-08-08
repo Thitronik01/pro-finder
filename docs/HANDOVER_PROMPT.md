@@ -29,15 +29,16 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 13,9 %): 143 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 14,8 %): 132 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 6–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, erst zu 7 % geprüft. Als **einziges** Dokument mit echter Textebene erlaubt es
-  die Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus entsteht hier
-  der Erkenntnisgewinn, nicht aus „Textebene vorhanden".
+- **DOC-BMA-SN044, Seiten 17–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, geprüft sind 16 von 72 Seiten. Als **einziges** Dokument mit echter Textebene
+  erlaubt es die Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus
+  entsteht hier der Erkenntnisgewinn, nicht aus „Textebene vorhanden". Beide bisherigen
+  Batches haben ihre stärksten Funde aus genau diesem Vergleich gezogen.
 - **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
 
 Vorgehen je Batch von 9–10 Seiten:
@@ -71,7 +72,7 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 180 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
+Geprüft sind 191 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
 Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
 Das Muster ist stabil und wiederholt sich erwartbar:
 
@@ -92,6 +93,28 @@ Das Muster ist stabil und wiederholt sich erwartbar:
 Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, technische
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
+
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–16 geprüft, einsprachig deutsch):
+
+- Die aufgedruckte Seitenzahl liegt durchgehend **zwei unter** der PDF-Seite. Die Quelle
+  verweist intern auf die **aufgedruckten** Zahlen – beim Prüfen eines Seitenverweises
+  immer umrechnen.
+- **Die Textebene ist nicht vollständig.** Sie enthält keine Piktogramme, keine
+  Farbauszeichnung, keine Warndreiecke, kein einziges der neun Beispiel-SMS-Bilder und an
+  einer Stelle ein fehlendes Sternzeichen mitten in einem Befehlscode (DSC-058). Nichts
+  daraus darf ungeprüft übernommen werden.
+- **Warnungen tragen nie ein Signalwort.** Sie sind rot, tragen Ausrufezeichen, ein
+  Warndreieck oder einen rosa Kasten. Beim Erfassen als Warnung kenntlich machen und in
+  `accessibility_issues` vermerken, dass die Auszeichnung rein visuell ist.
+- **Befehle stehen als alleinstehende fette Wörter** in eigener Zeile, ohne Kennzeichnung
+  als einzugebender Text. Sie gehören in den Seitenrecord als Quellenzitat für BLK-005 –
+  und niemals in den Content-Layer.
+- **Die Hilfe-SMS des Geräts auf Seite 13 ist die maßgebliche Vergleichsgröße.** Sie nennt
+  die Befehle, die das Gerät selbst für gültig hält, und widerspricht dem Handbuch. Jeder
+  weitere gefundene Befehl ist gegen diese Liste zu halten (DSC-054).
+- Erwartbar sind je Seite mehrere redaktionelle Fehler (fehlende Leerzeichen, falsche
+  Groß-/Kleinschreibung, vorreformierte Schreibung). Sie gehören gesammelt in DSC-064,
+  nicht je Seite neu ins Register.
 
 ### Der zweite Hebel
 

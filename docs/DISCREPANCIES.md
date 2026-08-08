@@ -784,3 +784,319 @@ belegt, nicht aus einer Zusammenfassung.
   Sprachnamen als Text führen muss und eine Flagge allenfalls schmückt.
 - **Schwere:** mittel (Auffindbarkeit des richtigen Sprachteils) · **Status:** offen – an
   THITRONIK zu melden
+
+### DSC-054 – Handbuch und Gerät nennen verschiedene Befehle (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 7, 13, 14, 15, 16
+- **Befund:** Die automatische Hilfe-SMS des Geräts ist auf Seite 13 als Abbildung
+  wiedergegeben und nennt die Befehle, die das Gerät selbst für gültig hält:
+  `STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON`
+  (bei 700 dpi zeichengenau gesichert). Der Fließtext desselben Handbuchs weicht davon an
+  vier Stellen ab:
+  - **Ausgänge:** Seite 16 schreibt `A an`, `A aus`, `A impuls` und `A XXX`; das Gerät nennt
+    `A ON`, `A OFF`, `A PULSE`. Deutsch gegen Englisch, für dieselbe Funktion.
+  - **Geofencing:** Seite 7 schreibt `fence aus`, Seite 15 zweimal `Fence aus` und einmal
+    `Fence an`; das Gerät nennt `FENCE ON` und `FENCE OFF`. **Drei Schreibweisen desselben
+    Befehls in einem einsprachigen Dokument**, dazu eine vierte vom Gerät selbst.
+  - **Alarm:** Seite 14 nennt `alarm`, um Sirene und Blinker zuzuschalten. Die Geräteliste
+    kennt diesen Befehl nicht, sondern nur `ALARM AUS`.
+  - **Position:** Seite 15 nennt `Pos`, Seite 12 erwähnt `(POS)`. In der Geräteliste kommt
+    **kein** Positionsbefehl vor.
+  - Umgekehrt führt das Gerät mit `GPS OFF` und `GPS ON` zwei Befehle, die im geprüften
+    Bereich des Handbuchs an keiner Stelle vorkommen.
+- **Warum das zählt:** Bisher stützte sich BLK-005 auf den Vergleich **zwischen** vier
+  Sprachfassungen der neueren Generation (DSC-033). Hier widersprechen sich Handbuch und
+  Gerät **innerhalb einer Sprache und eines Dokuments**. Damit ist ausgeschlossen, dass die
+  Unterschiede allein Übersetzungsfehler sind. Ein nicht akzeptierter Befehl erzeugt keine
+  Fehlermeldung, sondern nur die Hilfe-SMS – wer Geofencing vor der Einfahrt in eine Halle
+  abschalten will und den falschen Befehl verwendet, bekommt genau die Fehlalarme, die er
+  vermeiden wollte.
+- **Nebenbefund:** Die Gerätetexte ersetzen Umlaute durch Vokal plus e („Ungueltiger",
+  „Moeglich", „Tuer"). Das Gerät unterliegt einer Zeichensatzbeschränkung, die das Handbuch
+  nirgends erwähnt und die vor jeder Übersetzung zu schützen ist. Das deckt sich mit der
+  Beobachtung zu DSC-033, dass alle Geräte-SMS der neueren Generation ohne Diakritika
+  gesetzt sind.
+- **Schwere:** hoch · **Status:** offen – verstärkt BLK-005, an THITRONIK zu melden
+  (Rückfrage 1)
+
+### DSC-055 – Drei falsche Querverweise im Handbuch bis SN-044 (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 10, 12, 13; Verweisziele auf Seite 15 selbst geprüft
+- **Befund:** Drei Verweise nennen eine Abschnittsnummer, unter der etwas anderes steht.
+  Die tatsächlichen Überschriften auf Seite 15 lauten „2.4 Geofencing", „2.5 Statusbericht
+  anfordern" und „2.6 Positionsabfrage mit Smartphone" – im Seitenbild bestätigt, nicht nur
+  in der Textebene.
+  - Seite 10 verweist für die Umwandlung der Position in einen anklickbaren Link auf
+    „2.5"; das ist „Statusbericht anfordern". Gemeint ist 2.6.
+  - Seite 12 verweist für das Anfordern des Statusberichts auf „2.3"; das ist „Alarmanlage
+    per Anruf steuern". Gemeint ist 2.5. Der Verweis ist nicht gänzlich unpassend – 2.3
+    beschreibt einen per Anruf ausgelösten Statusbericht in den Betriebsarten 2 und 3 –,
+    zielt aber am gleichnamigen Abschnitt vorbei.
+  - Seite 13 verweist für die Positionsabfrage auf „2.4"; das ist „Geofencing". Gemeint
+    ist 2.6.
+  - Zusätzlich kündigt Seite 15 unter 2.5 an, das Wiederfinden des Fahrzeugs werde „in
+    Kapitel 2.6 erklärt"; 2.6 ist die Positionsabfrage, ein Abschnitt „Fahrzeug
+    wiederfinden" trägt laut Textebene die Nummer 2.8. Abschließend zu prüfen, sobald
+    Seite 17 gerendert ist.
+- **Muster:** Alle drei falschen Verweise nennen eine **zu niedrige** Nummer (2.5 statt
+  2.6, 2.3 statt 2.5, 2.4 statt 2.6). Das spricht dafür, dass die Abschnittsnummerierung
+  nachträglich verschoben wurde und die Verweise nicht mitgezogen sind.
+- **Gegenprobe:** Die übrigen geprüften Verweise stimmen: „siehe 1.3" (Seite 6), „Kapitel
+  2.7" (Seite 6), „unter 2.2" (Seite 12), „siehe Seite 8, Kapitel 1.8" (Seite 13, mit
+  aufgedruckter Seitenzahl) und „unter 1.5" (Seite 16). Der Fehler ist also nicht flächig,
+  sondern auf Kapitel 2 begrenzt.
+- **Bemerkenswert im Generationenvergleich:** Der Verweis auf Blinker und Sirene ist hier
+  **richtig** (Seite 12 auf 2.2). In der Fassung ab SN-045 führt genau dieser Verweis ins
+  Leere (DSC-041). Der Fehler ist dort erst entstanden.
+- **Schwere:** mittel · **Status:** offen
+
+### DSC-056 – Die Steuerberechtigung hängt auch bis SN-044 an einem nirgends erklärten Zeichen (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 9 und 10
+- **Befund:** Seite 9 unterscheidet Masternummer, autorisierte Nummern, nicht autorisierte
+  Nummern und Smartphone-Nummern und beschreibt genau, was jede Stufe darf – **nicht aber,
+  wie eine Nummer in eine Stufe gelangt**. Die Kennzeichnung ist ausschließlich aus den
+  Beispielen der Tabelle auf Seite 10 zu erschließen: die Zeile „Masternummer + einer
+  autorisierten Nummer" verbindet beide Nummern mit einem **Pluszeichen**, die Zeile
+  „Masternummer als Smartphone Nummer + einer nicht autorisierten Nummer" mit einem
+  **Minuszeichen**. Kein Satz der Quelle spricht das aus.
+- **Warum das zählt:** Das ist derselbe Befund, der für die Generation ab SN-045 als
+  DSC-044 und BLK-006 geführt wird. Er ist damit **nicht auf die neuere Generation
+  beschränkt**, sondern seit mindestens zwei Gerätegenerationen unverändert. Ein falsches
+  Zeichen kippt die Steuerberechtigung einer Rufnummer.
+- **Zusatzbefund zur Smartphone-Kennzeichnung:** Seite 9 schreibt „die bei der
+  Programmierung mit einem **s** versehen wurden" – kleingeschrieben, und die Eigenschaft
+  als Befehlszeichen wird allein durch Fettschrift getragen, die in der Textebene fehlt.
+  Seite 10 schreibt denselben Marker in der Strukturabbildung und im Erläuterungstext
+  durchgehend als großes **S**. Ob das Gerät die Schreibung unterscheidet, sagt die Quelle
+  nicht.
+- **Schwere:** hoch · **Status:** offen – verstärkt BLK-006, an THITRONIK zu melden
+  (Rückfrage 10)
+
+### DSC-057 – Die verwiesene „Tabelle Abfragecodes" existiert nicht (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 9 und 10
+- **Befund:** Seite 10 verweist zweimal auf eine „Tabelle Abfragecodes", einmal
+  ausdrücklich „auf der vorherigen Seite". Seite 9 enthält keine solche Tabelle, sondern
+  nur den Hinweis, die Codes den Unterlagen der Prepaidkarte zu entnehmen, sowie eine
+  Internetadresse.
+- **Prüfweg:** Seite 9 wurde zusätzlich maschinell untersucht. Sie enthält **kein
+  eingebettetes Bild und genau ein Zeichenobjekt** (die Kopfzeile). Die große Leerfläche in
+  ihrer Mitte – rund ein Neuntel der Seitenhöhe – ist tatsächlich leer und liegt genau
+  dort, wo die Tabelle stehen müsste. Das spricht dafür, dass sie entfernt und die Verweise
+  nicht nachgezogen wurden.
+- **Warum das zählt:** Der Abfragecode ist Bestandteil der Programmier-SMS bei
+  Prepaid-Karten. Ohne ihn wird das Guthaben nicht übertragen; mit einem falschen Code bei
+  einer Vertragskarte führt die Quelle ausdrücklich Fehlfunktionen an. Die Anleitung
+  verweist für diesen Wert auf eine Tabelle, die es nicht gibt.
+- **Schwere:** mittel · **Status:** offen
+
+### DSC-058 – Ein funktionsrelevantes Zeichen fehlt in der Textebene (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seite 10
+- **Befund:** Die Strukturabbildung der Programmier-SMS beginnt im Seitenbild mit einem
+  sechsstrahligen Sternzeichen vor der Ziffernfolge des Abfragecodes; der erläuternde rote
+  Text nennt dasselbe Zeichen ein zweites Mal in einer alternativen Ziffernfolge. Die
+  Textebene gibt an der ersten Stelle stattdessen eine Reihe von Leerzeichen aus und an der
+  zweiten Stelle **gar nichts**.
+- **Prüfweg:** Bei 700 dpi nachgerendert. Das Zeichen ist im Bild eindeutig vorhanden und
+  in der Textebene eindeutig abwesend.
+- **Warum das zählt:** Dies ist das Dokument mit **echter Textebene**, und genau daraus
+  entsteht hier der Erkenntnisgewinn: Wer die Seite vorgelesen bekommt, den Text kopiert
+  oder maschinell weiterverarbeitet, erhält einen Abfragecode **ohne sein erstes Zeichen** –
+  also einen Code, der nicht funktioniert. Eine zeichenzählende Zugänglichkeitsprüfung
+  würde die Seite für unauffällig halten. Für die HTML-Anleitung folgt daraus, dass Befehls-
+  und Codebestandteile nicht aus der Textebene übernommen werden dürfen, sondern gegen das
+  Seitenbild zu prüfen sind.
+- **Schwere:** hoch · **Status:** offen
+
+### DSC-059 – Neun Gerätezustände, unterschieden allein über die LED-Farbe (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 7 und 11
+- **Befund:** Abschnitt 1.10 auf Seite 11 führt neun Betriebszustände der Status-LED. Sie
+  zerfallen in zwei Gruppen gleicher Blinkart, innerhalb derer **die Farbe das einzige
+  unterscheidende Merkmal** ist:
+  - sechs Blinkzustände: rot/gelb, rot, grün, rot/grün, gelb, gelb/grün
+  - drei Dauerlichtzustände: rot, grün, gelb
+
+  Wer Rot, Gelb und Grün nicht sicher unterscheidet, kann neun Zustände auf zwei reduzieren
+  und weder „kein GSM-Empfang" von „alles in Ordnung" noch „SIM-Karte defekt" von „Gerät
+  versendet eine SMS" trennen. Drei der neun Zustände sind zudem Zweifarbwechsel; weder die
+  Reihenfolge der Farben noch die Blinkfrequenz ist dokumentiert.
+
+- **Verschärfung:** Dieselbe Anzeige bedeutet je nach Schalterstellung Verschiedenes.
+  Dauerlicht Rot heißt in der Ausgangsstellung „SIM-Karte fehlt bzw. ist defekt", in
+  Schalterstellung F dagegen „GPS nicht angeschlossen" (Seite 7). Die maßgebliche
+  Schalterstellung wird nicht zurückgemeldet. Auch der Löschvorgang der Zielrufnummern auf
+  Seite 11 enthält mit „warten Sie bis die Status LED gelb/grün blinkt" eine farbcodierte
+  Abbruchbedingung und ist damit ohne Farbwahrnehmung nicht sicher durchführbar.
+- **Warum das zählt:** Für die Generation ab SN-045 ist der Sachverhalt als DSC-047 auf die
+  dreistufige GPS-Diagnose beschränkt. Hier betrifft er die **vollständige
+  Zustandsanzeige** des Geräts im Normalbetrieb. Das ist die bisher umfangreichste
+  gefundene Barriere, die **am Gerät** sitzt und nicht am Dokument – die HTML-Anleitung kann
+  sie beschreiben, aber nicht auflösen.
+- **Schwere:** hoch · **Status:** offen – an THITRONIK zu melden (Rückfrage 12)
+
+### DSC-060 – Die Beispiel-SMS liegen ausschließlich als Bild vor, und ihre Felder erklärt kein Kapitel (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 12 und 13
+- **Befund:** Neun Beispiel-SMS sind als Abbildungen von Mobiltelefon-Sprechblasen
+  wiedergegeben – drei auf Seite 12, sechs auf Seite 13. **Keine einzige kommt in der
+  Textebene vor**: kein Feldname, kein Wert, kein Hinweis auf ihre Existenz. Sie sind die
+  einzige Stelle des Dokuments, an der zu sehen ist, wie eine Meldung tatsächlich aussieht.
+- **Zusätzlich decken sich Erklärung und Beispiel nicht.** Abschnitt 2.1 erklärt fünf
+  Angaben – „GPS: Stand by", „UTC:", „Pos:", „Geschwindigkeit:" und „Kontostand:".
+
+  | Laut Abschnitt 2.1 | In den neun Beispiel-SMS                                       |
+  | ------------------ | -------------------------------------------------------------- |
+  | „Kontostand:"      | auf Seite 12 „Aktuelles Guthaben:", auf Seite 13 „Kontostand:" |
+  | „Geschwindigkeit:" | Wert steht überall ohne diesen Bezeichner                      |
+  | –                  | „GPS Fencing aktiv", nirgends erklärt                          |
+  | –                  | „U1:" bis „U5:", im Kapitel nur „U2-U5" erwähnt                |
+  | –                  | „A off" und „B on", nirgends erklärt                           |
+  | –                  | „Empfang: -99dBm", nirgends erklärt                            |
+  | Temperatur         | in keiner Beispiel-SMS vorhanden                               |
+
+- **Warum das zählt:** Das ist derselbe Befund wie DSC-045 der Generation ab SN-045 – dort
+  fehlen ebenfalls Felder in der Erklärung und tauchen ungeklärte in den Beispielen auf.
+  Beide Generationen sind betroffen. Die Angabe „GPS Fencing aktiv" ist zudem der einzige
+  Beleg dafür, dass der Geofencing-Zustand überhaupt zurückgemeldet wird; weder Abschnitt
+  2.1 noch Abschnitt 2.4 erwähnen dieses Feld.
+- **Nebenbefund:** Drei Abbildungen auf Seite 13 beginnen die Guthabenzeile mit einem
+  alleinstehenden Anführungszeichen ohne schließendes Gegenstück. Die Positionsangaben sind
+  blau und unterstrichen gesetzt und wirken wie Verknüpfungen; die Seiten enthalten
+  maschinell geprüft **keine einzige Verknüpfung**.
+- **Schwere:** hoch · **Status:** offen – ergänzt Rückfrage 11
+
+### DSC-061 – Der Geofencing-Radius unterscheidet sich zwischen den Generationen (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 12 und 15
+- **Befund:** Seite 12 nennt für die Diebstahlmeldung eine Entfernung von „ca.1000m" vom
+  ursprünglichen Standort, Seite 15 für denselben Sachverhalt „ca. 1 km" – derselbe Wert in
+  zwei Schreibweisen, einmal ohne jedes Leerzeichen. Die Fassung ab SN-045 nennt an
+  entsprechender Stelle rund **900 m**.
+- **Warum das zählt:** Der Radius entscheidet darüber, wann eine Diebstahlmeldung ausgelöst
+  wird. Ob die Abweichung eine bewusste Änderung zwischen den Gerätegenerationen oder ein
+  Fehler in einer der beiden Fassungen ist, lässt sich aus den Quellen nicht entscheiden.
+  Beide Werte sind technisch unbestätigt. Der Projektauftrag verbietet, die Generationen zu
+  vermischen; ein falsch übernommener Radius wäre genau das.
+- **Schwere:** mittel · **Status:** offen – an THITRONIK zu melden (Rückfrage 14)
+
+### DSC-062 – Was bis SN-044 geregelt ist und ab SN-045 offen bleibt (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seite 15
+- **Befund:** Abschnitt 2.4 regelt zwei Punkte ausdrücklich, die für die Generation ab
+  SN-045 als DSC-042 und BLK-007 offen sind:
+  1. **Vorrang von Pin 3:** „Geofencing kann in Schalterstellung 8 und B über Pin 3 ein-
+     und ausgeschaltet werden. In allen anderen Schalterstellungen kann Geofencing per SMS
+     ein- und ausgeschaltet werden." Damit ist die Zuständigkeit nach Schalterstellung
+     eindeutig aufgeteilt.
+  2. **Kopplung an den Schärfzustand:** „Ist WiPro geschärft, ist Geofencing automatisch
+     aktiviert und muss nicht per SMS eingeschaltet werden."
+- **Warum das hier steht:** Das ist ausnahmsweise kein Widerspruch, sondern eine **Antwort
+  der älteren Quelle auf eine Frage, die die neuere offen lässt**. Sie darf nicht
+  stillschweigend auf die Generation ab SN-045 übertragen werden – der Projektauftrag
+  verbietet die Vermischung, und die Schalterstellungen 8 und B sind zwar in beiden
+  Fassungen genannt, die Geräte aber verschieden. Die Regel ist deshalb als **Vorlage für
+  die Rückfrage** festgehalten: gilt sie ab SN-045 unverändert fort?
+- **Offen bleibt auch bis SN-044:** Seite 7 empfiehlt, Geofencing beim Abstellen in
+  Gebäuden zu deaktivieren, ohne zu erwähnen, dass damit die Diebstahlmeldung entfällt und
+  dass sie wieder einzuschalten ist. Steht das Fahrzeug dabei geschärft, widerspricht die
+  Empfehlung der automatischen Aktivierung nach Abschnitt 2.4. Welcher Zustand sich
+  durchsetzt, sagt die Quelle nicht.
+- **Schwere:** mittel · **Status:** offen – Vorlage für Rückfrage 9
+
+### DSC-063 – Warnungen und Gliederung werden bis SN-044 allein über Farbe und Piktogramme getragen (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 6, 7, 8, 10, 11, 12, 13, 14, 15, 16
+- **Befund:** In keiner der elf geprüften Seiten trägt eine Warnung ein Signalwort. Die
+  Sicherheitsstufe wird ausschließlich grafisch codiert, und keines dieser Mittel hat eine
+  Entsprechung in der Textebene:
+  - **Rote Schrift** kennzeichnet Warnungen auf den Seiten 6, 10, 11, 12, 13, 14, 15 und
+    16 – darunter „!!! WiPro „all in one" und Pro-finder müssen an die gleiche Batterie
+    angeschlossen sein !!!" (Seite 6), „Bei Vertragskarten darf keinesfalls ein
+    Abfragecode eingegeben werden" (Seite 10) und viermal „! Nach versenden der SMS wird
+    die Masternummer zusätzlich angerufen !" (Seite 13). Rote Schrift kennzeichnet auf
+    denselben Seiten aber auch bloße Querverweise – dieselbe Auszeichnung für Warnung und
+    Hinweis.
+  - **Warndreiecke und ein rosa Kasten** tragen auf Seite 8 die sechs zwingenden
+    Anforderungen an die SIM-Karte. In der Textebene stehen sie als sechs gewöhnliche
+    Absätze.
+  - **Ein gelbes ESD-Warnsymbol** auf Seite 8 ist die einzige Warnung vor elektrostatischer
+    Entladung im gesamten geprüften Bereich. Auf der ganzen Seite steht dazu **kein
+    einziges Wort**; das Symbol ist alleinige Trägerin der Warnung.
+  - **Ausrufezeichenpaare** ersetzen das Signalwort („!! SIM Karte muss im Gerät sein !!",
+    Seite 11).
+  - **Zeigehand-, Pfeil- und Uhr-Piktogramme** gliedern auf sieben Seiten Handlung,
+    Ergebnis und Zeitbedingung. Keines kommt in der Textebene vor; die Schrittfolgen sind
+    weder nummeriert noch als Liste ausgezeichnet.
+  - **Unterstreichung** dient auf den Seiten 4 und 16 als Zwischentitel – eine Auszeichnung,
+    die keine Strukturebene ergibt und von einer Verknüpfung nicht zu unterscheiden ist.
+- **Warum das zählt:** Für Screenreader, Schwarzweißdruck und erzwungene Farben ist keine
+  einzige Warnung dieses Handbuchs als Warnung erkennbar. Das bestätigt die im Pilot
+  bereits umgesetzte Entscheidung, die Sicherheitsklasse in der Oberfläche als **Wort**
+  auszugeben, und begründet sie für diese Generation zusätzlich.
+- **Schwere:** hoch (Sicherheitshinweise) · **Status:** offen
+
+### DSC-064 – Redaktionelle Befunde im Handbuch bis SN-044 (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 6 bis 16
+- **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite. Alle unverändert in
+  den Seitenrecords übernommen, keiner still korrigiert.
+  - Seite 6: „(0-30V)kontrolliert" ohne Leerzeichen (bei 400 dpi bestätigt); „WiPro III"
+    mit zwei Leerzeichen; die Aufzählung der Schaltarten mit vorangestelltem Bindestrich
+    ohne Leerzeichen.
+  - Seite 7: „GPS Daten werden **Empfangen**" – Verb großgeschrieben; „Reflektionen" statt
+    „Reflexionen".
+  - Seite 8: „(Micro -SIM Format)" mit Leerzeichen vor dem Bindestrich; der Einleitungssatz
+    endet ohne Satzzeichen; „Der PIN" maskulin neben „Die Pinabfrage".
+  - Seite 9: „denUnterlagen" ohne Leerzeichen.
+  - Seite 10: „Link (siehe 2.5)" mit zwei Leerzeichen; im Tabellenkopf „Programmier- SMS"
+    mit Bindestrich und Leerzeichen; in der Prepaid-Spalte wird eine Beispielnummer mitten
+    in der Ziffernfolge und ohne Trennzeichen umbrochen – während derselbe Text Leerzeichen
+    in der SMS ausdrücklich verbietet.
+  - Seite 11: „Programmier SMS neu programmiert" mit zwei Leerzeichen.
+  - Seite 12: „Bei einem Ereignis wird **Sie** automatisch reaktiviert" – Pronomen
+    großgeschrieben, liest sich als Anrede, gemeint ist die GPS-Antenne;
+    „Positionabfrage" statt „Positionsabfrage"; „ca.1000m" ohne Leerzeichen; „zurück
+    geschaltet" getrennt.
+  - Seiten 12 und 13: „Nach **versenden** der SMS" – fünfmal im Dokument mit
+    kleingeschriebenem Verb.
+  - Seite 14: „bei der es sich um einen stillen Alarm"" – zwei Leerzeichen und ein
+    schließendes Anführungszeichen ohne öffnendes Gegenstück; „Zustand geschaltet werden.
+    Rufen Sie" mit zwei Leerzeichen nach dem Punkt.
+  - Seite 15: „zuvor " Fence aus" senden" mit überzähligem Leerzeichen innerhalb der
+    Anführungszeichen; „in eine Kartenprogramm" falscher Artikel; „eine ... SMS ..., die
+    einen Link öffnet" Numerusfehler; „ausser" statt „außer", obwohl das Dokument sonst
+    durchgehend vorreformiert mit ß schreibt („muß", „Anschluß").
+  - Seite 16: „1 Sek." abgekürzt gegen „1 Sekunde" ausgeschrieben auf derselben Seite; alle
+    drei Zwischentitel im Plural, obwohl die Befehle jeweils einen einzelnen Ausgang
+    betreffen.
+- **Schwere:** gering · **Status:** offen – gesammelt für den redaktionellen Review
+
+### DSC-065 – Uneinheitliche Benennungen im Handbuch bis SN-044 (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 6 bis 16
+- **Befund:** Dieselbe Sache trägt im deutschen Handbuch mehrere Namen. Das ist für die
+  spätere Segmentextraktion und für jede Übersetzung erheblich, weil sich nicht entscheiden
+  lässt, welche Form die maßgebliche ist.
+
+  | Sache                      | Schreibweisen in der Quelle                                                                       |
+  | -------------------------- | ------------------------------------------------------------------------------------------------- |
+  | SIM-Karte                  | „SIM-Karte" (S. 8), „SIM Karte" (S. 11), „Simkarte" (S. 12)                                       |
+  | Bedienelement am Gerät     | „Betriebsartenschalter" (S. 4, 7, 11), „Programmwahlschalter" (S. 12)                             |
+  | Guthaben                   | „Restguthaben" (S. 10), „Guthaben" (S. 8), „Kontostand" (S. 12, 13), „Aktuelles Guthaben" (S. 12) |
+  | Prepaid                    | „pre-paid Karte" (S. 8), „Pre-paid Karte" (S. 10), „Prepaidkarte" (S. 9)                          |
+  | Smartphone-Zusammensetzung | „Smartphone Nummern" (S. 9), „Smartphonenutzer" (S. 13), „Smartphone Nutzer" (S. 15)              |
+  | gekoppelte Alarmanlage     | „WiPro III" (S. 6), „WiPro „all in one"" (S. 6, 14), „WiPro" ohne Zusatz (S. 12, 13, 15)          |
+  | Zugriffsberechtigung       | „autorisierte" / „nicht autorisierte Nummern" (S. 9), „berechtigte Nummern" (S. 14)               |
+  | GPS-Antenne                | „GPS Antenne" (S. 6), „GPS-Antenne" (S. 6, 7)                                                     |
+  | Status-LED                 | durchgehend „Status LED" ohne Bindestrich; projektkonform wäre „Status-LED"                       |
+
+- **Erheblich davon:** Die Fassung ab SN-045 führt die gekoppelte Alarmanlage als „WiPro III
+  safe.lock", diese Generation als „WiPro „all in one"" – **die Generationen benennen das
+  gekoppelte Gerät verschieden**. Das ist für die Generationentrennung und für die
+  Terminologieliste zu berücksichtigen und nicht mit den übrigen Zeilen der Tabelle
+  gleichzusetzen.
+- **Schwere:** gering bis mittel · **Status:** offen – für Terminologieliste und
+  Segmentextraktion vorgemerkt

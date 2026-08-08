@@ -421,157 +421,1065 @@
     },
     {
       "page": 6,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2354,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1955,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 4\". Abschnitt 1.5 \"Anschluß des Moduls\": Pin 1 (schwarz) und Pin 8 (rot) polungsrichtig an eine Spannungsversorgung 12VDC, Plusleitung mit beiliegender Sicherung absichern; Pins 2-5 sind Messeingänge für 0-30V; über Pin 3 ist je nach Betriebsart Geofencing aktivierbar; Verbindung zu WiPro III bzw. WiPro \"all in one\" mit dem beiliegenden Verbindungskabel; Pin 6 und Pin 7 sind Transistorausgänge mit 12V und 500mA, darüber ist ein KFZ-Relais mit Freilaufdiode zu verwenden. Drei Schaltarten der Ausgänge werden aufgezählt (dauerhaft, Impuls für 1 Sekunde, frei wählbare Zeit), die zugehörigen Befehle stehen laut Verweis in Kapitel 2.7. Abschnitt 1.6 \"Montage der GPS Antenne (Option)\": Klebepad, sabotagegeschützte Stelle im Fahrzeuginnenraum, Empfangsseite nach oben und möglichst waagerecht, Klebefläche unter 15°C erwärmen. Abschnitt 1.7 \"Anschluß der GPS Antenne\" beginnt: Pro-finder spannungsfrei machen, Hauptkabelbaum abziehen, GPS-Stecker in den 4-poligen Anschluß, danach Betriebsspannung mindestens 5 Minuten über 13,5V halten, damit die Satellitendaten gespeichert werden. Rechte Seitenhälfte: freigestelltes Foto der GPS-Antenne mit Kabel und Steckverbinder.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 4",
+        "1.5 Anschluß des Moduls",
+        "1.6 Montage der GPS Antenne (Option)",
+        "1.7 Anschluß der GPS Antenne"
+      ],
+      "technical_values": [
+        {
+          "value": "Pin 1 (schwarz) und Pin 8 (rot), polungsrichtig an 12VDC",
+          "context": "Spannungsversorgung des Moduls, Verweis auf Abschnitt 1.3. Nur diese beiden der acht Adern werden im Text mit Farbe genannt; die Streifenkennzeichnung der übrigen Adern steht nirgends im Text (siehe Seitenrecord zu PDF-Seite 4)",
+          "safety_critical": true
+        },
+        {
+          "value": "Plusleitung mit der beiliegenden Sicherung absichern",
+          "context": "Abschnitt 1.5; Sicherungswert wird auf dieser Seite nicht genannt",
+          "safety_critical": true
+        },
+        {
+          "value": "Pins 2-5 Messeingänge, 0-30V",
+          "context": "Abschnitt 1.5; im Original ohne Leerzeichen als \"(0-30V)kontrolliert\" gesetzt, bei 400 dpi bestätigt",
+          "safety_critical": true
+        },
+        {
+          "value": "Pin 6 und Pin 7: Transistorausgänge, 12V, 500mA",
+          "context": "Abschnitt 1.5; oberhalb 500mA ist ein hochwertiges KFZ-Relais mit Freilaufdiode vorgeschrieben, bei Überlastung erlischt die Garantie",
+          "safety_critical": true
+        },
+        {
+          "value": "mindestens 5 Minuten über 13,5V nach der Installation",
+          "context": "Abschnitt 1.7, Speichern der aktuellen Satellitendaten; Fahrzeug hierzu starten. Derselbe Wert erscheint in der Generation ab SN-045 (dort DSC-052); er ist in beiden Generationen technisch unbestätigt",
+          "safety_critical": true
+        },
+        {
+          "value": "4 poliger Anschluß für die GPS-Antenne",
+          "context": "Abschnitt 1.7; Stecken ausschließlich im spannungsfreien Zustand",
+          "safety_critical": true
+        },
+        {
+          "value": "Klebefläche bei Temperaturen unter 15°C erwärmen",
+          "context": "Abschnitt 1.6, Montage der optionalen GPS-Antenne",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Freigestelltes Foto der optionalen GPS-Antenne: schwarzes quadratisches Gehäuse mit weißer Klebepad-Fläche auf der Oberseite, zwei Schraubdurchführungen, abgehendes schwarzes Kabel, in der Kabelmitte eine gestrichelte Unterbrechung, am Ende drei sichtbare Adern (schwarz, weiß, grün) und ein weißer zweipoliger Steckverbinder",
+          "has_text_equivalent": false,
+          "relies_on": "zwei rote Verbindungslinien, die die im Fließtext fett gesetzten Wörter \"Klebepad\" und \"GPS-Stecker\" mit je einer Bildstelle verbinden; ohne die Linien ist keine der beiden Zuordnungen herstellbar"
+        }
+      ],
+      "warnings_found": [
+        "\"!!! WiPro \"all in one\" und Pro-finder müssen an die gleiche Batterie angeschlossen sein !!!\" - ausschließlich durch rote Schrift und je drei Ausrufezeichen als Warnung gekennzeichnet, ohne Signalwort",
+        "\"Bei Überlastung erlischt die Garantie.\" - im laufenden schwarzen Absatz, ohne jede Auszeichnung",
+        "\"Zum Anschliessen der optionalen GPS-Antenne muß Pro-finder spannungsfrei sein.\" - im laufenden Absatz, ohne Auszeichnung",
+        "\"Erfolgt die beschriebene Speicherung nicht, ist eine genaue Positionsbestimmung nicht sichergestellt.\" - im laufenden Absatz, ohne Auszeichnung"
+      ],
+      "accessibility_issues": [
+        "Die beiden Handlungsabsätze der Seite sind durch ein Zeigehand-Piktogramm markiert. Dieses Piktogramm kommt in der Textebene an keiner Stelle vor. Der Unterschied zwischen \"das musst du tun\" und \"das ist Hintergrund\" ist damit rein visuell und geht beim Vorlesen vollständig verloren.",
+        "Der einzige ausdrücklich hervorgehobene sicherheitskritische Hinweis der Seite - gleiche Batterie für WiPro \"all in one\" und Pro-finder - ist allein durch rote Schrift und Ausrufezeichen gekennzeichnet. Die Textebene liefert ihn als gewöhnlichen Absatz zwischen zwei anderen Absätzen aus; in Schwarzweißdruck, bei erzwungenen Farben und für Screenreader ist er von normalem Fließtext nicht zu unterscheiden.",
+        "Auch der Querverweis \"Wie die Ausgänge per SMS gesteuert werden, erfahren Sie im Kapitel 2.7\" ist ausschließlich durch rote Schrift ausgezeichnet.",
+        "Das Foto der GPS-Antenne hat weder Bildunterschrift noch Alternativtext und erscheint in der Textebene überhaupt nicht. Die beiden roten Linien, die die fett gesetzten Wörter \"Klebepad\" und \"GPS-Stecker\" mit dem Bild verbinden, sind die einzige Zuordnung zwischen Text und Bauteil.",
+        "Die Empfangsseite der Antenne ist im Foto allein durch die weiße Fläche auf schwarzem Gehäuse erkennbar. Der Text sagt \"Die Seite, auf der sich das Klebepad befindet muß nach oben zeigen\", benennt aber kein Merkmal, an dem sich diese Seite ohne das Bild erkennen ließe.",
+        "Die drei am Steckverbinder sichtbaren Aderfarben (schwarz, weiß, grün) werden im Text nicht benannt.",
+        "Die gestrichelte Unterbrechung im Antennenkabel steht für eine gekürzte Darstellung der Kabellänge. Diese zeichnerische Konvention ist nirgends erklärt; die tatsächliche Kabellänge nennt die Seite nicht.",
+        "Kopfzeile \"Handbuch Pro-finder\" und interne Seitenzahl \"Seite 4\" stehen in der Textebene am Ende des Seitentextes, auf der folgenden PDF-Seite 7 dagegen am Anfang. Die Lesereihenfolge der immer gleichen Kopfzeile ist innerhalb desselben Dokuments uneinheitlich.",
+        "Die Aufzählung der drei Schaltarten der Ausgänge ist mit einem vorangestellten Bindestrich ohne Leerzeichen gesetzt (\"-Ausgang Impuls\"). Das ergibt keine Listenauszeichnung, und ein Screenreader liest das Zeichen je nach Einstellung als \"minus\".",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 4\", tatsächlich PDF-Seite 6 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "\"(0-30V)kontrolliert\" - fehlendes Leerzeichen nach der schließenden Klammer, bei 400 dpi bestätigt.",
+        "\"WiPro  III\" mit zwei Leerzeichen zwischen Produktname und Ziffer, bei 400 dpi bestätigt. Dieselbe Stelle nennt daneben \"WiPro \"all in one\"\".",
+        "Der Abschnitt trägt die Überschrift \"1.7 Anschluß der GPS Antenne\" (ohne Bindestrich), auf der folgenden PDF-Seite 7 wird derselbe Abschnitt mit derselben Nummer als \"1.7 Anschluß der GPS-Antenne\" (mit Bindestrich) erneut überschrieben. Ein Abschnitt, zwei Schreibweisen, zwei Überschriften.",
+        "Innerhalb dieser einen Seite steht \"GPS Antenne\" (Überschriften 1.6 und 1.7, Fließtext) neben \"GPS-Antenne\" (Fließtext 1.7) und \"externe GPS-Antenne\" (PDF-Seite 4).",
+        "Der Querverweis \"erfahren Sie im Kapitel 2.7\" trifft zu: Abschnitt 2.7 \"Ausgänge per SMS steuern\" steht auf PDF-Seite 16 und ist selbst geprüft. Ebenso trifft \"siehe 1.3\" zu (PDF-Seite 4). Diese beiden Verweise sind korrekt - im Unterschied zu den drei falschen Verweisen auf den PDF-Seiten 10, 12 und 13 desselben Dokuments.",
+        "Versionsunterschied: Der Text schreibt die Ausgänge Pin 6 und Pin 7 mit 12V/500mA fest und verlangt darüber ein Relais. Diese Werte sind gegen die Anschlussangaben der Fassung ab SN-045 zu stellen.",
+        "Vorreformierte Schreibungen \"Anschluß\", \"muß\" durchgehend."
+      ],
+      "terminology_findings": [
+        "\"Geofencing\" projektkonform geschrieben.",
+        "\"WiPro III\" projektkonform, daneben aber \"WiPro \"all in one\"\" - die Fassung ab SN-045 führt dieselbe Zusatzfunktion als \"WiPro III safe.lock\". Die beiden Generationen benennen das gekoppelte Gerät unterschiedlich; das ist für die Generationentrennung erheblich.",
+        "\"Pro-finder\" durchgehend projektkonform.",
+        "\"GPS Antenne\" ohne Bindestrich neben \"GPS-Antenne\" mit Bindestrich auf derselben Seite.",
+        "\"KFZ-Relais\" und \"Freilaufdiode\" - Fachbegriffe ohne Erläuterung."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; drei Ausschnitte bei 300 und 400 dpi nachgerendert (Absatz mit den Messeingängen, roter Batteriehinweis, Antennenfoto), um das fehlende Leerzeichen in \"(0-30V)kontrolliert\", die doppelten Leerzeichen in \"WiPro  III\", die Farbe des Warnhinweises und die Aderfarben am GPS-Stecker zu sichern. Textebene aus tmp/bma-sn044-text.txt Zeile für Zeile gegen das Seitenbild gehalten. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 7,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1500,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1202,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 5\". Fortsetzung von Abschnitt 1.7 unter der abweichenden Überschrift \"1.7 Anschluß der GPS-Antenne\". Inhalt ist die GPS-Diagnose: Betriebsartenschalter in Stellung F (GPS Diagnose) bringen, danach zeigt die Status LED den Betriebszustand des GPS an. Drei Zustände werden beschrieben - LED leuchtet rot (GPS nicht angeschlossen, Anschlußvorgang bei getrennter Spannungsversorgung wiederholen, sonst evtl. Defekt der Antenne), LED blinkt gelb (GPS-Daten werden empfangen, jedoch ohne gültige Position; blinkt sie nach 5 Minuten noch, ist der Montageort ungeeignet), LED leuchtet grün (Position okay, Schalter zurück in die Ausgangsposition; leuchtet die LED dann rot, fehlt die SIM-Karte). Abschließend ein Absatz zu Reflexionen des GPS-Signals in Hallen und unter Überdachungen, die Diebstahlmeldungen ohne Fahrzeugbewegung auslösen können, mit der Empfehlung, die Geofence-Funktion dort per SMS zu deaktivieren.",
+      "headings": ["Handbuch Pro-finder", "Seite 5", "1.7 Anschluß der GPS-Antenne"],
+      "technical_values": [
+        {
+          "value": "Betriebsartenschalter Stellung F = GPS Diagnose",
+          "context": "Einzige dokumentierte Möglichkeit, den GPS-Empfang am Gerät zu prüfen. Die Stellung ist am Drehcodierschalter einzustellen (Bedienelement der Generation bis SN-044)",
+          "safety_critical": true
+        },
+        {
+          "value": "LED leuchtet rot: GPS nicht angeschlossen",
+          "context": "GPS-Diagnose in Stellung F; Dauerlicht",
+          "safety_critical": true
+        },
+        {
+          "value": "LED blinkt gelb: GPS-Daten werden empfangen, jedoch ohne gültige Position",
+          "context": "GPS-Diagnose in Stellung F; Blinken. Bleibt der Zustand länger als 5 Minuten bestehen, ist der Montageort ungeeignet",
+          "safety_critical": true
+        },
+        {
+          "value": "LED leuchtet grün: GPS Position okay",
+          "context": "GPS-Diagnose in Stellung F; Dauerlicht",
+          "safety_critical": true
+        },
+        {
+          "value": "5 Minuten",
+          "context": "Grenzwert, ab dem anhaltendes gelbes Blinken als ungeeigneter Montageort zu werten ist",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei waagerechte Farbbalken unter je einer Zustandszeile: durchgezogener roter Balken, gestrichelter gelber Balken, durchgezogener grüner Balken",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe und Strichart. Die Farbe wird im nebenstehenden Text benannt (\"leuchtet rot\", \"blinkt gelb\", \"leuchtet grün\"), die Balken sind insoweit eine Dopplung; die Strichart bildet zusätzlich Dauerlicht gegen Blinken ab"
+        },
+        {
+          "description": "Zeigehand-Piktogramm vor dem Handlungsabsatz und vor dem abschließenden SMS-Hinweis; nach unten weisendes Pfeil-Piktogramm vor \"Die Status LED zeigt nun den Betriebszustand des GPS an\"; kreisförmiges Uhr-Piktogramm neben dem Absatz zur 5-Minuten-Frist",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; keines der drei Piktogramme kommt in der Textebene vor"
+        }
+      ],
+      "warnings_found": [
+        "\"Führt dies nicht zum Erfolg, liegt evtl. ein Defekt der GPS-Antenne vor.\"",
+        "\"es können Diebstahlmeldungen ausgelöst werden, obwohl das Fahrzeug nicht bewegt wurde\" - Fehlalarm durch Signalreflexion, ohne Auszeichnung im Fließtext"
+      ],
+      "accessibility_issues": [
+        "Die GPS-Diagnose ist am Gerät nicht farbunabhängig durchführbar. Von den drei Zuständen sind \"LED leuchtet rot\" und \"LED leuchtet grün\" beide Dauerlicht und unterscheiden sich ausschließlich in der Farbe - und es sind genau die beiden Zustände mit gegensätzlicher Bedeutung: \"GPS nicht angeschlossen\" gegen \"GPS Position okay\". Nur der mittlere Zustand ist über das Blinken zusätzlich unterscheidbar. Ein farbunabhängiges Merkmal ist nirgends dokumentiert. Diese Barriere sitzt am Gerät, nicht am Dokument; die HTML-Anleitung kann sie beschreiben, aber nicht auflösen. Für die Generation ab SN-045 ist derselbe Sachverhalt als DSC-047 verzeichnet - er gilt damit für beide Generationen.",
+        "Die Rückkehr aus der Diagnose verschärft das: \"Wenn die LED nun rot leuchtet, ist noch keine SIM-Karte eingesetzt\". Dauerlicht Rot bedeutet in Stellung F \"GPS nicht angeschlossen\" und in der Ausgangsstellung \"SIM-Karte fehlt bzw. ist defekt\" (PDF-Seite 11). Dieselbe Anzeige trägt je nach Schalterstellung zwei verschiedene Bedeutungen, und die Schalterstellung selbst ist nicht rückgemeldet.",
+        "Die drei Farbbalken sind reine Farbflächen ohne Textentsprechung. Sie doppeln zwar die im Text genannte Farbe, tragen aber mit durchgezogen gegen gestrichelt die Unterscheidung Dauerlicht/Blinken zusätzlich rein grafisch.",
+        "Drei verschiedene Piktogramme (Zeigehand, Pfeil, Uhr) gliedern die Seite in Handlung, Ergebnis und Zeitbedingung. Keines erscheint in der Textebene; die Gliederung ist rein visuell.",
+        "Die Textebene zerreißt die Zustandszeilen: \"LED blinkt gelb:\" steht auf einer eigenen Zeile, der zugehörige Text \"GPS Daten werden Empfangen, jedoch ohne gültige Position.\" folgt erst nach einem Tabulator-Umbruch. Zwischen Zustand und Bedeutung liegen in der Textebene bis zu sechs Leerzeilen mit Steuerzeichen, was den Zusammenhang beim linearen Vorlesen auflöst.",
+        "Der Absatz zur Empfehlung, Geofencing in Gebäuden abzuschalten, beschreibt einen sicherheitsrelevanten Eingriff (Abschalten der Diebstahlerkennung) im gewöhnlichen Fließtext ohne jede Auszeichnung.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 5\", tatsächlich PDF-Seite 7 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Die Seite wiederholt die Abschnittsnummer 1.7 der vorhergehenden PDF-Seite 6, schreibt sie aber anders: hier \"1.7 Anschluß der GPS-Antenne\" mit Bindestrich, dort \"1.7 Anschluß der GPS Antenne\" ohne. Es ist unklar, ob eine Fortsetzung oder ein eigener Abschnitt gemeint ist.",
+        "\"GPS Daten werden Empfangen\" - das Verb ist großgeschrieben. Bei 150 dpi bestätigt.",
+        "\"Reflektionen\" statt \"Reflexionen\".",
+        "Der Text nennt hier den SMS-Befehl \"fence aus\" (klein geschrieben, in deutschen Anführungszeichen). Auf PDF-Seite 15 lautet derselbe Befehl \"Fence aus\" (großes F), und die Hilfe-SMS des Geräts auf PDF-Seite 13 führt ihn als \"FENCE OFF\" (englisch, Großbuchstaben). Drei Schreibweisen desselben Befehls in einem einsprachigen Dokument - Beleg für BLK-005, hier ausdrücklich nur als Quellenzitat festgehalten und nicht für den Content-Layer bestimmt.",
+        "\"Geofence Funktion\" hier gegen \"Geofencing\" auf PDF-Seite 6 und \"2.4 Geofencing\" auf PDF-Seite 15.",
+        "Die Empfehlung, Geofencing beim Abstellen in Gebäuden zu deaktivieren, steht ohne Hinweis darauf, dass dabei die Diebstahlmeldung entfällt, und ohne Hinweis, dass sie wieder einzuschalten ist. PDF-Seite 15 ergänzt später, dass Geofencing bei geschärfter WiPro automatisch aktiv ist - was dieser Empfehlung entgegensteht, wenn das Fahrzeug geschärft abgestellt wird. Der Vorrang zwischen beidem ist nicht geregelt."
+      ],
+      "terminology_findings": [
+        "\"Status LED\" ohne Bindestrich; projektkonform wäre \"Status-LED\".",
+        "\"Geofence Funktion\" - weder \"Geofencing\" noch durchgekoppelt.",
+        "\"GPS Diagnose\" ohne Bindestrich, \"GPS-Signal\" und \"GPS-Antenne\" mit.",
+        "\"GSM Modul\" ohne Bindestrich; das Gerät heißt sonst durchgehend Pro-finder. \"die Nummer des GSM Moduls\" ist die einzige Stelle dieser Seiten, an der das Gerät als GSM-Modul bezeichnet wird."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Farben der drei Balken und die Strichart (durchgezogen gegen gestrichelt) bei 150 dpi eindeutig. Textebene gegen das Seitenbild gehalten; die Zustandszeilen wurden dabei einzeln abgeglichen, weil die Textebene sie anders umbricht als das Bild. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 8,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2139,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1760,
+      "content_type": "warnhinweise",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 6\". Beginn von Abschnitt 1.8 \"Programmieren der Zielrufnummern\". Einleitungssatz: vor der Programmierung muß eine freigeschaltete SIM-Karte im Micro-SIM-Format eingesetzt werden. Linke Seitenhälfte: rosa hinterlegter Kasten mit sechs Anforderungen an die Karte, jede mit einem eigenen Warndreieck - PIN vor dem Einsetzen auf 0000 ändern, Pinabfrage muß aktiviert sein, alle Rufumleitungen und die Mailbox ausschalten, Komfortfunktionen deaktivieren, beim Einsetzen muß Pro-finder spannungsfrei sein, Karte für Roaming freischalten falls Auslandsnutzung. Rechte Seitenhälfte: gelbes ESD-Warnsymbol und ein Foto des geöffneten Geräts mit eingesetzter SIM-Karte, Platine, Stabantenne und Anschlussleiste. Untere Seitenhälfte: drei Textblöcke \"Verwendete SIM-Karte:\" (Empfehlung t-mobile oder Vodafone, pre-paid möglich, Guthaben soll ohne Entnahme der Karte aufladbar sein), \"Speichern der Nummer des Pro-finders:\" (Adressbucheintrag, Empfehlung des Namens AAlarm, Speicherung mit Landesvorwahl) und \"Steuern per SMS oder Anruf:\" (jede vom Gerät versendete SMS verursacht Kosten; jede Steuerung zieht eine Status-SMS nach sich).",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 6",
+        "1.8 Programmieren der Zielrufnummern",
+        "Verwendete SIM-Karte:",
+        "Speichern der Nummer des Pro-finders:",
+        "Steuern per SMS oder Anruf:"
+      ],
+      "technical_values": [
+        {
+          "value": "SIM-Karte im Micro-SIM-Format, freigeschaltet",
+          "context": "Voraussetzung der Programmierung; im Original als \"(Micro -SIM Format)\" mit überzähligem Leerzeichen vor dem Bindestrich gesetzt",
+          "safety_critical": true
+        },
+        {
+          "value": "PIN der Karte vor dem Einsetzen auf 0000 ändern, Pinabfrage muß aktiviert bleiben",
+          "context": "Erste und dritte Anforderung des Warnkastens. Die Kombination ist ungewöhnlich - die Abfrage bleibt aktiv, die Geheimzahl wird auf einen festen, herstellerseitig vorgegebenen Wert gesetzt. Die Anzeige \"Blinkt rot/grün: PIN ist nicht 0000\" auf PDF-Seite 11 bestätigt, dass das Gerät genau diesen Wert erwartet. Herstellervorgabe, keine Kundendaten; für den technischen und sicherheitlichen Review vorzulegen",
+          "safety_critical": true
+        },
+        {
+          "value": "Beim Einsetzen der Karte muß Pro-finder spannungsfrei sein",
+          "context": "Fünfte Anforderung des Warnkastens; entspricht der Vorgabe für den GPS-Stecker auf PDF-Seite 6",
+          "safety_critical": true
+        },
+        {
+          "value": "Alle Rufumleitungen, Mailbox und Komfortfunktionen ausschalten",
+          "context": "Zweite und vierte Anforderung; genannt werden beispielhaft Rückruf bei besetzt und Erinnerungen per SMS",
+          "safety_critical": true
+        },
+        {
+          "value": "Karte für Roaming freischalten, wenn Auslandsnutzung vorgesehen ist",
+          "context": "Sechste Anforderung des Warnkastens",
+          "safety_critical": false
+        },
+        {
+          "value": "Empfohlene Mobilfunkanbieter: t-mobile oder Vodafone",
+          "context": "Abschnitt \"Verwendete SIM-Karte\". Dieselbe namentliche Empfehlung steht im deutschen Teil der Fassung ab SN-045, während die englische Fassung dort nur allgemein von einer M2M-Karte spricht und die französische DOMOTEC nennt (DSC-027). Die Empfehlung ist damit generationsübergreifend deutsch-spezifisch",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Rosa hinterlegter Kasten mit sechs Anforderungen, links vor jeder Anforderung ein Warndreieck mit Ausrufezeichen (grauer Umriss, ungefüllt)",
+          "has_text_equivalent": false,
+          "relies_on": "Hintergrundfarbe und Piktogramm. Der Text der sechs Anforderungen steht in der Textebene, ihre Eigenschaft als Warnung dagegen nicht"
+        },
+        {
+          "description": "Gelbes quadratisches Warnsymbol oben rechts: schwarzes Dreieck mit einer Hand, die ein Bauteil berührt - das übliche Zeichen für elektrostatisch gefährdete Bauelemente",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Piktogramm. Auf der gesamten Seite steht kein Wort zu elektrostatischer Entladung; das Symbol ist die einzige Trägerin dieser Warnung und kommt in der Textebene nicht vor"
+        },
+        {
+          "description": "Foto des geöffneten Geräts von oben: schwarzes Gehäuseunterteil, grüne Platine mit aufgesteckter SIM-Karte im Halter, quadratisches GPS-Modul, schwarze Stabantenne mit goldfarbenem Schraubanschluss links, RJ-Buchse, runde Klinkenbuchse und weiße Steckverbinder an der Schmalseite, grüne runde Fläche (Status LED)",
+          "has_text_equivalent": false,
+          "relies_on": "eine rote Verbindungslinie vom Wort \"SIM-Karte\" im Einleitungssatz zur Kartenposition im Foto; ohne die Linie ist nicht erkennbar, wohin die Karte gehört. Die Einbaulage der Karte (Kontakte, Eckabschrägung) ist nur dem Foto zu entnehmen"
+        }
+      ],
+      "warnings_found": [
+        "\"Der PIN der verwendeten Karte muß vor dem Einsetzen auf 0000 geändert werden.\"",
+        "\"Die Pinabfrage muß aktiviert sein.\"",
+        "\"Alle Rufumleitungen und die Mailbox müssen ausgeschaltet sein.\"",
+        "\"Die Komfortfunktionen der Karte müssen deaktiviert sein. (Rückruf bei besetzt, Erinnerungen per SMS, etc.)\"",
+        "\"Beim Einsetzen der Karte muß Pro-finder spannungsfrei sein.\"",
+        "\"Die Karte muß für Roaming freigeschaltet sein, wenn sie auch im Ausland genutzt werden soll.\"",
+        "ESD-Warnsymbol ohne zugehörigen Text",
+        "\"Bei jeder SMS, die Pro-finder versendet, entstehen Ihnen Kosten\" - Kostenhinweis im Fließtext"
+      ],
+      "accessibility_issues": [
+        "Die sechs Anforderungen an die SIM-Karte sind ausschließlich durch Warndreiecke und einen rosa Hintergrund als Warnungen gekennzeichnet. In der Textebene stehen sie als sechs gewöhnliche Absätze ohne jedes Signalwort, ohne Piktogramm und ohne Hinweis auf die Einfärbung. Wer die Seite vorgelesen bekommt, erfährt nicht, dass es sich um zwingende Voraussetzungen handelt - und ein Verstoß führt hier unmittelbar zur Funktionsunfähigkeit des Geräts.",
+        "Das ESD-Warnsymbol ist die einzige Warnung vor elektrostatischer Entladung im gesamten geprüften Bereich und hat keinerlei Textentsprechung. Es ist ein reines Bild ohne Alternativtext; die Textebene enthält an dieser Stelle nichts.",
+        "Die Einbaulage der SIM-Karte ist nur dem Foto zu entnehmen. Der Text nennt weder Kontaktseite noch Ausrichtung; die rote Verbindungslinie vom Wort \"SIM-Karte\" zum Bild ist die einzige Verknüpfung.",
+        "Das Foto zeigt die Status LED als grüne Kreisfläche, obwohl das Gerät im abgebildeten Zustand nicht in Betrieb ist. Die Farbe ist gestalterisch gesetzt und kann als Zustandsanzeige fehlgedeutet werden.",
+        "Die drei Zwischentitel der unteren Seitenhälfte sind allein durch Fettschrift ausgezeichnet und ergeben keine Strukturebene.",
+        "Der Einleitungssatz endet ohne Punkt (\"in das Modul eingesetzt werden\"), sodass beim Vorlesen keine Satzgrenze erkennbar ist und der folgende Kasteninhalt anschließt.",
+        "Die Empfehlung, den Adressbucheintrag \"AAlarm\" zu nennen, damit er an erster Stelle steht, setzt eine alphabetisch sortierte Kontaktliste voraus. Für Nutzende von Sprachsteuerung oder Screenreader-Kontaktsuche ist ein doppeltes A am Wortanfang eher hinderlich; eine Begründung oder Alternative nennt die Quelle nicht.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 6\", tatsächlich PDF-Seite 8 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "\"(Micro -SIM Format)\" - überzähliges Leerzeichen vor dem Bindestrich; korrekt wäre \"Micro-SIM-Format\".",
+        "Der Einleitungssatz \"... in das Modul eingesetzt werden\" endet ohne Satzzeichen.",
+        "\"Der PIN\" (maskulin) hier gegen \"Die Pinabfrage\" zwei Zeilen darunter und \"PIN ist nicht 0000\" auf PDF-Seite 11; Genus und Schreibweise wechseln innerhalb weniger Zeilen.",
+        "Die Anweisung, die PIN auf 0000 zu ändern und zugleich die Pinabfrage aktiviert zu lassen, ist sicherheitlich erklärungsbedürftig und wird nirgends begründet. Der Zusammenhang wird erst durch die LED-Bedeutung auf PDF-Seite 11 nachvollziehbar. Für den technischen Review vorgemerkt.",
+        "\"pre-paid\" hier gegen \"Pre-paid\" auf PDF-Seite 10 und \"Prepaidkarte\" auf PDF-Seite 9 - drei Schreibweisen desselben Begriffs auf drei aufeinanderfolgenden Seiten.",
+        "\"Speichern der Nummer des Pro-finders\" verwendet den Produktnamen im Genitiv mit s, während der Fließtext sonst \"des Pro-finder\" ohne Genitiv-s setzt (PDF-Seiten 14, 15, 16).",
+        "Versionsunterschied: Die namentliche Anbieterempfehlung t-mobile/Vodafone entspricht dem deutschen Teil der Fassung ab SN-045 und bestätigt DSC-027 als generationsübergreifendes Muster - die deutsche Fassung nennt Anbieter namentlich, andere Sprachfassungen nicht."
+      ],
+      "terminology_findings": [
+        "\"SIM-Karte\" hier durchgekoppelt, auf PDF-Seite 11 dagegen \"SIM Karte\" ohne Bindestrich und auf PDF-Seite 12 \"Simkarte\".",
+        "\"Pro-finder\" projektkonform.",
+        "\"t-mobile\" klein geschrieben, \"Vodafone\" groß - Eigenschreibweisen der Anbieter, unverändert übernommen.",
+        "\"Micro -SIM Format\" - Schreibweise fehlerhaft, siehe Widersprüche.",
+        "\"Komfortfunktionen\" wird nicht definiert, sondern nur mit zwei Beispielen belegt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Das ESD-Symbol und die sechs Warndreiecke sind bei 150 dpi eindeutig identifizierbar. Die Textebene enthält weder das ESD-Symbol noch die Warndreiecke noch die Einfärbung des Kastens - der Vergleich Text gegen Bild ist hier der eigentliche Befund. Keine Rufnummer und keine Kundendaten übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 9,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1863,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1585,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 7\". Fortsetzung von Abschnitt 1.8 \"Programmieren der Zielrufnummern\". Ablauf nach dem Einlegen der Karte: Spannungsversorgung anschließen, Status LED blinkt kurz rot und danach gelb/grün, dann die Programmier-SMS an die Nummer des Pro-finder senden; nach erfolgreicher Speicherung blinkt die LED grün und eine Status-SMS geht an den Absender. Bis zu 10 Zielrufnummern können gespeichert werden. Es folgt eine vierteilige Begriffsliste in zweispaltigem Aufbau: Masternummer (die beim Speichern an erster Stelle stehende Nummer, kann jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren), Autorisierte Nummern (dürfen die Ausgänge per SMS steuern und Statusberichte anfordern), Nicht autorisierte Nummern (kein Zugriff auf Funktionen, erhalten nur Statusmeldungen), Smartphone Nummern (bei der Programmierung mit einem s versehen, erhalten die Fahrzeugposition als Link). Abschließend ein Hinweis auf Abfragecodes für das Prepaid-Guthaben und ein Link auf die FAQ-Seite des Herstellers. Die Seitenmitte trägt eine große, vollständig leere Fläche.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 7",
+        "1.8 Programmieren der Zielrufnummern",
+        "Masternummer:",
+        "Autorisierte Nummern:",
+        "Nicht autorisierte Nummern:",
+        "Smartphone Nummern:"
+      ],
+      "technical_values": [
+        {
+          "value": "Bis zu 10 Zielrufnummern",
+          "context": "Speicherkapazität des Zielrufnummernspeichers; dieselbe Zahl nennt die Programmier-SMS auf PDF-Seite 10",
+          "safety_critical": true
+        },
+        {
+          "value": "Masternummer = die beim Speichern an erster Stelle stehende Zielrufnummer",
+          "context": "Einzige Definition der Masternummer im geprüften Bereich. Sie kann ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren - also den gesamten Speicher aus der Ferne überschreiben (bestätigt auf PDF-Seite 11)",
+          "safety_critical": true
+        },
+        {
+          "value": "Autorisierte Nummern dürfen die Ausgänge per SMS steuern und Statusberichte anfordern",
+          "context": "Berechtigungsstufe; wie eine Nummer diese Stufe erhält, sagt der Fließtext nicht",
+          "safety_critical": true
+        },
+        {
+          "value": "Nicht autorisierte Nummern erhalten nur Statusmeldungen",
+          "context": "Berechtigungsstufe ohne Steuerrechte; die Kennzeichnung ist nur den Beispielen auf PDF-Seite 10 zu entnehmen",
+          "safety_critical": true
+        },
+        {
+          "value": "Smartphone-Nummern werden bei der Programmierung mit einem s versehen",
+          "context": "Kleines, fett gesetztes s im Fließtext. Die Strukturabbildung auf PDF-Seite 10 zeigt dagegen ein großes S. Erhalten die Fahrzeugposition als anklickbaren Link",
+          "safety_critical": true
+        },
+        {
+          "value": "Status LED blinkt kurz rot, danach gelb/grün, nach erfolgreicher Programmierung grün",
+          "context": "Rückmeldefolge beim Anschließen und Programmieren; die Bedeutungen sind erst auf PDF-Seite 11 aufgeschlüsselt",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Berechtigungsstufen sind der sicherheitskritische Kern der Seite, und der Fließtext sagt an keiner Stelle, wie eine Nummer autorisiert oder nicht autorisiert wird. Er beschreibt nur, was die jeweilige Stufe darf. Die tatsächliche Kennzeichnung ist ausschließlich den Beispielen der Tabelle auf PDF-Seite 10 zu entnehmen, wo autorisierte Nummern mit einem vorangestellten Pluszeichen und nicht autorisierte mit einem vorangestellten Minuszeichen erscheinen. Wer die Tabelle nicht sieht oder ihre Zeichen nicht auflösen kann, kann die Berechtigung nicht setzen - und ein falsches Zeichen kippt sie. Für die Generation ab SN-045 ist derselbe Sachverhalt als DSC-044 und BLK-006 verzeichnet; er gilt damit für beide Generationen.",
+        "Die Kennzeichnung der Smartphone-Nummern hängt an einem einzelnen Buchstaben, dessen Bedeutung allein durch Fettschrift getragen wird: \"die bei der Programmierung mit einem s versehen wurden\". In der Textebene ist die Fettschrift nicht enthalten, das s steht dort als gewöhnlicher Buchstabe zwischen zwei Wörtern und ist als Befehlszeichen nicht mehr erkennbar. Bei 500 dpi bestätigt.",
+        "Die vierteilige Begriffsliste ist als zweispaltiges Layout mit Tabulatoren gesetzt, nicht als Definitionsliste. In der Textebene stehen Begriff und Erklärung durch Tabulatoren und Zeilenumbrüche getrennt; die Zuordnung ergibt sich nur aus der Reihenfolge.",
+        "Die Seitenmitte enthält eine leere Fläche von rund einem Neuntel der Seitenhöhe. Die maschinelle Prüfung der Seite weist dort weder ein eingebettetes Bild noch ein Zeichenobjekt aus - die Fläche ist tatsächlich leer. Auf PDF-Seite 10 verweist der Text zweimal auf eine \"Tabelle Abfragecodes\", einmal ausdrücklich \"auf der vorherigen Seite\". Eine solche Tabelle steht auf dieser Seite nicht. Die Leerfläche liegt genau dort, wo sie stehen müsste.",
+        "Die Internetadresse ist als vollständige URL ausgeschrieben und dabei über keine Verknüpfung hinterlegt; die maschinelle Prüfung meldet für diese Seite keine Verlinkung. Die Adresse muss also abgetippt werden, ist unverschlüsselt (http) und enthält vier durch Schrägstriche getrennte Pfadsegmente.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 7\", tatsächlich PDF-Seite 9 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Der Fließtext erklärt die Berechtigungsstufen, nicht aber ihre Kennzeichnung. Autorisierte und nicht autorisierte Nummern unterscheiden sich in der Quelle allein durch ein Vorzeichen, das ausschließlich in den Beispielen der Tabelle auf PDF-Seite 10 vorkommt und dort nirgends erläutert wird. Das ist derselbe Befund, der für die Generation ab SN-045 als DSC-044 und BLK-006 geführt wird - er ist damit nicht auf die neuere Generation beschränkt.",
+        "Widerspruch in der Schreibung des Smartphone-Kennzeichens: hier ein kleines fettes \"s\", auf PDF-Seite 10 in der Strukturabbildung und im erläuternden roten Text ein großes \"S\" (\"Verwendung des Zeichens \"S\"\"). Ob das Gerät zwischen Groß- und Kleinschreibung unterscheidet, sagt die Quelle nicht.",
+        "\"denUnterlagen\" - fehlendes Leerzeichen zwischen den beiden Wörtern, bei 150 dpi bestätigt.",
+        "Der Text verweist auf Abfragecodes \"denUnterlagen Ihrer Prepaidkarte\" und auf einen Link, während PDF-Seite 10 zweimal eine \"Tabelle Abfragecodes\" nennt, einmal davon \"auf der vorherigen Seite\" - also auf dieser Seite. Diese Tabelle existiert hier nicht. Entweder ist der Verweis falsch oder die Tabelle wurde entfernt; die leere Fläche in der Seitenmitte spricht für das Zweite.",
+        "\"Prepaidkarte\" hier gegen \"pre-paid Karte\" auf PDF-Seite 8 und \"Pre-paid Karten\" auf PDF-Seite 10.",
+        "\"Smartphone Nummern\" und \"Smartphonenutzer\" (PDF-Seite 13) neben \"Smartphone Nutzer\" (PDF-Seite 15) - dieselbe Zusammensetzung dreimal verschieden gesetzt.",
+        "Die Masternummer darf laut dieser Seite jederzeit und ohne physischen Zugriff auf das Gerät den gesamten Zielrufnummernspeicher neu programmieren. Eine Rückfallebene, eine Bestätigung oder eine Begrenzung nennt die Quelle nicht. Für den sicherheitstechnischen Review vorgemerkt."
+      ],
+      "terminology_findings": [
+        "\"Status LED\" ohne Bindestrich; projektkonform wäre \"Status-LED\".",
+        "\"Programmier SMS\" durchgehend ohne Bindestrich, ebenso \"Status SMS\".",
+        "\"Zielrufnummern\" projektkonform und durchgehend verwendet.",
+        "\"des Pro-finder\" ohne Genitiv-s, während PDF-Seite 8 \"des Pro-finders\" schreibt.",
+        "Die Internetadresse nennt die Herstellerdomain thitronik-automotive.de; die Schreibweise THITRONIK erscheint dort klein. Als Quellenangabe unverändert übernommen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; das fett gesetzte s bei 500 dpi nachgerendert, weil bei 150 dpi nicht sicher zu entscheiden war, ob die Auszeichnung Fettschrift oder Kursive ist. Die Leerfläche in der Seitenmitte wurde zusätzlich maschinell geprüft: die Seite enthält kein eingebettetes Bild und genau ein Zeichenobjekt (die Kopfzeile), dort steht also nichts Unsichtbares. Keine Rufnummer übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 10,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2173,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1760,
+      "content_type": "tabelle",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 8\". Fortsetzung von Abschnitt 1.8. Obere Seitenhälfte: eine beschriftete Strukturabbildung einer beispielhaften Programmier-SMS, bei der alle Zielrufnummern autorisiert sind. Die Bestandteile sind einzeln unterstrichen und über Führungslinien mit Erläuterungen verbunden - Abfragecode für das Restguthaben, P für pre-paid, das Pluszeichen als Beginn der Landesvorwahl, das Zeichen S für Smartphone sowie erste, zweite und dritte Zielrufnummer. Ausdrücklicher Hinweis, dass die Leerzeichen der Abbildung nur der Darstellung dienen und in der SMS nicht vorkommen dürfen. Untere Seitenhälfte: dreispaltige Tabelle \"Beispiele verschiedener Programmier SMS\" mit den Zeilen \"einem Empfänger (Masternummer)\", \"Masternummer + einer autorisierten Nummer\" und \"Masternummer als Smartphone Nummer + einer nicht autorisierten Nummer\", je einmal für Vertragskarte und für Pre-paid-Karte. Schlussabsatz zum Vorgehen bei mehr Empfängern.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 8",
+        "1.8 Programmieren der Zielrufnummern",
+        "Beispiele verschiedener Programmier SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "Autorisierte Zielrufnummern werden in der Programmier-SMS mit vorangestelltem Pluszeichen, nicht autorisierte mit vorangestelltem Minuszeichen aneinandergereiht",
+          "context": "Diese Regel steht in keinem Satz der Quelle. Sie ist ausschließlich aus dem Vergleich der zweiten und dritten Tabellenzeile zu erschließen: die Zeile mit der autorisierten Nummer trennt beide Nummern durch ein Pluszeichen, die Zeile mit der nicht autorisierten durch ein Minuszeichen. Der gesamte übrige Seiteninhalt erwähnt das Zeichen nicht. Sicherheitskritisch, weil ein falsches Zeichen die Steuerberechtigung kippt. Entspricht DSC-044 und BLK-006 der Generation ab SN-045",
+          "safety_critical": true
+        },
+        {
+          "value": "Zeichen S vor der Landesvorwahl kennzeichnet eine Smartphone-Nummer",
+          "context": "In der Strukturabbildung und im roten Erläuterungstext als großes S gesetzt, auf PDF-Seite 9 dagegen als kleines fettes s. Bewirkt die Übertragung der Fahrzeugposition als anklickbaren Link",
+          "safety_critical": true
+        },
+        {
+          "value": "P kennzeichnet eine pre-paid Karte",
+          "context": "Ohne P wird das Restguthaben der Karte nicht übertragen",
+          "safety_critical": false
+        },
+        {
+          "value": "Abfragecode für das Restguthaben, im Beispiel als Sternzeichen mit Ziffernfolge und Rautezeichen dargestellt",
+          "context": "Providerabhängig; die Quelle nennt eine zweite mögliche Ziffernfolge. Bei Vertragskarten darf laut roter Warnung keinesfalls ein Abfragecode eingegeben werden, da dies zu Fehlfunktionen führt",
+          "safety_critical": true
+        },
+        {
+          "value": "Landesvorwahl mit + beginnend",
+          "context": "Strukturabbildung; das Beispiel nennt die deutsche Vorwahl",
+          "safety_critical": false
+        },
+        {
+          "value": "Bis zu 10 Zielrufnummern sind möglich",
+          "context": "Einleitungssatz der Strukturabbildung; deckt sich mit PDF-Seite 9",
+          "safety_critical": false
+        },
+        {
+          "value": "In der SMS dürfen keine Leerzeichen verwendet werden",
+          "context": "Die Leerzeichen der Abbildung dienen nur der Darstellung. Bei mehr Empfängern ist fortlaufend ohne Leerzeichen einzugeben",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        "\"Beispiele verschiedener Programmier SMS\" (dreispaltig, Kopfzeile plus 3 Datenzeilen). Spaltenköpfe: \"Programmier- SMS bei\" / \"Inhalt der Programmier SMS bei einer Vertragskarte in Pro-finder\" / \"Inhalt der Programmier SMS bei einer Pre-paid Karte in Pro-finder\". Zeilenköpfe: \"einem Empfänger (Masternummer)\" / \"Masternummer + einer autorisierten Nummer\" / \"Masternummer als Smartphone Nummer + einer nicht autorisierten Nummer\". Die Zellen enthalten Beispiel-Rufnummern und werden bewusst nicht wiedergegeben (Projektauftrag: keine Rufnummern aus Beispiel-SMS). Erfasst ist die strukturelle Aussage: Zeile 1 eine Nummer; Zeile 2 zwei durch ein Pluszeichen verbundene Nummern; Zeile 3 eine mit dem Zeichen S gekennzeichnete Masternummer und eine durch ein Minuszeichen angeschlossene nicht autorisierte Nummer. Die Pre-paid-Spalte stellt jeder Zeile den Abfragecode und das Zeichen P voran."
+      ],
+      "figures": [
+        {
+          "description": "Strukturabbildung einer beispielhaften Programmier-SMS: eine Zeile mit sieben unterstrichenen Bestandteilen, von denen jeder über eine senkrechte und eine waagerechte Führungslinie mit einem Erläuterungsblock in der unteren Bildhälfte verbunden ist. Zwei Bestandteile und ihre Führungslinien sind rot, die übrigen schwarz",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich Führungslinien und Farbe. Welche Erläuterung zu welchem Bestandteil gehört, ergibt sich nur aus dem Linienverlauf; die Textebene gibt die Erläuterungen in einer Reihenfolge aus, die dem Linienverlauf nicht folgt"
+        }
+      ],
+      "warnings_found": [
+        "\"Bei Vertragskarten darf keinesfalls ein Abfragecode eingegeben werden, da dies zu Fehlfunktionen führt.\" - rot und fett, ohne Signalwort",
+        "\"Nur verwenden, wenn das Endgerät ein \"Smartphone\" ist.\" - rot und fett, ohne Signalwort",
+        "\"In der SMS dürfen keine Leerzeichen verwendet werden.\" - schwarz im Fließtext"
+      ],
+      "accessibility_issues": [
+        "Das Sternzeichen des Abfragecodes fehlt in der Textebene vollständig. Im Seitenbild steht an beiden Stellen ein sechsstrahliges Sternsymbol vor der Ziffernfolge; die Textebene gibt an der ersten Stelle stattdessen eine Reihe von Leerzeichen aus und an der zweiten Stelle gar nichts. Wer die Seite vorgelesen bekommt oder den Text kopiert, erhält einen Abfragecode ohne sein erstes Zeichen - also einen Code, der nicht funktioniert. Bei 700 dpi bestätigt: das Zeichen ist im Bild vorhanden und in der Textebene nicht.",
+        "Die Strukturabbildung transportiert ihre gesamte Information über Führungslinien. Die Textebene gibt zuerst die Beispielzeile aus, danach die Erläuterungen in der Reihenfolge dritte Zielrufnummer, zweite Zielrufnummer, erste Zielrufnummer, Smartphone-Zeichen, Landesvorwahl, P, Abfragecode - also von hinten nach vorn und nicht in der Reihenfolge der Bestandteile. Ohne die Linien ist keine Zuordnung möglich.",
+        "Die Lesereihenfolge der Seite ist grob gestört: die Textebene beginnt mit dem vollständigen Inhalt der Tabelle aus der unteren Seitenhälfte, erst danach folgen Kopfzeile, Überschrift und der einleitende Text der oberen Seitenhälfte. Wer die Seite linear vorgelesen bekommt, hört die Beispiele, bevor er erfährt, wovon sie Beispiele sind.",
+        "Die beiden wichtigsten Warnungen der Seite sind allein durch rote Fettschrift gekennzeichnet und in der Textebene von gewöhnlichem Text nicht zu unterscheiden. Eine davon warnt vor Fehlfunktionen des Geräts.",
+        "In der rechten Tabellenspalte wird eine Beispielnummer mitten in der Ziffernfolge umbrochen; die Fortsetzung steht ohne Trennzeichen in der Folgezeile. In der Textebene erscheint der Umbruch als Zeilenwechsel innerhalb der Ziffernfolge. Wer die Zeichenfolge abtippt, kann den Umbruch für ein Leerzeichen halten - was der Text an anderer Stelle ausdrücklich verbietet.",
+        "Der Tabellenkopf trennt das Wort \"Programmier- SMS\" mit Bindestrich und Leerzeichen; beim Vorlesen zerfällt der Begriff.",
+        "Die Unterstreichung der sieben Bestandteile in der Beispielzeile ist zugleich Gliederungsmittel und Anker der Führungslinien. Unterstreichung ergibt keine Strukturebene und ist von einer Verknüpfung nicht zu unterscheiden.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 8\", tatsächlich PDF-Seite 10 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Das Sternzeichen des Abfragecodes steht im Seitenbild, fehlt aber in der Textebene. Damit weichen Bild und Textebene desselben Dokuments in einem funktionsrelevanten Zeichen voneinander ab. Bei 700 dpi bestätigt.",
+        "Die Kennzeichnung autorisierter und nicht autorisierter Zielrufnummern durch ein vorangestelltes Plus- beziehungsweise Minuszeichen kommt ausschließlich in den Tabellenbeispielen vor und wird an keiner Stelle der Quelle ausgeschrieben. Deckungsgleich mit DSC-044 und BLK-006 der Generation ab SN-045.",
+        "Groß- und Kleinschreibung des Smartphone-Kennzeichens widersprechen sich: hier durchgehend großes \"S\", auf PDF-Seite 9 kleines fettes \"s\". Ob das Gerät die Schreibung unterscheidet, ist ungeklärt.",
+        "Der Verweis \"in der Tabelle Abfragecodes auf der vorherigen Seite\" geht ins Leere: PDF-Seite 9 enthält keine solche Tabelle, sondern nur einen Verweis auf eine Internetseite. Der Schlussabsatz derselben Seite verweist ein zweites Mal auf \"die Tabelle Abfragecodes\". Eine Tabelle dieses Namens existiert im geprüften Bereich nicht.",
+        "Der Verweis \"(siehe 2.5)\" für die Umwandlung der Position in einen anklickbaren Link ist falsch. Abschnitt 2.5 trägt auf der selbst geprüften PDF-Seite 15 die Überschrift \"Statusbericht anfordern\"; der anklickbare Link wird in Abschnitt 2.6 \"Positionsabfrage mit Smartphone\" beschrieben.",
+        "\"Link  (siehe 2.5)\" - zwei Leerzeichen vor der Klammer.",
+        "\"Programmier- SMS bei\" im Tabellenkopf mit Bindestrich und Leerzeichen; sonst durchgehend \"Programmier SMS\" ohne Bindestrich.",
+        "\"Pre-paid Karte\" im Tabellenkopf groß, \"pre-paid Karte\" im Fließtext derselben Seite klein.",
+        "Die drei Beispiel-Rufnummern der Strukturabbildung sind uneinheitlich gruppiert: die erste ohne Gruppierung nach der Vorwahl, die zweite mit einer Gruppe, die dritte mit zwei Gruppen. Derselbe Sachverhalt, drei Darstellungen. Die Nummern selbst werden hier nicht wiedergegeben.",
+        "Die Beispielzeile führt die erste Zielrufnummer ohne führendes Pluszeichen, weil dieses als eigener Bestandteil herausgelöst und beschriftet ist. In der Tabelle darunter steht dasselbe Pluszeichen dagegen unmittelbar an der Nummer. Die Abbildung zerlegt also, was die Tabelle zusammenschreibt, ohne dass der Unterschied erklärt wird."
+      ],
+      "terminology_findings": [
+        "\"Programmier SMS\" ohne Bindestrich, im Tabellenkopf abweichend \"Programmier- SMS\".",
+        "\"Vertragskarte\" gegen \"Pre-paid Karte\" als Gegensatzpaar eingeführt, aber nirgends definiert.",
+        "\"Smartphone\" in deutschen Anführungszeichen gesetzt, an anderer Stelle desselben Dokuments ohne.",
+        "\"Restguthaben\" hier, \"Guthaben\" auf PDF-Seite 8, \"Kontostand\" in den Beispielbildern auf PDF-Seite 13 und \"Aktuelles Guthaben\" in denen auf PDF-Seite 12 - vier Benennungen desselben Werts."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; die Beispielzeile der Strukturabbildung bei 700 dpi nachgerendert, weil bei 150 dpi nicht zu entscheiden war, ob dem Abfragecode ein Sternzeichen vorangestellt ist. Das Zeichen ist im Bild vorhanden, in der Textebene nicht - dieser Abgleich ist der Hauptbefund der Seite. Beispiel-Rufnummern wurden bewusst nicht in den Record übernommen; erfasst ist nur ihre Struktur. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 11,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1383,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1139,
+      "content_type": "tabelle",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 9\". Obere Seitenhälfte: Abschnitt 1.9 \"Löschen der Zielrufnummern\" mit der unmittelbar unter der Überschrift stehenden Bedingung, dass die SIM-Karte im Gerät sein muß. Vier nummernlose Handlungsschritte - Hauptkabelbaum abziehen, Betriebsartenschalter auf Position E, Hauptkabelbaum wieder einstecken und warten, bis die Status LED gelb/grün blinkt, Schalter zurück in die Ausgangsposition. Danach ist der Speicher leer. Zusatz in roter Schrift: der Speicher kann auch ohne Betätigung des Betriebsartenschalters durch die Masternummer überschrieben werden, indem diese eine Programmier-SMS nach Abschnitt 1.8 sendet. Untere Seitenhälfte: Abschnitt 1.10 \"Anzeige der Betriebszustände (Status LED)\" mit neun Zuständen, jeder als Textzeile mit nebenstehender Bedeutung und darunter liegendem Farbbalken. Abschließend fett: nach abgeschlossener Installation und Programmierung blinkt die Status LED im Normalbetrieb grün.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 9",
+        "1.9 Löschen der Zielrufnummern",
+        "!! SIM Karte muss im Gerät sein !!",
+        "1.10 Anzeige der Betriebszustände (Status LED)"
+      ],
+      "technical_values": [
+        {
+          "value": "Betriebsartenschalter Position E = Zielrufnummernspeicher löschen",
+          "context": "Löschvorgang nur bei eingesetzter SIM-Karte und nur über das Abziehen und Wiedereinstecken des Hauptkabelbaums. Position F ist die GPS-Diagnose (PDF-Seite 7)",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt rot/gelb: Netzsuche + keine Zielrufnummern vorhanden",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt rot: Netzsuche / kein GSM-Empfang",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt grün: Eingebucht (Empfang) + Zielrufnummern vorhanden",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10; laut Schlusssatz der Normalzustand nach abgeschlossener Installation",
+          "safety_critical": true
+        },
+        {
+          "value": "Leuchtet rot: SIM-Karte fehlt bzw. ist defekt",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10. In Schalterstellung F bedeutet dasselbe Dauerlicht Rot dagegen \"GPS nicht angeschlossen\" (PDF-Seite 7)",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt rot/grün: PIN ist nicht 0000",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10; bestätigt die Vorgabe von PDF-Seite 8, dass das Gerät genau diese PIN erwartet",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt gelb: Zielrufnummernspeicher ist leer",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10",
+          "safety_critical": true
+        },
+        {
+          "value": "Blinkt gelb/grün: Keine Zielrufnummern vorhanden + Eingebucht",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10; laut PDF-Seite 9 der Zustand unmittelbar vor der Programmierung",
+          "safety_critical": true
+        },
+        {
+          "value": "Leuchtet grün: Pro-finder versendet eine SMS",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10",
+          "safety_critical": true
+        },
+        {
+          "value": "Leuchtet gelb: Verbindungsaufbau mit Modem",
+          "context": "Status-LED im Normalbetrieb, Abschnitt 1.10",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        "LED-Diagnoseliste zu Abschnitt 1.10 \"Anzeige der Betriebszustände (Status LED)\" (zweispaltig, 9 Zeilen, im Seitenbild ohne Linien gesetzt und je Zeile mit einem darunterliegenden Farbbalken): Blinkt rot/gelb = Netzsuche + keine Zielrufnummern vorhanden / Blinkt rot = Netzsuche, kein GSM-Empfang / Blinkt grün = Eingebucht (Empfang) + Zielrufnummern vorhanden / Leuchtet rot = SIM-Karte fehlt bzw. ist defekt / Blinkt rot/grün = PIN ist nicht 0000 / Blinkt gelb = Zielrufnummernspeicher ist leer / Blinkt gelb/grün = Keine Zielrufnummern vorhanden + Eingebucht / Leuchtet grün = Pro-finder versendet eine SMS / Leuchtet gelb = Verbindungsaufbau mit Modem."
+      ],
+      "figures": [
+        {
+          "description": "Neun waagerechte Farbbalken, je einer unter jeder Zustandszeile. Gestrichelte Balken für die sechs Blinkzustände, durchgezogene für die drei Dauerlichtzustände; die Zweifarbzustände wechseln innerhalb des Balkens die Farbe",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe und Strichart. Die Farbangabe steht auch im Text der jeweiligen Zeile, der Balken doppelt sie"
+        },
+        {
+          "description": "Fünf Zeigehand-Piktogramme vor den Handlungsabsätzen und ein nach unten weisendes Pfeil-Piktogramm vor dem Ergebnisabsatz in Abschnitt 1.9",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; keines der Piktogramme kommt in der Textebene vor"
+        }
+      ],
+      "warnings_found": [
+        "\"!! SIM Karte muss im Gerät sein !!\" - unmittelbar unter der Abschnittsüberschrift, allein durch Fettschrift und je zwei Ausrufezeichen als Bedingung gekennzeichnet",
+        "\"Der Speicher kann auch ohne Betätigung des Betriebsartenschalters durch die Masternummer überschrieben werden.\" - rot"
+      ],
+      "accessibility_issues": [
+        "Der Abschnitt 1.10 ist die vollständige Diagnosetabelle des Geräts und zugleich die dichteste Farbbarriere des geprüften Bereichs: neun Zustände, die sich in drei Gruppen gleicher Strichart aufteilen. Innerhalb jeder Gruppe ist die Farbe das einzige unterscheidende Merkmal. Bei den Blinkzuständen sind das sechs Zustände - rot/gelb, rot, grün, rot/grün, gelb, gelb/grün -, bei den Dauerlichtzuständen drei - rot, grün, gelb. Wer Rot, Gelb und Grün nicht sicher unterscheidet, kann neun Gerätezustände auf drei reduzieren und weder \"kein GSM-Empfang\" von \"alles in Ordnung\" noch \"SIM-Karte defekt\" von \"Gerät versendet eine SMS\" trennen. Ein farbunabhängiges Merkmal ist nicht dokumentiert. Die Barriere sitzt am Gerät und ist durch die HTML-Anleitung beschreibbar, aber nicht auflösbar.",
+        "Drei der neun Zustände sind Zweifarbwechsel (rot/gelb, rot/grün, gelb/grün). Sie setzen zusätzlich voraus, dass die Wechselfolge innerhalb eines Blinktakts wahrgenommen wird. Die Quelle sagt weder, in welcher Reihenfolge die Farben erscheinen, noch wie schnell.",
+        "Die Bedingung \"!! SIM Karte muss im Gerät sein !!\" ist in der Textebene eine gewöhnliche Zeile zwischen Überschrift und erstem Schritt. Ihre Eigenschaft als zwingende Voraussetzung wird allein durch Fettschrift und Ausrufezeichen getragen. Wird sie überlesen, läuft der gesamte vierschrittige Löschvorgang ins Leere.",
+        "Die vier Handlungsschritte des Löschvorgangs sind weder nummeriert noch als Liste ausgezeichnet. Sie sind allein durch je ein Zeigehand-Piktogramm und den Absatzabstand als Schrittfolge erkennbar; in der Textebene stehen sie als vier gleichrangige Absätze. Die Reihenfolge ist hier sicherheitsrelevant, weil der Schalter zwischen Abziehen und Wiedereinstecken des Kabelbaums umgestellt werden muß.",
+        "Der Hinweis auf das Überschreiben durch die Masternummer ist ausschließlich rot ausgezeichnet. Er beschreibt den einzigen Weg, den Speicher ohne physischen Zugriff auf das Gerät zu ändern - also den sicherheitlich heikelsten Vorgang der Seite.",
+        "Der dritte Schritt enthält mit \"(warten Sie bis die Status LED gelb/grün blinkt)\" eine Abbruchbedingung, die selbst wieder farbcodiert ist. Der Löschvorgang ist damit ohne Farbwahrnehmung nicht sicher durchführbar.",
+        "Die neun Farbbalken haben keine Textentsprechung. Sie doppeln die im Zeilentext genannte Farbe, tragen aber die Unterscheidung Blinken gegen Dauerlicht zusätzlich grafisch.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 9\", tatsächlich PDF-Seite 11 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "\"SIM Karte\" ohne Bindestrich in der Bedingungszeile, \"SIM-Karte\" mit Bindestrich in der Zustandsliste derselben Seite.",
+        "Dauerlicht Rot bedeutet in der Ausgangsstellung \"SIM-Karte fehlt bzw. ist defekt\", in Schalterstellung F dagegen \"GPS nicht angeschlossen\" (PDF-Seite 7). Dieselbe Anzeige, zwei Bedeutungen, und die maßgebliche Schalterstellung ist nicht rückgemeldet. Für die Generation ab SN-045 ist ein gleichartiger Befund als DSC-047 verzeichnet.",
+        "Die Liste nennt neun Zustände. Die Zustandsfolge beim Anschließen auf PDF-Seite 9 - kurz rot blinken, dann gelb/grün blinken - ist damit vereinbar, wird dort aber ohne Verweis auf Abschnitt 1.10 beschrieben, obwohl die Bedeutungen erst hier stehen.",
+        "Der Schlusssatz nennt grünes Blinken als Normalbetrieb. Die Zustandsliste führt \"Blinkt grün\" als \"Eingebucht (Empfang) + Zielrufnummern vorhanden\" - beides deckt sich, aber die Liste selbst kennzeichnet keinen Zustand als den regulären.",
+        "Der Löschweg über Position E setzt physischen Zugriff auf das Gerät voraus, der Weg über die Masternummer nicht. Welcher Vorrang gilt, wenn beide gleichzeitig ausgelöst werden, sagt die Quelle nicht.",
+        "\"Programmier SMS  neu programmiert\" - zwei Leerzeichen im Fließtext."
+      ],
+      "terminology_findings": [
+        "\"Status LED\" durchgehend ohne Bindestrich; projektkonform wäre \"Status-LED\".",
+        "\"SIM Karte\" und \"SIM-Karte\" auf derselben Seite.",
+        "\"Betriebsartenschalter\" hier, \"Programmwahlschalter\" auf PDF-Seite 12 - zwei Namen für dasselbe Bedienelement.",
+        "\"Zielrufnummernspeicher\" als zusammengesetzter Fachbegriff ohne Erläuterung.",
+        "\"Eingebucht\" ohne Erläuterung; gemeint ist die Anmeldung im Mobilfunknetz."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Die neun Farbbalken sind bei 150 dpi in Farbe und Strichart eindeutig; die Zuordnung Balken zu Zeile ergibt sich aus der Position unmittelbar unter der jeweiligen Zeile. Textebene vollständig gegen das Seitenbild gehalten - sie gibt die neun Zustände in derselben Reihenfolge wie das Bild aus, ohne die Balken. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 12,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1804,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1528,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 10\". Beginn von Kapitel 2 mit Abschnitt 2.1 \"Erklärung der empfangenen Meldungen\". Obere Seitenhälfte: eine fünfteilige Begriffsliste der Angaben, die eine SMS je nach Vorfall und Schalterstellung enthalten kann - GPS: Stand by, UTC, Pos, Geschwindigkeit und Kontostand, letzterer mit rotem Zusatz zur Begrenzung der Nachrichtenlänge auf 160 Zeichen. Untere Seitenhälfte: drei Meldungsarten in Fließtext, jeweils mit einer nebenstehenden Abbildung der zugehörigen Beispiel-SMS - Statusbericht (nur auf Anforderung oder je nach Betriebsart in Intervallen, enthält Position, Geschwindigkeit, Ausgangszustände, je nach Betriebsart die Spannungen U2-U5 und die Temperatur), Diebstahlmeldung (bei aktivierter WiPro, wenn sich das Fahrzeug weiter als ca. 1000 m vom ursprünglichen Standort entfernt; stiller Alarm ohne Blinker und Sirene, beides per SMS zuschaltbar; die Masternummer wird zusätzlich angerufen) und Spannungswarnung (nicht in Betriebsart B; unter 11,2 V dauerhaft Wechsel in Stand by, Rückkehr erst über 12,5 V).",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 10",
+        "2.1 Erklärung der empfangenen Meldungen",
+        "Statusbericht:",
+        "Diebstahlmeldung:",
+        "Spannungswarnung (nicht in Betriebsart B):"
+      ],
+      "technical_values": [
+        {
+          "value": "Diebstahlmeldung ab ca. 1000 m Entfernung vom ursprünglichen Standort",
+          "context": "Nur bei aktivierter WiPro. Im Original als \"ca.1000m\" ohne Leerzeichen gesetzt. Abschnitt 2.4 auf PDF-Seite 15 nennt denselben Wert als \"ca. 1 km\". Die Fassung ab SN-045 nennt an entsprechender Stelle rund 900 m - der Wert unterscheidet sich damit zwischen den Generationen und ist in beiden technisch unbestätigt",
+          "safety_critical": true
+        },
+        {
+          "value": "Spannungswarnung unter 11,2 V dauerhaft: Wechsel in Stand by",
+          "context": "Nicht in Betriebsart B. Dient dem Schutz der Fahrzeugbatterie; eine SMS mit dem Hinweis wird versendet",
+          "safety_critical": true
+        },
+        {
+          "value": "Rückkehr in den Normalbetrieb erst über 12,5 V",
+          "context": "Gegenstück zur Abschaltschwelle; beide Werte stimmen mit der Fassung ab SN-045 überein",
+          "safety_critical": true
+        },
+        {
+          "value": "Nachrichtenlänge auf 160 Zeichen begrenzt",
+          "context": "Deshalb wird das Guthaben je nach Nachrichteninhalt nicht immer angezeigt; bei einer Positionsabfrage jedoch sicher",
+          "safety_critical": false
+        },
+        {
+          "value": "Diebstahlmeldung ist ein stiller Alarm: weder Blinker noch Sirene werden aktiviert",
+          "context": "Beides ist laut Verweis auf Abschnitt 2.2 per SMS zuschaltbar",
+          "safety_critical": true
+        },
+        {
+          "value": "Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen",
+          "context": "Gilt bei der Diebstahlmeldung; dieselbe Zeile steht viermal auf PDF-Seite 13. Im Original durchgehend mit kleingeschriebenem \"versenden\"",
+          "safety_critical": true
+        },
+        {
+          "value": "Statusbericht enthält je nach Betriebsart die Spannungen U2-U5 und die Temperatur in unmittelbarer Nähe des Gerätes",
+          "context": "Abschnitt 2.1; die Messeingänge U2-U5 entsprechen den Pins 2-5 der Klemmenbelegung auf PDF-Seite 4",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Abbildung einer Beispiel-SMS zum Statusbericht als grau hinterlegte Sprechblase. Enthält Zeilen für Uhrzeit, Position in zwei Zeilen mit Himmelsrichtung, Geschwindigkeit in km/h, den Vermerk \"GPS Fencing aktiv\", fünf Spannungswerte U1 bis U5 und die Zustände \"A off\" und \"B on\"",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild. Die Abbildung kommt in der Textebene an keiner Stelle vor. Positionsangaben werden hier bewusst nicht wiedergegeben"
+        },
+        {
+          "description": "Abbildung einer Beispiel-SMS zur Diebstahlmeldung. Enthält das Stichwort \"Diebstahl\", eine Empfangsfeldstärke in dBm, Uhrzeit, Position, Geschwindigkeit und die Zeile \"Aktuelles Guthaben\" mit einem Eurobetrag",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene enthalten"
+        },
+        {
+          "description": "Abbildung einer Beispiel-SMS zur Spannungswarnung. Beginnt mit \"Spannung unter 11,2V\", danach \"GPS: Stand by\", Uhrzeit, Position, Geschwindigkeit und \"Aktuelles Guthaben\"",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene enthalten"
+        }
+      ],
+      "warnings_found": [
+        "\"! Nach versenden der SMS wird die Masternummer zusätzlich angerufen !\" - rot und fett, ohne Signalwort",
+        "\"Die Nachrichtenlänge ist auf 160 Zeichen begrenzt. Daher wird das Guthaben je nach Nachrichteninhalt nicht immer angezeigt.\" - rot",
+        "\"Sinkt die Versorgungsspannung dauerhaft unter 11,2V, schaltet Pro-finder in Stand by\" - schwarz im Fließtext"
+      ],
+      "accessibility_issues": [
+        "Die drei Abbildungen der Beispiel-SMS sind die einzige Stelle des Dokuments, an der die Felder eines Statusberichts vollständig zu sehen sind. Sie kommen in der Textebene überhaupt nicht vor - kein Feldname, kein Wert, kein Hinweis auf ihre Existenz. Wer die Seite vorgelesen bekommt, erfährt, dass ein Statusbericht \"Position, Geschwindigkeit und Zustände der Ausgänge\" enthält, sieht aber nie, wie er aussieht, und kann eine empfangene Meldung nicht zuordnen.",
+        "Die Begriffsliste in Abschnitt 2.1 und die Beispielbilder passen nicht zusammen. Die Liste erklärt fünf Angaben - GPS: Stand by, UTC, Pos, Geschwindigkeit, Kontostand -, die Bilder zeigen zusätzlich \"GPS Fencing aktiv\", die Spannungen U1 bis U5, die Ausgangszustände A und B, eine Empfangsfeldstärke in dBm und das Stichwort der Meldungsart. Umgekehrt heißt das Guthabenfeld in den Bildern \"Aktuelles Guthaben\", in der erklärenden Liste dagegen \"Kontostand\". Die Erklärung erklärt damit weder alle vorkommenden Felder noch benennt sie die vorhandenen gleich. Für die Generation ab SN-045 ist derselbe Befund als DSC-045 verzeichnet.",
+        "Die Lesereihenfolge der Textebene ist grob gestört: sie beginnt mit den drei Meldungsarten aus der unteren Seitenhälfte, erst danach folgen Kopfzeile, die Überschrift 2.1 und die Begriffsliste der oberen Seitenhälfte. Die Erklärung der Begriffe wird also nach ihrer Verwendung ausgegeben.",
+        "Die Positionsangaben in den Abbildungen sind blau und unterstrichen gesetzt und sehen damit wie Verknüpfungen aus. Die maschinelle Prüfung weist für diese Seite keine einzige Verknüpfung aus; die Darstellung stammt aus dem abfotografierten Mobiltelefon. Wer sie für anklickbar hält, findet nichts.",
+        "Die Angabe \"GPS Fencing aktiv\" in der Statusbericht-Abbildung ist der einzige Beleg dafür, dass der Zustand des Geofencings überhaupt zurückgemeldet wird. Weder Abschnitt 2.1 noch Abschnitt 2.4 auf PDF-Seite 15 erwähnen dieses Feld.",
+        "Die fünfteilige Begriffsliste ist zweispaltig mit Tabulatoren gesetzt und nicht als Definitionsliste ausgezeichnet; in der Textebene sind Begriff und Erklärung durch Tabulatoren und Umbrüche getrennt.",
+        "Der rote Zusatz zur 160-Zeichen-Grenze steht optisch innerhalb der Erklärung zum Kontostand, betrifft aber die Nachrichtenlänge insgesamt. Die Zuordnung ergibt sich allein aus Einrückung und Farbe.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 10\", tatsächlich PDF-Seite 12 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Der Verweis \"Diese Meldung erhalten Sie nur auf Anforderung, wie unter 2.3 beschrieben\" zielt am zuständigen Abschnitt vorbei. Abschnitt 2.3 trägt auf der selbst geprüften PDF-Seite 14 die Überschrift \"Alarmanlage per Anruf steuern\", der Abschnitt mit dem Titel \"Statusbericht anfordern\" ist 2.5 auf PDF-Seite 15. Abschnitt 2.3 beschreibt zwar, dass in den Betriebsarten 2 und 3 nach einem Anruf ein Statusbericht versendet wird, ist also nicht gänzlich unpassend; der Weg, einen Statusbericht anzufordern, steht aber in 2.5.",
+        "Der Verweis \"Beides lässt sich wie unter 2.2 beschrieben per SMS aktivieren\" für Blinker und Sirene trifft zu: Abschnitt 2.2 auf PDF-Seite 14 nennt den zugehörigen Befehl. Bemerkenswert im Vergleich, weil der entsprechende Verweis in der Fassung ab SN-045 inhaltlich ins Leere führt (DSC-041). Dieser Fehler ist also erst in der neueren Fassung entstanden.",
+        "Der Geofencing-Radius wird auf dieser Seite als \"ca.1000m\" und in Abschnitt 2.4 auf PDF-Seite 15 als \"ca. 1 km\" angegeben - derselbe Wert in zwei Schreibweisen, einmal ohne jedes Leerzeichen.",
+        "\"Bei einem Ereignis wird Sie automatisch reaktiviert\" - das Personalpronomen ist großgeschrieben und liest sich dadurch als Anrede; gemeint ist die GPS-Antenne. Bei 150 dpi bestätigt.",
+        "\"Positionabfrage\" statt \"Positionsabfrage\"; dieselbe Seite schreibt im Klammerzusatz \"(POS)\", während Abschnitt 2.6 auf PDF-Seite 15 den Befehl als \"Pos\" angibt und die Hilfe-SMS des Geräts auf PDF-Seite 13 überhaupt keinen Positionsbefehl aufführt.",
+        "\"Simkarte\" hier gegen \"SIM-Karte\" auf PDF-Seite 8 und \"SIM Karte\" auf PDF-Seite 11 - drei Schreibweisen.",
+        "\"aktivierter WiPro\" ohne die Ziffer III und ohne den Zusatz \"all in one\", während PDF-Seite 6 \"WiPro III bzw. WiPro \"all in one\"\" schreibt.",
+        "\"Nach versenden der SMS\" - Verb kleingeschrieben nach Präposition; dieselbe Zeile erscheint viermal auf PDF-Seite 13 mit demselben Fehler.",
+        "\"zurück geschaltet\" getrennt statt \"zurückgeschaltet\".",
+        "\"Programmwahlschalter\" hier gegen \"Betriebsartenschalter\" auf den PDF-Seiten 4, 7 und 11 - zwei Namen für dasselbe Bedienelement.",
+        "Versionsunterschied: Die Bindung der Diebstahlmeldung an eine aktivierte WiPro steht hier ohne Einschränkung. Für die Generation ab SN-045 ist die Abhängigkeit zwischen Geofencing und WiPro III als DSC-042 und BLK-007 offen. PDF-Seite 15 dieses Dokuments regelt für die ältere Generation zusätzlich den Vorrang von Pin 3 - siehe dort."
+      ],
+      "terminology_findings": [
+        "\"Stand by\" getrennt geschrieben, an beiden Vorkommen der Seite gleich.",
+        "\"Simkarte\" - dritte Schreibweise im Dokument.",
+        "\"Programmwahlschalter\" - zweiter Name für den Betriebsartenschalter.",
+        "\"Geofencing\" kommt auf dieser Seite nicht vor, obwohl die Diebstahlmeldung genau davon ausgelöst wird; die Abbildung nennt \"GPS Fencing\".",
+        "\"Kontostand\" gegen \"Aktuelles Guthaben\" in den Abbildungen derselben Seite."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Die drei Abbildungen der Beispiel-SMS wurden Zeile für Zeile mit der Textebene abgeglichen; sie sind dort vollständig abwesend, was den Hauptbefund der Seite ausmacht. Koordinaten, Kartenlinks und Beträge aus den Beispiel-SMS wurden bewusst nicht in den Record übernommen, nur die Feldnamen und die Struktur. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 13,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1301,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1104,
+      "content_type": "abbildung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 11\". Fortsetzung von Abschnitt 2.1. Sechs weitere Meldungsarten, jede als kurzer Fließtextabsatz mit nebenstehender Abbildung der zugehörigen Beispiel-SMS: Notruf SMS (wird in Betriebsart A verschickt, wenn an Pin 3 eine Spannung anliegt), Positions SMS für Smartphones (Antwort auf eine Positionsabfrage, enthält einen anklickbaren Kartenlink; bei Pre-paid-Karten wird stets das Restguthaben angezeigt), Hilfe SMS (Antwort auf eine SMS mit ungültigem Inhalt, enthält die möglichen korrekten Befehle), Einbruchmeldung, Gasalarm und Manueller Alarm - die letzten drei jeweils ausgelöst durch eine Meldung der WiPro. Vier der sechs Absätze schließen mit dem roten Hinweis, dass nach dem Versenden der SMS die Masternummer zusätzlich angerufen wird.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 11",
+        "Notruf SMS:",
+        "Positions SMS für Smartphones:",
+        "Hilfe SMS:",
+        "Einbruchmeldung:",
+        "Gasalarm:",
+        "Manueller Alarm:"
+      ],
+      "technical_values": [
+        {
+          "value": "Notruf SMS: Betriebsart A und Spannung an Pin 3",
+          "context": "Auslösebedingung. Pin 3 ist laut PDF-Seite 4 und 6 zugleich Messeingang U3 und Geofencing-Steuereingang; welche Funktion in Betriebsart A gilt, ergibt sich nur aus dieser Stelle",
+          "safety_critical": true
+        },
+        {
+          "value": "Einbruchmeldung, Gasalarm und Manueller Alarm werden durch die WiPro ausgelöst",
+          "context": "Alle drei setzen die angeschlossene und meldende WiPro voraus; ohne sie entfallen sie",
+          "safety_critical": true
+        },
+        {
+          "value": "Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen",
+          "context": "Gilt bei Notruf SMS, Einbruchmeldung, Gasalarm und Manuellem Alarm; viermal wortgleich auf dieser Seite, jeweils mit kleingeschriebenem \"versenden\"",
+          "safety_critical": true
+        },
+        {
+          "value": "Hilfe SMS wird ausgelöst, wenn von einer Zielrufnummer eine SMS mit ungültigem Inhalt empfangen wird",
+          "context": "Die Antwort enthält die möglichen korrekten Befehle. Was bei Absendern geschieht, die keine Zielrufnummer sind, sagt die Quelle nicht",
+          "safety_critical": true
+        },
+        {
+          "value": "Befehlsliste der Hilfe-SMS des Geräts, wörtlich aus der Abbildung: STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON",
+          "context": "Bei 700 dpi gesichert. Dies ist die einzige Stelle des Dokuments, an der das Gerät selbst seine gültigen Befehle nennt, und sie widerspricht dem Fließtext desselben Dokuments. Ausdrücklich nur als Quellenzitat für BLK-005 festgehalten; nicht für den Content-Layer bestimmt",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Pre-paid-Karten wird in der Positions-SMS immer das Restguthaben angezeigt",
+          "context": "Sofern das Gerät entsprechend eingerichtet wurde; Verweis auf die aufgedruckte Seite 8, Kapitel 1.8 - das ist PDF-Seite 10 und trifft zu",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Abbildung der Notruf-SMS als grau hinterlegte Sprechblase mit dem Stichwort \"Hilfe erbeten\", Uhrzeit, Position in zwei Zeilen und Geschwindigkeit",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; in der Textebene nicht vorhanden"
+        },
+        {
+          "description": "Abbildung der Positions-SMS mit dem Stichwort \"Position:\", einer über vier Zeilen umbrochenen Kartenadresse und der Zeile \"Aktuelles Guthaben\" mit Eurobetrag",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild. Die Kartenadresse enthält Koordinaten und wird hier bewusst nicht wiedergegeben"
+        },
+        {
+          "description": "Abbildung der Hilfe-SMS mit dem Text \"Ungueltiger Befehl! Moeglich:\" und der vollständigen Liste der vom Gerät akzeptierten Befehle in Großbuchstaben",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild. Diese Abbildung trägt die einzige geräteseitige Befehlsliste des Dokuments und ist in der Textebene nicht enthalten"
+        },
+        {
+          "description": "Drei weitere Abbildungen von Beispiel-SMS zu Einbruchmeldung (\"Einbruch Tuer/Fenster\"), Gasalarm (\"Gas\") und Manuellem Alarm (\"manueller Alarm\"), je mit Uhrzeit, Position, Geschwindigkeit und einer Guthabenzeile",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"! Nach versenden der SMS wird die Masternummer zusätzlich angerufen !\" - viermal auf der Seite, jeweils rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die einzige geräteseitige Befehlsliste des gesamten Dokuments steht ausschließlich als Bild. Sie ist in der Textebene nicht enthalten, hat keinen Alternativtext und keine Bildunterschrift. Wer die Anleitung vorgelesen bekommt, erfährt aus dem Fließtext lediglich, dass die Hilfe-SMS \"die möglichen, korrekten Befehle\" nennt - welche das sind, bleibt verborgen. Das wiegt hier besonders schwer, weil die Liste dem Fließtext widerspricht.",
+        "Alle sechs Abbildungen der Beispiel-SMS fehlen vollständig in der Textebene. Damit ist keine der sechs Meldungsarten an ihrem tatsächlichen Erscheinungsbild wiedererkennbar; die Stichwörter, an denen sich eine eingehende Meldung unterscheiden lässt - \"Hilfe erbeten\", \"Einbruch Tuer/Fenster\", \"Gas\", \"manueller Alarm\" -, stehen nur im Bild.",
+        "Die Gerätetexte in den Abbildungen ersetzen Umlaute durch Vokal plus e (\"Ungueltiger\", \"Moeglich\", \"Tuer\"). Das Gerät kann offenbar keine Umlaute darstellen. Für eine spätere Übersetzung ist das erheblich: die Meldungstexte des Geräts unterliegen einer Zeichensatzbeschränkung, die die Anleitung nirgends erwähnt.",
+        "Die vier roten Hinweiszeilen zum zusätzlichen Anruf der Masternummer sind allein durch Farbe und Fettschrift ausgezeichnet und in der Textebene von gewöhnlichem Text nicht zu unterscheiden. Sie beschreiben eine sicherheitsrelevante Nebenwirkung jeder Alarmmeldung.",
+        "Die Kartenadresse in der Positions-SMS ist über vier Zeilen umbrochen, mitten in der Zeichenfolge und ohne Trennzeichen. Sie ist blau und unterstrichen gesetzt und wirkt dadurch wie eine Verknüpfung; die maschinelle Prüfung weist für die Seite keine Verknüpfung aus.",
+        "Die Positionsangaben der sechs Abbildungen sind uneinheitlich gesetzt: teils steht die Himmelsrichtung unmittelbar am Minutenzeichen, teils durch ein Leerzeichen getrennt. Derselbe Datentyp erscheint in zwei Formaten.",
+        "Drei der Abbildungen beginnen die Guthabenzeile mit einem alleinstehenden Anführungszeichen vor dem Wort \"Kontostand\". Ein schließendes Gegenstück fehlt.",
+        "Die sechs Meldungsarten sind allein durch Fettschrift am Absatzbeginn ausgezeichnet und ergeben keine Strukturebene; in der Textebene stehen sie als gewöhnliche Absätze.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 11\", tatsächlich PDF-Seite 13 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Die Hilfe-SMS des Geräts nennt andere Befehle als der Fließtext desselben Dokuments. Das Gerät führt die Ausgangsbefehle englisch als \"A ON\", \"A OFF\", \"A PULSE\", \"B PULSE\", die Anleitung auf PDF-Seite 16 dagegen deutsch als \"A an\", \"A aus\", \"A impuls\". Das Gerät führt \"FENCE ON\" und \"FENCE OFF\", die Anleitung auf PDF-Seite 7 \"fence aus\" und auf PDF-Seite 15 \"Fence an\" und \"Fence aus\". Das Gerät führt \"ALARM AUS\", die Anleitung auf PDF-Seite 14 den Befehl \"alarm\" zum Einschalten von Sirene und Blinker - ein Befehl, den die Geräteliste nicht kennt. Der auf PDF-Seite 15 beschriebene Positionsbefehl \"Pos\" fehlt in der Geräteliste ebenfalls, obwohl PDF-Seite 12 ihn als \"(POS)\" erwähnt. Damit widersprechen sich Handbuch und Gerät innerhalb einer Sprache und eines Dokuments. Das ist der bislang stärkste Beleg für BLK-005.",
+        "Die Geräteliste mischt Deutsch und Englisch: \"SCHARF\", \"UNSCHARF\" und \"ALARM AUS\" stehen neben \"STATUS\", \"A ON\", \"B OFF\", \"A PULSE\", \"FENCE ON\" und \"GPS ON\".",
+        "In der Geräteliste fehlt nach einem Komma das Leerzeichen (\"B ON,B OFF\"), bei 700 dpi bestätigt.",
+        "Der Verweis \"eine Positionsabfrage wie unter 2.4 beschrieben\" ist falsch. Abschnitt 2.4 trägt auf der selbst geprüften PDF-Seite 15 die Überschrift \"Geofencing\"; die Positionsabfrage ist Abschnitt 2.6 auf derselben Seite.",
+        "Der Verweis \"(siehe Seite 8, Kapitel 1.8)\" trifft zu: die aufgedruckte Seite 8 ist PDF-Seite 10 und trägt Abschnitt 1.8. Die Quelle verweist hier also auf aufgedruckte Seitenzahlen, nicht auf PDF-Seiten - der Versatz beträgt durchgehend +2.",
+        "\"Nach versenden der SMS\" - viermal auf dieser Seite mit kleingeschriebenem Verb.",
+        "Drei Abbildungen führen die Guthabenzeile als \"Kontostand\", die Abbildungen auf PDF-Seite 12 als \"Aktuelles Guthaben\", die erklärende Liste auf PDF-Seite 12 als \"Kontostand\" und der Fließtext auf PDF-Seite 10 als \"Restguthaben\".",
+        "\"Smartphonenutzer\" hier zusammengeschrieben, \"Smartphone Nutzer\" auf PDF-Seite 15 getrennt, \"Smartphone Nummern\" auf PDF-Seite 9 getrennt.",
+        "\"Positions SMS\" ohne Bindestrich, ebenso \"Notruf SMS\" und \"Hilfe SMS\"."
+      ],
+      "terminology_findings": [
+        "\"WiPro\" durchgehend ohne die Ziffer III, während PDF-Seite 6 \"WiPro III\" schreibt.",
+        "\"Notruf SMS\", \"Positions SMS\", \"Hilfe SMS\" - alle drei ohne Bindestrich.",
+        "\"Gasalarm\" und \"Manueller Alarm\" als Meldungsarten; die Gerätetexte lauten abweichend \"Gas\" und \"manueller Alarm\".",
+        "Die Gerätetexte schreiben Umlaute als Vokal plus e - eine eigene Schreibkonvention des Geräts, die vor jeder Übersetzung zu schützen ist.",
+        "\"Einbruchmeldung\" im Fließtext, \"Einbruch Tuer/Fenster\" im Gerätetext."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; die Abbildung der Hilfe-SMS bei 700 dpi nachgerendert, weil die Befehlsliste bei 150 dpi nicht zeichengenau zu lesen war und die Abweichung gegenüber dem Fließtext davon abhängt. Die Liste ist damit wörtlich gesichert. Koordinaten, Kartenadressen und Beträge aus den Beispiel-SMS wurden bewusst nicht übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 14,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1172,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 977,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 12\". Abschnitt 2.2 \"Alarmanlage per SMS steuern\": Pro-finder kann die Alarmanlage ein- und ausschalten; zum Einschalten wird eine SMS mit dem Text \"scharf\", zum Ausschalten eine mit dem Text \"unscharf\" an die Nummer des Geräts gesendet, das jeweils mit einer Statusmeldung antwortet. In rotem Text folgt der Hinweis, dass bei einer Diebstahlmeldung - einem stillen Alarm - mit dem Befehl \"alarm\" zusätzlich Sirene und Blinker aktiviert und mit \"unscharf\" wieder beendet werden können. Abschnitt 2.3 \"Alarmanlage per Anruf steuern\": in den Betriebsarten 2 und 3 kann die WiPro per Anruf in den jeweils nächsten Zustand geschaltet werden; das Gerät beendet den Anruf automatisch, bevor eine kostenpflichtige Verbindung zustande kommt, und verschickt anschließend einen Statusbericht an den Anrufer. Abschließend fett: nur berechtigte Nummern können auf Pro-finder zugreifen. Die untere Seitenhälfte ist leer.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 12",
+        "2.2 Alarmanlage per SMS steuern",
+        "2.3 Alarmanlage per Anruf steuern"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"scharf\" zum Einschalten, \"unscharf\" zum Ausschalten, \"alarm\" zum Zuschalten von Sirene und Blinker",
+          "context": "Alle drei kleingeschrieben und fett gesetzt. Die Hilfe-SMS des Geräts auf PDF-Seite 13 führt sie großgeschrieben als \"SCHARF\" und \"UNSCHARF\" und kennt statt \"alarm\" nur \"ALARM AUS\". Ausdrücklich nur als Quellenzitat für BLK-005 festgehalten; nicht für den Content-Layer bestimmt",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsarten 2 und 3: Schalten der WiPro per Anruf in den jeweils nächsten Zustand",
+          "context": "Abschnitt 2.3. Ergänzt sich mit Abschnitt 2.5 auf PDF-Seite 15, wonach ein Anruf außerhalb der Betriebsarten 2 und 3 einen Statusbericht auslöst - dieselbe Handlung hat je nach Schalterstellung zwei verschiedene Wirkungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Das Gerät beendet den Anruf automatisch, bevor eine kostenpflichtige Verbindung zustande kommt",
+          "context": "Abschnitt 2.3; nach erfolgreichem Schaltvorgang folgt ein Statusbericht an den Anrufer",
+          "safety_critical": false
+        },
+        {
+          "value": "Nur berechtigte Nummern können auf Pro-finder zugreifen",
+          "context": "Fett gesetzter Schlusssatz von Abschnitt 2.3. \"Berechtigte Nummern\" ist der dritte Ausdruck für denselben Sachverhalt neben \"autorisierte Nummern\" und \"nicht autorisierte Nummern\" auf PDF-Seite 9; wie eine Nummer diese Eigenschaft erhält, sagt auch diese Stelle nicht",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Zwei Zeigehand-Piktogramme vor den beiden Handlungsabsätzen und zwei nach unten weisende Pfeil-Piktogramme vor den beiden Ergebnisabsätzen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; keines der vier Piktogramme kommt in der Textebene vor"
+        }
+      ],
+      "warnings_found": [
+        "\"Erhalten Sie eine Diebstahlmeldung, bei der es sich um einen stillen Alarm handelt, können Sie mit dem SMS-Befehl ... zusätzlich Sirene und Blinker aktivieren.\" - rot, ohne Signalwort",
+        "\"Nur berechtigte Nummern können auf Pro-finder zugreifen.\" - fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die beiden Befehle stehen als alleinstehende fette Wörter in eigener Zeile, ohne Kennzeichnung als einzugebender Text - keine Auszeichnung als Code, kein einleitender Doppelpunkt, keine Anführungszeichen. In der Textebene stehen sie als gewöhnliche einzeilige Absätze zwischen zwei Sätzen. Wer die Seite vorgelesen bekommt, hört an dieser Stelle nur ein einzelnes Wort und muss aus dem Zusammenhang schließen, dass es der SMS-Text ist.",
+        "Der rote Absatz zum Zuschalten von Sirene und Blinker enthält zwei weitere Befehle, die dort nur im laufenden Satz erwähnt und allein durch Anführungszeichen vom übrigen Text abgesetzt sind - eine dritte Auszeichnungsart für dieselbe Sache auf derselben Seite.",
+        "Der gesamte Absatz zur nachträglichen Aktivierung von Sirene und Blinker ist ausschließlich rot ausgezeichnet. Er beschreibt die einzige dokumentierte Möglichkeit, einen stillen Alarm hörbar und sichtbar zu machen.",
+        "Die Zuordnung von Handlung und Ergebnis wird durch zwei verschiedene Piktogramme getragen, die in der Textebene fehlen. Die vier Absätze folgen dort ohne erkennbare Rollenverteilung aufeinander.",
+        "Der Schlusssatz \"Nur berechtigte Nummern können auf Pro-finder zugreifen\" ist die einzige Zugriffsbeschränkung, die auf dieser Seite genannt wird, und steht ohne Verweis darauf, wo die Berechtigung vergeben wird. Wer nur diese Seite liest, kann die Bedingung nicht erfüllen.",
+        "Die untere Seitenhälfte ist leer, ohne dass ein Abschnittsende oder eine Fortsetzung gekennzeichnet wäre.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 12\", tatsächlich PDF-Seite 14 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Der Befehl zum Zuschalten von Sirene und Blinker steht hier als \"alarm\". Die Hilfe-SMS des Geräts auf PDF-Seite 13 führt keinen solchen Befehl, sondern nur \"ALARM AUS\". Ob \"alarm\" ein gültiger Befehl ist, lässt sich aus der Quelle nicht entscheiden.",
+        "Die Schaltbefehle sind hier kleingeschrieben, in der Geräteliste auf PDF-Seite 13 großgeschrieben. Ob das Gerät die Schreibung unterscheidet, sagt die Quelle nicht.",
+        "\"bei der es  sich um einen stillen Alarm\" - zwei Leerzeichen, und das anschließende Anführungszeichen ist ein schließendes ohne öffnendes Gegenstück. Bei 150 dpi bestätigt.",
+        "Die Anführungszeichen wechseln innerhalb weniger Zeilen: der rote Absatz verwendet englische Anführungszeichen um die Befehle, PDF-Seite 7 verwendet deutsche um denselben Typ von Befehl.",
+        "Asymmetrische Benennung: das Einschalten betrifft \"WiPro\", das Ausschalten in der Parallelzeile \"WiPro \"all in one\"\". Dieselbe Handlung an demselben Gerät, zwei Bezeichnungen in zwei aufeinanderfolgenden Absätzen.",
+        "\"Nur berechtigte Nummern\" führt einen dritten Ausdruck neben \"autorisierte\" und \"nicht autorisierte Nummern\" (PDF-Seite 9) ein, ohne ihn zu den beiden anderen in Beziehung zu setzen.",
+        "Abschnitt 2.3 beschreibt das Schalten per Anruf für die Betriebsarten 2 und 3, Abschnitt 2.5 auf PDF-Seite 15 den Statusbericht per Anruf für alle übrigen Betriebsarten. Beide Stellen verweisen nicht aufeinander; welche Wirkung ein Anruf hat, ist nur durch Zusammenlesen beider Seiten zu bestimmen.",
+        "\"In den Betriebsarten 2 und 3\" verwendet Ziffern, PDF-Seite 12 nennt \"Betriebsart B\" und PDF-Seite 13 \"Betriebsart A\" mit Buchstaben. Beides sind Stellungen desselben Drehcodierschalters (0-9, A-F), was die Quelle nirgends ausspricht.",
+        "\"Zustand geschaltet werden.  Rufen Sie\" - zwei Leerzeichen nach dem Punkt."
+      ],
+      "terminology_findings": [
+        "\"WiPro\" ohne Ziffer neben \"WiPro \"all in one\"\" mit englischen Anführungszeichen; PDF-Seite 6 schreibt \"WiPro \"all in one\"\" mit deutschen.",
+        "\"Alarmanlage\" hier als Oberbegriff für die WiPro; auf den übrigen Seiten wird durchgehend der Produktname verwendet.",
+        "\"berechtigte Nummern\" als dritter Ausdruck für die Zugriffsberechtigung.",
+        "\"SMS-Befehl\" hier mit Bindestrich; PDF-Seite 15 schreibt an vergleichbarer Stelle \"eine SMS mit folgendem Text\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Das fehlende öffnende Anführungszeichen und die doppelten Leerzeichen sind bei 150 dpi eindeutig. Die Befehle werden hier ausschließlich als Quellenzitat zur Begründung von BLK-005 festgehalten und dürfen nicht in den Content-Layer übernommen werden. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 15,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2485,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 2056,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 13\". Drei Abschnitte. 2.4 \"Geofencing\": Erklärung des virtuellen Zauns, Diebstahlmeldung beim Verlassen eines Bereichs von ca. 1 km um den ursprünglichen Standort; Geofencing ist in den Schalterstellungen 8 und B über Pin 3 ein- und ausschaltbar, in allen anderen Stellungen per SMS; der zugehörige Einschaltbefehl wird genannt, der Ausschaltbefehl im Erläuterungstext; in rot der Hinweis, dass Geofencing bei geschärfter WiPro automatisch aktiviert ist und nicht per SMS eingeschaltet werden muss. 2.5 \"Statusbericht anfordern\": der Bericht enthält die unter 2.1 beschriebenen Angaben und ist jederzeit abrufbar, entweder per SMS-Befehl oder durch einen Anruf außerhalb der Betriebsarten 2 und 3, den das Gerät nach wenigen Freizeichen beendet; zusätzlich wird der GPS-Status übertragen, bei ungültiger Position die letzte gültige Position samt Hinweistext, dazu der Zustand beider Ausgänge und die Umgebungstemperatur. 2.6 \"Positionsabfrage mit Smartphone\": eine speziell für Smartphones gedachte SMS mit anklickbarem Link auf die Fahrzeugposition, ausgelöst durch einen eigenen Befehl.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 13",
+        "2.4 Geofencing",
+        "2.5 Statusbericht anfordern",
+        "2.6 Positionsabfrage mit Smartphone"
+      ],
+      "technical_values": [
+        {
+          "value": "Geofencing-Radius ca. 1 km um den ursprünglichen Standort",
+          "context": "Abschnitt 2.4. PDF-Seite 12 nennt denselben Wert als \"ca.1000m\". Die Fassung ab SN-045 nennt rund 900 m; der Wert unterscheidet sich zwischen den Generationen und ist in beiden technisch unbestätigt",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellungen 8 und B: Geofencing über Pin 3 ein- und ausschaltbar; in allen anderen Stellungen per SMS",
+          "context": "Abschnitt 2.4. Damit regelt diese Generation ausdrücklich, wann Pin 3 und wann der SMS-Weg gilt. Für die Generation ab SN-045 ist genau dieser Vorrang zwischen Pin 3 und der automatischen Kopplung offen (BLK-007)",
+          "safety_critical": true
+        },
+        {
+          "value": "Ist WiPro geschärft, ist Geofencing automatisch aktiviert und muss nicht per SMS eingeschaltet werden",
+          "context": "Abschnitt 2.4, rot gesetzt. Klare Aussage zur Kopplung von Schärfzustand und Geofencing - der Punkt, der für die Generation ab SN-045 als DSC-042 und BLK-007 offen ist",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"Fence an\" zum Einschalten, \"Fence aus\" zum Ausschalten, \"Status\" für den Statusbericht, \"Pos\" für die Positionsabfrage",
+          "context": "PDF-Seite 7 schreibt denselben Ausschaltbefehl klein als \"fence aus\", die Hilfe-SMS des Geräts auf PDF-Seite 13 führt \"FENCE ON\" und \"FENCE OFF\" englisch und kennt keinen Positionsbefehl. Ausdrücklich nur als Quellenzitat für BLK-005 festgehalten; nicht für den Content-Layer bestimmt",
+          "safety_critical": true
+        },
+        {
+          "value": "Statusbericht per Anruf: außer in den Betriebsarten 2 und 3",
+          "context": "Abschnitt 2.5. In den Betriebsarten 2 und 3 schaltet ein Anruf laut Abschnitt 2.3 auf PDF-Seite 14 stattdessen die WiPro. Das Gerät beendet den Anruf nach wenigen Freizeichen; der Statusbericht erfolgt dann ohne Guthabenanzeige",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei ungültiger Position wird die letzte gültige Position gesendet, im Statusbericht steht dann \"GPS kein Empfang\"",
+          "context": "Abschnitt 2.5; sicherheitsrelevant, weil eine übermittelte Position dann nicht die aktuelle ist",
+          "safety_critical": true
+        },
+        {
+          "value": "Der Statusbericht enthält zusätzlich den Zustand beider Ausgänge und die Umgebungstemperatur in unmittelbarer Nähe des Gerätes",
+          "context": "Abschnitt 2.5; deckt sich mit der Beschreibung auf PDF-Seite 12",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Zeigehand-Piktogramme vor den drei Absätzen mit einem zu sendenden SMS-Text, ein weiteres vor dem Absatz zum Anruf, sowie vier nach unten weisende Pfeil-Piktogramme vor den zugehörigen Ergebnisabsätzen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; keines der Piktogramme kommt in der Textebene vor"
+        }
+      ],
+      "warnings_found": [
+        "\"Ist WiPro geschärft, ist Geofencing automatisch aktiviert und muss nicht per SMS eingeschaltet werden.\" - rot, ohne Signalwort",
+        "\"Wenn keine gültige Position empfangen wird, steht im Statusbericht \"GPS kein Empfang\", es wird jedoch die letzte gültige Position gesendet.\" - schwarz im Fließtext"
+      ],
+      "accessibility_issues": [
+        "Die zu sendenden SMS-Texte stehen wie auf PDF-Seite 14 als alleinstehende fette Wörter in eigener Zeile, ohne Auszeichnung als einzugebender Text. In der Textebene sind sie von gewöhnlichen einzeiligen Absätzen nicht zu unterscheiden.",
+        "Der Ausschaltbefehl des Geofencings wird nicht wie der Einschaltbefehl als eigene Zeile gesetzt, sondern nur im Fließtext des Ergebnisabsatzes erwähnt - zweimal, in zwei verschiedenen Schreibweisen. Ein Nutzer, der die Seite überfliegt oder vorgelesen bekommt, findet den Einschaltweg leicht und den Ausschaltweg kaum.",
+        "Der sicherheitsrelevanteste Satz der Seite - dass bei fehlendem GPS-Empfang die letzte gültige Position übermittelt wird - steht ohne jede Auszeichnung im Fließtext. Wer eine Position empfängt, kann ohne diesen Satz nicht wissen, dass sie veraltet sein kann; die Kennzeichnung im Bericht selbst ist ein Textbaustein, den die Anleitung an keiner anderen Stelle nennt.",
+        "Der rote Hinweis zur automatischen Aktivierung bei geschärfter WiPro ist ausschließlich durch Farbe ausgezeichnet und steht damit auf einer Ebene mit gewöhnlichem Text, obwohl er die Bedienlogik des Abschnitts umkehrt.",
+        "Die Bedingung \"ausser in Betriebsart 2 und 3\" steht in einer Klammer am Zeilenende. Sie entscheidet darüber, ob ein Anruf einen Statusbericht auslöst oder die Alarmanlage umschaltet - also über zwei völlig verschiedene Wirkungen derselben Handlung -, ist aber nicht hervorgehoben und verweist nicht auf Abschnitt 2.3.",
+        "Der Absatz zu den Schalterstellungen 8 und B setzt Kenntnis der Betriebsartentabelle auf PDF-Seite 5 voraus, ohne auf sie zu verweisen.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 13\", tatsächlich PDF-Seite 15 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Der Geofencing-Ausschaltbefehl erscheint auf dieser Seite zweimal in einer Schreibweise mit großem Anfangsbuchstaben, auf PDF-Seite 7 dagegen kleingeschrieben, und in der Hilfe-SMS des Geräts auf PDF-Seite 13 englisch und in Großbuchstaben. Drei Schreibweisen desselben Befehls in einem einsprachigen Dokument.",
+        "Der Positionsbefehl dieser Seite fehlt in der Befehlsliste, die das Gerät selbst in seiner Hilfe-SMS ausgibt (PDF-Seite 13). PDF-Seite 12 erwähnt ihn zusätzlich in einer dritten Schreibweise in Großbuchstaben.",
+        "\"zuvor \" Fence aus\" senden\" - überzähliges Leerzeichen innerhalb der Anführungszeichen. Bei 150 dpi bestätigt.",
+        "\"Das Übertragen der Koordinaten in eine Kartenprogramm entfällt somit.\" - falscher Artikel.",
+        "\"eine speziell für Smartphones konzipierte SMS ..., die einen Link öffnet\" - Numerusfehler im Relativsatz.",
+        "\"ausser\" statt \"außer\", während dasselbe Dokument sonst durchgehend die vorreformierte Schreibung mit ß verwendet (\"muß\", \"Anschluß\").",
+        "Der Statusbericht-Textbaustein \"GPS kein Empfang\" ist mit geraden doppelten Anführungszeichen gesetzt, während dieselbe Seite für die Befehle typografische Anführungszeichen verwendet.",
+        "Der Verweis \"erhalten Sie eine Diebstahlmeldung wie unter 2.1 beschrieben\" trifft zu (PDF-Seite 12). Er steht im Gegensatz zu den drei falschen Verweisen auf den PDF-Seiten 10, 12 und 13.",
+        "\"Wie Sie mit Hilfe der Positionsangabe Ihr Fahrzeug finden, wird in Kapitel 2.6 erklärt.\" - Abschnitt 2.6 ist die Positionsabfrage mit Smartphone; das Wiederfinden des Fahrzeugs ist laut Textebene Abschnitt 2.8 auf PDF-Seite 17. Der Verweis benennt damit nicht den Abschnitt, den seine Formulierung ankündigt. Abschließend zu prüfen, sobald PDF-Seite 17 gerendert ist.",
+        "Versionsunterschied: Diese Seite regelt ausdrücklich, dass Geofencing in den Schalterstellungen 8 und B über Pin 3 und sonst per SMS geschaltet wird und dass es bei geschärfter WiPro automatisch aktiv ist. Genau diese beiden Punkte sind für die Generation ab SN-045 offen (DSC-042, BLK-007). Ob die Regel der älteren Generation dort fortgilt, ist ungeklärt und an THITRONIK zu richten."
+      ],
+      "terminology_findings": [
+        "\"Geofencing\" in der Überschrift projektkonform; der Befehl verwendet daneben die Form \"Fence\".",
+        "\"Smartphone Nutzer\" getrennt, \"Smartphonenutzer\" auf PDF-Seite 13 zusammen, \"Smartphone Nummern\" auf PDF-Seite 9 getrennt.",
+        "\"WiPro\" ohne Ziffer, wie auf den PDF-Seiten 12, 13 und 14.",
+        "\"geschärft\" als Zustand der Alarmanlage; PDF-Seite 14 verwendet dafür \"einschalten\" und den Befehl \"scharf\".",
+        "\"Kartenprogramm\" hier, \"Kartenansicht\" auf PDF-Seite 13."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Diese Seite wurde ursprünglich nur gerendert, um die Ziele der drei Querverweise von den PDF-Seiten 10, 12 und 13 zu prüfen; sie ist danach vollständig gelesen und regulär erfasst worden. Die drei Abschnittsüberschriften sind im Seitenbild bestätigt, nicht nur in der Textebene - darauf stützen sich die Verweisbefunde der genannten Seiten. Befehle nur als Quellenzitat für BLK-005. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 16,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1472,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1173,
+      "content_type": "anleitung",
+      "languages": ["de"],
+      "summary": "Intern \"Seite 14\". Abschnitt 2.7 \"Ausgänge per SMS steuern\". Einleitung: Pro-finder verfügt über 2 getrennt voneinander steuerbare Ausgänge, deren Anschluss unter 1.5 beschrieben ist. Es folgen drei unterstrichene Zwischentitel mit je einer Befehlsanweisung - Ausgänge dauerhaft schalten (Einschalten bis auf Widerruf und Ausschalten), Ausgänge gepulst für eine Sekunde schalten, Ausgänge für eine frei wählbare Zeit zwischen 1 und 120 Minuten schalten, wobei ein Platzhalter durch die gewünschte Minutenzahl zu ersetzen ist. Auf jede Anweisung folgt ein Ergebnisabsatz, wonach das Gerät den Ausgang schaltet und zusätzlich einen Statusbericht sendet. Abschließend in roter Fettschrift der Hinweis, dass für den zweiten Ausgang in der SMS lediglich der Buchstabe zu ersetzen ist. Alle Beispiele sind für den ersten Ausgang geschrieben.",
+      "headings": [
+        "Handbuch Pro-finder",
+        "Seite 14",
+        "2.7 Ausgänge per SMS steuern",
+        "Ausgänge dauerhaft schalten:",
+        "Ausgänge gepulst (1 Sekunde an) schalten:",
+        "Ausgänge für eine frei wählbare Zeit schalten:"
+      ],
+      "technical_values": [
+        {
+          "value": "2 getrennt voneinander steuerbare Ausgänge",
+          "context": "Entspricht Pin 7 (Ausgang A) und Pin 6 (Ausgang B) der Klemmenbelegung auf PDF-Seite 4; die elektrischen Werte 12V/500mA stehen auf PDF-Seite 6",
+          "safety_critical": true
+        },
+        {
+          "value": "Impulsdauer 1 Sekunde",
+          "context": "Feste Dauer des gepulsten Schaltens; nicht einstellbar",
+          "safety_critical": false
+        },
+        {
+          "value": "Frei wählbare Einschaltdauer zwischen 1 und 120 Minuten",
+          "context": "Der Platzhalter im Befehl ist durch die gewünschte Minutenzahl zu ersetzen. Was bei einer Zahl außerhalb dieses Bereichs geschieht, sagt die Quelle nicht - dieselbe Lücke ist für die Generation ab SN-045 als DSC-052 verzeichnet",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"A an\", \"A aus\", \"A impuls\" und \"A XXX\" mit XXX als Minutenzahl; für den zweiten Ausgang ist A durch B zu ersetzen",
+          "context": "Die Hilfe-SMS des Geräts auf PDF-Seite 13 führt stattdessen \"A ON\", \"A OFF\", \"B ON\", \"B OFF\", \"A PULSE\" und \"B PULSE\" - englisch statt deutsch - und kennt keinen Befehl für eine frei wählbare Dauer. Die Fassung ab SN-045 schreibt den Dauerbefehl mit einem anderen Platzhalter. Ausdrücklich nur als Quellenzitat für BLK-005 festgehalten; nicht für den Content-Layer bestimmt",
+          "safety_critical": true
+        },
+        {
+          "value": "Jeder Schaltvorgang wird zusätzlich mit einem Statusbericht quittiert",
+          "context": "Bei allen vier Befehlsformen gleichlautend beschrieben; wer den Bericht erhält, sagt die Quelle nicht",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Zeigehand-Piktogramme vor den Handlungsabsätzen, vier nach unten weisende Pfeil-Piktogramme vor den Ergebnisabsätzen und zwei kreisförmige Uhr-Piktogramme neben den beiden zeitbezogenen Befehlen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; keines der Piktogramme kommt in der Textebene vor. Die Uhr-Piktogramme sind die einzige Kennzeichnung dafür, dass diese beiden Befehle eine Zeitkomponente haben"
+        }
+      ],
+      "warnings_found": [
+        "\"Um Ausgang B zu steuern, ersetzen Sie den Buchstaben A in der SMS durch den Buchstaben B.\" - rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die drei Zwischentitel sind ausschließlich durch Unterstreichung und Fettschrift ausgezeichnet. Unterstreichung ergibt keine Strukturebene und ist von einer Verknüpfung nicht zu unterscheiden; derselbe Mangel steht schon im Seitenrecord zu PDF-Seite 4.",
+        "Die vier zu sendenden SMS-Texte stehen als alleinstehende fette Zeilen ohne Auszeichnung als einzugebender Text und sind in der Textebene von gewöhnlichen Absätzen nicht zu unterscheiden - wie auf den PDF-Seiten 14 und 15.",
+        "Der Platzhalter für die Minutenzahl besteht aus drei gleichen Großbuchstaben. Er ist als Platzhalter nur daran erkennbar, dass der vorstehende Satz ihn erklärt; ohne diesen Satz liest er sich als Teil des Befehls. Beim Vorlesen wird er je nach Einstellung buchstabiert oder als Wort gelesen.",
+        "Die gesamte Seite beschreibt ausschließlich den ersten Ausgang. Dass für den zweiten lediglich ein Buchstabe zu tauschen ist, steht allein im roten Schlusssatz. Wer nur die Befehlszeilen überfliegt oder die Seite abschnittsweise vorgelesen bekommt, erhält vier Befehle für einen Ausgang und keinen für den anderen.",
+        "Die beiden Uhr-Piktogramme sind die einzige visuelle Unterscheidung der zeitbezogenen Befehle von den dauerhaften. Sie fehlen in der Textebene vollständig.",
+        "Der Verweis auf den Anschluss der Ausgänge nennt nur die Abschnittsnummer, nicht die Seite; die zugehörigen elektrischen Grenzwerte 12V/500mA und die Relaispflicht stehen auf PDF-Seite 6 und werden hier nicht wiederholt. Wer nur diesen Abschnitt liest, kann einen Ausgang überlasten.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Seite 14\", tatsächlich PDF-Seite 16 (Versatz +2)."
+      ],
+      "discrepancies": [
+        "Die vier Ausgangsbefehle dieser Seite sind deutsch, die Ausgangsbefehle in der Hilfe-SMS des Geräts auf PDF-Seite 13 englisch. Für die frei wählbare Einschaltdauer führt die Geräteliste überhaupt keinen Befehl. Handbuch und Gerät widersprechen sich damit auch hier innerhalb einer Sprache.",
+        "Der Verweis \"Wie diese anzuschließen sind, ist unter 1.5 beschrieben\" trifft zu: Abschnitt 1.5 steht auf der selbst geprüften PDF-Seite 6 und beschreibt die Ausgänge Pin 6 und Pin 7.",
+        "Der Zwischentitel \"Ausgänge dauerhaft schalten:\" steht im Plural, die darunter beschriebenen Befehle betreffen ausschließlich einen einzelnen Ausgang. Das gilt für alle drei Zwischentitel.",
+        "Die Einschaltdauer ist mit 1 bis 120 Minuten angegeben. Was bei einer Zahl außerhalb dieses Bereichs, bei einer laufenden und erneut gesendeten Zeitschaltung oder bei einem Spannungsausfall während der Laufzeit geschieht, sagt die Quelle nicht. Für die Generation ab SN-045 ist dieselbe Lücke als DSC-052 verzeichnet.",
+        "Versionsunterschied: Die deutschen Ausgangsbefehle stimmen zwischen dieser Generation und der Fassung ab SN-045 weitgehend überein, unterscheiden sich aber in der Schreibung des Platzhalters für die Minutenzahl. Das ist gemeinsam mit DSC-033 zu bewerten.",
+        "\"Um Ausgang A für 1 Sek. einzuschalten\" verwendet die Abkürzung, der zugehörige Zwischentitel schreibt \"1 Sekunde\" aus."
+      ],
+      "terminology_findings": [
+        "\"Ausgang A\" und \"Ausgang B\" projektkonform und durchgehend verwendet.",
+        "\"Sek.\" abgekürzt gegen \"Sekunde\" ausgeschrieben auf derselben Seite.",
+        "\"gepulst\" als Fachbegriff ohne Erläuterung; die Bedeutung ergibt sich nur aus dem Klammerzusatz des Zwischentitels.",
+        "\"bis auf Widerruf\" als Beschreibung des Dauerzustands; PDF-Seite 6 formuliert dieselbe Sache als \"bis der Befehl aufgehoben wird\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Wie PDF-Seite 15 zunächst zur Prüfung eines Querverweises gerendert und danach vollständig gelesen und regulär erfasst. Textebene gegen das Seitenbild gehalten; sie gibt die Befehlszeilen in derselben Reihenfolge aus wie das Bild, ohne die Piktogramme und ohne die Unterstreichung der Zwischentitel. Befehle nur als Quellenzitat für BLK-005. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 17,

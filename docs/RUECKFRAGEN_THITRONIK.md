@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-08 · Grundlage: seitenweise Prüfung von 180 der 323 PDF-Seiten sowie die
+Stand: 2026-08-08 · Grundlage: seitenweise Prüfung von 191 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -17,6 +17,14 @@ Beleg und die Fundstelle; die vollständige Herleitung steht in
 Geprüft sind bisher der deutsche, englische, französische und tschechische Sprachteil von
 `pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf` (DOC-IBA-SN045)
 sowie beide Kurzanleitungen. Sechs Sprachteile stehen aus.
+
+**Neu am 2026-08-08:** Erstmals ist auch die Generation **bis SN-044** in nennenswertem
+Umfang geprüft (DOC-BMA-SN044, Seiten 1–16 von 72). Mehrere der unten stehenden Fragen
+haben dadurch eine zweite Belegquelle bekommen – teils bestätigend, teils mit abweichenden
+Werten. Diese Ergänzungen stehen als **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie
+sind für Sie vermutlich der aufschlussreichste Teil dieses Dokuments, weil sich daran
+ablesen lässt, welche Punkte seit zwei Gerätegenerationen unverändert offen sind und welche
+erst mit der neueren Fassung entstanden.
 
 ---
 
@@ -57,7 +65,35 @@ Zudem heißt der Positionsbefehl in der Hilfe-SMS `POS`, im zugehörigen Kapitel
 `position` beziehungsweise `poloha` – zwei verschiedene Wörter. Unterscheidet das Gerät
 Groß- und Kleinschreibung? Sind beide Formen gültig?
 
-_Belege: DSC-013, DSC-014, DSC-026, DSC-033_
+**Nachtrag bis SN-044 – das Gerät widerspricht seinem eigenen Handbuch.** Bisher stützte
+sich diese Frage auf den Vergleich **zwischen** vier Sprachfassungen. Im Handbuch der
+älteren Generation widersprechen sich Handbuch und Gerät **innerhalb einer Sprache und
+eines Dokuments**. Die automatische Hilfe-SMS ist dort als Abbildung wiedergegeben und
+nennt wörtlich:
+
+`STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON`
+
+| Funktion        | Handbuch bis SN-044                     | Hilfe-SMS des Geräts | Handbuch ab SN-045 |
+| --------------- | --------------------------------------- | -------------------- | ------------------ |
+| Ausgang A ein   | `A an` (S. 16)                          | `A ON`               | `a an`             |
+| Ausgang A aus   | `A aus` (S. 16)                         | `A OFF`              | –                  |
+| Ausgang gepulst | `A impuls` (S. 16)                      | `A PULSE`            | `a impuls`         |
+| Ausgang Zeit    | `A XXX` (S. 16)                         | **fehlt**            | `a %min%`          |
+| Geofencing ein  | `Fence an` (S. 15)                      | `FENCE ON`           | –                  |
+| Geofencing aus  | `fence aus` (S. 7), `Fence aus` (S. 15) | `FENCE OFF`          | `fence aus`        |
+| Statusbericht   | `Status` (S. 15)                        | `STATUS`             | `status`           |
+| Position        | `Pos` (S. 15), `(POS)` (S. 12)          | **fehlt**            | `position` / `POS` |
+| Sirene/Blinker  | `alarm` (S. 14)                         | nur `ALARM AUS`      | –                  |
+| GPS ein/aus     | im Handbuch nicht erwähnt               | `GPS ON`, `GPS OFF`  | –                  |
+
+**Die zusätzlichen Fragen:** Welche Form akzeptiert das Gerät bis SN-044 – die deutsche des
+Handbuchs oder die englische seiner eigenen Hilfe-SMS? Gibt es einen Positionsbefehl und
+einen Befehl für eine frei wählbare Einschaltdauer, und warum fehlen sie in der Hilfe-SMS?
+Was bewirken `GPS ON` und `GPS OFF`, die im Handbuch nirgends vorkommen? Und: **ist die
+Hilfe-SMS die maßgebliche Auskunft?** Falls ja, wäre sie die verlässlichste Quelle für die
+Befehlsliste beider Generationen – und das Handbuch wäre an mehreren Stellen falsch.
+
+_Belege: DSC-013, DSC-014, DSC-026, DSC-033, DSC-054_
 
 ---
 
@@ -211,7 +247,25 @@ Bezug darauf – geschaltet über Pin 3 oder per SMS.
 Aufgabe „Geofencing" der Webanleitung kann die Voraussetzungen bis dahin nicht
 abschließend nennen.
 
-_Beleg: DSC-042_
+**Nachtrag bis SN-044 – die ältere Quelle beantwortet Frage 2.** Abschnitt 2.4 des
+Handbuchs bis SN-044 regelt genau das, was die neuere Fassung offen lässt:
+
+> „Geofencing kann in Schalterstellung 8 und B über Pin 3 ein- und ausgeschaltet werden. In
+> allen anderen Schalterstellungen kann Geofencing per SMS ein- und ausgeschaltet werden."
+
+> „Ist WiPro geschärft, ist Geofencing automatisch aktiviert und muss nicht per SMS
+> eingeschaltet werden."
+
+**Die zusätzliche Frage:** Gilt diese Regel ab SN-045 unverändert fort? Wir übertragen sie
+**nicht** von selbst – der Projektauftrag verbietet, die Generationen zu vermischen. Eine
+Bestätigung würde Frage 2 unmittelbar schließen und BLK-007 auflösen.
+
+Ungeklärt bleibt sie auch bis SN-044 in einem Punkt: Seite 7 empfiehlt, Geofencing beim
+Abstellen in Gebäuden abzuschalten, ohne zu erwähnen, dass damit die Diebstahlmeldung
+entfällt. Steht das Fahrzeug dabei geschärft, widerspricht das der automatischen
+Aktivierung. Welcher Zustand setzt sich durch?
+
+_Belege: DSC-042, DSC-062_
 
 ---
 
@@ -230,7 +284,21 @@ gespeichert?
 Eine Anleitung, die diese Regel nicht nennen darf, weil sie unbelegt ist, kann Nutzende
 in genau den Fehler laufen lassen, den sie verhindern soll.
 
-_Beleg: DSC-044_
+**Nachtrag bis SN-044 – derselbe Mangel, zwei Generationen lang.** Das Handbuch bis SN-044
+beschreibt auf Seite 9 vier Arten von Zielrufnummern und was jede darf, sagt aber ebenfalls
+nicht, wie eine Nummer in eine Stufe gelangt. Die Kennzeichnung ist auch dort nur aus den
+Tabellenbeispielen der Folgeseite zu erschließen: autorisierte Nummern werden mit einem
+**Pluszeichen** angereiht, die nicht autorisierte im dritten Beispiel mit einem
+**Minuszeichen**. Kein Satz spricht das aus.
+
+Zusätzlich widerspricht sich die ältere Quelle beim Smartphone-Kennzeichen: Seite 9
+schreibt ein kleines **s**, dessen Bedeutung allein durch Fettschrift getragen wird, Seite
+10 durchgehend ein großes **S**.
+
+**Die zusätzliche Frage:** Unterscheidet das Gerät Groß- und Kleinschreibung dieses
+Kennzeichens? Und gilt die Plus-/Minus-Regel in beiden Generationen gleich?
+
+_Belege: DSC-044, DSC-056_
 
 ---
 
@@ -254,7 +322,21 @@ keine geprüfte Seite.
 **Warum das drängt:** Die Aufgabe „Meldungen" soll Nutzenden erklären, was in einer SMS
 steht. Solange die Quelle sich selbst widerspricht, kann sie das nur mit Vorbehalt.
 
-_Beleg: DSC-045_
+**Nachtrag bis SN-044 – gleiche Lücke, andere Feldnamen.** Auch im Handbuch bis SN-044
+decken sich Erklärung und Beispiele nicht. Abschnitt 2.1 erklärt fünf Angaben; die neun
+Beispiel-SMS zeigen zusätzlich „GPS Fencing aktiv", „U1:" bis „U5:", „A off"/„B on" und
+„Empfang: -99dBm" – keines davon erklärt das Kapitel. Umgekehrt fehlt die im Kapitel
+genannte Temperatur in allen neun Beispielen, und das Guthabenfeld heißt auf einer Seite
+„Aktuelles Guthaben", auf der nächsten „Kontostand" und im Kapitel wieder „Kontostand".
+
+Erschwerend liegen **alle neun Beispiel-SMS ausschließlich als Bild vor** und fehlen in der
+Textebene vollständig – obwohl dieses Dokument sonst eine durchgehende Textebene hat.
+
+**Die zusätzliche Frage:** Gibt es eine maßgebliche Feldliste des Geräts je Betriebsart –
+für beide Generationen? Eine solche Liste würde diese Frage für beide Fassungen zugleich
+schließen.
+
+_Belege: DSC-045, DSC-060_
 
 ---
 
@@ -275,7 +357,29 @@ Barrierefreiheit **am Gerät** endet und nicht am Dokument. Die HTML-Anleitung k
 beschreiben, aber nicht auflösen. Sie wird in der Aufgabe „Fehlerbehebung" ausdrücklich
 als Grenze benannt.
 
-_Beleg: DSC-047_
+**Nachtrag bis SN-044 – die Barriere ist erheblich größer als bisher angenommen.** In der
+älteren Generation betrifft sie nicht nur die dreistufige GPS-Diagnose, sondern die
+**vollständige Zustandsanzeige im Normalbetrieb**. Abschnitt 1.10 führt **neun** Zustände,
+die in zwei Gruppen gleicher Blinkart zerfallen; innerhalb jeder Gruppe ist die Farbe das
+einzige unterscheidende Merkmal:
+
+| Blinkend                                       | Dauerlicht      |
+| ---------------------------------------------- | --------------- |
+| rot/gelb, rot, grün, rot/grün, gelb, gelb/grün | rot, grün, gelb |
+
+Wer Rot, Gelb und Grün nicht sicher unterscheidet, kann neun Gerätezustände auf zwei
+reduzieren und weder „kein GSM-Empfang" von „alles in Ordnung" noch „SIM-Karte defekt" von
+„Gerät versendet eine SMS" trennen. Drei Zustände sind Zweifarbwechsel, deren Reihenfolge
+und Frequenz die Quelle nicht nennt. Auch der Löschvorgang der Zielrufnummern hängt an einer
+farbcodierten Abbruchbedingung („warten Sie bis die Status LED gelb/grün blinkt") und ist
+damit ohne Farbwahrnehmung nicht sicher durchführbar.
+
+**Die zusätzlichen Fragen:** Gibt es für die neun Zustände ein farbunabhängiges Merkmal –
+unterschiedliche Blinkfrequenzen, Blinkfolgen oder eine abrufbare Textrückmeldung? Lässt
+sich der Gerätezustand alternativ per SMS abfragen? Falls nicht, ist das der zentrale
+Befund des gesamten Pilots: die Anleitung lässt sich barrierefrei machen, das Gerät nicht.
+
+_Belege: DSC-047, DSC-059_
 
 ---
 
@@ -291,6 +395,49 @@ App nicht übernimmt.
 Adressbucheintrag mit Ländervorwahl nötig?
 
 _Beleg: DSC-043_
+
+---
+
+## 14. Welcher Geofencing-Radius gilt je Generation?
+
+Die beiden Gerätegenerationen nennen verschiedene Werte für dieselbe Auslösebedingung:
+
+| Generation | Angabe in der Quelle      | Fundstelle                  |
+| ---------- | ------------------------- | --------------------------- |
+| bis SN-044 | „ca.1000m" und „ca. 1 km" | DOC-BMA-SN044, S. 12 und 15 |
+| ab SN-045  | rund 900 m                | DOC-IBA-SN045               |
+
+**Die Fragen:** Ist der Unterschied eine bewusste Änderung zwischen den Gerätegenerationen
+oder ein Fehler in einer der beiden Fassungen? Welcher Wert gilt jeweils, und bezieht er
+sich auf einen Radius um den Standort beim Schärfen oder um den letzten bekannten Standort?
+
+**Warum das drängt:** Der Radius entscheidet, wann eine Diebstahlmeldung ausgelöst wird. Der
+Projektauftrag verbietet, die Generationen zu vermischen – wir übernehmen deshalb keinen der
+beiden Werte in den jeweils anderen Zweig der Anleitung und nennen beide bis zur Klärung nur
+als Entwurf.
+
+_Belege: DSC-061_
+
+---
+
+## 15. Gilt die Vorgabe, die SIM-PIN auf 0000 zu ändern, unverändert? (sicherheitskritisch)
+
+Das Handbuch bis SN-044 verlangt auf Seite 8 zweierlei zugleich: die PIN der eingesetzten
+Karte ist **vor dem Einsetzen auf 0000 zu ändern**, und die **PIN-Abfrage muss aktiviert
+bleiben**. Die LED-Liste auf Seite 11 bestätigt, dass das Gerät genau diesen Wert erwartet
+(„Blinkt rot/grün: PIN ist nicht 0000").
+
+**Die Fragen:** Gilt diese Vorgabe für aktuelle Geräte beider Generationen unverändert?
+Akzeptiert das Gerät alternativ eine frei gewählte PIN oder eine deaktivierte PIN-Abfrage?
+Und ist die Kombination – feste, herstellerseitig vorgegebene Geheimzahl bei zugleich
+aktivierter Abfrage – so beabsichtigt?
+
+**Warum das drängt:** Eine öffentliche, barrierefreie Anleitung, die zum Setzen einer
+allgemein bekannten PIN auffordert, muss diesen Schritt begründen und seine Tragweite
+benennen können. Solange die Vorgabe nicht bestätigt ist, nennt die Webanleitung sie nicht.
+Der Punkt gehört zusätzlich in den sicherheitstechnischen Review.
+
+_Beleg: Seitenrecords DOC-BMA-SN044, S. 8 und 11_
 
 ---
 
@@ -328,6 +475,12 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Google-Play-Abzeichen so grob gerastert, dass es auch bei 900 dpi unlesbar bleibt                                                     | DSC-051, S. 14                 |
 | Vier Fragen zu den Ausgängen, die die Quelle gar nicht beantwortet (Empfänger, Grenzwerte, Abbruch, Zustand nach Neustart)            | DSC-052, S. 23                 |
 | Sprachmarke des dänischen Teils ist eine zusammengesetzte Flagge (links norwegisch, rechts dänisch, plus Diagonalstrich)              | DSC-053, S. 1 und 101          |
+| **bis SN-044:** drei falsche Querverweise in Kapitel 2 (2.5 statt 2.6, 2.3 statt 2.5, 2.4 statt 2.6) – alle drei zu niedrig           | DSC-055, S. 10, 12, 13         |
+| **bis SN-044:** zweimal auf eine „Tabelle Abfragecodes" verwiesen, die es nicht gibt; die Vorseite hat an der Stelle eine Leerfläche  | DSC-057, S. 9 und 10           |
+| **bis SN-044:** das Sternzeichen des Abfragecodes steht im Seitenbild, fehlt aber in der Textebene – der Code wäre unbrauchbar        | DSC-058, S. 10                 |
+| **bis SN-044:** kein einziger Warnhinweis trägt ein Signalwort; ein ESD-Symbol ohne jeden Begleittext ist alleinige Warnungsträgerin  | DSC-063, S. 6–16               |
+| **bis SN-044:** die gekoppelte Alarmanlage heißt „WiPro „all in one"", ab SN-045 „WiPro III safe.lock" – verschiedene Produktnamen    | DSC-065, S. 6 und 14           |
+| **bis SN-044:** Gerätetexte ersetzen Umlaute durch Vokal plus e („Ungueltiger", „Tuer") – Zeichensatzgrenze, vor Übersetzung schützen | DSC-054, S. 13                 |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

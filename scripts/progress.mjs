@@ -120,9 +120,16 @@ const block = lines.join('\n');
 // Quelltext nie – der replace liefe stillschweigend ins Leere.
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 if (md.includes(START) && md.includes(END)) {
-  const before = md;
-  md = md.replace(new RegExp(`${escapeRegExp(START)}[\\s\\S]*?${escapeRegExp(END)}`), block);
-  if (md === before && before !== block) {
+  // Ersetzung ueber eine Funktion, nicht ueber einen String: in einem
+  // String-Replacement waeren $&, $1 und $` Sonderzeichen. Der Block enthaelt mit
+  // next_action freien Text aus progress-input.json, in dem ein $ vorkommen kann.
+  md = md.replace(new RegExp(`${escapeRegExp(START)}[\\s\\S]*?${escapeRegExp(END)}`), () => block);
+  // Geprueft wird, ob der Block jetzt dort steht - nicht, ob sich die Datei geaendert
+  // hat. Ein wiederholter Lauf mit unveraenderten Daten schreibt denselben Block und
+  // laesst die Datei zu Recht unberuehrt; die fruehere Bedingung (md === before)
+  // hielt genau diesen Normalfall faelschlich fuer einen Fehlschlag und brach die
+  // vorgeschriebene Abschlussreihenfolge progress -> format -> check ab.
+  if (!md.includes(block)) {
     console.error('FEHLER: Der Fortschrittsblock in PROJECT_STATUS.md wurde nicht ersetzt.');
     process.exit(1);
   }
