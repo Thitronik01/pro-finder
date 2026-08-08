@@ -86,7 +86,7 @@ Das Muster ist stabil und wiederholt sich erwartbar:
   U+0003 – zeichenzählende Prüfungen halten sie fälschlich für zugänglich.
 - **Der deutsche Master ist nicht fehlerfrei.** Die Extraktion der Aufgaben hat allein im
   deutschen Teil drei falsche Querverweise, mehrere Selbstwidersprüche und eine
-  unerklärte Berechtigungsregel gefunden (DSC-040 bis DSC-052). „Geprüfter deutscher
+  unerklärte Berechtigungsregel gefunden (DSC-040 bis DSC-053). „Geprüfter deutscher
   Master" heißt nicht „übernommener deutscher Text".
 
 Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, technische
