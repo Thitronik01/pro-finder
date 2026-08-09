@@ -29,15 +29,15 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell rund 20 %): 65 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell rund 21 %): 50 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-IBA-SN045**, zuerst Seiten 111–119 (Rest Dänisch), danach 145–150, 173–190,
-  198–220, 233–240 und 247. Seiten 101–110 und 120–123 des dänischen Teils sind bereits
-  geprüft. Nach 111–119 den vollständigen dänischen Befehlssatz in die vorhandene erste
-  Synthese-Auswertung einordnen; BLK-005 bleibt bestehen.
+- **DOC-IBA-SN045**, zuerst Seiten 173–190, danach 198–220, 233–240 und 247. Seite 173
+  schließt Italien ab; Seiten 174–190 schließen zusammen mit den bereits geprüften Seiten
+  191–197 den niederländischen Teil ab. Die genaue Prüfroute steht unter „First action"
+  in `HANDOFF.md`; BLK-005 bleibt bestehen.
 
 Vorgehen je Batch von 9–10 Seiten:
 
@@ -70,13 +70,15 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 258 von 323 Seiten. DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig. Bei
-DOC-IBA-SN045 sind die Sprachteile Deutsch, Englisch, Französisch und Tschechisch
-vollständig; vom dänischen Teil stehen 14 von 23 PDF-Seiten. Das Muster ist stabil und
-wiederholt sich erwartbar:
+Geprüft sind 273 von 323 Seiten. DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig. Bei
+DOC-IBA-SN045 sind die Sprachteile Deutsch, Englisch, Französisch, Tschechisch, Dänisch
+und Spanisch vollständig; Italienisch steht einschließlich Deckblatt bei 23 von 24
+PDF-Seiten. Das Muster ist stabil und wiederholt sich erwartbar:
 
-- **Jede Sprache hat einen eigenen SMS-Befehlssatz.** Tabelle in `DISCREPANCIES.md`
-  DSC-033. Neue Sätze dort eintragen.
+- **Sechs geprüfte Sprachen ergeben sechs unterschiedliche SMS-Befehlsprofile.** Spanisch
+  mischt `valla apagada` mit englischen Kapitelbefehlen und einer englischen Hilfe-SMS.
+  Tabelle in `DISCREPANCIES.md` DSC-033. Neue Sätze oder weitere Übernahmen dort
+  eintragen.
 - **Vorlagenfehler** treten in allen Fassungen auf: unübersetzte Bildbeschriftung
   „GPS-Antenne (Optional)", unerklärtes rotes X in der Anschlussabbildung, zerrissene
   Wörter in Tabellenköpfen, Wortdopplung „via SMS via SMS", falscher Verweis auf 5.4

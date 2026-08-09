@@ -6213,129 +6213,520 @@
     },
     {
       "page": 111,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["da"],
+      "summary": "Intern 'Side 10 af 22'. Abschnitte 1.5.2 'Tilslutning af GPS-antenne' und 1.5.3 'Kontrol af GPS-antennens funktion': spannungsfreier Antennenanschluss, mindestens 13,5 V für fünf Minuten zum Speichern der Satellitendaten und GPS-Diagnose in Schalterstellung F. Eine dreizeilige Tabelle ordnet Rot, gelbes Blinken und Grün den Diagnoseständen zu. Nach dem Zurückschalten bedeutet Rot dagegen eine fehlende SIM-Karte. Bei GPS-Reflexionen in Gebäuden wird das Deaktivieren von Geofencing mit dem dänischen Befehl 'fence fra' beschrieben. Keine lesbare Textebene.",
+      "headings": ["1.5.2 Tilslutning af GPS-antenne", "1.5.3 Kontrol af GPS-antennens funktion"],
+      "technical_values": [
+        {
+          "value": "über 13,5 V für mindestens fünf Minuten",
+          "context": "Betriebsspannung und Mindestdauer zum Empfangen und Speichern aktueller Satellitendaten nach der Installation",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellung F",
+          "context": "GPS-Diagnose; Rot = GPS nicht angeschlossen, Gelb blinkend = Empfang ohne gültige Position, Grün = Einbauposition in Ordnung",
+          "safety_critical": true
+        },
+        {
+          "value": "fence fra",
+          "context": "Dänisches Quellenzitat zum Deaktivieren von Geofencing bei Reflexionen; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige GPS-Diagnosetabelle mit LED-Farbe/-Blinkart und Bedeutung",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "GPS-Empfang muss während der Diagnose gewährleistet sein; Fahrzeug nicht in Halle oder unter Dach abstellen.",
+        "GPS-Reflexionen können Positionsfehler und falsche Diebstahlmeldungen auslösen."
+      ],
+      "accessibility_issues": [
+        "Zwei der drei Diagnosezustände unterscheiden sich am Gerät ausschließlich über dauerhaftes Rot beziehungsweise Grün; eine farbunabhängige Geräteanzeige ist nicht dokumentiert (DSC-047).",
+        "Die sichtbare Tabelle und der vollständige Anleitungstext fehlen in der lesbaren Textebene.",
+        "Der Befehl steht nur als normaler Fließtext in Anführungszeichen, nicht semantisch als Eingabe ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Rot bedeutet in der Diagnose 'GPS nicht angeschlossen', unmittelbar nach dem Zurückschalten dagegen 'keine SIM-Karte eingesetzt'; die Kontextabhängigkeit wird nur nacheinander erklärt, nicht gegenübergestellt.",
+        "'fence fra' ist der fünfte sprachspezifische Geofencing-Ausschaltbefehl der Generation ab SN-045 und erweitert DSC-033/BLK-005."
+      ],
+      "terminology_findings": [
+        "'fence fra' für Geofencing aus; 'driftstilstandskontakten' für Betriebsartenschalter."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; Werte, LED-Tabelle und Befehl gegen DE/EN/FR/CS gehalten.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 112,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["da"],
+      "summary": "Intern 'Side 11 af 22'. Kapitel 2 beginnt mit 2.1 'Konfiguration af SIM-kortet' und 2.2 'Sætte SIM-kortet ind i Pro-finder-modulet'. Verlangt wird eine aktivierte Nano-SIM für 2G/3G/4G mit SMS, Telefonie und Daten; Multi-Operator-SIM wird ausgeschlossen, M2M empfohlen, bei 4G sei keine Guthabenabfrage möglich. Vier Konfigurationsschritte deaktivieren PIN-Abfrage, Mailbox/Weiterleitungen und Komfortfunktionen und aktivieren Roaming. Roter iPhone/iMessages-Hinweis sowie Platinenfoto mit alleinstehendem ESD-Warnsymbol. Keine lesbare Textebene.",
+      "headings": [
+        "2 Programmering og konfiguration",
+        "2.1 Konfiguration af SIM-kortet",
+        "2.2 Sætte SIM-kortet ind i Pro-finder-modulet"
+      ],
+      "technical_values": [
+        {
+          "value": "Nano-SIM; 2G/3G/4G (4G/LTE)",
+          "context": "Gefordertes SIM-Format und unterstützte Mobilfunkgenerationen",
+          "safety_critical": true
+        },
+        {
+          "value": "PIN-Abfrage deaktivieren",
+          "context": "Erster Konfigurationsschritt vor dem Einsetzen in das Modul",
+          "safety_critical": true
+        },
+        {
+          "value": "Roaming aktivieren",
+          "context": "Vierter Konfigurationsschritt, sofern nicht voreingestellt",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Platinenfoto mit SIM-Halter, SIM-Piktogramm und ESD-Warnsymbol",
+          "has_text_equivalent": false,
+          "relies_on": "Position im Foto und Warnsymbol; kein erklärender ESD-Text"
+        }
+      ],
+      "warnings_found": [
+        "Prepaid-Karte zum Aufladen nicht aus dem Gerät nehmen.",
+        "Bei iPhone-Nutzung iMessages vor allen vier Konfigurationsschritten deaktivieren.",
+        "ESD-Warnsymbol am Platinenfoto ohne Begleittext."
+      ],
+      "accessibility_issues": [
+        "Der erste lange Empfehlungskasten ist nur über rote Schrift und blaue Linien hervorgehoben, ohne Signalwort.",
+        "Das ESD-Piktogramm ist alleiniger Warnungsträger und besitzt keine Textalternative.",
+        "Alle sicherheitsrelevanten SIM-Schritte fehlen in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Die neuere Generation verlangt das Deaktivieren der SIM-PIN-Abfrage; die ältere Generation fordert stattdessen aktivierte PIN-Abfrage mit PIN 0000. Generationswerte dürfen nicht vermischt werden.",
+        "Die Formulierung 'udelukkende er kompatibelt med 2G/3G/4G' ist ohne muttersprachlichen Review nicht als technische Einschränkung freizugeben."
+      ],
+      "terminology_findings": ["'Nano-SIM-kort', 'M2M-kort' und 'iMessages-funktionen'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; SIM-Werte, vier Schritte und Warnungsträger visuell geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; technische Struktur und auffällige Formulierungen dokumentiert."
     },
     {
       "page": 113,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["da", "en"],
+      "summary": "Intern 'Side 12 af 22'. Abschnitte 2.3 bis 2.5: Download der THITRONIK-App über App-Store- und Google-Play-QR-Code, Aktivierung per App oder Programmier-SMS und Speichern der Pro-finder-Nummer. Der Fließtext empfiehlt den Namen 'ALARM', der rote Tipp 'AAlarm'; der bekannte Widerspruch aus DSC-016 steht damit auch im Dänischen. Als Landesvorwahl wird +45 für Dänemark genannt. Keine lesbare Textebene.",
+      "headings": [
+        "2.3 Download af THITRONIK® appen",
+        "2.4 Aktivering af Pro-finder",
+        "2.5 Gemme Pro-finder-nummeret"
+      ],
+      "technical_values": [
+        {
+          "value": "+45",
+          "context": "Beispiel-Landesvorwahl für Dänemark beim Speichern der Geräte-Rufnummer",
+          "safety_critical": false
+        },
+        {
+          "value": "kurz rot, danach gelb-grün blinkend; nach gespeicherter Programmier-SMS grün blinkend",
+          "context": "Beschriebene Status-LED-Folge bei Aktivierung ohne App",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Zwei QR-Codes mit App-Store- und Google-Play-Abzeichen",
+          "has_text_equivalent": false,
+          "relies_on": "QR-Code und Store-Logo; keine ausgeschriebene Zieladresse, keine Link-Annotation"
+        }
+      ],
+      "warnings_found": [
+        "Roter Tipp empfiehlt 'AAlarm' für die alphabetisch erste Position im Adressbuch."
+      ],
+      "accessibility_issues": [
+        "Die beiden App-Ziele sind ausschließlich als QR-Codes angegeben; es gibt weder zugängliche Links noch ausgeschriebene URLs oder Textalternativen.",
+        "Status-LED-Folgen setzen Farbwahrnehmung voraus und sind nicht semantisch strukturiert.",
+        "Der vollständige sichtbare Text fehlt in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "'ALARM' im Fließtext gegen 'AAlarm' im Tipp für denselben Zweck; dänische Bestätigung von DSC-016.",
+        "Der Abschnitt verweist mit 'som vist ovenfor' auf das SIM-Foto der vorherigen Seite statt auf eine Abbildung derselben Seite.",
+        "Der Google-Play-Bildbestandteil bleibt grob gerastert, während das App-Store-Abzeichen schärfer ist (Vorlagenbefund DSC-051)."
+      ],
+      "terminology_findings": ["'Download af THITRONIK® appen' und 'Aktivering af Pro-finder'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; ALARM/AAlarm-Ausschnitt zusätzlich bei 400 dpi geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Navigation, Zahlen und sichtbarer Wortwiderspruch dokumentiert."
     },
     {
       "page": 114,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 13 af 22'. 2.6 erklärt Kosten bei Steuerung per SMS oder Anruf. 2.7 unterscheidet Hauptnummer, autorisierte und nicht autorisierte Zielrufnummern, bis zu zehn Nummern. 2.8 zeigt eine beschriftete Programmier-SMS mit drei Zielrufnummern, Smartphone-Zeichen S und Landesvorwahl +45; Leerzeichen dienen laut Text nur der Darstellung und dürfen nicht gesendet werden. Die Berechtigungszeichen Plus/Minus werden nicht erklärt. Keine lesbare Textebene.",
+      "headings": [
+        "2.6 Styre Pro-finder via SMS eller opkald",
+        "2.7 Forskellige destinationsnumre",
+        "2.8 Programmering af destinationsnumre"
+      ],
+      "technical_values": [
+        {
+          "value": "bis zu zehn Zielrufnummern",
+          "context": "Maximalzahl der speicherbaren Haupt-, autorisierten und nicht autorisierten Nummern",
+          "safety_critical": true
+        },
+        {
+          "value": "S vor der Landesvorwahl",
+          "context": "Smartphone-Kennzeichen für eine Positionsübertragung als anklickbaren Link; Syntax nur als Quellenbeleg",
+          "safety_critical": true
+        },
+        {
+          "value": "+45",
+          "context": "Beispiel-Landesvorwahl für Dänemark im Syntaxdiagramm",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige visuelle Gegenüberstellung der Zielrufnummernarten und Berechtigungen",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Programmier-SMS-Diagramm mit farbigem S, Unterstreichungen und Verbindungslinien zu drei Zielrufnummern und Landesvorwahl",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe, räumliche Linienführung und typografische Gruppierung"
+        }
+      ],
+      "warnings_found": [
+        "Leerzeichen im Diagramm dienen nur der Darstellung und dürfen in der SMS nicht verwendet werden."
+      ],
+      "accessibility_issues": [
+        "Das sicherheitsrelevante Syntaxdiagramm besitzt keine lineare Textalternative; Linien, Unterstreichungen und rotes S tragen die Zuordnung.",
+        "Die Berechtigungsstufen werden in einer rein visuellen Tabelle ohne maschinenlesbare Struktur erklärt.",
+        "Der gesamte Seiteninhalt fehlt in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Die Syntaxgrafik erklärt Landesvorwahl und Smartphone-S, nicht aber die Zeichen, die autorisierte und nicht autorisierte Nummern unterscheiden. Die Regel bleibt nur aus dem Beispiel der Folgeseite erschließbar (DSC-017/044, BLK-006).",
+        "Die Hauptnummer wird als erste gespeicherte Nummer beschrieben; eine explizite textliche Syntaxregel für ihre Kennzeichnung fehlt."
+      ],
+      "terminology_findings": ["'Hovednummer', 'autoriserede numre' und 'uautoriserede numre'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; Seitenfuß bei 500 dpi gegengeprüft und vollständig sichtbar.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Syntaxstruktur und Berechtigungslogik dokumentiert."
     },
     {
       "page": 115,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 10,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 4,
+      "content_type": "tabelle",
+      "languages": ["da"],
+      "summary": "Intern 'Side 14 af 22'. Tabelle mit drei Beispielen verschiedener Programmier-SMS: nur Hauptnummer, Hauptnummer plus autorisierte Nummer sowie Smartphone-Hauptnummer plus nicht autorisierte Nummer. Nur das dritte Beispiel macht das Minuszeichen für die unautorisierte Nummer sichtbar. Danach 2.9 'Slet destinationsnumre': bei eingesetzter Nano-SIM Strom trennen, Schalter auf E, Strom wieder verbinden, gelb-grünes Blinken abwarten und Schalter zurückstellen; danach ist der gesamte Speicher leer. Nur vier Aufzählungszeichen sind lesbar extrahierbar, kein Wort.",
+      "headings": ["Eksempler på forskellige programmerings-SMS", "2.9 Slet destinationsnumre"],
+      "technical_values": [
+        {
+          "value": "Schalterstellung E",
+          "context": "Löscht nach dem beschriebenen Neustart den gesamten Zielrufnummernspeicher",
+          "safety_critical": true
+        },
+        {
+          "value": "gelb-grün blinkende Status-LED",
+          "context": "Abbruch-/Fortsetzungsmerkmal vor dem Zurückstellen des Betriebsartenschalters",
+          "safety_critical": true
+        },
+        {
+          "value": "Plus für autorisiert, Minus für nicht autorisiert nur aus Beispielen erschließbar",
+          "context": "Berechtigungssteuernde Syntax, im Fließtext nicht erklärt",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Tabelle mit drei Programmier-SMS-Beispielen und Zielrufnummernrollen",
+          "has_headers": true,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "Nano-SIM muss beim Löschvorgang eingesetzt sein.",
+        "Der Ablauf löscht alle Zielrufnummern; die vollständige Wirkung steht erst nach den Schritten im Fließtext."
+      ],
+      "accessibility_issues": [
+        "Nur vier Bullet-Glyphen sind extrahierbar; Tabelle, Warnung und Löschschritte fehlen vollständig in der Textebene.",
+        "Die Berechtigungsregel muss visuell aus Plus- und Minuszeichen in langen Zeichenfolgen erschlossen werden.",
+        "Gelb-grünes Blinken ist ein farbabhängiges Ablaufkriterium ohne alternative Geräteanzeige."
+      ],
+      "discrepancies": [
+        "Die sicherheitsrelevante Bedeutung des Minuszeichens wird nicht ausgeschrieben; dänische Bestätigung von DSC-017/044 und BLK-006.",
+        "Der Warnkasten nennt nur die eingesetzte SIM, nicht bereits die irreversible Wirkung auf den gesamten Zielrufnummernspeicher (DSC-050)."
+      ],
+      "terminology_findings": [
+        "'Slet destinationsnumre' für Zielrufnummern löschen; 'hukommelsen er nu tom' für vollständig geleerten Speicher."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; Tabelle, Warnkasten und alle vier Löschschritte visuell geprüft. Vier lesbare Zeichen sind ausschließlich Bullet-Glyphen.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Berechtigungs- und Löschlogik dokumentiert."
     },
     {
       "page": 116,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["da"],
+      "summary": "Intern 'Side 15 af 22'. Kapitel 3 'Driftstilstande (status-LED)' zeigt neun LED-Zustände als farbige Balkenmuster mit dänischer Erklärung: Netzsuche ohne Zielnummer, kein GSM-Signal, Modemverbindung, SIM fehlt/defekt, PIN aktiv, letzte SMS nicht versendet, SMS-Verkehr sowie eingebucht mit oder ohne Zielnummern. Roter Abschlusshinweis: Im Normalbetrieb blinkt die LED grün. Keine lesbare Textebene.",
+      "headings": ["3 Driftstilstande (status-LED)"],
+      "technical_values": [
+        {
+          "value": "neun Status-LED-Zustände",
+          "context": "Kombinationen aus Rot, Gelb und Grün sowie dauerhaftem Leuchten, Blinken und Wechselblinken",
+          "safety_critical": true
+        },
+        {
+          "value": "grün blinkend",
+          "context": "Normalbetrieb nach abgeschlossener Installation und Programmierung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Neunzeilige visuelle LED-Zustandsliste mit Balkenmustern und Bedeutungen",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Farbige Balkenmuster visualisieren Dauerlicht, Blinken und Wechselblinken in Rot, Gelb und Grün",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und räumliche Abfolge; die sichtbaren dänischen Erklärungen sind nicht maschinenlesbar"
+        }
+      ],
+      "warnings_found": ["Roter Hinweis nennt grün blinkend als Sollzustand des Normalbetriebs."],
+      "accessibility_issues": [
+        "Mehrere Gerätezustände teilen dasselbe Blinkmuster und unterscheiden sich ausschließlich durch die LED-Farbe; das Gerät bietet keine dokumentierte Alternative.",
+        "Die farbigen Balken besitzen keine Textalternative, und die sichtbaren Erklärungen fehlen in der Textebene.",
+        "Der Sollzustand ist nur durch rote Hervorhebung als Abschlussinformation markiert."
+      ],
+      "discrepancies": [
+        "Die Statusanzeige bestätigt auch im dänischen Teil die geräteseitige Farbabhängigkeit; keine neue farbunabhängige Kennzeichnung."
+      ],
+      "terminology_findings": [
+        "'Blinker', 'lyser' und Farbnamen beschreiben die sichtbaren LED-Muster; 'driftstilstande' für Betriebszustände."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; alle neun Balkenmuster und zugehörigen Bedeutungen einzeln geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; LED-Struktur und sichtbare Begriffe dokumentiert."
     },
     {
       "page": 117,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["da", "en"],
+      "summary": "Intern 'Side 16 af 22'. Beginn von Kapitel 4 'Rapporter, beskeder og advarsler': Erklärung der Felder GPS, UTC, Pos und Hastighed sowie dänisch lokalisierte SMS-Bilder für Statusrapport, Tyverimeddelelse und Spændingsadvarsel. Der Diebstahlradius beträgt ca. 900 m; unter 11,2 V wechselt Pro-finder in Standby, über 12,5 V zurück. Die Bilder verwenden dänische Meldungstexte, aber englische Zustandsfelder wie 'WiPro ON', 'Fence ON' und 'A/B OFF'. Alle sichtbaren Kartenadressen sind blau/unterstrichen, besitzen aber keine Link-Annotation. Keine lesbare Textebene.",
+      "headings": [
+        "4 Rapporter, beskeder og advarsler",
+        "Statusrapport",
+        "Tyverimeddelelse",
+        "Spændingsadvarsel"
+      ],
+      "technical_values": [
+        {
+          "value": "ca. 900 m",
+          "context": "Radius der Diebstahlmeldung bei aktivierter WiPro III (safe.lock)",
+          "safety_critical": true
+        },
+        {
+          "value": "unter 11,2 V / über 12,5 V",
+          "context": "Schwellen für Standby und Rückkehr in den Normalbetrieb; nicht in Betriebsart B",
+          "safety_critical": true
+        },
+        {
+          "value": "U1 13,53 V; U2-U5 0 V; A/B OFF",
+          "context": "Beispielwerte des Statusberichts; nicht als reale Gerätedaten übernehmen",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei schwarze SMS-Sprechblasen mit Statusbericht, Diebstahlmeldung und Spannungswarnung",
+          "has_text_equivalent": false,
+          "relies_on": "eingebetteter Bildtext einschließlich Feldnamen, Werte und Kartenadressen"
+        }
+      ],
+      "warnings_found": [
+        "Diebstahlmeldung ist still; Blinker und Sirene werden nicht automatisch aktiviert.",
+        "Dauerhafte Unterspannung unter 11,2 V führt zu Standby; Rückkehr erst über 12,5 V."
+      ],
+      "accessibility_issues": [
+        "Die drei tatsächlichen Geräte-SMS sind reine Bilder ohne Textalternative und fehlen vollständig in der Textebene.",
+        "Blau und Unterstreichung signalisieren Kartenlinks, die im PDF nicht interaktiv sind (DSC-082).",
+        "Felddefinitionen sind zweispaltig nur visuell ausgerichtet, ohne semantische Definitionsliste."
+      ],
+      "discrepancies": [
+        "Dänische Gerätemeldungen sind grundsätzlich lokalisiert, enthalten im Statusbild aber englische Zustandsfelder 'ON/OFF'; die Ausgabesprache ist feldweise gemischt.",
+        "Das Bild schreibt 'Spænding under 11.2 V' mit Dezimalpunkt, der Fließtext 11,2 V mit Komma; dänische Bestätigung von DSC-046.",
+        "Die sichtbaren Kartenadressen sind anders als erwartet nicht anklickbar; sprachübergreifender Befund DSC-082."
+      ],
+      "terminology_findings": [
+        "'Tyverimeddelelse' für Diebstahlmeldung, 'Spændingsadvarsel' für Spannungswarnung, 'Hastighed' für Geschwindigkeit."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; Werte und Bildsprache gegen DE/EN/FR/CS geprüft, Link-Annotationen mit PyMuPDF objektbezogen gezählt (0).",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; technische Werte und sichtbare Lokalisierung dokumentiert."
     },
     {
       "page": 118,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 17 af 22'. Fortsetzung von Kapitel 4 mit sechs dänischen SMS-Bildern: Positions-SMS, Hjælp-SMS, Indbrudsmeddelelse, Gasalarm, Manuel alarm und Stjålet tilbehør. Die Hilfe-SMS nennt 'AKTIVERET, DEAKTIVERET, STATUS, POS' und belegt einen fünften eigenständigen Befehlssatz ab SN-045. Bei Einbruch, Gas und manuellem Alarm wird die Hauptnummer zusätzlich angerufen. Fünf blau unterstrichene Kartenadressen sind sichtbar, aber keine besitzt eine Link-Annotation. Keine lesbare Textebene.",
+      "headings": [
+        "Positions-SMS til smartphones",
+        "Hjælp-SMS",
+        "Indbrudsmeddelelse",
+        "Gasalarm",
+        "Manuel alarm",
+        "Stjålet tilbehør"
+      ],
+      "technical_values": [
+        {
+          "value": "AKTIVERET, DEAKTIVERET, STATUS, POS",
+          "context": "Großgeschriebene Quellenzitate aus der dänischen Geräte-Hilfe-SMS; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "Hauptnummer wird zusätzlich angerufen",
+          "context": "Zusätzliche Alarmierung nach Einbruch-, Gas- und manuellem/Panik-Alarm",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Sechs schwarze SMS-Sprechblasen mit dänischen Meldungstexten und fünf sichtbaren Kartenadressen",
+          "has_text_equivalent": false,
+          "relies_on": "eingebetteter Bildtext; weder SMS-Inhalt noch Kartenadresse sind in der Textebene vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "Nach Einbruch-, Gas- und manuellem Alarm wird zusätzlich die Hauptnummer angerufen; rot und fett hervorgehoben."
+      ],
+      "accessibility_issues": [
+        "Alle sechs Geräte-SMS einschließlich der einzigen dänischen Hilfe-Befehlsliste sind Bilder ohne Textalternative.",
+        "Fünf blau unterstrichene Kartenadressen sehen wie Links aus, sind aber nicht fokussierbar oder anklickbar (DSC-082).",
+        "Die zusätzlichen Anrufhinweise werden nur durch rote Fettschrift hervorgehoben."
+      ],
+      "discrepancies": [
+        "Fünfter eigenständiger Hilfe-SMS-Satz: AKTIVERET/DEAKTIVERET/STATUS/POS; erweitert DSC-033 und die Synthese-Auswertung.",
+        "Die Hilfe-SMS nennt AKTIVERET/DEAKTIVERET, während Abschnitt 5.1 die Alarmanlagen-Umschaltung trotz SMS-Überschrift ausschließlich per Anruf beschreibt; dänische Bestätigung der Lücke aus DSC-041.",
+        "'Ugyldig kommando! Mulig:' steht im Bild vor mehreren möglichen Befehlen; die mutmaßlich fehlende Pluralform bleibt dem dänischen Review vorbehalten.",
+        "Keine der fünf sichtbaren Kartenadressen ist als PDF-Link annotiert (DSC-082)."
+      ],
+      "terminology_findings": [
+        "'Hjælp-SMS' für Hilfe-SMS; 'hovednummeret' für Masternummer; 'Stjålet tilbehør' für gestohlenes Zubehör."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; Hilfe-SMS bei 500 dpi nachgerendert. Link-Annotationen mit PyMuPDF geprüft (0 trotz fünf sichtbarer URLs).",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Befehlssatz, Meldungsstruktur und auffällige Einzelwörter dokumentiert."
     },
     {
       "page": 119,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 18 af 22'. Kapitel 5 'Funktioner'. 5.1 'Styre alarmsystemet via SMS' beschreibt trotz der Überschrift ausschließlich einen Anruf in Betriebsart 2 oder 3, der die WiPro III umschaltet; nur autorisierte Nummern erhalten Zugriff. 5.2 Geofencing nennt 900 m, Schaltung über Pin 3 in Stellung 8/B und sonst die dänischen SMS-Quellenzitate 'fence til'/'fence fra'. Roter Hinweis koppelt Geofencing automatisch an den angeschlossenen/abgeschalteten Zustand der WiPro III. Keine lesbare Textebene.",
+      "headings": ["5 Funktioner", "5.1 Styre alarmsystemet via SMS", "5.2 Geofencing"],
+      "technical_values": [
+        {
+          "value": "Betriebsarten 2 und 3",
+          "context": "In diesen Stellungen schaltet ein Anruf die WiPro III in den nächsten Zustand; nur autorisierte Nummern",
+          "safety_critical": true
+        },
+        {
+          "value": "900 Meter",
+          "context": "Dänischer Geofencing-Radius um den ursprünglichen Standort",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellung 8/B über Pin 3; sonst SMS",
+          "context": "Hardware- beziehungsweise nach Text befehlsbasierte Geofencing-Steuerung",
+          "safety_critical": true
+        },
+        {
+          "value": "fence til / fence fra",
+          "context": "Dänische Quellenzitate für Geofencing ein/aus; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Nur autorisierte Nummern haben Zugriff auf Pro-finder.",
+        "Bei angeschlossener WiPro III wird Geofencing automatisch aktiviert und beim Abschalten automatisch deaktiviert."
+      ],
+      "accessibility_issues": [
+        "Die rote Berechtigungs- und Kopplungsinformation ist nur visuell als Warnkasten ausgezeichnet.",
+        "Kursive Befehle sind nicht semantisch als einzugebender Text markiert.",
+        "Der gesamte sichtbare Funktions- und Sicherheitstext fehlt in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Überschrift 5.1 kündigt SMS-Steuerung an, der Abschnitt beschreibt nur einen Anruf; dänische Bestätigung von DSC-041.",
+        "fence til/fra bildet neben DE, EN, FR und CS einen fünften Sprachsatz ab SN-045 (DSC-033/BLK-005).",
+        "Die Berechtigungsregel sagt, nur autorisierte Nummern hätten Zugriff, während die Quelle die dafür entscheidende Plus-/Minus-Syntax nicht erklärt (BLK-006)."
+      ],
+      "terminology_findings": [
+        "'fence til'/'fence fra' für Geofencing ein/aus; 'autoriserede numre' für berechtigte Nummern."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 25, 2026-08-09, PNG-Rendering 150 dpi; Geofencing-Abschnitt bei 400 dpi nachgerendert und gegen DE/EN/FR/CS gehalten.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Funktionslogik, Werte und Quellenzitate dokumentiert."
     },
     {
       "page": 120,
@@ -8300,87 +8691,352 @@
     },
     {
       "page": 145,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["es", "en"],
+      "summary": "Intern 'Página 21 de 24'. Kapitel 5 beginnt mit 5.1 'Control del sistema de alarma por SMS'; der Text beschreibt jedoch ausschließlich die Steuerung per Anruf von einer gespeicherten Zielnummer. Abschnitt 5.2 'Activar/desactivar el Geofencing mediante SMS' nennt einen Radius von etwa 900 m, die automatische Kopplung an WiPro III (safe.lock), die Schalterstellungen 8 und B für eine Aktivierung über Pin 3 sowie die englischen Befehle 'fence on' und 'fence off'. Keine lesbare Textebene.",
+      "headings": [
+        "5 Control del Pro-finder",
+        "5.1 Control del sistema de alarma por SMS",
+        "5.2 Activar/desactivar el Geofencing mediante SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "aproximadamente 900 m",
+          "context": "Radius um den aktuellen Standort bei Aktivierung des Geofencing",
+          "safety_critical": true
+        },
+        {
+          "value": "fence on",
+          "context": "Englisches Quellenzitat zum Aktivieren des Geofencing in der spanischen Fassung; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "fence off",
+          "context": "Englisches Quellenzitat zum Deaktivieren des Geofencing in der spanischen Fassung; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "posiciones 8 y B; pin 3",
+          "context": "Betriebsarten und Messeingang für die automatische Geofencing-Steuerung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Roter Nota-Block: Bei mit WiPro verbundenem Pro-finder wird Geofencing automatisch mit dem Scharf-/Unscharfschalten aktiviert beziehungsweise deaktiviert."
+      ],
+      "accessibility_issues": [
+        "Die Überschrift 5.1 verspricht SMS-Steuerung, der Abschnitt erklärt ausschließlich Anrufsteuerung; diese falsche Erwartung ist für Nutzer assistiver Technik besonders schwer auflösbar.",
+        "Der vollständige Anleitungstext einschließlich der sicherheitsrelevanten Befehle fehlt in der lesbaren Textebene.",
+        "Hinweise werden überwiegend durch rote Schrift und farbige Rahmen strukturiert."
+      ],
+      "discrepancies": [
+        "Überschrift 5.1 nennt 'por SMS', der Abschnitt beschreibt aber nur einen Anruf; spanische Bestätigung von DSC-041.",
+        "Die spanische Fassung verwendet für Geofencing unverändert die englischen Befehle 'fence on' und 'fence off'.",
+        "Fehlendes Leerzeichen in 'posición 8 y Bdel interruptor de modo de funcionamiento'."
+      ],
+      "terminology_findings": [
+        "'Geofencing' bleibt englisch; die ausführenden SMS-Befehle sind ebenfalls englisch."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 26, 2026-08-09, PNG-Rendering 150 dpi; Radius, Betriebsarten, Befehle und Kapitelbezug gegen DE/EN/FR/CS/DA gehalten.",
+      "language_note": "Spanisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 146,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["es", "en"],
+      "summary": "Intern 'Página 22 de 24'. Abschnitt 5.3 'Consulta de estado mediante SMS' nennt den Befehl 'status' für einen Statusbericht. Abschnitt 5.4 'Consulta de posición con el smartphone' nennt 'position'; die Antwort enthält einen Kartenlink, Geschwindigkeit und UTC-Zeit. Abschnitt 5.5 'Salidas de control por SMS' leitet zur Steuerung der Ausgänge A und B über. Die Befehle sind englisch und stimmen mit der englischen Fassung überein. Keine lesbare Textebene.",
+      "headings": [
+        "5.3 Consulta de estado mediante SMS",
+        "5.4 Consulta de posición con el smartphone",
+        "5.5 Salidas de control por SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "status",
+          "context": "Englisches Quellenzitat zur Statusabfrage in der spanischen Fassung; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "position",
+          "context": "Englisches Quellenzitat zur Positionsabfrage in der spanischen Fassung; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Befehle sind nur typografisch als rote, fette und kursivierte Wörter hervorgehoben, nicht semantisch als Eingaben ausgezeichnet.",
+        "Der vollständige Seiteninhalt fehlt in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Die Hilfe-SMS auf PDF-Seite 144 nennt 'STATUS' und 'POS', der Fließtext hier dagegen 'status' und 'position'; Großschreibung und Zeichenfolge der Positionsabfrage weichen innerhalb derselben Sprachfassung ab.",
+        "Die spanische Fassung übernimmt die englischen Befehle statt lokalisierter Befehlswörter."
+      ],
+      "terminology_findings": [
+        "'Consulta de estado' und 'Consulta de posición' stehen neben den englischen Eingaben 'status' und 'position'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 26, 2026-08-09, PNG-Rendering 150 dpi; Befehlsschreibweisen mit der Hilfe-SMS auf PDF-Seite 144 verglichen.",
+      "language_note": "Spanisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 147,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["es", "en"],
+      "summary": "Intern 'Página 23 de 24'. Die Unterabschnitte 5.5.1 bis 5.5.3 beschreiben Ausgang A: 'a on' schaltet dauerhaft ein, 'a off' aus, 'a pulse' für eine Sekunde und 'a %min%' für 1 bis 120 Minuten. Für Ausgang B wird A durch B ersetzt. Abschnitt 5.6 'Activar el modo de programación' aktiviert beziehungsweise deaktiviert den Anlernmodus der WiPro III (safe.lock) mit den englischen Befehlen 'teach mode on' und 'teach mode off'. Keine lesbare Textebene.",
+      "headings": [
+        "5.5.1Conectar permanentemente la salida de control",
+        "5.5.2Conectar la salida de control durante 1 segundo",
+        "5.5.3Conectar la salida de control por un tiempo libremente seleccionable",
+        "5.6 Activar el modo de programación"
+      ],
+      "technical_values": [
+        {
+          "value": "a on / a off",
+          "context": "Englische Quellenzitate zum dauerhaften Ein- und Ausschalten von Ausgang A; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "a pulse",
+          "context": "Englisches Quellenzitat für einen einsekündigen Impuls an Ausgang A; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "a %min%; 1–120 minutos",
+          "context": "Englisches Quellenzitat und zulässiger Zeitbereich für Ausgang A; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        },
+        {
+          "value": "teach mode on / teach mode off",
+          "context": "Englische Quellenzitate für den Anlernmodus; nicht für den Content-Layer freigegeben (BLK-005)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Die Ausgänge dürfen laut rotem Hinweis nur im Rahmen der dokumentierten elektrischen Belastbarkeit verwendet werden; für Ausgang B ist A im Befehl durch B zu ersetzen."
+      ],
+      "accessibility_issues": [
+        "Sämtliche ausführbaren Befehle und Zeitgrenzen fehlen in der lesbaren Textebene.",
+        "Befehle werden ausschließlich visuell durch Rot, Fettdruck und Kursivschrift ausgezeichnet.",
+        "Die fehlenden Leerzeichen zwischen Unterkapitelnummer und Titel erschweren die maschinelle und visuelle Gliederung."
+      ],
+      "discrepancies": [
+        "Die drei Überschriften 5.5.1, 5.5.2 und 5.5.3 besitzen kein Leerzeichen zwischen Nummer und Titel.",
+        "Die spanische Fassung übernimmt für Ausgangssteuerung und Anlernmodus die englischen Befehle. Zusammen mit dem lokalisierten Geofencing-Ausschaltbefehl 'valla apagada' auf PDF-Seite 134 entsteht dadurch ein sprachintern gemischtes sechstes Dokumentationsprofil."
+      ],
+      "terminology_findings": [
+        "Spanischer Erklärungstext mit unveränderten englischen Eingaben 'a on/off/pulse/%min%' und 'teach mode on/off'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 26, 2026-08-09, PNG-Rendering 150 dpi; Ausgänge, Zeitgrenze und Anlernbefehle sprachübergreifend verglichen.",
+      "language_note": "Spanisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 148,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["es"],
+      "summary": "Intern 'Página 24 de 24'. Abschnitt 5.7 'Recuperar el vehículo' erklärt die Übernahme der Positionsdaten in Karten- oder Navigationssoftware. Besteht bei einer Abfrage kein GPS-Empfang, wartet der Pro-finder bis zu zehn Minuten und sendet andernfalls die zuletzt bekannte Position. Während eines Alarms und bei laufendem Motor wird die Position fortlaufend ermittelt; die UTC-Zeit gehört stets zur zuletzt empfangenen Position. Fünf Karten- beziehungsweise Navigationsansichten illustrieren die Schritte, besitzen aber keine Textalternative. Keine lesbare Textebene.",
+      "headings": ["5.7 Recuperar el vehículo"],
+      "technical_values": [
+        {
+          "value": "hasta diez minutos",
+          "context": "Maximale Wartezeit auf eine gültige GPS-Position vor dem Senden der letzten bekannten Position",
+          "safety_critical": true
+        },
+        {
+          "value": "UTC",
+          "context": "Zeitangabe bezieht sich immer auf die zuletzt empfangene Position",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Fünf Smartphone-Karten- und Navigationsansichten zur Übernahme einer Position",
+          "has_text_equivalent": false,
+          "relies_on": "Bildfolge, Kartenpins und Bedienoberflächen ohne Alternativtext oder strukturierte Schrittzuordnung"
+        }
+      ],
+      "warnings_found": [
+        "Bei fehlendem GPS-Empfang kann die gesendete Position bis zu zehn Minuten verzögert und anschließend veraltet sein.",
+        "Die UTC-Zeit gehört zur zuletzt empfangenen Position, nicht zwingend zum Zeitpunkt der Abfrage."
+      ],
+      "accessibility_issues": [
+        "Die fünf Karten- und Navigationsbilder besitzen keine Textalternative und keine nachvollziehbare textliche Zuordnung einzelner Bedienschritte.",
+        "Der vollständige Seiteninhalt fehlt in der lesbaren Textebene."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'hora UTC' wird als Zeit der zuletzt empfangenen Position präzisiert."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 26, 2026-08-09, PNG-Rendering 150 dpi; Wartezeit, UTC-Bezug und Bildfolge gegen die anderen Sprachfassungen geprüft.",
+      "language_note": "Spanisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 149,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "rechtliches",
+      "languages": ["es", "en", "de"],
+      "summary": "Intern 'Página 25 de 24', letzte Seite der spanischen Fassung. Kapitel 6 enthält 6.1 'Datos técnicos' mit 9–30 V Versorgung, etwa 37 mA bei Netzsuche, etwa 16–21 mA im Normalbetrieb, 2G/3G/4G (LTE), zehn Zielnummern, GPS/QZSS, zwei Ausgängen mit 12 V/500 mA, −10 bis +80 °C und Nano-SIM. 6.2 zeigt den Entsorgungshinweis mit WEEE-Symbol, 6.3 CE und Richtlinie 2014/53/UE. Die Links in 6.3 und 6.4 führen trotz spanischer Fassung auf '/en/support/downloads' und '/en'; genannt werden außerdem +49 4351 76744-112 und kontakt@thitronik.de. Keine lesbare Textebene.",
+      "headings": [
+        "6 Otros",
+        "6.1 Datos técnicos",
+        "6.2 Indicaciones para la eliminación",
+        "6.3 Conformidad/Directivas",
+        "6.4 Asistencia técnica"
+      ],
+      "technical_values": [
+        {
+          "value": "9–30 V",
+          "context": "Spannungsversorgung",
+          "safety_critical": true
+        },
+        {
+          "value": "aprox. 37 mA; aprox. 16–21 mA",
+          "context": "Stromaufnahme bei Netzsuche beziehungsweise im Normalbetrieb",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G (LTE)",
+          "context": "Sendefrequenz mit nachgelisteten Bändern",
+          "safety_critical": true
+        },
+        {
+          "value": "10",
+          "context": "Anzahl der Zielnummern",
+          "safety_critical": true
+        },
+        {
+          "value": "GPS/QZSS",
+          "context": "Schnittstellen",
+          "safety_critical": true
+        },
+        {
+          "value": "2 x 12 V/500 mA",
+          "context": "Ausgänge",
+          "safety_critical": true
+        },
+        {
+          "value": "−10 bis +80 °C",
+          "context": "Temperaturbereich",
+          "safety_critical": true
+        },
+        {
+          "value": "Nano SIM",
+          "context": "SIM-Format",
+          "safety_critical": true
+        },
+        {
+          "value": "2014/53/UE",
+          "context": "genannte Funkanlagenrichtlinie",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Liste der technischen Daten",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "WEEE-Piktogramm und CE-Zeichen",
+          "has_text_equivalent": true,
+          "relies_on": "Entsorgungs- und Konformitätstext steht sichtbar daneben, fehlt aber in der PDF-Textebene"
+        }
+      ],
+      "warnings_found": [
+        "Elektrogerät nicht im Hausmüll entsorgen; nationale Sammelstellen nutzen."
+      ],
+      "accessibility_issues": [
+        "Technische Daten, Entsorgung und Konformität fehlen vollständig in der lesbaren Textebene.",
+        "WEEE- und CE-Symbole besitzen keine PDF-Alternativtexte.",
+        "Die sichtbaren Webadressen sind nicht als Linkannotation hinterlegt."
+      ],
+      "discrepancies": [
+        "Die Fußzeile lautet 'Página 25 de 24': Die spanische Fassung besitzt eine zusätzliche 25. interne Seite, obwohl alle Seiten den Nenner 24 verwenden; Entsprechung zum französischen Off-by-one-Fehler DSC-021.",
+        "Die spanische Fassung verweist für Konformität und Support auf englische Pfade '/en/support/downloads' und '/en'.",
+        "Der deutschsprachige Kontakt 'kontakt@thitronik.de' und die deutsche Telefonnummer stehen unverändert im spanischen Supportabschnitt."
+      ],
+      "terminology_findings": ["Richtlinie lokal als '2014/53/UE', SIM-Format als 'Nano SIM'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 26, 2026-08-09, PNG-Rendering 150 dpi; Seitenzählung, technische Werte, Konformität und Supportziele geprüft.",
+      "language_note": "Spanisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 150,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "titel",
+      "languages": ["it"],
+      "summary": "Deckblatt der italienischen Fassung, ohne interne Seitenangabe. Dunkelblaue Seite mit THITRONIK-Logo und Leiterbahnmuster, Titel 'Pro-finder (dal numero di serie -045)', italienischer Flagge und 'Istruzioni per l'installazione e il funzionamento'. Unten steht der Adressblock der Thitronik GmbH in Eckernförde, Germany, mit Webadresse, E-Mail und Telefonnummer. Keine lesbare Textebene.",
+      "headings": [
+        "Pro-finder (dal numero di serie -045)",
+        "Istruzioni per l'installazione e il funzionamento"
+      ],
+      "technical_values": [
+        {
+          "value": "dal numero di serie -045",
+          "context": "Geltungsbereich der italienischen Anleitung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "THITRONIK-Logo, italienische Flagge und dekoratives Leiterbahnmuster",
+          "has_text_equivalent": false,
+          "relies_on": "Flagge zur visuellen Sprachkennzeichnung ohne Alternativtext"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Sprache wird zusätzlich nur durch eine Flagge ohne Alternativtext gekennzeichnet.",
+        "Titel und Kontaktangaben fehlen vollständig in der lesbaren Textebene.",
+        "Die sichtbaren Kontaktangaben sind nicht als Linkannotation hinterlegt."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "Italienischer Dokumenttitel 'Istruzioni per l'installazione e il funzionamento'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 26, 2026-08-09, PNG-Rendering 150 dpi; italienisches Teildeckblatt und Geltungsbereich geprüft.",
+      "language_note": "Italienisch nicht muttersprachlich beurteilbar; Struktur und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 151,

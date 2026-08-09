@@ -5,12 +5,12 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 31.7 %**
+**Gesamtfortschritt: 31.9 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 20 %        |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 21.1 %      |
 | Content-Modell und deutscher Master      | 20 %    | 52 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
@@ -23,23 +23,23 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 25 %        |
-| DOC-IBA-SN045 | 247    | 18.4 %      |
+| DOC-IBA-SN045 | 247    | 19.9 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 65 ungeprueften Seiten von DOC-IBA-SN045 abarbeiten. Als Erstes Seiten 111-119 (Rest des daenischen Teils vor den bereits geprueften Seiten 120-123) visuell pruefen; dabei Werte und Befehle gegen DE/EN/FR/CS halten, DSC-015/022/040 und BLK-005 beachten und dänische Sprachbefunde ohne muttersprachliche Freigabe kennzeichnen. Danach Seiten 145-150, 173-190, 198-220, 233-240 und 247. DOC-BMA-SN044 ist mit 72 von 72 Seiten komplett; die erste Synthese-Auswertung zum sprach- und generationsuebergreifenden Befehlsvergleich steht. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 50 ungeprueften Seiten von DOC-IBA-SN045 abarbeiten. Als Erstes Seiten 173-190 visuell pruefen: Seite 173 schliesst den italienischen Teil ab, Seiten 174-190 vervollstaendigen zusammen mit den bereits geprueften Seiten 191-197 den niederlaendischen Teil. Werte, Befehle, Querverweise, Bildsprache und Seitenzaehlung gegen DE/EN/FR/CS/DA/ES halten; DSC-021/022/033/040/047, BLK-005 und BLK-006 beachten und Sprachbefunde ohne muttersprachliche Freigabe kennzeichnen. Danach Seiten 198-220, 233-240 und 247. DOC-BMA-SN044 ist mit 72 von 72 Seiten komplett; die erste Synthese-Auswertung umfasst sechs vollstaendig gepruefte Sprachteile ab SN-045. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon **258 visuell geprüft** (`inspected`): DOC-IBA-SN045
-  Seiten 1–110, 120–144, 151–172, 191–197, 221–232 und 241–246, das vollständige
-  **DOC-BMA-SN044 mit 72 Seiten** und beide Kurzanleitungen. **Vier vollständige
-  Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch) von DOC-IBA-SN045 sind
-  geprüft; vom dänischen Teil sind 14 von 23 PDF-Seiten erfasst. Alle neuen Records sind
-  maschinell gegen die Original-PDF
+- 323 Seitenrecords angelegt; davon **273 visuell geprüft** (`inspected`): DOC-IBA-SN045
+  Seiten 1–172, 191–197, 221–232 und 241–246, das vollständige
+  **DOC-BMA-SN044 mit 72 Seiten** und beide Kurzanleitungen. **Sechs vollständige
+  Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch und Spanisch) von
+  DOC-IBA-SN045 sind geprüft; Italienisch steht einschließlich Deckblatt bei 23 von 24
+  PDF-Seiten. Alle neuen Records sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße und Zeichenzahlen je Seite) – siehe
   `scripts/merge-page-records.mjs`. Die Prüfung hat dabei einen realen Fehler abgefangen:
   eine aus der Nachbarseite übernommene Zeichenzahl;
@@ -72,17 +72,26 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 65 ungeprueften Seiten vo
   benachbarter Layoutteile – ein Screenreader kann nach der schwedischen Notizseite ein
   deutsches Inhaltsverzeichnis und nach dem Impressum ein viersprachiges Deckblatt lesen
   (DSC-081);
-- **erste Synthese-Auswertung abgeschlossen:** In `DISCREPANCIES.md` stehen die vier
-  Befehlssätze bis SN-044, die geräteseitige Hilfe-SMS und die vier vollständig geprüften
-  Sprachen ab SN-045 nebeneinander. Ergebnis: Sprache und Generation sind unabhängige
-  Parameter; die Hilfe-Liste ist kein verlässlicher Master, und selbst die schwedische
-  Fassung verwendet mit `oskarp` und `urkopplad` konkurrierende Begriffe. BLK-005 bleibt;
-- **DOC-IBA-SN045, dänische Seiten 101–110 und 120 geprüft:** Die deutsche
-  Bildbeschriftung „GPS-Antenne (Optional)" und das unerklärte rote X stehen nun in fünf
-  von fünf geprüften Sprachfassungen (DSC-022). Beide falschen Installationsverweise des
-  deutschen Masters stehen ebenfalls im Dänischen (DSC-040). Abschnitt 5.5 wiederholt in
-  Inhaltsverzeichnis, Querverweis und Zielüberschrift den Titel von 5.1, obwohl er die
-  Ausgänge behandelt – derselbe Navigationsfehler wie im Englischen (DSC-015);
+- **erste Synthese-Auswertung abgeschlossen und erweitert:** In `DISCREPANCIES.md` stehen
+  die vier Befehlssätze bis SN-044, die geräteseitige Hilfe-SMS und die sechs vollständig
+  geprüften Sprachen ab SN-045 nebeneinander. Ergebnis: Sprache und Generation sind
+  unabhängige Parameter; die Hilfe-Liste ist kein verlässlicher Master. Sechs Sprachen
+  ergeben sechs unterschiedliche Profile. Spanisch mischt `valla apagada` mit englischen
+  Kapitelbefehlen und einer englischen Hilfe-SMS. Selbst im schwedischen Teil konkurrieren
+  `oskarp` und `urkopplad`. BLK-005 bleibt;
+- **DOC-IBA-SN045, dänischer und spanischer Teil vollständig geprüft:** Die dänischen
+  Seiten 101–123 bestätigen die deutsche Bildbeschriftung „GPS-Antenne (Optional)", das
+  unerklärte rote X, beide falschen Installationsverweise und den irreführenden
+  Abschnittstitel 5.1. Der dänische Befehlssatz ist vollständig erfasst. Der spanische
+  Teil auf den Seiten 124–149 mischt dagegen einen lokalisierten Geofencing-Befehl mit
+  englischen Kapitelbefehlen und einer englischen Hilfe-SMS; seine letzte Seite trägt die
+  falsche Fußzeile „Página 25 de 24".
+  Das italienische Deckblatt auf Seite 150 ist ebenfalls erfasst. Alle Befehle bleiben
+  reine Quellenzitate unter BLK-005;
+- **Linkzugänglichkeit objektbezogen geprüft:** Blau unterstrichene Kartenadressen besitzen
+  in EN/FR/CS/DA/ES auf vierzehn Meldungsseiten keine Linkannotation. Deutsche Seite 19
+  ist ebenfalls inert, Seite 20 besitzt dagegen zehn Annotationen für fünf sichtbare
+  Adressen; ein Ziel ist zusätzlich gegenüber dem sichtbaren Text gekürzt (DSC-082);
 - die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu
   siebzehn entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende
   Sammelstelle für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
@@ -173,7 +182,7 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 65 ungeprueften Seiten vo
   einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
   Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
-- **die 87 Seitenrecords aus den SN-045-Batches und die 67 neuen aus DOC-BMA-SN044 haben
+- **die 102 Seitenrecords aus den SN-045-Batches und die 67 neuen aus DOC-BMA-SN044 haben
   keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber kein zweiter Prüfer hat
   die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Der Status `inspected`
@@ -205,8 +214,10 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 65 ungeprueften Seiten vo
 ## Release-Blocker
 
 1. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
-   DSC-014, DSC-026, DSC-033). Vier geprüfte Sprachfassungen dokumentieren **vier
-   vollständig eigene Befehlssätze**; nur `a %min%` lautet überall gleich. Die
+   DSC-014, DSC-026, DSC-033). Sechs geprüfte Sprachfassungen dokumentieren **sechs
+   unterschiedliche Befehlsprofile**; Spanisch ist ein lokalisierter/englischer Mischsatz,
+   nur
+   `a %min%` lautet überall gleich. Die
    Vergleichstabelle steht in DSC-033, die Frage an THITRONIK in
    [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) Punkt 1. Innerhalb einer Fassung
    stehen zudem `POS` und `position` nebeneinander, und im Französischen sind drei von vier
@@ -231,6 +242,11 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 65 ungeprueften Seiten vo
    Geräts führt `SCHARF`/`UNSCHARF`; umgekehrt decken sich die englischen Ausgangsbefehle
    mit der Geräteliste, die deutschen nicht. Jede Sprachfassung stimmt mit einem anderen
    Teil der Geräteliste überein.
+   **Spanisch bestätigt am 2026-08-09:** Die Fassung nennt zunächst `valla apagada`,
+   übernimmt in Kapitel 5 aber englische Befehle und sogar die vollständige englische
+   Hilfe-SMS. Zusätzlich nennt das Kapitel `status`/`position`, die Hilfe-SMS
+   `STATUS`/`POS`. Anleitung und Geräteliste widersprechen sich damit innerhalb eines
+   einzigen Sprachteils mehrfach.
 2. Die Sprachfassungen sind inhaltlich nicht gleichwertig: die SIM-Anbieterempfehlung
    lautet deutsch t-mobile/Vodafone, englisch nur allgemein „M2M-Karte" und französisch
    namentlich DOMOTEC (DSC-027). Zusätzlich weicht ein technischer Wert ab (DSC-020).
