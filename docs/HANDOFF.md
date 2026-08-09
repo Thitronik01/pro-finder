@@ -1,134 +1,150 @@
 # Handoff
 
-Stand: 2026-08-09 (vierte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-09 (fünfte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-### Seitenprüfung: 228 → 238 von 323; der schwedische Teil zur Hälfte
+### Seitenprüfung: 238 → 258 von 323
 
-Zehn neue Seitenrecords, DOC-BMA-SN044 Seiten 54–63 (Innehåll bis LED-Zustandsliste).
-Das Dokument steht bei 63 von 72 Seiten; es fehlen die Seiten 64–71 (Rest Schwedisch)
-und das Impressum (72).
+- **DOC-BMA-SN044, Seiten 64–72:** neun neue Records; das Dokument ist mit 72 von 72
+  Seiten vollständig geprüft.
+- **DOC-IBA-SN045, Seiten 101–110 und 120:** elf neue Records; das Dokument steht bei
+  182 von 247 Seiten. Vom dänischen Teil sind 14 von 23 PDF-Seiten geprüft.
+- Alle 20 Records wurden mit `scripts/merge-page-records.mjs` gegen die Original-PDFs
+  geprüft; bereits geprüfte Seiten wurden nicht überschrieben. Jeder Record bleibt auf
+  `inspected`, nicht `validated`.
 
-### Die drei wichtigsten Ergebnisse
+### Pflichtaktion vollständig erledigt
 
-- **`fence av` ist im Seitenbild gesichert (Nachtrag zu DSC-067).** Der schwedische
-  Geofencing-Ausschaltbefehl steht auf Seite 59 bei 500 dpi zeichengenau belegt – exakt
-  der Befehl, den die englische Seite 25 fälschlich druckt. Die Vorlagenkontamination
-  zwischen den Sprachteilen ist damit auf beiden Seiten bildlich nachgewiesen.
-- **Betriebsart D: Endstand drei zu eins (Nachtrag zu DSC-066).** Die schwedische
-  Tabelle (Seite 57) nennt „8 minuter" – Deutsch, Französisch und Schwedisch gegen die
-  englischen „8 seconds". Rückfrage 16 aktualisiert.
-- **Die schwedischen Kopfzeilen sind sichtbar (Gegenprobe zu DSC-075).** Die
-  Sequenzprüfung zeigt die korrekte Zeichenreihenfolge (Balken vor Text); das
-  Kopfzeilenproblem bleibt auf den französischen Sprachteil beschränkt.
+Die im vorigen Handoff genannte Aktion ist komplett:
 
-### Weitere Funde des Batches
+1. Der schwedische Diebstahlmeldungs-Radius lautet auf Seite 64 **ca. 1000 m** und auf
+   Seite 67 **ca. 1 km**. Deutsch, Englisch und Schwedisch stehen damit drei zu eins gegen
+   Französisch mit 1500 m/1,5 km (DSC-078, Rückfrage 14).
+2. `fence pa` ist auf Seite 67 bei 500 dpi im Seitenbild gesichert; `fence av` war bereits
+   auf Seite 59 gesichert. Die schwedischen Schalt- und Ausgangsbefehle sind als
+   Quellenzitate erfasst (DSC-067, BLK-005).
+3. Alle vier falschen Querverweise stehen nun nachweislich in allen vier Sprachteilen
+   (DSC-055). Alle SMS- und Kartenabbildungen bleiben in allen vier Fassungen deutsch
+   (DSC-072, Rückfrage 17).
+4. Die schwedische Konformitätsangabe auf Seite 70 bleibt englisch und nennt wie Englisch
+   und Französisch die nicht existente „directive 1995/5/EG"; nur Deutsch nennt
+   1999/5/EG (DSC-071).
+5. Das Impressum auf Seite 72 nennt die Herstelleradresse in Eckernförde. Die Kieler
+   Adresse bleibt historischer Bildinhalt der Karten-Screenshots und ist nicht die
+   Herstelleranschrift.
 
-- **Schwedisch ist die zweitbeste Fassung (neu: DSC-079).** Anruf-Formulierung,
-  LED-Gelb-Beschreibung, Wechselblinken, FAQ-Link und „AAlarm" sind korrekt – aber:
-  die Kabellänge wird wie im Französischen als feste Länge ausgegeben („är 2 m"), die
-  Batteriewarnung verliert wie dort den Zusatz „all in one", der Info-Absatz der
-  Betriebsartenseite ist gebrochenes Schwedisch mit **englischer** Syntax („Lägena 7
-  **genom** D" = „7 through D"), und die späte Abfragecode-Ergänzung ist gebrochen –
-  **diese Passage ist in drei von vier Sprachteilen defekt, nur die deutsche ist
-  sauber.**
-- **Sammelposition DSC-080 (neu):** Im schwedischen Verzeichnis fehlt die
-  **Kapitelnummer 3** vor „Diverse"; „**PGS**-position är OK" als Tippfehler im
-  Erfolgszustand der GPS-Diagnose (400 dpi); zwei fehlende schließende Klammern;
-  „massa GND)" ohne öffnende Klammer; drei Schreibvarianten der Status-LED.
-- **Vorlagenbefunde im vierten Sprachteil bestätigt:** falscher Querverweis „(se 2.5)"
-  (Nachtrag DSC-055), s/S-Widerspruch (DSC-056), Doppelglyphen des Abfragecode-Sterns
-  (DSC-058), „Wipro" klein im Info-Absatz, PIN-0000-Paar (Rückfrage 15) und „AAlarm"
-  erhalten (Nachtrag DSC-076 – der Verlust bleibt rein englisch).
+### Erste Synthese-Auswertung abgeschlossen
 
-Registerstand: DSC-079 und DSC-080 neu; Nachträge an DSC-055, DSC-056, DSC-058,
-DSC-066, DSC-067, DSC-075 (Gegenprobe), DSC-076; Rückfrage 16 aktualisiert. Weiterhin
-siebzehn Fragen, kein neuer Blocker.
+`DISCREPANCIES.md` enthält jetzt einen eigenen Abschnitt zum sprach- und
+generationenübergreifenden SMS-Befehlsvergleich:
 
-## Was in dieser Sitzung NICHT gelungen ist
+- vier Sprachfassungen bis SN-044 (DE, EN, FR, SV),
+- die geräteseitige Hilfe-SMS dieser Generation,
+- vier vollständig geprüfte Sprachfassungen ab SN-045 (DE, EN, FR, CS).
 
-- **Die Seitenprüfung ist nicht abgeschlossen.** 85 Seiten bleiben offen: DOC-BMA-SN044
-  Seiten 64–72 und DOC-IBA-SN045 Seiten 101–120, 145–150, 173–190, 198–220, 233–240, 247.
-- **`fence pa`** (Seite 67) und der schwedische Diebstahlmeldungs-Radius (Seiten 64/67,
-  DSC-078) sind noch ungeprüft.
-- **Die dreizehn fehlenden Aufgaben der Generation bis SN-044 sind weiterhin nicht
-  geschrieben.**
-- **Die drei Synthese-Auswertungen fehlen weiterhin**; für den Befehlsvergleich fehlen
-  nur noch die schwedischen Seiten 64–71.
-- **Die adversariale Gegenprüfung der Seitenrecords fehlt**; die schwedischen Records
-  tragen eine `language_note`.
-- Kein Playwright-/axe-Lauf und keine manuelle AT-Matrix (kein Anwendungscode geändert;
-  CI deckt beides ab).
+Ergebnis: Sprache und Gerätegeneration sind unabhängige Parameter. Die Geräte-Hilfe-SMS
+ist kein verlässlicher Master; Schreibweise, Großschreibung und ASCII-Form erlauben keine
+Freigabe. Selbst im schwedischen Teil konkurrieren `oskarp` und `urkopplad`. BLK-005 bleibt
+vollständig bestehen; kein Befehl wurde in den Content-Layer übernommen. Rückfrage 1 ist
+mit der Synthese verlinkt.
+
+### Wichtigste neue Befunde
+
+- **DSC-081 neu:** DOC-BMA-SN044 Seiten 71/72 enthalten außerhalb des sichtbaren
+  Seitenrahmens extrahierbaren Inhalt benachbarter Layoutteile. Nach der schwedischen
+  Notizseite kann ein Extraktionswerkzeug ein vollständiges deutsches Inhaltsverzeichnis
+  lesen, nach dem Impressum ein viersprachiges Deckblatt. Reine Zeichenzählung bewertet
+  diese fast leeren Seiten dadurch irreführend als textreich.
+- **DSC-015 erweitert:** Im dänischen Teil heißt 5.5 wie 5.1 „Styre alarmsystemet via
+  SMS", obwohl der Abschnitt die beiden Ausgänge behandelt. Belegt im Inhaltsverzeichnis
+  (102), roten Querverweis (110) und am Zielabschnitt selbst (120); derselbe Fehler wie im
+  Englischen.
+- **DSC-022 erweitert:** Die deutsche Bildbeschriftung „GPS-Antenne (Optional)" steht nun
+  in fünf von fünf geprüften Sprachfassungen; auch das rote X bleibt im Dänischen
+  unerklärt (Seite 107).
+- **DSC-040 erweitert:** Beide falschen Installationsverweise des deutschen Masters stehen
+  auch im Dänischen: 5.4 statt 5.5 auf Seite 108 und 1.5.2 statt 1.5.3 auf Seite 109.
+- Die schwedische Hilfe-SMS-Erklärung auf Seite 65 kehrt wie die französische Fassung die
+  Kommunikationsrichtung um und lässt den Prepaid-Guthaben-Hinweis aus. Der schwedische
+  Text verwendet außerdem `oskarp` zum Unscharfschalten, aber `urkopplad` zum Beenden eines
+  Alarms (DSC-067/079).
+
+Registerstand: DSC-081 neu; DSC-015, DSC-022, DSC-040, DSC-055, DSC-067, DSC-071,
+DSC-072, DSC-078, DSC-079 und DSC-080 erweitert. Weiterhin siebzehn Fragen und sieben
+Blocker; nichts still gelöst.
+
+## Was in dieser Sitzung nicht erledigt wurde
+
+- **65 Seiten von DOC-IBA-SN045** sind noch `not_started`: 111–119, 145–150, 173–190,
+  198–220, 233–240 und 247.
+- Die dreizehn fehlenden Aufgaben der Generation bis SN-044 sind weiterhin nicht
+  geschrieben; die deutsche Quellenlage ist vollständig.
+- Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
+- Die 20 neuen Seitenrecords haben keine unabhängige Gegenprüfung; dänische und
+  schwedische Records tragen eine `language_note`.
+- Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
 
 ## Externe/menschliche Blocker
 
-- Docker-Daemon lokal nicht startbar; Supabase läuft ausschließlich in CI (Job ist
-  grün);
+- Docker-Daemon lokal nicht startbar; Supabase läuft ausschließlich in CI;
 - Netlify-Site und Zugriffsschutz nicht verbunden;
 - finale Karten-URL und Supportkontakt unbestätigt;
 - Braille-Dienstleister und physische Testpersonen fehlen;
-- keine technische Freigabe sicherheitskritischer Inhalte (SMS-Befehle beider
-  Generationen, Diebstahlmeldungs-Radius 900/1000/1500 m, Betriebsart-D-Intervall,
-  Sprache der Gerätemeldungen, Spannungsschwellen, SIM-PIN-Vorgabe);
-- kein muttersprachlicher Review für Französisch und Schwedisch; keine unabhängige
-  englische Sprachprüfung.
+- keine technische Freigabe sicherheitskritischer Inhalte, insbesondere SMS-Befehle,
+  Radius, Betriebsart-D-Intervall, Gerätemeldungssprache, Spannungen und SIM-PIN-Vorgabe;
+- kein muttersprachlicher Review für Französisch, Schwedisch und Dänisch.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 Seiten 54–63 (zehn Records). Gesamtstand
-  `inspected`: **238 von 323**; DOC-BMA-SN044 **63 von 72**.
-- **Segmente:** keine neuen; alle neuen Seiten auf `inspected`.
+- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 64–72; DOC-IBA-SN045 101–110 und 120.
+- **Gesamtstand:** 258 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
+  DOC-IBA-SN045 182/247.
+- **Segmente:** keine neuen; alle neuen Seiten bleiben `inspected`.
 - **Aufgaben:** keine geändert; alle vierzehn deutschen SN-045-Aufgaben auf `entwurf`.
-- **Neue Widersprüche:** DSC-079 (mittel), DSC-080 (gering). Nachträge an DSC-055,
-  DSC-056, DSC-058, DSC-066, DSC-067, DSC-075, DSC-076; Rückfrage 16 aktualisiert.
-  Keiner still gelöst.
-- **Geänderte Dateien:** `sources/pages/DOC-BMA-SN044.json`, `docs/DISCREPANCIES.md`,
-  `docs/RUECKFRAGEN_THITRONIK.md`, `docs/HANDOVER_PROMPT.md`,
-  `docs/progress-input.json`, `docs/progress.json`, `docs/PROJECT_STATUS.md`,
-  `docs/HANDOFF.md`. Kein Anwendungscode geändert.
-- **Tests:** `npm run check` lokal grün (23 Unit-Tests und alle Content-, Sicherheits-
-  und Fortschrittsprüfungen). CI-Ergebnis zum Commit dieser Sitzung nach dem Push
-  prüfen; CI der Vorsitzung (`3d03bda`) war vollständig grün.
-- **Fortschritt:** siehe generierter Block in `PROJECT_STATUS.md` (PDF-Audit über 238
-  geprüfte Seiten).
+- **Geänderte Bereiche:** Seitenrecords, Diskrepanzregister, Rückfragen, Fortschritts- und
+  Übergabedokumentation. Kein Anwendungscode und kein Content-Layer geändert.
+- **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
+  `npm run format` → `npm run check` vollständig grün; 23 Unit-Tests bestanden sowie alle
+  Content-, Token-, Karten-, Referenz-, Secret-, Lockfile- und Fortschrittschecks.
+- **Referenz-Repository:** vor der Analyse sauber, Push-URL `DISABLED`; nach der Analyse
+  erneut prüfen.
 
 ```text
 Resume from:
-Dokument DOC-BMA-SN044, PDF-Seite 64, Segment –, Sprache sv.
+Dokument DOC-IBA-SN045, PDF-Seite 111, Segment –, Sprache da.
 
 First action:
-DOC-BMA-SN044 Seiten 64–72 prüfen (Rest Schwedisch, Sidan 10 bis 17, plus Impressum) –
-der Abschlussbatch des Dokuments. Dabei mitzuerledigen:
-1. Seiten 64 und 67: den schwedischen Diebstahlmeldungs-Radius sichern (DSC-078:
-   DE/EN 1000 m, FR 1500 m – der schwedische Wert entscheidet, ob Französisch allein
-   steht) und das Betriebsverhalten gegen die deutschen Parallelseiten halten.
-2. Seite 67: den Befehl „fence pa" zeichengenau sichern (DSC-067; „fence av" ist seit
-   Seite 59 gesichert); Seiten 66/68: die schwedischen Schalt- und Ausgangsbefehle für
-   den Befehlsvergleich erfassen.
-3. Seiten 64/65: Meldungsbilder erwartbar deutsch (DSC-072); die drei restlichen
-   Querverweise (DSC-055: 2.3, 2.4, 2.6 – erwartbar falsch).
-4. Seite 70: technische Daten und Konformitätsabschnitt gegen DSC-069/DSC-071
-   (unübersetzt englisch wie im Französischen?).
-5. Seite 72: Impressum erfassen; Herstelleradresse gegen die Kieler Beispieladresse der
-   Screenshots halten.
-Der Text liegt vollständig in tmp/bma-sn044-text.txt; Versatz Schwedisch: aufgedruckt =
-PDF − 54 (bestätigt); language_note setzen.
+DOC-IBA-SN045 Seiten 111–119 prüfen – die neun noch fehlenden Seiten des dänischen Teils
+zwischen den bereits geprüften Seiten 101–110 und 120–123. Rendern mit:
 
-Danach ist DOC-BMA-SN044 komplett. Als Nächstes den sprachübergreifenden
-Befehlsvergleich (erste der drei Synthese-Auswertungen) schreiben: vier Sprachteile bis
-SN-044 (DE/EN/FR/SV), die Geräteliste der Hilfe-SMS und die vier geprüften Sprachteile
-ab SN-045 (DSC-033) nebeneinander – als eigener Abschnitt oder Anhang in
-DISCREPANCIES.md, verlinkt aus Rückfrage 1. Danach DOC-IBA-SN045 (101–120, 145–150,
-173–190, 198–220, 233–240, 247).
+python scripts/render-pdf-pages.py sources/pdf/pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf 111 119 tmp/pdfs/iba-sn045-111-119 150
+
+Jede Seite visuell prüfen; Dänisch nicht muttersprachlich freigeben, sondern Struktur,
+Werte, Terminologie und auffällige Einzelbefunde dokumentieren. Inhaltlich gegen die
+deutschen Parallelseiten 12–20 halten:
+1. Seite 111: GPS-Anschluss und -Diagnose – 13,5 V für fünf Minuten, LED-Farben,
+   Geofencing-Hinweis; Farbalternative gegen DSC-047 prüfen.
+2. Seiten 112–113: SIM-Konfiguration, ESD, App-QR-Codes, Aktivierung und ALARM/AAlarm;
+   prüfen, ob DSC-016 übersetzt wurde.
+3. Seiten 114–116: Zielrufnummernarten, Programmier-SMS-Diagramm und Löschvorgang;
+   Berechtigungszeichen gegen BLK-006/DSC-044 prüfen. Keine Rufnummer und keinen Befehl in
+   den Content-Layer übernehmen.
+4. Seite 117: neun LED-Zustände auf farbunabhängige Kennzeichnung prüfen.
+5. Seiten 118–119: Meldungen, Radius, Schwellen 11,2/12,5 V, Hilfe-SMS und Kartenlinks;
+   Bildsprache und Befehlsliste gegen DSC-033/BLK-005 halten.
+
+Nach dem Batch den nun vollständigen dänischen Befehlssatz in die vorhandene
+Synthese-Auswertung einordnen. Danach DOC-IBA-SN045 Seiten 145–150, 173–190, 198–220,
+233–240 und 247.
 
 Parallel möglich: die dreizehn fehlenden Aufgaben der Generation bis SN-044 – deutsche
 Quellenlage komplett, Vorbild content/tasks/sn-045-plus/de/03-anschluesse.json,
-Befehlssperre aus BLK-005, kein D-Intervall (Frage 16), kein Radius (Frage 14), keine
+Befehlssperre BLK-005, kein D-Intervall (Frage 16), kein Radius (Frage 14), keine
 Meldungs-Stichwörter (Frage 17).
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
-RUECKFRAGEN_THITRONIK.md enthält siebzehn entscheidungsreife Fragen und sollte an
-THITRONIK gehen; die Arbeit wartet nicht darauf.
+RUECKFRAGEN_THITRONIK.md enthält siebzehn entscheidungsreife Fragen; nicht auf Antworten
+warten.
 ```

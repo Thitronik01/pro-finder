@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 238 der 323 PDF-Seiten sowie die
+Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 258 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -16,11 +16,12 @@ Beleg und die Fundstelle; die vollständige Herleitung steht in
 
 Geprüft sind bisher der deutsche, englische, französische und tschechische Sprachteil von
 `pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf` (DOC-IBA-SN045)
-sowie beide Kurzanleitungen. Sechs Sprachteile stehen aus.
+sowie beide Kurzanleitungen. Vom dänischen Teil sind 14 von 23 PDF-Seiten geprüft; fünf
+Sprachteile sind noch unberührt.
 
-**Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen weitgehend geprüft
-(DOC-BMA-SN044, Seiten 1–63 von 72) – Deutsch, Englisch und Französisch sind vollständig,
-der schwedische Teil zur Hälfte geprüft; es fehlen dessen Rest und das Impressum. Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
+**Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen vollständig geprüft
+(DOC-BMA-SN044, Seiten 1–72) – Deutsch, Englisch, Französisch, Schwedisch und Impressum.
+Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
 bekommen – teils bestätigend, teils mit abweichenden Werten. Diese Ergänzungen stehen als
 **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie sind für Sie vermutlich der
 aufschlussreichste Teil dieses Dokuments, weil sich daran ablesen lässt, welche Punkte
@@ -119,6 +120,19 @@ Geräts abgebildet wie im deutschen Teil, und sie führt stattdessen `SCHARF` un
 Sprachfassung stimmt also mit einem anderen Teil der Geräteliste überein und widerspricht
 dem anderen. Zusätzlich schreibt der englische Teil den Positionsbefehl in zwei Formen
 (`POS` auf Seite 30, `Pos` auf Seite 33) – wie der deutsche.
+
+**Abschließender Nachtrag bis SN-044 – Schwedisch komplett und erster
+Generationenvergleich.** Der schwedische Satz lautet `skarp`, `oskarp`, `larm`,
+`urkopplad`, `fence pa`, `fence av`, `Status`, `Pos`, `A pa`, `A av`, `A impuls`,
+`A XXX`. Er widerspricht der deutschen Geräteliste ebenfalls. Innerhalb derselben Seite
+stehen zudem `oskarp` und `urkopplad` für das Beenden des Alarmzustands nebeneinander.
+`fence pa` und die Ausgangsbefehle sind bei 500 dpi gesichert. Die erstmals vollständige
+Gegenüberstellung aller vier Sprachteile bis SN-044, der Hilfe-SMS des Geräts und der vier
+geprüften Sprachteile ab SN-045 steht als
+[Synthese-Auswertung 1](DISCREPANCIES.md#synthese-befehle). Ihr Ergebnis: Es existiert
+weder sprach- noch generationsübergreifend eine belastbare Masterliste; selbst die
+Hilfe-SMS ist bis SN-044 ein deutsch-englischer Mischsatz mit fehlenden und unerklärten
+Befehlen.
 
 _Belege: DSC-013, DSC-014, DSC-026, DSC-033, DSC-054, DSC-067_
 
@@ -243,9 +257,10 @@ je Sprache:
 
 - Die Bildbeschriftung der optionalen Antenne ist in **allen** geprüften Fassungen deutsch
   („GPS-Antenne (Optional)"), während die Legende daneben übersetzt ist. Die eingebettete
-  Grafik wurde nie lokalisiert. _(DSC-022)_
+  Grafik wurde nie lokalisiert; belegt sind inzwischen DE, EN, FR, CS und DA. _(DSC-022)_
 - In der Anschlussabbildung markiert ein **rotes X** einen Anschluss zwischen B und C, ohne
-  Legendeneintrag. In allen vier Fassungen unerklärt. _(Seitenrecords zu S. 8, 32, 56, 83)_
+  Legendeneintrag. In allen fünf geprüften Fassungen unerklärt.
+  _(Seitenrecords zu S. 8, 32, 56, 83, 107)_
 
 Dazu kommen zerrissene Wörter in den Kopfzellen der Betriebsartentabelle und eine
 Wortdopplung „via SMS via SMS", beide ebenfalls sprachübergreifend.
@@ -430,17 +445,19 @@ _Beleg: DSC-043_
 Die beiden Gerätegenerationen nennen verschiedene Werte für dieselbe Auslösebedingung –
 und seit dem 2026-08-09 weicht zusätzlich eine **Sprachfassung** ab:
 
-| Generation                    | Angabe in der Quelle      | Fundstelle                  |
-| ----------------------------- | ------------------------- | --------------------------- |
-| bis SN-044 (Deutsch/Englisch) | „ca.1000m" und „ca. 1 km" | DOC-BMA-SN044, S. 12 und 15 |
-| bis SN-044 (**Französisch**)  | **„1500 m" und „1,5 km"** | DOC-BMA-SN044, S. 47 und 50 |
-| ab SN-045                     | rund 900 m                | DOC-IBA-SN045               |
+| Generation                   | Angabe in der Quelle      | Fundstelle                            |
+| ---------------------------- | ------------------------- | ------------------------------------- |
+| bis SN-044 (DE/EN/SV)        | „ca.1000m" und „ca. 1 km" | DOC-BMA-SN044, S. 12/15, 30/33, 64/67 |
+| bis SN-044 (**Französisch**) | **„1500 m" und „1,5 km"** | DOC-BMA-SN044, S. 47 und 50           |
+| ab SN-045                    | rund 900 m                | DOC-IBA-SN045                         |
 
 **Die Fragen:** Ist der Unterschied zwischen den Generationen eine bewusste Änderung oder
 ein Fehler? Welcher Wert gilt jeweils, und bezieht er sich auf einen Radius um den Standort
 beim Schärfen oder um den letzten bekannten Standort? Und: Woher stammen die französischen
-1500 m – Tippfehler, Fehlübersetzung oder tatsächlich anderer Auslegungswert? Die Differenz
-von 50 Prozent innerhalb **eines** Handbuchs ist mit einer Rundung nicht zu erklären.
+1500 m – Tippfehler, Fehlübersetzung oder tatsächlich anderer Auslegungswert? Schwedisch
+bestätigt Deutsch und Englisch zweimal; Französisch steht damit eins zu drei allein. Die
+Differenz von 50 Prozent innerhalb **eines** Handbuchs ist mit einer Rundung nicht zu
+erklären.
 
 **Warum das drängt:** Der Radius entscheidet, wann eine Diebstahlmeldung ausgelöst wird. Der
 Projektauftrag verbietet, die Generationen zu vermischen – wir übernehmen deshalb keinen der
@@ -504,8 +521,9 @@ _Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5, 23 und 40_
 
 ## 17. In welcher Sprache meldet ein Pro-finder bis SN-044?
 
-Der englische Teil des Handbuchs bis SN-044 verwendet für sämtliche Beispiel-SMS und
-Bildschirmfotos **unverändert die deutschen Abbildungen**: Die gezeigten Gerätemeldungen
+Der englische, französische und schwedische Teil des Handbuchs bis SN-044 verwenden für
+sämtliche Beispiel-SMS und Bildschirmfotos **unverändert die deutschen Abbildungen**:
+Die gezeigten Gerätemeldungen
 lauten „Diebstahl", „Spannung unter 11,2V", „Hilfe erbeten", „Einbruch Tuer/Fenster",
 „Gas" und „manueller Alarm", und die abgebildete Hilfe-SMS nennt `SCHARF` und `UNSCHARF` –
 alles in einem englischen Handbuch, das dieselben Meldungen nur als „Theft alert",
@@ -522,7 +540,7 @@ Geräte-SMS („Neplatny povel!"). Für die ältere Generation legt die Bildwahl
 nahe. Eine barrierefreie englische Anleitung müsste die tatsächlichen Erkennungsstichwörter
 nennen – welche das sind, lässt sich aus der Quelle nicht entscheiden.
 
-_Beleg: DSC-072; Seitenrecords DOC-BMA-SN044, S. 30, 31 und 35_
+_Beleg: DSC-072; Seitenrecords DOC-BMA-SN044, S. 30/31/35, 47/48/52 und 64/65/69_
 
 ---
 
@@ -551,8 +569,9 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Vier tschechische Substantive für dasselbe Gerät; drei Bezeichnungen für den Anlernmodus                                              | DSC-037; S. 99 (Seitenrecord)  |
 | Links im tschechischen Teil verweisen auf `/en/` statt `/cs/`                                                                         | S. 100, Abschnitte 6.3 und 6.4 |
 | Französischer Teil hat 26 statt 23 interne Seiten; letzte Seite trägt „Page 26 de 25"                                                 | DSC-021                        |
-| Rotes X in der Anschlussabbildung – in vier Sprachfassungen ohne Legendeneintrag                                                      | S. 8, 32, 56, 83               |
-| Zwei weitere falsche Querverweise im **deutschen** Original (5.4 statt 5.5 auf S. 9; 1.5.2 statt 1.5.3 in der Betriebsartentabelle)   | DSC-040                        |
+| Rotes X in der Anschlussabbildung – in fünf Sprachfassungen ohne Legendeneintrag                                                      | S. 8, 32, 56, 83, 107          |
+| Zwei falsche Querverweise des **deutschen** Originals (5.4 statt 5.5; 1.5.2 statt 1.5.3) stehen auch in der fünften geprüften Sprache | DSC-040, S. 108–109            |
+| Abschnitt 5.5 trägt im Englischen und Dänischen wortgleich den Titel von 5.1, behandelt aber die Ausgänge                             | DSC-015, S. 46, 102, 110, 120  |
 | Verweis auf 5.1 für Blinker und Sirene führt ins Leere; 5.1 beschreibt nur einen Anruf, obwohl die Überschrift SMS ankündigt          | DSC-041                        |
 | „Hauptkabelbaum" wird nirgends erklärt – der gesamte Löschvorgang der Zielrufnummern hängt daran                                      | DSC-050, S. 17                 |
 | Dezimaltrennzeichen der Gerätemeldungen uneinheitlich (11.2 V mit Punkt, 13,53 V mit Komma) – schon im deutschen Original             | DSC-046                        |
@@ -560,7 +579,7 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Google-Play-Abzeichen so grob gerastert, dass es auch bei 900 dpi unlesbar bleibt                                                     | DSC-051, S. 14                 |
 | Vier Fragen zu den Ausgängen, die die Quelle gar nicht beantwortet (Empfänger, Grenzwerte, Abbruch, Zustand nach Neustart)            | DSC-052, S. 23                 |
 | Sprachmarke des dänischen Teils ist eine zusammengesetzte Flagge (links norwegisch, rechts dänisch, plus Diagonalstrich)              | DSC-053, S. 1 und 101          |
-| **bis SN-044:** drei falsche Querverweise in Kapitel 2 (2.5 statt 2.6, 2.3 statt 2.5, 2.4 statt 2.6) – alle drei zu niedrig           | DSC-055, S. 10, 12, 13         |
+| **bis SN-044:** vier falsche Querverweise in Kapitel 2; alle vier stehen in allen vier Sprachteilen – Vorlagenfehler                  | DSC-055                        |
 | **bis SN-044:** zweimal auf eine „Tabelle Abfragecodes" verwiesen, die es nicht gibt; die Vorseite hat an der Stelle eine Leerfläche  | DSC-057, S. 9 und 10           |
 | **bis SN-044:** das Sternzeichen des Abfragecodes steht im Seitenbild, fehlt aber in der Textebene – der Code wäre unbrauchbar        | DSC-058, S. 10                 |
 | **bis SN-044:** kein einziger Warnhinweis trägt ein Signalwort; ein ESD-Symbol ohne jeden Begleittext ist alleinige Warnungsträgerin  | DSC-063, S. 6–16               |
@@ -581,6 +600,8 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** der französische Konformitätsabschnitt ist unübersetzt englisch – samt der falschen „directive 1995/5/EG"             | DSC-071, S. 53                 |
 | **bis SN-044:** die späte Abfragecode-Ergänzung ist in drei von vier Sprachteilen sprachlich defekt – nur die deutsche ist sauber     | DSC-079, S. 27, 44, 61         |
 | **bis SN-044:** im schwedischen Verzeichnis fehlt die Kapitelnummer 3; „PGS-position" als Tippfehler im GPS-Diagnose-Erfolgszustand   | DSC-080, S. 54 und 59          |
+| **bis SN-044:** auch der schwedische Konformitätsabschnitt ist unübersetzt englisch mit „directive 1995/5/EG" – drei von vier falsch  | DSC-071, S. 70                 |
+| **bis SN-044:** Notizseite und Impressum extrahieren vollständige unsichtbare Nachbarseiten außerhalb des sichtbaren Seitenrahmens    | DSC-081, S. 71 und 72          |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

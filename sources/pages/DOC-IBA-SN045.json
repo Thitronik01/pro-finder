@@ -5778,143 +5778,438 @@
     },
     {
       "page": 101,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "titel",
+      "languages": ["da", "de", "en"],
+      "summary": "Deckblatt des dänischen Sprachteils: 'Pro-finder (fra serienummer -045)' und 'Installations- og betjeningsvejledning', THITRONIK-Logo, zusammengesetzte norwegisch-dänische Flaggenmarke sowie Adress- und Kontaktblock. Die sichtbaren Texte liegen vollständig ohne lesbare Textebene vor. Die Flaggenmarke ist bereits bei 500 dpi als fehlerhafte Komposition belegt (DSC-053).",
+      "headings": ["Pro-finder (fra serienummer -045)", "Installations- og betjeningsvejledning"],
+      "technical_values": [
+        {
+          "value": "+49 (0) 4351 76744-112",
+          "context": "Telefonnummer im Adressblock; dieselbe international mehrdeutige Schreibweise wie auf weiteren Sprachdeckblättern",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "THITRONIK-Logo, dekoratives Leiterbahnmuster und zusammengesetzte norwegisch-dänische Flaggenmarke",
+          "has_text_equivalent": false,
+          "relies_on": "Grafik und Farbe; die Sprache wird nicht als eigenes Textlabel ausgezeichnet"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Kein sichtbarer Inhalt ist in einer lesbaren Textebene vorhanden; Screenreader, Suche und Kopieren scheitern.",
+        "Die Sprachkennzeichnung beruht auf einer Flaggenmarke ohne Textalternative, die zusätzlich grafisch falsch zusammengesetzt ist (DSC-053).",
+        "Logo und Hintergrundgrafik besitzen keine Textalternative; eine getaggte Überschriftenstruktur ist nicht erkennbar."
+      ],
+      "discrepancies": [
+        "Die dänische Sprachmarke ist eine diagonale Komposition aus norwegischer und dänischer Flagge statt einer eindeutigen dänischen Flagge (DSC-053).",
+        "Die Seriennummernangabe '(fra serienummer -045)' übernimmt die ungewöhnliche Schreibweise mit führendem Bindestrich."
+      ],
+      "terminology_findings": [
+        "'Pro-finder' entspricht der Dokument-Schreibweise; 'Thitronik GmbH' im Adressblock weicht von der Logo-Schreibweise ab."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Flaggenbefund aus dem bereits dokumentierten 500-dpi-Prüfpfad übernommen.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 102,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 161,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["da"],
+      "summary": "Intern 'Side 1 af 22'. Erste Seite des dänischen Inhaltsverzeichnisses mit Kapiteln 1 bis 6. Abschnitt 5.5 wird als 'Styre alarmsystemet via SMS' geführt und wiederholt damit wortgleich den Titel von 5.1, obwohl 5.5 die beiden Ausgänge behandelt. Der sichtbare Text ist nicht als lesbare Textebene vorhanden; 129 rohe Steuer-/Objektzeichen ergeben null lesbare Zeichen.",
+      "headings": ["Indhold"],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Zweispaltiges Inhaltsverzeichnis mit Abschnittsnummern, Titeln und internen Seitenzahlen",
+          "has_headers": false,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Das Inhaltsverzeichnis besitzt keine lesbare Textebene und keine verknüpften Lesezeichen; seine Navigationsfunktion ist für Screenreader nicht nutzbar.",
+        "Die tabellarische Anordnung ist nur visuell, ohne ausgezeichnete Struktur oder verlässliche lineare Lesereihenfolge."
+      ],
+      "discrepancies": [
+        "5.5 heißt wie 5.1 'Styre alarmsystemet via SMS', behandelt aber die Ausgänge. Der Fehler ist auch an der tatsächlichen Überschrift auf Seite 120 belegt und erweitert DSC-015 auf Dänisch.",
+        "Der dänische Sprachteil umfasst intern 22 Seiten, während DE, EN und CS jeweils 23 und FR 25 Seiten ausweisen."
+      ],
+      "terminology_findings": [
+        "'Indhold' für Inhaltsverzeichnis; 'Styre alarmsystemet via SMS' wird fälschlich für zwei verschiedene Funktionen verwendet."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Inhaltsverzeichnis mit Seite 120 und den geprüften Seiten 121-123 gegengehalten.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Navigationsstruktur und sichtbare Wortgleichheit dokumentiert."
     },
     {
       "page": 103,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 24,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["da"],
+      "summary": "Intern 'Side 2 af 22'. Zweite Seite des dänischen Inhaltsverzeichnisses mit den Unterabschnitten 6.1 bis 6.4; darunter bleibt der Großteil der Seite leer. Keine lesbare Textebene.",
+      "headings": ["Indhold"],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Kurze Fortsetzung des Inhaltsverzeichnisses mit vier Einträgen und Seitenzahlen",
+          "has_headers": false,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die vier sichtbaren Navigationseinträge sind nicht in einer lesbaren Textebene vorhanden und nicht als Links oder Lesezeichen ausgezeichnet.",
+        "Seitennummern und Einträge werden nur über visuelle Ausrichtung miteinander verbunden."
+      ],
+      "discrepancies": [
+        "Ungewöhnliche Aufteilung: nur vier Einträge stehen oben auf einer ansonsten fast vollständig leeren zweiten Inhaltsverzeichnisseite."
+      ],
+      "terminology_findings": [],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; vollständig visuell geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Struktur dokumentiert."
     },
     {
       "page": 104,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "rechtliches",
+      "languages": ["da"],
+      "summary": "Intern 'Side 3 af 22'. Rechtliche Einleitung mit 'Ansvarsfraskrivelse' und 'Tilsigtet brug': Haftungsausschluss, Ausschluss eigenmächtiger Änderungen und bestimmungsgemäße Nutzung des Pro-finder zur Ortung und Benachrichtigung. Reine Sichtprüfung, da keine lesbare Textebene vorhanden ist.",
+      "headings": ["Ansvarsfraskrivelse", "Tilsigtet brug"],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Haftungs- und Nutzungseinschränkungen stehen nur als ungetaggter Fließtext ohne maschinenlesbare Textebene."
+      ],
+      "accessibility_issues": [
+        "Rechtlich relevante Texte sind für Screenreader, Suche und Kopieren nicht zugänglich.",
+        "Die beiden Überschriften sind nur visuell gestaltet und nicht semantisch ausgezeichnet."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Ansvarsfraskrivelse' für Haftungsausschluss; 'Tilsigtet brug' für bestimmungsgemäße Verwendung."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; vollständig visuell geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; rechtliche Struktur ohne sprachliche Freigabe dokumentiert."
     },
     {
       "page": 105,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "abbildung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 4 af 22'. 'Leveringsomfang' mit Produktfoto und nummerierter Liste: Pro-finder, antenne, gelkontakt, fastgørelsesskruer, sikringsholder, 3-A-Flachsicherung, hurtig guide, WiPro-III-forbindelseskabel und tilslutningskabel. Die Nummern 1 bis 9 verbinden Bildteile und Liste ausschließlich visuell; keine lesbare Textebene.",
+      "headings": ["Leveringsomfang"],
+      "technical_values": [
+        {
+          "value": "3 A",
+          "context": "Nennwert der mitgelieferten Flachsicherung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Produktfoto des Lieferumfangs mit neun nummerierten Komponenten",
+          "has_text_equivalent": false,
+          "relies_on": "Nummern und räumliche Zuordnung; die danebenstehende Liste ist ebenfalls nicht maschinenlesbar"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Foto und Legende besitzen keine Textalternativen oder programmatische Zuordnung.",
+        "Der gesamte Lieferumfang einschließlich des sicherheitsrelevanten Sicherungswerts fehlt in der lesbaren Textebene.",
+        "Die Zuordnung der neun Nummern zu den Bauteilen setzt visuelle Wahrnehmung voraus."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Flad sikring (3 A)' für die Flachsicherung; 'WiPro III-forbindelseskabel' und 'Tilslutningskabel' unterscheiden zwei Kabeltypen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Liste und Bildzuordnung vollständig visuell geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Lieferumfang und Zahlenwerte dokumentiert."
     },
     {
       "page": 106,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 1,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "extractable_chars": 0,
+      "content_type": "anleitung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 5 af 22'. Beginn von Kapitel 1, Abschnitt 1.1 'Vælg installationssted': Einbau im Fahrzeuginneren, gegen unbefugten Zugriff geschützt, für Service erreichbar, nie im Motorraum, Geräteoberseite nach oben und freie Sicht zum Satelliten. Bei Bedarf externe GPS-Antenne; drei Abbildungen zeigen richtige und falsche Orientierung sowie den empfohlenen Montagebereich. Keine lesbare Textebene.",
+      "headings": ["1 Installation og tilslutning", "1.1 Vælg installationssted"],
+      "technical_values": [
+        {
+          "value": "2 m",
+          "context": "Länge des Kabels zwischen GSM-Modul und externer GPS-Antenne; entspricht den übrigen Sprachfassungen",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Zwei Geräteansichten markieren richtige und falsche Orientierung mit grünem Kreis und rotem Verbotssymbol; Reisemobilgrafik zeigt Montagebereich und Satellitenverbindung",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe, Symbolik und Position ohne textliche Bildbeschreibung"
+        }
+      ],
+      "warnings_found": [
+        "Einbau im Motorraum ist ausdrücklich ausgeschlossen; der Hinweis ist nicht semantisch als Warnung ausgezeichnet."
+      ],
+      "accessibility_issues": [
+        "Richtig/falsch wird wesentlich durch Grün und Rot sowie Symbole vermittelt, ohne gleichwertige Textalternative.",
+        "Die empfohlene Einbauzone und Geräteorientierung stehen nur in Grafiken.",
+        "Der vollständige Anleitungstext fehlt in der lesbaren Textebene."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Vælg installationssted' für Montageort wählen; externe GPS-Antenne wird konsistent als 'ekstern GPS-antenne' bezeichnet."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Abbildungen, Sicherheitsvorgaben und 2-m-Wert gegen DE/EN/FR/CS gehalten.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Struktur und Werte dokumentiert."
     },
     {
       "page": 107,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["da", "de"],
+      "summary": "Intern 'Side 6 af 22'. Abschnitt 1.2 'Tilslutninger, skærme og kontroller' mit großem Anschlussfoto, Marken A bis D und farbigen Pins 1 bis 8 sowie Legende. Die eingebettete Antennenbeschriftung bleibt deutsch 'GPS-Antenne (Optional)', während die Legende dänisch ist; damit ist DSC-022 in fünf von fünf geprüften Sprachen bestätigt. Ein rotes X im Foto bleibt unerklärt. Keine lesbare Textebene.",
+      "headings": ["1.2 Tilslutninger, skærme og kontroller"],
+      "technical_values": [
+        {
+          "value": "Pin 1 GND; Pin 2-5 måleindgange U2-U5; Pin 6 udgang B; Pin 7 udgang A; Pin 8 permanent plus 12 V",
+          "context": "Dänische Pinlegende; visuell durch farbige Nummernkreise dem Produktfoto zugeordnet",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Visuelle Legendenliste für A-D und Pin 1-8",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Annotiertes Produktfoto mit Anschlusslinien, Buchstaben A-D, farbigen Pinmarken 1-8, WiPro III und GPS-pro-Antenne",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe, Position und eingebettete deutsche Bildbeschriftung; keine Alt-Texte"
+        }
+      ],
+      "warnings_found": ["Rotes X an einem Anschluss ohne Legenden- oder Textbedeutung."],
+      "accessibility_issues": [
+        "Sicherheitsrelevante Pinbelegung und Polarität beruhen auf visueller Zuordnung und Farbe ohne maschinenlesbare Struktur.",
+        "Das rote X wird weder textlich erklärt noch semantisch ausgezeichnet.",
+        "Grafikbeschriftung und sichtbare Legende fehlen vollständig in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Deutsche Bildbeschriftung 'GPS-Antenne (Optional)' im dänischen Teil; fünfte geprüfte Sprache mit demselben eingebetteten Fehler (DSC-022).",
+        "Rotes X zwischen Anschlüssen ohne Legendeneintrag, wie in den anderen geprüften Sprachfassungen.",
+        "Uneinheitliche Benennung desselben Teils: 'GPS-pro', deutscher Bildtext und dänische Legende."
+      ],
+      "terminology_findings": [
+        "'Tilslutninger, skærme og kontroller' für Anschlüsse, Anzeigen und Bedienelemente; 'ekstern GPS-antenne (valgfrit)' in der Legende."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Bildtext und Pinlegende visuell geprüft und mit den vier früheren Fassungen verglichen.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Anschlusswerte und Lokalisierungsbefunde dokumentiert."
     },
     {
       "page": 108,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 7 af 22'. Abschnitt 1.3 'Valg af driftstilstand' beschreibt Statusbericht per Anruf, automatische Berichte, U1-U5, Geofencing über Pin 3, WiPro-Schaltung per Anruf und manuellen Alarm in Betriebsart A. Die Einleitung verweist für die Ausgangssteuerung fälschlich auf 5.4; richtig ist 5.5. Der bekannte Masterfehler ist damit in Dänisch bestätigt. Keine lesbare Textebene.",
+      "headings": ["1.3 Valg af driftstilstand"],
+      "technical_values": [
+        {
+          "value": "U1, U2, U3, U4, U5",
+          "context": "Je nach Schalterstellung im Statusbericht enthaltene Betriebsspannung und Messeingänge",
+          "safety_critical": false
+        },
+        {
+          "value": "Manueller Alarm bei Spannung an Pin 3 in Betriebsart A",
+          "context": "Als Panikalarm beschrieben",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Der vollständige Anleitungstext einschließlich Betriebsartenlogik ist nicht maschinenlesbar.",
+        "Fett gesetzte Zwischenüberschriften besitzen keine semantische Auszeichnung.",
+        "Kursive Querverweise sind weder verlinkt noch programmatisch als Referenzen erkennbar."
+      ],
+      "discrepancies": [
+        "Falscher Querverweis auf 5.4 für die Ausgangssteuerung; 5.4 ist die Positionsabfrage, 5.5 behandelt die Ausgänge. Dänische Bestätigung von DSC-040.",
+        "Der Verweis '(se ovenfor)' auf den Betriebsartenschalter ist unpräzise; die Abbildung steht auf der Vorseite."
+      ],
+      "terminology_findings": [
+        "'Driftstilstand' für Betriebsart; 'destinationsnummer' für Zielrufnummer; 'manuel alarm (panikalarm)' für manuellen Alarm."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Funktionen und Querverweise gegen DE/EN/FR/CS gehalten.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Funktionsstruktur und Querverweise dokumentiert."
     },
     {
       "page": 109,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["da"],
+      "summary": "Intern 'Side 8 af 22'. Ganzseitige 'Tabel over driftstilstande' für Schalterstellungen 0-9 und A-F: Statusbericht per Anruf, WiPro-Umschaltung, automatische Intervalle, U1-U5, Geofencing-Schwellen und manueller Alarm. Zeilen C/D nennen 90 Sekunden bzw. 8 Minuten GPS-Suche, E löscht Zielrufnummern, F startet GPS-Diagnose. Zeile F verweist fälschlich auf 1.5.2 statt 1.5.3. Keine lesbare Textebene.",
+      "headings": ["Tabel over driftstilstande"],
+      "technical_values": [
+        {
+          "value": "15 minutter, 60 minutter, 6 timer, 24 timer",
+          "context": "Automatische Statusberichtintervalle in Betriebsarten 4 bis 7",
+          "safety_critical": false
+        },
+        {
+          "value": ">6 V: tændt / <5 V: slukket in Betriebsart 8; >6 V: slukket / <5 V: tændt in Betriebsart B",
+          "context": "Invertierte Geofencing-Schwellwertlogik an Pin 3; Bereich 5-6 V bleibt unerklärt",
+          "safety_critical": true
+        },
+        {
+          "value": "90 sekunder (C), 8 minutter (D)",
+          "context": "GPS-Suchintervalle nach angelegter Spannung und Start",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Komplexe Betriebsartentabelle mit mehrstufigen Kopfzellen, 16 Zeilen und verbundenen Zellen C-F",
+          "has_headers": true,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Komplexe Tabellenbeziehungen und verbundene Zellen sind nur visuell erkennbar; es gibt keine maschinenlesbare Tabellenstruktur.",
+        "Zeilen- und Spaltenzuordnung der sicherheitsrelevanten Schwellenwerte setzt präzises visuelles Verfolgen voraus.",
+        "Der gesamte Tabelleninhalt fehlt in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Zeile F verweist für die GPS-Diagnose auf 1.5.2; die Diagnose steht in 1.5.3. Dänische Bestätigung des zweiten Fehlverweises aus DSC-040.",
+        "Betriebsarten 8 und B haben invertierte Geofencing-Logik, aber der Bereich 5-6 V und die Hysterese werden nicht erläutert.",
+        "Zeile 9 liefert U1-U5 ohne automatisches Intervall; der Zweck gegenüber Modus 1 beziehungsweise 4-7 wird nicht erklärt."
+      ],
+      "terminology_findings": [
+        "'Tabel over driftstilstande' für Betriebsartentabelle; 'tændt/slukket' für ein/aus."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; alle Tabellenzeilen, Intervalle, Schwellen und Querverweise visuell geprüft.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Zahlenwerte und Tabellenstruktur dokumentiert."
     },
     {
       "page": 110,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 9 af 22'. Abschnitt 1.4 'Tilslutning af modulen' mit 12-V-Anschluss, Messeingängen 0-30 V, WiPro-III-Verbindung, Transistorausgängen 12 V/500 mA, Relais-/Freilaufdioden-Hinweis und drei Ausgangsmodi. Der rote Hinweis verweist auf 5.5, nennt den Abschnitt aber fälschlich 'Styre alarmsystemet via SMS'. Danach 1.5/1.5.1 zur optionalen GPS-Antenne mit Produktfoto. Keine lesbare Textebene.",
+      "headings": [
+        "1.4 Tilslutning af modulen",
+        "1.5 GPS-antenne (valgfrit tilbehør)",
+        "1.5.1 Montering af GPS-antenne"
+      ],
+      "technical_values": [
+        {
+          "value": "12 V DC",
+          "context": "Versorgung an Pin 1 und Pin 8; Polarität wird auf dieser Seite nicht ausgeschrieben",
+          "safety_critical": true
+        },
+        {
+          "value": "0-30 V",
+          "context": "Messbereich der Eingänge Pin 2 bis 5",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V / 500 mA",
+          "context": "Ausgangswert und maximale Belastung der Transistorausgänge Pin 6 und 7",
+          "safety_critical": true
+        },
+        {
+          "value": "15 °C",
+          "context": "Unterhalb dieser Temperatur soll die Klebefläche der GPS-Antenne erwärmt werden",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Produktfoto der GPS-Antenne mit magentafarbenen Markierungen an Kabel, Kupplung und Stecker",
+          "has_text_equivalent": false,
+          "relies_on": "Markierungen und räumliche Darstellung ohne textliche Bildbeschreibung"
+        }
+      ],
+      "warnings_found": [
+        "Lasten über 500 mA erfordern ein hochwertiges Kfz-Relais mit Freilaufdiode; Garantieverlust bei Überlastung.",
+        "Polaritätsrichtiger Anschluss wird verlangt, Plus und Masse werden auf dieser Seite aber nicht direkt benannt."
+      ],
+      "accessibility_issues": [
+        "Elektrische Grenzwerte und Warnungen fehlen vollständig in der lesbaren Textebene.",
+        "Der rote Hinweis wird überwiegend durch Farbe und Linien hervorgehoben, ohne semantische Warnstruktur.",
+        "Die magentafarbenen Markierungen am Antennenfoto besitzen keine Textalternative."
+      ],
+      "discrepancies": [
+        "Der rote Hinweis nennt Kapitel 5.5 'Styre alarmsystemet via SMS', obwohl dort die Ausgänge gesteuert werden; bestätigt DSC-015 auch außerhalb des Inhaltsverzeichnisses.",
+        "Die Polungsanweisung verweist auf 1.3 'Valg af driftstilstand'; die Pinbelegung mit Masse und Plus steht in 1.2. Der Querverweis ist sachlich unpassend.",
+        "Die Polarität wird auf der Seite trotz Sicherheitsrelevanz nicht direkt ausgeschrieben."
+      ],
+      "terminology_findings": [
+        "'Tilslutning af modulen' für Modul anschließen; 'udgange' für Ausgänge; 'friløbsdiode' für Freilaufdiode."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, PNG-Rendering 150 dpi; Werte, Warnungen und rote Kapitelreferenz gegen DE/EN/FR/CS gehalten.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Sicherheitswerte und Querverweise dokumentiert."
     },
     {
       "page": 111,
@@ -6044,17 +6339,49 @@
     },
     {
       "page": 120,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["da"],
+      "summary": "Intern 'Side 19 af 22'. Abschnitte 5.3 'Anmode om statusrapport', 5.4 'Anmode position med smartphone' und Beginn 5.5 'Styre alarmsystemet via SMS'. Als Quellenzitate stehen die Befehle 'status' und 'position'. 5.5 erklärt ausdrücklich, dass Pro-finder zwei separat steuerbare Ausgänge besitzt, trägt aber denselben Alarmanlagen-Titel wie 5.1; damit ist der Navigationsfehler aus Inhaltsverzeichnis und rotem Verweis am Zielabschnitt selbst bestätigt. Keine lesbare Textebene.",
+      "headings": [
+        "5.3 Anmode om statusrapport",
+        "5.4 Anmode position med smartphone",
+        "5.5 Styre alarmsystemet via SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "Statusbericht per SMS oder Anruf, außer Anruf in Betriebsart 2 und 3",
+          "context": "Dänische Funktionsbeschreibung; Befehl nur als Quellenzitat unter BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Zwei separat steuerbare Ausgänge; dauerhaft, einsekündig gepulst oder frei wählbare Dauer",
+          "context": "Inhalt des falsch benannten Abschnitts 5.5",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Befehle und Funktionsanweisungen fehlen vollständig in der lesbaren Textebene.",
+        "Kursiv gesetzte Befehle sind nicht semantisch als Eingaben ausgezeichnet.",
+        "Die falsche 5.5-Überschrift erschwert Navigation und unterscheidet die Alarmanlagen- von der Ausgangssteuerung nicht."
+      ],
+      "discrepancies": [
+        "Abschnitt 5.5 heißt 'Styre alarmsystemet via SMS' und ist damit wortgleich mit 5.1, obwohl der erste Absatz ausschließlich die zwei Ausgänge beschreibt. Dänische Erweiterung von DSC-015.",
+        "Der Fehler steht konsistent im Inhaltsverzeichnis (Seite 102), im roten Querverweis (Seite 110) und an der Zielüberschrift (Seite 120)."
+      ],
+      "terminology_findings": [
+        "'Anmode om statusrapport' und 'Anmode position med smartphone'; die Bezeichnung von 5.5 verwendet fälschlich 'alarmsystemet' statt 'udgange'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 24, 2026-08-09, gezieltes PNG-Rendering 150 dpi; Zielabschnitt zur Absicherung des Befunds aus Seite 102/110 vollständig geprüft. Befehle ausschließlich als Quellenzitate dokumentiert; BLK-005 bleibt bestehen.",
+      "language_note": "Dänisch nicht muttersprachlich beurteilbar; Struktur, Querverweise und Befehlszitate dokumentiert."
     },
     {
       "page": 121,

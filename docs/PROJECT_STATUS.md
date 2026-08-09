@@ -5,12 +5,12 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 31.4 %**
+**Gesamtfortschritt: 31.7 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 18.4 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 20 %        |
 | Content-Modell und deutscher Master      | 20 %    | 52 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
@@ -22,29 +22,30 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 21.9 %      |
-| DOC-IBA-SN045 | 247    | 17.3 %      |
+| DOC-BMA-SN044 | 72     | 25 %        |
+| DOC-IBA-SN045 | 247    | 18.4 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 85 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 64-72 (Rest Schwedisch: Radius auf den Seiten 64/67 gegen DSC-078 halten, Befehl fence pa auf Seite 67 im Seitenbild sichern, Meldungsbilder erwartbar deutsch (DSC-072), drei restliche Querverweise (DSC-055), technische Daten und Konformitaet Seite 70 gegen DSC-069/071; Impressum 72 mit Herstelleradresse) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Danach ist DOC-BMA-SN044 komplett und der sprachuebergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben werden. Parallel dazu koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 65 ungeprueften Seiten von DOC-IBA-SN045 abarbeiten. Als Erstes Seiten 111-119 (Rest des daenischen Teils vor den bereits geprueften Seiten 120-123) visuell pruefen; dabei Werte und Befehle gegen DE/EN/FR/CS halten, DSC-015/022/040 und BLK-005 beachten und dänische Sprachbefunde ohne muttersprachliche Freigabe kennzeichnen. Danach Seiten 145-150, 173-190, 198-220, 233-240 und 247. DOC-BMA-SN044 ist mit 72 von 72 Seiten komplett; die erste Synthese-Auswertung zum sprach- und generationsuebergreifenden Befehlsvergleich steht. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon **238 visuell geprüft** (`inspected`): DOC-IBA-SN045
-  Seiten 1–100 und 76 weitere Seiten aus den Batches 121–246, dazu **63 Seiten
-  DOC-BMA-SN044** und beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
-  Englisch, Französisch, Tschechisch) von DOC-IBA-SN045 sind geprüft; die übrigen
-  Sprachteile sind angefangen. Alle neuen Records sind maschinell gegen die Original-PDF
+- 323 Seitenrecords angelegt; davon **258 visuell geprüft** (`inspected`): DOC-IBA-SN045
+  Seiten 1–110, 120–144, 151–172, 191–197, 221–232 und 241–246, das vollständige
+  **DOC-BMA-SN044 mit 72 Seiten** und beide Kurzanleitungen. **Vier vollständige
+  Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch) von DOC-IBA-SN045 sind
+  geprüft; vom dänischen Teil sind 14 von 23 PDF-Seiten erfasst. Alle neuen Records sind
+  maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße und Zeichenzahlen je Seite) – siehe
   `scripts/merge-page-records.mjs`. Die Prüfung hat dabei einen realen Fehler abgefangen:
   eine aus der Nachbarseite übernommene Zeichenzahl;
-- **DOC-BMA-SN044 ist zu 63 von 72 Seiten geprüft** – Deutsch (1–19), Englisch (20–36)
-  und Französisch (37–53) vollständig, Schwedisch (54–71) zur Hälfte; es fehlen dessen
-  Rest und das Impressum (72). Die schwedischen Kopfzeilen sind sichtbar (Gegenprobe zu
+- **DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig geprüft** – Deutsch (1–19),
+  Englisch (20–36), Französisch (37–53), Schwedisch (54–71) und Impressum (72). Die
+  schwedischen Kopfzeilen sind sichtbar (Gegenprobe zu
   DSC-075), die Betriebsart D sagt schwedisch „8 minuter" (Endstand drei zu eins gegen
   Englisch, DSC-066), und der schwedische Befehl `fence av` ist im Seitenbild gesichert –
   die Vorlagenkontamination der englischen Seite 25 (DSC-067) ist damit auf beiden Seiten
@@ -58,12 +59,30 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 85 ungeprueften Seiten in
   abgebildete Geräte-Hilfe-SMS `SCHARF`/`UNSCHARF` führt (DSC-054), alle neun
   Beispiel-SMS-Bilder des englischen Teils zeigen **deutsche** Gerätetexte (DSC-072),
   alle vier falschen Querverweise sind wörtlich mitübersetzt (DSC-055; französisch für
-  die erste Stelle bestätigt), die englische Konformitätsangabe nennt eine nicht
-  existierende „directive 1995/5/EG" (DSC-071), der französische Teil enthält
+  alle Stellen und alle vier Sprachfassungen bestätigt), die Konformitätsangabe ist in
+  drei nichtdeutschen Fassungen unübersetzt und nennt eine nicht existierende „directive
+  1995/5/EG" (DSC-071), der französische Teil enthält
   sinnverändernde Übersetzungsfehler samt fehlendem FAQ-Link (DSC-073, DSC-074), und die
   **Kopfzeilen des gesamten geprüften französischen Teils werden vom grauen Balken
   verdeckt** – keine sichtbaren Seitenzahlen, maschinell über die Zeichenreihenfolge des
-  PDF nachgewiesen (DSC-075);
+  PDF nachgewiesen (DSC-075). Der schwedische Radius von 1000 m/1 km stellt Deutsch,
+  Englisch und Schwedisch gegen die französischen 1500 m/1,5 km (DSC-078); alle vier
+  Sprachfassungen zeigen deutsche SMS- und Kartenbilder (DSC-072). Auf den Schlussseiten
+  liegt außerdem vollständig außerhalb des sichtbaren Seitenrahmens extrahierbarer Inhalt
+  benachbarter Layoutteile – ein Screenreader kann nach der schwedischen Notizseite ein
+  deutsches Inhaltsverzeichnis und nach dem Impressum ein viersprachiges Deckblatt lesen
+  (DSC-081);
+- **erste Synthese-Auswertung abgeschlossen:** In `DISCREPANCIES.md` stehen die vier
+  Befehlssätze bis SN-044, die geräteseitige Hilfe-SMS und die vier vollständig geprüften
+  Sprachen ab SN-045 nebeneinander. Ergebnis: Sprache und Generation sind unabhängige
+  Parameter; die Hilfe-Liste ist kein verlässlicher Master, und selbst die schwedische
+  Fassung verwendet mit `oskarp` und `urkopplad` konkurrierende Begriffe. BLK-005 bleibt;
+- **DOC-IBA-SN045, dänische Seiten 101–110 und 120 geprüft:** Die deutsche
+  Bildbeschriftung „GPS-Antenne (Optional)" und das unerklärte rote X stehen nun in fünf
+  von fünf geprüften Sprachfassungen (DSC-022). Beide falschen Installationsverweise des
+  deutschen Masters stehen ebenfalls im Dänischen (DSC-040). Abschnitt 5.5 wiederholt in
+  Inhaltsverzeichnis, Querverweis und Zielüberschrift den Titel von 5.1, obwohl er die
+  Ausgänge behandelt – derselbe Navigationsfehler wie im Englischen (DSC-015);
 - die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu
   siebzehn entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende
   Sammelstelle für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
@@ -82,8 +101,8 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 85 ungeprueften Seiten in
   Sprachmarken: die Marke des dänischen Teils ist eine zusammengesetzte Flagge aus
   norwegischer und dänischer Hälfte – bei 150 dpi nicht erkennbar, mit dem neuen
   Ausschnittswerkzeug auf den Seiten 1 und 101 belegt;
-- die Prüfung von DOC-BMA-SN044 hat inzwischen **siebenundzwanzig Registerpositionen**
-  erzeugt (DSC-054 bis DSC-080), zwölf davon mit hoher oder mittelhoher Schwere. Der Ertrag
+- die Prüfung von DOC-BMA-SN044 hat **achtundzwanzig Registerpositionen** erzeugt
+  (DSC-054 bis DSC-081), zwölf davon mit hoher oder mittelhoher Schwere. Der Ertrag
   liegt hier nicht in der Menge, sondern darin, dass sich drei bisher offene Punkte damit
   anders darstellen:
   - **BLK-005 ist kein Übersetzungsproblem.** Die Hilfe-SMS des Geräts ist auf Seite 13 als
@@ -154,7 +173,7 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 85 ungeprueften Seiten in
   einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
   Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
-- **die 76 Seitenrecords aus dem SN-045-Batch und die 58 neuen aus DOC-BMA-SN044 haben
+- **die 87 Seitenrecords aus den SN-045-Batches und die 67 neuen aus DOC-BMA-SN044 haben
   keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber kein zweiter Prüfer hat
   die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Der Status `inspected`
@@ -166,8 +185,8 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 85 ungeprueften Seiten in
   Sternglyphen der englischen Seite 28 und die Richtlinienangabe „1995/5/EG" – sind
   jeweils hochauflösend nachgerendert oder im Seitenbild bestätigt und dadurch einzeln
   abgesichert. Das ersetzt keinen zweiten Prüfer, engt den ungeprüften Rest aber auf die
-  beschreibenden Teile ein. Nur die schwedischen Befehlsbelege (Seiten 59 und 67) stammen
-  noch ausschließlich aus der Textebene und sind in DSC-067 so gekennzeichnet. Dass die
+  beschreibenden Teile ein. Die schwedischen Geofencing-Befehle auf den Seiten 59 und 67
+  sind inzwischen beide bei 500 dpi im Seitenbild gesichert. Dass die
   zweite Meinung real fehlt, hat sich am 2026-08-09 konkret gezeigt: Eine vergleichende
   Aussage im Record der englischen Seite 25 („einzige Stelle mit farbunabhängiger
   LED-Darstellung") war falsch – die deutschen Seiten 7 und 11 verwenden dieselben

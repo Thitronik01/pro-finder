@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 31.4,
+  "overall_percent": 31.7,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,13 +19,13 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 18.4,
+      "percent": 20,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
       "percent": 52,
-      "note": "Am 2026-08-08 sind alle 14 deutschen Aufgaben aus geprueften Quellseiten gefuellt; kein Platzhalter mehr. Jede Aussage hat Dokument, Seite und Seitenregion, jede Datei einen Aenderungsgrund. Die acht zuletzt gefuellten Aufgaben wurden bewusst OHNE die SMS-Befehle geschrieben (BLK-005) - der Verzicht ist je Datei begruendet, und wo eine Aufgabe dadurch unvollstaendig bleibt (Ausgaenge, Geofencing, Zielrufnummern, Fehlerbehebung), steht das ausdruecklich im change_reason. Nicht bei 100 Prozent, weil drei Dinge fehlen: der technische Review saemtlicher sicherheitskritischer Werte, die Segment-Extraktion als Uebersetzungsgrundlage, und die Aufgaben der Generation bis SN-044 (nur 1 von 14 vorhanden; die Quelle DOC-BMA-SN044 ist mit 26 von 72 Seiten geprueft - der deutsche Teil ist seit dem 2026-08-08 vollstaendig erfasst, Seiten 1-19, einschliesslich Fahrzeug wiederfinden und technischer Daten. Die Quellenlage fuer alle 13 fehlenden Aufgaben der aelteren Generation steht damit komplett). Alle Aufgaben stehen auf entwurf."
+      "note": "Am 2026-08-08 sind alle 14 deutschen Aufgaben aus geprueften Quellseiten gefuellt; kein Platzhalter mehr. Jede Aussage hat Dokument, Seite und Seitenregion, jede Datei einen Aenderungsgrund. Die acht zuletzt gefuellten Aufgaben wurden bewusst OHNE die SMS-Befehle geschrieben (BLK-005) - der Verzicht ist je Datei begruendet, und wo eine Aufgabe dadurch unvollstaendig bleibt (Ausgaenge, Geofencing, Zielrufnummern, Fehlerbehebung), steht das ausdruecklich im change_reason. Nicht bei 100 Prozent, weil drei Dinge fehlen: der technische Review saemtlicher sicherheitskritischer Werte, die Segment-Extraktion als Uebersetzungsgrundlage, und die Aufgaben der Generation bis SN-044 (nur 1 von 14 vorhanden). DOC-BMA-SN044 ist seit dem 2026-08-09 mit allen 72 Seiten vollstaendig geprueft; die deutsche Quellenlage fuer alle 13 fehlenden Aufgaben der aelteren Generation steht komplett. Alle Aufgaben stehen auf entwurf."
     },
     "card": {
       "label": "Setup-Karte",
@@ -57,19 +57,18 @@
     {
       "doc_id": "DOC-BMA-SN044",
       "page_count": 72,
-      "percent": 21.9,
+      "percent": 25,
       "status_counts": {
-        "inspected": 63,
-        "not_started": 9
+        "inspected": 72
       }
     },
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 17.3,
+      "percent": 18.4,
       "status_counts": {
-        "inspected": 171,
-        "not_started": 76
+        "inspected": 182,
+        "not_started": 65
       }
     },
     {
@@ -118,7 +117,7 @@
     {
       "id": "BLK-005",
       "title": "Befehlssprache der SMS-Kommandos ungeklärt (DSC-013/DSC-014/DSC-033)",
-      "detail": "DOC-IBA-SN045 dokumentiert dieselbe Funktion je Sprachfassung mit unterschiedlichen SMS-Befehlen (fence an/aus gegenüber fence on/off, a an/aus/impuls gegenüber a on/off/pulse, anlernmodus an/aus gegenüber teach mode on/off, SCHARF/UNSCHARF gegenüber ARM/DISARM) und innerhalb einer Fassung mit widersprüchlicher Schreibweise (POS gegenüber position). Die französische Fassung nennt an derselben Stelle statt eines Befehls die Wortgruppe « desactiver le gardiennage » – ohne Akzent und über einen anderen Sendeweg (DSC-026). Ohne technische Klärung durch THITRONIK darf kein Befehl in den Master oder in eine Übersetzung übernommen werden. Nachtrag 2026-08-08 (DSC-054): Im Handbuch bis SN-044 widersprechen sich Handbuch und Geraet innerhalb einer Sprache und eines Dokuments. Die als Abbildung wiedergegebene Hilfe-SMS des Geraets nennt STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON - also englische Ausgangs- und Geofencing-Befehle -, waehrend der Fliesstext desselben Handbuchs A an, A aus, A impuls, A XXX, Fence an und fence aus schreibt. Der auf Seite 14 genannte Befehl alarm und der auf Seite 15 genannte Positionsbefehl Pos fehlen in der Geraeteliste ganz; umgekehrt fuehrt das Geraet mit GPS ON und GPS OFF zwei Befehle, die das Handbuch nirgends erwaehnt. Damit ist ausgeschlossen, dass die Unterschiede allein Uebersetzungsfehler sind. Der Geofencing-Ausschaltbefehl erscheint allein im deutschen Handbuch bis SN-044 in drei Schreibweisen (fence aus, Fence aus, FENCE OFF). Zweiter Nachtrag 2026-08-08 (DSC-067): Die englische Seite 25 desselben Handbuchs druckt als Ausschaltbefehl fence av - das ist der Befehl des schwedischen Teils (av = schwedisch aus), waehrend der eigene englische Abschnitt 2.4 laut Textebene Fence on/off schreibt. Vorlagenkontamination zwischen den Sprachteilen ist damit belegt; auch bis SN-044 hat jede Sprachfassung einen eigenen Befehlssatz, und die franzoesischen Befehle unterscheiden sich zusaetzlich zwischen den Generationen (gardiennage active/desactive gegen activer/desactiver le gardiennage). Dritter Nachtrag 2026-08-09: Der Widerspruch Handbuch gegen Geraet ist spiegelbildlich - der englische Teil lehrt arm/disarm, waehrend die auf der gegenueberliegenden Seite abgebildete Geraete-Hilfe-SMS SCHARF/UNSCHARF fuehrt; umgekehrt decken sich die englischen Ausgangsbefehle (A on/off/pulse) mit der Geraeteliste, die deutschen nicht. Jede Sprachfassung stimmt mit einem anderen Teil der Geraeteliste ueberein. Die Befehle Fence on/off (Seite 33) sind im Seitenbild bestaetigt.",
+      "detail": "DOC-IBA-SN045 dokumentiert dieselbe Funktion je Sprachfassung mit unterschiedlichen SMS-Befehlen (fence an/aus gegenüber fence on/off, a an/aus/impuls gegenüber a on/off/pulse, anlernmodus an/aus gegenüber teach mode on/off, SCHARF/UNSCHARF gegenüber ARM/DISARM) und innerhalb einer Fassung mit widersprüchlicher Schreibweise (POS gegenüber position). Die französische Fassung nennt an derselben Stelle statt eines Befehls die Wortgruppe « desactiver le gardiennage » – ohne Akzent und über einen anderen Sendeweg (DSC-026). Ohne technische Klärung durch THITRONIK darf kein Befehl in den Master oder in eine Übersetzung übernommen werden. Nachtrag 2026-08-08 (DSC-054): Im Handbuch bis SN-044 widersprechen sich Handbuch und Geraet innerhalb einer Sprache und eines Dokuments. Die als Abbildung wiedergegebene Hilfe-SMS des Geraets nennt STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON - also englische Ausgangs- und Geofencing-Befehle -, waehrend der Fliesstext desselben Handbuchs A an, A aus, A impuls, A XXX, Fence an und fence aus schreibt. Der auf Seite 14 genannte Befehl alarm und der auf Seite 15 genannte Positionsbefehl Pos fehlen in der Geraeteliste ganz; umgekehrt fuehrt das Geraet mit GPS ON und GPS OFF zwei Befehle, die das Handbuch nirgends erwaehnt. Damit ist ausgeschlossen, dass die Unterschiede allein Uebersetzungsfehler sind. Der Geofencing-Ausschaltbefehl erscheint allein im deutschen Handbuch bis SN-044 in drei Schreibweisen (fence aus, Fence aus, FENCE OFF). Zweiter Nachtrag 2026-08-08 (DSC-067): Die englische Seite 25 desselben Handbuchs druckt als Ausschaltbefehl fence av - das ist der Befehl des schwedischen Teils (av = schwedisch aus), waehrend der eigene englische Abschnitt 2.4 laut Textebene Fence on/off schreibt. Vorlagenkontamination zwischen den Sprachteilen ist damit belegt; auch bis SN-044 hat jede Sprachfassung einen eigenen Befehlssatz, und die franzoesischen Befehle unterscheiden sich zusaetzlich zwischen den Generationen (gardiennage active/desactive gegen activer/desactiver le gardiennage). Dritter Nachtrag 2026-08-09: Der Widerspruch Handbuch gegen Geraet ist spiegelbildlich - der englische Teil lehrt arm/disarm, waehrend die auf der gegenueberliegenden Seite abgebildete Geraete-Hilfe-SMS SCHARF/UNSCHARF fuehrt; umgekehrt decken sich die englischen Ausgangsbefehle (A on/off/pulse) mit der Geraeteliste, die deutschen nicht. Jede Sprachfassung stimmt mit einem anderen Teil der Geraeteliste ueberein. Die Befehle Fence on/off (Seite 33) sind im Seitenbild bestaetigt. Vierter Nachtrag 2026-08-09: Die erste Synthese-Auswertung stellt die vier aelteren Sprachteile, die Geraete-Hilfe-SMS und DE/EN/FR/CS der neueren Generation nebeneinander. Der schwedische Satz umfasst unter anderem skarp/oskarp, larm/urkopplad, fence pa/av sowie A pa/av/impuls/XXX; selbst innerhalb der schwedischen Fassung stehen oskarp und urkopplad konkurrierend fuer das Beenden eines Alarmzustands. Weder Sprache, Grossschreibung noch reine ASCII-Schreibweise erlauben damit eine belastbare Freigabe.",
       "severity": "hoch"
     },
     {
@@ -154,12 +153,12 @@
     "Das Intervall der automatischen Statusberichte in Betriebsart D ist widerspruechlich dokumentiert: deutsch 8 Minuten, englisch 8 seconds - Faktor 60 (DSC-066, Rueckfrage 16). Beide Zellen sind hochaufloesend gesichert; welcher Wert gilt, muss THITRONIK klaeren. Bis dahin nennt der Pilot fuer Betriebsart D kein Intervall.",
     "Die englische Seite 25 bis SN-044 druckt den schwedischen Geofencing-Ausschaltbefehl fence av (DSC-067). Wer ihn wie gedruckt sendet, sendet mutmasslich einen ungueltigen Befehl und laesst das Geofencing unbemerkt aktiv. Der Befund verstaerkt BLK-005.",
     "Die technischen Daten weichen zwischen den Generationen ab: Micro-SIM gegen Nano-SIM, feste 21 mA gegen die Spanne 16-21 mA, Richtlinie 1999/5/EG gegen 2014/53/EU (DSC-069). Kein Wert darf generationsuebergreifend uebernommen werden.",
-    "Der englische Teil bis SN-044 verwendet unveraendert die deutschen Beispiel-SMS-Bilder (DSC-072, Rueckfrage 17). In welcher Sprache ein Geraet bis SN-044 tatsaechlich meldet, ist unbelegt - eine englische Anleitung kann bis zur Klaerung keine Erkennungsstichwoerter fuer eingehende Meldungen nennen.",
+    "Alle vier Sprachfassungen bis SN-044 verwenden unveraendert die deutschen Beispiel-SMS-Bilder (DSC-072, Rueckfrage 17). In welcher Sprache ein Geraet bis SN-044 tatsaechlich meldet, ist unbelegt - keine lokalisierte Anleitung kann bis zur Klaerung verlaessliche Erkennungsstichwoerter fuer eingehende Meldungen nennen.",
     "Die englische Konformitaetsangabe bis SN-044 nennt eine nicht existierende Richtlinie 1995/5/EG (DSC-071). Konformitaetsangaben dieser Generation nur aus der deutschen Fassung uebernehmen.",
     "Der franzoesische Teil bis SN-044 enthaelt sinnveraendernde Uebersetzungsfehler (DSC-073): u.a. wird die maximale GPS-Kabellaenge als feste Laenge ausgegeben und der gelbe LED-Diagnosezustand als Fehlposition statt als Empfangsaufbau beschrieben. Betroffene Aussagen nie aus der franzoesischen Fassung uebernehmen.",
     "Betriebsart D steht jetzt drei zu eins: deutsch, franzoesisch und schwedisch 8 Minuten, englisch 8 seconds (DSC-066). Der Wert bleibt bis zur Bestaetigung durch THITRONIK ungenannt.",
-    "Der franzoesische Teil bis SN-044 nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius - dritter Wert neben 1000 m (DE/EN bis SN-044) und 900 m (ab SN-045); Differenz 50 Prozent innerhalb eines Handbuchs (DSC-078, Rueckfrage 14). Kein Radius wird bis zur Klaerung genannt.",
+    "Der franzoesische Teil bis SN-044 nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius; Deutsch, Englisch und Schwedisch nennen 1000 m/1 km, die neuere Generation 900 m. Franzoesisch steht damit innerhalb desselben Handbuchs allein und 50 Prozent ueber den drei Parallelfassungen (DSC-078, Rueckfrage 14). Kein Radius wird bis zur Klaerung genannt.",
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden."
   ],
-  "next_action": "Die verbliebenen 85 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 64-72 (Rest Schwedisch: Radius auf den Seiten 64/67 gegen DSC-078 halten, Befehl fence pa auf Seite 67 im Seitenbild sichern, Meldungsbilder erwartbar deutsch (DSC-072), drei restliche Querverweise (DSC-055), technische Daten und Konformitaet Seite 70 gegen DSC-069/071; Impressum 72 mit Herstelleradresse) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Danach ist DOC-BMA-SN044 komplett und der sprachuebergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben werden. Parallel dazu koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
+  "next_action": "Die verbliebenen 65 ungeprueften Seiten von DOC-IBA-SN045 abarbeiten. Als Erstes Seiten 111-119 (Rest des daenischen Teils vor den bereits geprueften Seiten 120-123) visuell pruefen; dabei Werte und Befehle gegen DE/EN/FR/CS halten, DSC-015/022/040 und BLK-005 beachten und dänische Sprachbefunde ohne muttersprachliche Freigabe kennzeichnen. Danach Seiten 145-150, 173-190, 198-220, 233-240 und 247. DOC-BMA-SN044 ist mit 72 von 72 Seiten komplett; die erste Synthese-Auswertung zum sprach- und generationsuebergreifenden Befehlsvergleich steht. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
 }

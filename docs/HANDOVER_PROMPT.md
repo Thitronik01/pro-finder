@@ -29,26 +29,15 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 18,4 %): 85 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell rund 20 %): 65 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 64–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, geprüft sind 63 von 72 Seiten; es fehlen der Rest des schwedischen Teils
-  (64–71) und das Impressum (72). Die schwedischen Kopfzeilen sind **sichtbar**
-  (Gegenprobe zu DSC-075 erledigt). Mitzuerledigen im Restbatch: Diebstahlmeldungs-Radius
-  der schwedischen 2.1/2.4 (Seiten 64 und 67) gegen DSC-078 halten (DE/EN 1000 m,
-  FR 1500 m – was sagt Schwedisch?); den Befehl `fence pa` (Seite 67) im Seitenbild
-  sichern (`fence av` ist seit Seite 59 gesichert); die schwedischen Schalt- und
-  Ausgangsbefehle (Seiten 66/68) für den Befehlsvergleich erfassen; Meldungsbilder
-  erwartbar deutsch (DSC-072); die drei restlichen Querverweise (DSC-055); technische
-  Daten und Konformitätsabschnitt Seite 70 gegen DSC-069/DSC-071 (unübersetzt
-  englisch?); abschließend das Impressum (Seite 72, Herstelleradresse gegen die Kieler
-  Beispieladresse der Screenshots). Danach ist das Dokument komplett und der
-  sprachübergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben
-  werden.
-- **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
+- **DOC-IBA-SN045**, zuerst Seiten 111–119 (Rest Dänisch), danach 145–150, 173–190,
+  198–220, 233–240 und 247. Seiten 101–110 und 120–123 des dänischen Teils sind bereits
+  geprüft. Nach 111–119 den vollständigen dänischen Befehlssatz in die vorhandene erste
+  Synthese-Auswertung einordnen; BLK-005 bleibt bestehen.
 
 Vorgehen je Batch von 9–10 Seiten:
 
@@ -81,9 +70,10 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 238 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
-Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
-Das Muster ist stabil und wiederholt sich erwartbar:
+Geprüft sind 258 von 323 Seiten. DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig. Bei
+DOC-IBA-SN045 sind die Sprachteile Deutsch, Englisch, Französisch und Tschechisch
+vollständig; vom dänischen Teil stehen 14 von 23 PDF-Seiten. Das Muster ist stabil und
+wiederholt sich erwartbar:
 
 - **Jede Sprache hat einen eigenen SMS-Befehlssatz.** Tabelle in `DISCREPANCIES.md`
   DSC-033. Neue Sätze dort eintragen.
@@ -103,7 +93,7 @@ Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, te
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
 
-**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–63 geprüft; das Dokument ist
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (alle 72 Seiten geprüft; das Dokument ist
 **viersprachig**: Deutsch 1–19, Englisch 20–36, Französisch 37–53, Schwedisch 54–71,
 Impressum 72):
 
@@ -123,13 +113,16 @@ Impressum 72):
   Verzeichnis ist korrekt), die wörtlich mitübersetzten falschen Querverweise (DSC-055),
   sinnverändernde französische Übersetzungsfehler samt fehlendem FAQ-Link (DSC-073,
   DSC-074) und das im Englischen verlorene doppelte A der Adressbuch-Empfehlung
-  (DSC-076). Jeden Wert jedes Sprachteils gegen den deutschen halten; Abweichungen sind
-  Funde, keine Flüchtigkeit.
+  (DSC-076), der französische Radius 1500 m/1,5 km gegen 1000 m/1 km in DE/EN/SV
+  (DSC-078) und drei unübersetzte, falsche Konformitätsangaben „1995/5/EG" (DSC-071).
+  Jeden Wert jedes Sprachteils gegen den deutschen halten; Abweichungen sind Funde, keine
+  Flüchtigkeit.
 - **Alle Abbildungen bleiben in jedem Sprachteil die deutschen** (DSC-072): Beispiel-SMS
   mit deutschen Gerätetexten, deutsche Kartenprogramm-Screenshots. In den Records der
   Bildseiten gehört deshalb `de` mit in `languages`; ob die Gerätemeldungen dieser
   Generation überhaupt lokalisiert sind, ist Rückfrage 17.
-- Für Sprachteile ohne muttersprachliche Beurteilbarkeit (Französisch, Schwedisch) gilt:
+- Für Sprachteile ohne muttersprachliche Beurteilbarkeit (Französisch, Schwedisch,
+  Dänisch) gilt:
   Struktur, Werte und Terminologie prüfen, auffällige Einzelbefunde dokumentieren und im
   Record eine `language_note` setzen – wie beim Tschechischen in DOC-IBA-SN045.
 - **Die Textebene ist nicht vollständig.** Sie enthält keine Piktogramme, keine
@@ -208,5 +201,6 @@ lesen** – niemals aus einer Zusammenfassung schreiben.
 
 ### Am Sitzungsende
 
-`docs/PROJECT_STATUS.md` und `docs/HANDOFF.md` aktualisieren, `npm run progress` laufen
-lassen, committen, pushen, CI abwarten. Im Handoff die exakte nächste Aktion nennen.
+`docs/PROJECT_STATUS.md` und `docs/HANDOFF.md` aktualisieren, dann exakt in dieser
+Reihenfolge `npm run progress` → `npm run format` → `npm run check`, committen, pushen
+und CI abwarten. Im Handoff die exakte nächste Aktion nennen.

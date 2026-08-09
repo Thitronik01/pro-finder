@@ -4638,129 +4638,559 @@
     },
     {
       "page": 64,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1483,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1264,
+      "content_type": "anleitung",
+      "languages": ["sv", "de"],
+      "summary": "Intern \"Sidan 10\". Schwedisches Gegenstück zu den PDF-Seiten 12, 30 und 47. Beginn von \"2.1 Förklaring av mottagna meddelanden\": fünfteilige Begriffsliste (GPS: Standby, UTC, Pos, Hastighet, Kontoställning), danach Statusrapport, Stöldmeddelande und Spänningsvarning mit drei unverändert deutschen Beispiel-SMS-Bildern. Der Diebstahlmeldungs-Radius lautet \"ca 1000 m\" und bestätigt Deutsch/Englisch; die französischen 1500 m bleiben allein (DSC-078). Stiller Alarm ohne Blinker/Sirene; Spannungsschwellen 11,2 V und 12,5 V. Der Verweis 2.3 für den Statusbericht ist wie in allen Sprachteilen falsch, der Verweis 2.2 für Blinker/Sirene trifft zu (DSC-055).",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 10",
+        "2.1 Förklaring av mottagna meddelanden",
+        "Statusrapport:",
+        "Stöldmeddelande:",
+        "Spänningsvarning (ej i driftart B):"
+      ],
+      "technical_values": [
+        {
+          "value": "Diebstahlmeldung ab ca. 1000 m Entfernung vom ursprünglichen Parkplatz",
+          "context": "Schwedischer erster Beleg; deckt sich mit DE/EN bis SN-044, während FR 1500 m nennt und die Generation ab SN-045 rund 900 m (DSC-078)",
+          "safety_critical": true
+        },
+        {
+          "value": "Spannungswarnung unter 11,2 V dauerhaft: Wechsel in Standby; Rückkehr über 12,5 V",
+          "context": "Nicht in Betriebsart B; deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Statusbericht enthält je nach Betriebsart Position, Geschwindigkeit, Ausgangszustände, U2-U5 und Umgebungstemperatur",
+          "context": "Die deutschen Bildbeispiele zeigen weitere, im Absatz nicht erklärte Felder (DSC-060)",
+          "safety_critical": false
+        },
+        {
+          "value": "Diebstahlmeldung ist ein stiller Alarm; Blinker und Sirene bleiben zunächst aus",
+          "context": "Zuschalten laut zutreffendem Verweis unter 2.2; Befehlssprache bleibt gesperrt (BLK-005)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Deutsche Beispiel-SMS zum Statusbericht mit Feldzeilen, Spannungen U1-U5 und Ausgangszuständen",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; Bildtext fehlt in der Textebene, Positions- und Betragswerte bewusst nicht wiedergegeben"
+        },
+        {
+          "description": "Deutsche Beispiel-SMS zur Diebstahlmeldung mit Stichwort \"Diebstahl\"",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene enthalten"
+        },
+        {
+          "description": "Deutsche Beispiel-SMS zur Spannungswarnung mit Stichwort \"Spannung unter 11,2V\"",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene enthalten"
+        }
+      ],
+      "warnings_found": [
+        "\"! Efter skicka SMS är masternumret även kallad !\" - rot und fett, ohne Signalwort; grammatisch gebrochen"
+      ],
+      "accessibility_issues": [
+        "Die drei deutschen Beispiel-SMS-Bilder enthalten die tatsächlichen Feldnamen, kommen aber in der Textebene nicht vor (DSC-060/DSC-072).",
+        "Die Begriffsliste ist zweispaltig über Tabulatoren gesetzt, nicht als Definitionsliste ausgezeichnet.",
+        "Der Warnhinweis ist nur über rote Fettschrift und Ausrufezeichen gekennzeichnet, ohne Signalwort (DSC-063).",
+        "Die Textebene beginnt mit den unteren Meldungsabsätzen und gibt die Begriffserklärungen erst danach aus; die Lesereihenfolge ist gestört."
+      ],
+      "discrepancies": [
+        "\"enligt beskrivning under 2.3\" für das Anfordern des Statusberichts ist falsch; zuständig ist 2.5. Dritter Sprachteil mit demselben Vorlagenfehler (Nachtrag zu DSC-055).",
+        "Der schwedische Radius \"ca 1000 m\" bestätigt DE/EN; FR bleibt mit 1500 m allein (Nachtrag zu DSC-078).",
+        "Alle drei Meldungsbilder sind unverändert deutsch (Nachtrag zu DSC-072).",
+        "\"koppkar Pro-finder in stand-by\" statt \"kopplar\"; der rote Masternummer-Satz ist grammatisch gebrochen (DSC-079/DSC-080).",
+        "Der Verweis auf 2.2 für das Zuschalten von Blinker und Sirene trifft zu, wie in DE/EN/FR."
+      ],
+      "terminology_findings": [
+        "\"Kontoställning\" für Kontostand/Guthaben.",
+        "\"Stöldmeddelande\" für Diebstahlmeldung, \"Spänningsvarning\" für Spannungswarnung.",
+        "\"GPS: Standby\" zusammengeschrieben, der Fließtext \"stand-by\" mit Bindestrich."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; Radius und deutsches Diebstahlmeldungsbild bei 500 dpi nachgerendert. Werte und Verweise gegen DE/EN/FR gehalten. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 65,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 997,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 835,
+      "content_type": "abbildung",
+      "languages": ["sv", "de"],
+      "summary": "Intern \"Sidan 11\". Schwedisches Gegenstück zu den PDF-Seiten 13, 31 und 48, Fortsetzung von 2.1. Sechs Meldungsarten mit unverändert deutschen Beispiel-SMS-Bildern: Nödrop SMS (Betriebsart A, Spannung an Pin 3), Positions-SMS för Smartphones, Hjälp-SMS mit der geräteseitigen Befehlsliste, Inbrottsmeddelande, Gaslarm und Manuellt larm. Der Positionsverweis auf 2.4 ist falsch (gemeint 2.6); außerdem fehlt wie im französischen Teil der Hinweis, dass bei Einrichtung nach 1.8 in der Positions-SMS das Prepaid-Guthaben übertragen wird. Die Hilfe-SMS-Erklärung kehrt die Kommunikationsrichtung um: Laut schwedischem Satz erhält die Zielrufnummer den ungültigen Inhalt, nicht der Pro-finder.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 11",
+        "Nödrop SMS:",
+        "Positions-SMS för Smartphones:",
+        "Hjälp-SMS:",
+        "Inbrottsmeddelande:",
+        "Gaslarm:",
+        "Manuellt larm:"
+      ],
+      "technical_values": [
+        {
+          "value": "Notruf-SMS: Betriebsart A und Spannung an Pin 3",
+          "context": "Auslösebedingung deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Geräteseitige Hilfe-Liste: STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON",
+          "context": "Unverändert deutsches Bild; bei 500 dpi in diesem Sprachteil gegengeprüft, ursprünglich bei 700 dpi auf Seite 13 gesichert. Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Einbruch-, Gas- und manueller Alarm werden durch die WiPro ausgelöst; Masternummer wird zusätzlich angerufen",
+          "context": "Vier rote Anrufhinweise auf der Seite, grammatisch jeweils gleich gebrochen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Sechs deutsche Beispiel-SMS-Bilder mit den Stichwörtern \"Hilfe erbeten\", \"Position:\", \"Ungueltiger Befehl! Moeglich:\", \"Einbruch Tuer/Fenster\", \"Gas\" und \"manueller Alarm\"",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich die Bilder; alle Bildtexte fehlen in der Textebene. Kartenadresse, Koordinaten und Beträge bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [
+        "Viermal \"! Efter skicka SMS är masternumret även kallad !\" - rot und fett, ohne Signalwort; grammatisch gebrochen"
+      ],
+      "accessibility_issues": [
+        "Alle sechs Meldungen samt einziger geräteseitiger Befehlsliste stehen nur als Bild ohne Textentsprechung (DSC-060).",
+        "Die Positionsangaben und der Kartenlink sind blau unterstrichen, aber Bestandteil eines Bildes; die Seite enthält keinen anklickbaren Link.",
+        "Die rote Warnfunktion ist weder semantisch noch mit einem Signalwort gekennzeichnet (DSC-063).",
+        "Der schwedische Fließtext beschreibt deutschsprachige Gerätemeldungen nicht mit den sichtbaren deutschen Erkennungsstichwörtern (DSC-072)."
+      ],
+      "discrepancies": [
+        "\"enligt beskrivning under 2.4\" für die Positionsabfrage ist falsch; gemeint ist 2.6. Vierter Sprachteil mit demselben Vorlagenfehler (Nachtrag zu DSC-055).",
+        "Die Hilfe-SMS-Erklärung macht das larmnummer zum Empfänger der ungültigen SMS; tatsächlich empfängt der Pro-finder sie von der Zielrufnummer und antwortet. Dieselbe Sinnverkehrung wie im französischen Teil (Nachtrag zu DSC-079).",
+        "Der Hinweis zum Prepaid-Guthaben bei Einrichtung nach 1.8 fehlt wie im französischen Teil, während DE/EN ihn führen (Nachtrag zu DSC-079).",
+        "Alle sechs Bilder sind unverändert deutsch; damit verwenden alle vier Sprachteile denselben deutschen Bildbestand (Nachtrag zu DSC-072).",
+        "Die Geräteliste widerspricht den schwedischen Befehlen der Seiten 66-68 wie bereits den drei anderen Sprachfassungen (DSC-054/DSC-067)."
+      ],
+      "terminology_findings": [
+        "\"larmnummer\" für Zielrufnummer, obwohl die Meldungstexte die Masternummer getrennt nennen.",
+        "\"Nödrop SMS\" ohne Bindestrich gegen \"Positions-SMS\" und \"Hjälp-SMS\" mit Bindestrich.",
+        "\"Inbrottsmeddelande\" für Einbruchmeldung, \"Manuellt larm\" für manuellen Alarm."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; deutsche Meldungsbilder und Hilfe-Liste bei 500 dpi nachgerendert und gegen die Seite 13 gehalten. Keine Kartenadresse, Koordinaten oder Beträge übernommen. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; sinnverändernde Satzrichtung und Auslassung durch Parallelvergleich belegt."
     },
     {
       "page": 66,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1089,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 894,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 12\". Schwedisches Gegenstück zu den PDF-Seiten 14, 32 und 49. \"2.2 Styrning av larmanläggningen via SMS\": Einschalten der WiPro mit dem alleinstehenden fetten Befehl \"skarp\", Ausschalten der WiPro \"all in one\" mit \"oskarp\"; jeweils Statusmeldung als Quittung. Der rote Absatz nennt zum Zuschalten von Sirene/Blinkern die SMS-Funktion \"larm\" und zum Beenden \"urkopplad\" - letzteres widerspricht dem direkt zuvor gelehrten \"oskarp\". \"2.3 Styrning av larmanläggningen via uppringning\": In den Betriebsarten 2 und 3 schaltet ein Anruf die WiPro weiter, wird vor einer kostenpflichtigen Verbindung beendet und löst einen Statusbericht aus; nur autorisierte Nummern haben Zugriff.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 12",
+        "2.2 Styrning av larmanläggningen via SMS",
+        "2.3 Styrning av larmanläggningen via uppringning"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"skarp\" zum Einschalten, \"oskarp\" zum Ausschalten, \"larm\" zum Zuschalten von Sirene/Blinkern, \"urkopplad\" zum Beenden",
+          "context": "Bei 500 dpi gesichert. \"urkopplad\" widerspricht \"oskarp\" auf derselben Seite; kein schwedischer Befehl steht in der deutschen Geräte-Hilfe-Liste. Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Anruf schaltet WiPro in Betriebsarten 2 und 3 und erzeugt nach erfolgreichem Schalten einen Statusbericht",
+          "context": "Gerät beendet den Anruf vor einer kostenpflichtigen Verbindung; nur autorisierte Nummern",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Zwei Zeigehand- und zwei Pfeil-Piktogramme ordnen die Schaltbefehle den Anweisungs- und Ergebnisabsätzen zu",
+          "has_text_equivalent": false,
+          "relies_on": "Form und räumliche Position; in der Textebene nur als Steuerzeichen"
+        }
+      ],
+      "warnings_found": [
+        "Roter Absatz zum Zuschalten von Sirene und Blinker sowie Beenden des Alarms, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die Befehle stehen als alleinstehende fette Wörter ohne Kennzeichnung als einzugebender Text.",
+        "Handlungs- und Ergebniszuordnung wird zusätzlich nur über Zeigehand- und Pfeil-Piktogramme vermittelt.",
+        "Der rote Absatz ist als sicherheitsrelevanter Hinweis nur farblich ausgezeichnet (DSC-063)."
+      ],
+      "discrepancies": [
+        "\"urkopplad\" zum Beenden des Alarms gegen den unmittelbar zuvor gelehrten Ausschaltbefehl \"oskarp\"; zwei schwedische Formen für denselben Endzustand auf einer Seite (Nachtrag zu DSC-067).",
+        "Die schwedischen Schaltbefehle \"skarp\"/\"oskarp\" widersprechen der abgebildeten Geräteliste \"SCHARF\"/\"UNSCHARF\" (DSC-054).",
+        "Asymmetrische Gerätebenennung wie in der Vorlage: Einschalten \"WiPro\", Ausschalten \"WiPro all in one\".",
+        "Der Zugriffssatz entspricht DE/EN; die französische Verengung auf das Anrufen bleibt ein französischer Einzelbefund."
+      ],
+      "terminology_findings": [
+        "\"koppla in\"/\"koppla ur\" für ein-/ausschalten; daneben Befehlswörter \"skarp\"/\"oskarp\".",
+        "\"larmanläggning\" für Alarmanlage, \"statusmeddelande\" für Statusmeldung und \"statusrapport\" für Statusbericht."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; skarp/oskarp und der rote Absatz bei 500 dpi nachgerendert. Befehle nur als Quellenzitat für BLK-005. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; der dokumentinterne Widerspruch oskarp/urkopplad ist durch den Parallelaufbau eindeutig."
     },
     {
       "page": 67,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2177,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1783,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 13\". Schwedisches Gegenstück zu den PDF-Seiten 15, 33 und 50. Drei Abschnitte. \"2.4 Geofencing\": virtueller Zaun, Diebstahlmeldung ab ca. 1 km vom ursprünglichen Parkplatz; in Schalterstellung 8 oder B über Pin 3, sonst per SMS; Einschaltbefehl \"fence pa\", Ausschalten laut Ergebnistext mit \"fence av\"; bei geschärfter WiPro automatisch aktiv. \"2.5 Begära statusrapport\": Befehl \"Status\" oder Anruf außer Betriebsarten 2 und 3, GPS-Status/letzte gültige Position, Ausgangszustände und Umgebungstemperatur; falscher Verweis, Kapitel 2.6 erkläre das Wiederfinden (tatsächlich 2.8). \"2.6 Positionsförfrågan med Smartphone\": Befehl \"Pos\" für eine Meldung mit anklickbarem Link.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 13",
+        "2.4 Geofencing",
+        "2.5 Begära statusrapport",
+        "2.6 Positionsförfrågan med Smartphone"
+      ],
+      "technical_values": [
+        {
+          "value": "Diebstahlmeldung ab ca. 1 km Entfernung vom ursprünglichen Parkplatz",
+          "context": "Zweiter schwedischer Beleg; konsistent mit ca. 1000 m auf Seite 64 und DE/EN, FR bleibt mit 1,5 km allein (DSC-078)",
+          "safety_critical": true
+        },
+        {
+          "value": "Geofencing in Schalterstellungen 8 und B über Pin 3, in allen anderen per SMS; bei geschärfter WiPro automatisch aktiv",
+          "context": "Bestätigt die Regel in allen vier Sprachteilen bis SN-044 (DSC-062)",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"fence pa\", \"fence av\", \"Status\", \"Pos\"",
+          "context": "Bei 500 dpi gesichert. \"fence av\" war bereits auf Seite 59 bildlich belegt; \"fence pa\" schließt den schwedischen Geofencing-Satz. Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Statusbericht übermittelt GPS-Status, bei ungültiger Position die letzte gültige, beide Ausgangszustände und Umgebungstemperatur",
+          "context": "Anrufvariante ohne aktuelles SIM-Guthaben",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Vier Zeigehand- und vier Pfeil-Piktogramme gliedern SMS-Anweisungen und Reaktionen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene als Steuerzeichen"
+        }
+      ],
+      "warnings_found": [
+        "\"Om WiPro är skarp, är Geofencing automatiskt aktiverad ...\" - rot, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Vier Befehle stehen als alleinstehende fette Zeilen ohne Kennzeichnung als einzugebender Text.",
+        "Piktogramme tragen die Zuordnung zwischen Handlung und Ergebnis, ohne Textentsprechung.",
+        "Der rote Geofencing-Hinweis ist rein visuell als Hinweis markiert (DSC-063).",
+        "Die Begriffe Statusbericht und Positionsmeldung werden erklärt, die tatsächliche Gerätesprache bleibt wegen der deutschen Bilder der Vorseiten offen (DSC-072)."
+      ],
+      "discrepancies": [
+        "\"fence pa\" ist bei 500 dpi zeichengenau gesichert; zusammen mit \"fence av\" vollständiger schwedischer Geofencing-Befehlssatz (Nachtrag zu DSC-067).",
+        "Der Radius \"ca 1 km\" bestätigt den 1000-m-Wert zum zweiten Mal; die französische Fassung steht mit 1,5 km allein (Nachtrag zu DSC-078).",
+        "\"Hur man ... hittar fordonet, finns beskrivet i kapitel 2.6\" ist falsch; das Wiederfinden ist 2.8 auf Seite 69. Damit sind alle vier Vorlagen-Querverweisfehler in allen vier Sprachteilen belegt (Nachtrag zu DSC-055).",
+        "\"Status\" weicht von französisch \"Statut\" ab; \"Pos\" fehlt der Geräte-Hilfe-Liste (DSC-054/DSC-067)."
+      ],
+      "terminology_findings": [
+        "\"virtuellt staket\" als Erklärung von Geofencing.",
+        "\"statusrapport\" und \"positionsmeddelande\" für die beiden SMS-Arten.",
+        "\"skarp\" für den geschärften WiPro-Zustand."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; Radius, fence pa/fence av und Status bei 500 dpi nachgerendert. Befehle nur als Quellenzitat für BLK-005. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Werte, Befehlszeichen und Querverweise strukturell geprüft."
     },
     {
       "page": 68,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1317,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1068,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern sichtbar als \"Sidan14\" ohne Leerzeichen. Schwedisches Gegenstück zu den PDF-Seiten 16, 34 und 51. \"2.7 Styrning av utgångar via SMS\": zwei getrennt steuerbare Ausgänge, Anschluss nach 1.5. Vier Befehle für Ausgang A: \"A pa\" dauerhaft ein, \"A av\" aus, \"A impuls\" für 1 Sekunde, \"A XXX\" für 1 bis 120 Minuten mit XXX als Minutenzahl. Jede erfolgreiche Schaltung erzeugt einen Statusbericht. Rot und fett-kursiv: Für Ausgang B den Buchstaben A im SMS-Text durch B ersetzen.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan14",
+        "2.7 Styrning av utgångar via SMS",
+        "Permanent koppling av utgångar:",
+        "Koppling av pulsade utgångar (1 sekund):",
+        "Koppling av utgångar under valfri tid:"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"A pa\", \"A av\", \"A impuls\", \"A XXX\"; für Ausgang B A durch B ersetzen",
+          "context": "Bei 500 dpi gesichert. Die Geräteliste nennt A ON/A OFF/A PULSE und keinen Zeitbefehl. Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Impulsdauer 1 Sekunde; frei wählbare Einschaltdauer 1 bis 120 Minuten",
+          "context": "Deckt sich mit DE/EN/FR; Verhalten außerhalb des Bereichs bleibt unbelegt",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Zeigehand-, vier Pfeil- und zwei Uhr-Piktogramme neben den Befehls- und Ergebnisabsätzen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; Uhr-Piktogramme sind die einzige zusätzliche Kennzeichnung der Zeitkomponente"
+        }
+      ],
+      "warnings_found": [
+        "\"För styrning av utgång B måste du ersätta bokstaven A i SMS-meddelandet med bokstaven B.\" - rot, fett und kursiv, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die vier Befehle stehen als alleinstehende fette Zeilen ohne Kennzeichnung als einzugebender Text.",
+        "Die drei Zwischentitel sind unterstrichen und kursiv; das erzeugt keine semantische Gliederung.",
+        "Die Piktogramme tragen Struktur, sind in der Textebene aber nur Steuerzeichen.",
+        "Die gesamte Seite zeigt nur Ausgang A; die Übertragung auf B steht allein im roten Schlusshinweis."
+      ],
+      "discrepancies": [
+        "Der schwedische Ausgangssatz \"A pa\"/\"A av\"/\"A impuls\"/\"A XXX\" ist vollständig und eigenständig; er stimmt weder mit der Geräteliste noch vollständig mit einem anderen Sprachteil überein (Nachtrag zu DSC-067).",
+        "Der Zeitbefehl \"A XXX\" fehlt wie in allen Sprachteilen der Geräte-Hilfe-Liste (DSC-054).",
+        "Der Verweis auf 1.5 trifft zu.",
+        "\"Sidan14\" ohne Leerzeichen, während die übrigen schwedischen Seiten \"Sidan 1\" bis \"Sidan 17\" schreiben (DSC-080)."
+      ],
+      "terminology_findings": [
+        "\"utgång\" für Ausgang, \"koppla in\"/\"koppla ur\" für ein-/ausschalten.",
+        "\"pulsade utgångar\" Plural im Titel gegen Einzelbefehl für Ausgang A."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; alle vier Befehle und der B-Hinweis bei 500 dpi nachgerendert. Befehle nur als Quellenzitat für BLK-005. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Werte und Befehlsschreibungen zeichengenau erfasst."
     },
     {
       "page": 69,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1379,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1147,
+      "content_type": "anleitung",
+      "languages": ["sv", "de"],
+      "summary": "Intern \"Sidan 15\". Schwedisches Gegenstück zu den PDF-Seiten 17, 35 und 52. \"2.8 Hitta fordonet\": Positionsangaben in Kartenprogramme oder Navigationsgeräte eingeben, oft hausnummerngenau; Smartphone-Positionsabfrage nach 2.6, weitere Statusberichte nach 2.5. Ohne GPS-Empfang wartet Pro-finder bis zu 10 Minuten auf eine gültige Position, sonst sendet er die zuletzt registrierte. Bei Alarm und aktiver \"ljusmaskin\" wird permanent abgefragt; die UTC-Zeit entspricht der letzten registrierten Position. Dieselben zwei deutschen, historischen Karten-Bildschirmfotos wie in allen Sprachteilen, einschließlich einer Kieler Beispieladresse; das Impressum auf Seite 72 nennt dagegen die Herstelleradresse in Eckernförde.",
+      "headings": ["Handbok för Pro-finder", "Sidan 15", "2.8 Hitta fordonet"],
+      "technical_values": [
+        {
+          "value": "Ohne GPS-Empfang wartet Pro-finder bis zu 10 Minuten auf eine gültige Position",
+          "context": "\"upp till 10 minuter\" erhält die Obergrenze des deutschen Originals; danach letzte registrierte Position",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Alarm und aktiver Lichtmaschine permanente Positionsabfrage; UTC-Zeit = Zeit der letzten registrierten Position",
+          "context": "Schwedisch \"aktiverad ljusmaskin\"; deckt sich strukturell mit DE/EN/FR",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Deutsches Google-Maps-Bildschirmfoto im Desktop-Browser mit Kieler Kartenansicht und separatem Adressfenster",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; deutsche Oberfläche, Koordinaten und Adresse bewusst nicht wiedergegeben"
+        },
+        {
+          "description": "Deutsches Smartphone-Kartenfoto mit deutschsprachiger Oberfläche",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene enthalten"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Beide Bildschirmfotos bleiben deutsch und haben keine Textalternative (DSC-072).",
+        "Koordinaten, Kartenadresse und Oberflächenbeschriftungen fehlen vollständig in der Textebene.",
+        "Die Bildunterschrift ordnet Desktop- und Smartphone-Bild nur über sichtbare Auf-/Abwärtsdreiecke zu; in der Textebene erscheinen sie als \"p\" und \"q\".",
+        "Kopfzeile und Bildunterschrift werden in der Textebene nach dem Fließtext ausgegeben."
+      ],
+      "discrepancies": [
+        "Die Kartenbilder sind unverändert deutsch; damit ist DSC-072 für alle Abbildungen und alle vier Sprachteile abgeschlossen bestätigt.",
+        "Die Verweise 2.5 und 2.6 treffen zu, wie in DE/EN/FR.",
+        "Die Karten-Beispieladresse liegt in Kiel, die sichtbare Herstelleradresse auf Seite 72 in Eckernförde; das Bild zeigt einen früheren oder anderen Standort, nicht die Impressumsanschrift.",
+        "\"ljusmaskin\" für Lichtmaschine ist eine andere Benennungsstrategie als englisch \"generator\" und französisch \"alternateur\"."
+      ],
+      "terminology_findings": [
+        "\"Hitta fordonet\" für Fahrzeug wiederfinden.",
+        "\"kartprogram\" und \"navigationsapparater\" für Kartenprogramme und Navigationsgeräte.",
+        "\"mobil slutapparat\" als wörtliche Entsprechung zu mobiles Endgerät."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; Desktop-Kartenbild und Kieler Beispieladresse bei 500 dpi gegen Seite 72 gehalten. Koordinaten und Adresse bewusst nicht inhaltlich übernommen. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Struktur, Zeitwerte und Verweise geprüft."
     },
     {
       "page": 70,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1458,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1224,
+      "content_type": "anleitung",
+      "languages": ["sv", "en"],
+      "summary": "Intern \"Sidan 16\", letzte schwedische Inhaltsseite. \"3.1 Tekniska data\": 9-30 V, ca. 37 mA Netzsuche, ca. 21 mA Normalbetrieb, 900/1800/850/1900 MHz, zehn Alarmnummern, NMEA, 2 x 12 V/500 mA, -10 bis +80 °C, micro-SIM. \"3.2 Överensstämmelse / direktiv\": Der Erklärungstext ist unübersetzt englisch und wiederholt wortgleich die nicht existierende \"directive 1995/5/EG\" der englischen und französischen Teile (DSC-071). \"3.3 Anvisningar för avfallshantering\": WEEE und Recycling. \"3.4 Teknisk support\": Fachhändler, historische Website, telefonischer Support montags bis freitags 9:00-16:00 Uhr unter der Kieler Rufnummer, Feld \"SN:\".",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 16",
+        "3.1 Tekniska data",
+        "3.2 Överensstämmelse / direktiv",
+        "3.3 Anvisningar för avfallshantering",
+        "3.4 Teknisk support"
+      ],
+      "technical_values": [
+        {
+          "value": "Technische Daten: 9-30 V; ca. 37 mA Netzsuche; ca. 21 mA Normalbetrieb; 900/1800/850/1900 MHz; 10 Alarmnummern; NMEA (GPS-Eingang); 2 x 12 V/500 mA; -10 °C bis +80 °C; micro-SIM",
+          "context": "Alle neun Werte decken sich mit DE/EN/FR bis SN-044; Generationsabweichungen zu SN-045 stehen in DSC-069",
+          "safety_critical": true
+        },
+        {
+          "value": "Konformitätsabschnitt: unübersetzter englischer Text mit \"directive 1995/5/EG\"",
+          "context": "Bei 400 dpi gesichert; falsche Jahreszahl und deutsches Kürzel EG im englischen Text, wie auf den englischen und französischen Seiten 36/53 (DSC-071)",
+          "safety_critical": false
+        },
+        {
+          "value": "Historischer Telefonsupport Montag-Freitag 9:00-16:00 Uhr, Rufnummer mit Kieler Vorwahl 0431",
+          "context": "Nicht als aktuelle Supportangabe für den Content-Layer übernehmen",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Liste mit neun technischen Datenzeilen, nur über Tabulatoren gesetzt",
+          "columns": ["Teknisk storhet", "Värde"]
+        }
+      ],
+      "figures": [
+        {
+          "description": "CE-Zeichen, WEEE-Symbol und Recyclingsymbol",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich die grafischen Zeichen; CE kommt in der Textebene nicht vor"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Unangekündigter Sprachwechsel ins Englische im Konformitätsabschnitt; keine Sprachauszeichnung für Screenreader.",
+        "Technische Daten sind eine Tab-Liste ohne Tabellenauszeichnung.",
+        "Der Downloadlink und die Website stehen als ausgeschriebene HTTP-Adressen ohne verknüpfte Linkannotation.",
+        "CE-, WEEE- und Recyclingsymbole haben keine Textentsprechung; \"SN:\" ist ein reines Papierformular."
+      ],
+      "discrepancies": [
+        "Abschnitt 3.2 ist unübersetzt englisch und übernimmt die falsche \"directive 1995/5/EG\". Drei von vier Sprachteilen tragen damit die falsche Jahreszahl, nur der deutsche nennt 1999/5/EG (Nachtrag zu DSC-071).",
+        "Alle neun technischen Daten stimmen mit den anderen Sprachteilen bis SN-044 überein; der feste 21-mA-Wert und micro-SIM bestätigen DSC-069.",
+        "Die schwedische Tabelle schreibt \"MHz\" korrekt wie EN, während DE/FR \"Mhz\" drucken.",
+        "Die Support-Website unterscheidet sich von der Domain des Impressums auf Seite 72; beide Angaben sind historisch und nicht als aktuelle Pilotkontakte bestätigt."
+      ],
+      "terminology_findings": [
+        "\"Antal larmnummer\" statt Zielrufnummern; setzt die schwedische Benennung \"larmnummer\" fort.",
+        "\"Spänningsförsörjning\" für Spannungsversorgung, \"Strömupptagning\" für Stromaufnahme.",
+        "\"Teknisk support\" statt Technische Unterstützung."
+      ],
+      "next_action": "Segmente extrahieren; technische und Konformitätswerte separat fachlich/rechtlich prüfen",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; technische Daten und Konformität bei 400 dpi Wert für Wert gegen DE/EN/FR gehalten. Sprache Schwedisch, Abschnitt 3.2 Englisch; Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Werte und der unübersetzte englische Abschnitt eindeutig geprüft."
     },
     {
       "page": 71,
-      "status": "not_started",
-      "progress_percent": 0,
-      "width_mm": 148.5,
+      "status": "inspected",
+      "progress_percent": 25,
+      "width_mm": 149,
       "height_mm": 210,
-      "extractable_chars": 1382,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 39,
+      "content_type": "notizen",
+      "languages": ["sv", "de"],
+      "summary": "Intern sichtbar \"Sidan 17\", letzte Seite des schwedischen Teils. Sichtbar ist nur eine Notizseite: Kopfzeile, ein seitenfüllender abgerundeter Rahmen und \"Anteckningar\", sonst leer. Die Textebene ist dagegen nicht textarm: Außerhalb des sichtbaren Seitenrahmens bei negativen x-Koordinaten liegen rund 1300 deutsche Zeichen - das komplette deutsche Inhaltsverzeichnis samt Haftungsausschluss und deutscher Kopfzeile. Pypdf extrahiert dadurch 1382 lesbare Zeichen; PyMuPDF innerhalb der sichtbaren Seite nur 39. Ein Screenreader oder Kopiervorgang kann nach der schwedischen Notizüberschrift unvermittelt den unsichtbaren deutschen Inhalt ausgeben (DSC-081).",
+      "headings": ["Handbok för Pro-finder", "Sidan 17", "Anteckningar"],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Rund 1300 deutsche Zeichen liegen vollständig außerhalb des sichtbaren Seitenrahmens und werden trotzdem extrahiert: deutsches Inhaltsverzeichnis, Haftungsausschluss und Kopfzeile (DSC-081).",
+        "Die extrahierte Lesereihenfolge wechselt nach \"Anteckningar\" unangekündigt von Schwedisch zu unsichtbarem Deutsch; keine Sprachauszeichnung.",
+        "Der Notizrahmen ist ein reines Papierformular ohne Funktion im digitalen Dokument.",
+        "Eine rein zeichenzählende Prüfung bewertet die fast leere sichtbare Seite wegen 1382 Off-page-Zeichen fälschlich als stark textzugänglich."
+      ],
+      "discrepancies": [
+        "Die sichtbare Seite enthält nur etwa 39 lesbare Zeichen, der Statistikrecord 1382; Ursache ist ein vollständiges deutsches Inhaltsverzeichnis samt Haftungstext außerhalb des Seitenrahmens (DSC-081).",
+        "Das schwedische Inhaltsverzeichnis führt die Notizseite nicht auf; wie in den anderen Sprachteilen existiert sie außerhalb der eigenen Gliederung."
+      ],
+      "terminology_findings": ["\"Anteckningar\" für Notizen."],
+      "next_action": "keine sichtbaren Inhalte zu extrahieren; Off-page-Textebene bei einer PDF-Sanierung entfernen",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi. Sichtbare Seite vollständig angesehen; zusätzlich PyMuPDF-Textobjekte und Pypdf-Extraktion objektbezogen geprüft. Off-page-Inhalt liegt bei x < 0 und ist vollständig unsichtbar. Sprachen sichtbar Schwedisch, extrahierbar zusätzlich Deutsch.",
+      "language_note": "Sichtbarer Inhalt Schwedisch; unsichtbare/off-page Textebene Deutsch."
     },
     {
       "page": 72,
-      "status": "not_started",
-      "progress_percent": 0,
-      "width_mm": 149.9,
+      "status": "inspected",
+      "progress_percent": 25,
+      "width_mm": 150,
       "height_mm": 210,
-      "extractable_chars": 524,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 112,
+      "content_type": "impressum",
+      "languages": ["de", "en", "fr", "sv"],
+      "summary": "Impressumsseite ohne sichtbare Seitenzahl. Sichtbar im unteren Seitendrittel: \"Hersteller/Manufacturer\", Thitronik GmbH, Finkenweg 11-15, D 24340 Eckernförde (Germany), www.thitronik.de und kontakt@thitronik.de; darunter CE-, WEEE- und Recyclingsymbole sowie das THITRONIK-Logo. Damit ist die Herstelleranschrift visuell als Eckernförde bestätigt; die Kartenbilder der Seiten 17/35/52/69 zeigen dagegen eine separate Kieler Beispieladresse. Außerhalb des sichtbaren Seitenrahmens bei x > Seitenbreite enthält die Textebene zusätzlich \"Revision 2.6\" sowie Titel und Dokumentbezeichnung des Deckblatts in Deutsch, Englisch, Französisch und Schwedisch (DSC-081).",
+      "headings": ["Hersteller/Manufacturer", "Thitronik GmbH"],
+      "technical_values": [
+        {
+          "value": "Herstelleranschrift: Finkenweg 11-15, D 24340 Eckernförde (Germany)",
+          "context": "Sichtbarer Impressumsblock; stimmt nicht mit der Kieler Beispieladresse der Kartenbilder überein",
+          "safety_critical": false
+        },
+        {
+          "value": "Revision 2.6",
+          "context": "Nur in der Off-page-Textebene rechts außerhalb des sichtbaren Seitenrahmens vorhanden; im sichtbaren Impressum nicht lesbar",
+          "safety_critical": false
+        },
+        {
+          "value": "Historische Kontaktangaben www.thitronik.de und kontakt@thitronik.de",
+          "context": "Vor Publikation aktuell bestätigen; nicht automatisch auf Setup-Karte oder Content-Layer übertragen",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "CE-Zeichen, WEEE-Symbol, Recyclingsymbol und THITRONIK-Logo im unteren Seitenbereich",
+          "has_text_equivalent": false,
+          "relies_on": "grafische Zeichen und Logo; die Wortmarke ist im Bild sichtbar, aber nicht Teil der sichtbaren Textebene"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "386 Zeichen des viersprachigen Deckblatts liegen vollständig rechts außerhalb des Seitenrahmens und werden von Pypdf trotzdem extrahiert (DSC-081).",
+        "Screenreader- und Kopierausgabe kann nach dem sichtbaren Impressum unvermittelt Revision, Titel und vier Sprachfassungen eines anderen Layoutteils ausgeben; keine Sprachauszeichnung.",
+        "Kontaktblock und Symbole stehen erst im unteren Seitendrittel nach großer Leerfläche; keine sichtbare Seitenzahl oder Dokumentzuordnung.",
+        "CE-, WEEE-, Recycling- und Markenlogo besitzen keine Textalternative; Web- und E-Mail-Adresse sind nicht als Link annotiert."
+      ],
+      "discrepancies": [
+        "Die sichtbare Herstelleranschrift liegt in Eckernförde; die vier identischen Kartenbeispiele zeigen eine Kieler Straßenadresse. Die Quelle kennzeichnet diese nicht als Herstelleranschrift; sie ist ein historischer oder anderer Beispielstandort.",
+        "Pypdf extrahiert 524 lesbare Zeichen, obwohl sichtbar nur rund 112 Zeichen stehen; Ursache ist das vollständige viersprachige Deckblatt außerhalb des Seitenrahmens (DSC-081).",
+        "Die sichtbare Firmierung \"Thitronik GmbH\" ist der juristische Name der Quelle; das Logo schreibt THITRONIK. Die Projekt-Normalisierung darf den juristischen Namen in einem Quellenzitat nicht verändern."
+      ],
+      "terminology_findings": [
+        "Bilinguale sichtbare Bezeichnung \"Hersteller/Manufacturer\".",
+        "Die Off-page-Textebene nennt \"Telemetriemodul\"/\"Telemetry module\" sowie die französische und schwedische Entsprechung."
+      ],
+      "next_action": "Kontakt- und Herstellerangaben vor Publikation bestätigen; Off-page-Textebene bei einer PDF-Sanierung entfernen",
+      "inspected_note": "Batch 23, 2026-08-09, PNG-Rendering 150 dpi; Impressumsblock bei 500 dpi gelesen und gegen das Kartenbild der Seite 69 gehalten. Zusätzlich PyMuPDF-Textobjekte und Pypdf-Extraktion objektbezogen geprüft: Off-page-Deckblatt liegt vollständig rechts außerhalb der sichtbaren Seite."
     }
   ]
 }

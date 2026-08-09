@@ -299,12 +299,12 @@ der in allen vier geprüften Fassungen identisch lautet.
 ### DSC-022 – Eingebettete Bildbeschriftung in keiner Sprachfassung lokalisiert (ab SN-045)
 
 - **Dokument:** DOC-IBA-SN045, Abschnitt 1.2 – deutsche Seite 8, englische Seite 32,
-  französische Seite 56
+  französische Seite 56, tschechische Seite 83 und dänische Seite 107
 - **Beleg:** Die Beschriftung am Antennenfoto lautet in allen drei Fassungen deutsch
   „GPS-Antenne (Optional)", während die Legende danebensteht als „External GPS antenna
   (optional)" (EN) beziehungsweise „Antenne GPS externe (en option)" (FR).
 - **Bewertung:** Die Grafik wurde offenbar als fertiges Bild in alle Sprachteile übernommen.
-  Bestätigt sind DE, EN, FR und CS (tschechische Seite 83) – vier von vier geprüften
+  Bestätigt sind DE, EN, FR, CS und DA (dänische Seite 107) – fünf von fünf geprüften
   Fassungen. Dass alle zehn betroffen sind, ist damit sehr wahrscheinlich.
 - **Schwere:** mittel (Terminologie und Verständlichkeit; verschärft, weil die Legende
   ohnehin nur Bildinhalt ist) · **Status:** offen
@@ -352,13 +352,17 @@ der in allen vier geprüften Fassungen identisch lautet.
   ist eine wörtliche Übertragung von „Masternummer" und im Französischen unüblich.
 - **Schwere:** mittel (Terminologie; der Begriff steuert Berechtigungen) · **Status:** offen
 
-### DSC-015 – Englische Überschrift 5.5 ist wortgleich mit 5.1 (ab SN-045)
+### DSC-015 – Überschrift 5.5 ist in Englisch und Dänisch wortgleich mit 5.1 (ab SN-045)
 
-- **Dokument:** DOC-IBA-SN045, englische Seite 46
+- **Dokument:** DOC-IBA-SN045, englische Seite 46 sowie dänische Seiten 102, 110 und 120
 - **Beleg:** Abschnitt 5.5 trägt den Titel „Controlling the alarm system via SMS" – identisch
   mit 5.1 –, behandelt inhaltlich aber die beiden Ausgänge („Pro-finder has two separately
   controllable outputs"). Die deutsche Fassung nennt denselben Abschnitt korrekt
-  „5.5 Ausgänge per SMS steuern" (Seite 22).
+  „5.5 Ausgänge per SMS steuern" (Seite 22). **Dänische Bestätigung 2026-08-09:**
+  „Styre alarmsystemet via SMS" steht ebenfalls wortgleich bei 5.1 und 5.5. Der Fehler ist
+  dort dreifach belegt: im Inhaltsverzeichnis (Seite 102), im roten Querverweis (Seite 110)
+  und an der Zielüberschrift selbst (Seite 120), deren erster Absatz ausdrücklich die zwei
+  separat steuerbaren Ausgänge beschreibt.
 - **Schwere:** mittel (Navigation und Querverweise; der Fehler darf nicht in den englischen
   Master übernommen werden) · **Status:** offen
 
@@ -577,6 +581,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Präzisierung zu DSC-028:** Der Fehlverweis auf 5.4 sitzt im Fließtext von Abschnitt
   1.3 auf **Seite 9**. Der rote Hinweiskasten auf Seite 11 verweist dagegen **korrekt**
   auf 5.5. Die frühere Ortsangabe ist damit berichtigt.
+- **Dänische Bestätigung 2026-08-09:** Seite 108 übernimmt im Abschnitt 1.3 ebenfalls 5.4
+  statt 5.5. In der Betriebsartentabelle auf Seite 109 verweist Zeile F ebenfalls auf 1.5.2
+  statt 1.5.3. Beide Vorlagenfehler stehen damit in der fünften geprüften Sprachfassung.
 - **Schwere:** mittel (Nutzende landen im falschen Kapitel) · **Status:** offen
 
 ### DSC-041 – Querverweis auf 5.1 führt inhaltlich ins Leere (ab SN-045)
@@ -879,9 +886,13 @@ belegt, nicht aus einer Zusammenfassung.
   comment retrouver votre véhicule" auf Seite 50. Damit sind die vier Vorlagenfehler in
   **allen drei geprüften Sprachteilen** wortgleich nachgewiesen; die zutreffenden
   Verweise treffen ebenfalls überall zu.
-- **Nachtrag 2026-08-09 (schwedischer Teil, erster Beleg):** Auch schwedisch steht
-  „(se 2.5)" für den Kartenlink (Seite 62, gemeint ist 2.6) – vierter Sprachteil,
-  derselbe Fehler; die übrigen drei Verweisstellen liegen auf den Seiten 64–68.
+- **Nachtrag 2026-08-09 (schwedischer Teil, abgeschlossen):** Alle vier falschen
+  Querverweise stehen auch schwedisch: „(se 2.5)" für den Kartenlink (Seite 62, gemeint
+  ist 2.6), „enligt beskrivning under 2.3" für den Statusbericht (Seite 64, gemeint ist
+  2.5), „enligt beskrivning under 2.4" für die Positionsabfrage (Seite 65, gemeint ist
+  2.6) und „finns beskrivet i kapitel 2.6" für das Wiederfinden (Seite 67, gemeint ist
+  2.8). Damit sind die vier Vorlagenfehler in **allen vier Sprachteilen** belegt. Die
+  zutreffenden Verweise treffen auch schwedisch zu.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-056 – Die Steuerberechtigung hängt auch bis SN-044 an einem nirgends erklärten Zeichen (bis SN-044)
@@ -1234,9 +1245,9 @@ belegt, nicht aus einer Zusammenfassung.
   - die Hilfe-SMS des Geräts (Seite 13, geprüft) führt „FENCE ON"/„FENCE OFF";
   - die englische SN-045-Fassung schreibt „fence off" (DSC-033).
     „av" ist das schwedische Wort für „aus", und der schwedische Teil dieses Dokuments
-    verwendet laut Textebene an exakt gleicher Stelle denselben Befehl: „Skicka då ett SMS
-    med innehållet ”fence av” …" (Seite 59) sowie „fence pa"/„fence av" (Seite 67; beide
-    Seiten noch ungeprüft). Die wahrscheinlichste Erklärung ist eine
+    verwendet an exakt gleicher Stelle denselben Befehl: „Skicka då ett SMS med innehållet
+    ”fence av” …" (Seite 59) sowie „fence pa"/„fence av" (Seite 67; beide im Seitenbild
+    gesichert). Die wahrscheinlichste Erklärung ist eine
     **Vorlagenkontamination aus der schwedischen Fassung** – dieselbe Fehlerklasse wie die
     verunglückte norwegisch-dänische Flaggenüberlagerung in der Fassung ab SN-045 (DSC-025).
 - **Folge für Nutzer:** Wer den Befehl wie gedruckt sendet, sendet mutmaßlich einen
@@ -1245,9 +1256,8 @@ belegt, nicht aus einer Zusammenfassung.
   abstellen will.
 - **Generationenvergleich der Befehlssätze:** Auch bis SN-044 hat jede Sprachfassung einen
   eigenen Befehlssatz – DE „Fence an"/„fence aus", EN „Fence on"/„Fence off", SV „fence
-  pa"/„fence av" (der Ausschaltbefehl „fence av" ist seit dem 2026-08-09 auf Seite 59
-  **bei 500 dpi im Seitenbild gesichert**; „fence pa" liegt auf der noch ungeprüften
-  Seite 67), FR „gardiennage active"/„gardiennage desactive". Der französische Ausschaltbefehl ist seit dem
+  pa"/„fence av" (**beide seit dem 2026-08-09 bei 500 dpi im Seitenbild gesichert**), FR
+  „gardiennage active"/„gardiennage desactive". Der französische Ausschaltbefehl ist seit dem
   2026-08-09 **bei 500 dpi im Seitenbild gesichert** (Seite 42). Die französischen Befehle
   unterscheiden sich zudem von denen der SN-045-Fassung („activer/desactiver le
   gardiennage", DSC-033) – **derselbe Befehl hat sich innerhalb einer Sprache zwischen den
@@ -1263,6 +1273,15 @@ belegt, nicht aus einer Zusammenfassung.
   der Geräteliste; die Schaltbefehle `arme`/`desarme` widersprechen dem abgebildeten
   `SCHARF`/`UNSCHARF` – dritter Sprachteil mit dem spiegelbildlichen
   Handbuch-gegen-Gerät-Widerspruch (DSC-054).
+- **Nachtrag 2026-08-09 (schwedischer SN-044-Befehlssatz vollständig, Seiten 66–68):**
+  `skarp`, `oskarp`, `larm`, `urkopplad`, `fence pa`, `fence av`, `Status`, `Pos`,
+  `A pa`, `A av`, `A impuls`, `A XXX`. Alle im Seitenbild geprüft; `fence pa` und die
+  Ausgangsbefehle bei 500 dpi. Der Satz widerspricht der deutsch-englischen Geräteliste
+  durchgehend. Zusätzlich widerspricht er sich **innerhalb einer Seite**: Abschnitt 2.2
+  lehrt zum Ausschalten `oskarp`, nennt zum Beenden des stillen Alarms aber `urkopplad`.
+  Ob beides Befehle sind oder die zweite Form eine fehlübersetzte Beschreibung ist, bleibt
+  offen. Der vollständige Vergleich steht in
+  [Synthese-Auswertung 1](#synthese-befehle).
 - **Schwere:** hoch (sicherheitsrelevanter Befehl) · **Status:** offen – gehört zu
   BLK-005; Nachtrag zu Rückfrage 1
 
@@ -1393,6 +1412,11 @@ belegt, nicht aus einer Zusammenfassung.
   einschließlich der „directive 1995/5/EG" (bei 400 dpi gesichert). Damit tragen zwei von
   drei Sprachteilen die falsche Jahreszahl, und ein französischer Leser erhält die
   rechtliche Erklärung in einer Fremdsprache.
+- **Nachtrag 2026-08-09 (schwedischer Teil):** Auch Abschnitt 3.2 der schwedischen Seite
+  70 ist unübersetzt englisch und übernimmt wortgleich die „directive 1995/5/EG" (bei
+  400 dpi gesichert). **Drei von vier** Sprachteilen tragen damit die falsche Jahreszahl;
+  nur der deutsche nennt 1999/5/EG. Französisch und Schwedisch bieten die rechtliche
+  Aussage zusätzlich in der falschen Sprache dar.
 - **Schwere:** mittel · **Status:** offen – redaktioneller Befund mit rechtlichem Bezug
 
 ### DSC-072 – Der englische Teil verwendet unverändert die deutschen Abbildungen (bis SN-044)
@@ -1418,6 +1442,10 @@ belegt, nicht aus einer Zusammenfassung.
 - **Nachtrag 2026-08-09 (französischer Teil):** Dasselbe Muster – die Seiten 47, 48 und
   52 verwenden unverändert die deutschen Beispiel-SMS-Bilder und Bildschirmfotos. Alle
   drei geprüften Sprachteile teilen sich denselben deutschen Bildbestand.
+- **Nachtrag 2026-08-09 (schwedischer Teil, Dokument abgeschlossen):** Auch die Seiten
+  64, 65 und 69 verwenden dieselben deutschen Meldungs- und Kartenbilder. Damit ist der
+  Befund für **alle vier Sprachteile und alle elf betroffenen Abbildungen** abgeschlossen:
+  Nur die Erläuterungen wurden übersetzt, der geräteseitige und grafische Bildtext nie.
 - **Schwere:** hoch (Meldungen sind ohne die abgebildeten Stichwörter nicht zuzuordnen) ·
   **Status:** offen – Rückfrage 17
 
@@ -1575,22 +1603,26 @@ belegt, nicht aus einer Zusammenfassung.
 ### DSC-078 – Der französische Teil nennt 1500 m als Geofencing-Radius – dritter Wert für dieselbe Größe (bis SN-044)
 
 - **Dokument:** DOC-BMA-SN044, französische Seiten 47 und 50; Vergleich mit den deutschen
-  Seiten 12/15, der englischen Seite 30/33 und der Fassung ab SN-045
+  Seiten 12/15, den englischen Seiten 30/33, den schwedischen Seiten 64/67 und der Fassung
+  ab SN-045
 - **Beleg:** Seite 47: „Vous recevez ce message si votre véhicule se trouve **à plus de
   1500 m** de son lieu d'origine" · Seite 50: „dès que le véhicule s'écarte **d'environ
   1,5 km** de sa position d'origine" – beide bei 400 dpi gesichert, innerhalb des
-  französischen Teils konsistent.
+  französischen Teils konsistent. Schwedisch nennt auf Seite 64 „ca 1000 m" und auf Seite
+  67 „ca 1 km" – beide bei 500 dpi gesichert.
 - **Befund:** Für denselben Auslöseradius der Diebstahlmeldung kursieren jetzt **drei
   Werte**:
 
-  | Quelle                       | Radius              |
-  | ---------------------------- | ------------------- |
-  | bis SN-044, Deutsch/Englisch | ca. 1000 m / 1 km   |
-  | bis SN-044, **Französisch**  | **1500 m / 1,5 km** |
-  | ab SN-045 (DE/EN/FR)         | rund 900 m          |
+  | Quelle                                  | Radius              |
+  | --------------------------------------- | ------------------- |
+  | bis SN-044, Deutsch/Englisch/Schwedisch | ca. 1000 m / 1 km   |
+  | bis SN-044, **Französisch**             | **1500 m / 1,5 km** |
+  | ab SN-045 (DE/EN/FR/CS)                 | rund 900 m          |
 
   Anders als bei den bisherigen Übersetzungsfehlern des französischen Teils (DSC-073) ist
-  hier ein **technischer Zahlenwert** verändert – die Differenz beträgt 50 Prozent. Ob
+  hier ein **technischer Zahlenwert** verändert – die Differenz beträgt 50 Prozent. Der
+  inzwischen abgeschlossene schwedische Teil bestätigt Deutsch und Englisch zweimal;
+  Französisch steht damit **eins zu drei** allein. Ob
   1500 eine Fehlübersetzung, ein Tippfehler (aus 1000) oder ein tatsächlich anderer
   Auslegungswert ist, lässt sich aus den Quellen nicht entscheiden.
 
@@ -1604,7 +1636,7 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-079 – Inhaltliche Abweichungen im schwedischen Teil (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, schwedische Seiten 55 bis 61
+- **Dokument:** DOC-BMA-SN044, schwedische Seiten 55 bis 66
 - **Befund:** Der schwedische Teil ist insgesamt sorgfältiger übersetzt als der
   französische (korrekte Anruf-Formulierung, korrekte LED-Gelb-Beschreibung, korrektes
   Wechselblinken, FAQ-Link vorhanden, „AAlarm" erhalten) – trägt aber eigene inhaltliche
@@ -1624,12 +1656,20 @@ belegt, nicht aus einer Zusammenfassung.
     späten Ergänzung ist sauber.**
   - Seite 60: Die SIM wird laut Text „**i mobilen**" (ins Mobiltelefon) statt ins Modul
     eingesetzt.
+  - Seite 64: Der fünfmal im schwedischen Meldungskapitel wiederholte rote Satz
+    „Efter skicka SMS är masternumret även kallad" ist grammatisch gebrochen; die
+    beabsichtigte Anrufinformation bleibt nur über den Parallelvergleich verständlich.
+  - Seite 65: Die Hilfe-SMS-Erklärung kehrt wie im Französischen die Kommunikationsrichtung
+    um: Laut Satz erhält das `larmnummer` die ungültige SMS, tatsächlich empfängt sie der
+    Pro-finder von der Zielrufnummer und antwortet. Außerdem fehlt wie im Französischen
+    der Hinweis, dass die Positions-SMS bei Einrichtung nach 1.8 das Prepaid-Guthaben
+    überträgt; Deutsch und Englisch führen ihn.
 - **Schwere:** mittel · **Status:** offen – muttersprachlicher Review; betroffene
   Aussagen nie aus der schwedischen Fassung übernehmen
 
 ### DSC-080 – Redaktionelle Befunde im schwedischen Teil bis SN-044 (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, schwedische Seiten 54 bis 63
+- **Dokument:** DOC-BMA-SN044, schwedische Seiten 54 bis 70
 - **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite, analog DSC-064,
   DSC-070 und DSC-077.
   - Seite 54: Vor der Rubrik „Diverse" fehlt die **Kapitelnummer 3**, die alle anderen
@@ -1647,4 +1687,113 @@ belegt, nicht aus einer Zusammenfassung.
     gegen „1:a/2:a larmnumret" – uneinheitliche Benennung in einer Abbildung.
   - Seite 63: fehlende schließende Klammer im 1.8-Verweis („(se beskrivning under 1.8.");
     „1.10" von der Überschrift durch Tabulator getrennt.
+  - Seite 64: „koppkar Pro-finder in stand-by" statt „kopplar"; „Standby" in der
+    Begriffsliste gegen „stand-by" im Fließtext.
+  - Seite 65: „Nödrop SMS" ohne Bindestrich gegen „Positions-SMS" und „Hjälp-SMS" mit.
+  - Seite 68: Kopfzeile „Sidan14" ohne Leerzeichen – einzige schwedische Inhaltsseite.
 - **Schwere:** gering · **Status:** offen – gesammelt für den muttersprachlichen Review
+
+### DSC-081 – Unsichtbare Nachbarseiten werden als zugänglicher Text extrahiert (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 71 und 72
+- **Beleg:** Seite 71 ist sichtbar eine fast leere schwedische Notizseite mit nur
+  „Handbok för Pro-finder", „Sidan 17" und „Anteckningar". Innerhalb des Seitenrahmens
+  findet PyMuPDF 39 lesbare Zeichen. Pypdf extrahiert dagegen 1382: Zusätzlich liegt das
+  vollständige **deutsche Inhaltsverzeichnis samt Haftungsausschluss** bei negativen
+  x-Koordinaten links außerhalb der Seite. Seite 72 zeigt sichtbar nur 112 Zeichen des
+  Impressums; Pypdf extrahiert 524, weil rechts außerhalb des Seitenrahmens das
+  **viersprachige Deckblatt** samt „Revision 2.6" liegt. Die Textobjekte wurden mit
+  PyMuPDF samt Bounding Boxes objektbezogen geprüft; kein Off-page-Zeichen schneidet den
+  sichtbaren Seitenrahmen.
+- **Befund:** Ein Screenreader, Kopiervorgang oder Extraktionswerkzeug, das den MediaBox-
+  Inhalt ohne sichtbaren Seitenclip ausliest, gibt nach der schwedischen Notizseite
+  unvermittelt ein deutsches Inhaltsverzeichnis und nach dem Impressum vier Sprachen eines
+  anderen Layoutteils aus. Umgekehrt hält eine reine Zeichenzählung die fast leere Seite
+  71 für besonders textreich und damit vermeintlich zugänglich. Das ist dieselbe
+  Fehlerklasse wie DSC-075 in einer dritten Richtung: Dort ist Text im Seitenrahmen
+  verdeckt; hier ist Text vollständig **außerhalb** der sichtbaren Seite, aber
+  extrahierbar.
+- **Folge für den Pilot:** Sichtbaren Inhalt und Textebene weiterhin getrennt prüfen;
+  Zeichenanzahl allein ist kein Zugänglichkeitsnachweis. Bei einer PDF-Sanierung müssen
+  die Off-page-Objekte entfernt oder korrekt beschnitten werden. Der HTML-Content-Layer
+  übernimmt sie nicht.
+- **Schwere:** mittel bis hoch (Lesereihenfolge, Sprachwechsel, falsche maschinelle
+  Zugänglichkeitsbewertung) · **Status:** offen – PDF-Sanierung
+
+<a id="synthese-befehle"></a>
+
+## Synthese-Auswertung 1: SMS-Befehle im Sprach- und Generationenvergleich
+
+Diese Auswertung verbindet erstmals den **vollständig geprüften** viersprachigen
+Befehlssatz bis SN-044, die geräteseitige Hilfe-SMS dieser Generation und die vier
+geprüften Sprachfassungen ab SN-045. Alle Angaben sind Quellenzitate für BLK-005, **keine
+zur Veröffentlichung freigegebenen Befehle**.
+
+### Bis SN-044: Kein Handbuchsatz entspricht der Geräteliste
+
+| Funktion           | Deutsch                   | Englisch                       | Französisch             | Schwedisch            | Hilfe-SMS des Geräts |
+| ------------------ | ------------------------- | ------------------------------ | ----------------------- | --------------------- | -------------------- |
+| Schärfen           | `scharf`                  | `arm`                          | `arme`                  | `skarp`               | `SCHARF`             |
+| Entschärfen        | `unscharf`                | `disarm`                       | `desarme`               | `oskarp`              | `UNSCHARF`           |
+| Sirene/Blinker ein | `alarm`                   | `alarm`                        | `alarm`                 | `larm`                | **fehlt**            |
+| Sirene/Blinker aus | `unscharf`                | `disarm`                       | `desarme`               | `urkopplad`           | `ALARM AUS`          |
+| Geofencing ein     | `Fence an`                | `Fence on`                     | `gardiennage active`    | `fence pa`            | `FENCE ON`           |
+| Geofencing aus     | `fence aus` / `Fence aus` | `Fence off`; einmal `fence av` | `gardiennage desactive` | `fence av`            | `FENCE OFF`          |
+| Statusbericht      | `Status`                  | `Status`                       | `Statut`                | `Status`              | `STATUS`             |
+| Position           | `Pos` / `POS`             | `Pos` / `POS`                  | `Pos`                   | `Pos`                 | **fehlt**            |
+| Ausgang A ein      | `A an`                    | `A on`                         | `A active`              | `A pa`                | `A ON`               |
+| Ausgang A aus      | `A aus`                   | `A off`                        | `A desactivee`          | `A av`                | `A OFF`              |
+| Ausgang A, Impuls  | `A impuls`                | `A pulse`                      | `A impulsion`           | `A impuls`            | `A PULSE`            |
+| Ausgang A, Zeit    | `A XXX`                   | `A XXX`                        | `A XXX`                 | `A XXX`               | **fehlt**            |
+| GPS ein/aus        | **nicht im Handbuch**     | **nicht im Handbuch**          | **nicht im Handbuch**   | **nicht im Handbuch** | `GPS ON` / `GPS OFF` |
+
+Fundstellen: DOC-BMA-SN044, DE Seiten 7/13–16, EN 25/31–34, FR 42/48–51, SV
+59/65–68. Die Hilfe-SMS steht als identisches deutsches Bild auf den Seiten 13, 31, 48
+und 65; ihre Liste wurde auf Seite 13 bei 700 dpi und im schwedischen Abschlussbatch noch
+einmal bei 500 dpi gelesen.
+
+Die Geräteliste ist **kein fünfter konsistenter Sprachsatz**. Sie kombiniert deutsche
+Schaltwörter (`SCHARF`, `UNSCHARF`, `ALARM AUS`) mit englischen Ausgangs-, Geofencing-
+und GPS-Wörtern. Deutsch stimmt nur beim Schärfen, Englisch nur bei Ausgängen und
+Geofencing mit ihr überein; Französisch und Schwedisch bei keiner Wortkomponente. Gleichzeitig
+fehlen der Liste die im Handbuch gelehrten Positions- und Zeitbefehle, während ihre beiden
+GPS-Befehle in keinem Sprachteil erklärt werden. Das englische `fence av` ist zusätzlich
+bildlich als aus dem schwedischen Teil kontaminiert belegt (DSC-067).
+
+### Ab SN-045: Wieder vier Sprachsätze, aber andere Regeln
+
+| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch     |
+| --------------- | ---------------- | --------------- | ----------------------------- | --------------- |
+| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      |
+| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`          |
+| Position        | `position`       | `position`      | `position`                    | `poloha`        |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`         |
+| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | `a vyp`         |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`      |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`       |
+| Anlernmodus ein | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap`     |
+| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT |
+
+Fundstellen und Einzelbelege stehen in DSC-013, DSC-014, DSC-026 und DSC-033. Auch hier
+existiert kein sprachneutraler Satz; nur `a %min%` bleibt über alle vier Fassungen gleich.
+Die Großschreibung der Hilfe-SMS und die abweichenden Kapitelwörter bleiben ungeklärt.
+
+### Ergebnis des Generationenvergleichs
+
+1. **Sprache und Generation sind beide Funktionsparameter.** Französisch wechselt etwa
+   von `gardiennage active` zu `activer le gardiennage`, von `Statut` zu
+   `rapport d etat` und von `A active` zu `activer la sortie A`. Deutsch/Englisch wechseln
+   beim Zeitplatzhalter von `XXX` zu `%min%` und beim Positionswort von `Pos` zu
+   `position`.
+2. **Die Hilfe-SMS ist keine belastbare Masterliste.** Bis SN-044 fehlen ihr dokumentierte
+   Befehle und sie enthält unerklärte; zugleich widerspricht jeder Handbuchsatz mindestens
+   einem ihrer Blöcke. Ab SN-045 ist selbst die Hilfe-SMS lokalisiert.
+3. **ASCII ist ein Muster, keine Freigabe.** `pa` statt schwedisch `på`, akzentlose
+   französische und tschechische Wörter sowie deutsche Umlaute als `ue` deuten auf eine
+   Zeichensatzgrenze. Daraus lässt sich nicht ableiten, welche Zeichenfolge ein Gerät
+   akzeptiert.
+4. **BLK-005 bleibt zwingend.** Kein Befehl darf in `goal`, `steps`, `warnings`,
+   `error_cases`, `expected_result` oder `tables_md` erscheinen, bis THITRONIK je
+   Generation die akzeptierten Zeichenfolgen, Spracheinstellung, Groß-/Kleinschreibung
+   und die Rolle der Hilfe-SMS bestätigt hat.
