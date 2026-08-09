@@ -1,0 +1,194 @@
+{
+  "slug": "geofencing",
+  "title": "Geofencing nutzen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Den virtuellen Zaun beim Pro-finder bis SN-044 einordnen, die Schaltlogik von Pin 3 in den Betriebsarten 8 und B sicher unterscheiden und eine mögliche Diebstahlmeldung bewerten, ohne einen ungeklärten Radius oder SMS-Befehle zu veröffentlichen.",
+  "prerequisites": [
+    "Der Pro-finder ist betriebsbereit und hat GPS-Empfang.",
+    "Mindestens eine Zielrufnummer ist eingerichtet.",
+    "Die eingestellte Betriebsart und die Beschaltung von Pin 3 sind bekannt."
+  ],
+  "warnings": [
+    {
+      "text": "Der Abstand, ab dem die Quelle eine Diebstahlmeldung beschreibt, wird nicht veröffentlicht. Zwischen den Handbuchstellen besteht eine sprachliche Abweichung, und Rückfrage 14 ist offen.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12, 15",
+          "region": "Beschreibung der Diebstahlmeldung und Abschnitt 2.4 „Geofencing“",
+          "note": "Der Zahlenwert ist wegen DSC-061 und Rückfrage 14 bewusst nicht wiedergegeben."
+        }
+      ]
+    },
+    {
+      "text": "In Hallen, Gebäuden und unter Überdachungen können Reflexionen des GPS-Signals die Positionsbestimmung stark beeinträchtigen und eine Diebstahlmeldung auslösen, obwohl das Fahrzeug nicht bewegt wurde.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7",
+          "region": "Abschnitt 1.6.2, Hinweis unter der GPS-Diagnose"
+        }
+      ]
+    },
+    {
+      "text": "Bei angeschlossener WiPro wird Geofencing laut Quelle automatisch mit deren Scharfzustand ein- und mit deren Unscharfzustand ausgeschaltet. Wie dieser Automatismus mit einer gleichzeitig gegenteiligen Vorgabe an Pin 3 zusammenwirkt, erklärt die Quelle nicht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15",
+          "region": "Roter Hinweis am Ende von Abschnitt 2.4",
+          "note": "Der ungeklärte Vorrang ist als DSC-062 dokumentiert."
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Lesen Sie die Schalterstellung am Betriebsartenschalter ab. Die Quelle führt die Stellungen 0 bis 9 und A bis F auf; nur 8 und B enthalten eine dokumentierte Schaltlogik für Geofencing über Pin 3.",
+      "expected": "Die Betriebsart ist eindeutig festgestellt, bevor die Spannung an Pin 3 bewertet wird.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-5",
+          "region": "Abschnitt 1.3 und Tabelle der Betriebsarten"
+        }
+      ]
+    },
+    {
+      "text": "In Betriebsart 8 gilt: Eine Spannung über 6 V an Pin 3 schaltet Geofencing ein; eine Spannung unter 5 V schaltet es aus.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Zeile 8, Spalte zur Geofencing-Schaltung"
+        }
+      ]
+    },
+    {
+      "text": "In Betriebsart B gilt die umgekehrte Logik: Eine Spannung über 6 V an Pin 3 schaltet Geofencing aus; eine Spannung unter 5 V schaltet es ein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Zeile B, Spalte zur Geofencing-Schaltung"
+        }
+      ]
+    },
+    {
+      "text": "Behandeln Sie Spannungen von 5 V bis 6 V nicht als definierten Schaltzustand. Die Tabelle nennt nur Werte unter 5 V und über 6 V.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Schwellen in den Zeilen 8 und B"
+        }
+      ]
+    },
+    {
+      "text": "Wenn eine WiPro angeschlossen ist, berücksichtigen Sie deren Zustand zusätzlich: Scharfschalten aktiviert und Unscharfschalten deaktiviert Geofencing laut Hinweis automatisch.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15",
+          "region": "Roter Hinweis am Ende von Abschnitt 2.4"
+        }
+      ]
+    },
+    {
+      "text": "Stellen Sie das Fahrzeug in einer Halle, einem Gebäude oder unter einem Dach ab, verlassen Sie sich nicht auf eine unveränderte GPS-Position. Lassen Sie bei Unsicherheit die Deaktivierung durch einen Fachhändler oder den Support prüfen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7",
+          "region": "Abschnitt 1.6.2, Hinweis zu GPS-Reflexionen und Empfehlung zur Deaktivierung"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie eine ausgelöste Diebstahlmeldung als stillen Alarm ein. Die Quelle sagt ausdrücklich, dass dabei weder Blinker noch Sirene aktiviert werden; anschließend wird die Masternummer angerufen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12",
+          "region": "Abschnitt 2.1, Erläuterung der Diebstahlmeldung und roter Folgehinweis"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die Schaltlogik ist passend zur Betriebsart bewertet, GPS-bedingte Fehlalarme und der WiPro-Automatismus sind berücksichtigt, und der Pilot veröffentlicht weder einen ungeklärten Geofencing-Radius noch eine SMS-Befehlszeichenfolge.",
+  "error_cases": [
+    {
+      "problem": "Die Spannung an Pin 3 liegt zwischen 5 V und 6 V.",
+      "correction": "Die Quelle definiert diesen Zwischenbereich nicht. Leiten Sie daraus keinen Zustand ab; lassen Sie Beschaltung und Betriebsart fachlich prüfen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Zeilen 8 und B"
+        }
+      ]
+    },
+    {
+      "problem": "Das Fahrzeug wurde nicht bewegt, trotzdem wurde eine Diebstahlmeldung ausgelöst.",
+      "correction": "Prüfen Sie, ob das Fahrzeug in oder unter einem Bauwerk steht. Die Quelle warnt dort vor GPS-Reflexionen und dadurch ausgelösten Meldungen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7",
+          "region": "Abschnitt 1.6.2, Hinweis zu GPS-Reflexionen"
+        }
+      ]
+    },
+    {
+      "problem": "Pin 3 und der Zustand einer angeschlossenen WiPro verlangen entgegengesetzte Geofencing-Zustände.",
+      "correction": "Die Quelle legt keinen Vorrang fest. Nicht raten; dokumentieren Sie die Konstellation und wenden Sie sich an Fachhändler oder Support.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5, 15",
+          "region": "Betriebsartentabelle und WiPro-Hinweis in Abschnitt 2.4"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s05-geofencing-pin3",
+      "alt": "Betriebsartentabelle mit gegensätzlichen Spannungsschwellen für Geofencing in den Zeilen 8 und B.",
+      "long_description": "Die Tabelle zeigt in Zeile 8: über 6 Volt schaltet Geofencing ein und unter 5 Volt aus. In Zeile B ist diese Zuordnung vertauscht. Für den Bereich von 5 bis 6 Volt enthält die Quelle keine Aussage.",
+      "steps_text": [
+        "Schalterstellung feststellen.",
+        "Nur die dazu passende Zeile 8 oder B verwenden.",
+        "Den Zwischenbereich nicht interpretieren."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "5",
+        "region": "Tabelle der Betriebsarten, Zeilen 8 und B",
+        "note": "Die SMS-Varianten „FENCE ON“ und „FENCE OFF“ stehen in den Abschnitten 1.6.2 und 2.4 sowie in der Hilfe-SMS. Sie werden wegen BLK-005 nur hier als Begründung ihrer Auslassung zitiert und sind keine Bedienanweisung."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Betriebsart | Pin 3 unter 5 V | Pin 3 über 6 V |\n| --- | --- | --- |\n| 8 | Geofencing aus | Geofencing ein |\n| B | Geofencing ein | Geofencing aus |",
+    "| Situation | Dokumentierte Bedeutung |\n| --- | --- |\n| WiPro scharfgeschaltet | Geofencing wird automatisch aktiviert |\n| WiPro unscharfgeschaltet | Geofencing wird automatisch deaktiviert |\n| Halle, Gebäude oder Überdachung | GPS-Reflexionen können eine Meldung ohne Fahrzeugbewegung auslösen |\n| Diebstahlmeldung | stiller Alarm ohne automatische Aktivierung von Blinker und Sirene; anschließender Anruf der Masternummer |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "4-5, 7, 12, 15",
+      "region": "Betriebsartentabelle, GPS-Diagnose, Meldungsbeschreibung und Abschnitt 2.4",
+      "note": "Alle verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und vollständig visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion für die Generation bis SN-044 aus DOC-BMA-SN044, Seiten 4–5, 7, 12 und 15. Der konkrete Geofencing-Radius bleibt wegen DSC-061 und Rückfrage 14 in allen veröffentlichten Feldern ungenannt. BLK-005 ist eingehalten: Die Zeichenfolgen „FENCE ON“ und „FENCE OFF“ werden ausschließlich in figures[].source.note zur Begründung der Auslassung zitiert. Nicht geglättet wurden der undefinierte Spannungsbereich zwischen 5 V und 6 V sowie der ungeklärte Vorrang zwischen Pin 3 und der automatischen WiPro-Kopplung (DSC-062). Die Aufgabe enthält keine Koordinaten, Kartenadresse, Beispielrufnummer oder lokalisiertes Meldungs-Stichwort. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

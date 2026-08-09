@@ -1145,6 +1145,14 @@ belegt, nicht aus einer Zusammenfassung.
   Schalterstellung wird nicht zurückgemeldet. Auch der Löschvorgang der Zielrufnummern auf
   Seite 11 enthält mit „warten Sie bis die Status LED gelb/grün blinkt" eine farbcodierte
   Abbruchbedingung und ist damit ohne Farbwahrnehmung nicht sicher durchführbar.
+- **Widerspruch innerhalb derselben Generation:** DOC-BMA-SN044, Seite 11, erklärt grünes
+  Dauerlicht nur mit „Pro-finder versendet eine SMS". DOC-KA-SN044, Seite 2,
+  formuliert in der deutschen Zeile dagegen „Pro-finder empfängt/versendet eine sms" und
+  in der direkt darunterstehenden englischen Zeile nur „Pro-finder receives/sends a text
+  message". Die Kurzanleitung bestätigt damit den wechselseitigen Sende-/Empfangsvorgang,
+  während die Bedienungsanleitung nur den Versand nennt. Ob grünes Dauerlicht beim
+  Empfang, beim Versand oder bei beiden Vorgängen gilt, bleibt offen; Aufgabe 07 gibt beide
+  Quellenstände wieder.
 - **Warum das zählt:** Für die Generation ab SN-045 ist der Sachverhalt als DSC-047 auf die
   dreistufige GPS-Diagnose beschränkt. Hier betrifft er die **vollständige
   Zustandsanzeige** des Geräts im Normalbetrieb. Das ist die bisher umfangreichste
@@ -1471,6 +1479,16 @@ belegt, nicht aus einer Zusammenfassung.
   | Ausgänge                    | 2 x 12V/500mA        | 2 × 12 V/500 mA (gleich)                      |
   | Temperaturbereich           | -10°C bis +80°C      | −10 bis +80 °C (gleich)                       |
   | Zielrufnummern              | 10                   | 10 (gleich)                                   |
+
+  **Zusätzliche Abweichungen innerhalb der Generation bis SN-044:** DOC-KA-SN044,
+  Seite 2, nennt für den normalen GSM-Betrieb **ca. 16–21 mA**, während
+  DOC-BMA-SN044, Seite 18, nur **ca. 21 mA** nennt. Außerdem verweist die Kurzanleitung
+  auf die Richtlinie **2014/53/EU**, die Bedienungsanleitung auf **1999/5/EG**. Im
+  Anschlusskapitel der Bedienungsanleitung auf Seite 6 steht eine „geeignete 12V DC
+  Spannungsquelle", während die technische Tabelle desselben Dokuments auf Seite 18 den
+  Bereich **9–30 V** nennt. Das kann ein nominaler Anschlusskontext gegenüber dem zulässigen
+  Bereich sein; die Quelle erklärt die Beziehung aber nicht. Aufgabe 13 hält alle drei
+  Unterschiede sichtbar, statt einen Wert auszuwählen.
 
   Zusätzlich nennt nur die ältere Fassung eine Sendefrequenz („900/1800/850/1900Mhz");
   die 1999/5/EG (R&TTE) ist seit 2017 durch die 2014/53/EU abgelöst – zeittypisch für das

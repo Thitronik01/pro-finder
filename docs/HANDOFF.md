@@ -1,66 +1,85 @@
 # Handoff
 
-Stand: 2026-08-09 (neunte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-09 (zehnte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-### PDF-Seitenprüfung: 314 → 323 von 323
+### Deutscher Aufgabensatz bis SN-044: 1 → 14 von 14
 
-- **DOC-IBA-SN045, Seiten 233–240 und 247:** neun neue schwedische Records. Damit steht
-  das Dokument bei **247 von 247**, DOC-BMA-SN044 bei **72 von 72** und der gesamte
-  Seitenbestand bei **323 von 323** visuell geprüften Seiten (`inspected`).
-- Alle neun Records wurden mit `scripts/merge-page-records.mjs` gegen Seitenmaße und
-  lesbare Zeichenzahlen der Original-PDF geprüft. Schwedisch wurde nicht
-  muttersprachlich freigegeben; jeder Record trägt eine entsprechende `language_note`.
-- Der schwedische Teil umfasst regulär 22 interne Seiten und endet auf PDF-Seite 247 mit
-  „Sida 22 av 22“. Anders als FR, ES, NL und PL besitzt er keinen Fehler der internen
-  Seitenzählung (DSC-021).
+- `content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json` bis
+  `14-support.json` sind vollständig gefüllt. Der vorhandene Platzhalter
+  `07-status-led.json` wurde ersetzt; alle Dateien tragen `review_status: entwurf` und
+  `placeholder: false`.
+- Als strukturelle Vorbilder dienten
+  `content/tasks/sn-045-plus/de/01-geraetegeneration-bestimmen.json` und
+  `03-anschluesse.json`. Technische Aussagen der neueren Generation wurden nicht in den
+  SN-044-Zweig übernommen.
+- Vor der Extraktion wurden DOC-BMA-SN044, PDF-Seiten 1–19, bei 200 dpi sowie
+  DOC-KA-SN044, Seiten 1–2, bei 250 dpi neu gerendert und vollständig visuell gelesen.
+  Für die Generationsgrenze wurden zusätzlich DOC-IBA-SN045, Seiten 2, 6 und 25, bei
+  250 dpi gerendert und visuell geprüft. Jede fertige Aufgabe wurde erneut gegen diese
+  Renderings gehalten.
+- Jede Handlungs-, Warn- und Fehleraussage nennt Dokument, PDF-Seite und Seitenregion.
+  Alle vierzehn Dateien besitzen einen detaillierten `change_reason`; Unsicherheiten sind
+  sichtbar statt still korrigiert.
 
-### Schwedischer Sprachblock abgeschlossen
+### Generationsentscheidung transparent
 
-1. Die gemeinsame deutsche Bildbeschriftung „GPS-Antenne (Optional)“, das unerklärte
-   rote X, `ALARM` gegen `AAlarm`, die implizite Minus-Regel sowie beide falschen
-   Querverweise stehen auch schwedisch. DSC-016/017/022/040/041/043/044/046/047 sind um
-   die Belege ergänzt; die Vorlagenfehler sind damit in allen zehn SN-045-Fassungen
-   geprüft.
-2. **DSC-085 neu:** Seite 235 fordert zum Deaktivieren des Geofencings `fence pa`.
-   Abschnitt 5.2 auf Seite 243 definiert dieselbe Zeichenfolge als Einschaltbefehl und
-   `fence av` als Ausschaltbefehl. Der entscheidende Wortlaut wurde zusätzlich bei
-   600 dpi geprüft. Keine Zeichenfolge wird wegen BLK-005 in den Content-Layer
-   übernommen.
-3. Schwedisch bildet das zehnte Befehlsprofil: `status`, `position`, `a pa`, `a av`,
-   `a impuls`, `a %min%`, `inlarningslage pa`; die Hilfe-SMS nennt dagegen
-   `SKARP`/`OSKARP`/`STATUS`/`POS`. Diese Texte stehen ausschließlich als Quellenzitate
-   in Register und Synthese.
-4. Die Meldungsseiten 241/242 besitzen trotz acht blau unterstrichener Kartenadressen
-   **null** Linkannotationen. Damit sind alle 21 nichtdeutschen Meldungsseiten in
-   EN/FR/CS/DA/ES/IT/NL/PL/SV inert; nur die deutsche Seite 20 besitzt Annotationen,
-   dort doppelt (DSC-082).
-5. Die Schlussseite bestätigt 9–30 V, ca. 37 mA Netzsuche, ca. 16–21 mA Normalbetrieb,
-   Nano-SIM, zwei Ausgänge mit je 12 V/500 mA und 2014/53/EU. Supportpfade zeigen auch im
-   schwedischen Teil auf `/en/`; sichtbare URLs besitzen keine Linkannotation.
+- DOC-BMA-SN044 und DOC-KA-SN044 nennen selbst keinen Seriennummernbereich.
+- Die Grenze „ab -045“ stammt ausschließlich von DOC-IBA-SN045, PDF-Seite 2. Die
+  Produktabbildung auf Seite 6 zeigt zwar ein Beispiel im Format `SN 0699 - 045 +`, doch
+  keine der gelesenen Quellen erklärt, welcher Nummernteil verglichen werden muss.
+- Die Quellen nennen keinen genauen Fundort der Seriennummer am älteren Gerät. Die
+  Schlussseiten zeigen nur leere Felder `SN` beziehungsweise `Serial number`.
+- Aufgabe 01 enthält deshalb keine erfundene Leseregel und verweist bei Unsicherheit
+  belegt auf Fachhändler beziehungsweise Support. DSC-023 bleibt offen.
 
-### Synthese und Register abgeschlossen
+### Sperren eingehalten
 
-- Die erste Synthese-Auswertung in `DISCREPANCIES.md` vergleicht jetzt alle zehn
-  vollständig geprüften SN-045-Sprachfassungen mit den vier älteren Fassungen und der
-  älteren Geräte-Hilfe-SMS. Ergebnis: **zehn Sprachen ergeben zehn unterschiedliche,
-  teils intern widersprüchliche Profile**; `a %min%` ist die einzige in allen zehn
-  SN-045-Fassungen gleiche Kapitelzeichenfolge.
-- DSC-085 ist die höchste Registernummer. Er wurde in Rückfrage 1 und unter „Laufend
-  ergänzt“ aufgenommen; es wurde keine achtzehnte Frage eröffnet.
-- Registerstand: weiterhin **siebzehn Fragen und sieben Blocker**; nichts still gelöst.
+- **BLK-005:** In `goal`, `prerequisites`, `warnings`, `steps`, `expected_result`,
+  `error_cases` und `tables_md` steht im gesamten SN-044-Satz keine
+  SMS-Befehlszeichenfolge. Quellenzitate zu ausgelassenen Befehlen stehen nur in
+  `change_reason` oder `figures[].source.note`.
+- **BLK-006:** Aufgabe 06 beschreibt Rollen und den sicheren physischen Löschweg, aber
+  keine aus Beispielen hergeleitete Autorisierungszeichenregel.
+- Der Geofencing-Radius bleibt wegen Rückfrage 14 vollständig unveröffentlicht. Das
+  automatische Intervall der Betriebsart D bleibt wegen Rückfrage 16 ungenannt.
+  Lokalisierte Meldungs-Stichwörter werden wegen Rückfrage 17 nicht als sichere
+  Geräteausgabe behandelt.
+- Keine Koordinate, Kartenadresse, Beispielrufnummer oder Rufnummer aus einer Beispiel-SMS
+  wurde übernommen. Der feste SIM-Code bleibt wegen Rückfrage 15 außerhalb sichtbarer
+  Bedienfelder.
+
+### Register und Rückfragen ergänzt
+
+- **DSC-059 / Rückfrage 12:** DOC-BMA-SN044, Seite 11, ordnet grünes Dauerlicht nur dem
+  SMS-Versand zu; DOC-KA-SN044, Seite 2, nennt Empfang oder Versand. Der Widerspruch
+  bleibt in Aufgabe 07 sichtbar.
+- **DSC-069 / Rückfrage 2:** Innerhalb derselben Generation nennt DOC-BMA-SN044 ca.
+  21 mA Normalstrom und 1999/5/EG, DOC-KA-SN044 dagegen ca. 16–21 mA und 2014/53/EU.
+  Zusätzlich steht im BMA-Anschlusskapitel eine geeignete 12-V-DC-Quelle, in der
+  technischen Tabelle desselben Dokuments aber 9–30 V. Aufgabe 13 wählt keinen Wert
+  still aus.
+- Es wurde keine achtzehnte Rückfrage und keine neue DSC-Nummer eröffnet. Registerstand:
+  höchster Eintrag DSC-085, siebzehn Rückfragen und sieben Blocker.
 
 ## Was weiterhin offen ist
 
-- Die Generation bis SN-044 besitzt nur den Platzhalter
-  `content/tasks/sn-001-044/de/07-status-led.json`; die übrigen dreizehn Aufgabendateien
-  fehlen. Die deutschen Quellseiten sind vollständig geprüft und können jetzt ohne
-  THITRONIK-Antworten extrahiert werden.
+- Die Segment-Extraktion als Grundlage für die Übersetzung fehlt vollständig. Alle 323
+  Seiten stehen weiterhin nur auf `inspected` und damit konservativ bei 25 Prozent
+  Quellenreife.
+- Für versionierte `content_segments` existiert im Dateisystem noch kein kanonisches
+  Repo-Format. Das Datenbankschema in
+  `supabase/migrations/20260806000001_initial_schema.sql` definiert bereits die benötigten
+  Felder. Das Format und seine Prüfung müssen vor dem ersten Extraktionsbatch festgelegt
+  werden.
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
-- Die neuen Seitenrecords besitzen keine unabhängige Gegenprüfung; tragende Einzelwerte
-  wurden hochauflösend gesichert, der Status bleibt trotzdem `inspected`.
+- Die Seitenrecords besitzen keine unabhängige Gegenprüfung; tragende Einzelwerte und
+  alle für die Aufgaben verwendeten deutschen Seiten wurden visuell gesichert, der
+  Seitenstatus bleibt trotzdem `inspected`.
+- Alle technischen und sicherheitskritischen Inhalte stehen auf `entwurf`; es gibt keine
+  technische Freigabe und keinen muttersprachlichen Review der nichtdeutschen Fassungen.
 - Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
 
 ## Externe/menschliche Blocker
@@ -76,55 +95,52 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045 233–240 und 247.
-- **Gesamtstand:** 323 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
-  DOC-IBA-SN045 247/247 und beide Kurzanleitungen je 2/2.
-- **Segmente:** keine neuen; alle neuen Seiten bleiben `inspected`.
-- **Aufgaben:** keine geändert; alle vierzehn deutschen SN-045-Aufgaben auf `entwurf`.
-- **Geänderte Bereiche:** Seitenrecords, Diskrepanzregister, Rückfragen, Synthese,
-  Fortschritts- und Übergabedokumentation. Kein Anwendungscode geändert.
+- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 1–19, DOC-KA-SN044 1–2 und
+  DOC-IBA-SN045 2, 6, 25 neu gerendert und visuell gelesen.
+- **Gesamtstand Quellen:** 323 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
+  DOC-IBA-SN045 247/247 und beide Kurzanleitungen je 2/2. Keine Seite wurde ohne
+  Segmentdatei auf `extracted` hochgestuft.
+- **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
+  gefüllt, alle `entwurf`, kein Platzhalter.
+- **Register:** DSC-059 und DSC-069 ergänzt; Rückfragen 2 und 12 präzisiert. Höchster
+  Eintrag bleibt DSC-085; siebzehn Fragen und sieben Blocker.
+- **Geänderte Bereiche:** deutscher SN-044-Content-Layer, Diskrepanzregister,
+  Rückfragen, Fortschritts- und Übergabedokumentation. Kein Anwendungscode geändert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
   `npm run format` → `npm run check` vollständig grün.
 - **Referenz-Repository:** sauber; Push-URL `DISABLED`.
 
 ```text
 Resume from:
-content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json, deutsche Quellenlage
-DOC-BMA-SN044 Seiten 1–19 und beide Kurzanleitungen vollständig geprüft.
+content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json bis
+content/tasks/sn-001-044/de/14-support.json vollstaendig; beide deutschen
+Generationszweige mit 28 von 28 Aufgaben auf entwurf. Alle 323 PDF-Seiten weiterhin
+inspected, noch keine versionierten content_segments im Repo.
 
 First action:
-Die erste vollständige Aufgabe der Generation bis SN-044 erstellen:
-content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json. Als strukturelles
-Vorbild content/tasks/sn-045-plus/de/01-geraetegeneration-bestimmen.json verwenden, aber
-keine technischen Aussagen der neueren Generation übernehmen.
+Die Segment-Extraktion als Uebersetzungsgrundlage beginnen. Zuerst aus der Tabelle
+public.content_segments in
+supabase/migrations/20260806000001_initial_schema.sql ein versioniertes kanonisches
+Repo-Format samt Schema- und Referenzpruefung ableiten. Keine Produktinhalte in die
+Migration selbst schreiben.
 
-Vor dem Schreiben die einschlägigen Seiten selbst rendern und lesen: mindestens
-DOC-BMA-SN044 Seiten 1–3 und 18–19 sowie DOC-KA-SN044 Seiten 1–2; für die dokumentierte
-Grenze und die ungeklärte Leseregel zusätzlich die bereits geprüften Fundstellen
-DOC-IBA-SN045 Seiten 2, 6 und 25 heranziehen. Transparent festhalten: Die älteren
-Dokumente tragen selbst keinen Seriennummernbereich; die Grenze „ab -045“ stammt aus der
-neueren Fassung, und die Quelle erklärt weder Fundort am Gerät noch zu vergleichenden
-Nummernteil. Nicht raten, sondern auf Fachhändler/Support verweisen und DSC-023 beachten.
+Danach als ersten abgeschlossenen Batch DOC-BMA-SN044, deutsche PDF-Seiten 3 bis 7,
+erneut aus tmp/pdfs/sn044-bma-de-001-019 visuell lesen und in quellennahe deutsche
+Segmente ueberfuehren: Lieferumfang/Montageort, Betriebsarten, Anschluesse und
+GPS-Diagnose. Jedes Segment braucht mindestens stabilen segment_key, serial_range
+sn-001-044, language de, segment_type, task_slug, title/body_md, safety_class,
+source_document_id beziehungsweise doc_key, source_page_start/-end, source_region,
+prev_context, next_context, checksum und change_reason. BLK-005 gilt auch hier: keine
+SMS-Befehlszeichenfolge in ein uebersetzbares Segment aufnehmen; eine notwendige
+Auslassungsbegruendung bleibt nicht-uebersetzbarer Metadatenkontext.
 
-Jede Aussage braucht Dokument, PDF-Seite und Seitenregion. Die Datei bleibt auf
-review_status „entwurf“, placeholder false. Anschließend gegen die Quellen gegenprüfen
-und content:check laufen lassen.
-
-Danach ohne Warten die Aufgaben 02-montageort bis 06-zielrufnummern und 08-meldungen bis
-14-support erstellen sowie den vorhandenen Platzhalter 07-status-led füllen. Die
-deutschen DOC-BMA-SN044-Seiten 3–18 bilden dafür den Hauptkorpus; jede zugewiesene Seite
-vor der Extraktion selbst rendern. Vorbild für das vollständige Schema ist
-content/tasks/sn-045-plus/de/03-anschluesse.json.
-
-BLK-005 strikt einhalten: keine SMS-Befehlszeichenfolge in goal, prerequisites,
-warnings, steps, expected_result, error_cases oder tables_md. Befehle dürfen nur in
-change_reason beziehungsweise figures[].source.note die Auslassung belegen. Ebenfalls
-kein Betriebsart-D-Intervall (Rückfrage 16), kein Geofencing-Radius (Rückfrage 14) und
-keine lokalisierten Meldungs-Stichwörter (Rückfrage 17) als belastbare Anleitung
-ausgeben. BLK-006 bei Zielrufnummern beachten. SN-044 und SN-045 außerhalb der
-Generationsentscheidung nicht vermischen.
+Erst wenn die Segmente angelegt, gegen die sichtbaren Seiten geprueft und alle neuen
+Pruefungen gruen sind, ausschliesslich die Seiten 3 bis 7 in
+sources/pages/DOC-BMA-SN044.json von inspected auf extracted (50 Prozent) setzen und
+next_action auf die unabhaengige Validierung dieses Batches umstellen. Seiten 1 bis 2 und
+8 bis 72 unveraendert lassen. Widersprueche nicht glatten; DSC-Verweise erhalten.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
-RUECKFRAGEN_THITRONIK.md enthält siebzehn entscheidungsreife Fragen; nicht auf Antworten
+RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten
 warten.
 ```

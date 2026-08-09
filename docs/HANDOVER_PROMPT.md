@@ -30,23 +30,24 @@ Beleg in den Seitenrecord.
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Die PDF-Seitenprüfung ist seit
 dem 2026-08-09 mit **323 von 323 Seiten vollständig**. Der nächste große, vollständig
-lokal lösbare Hebel ist deshalb der **deutsche Content-Layer der Generation bis SN-044**:
-dreizehn Aufgabendateien fehlen, `07-status-led.json` ist noch ein Platzhalter.
+lokal lösbare Hebel ist deshalb die **Segment-Extraktion als Übersetzungsgrundlage**.
+Beide deutschen Generationszweige besitzen inzwischen je vierzehn vollständig gefüllte
+Aufgaben; alle 28 Dateien stehen auf `entwurf`, keine ist mehr Platzhalter.
 
-Die exakte erste Datei, ihre Quellenroute und die Sperren stehen unter „First action" in
-`HANDOFF.md`. Kurzfassung des Vorgehens je Aufgabe:
+Der exakte erste Batch und seine Sperren stehen unter „First action" in `HANDOFF.md`.
+Kurzfassung:
 
-1. Die zugewiesenen deutschen PDF-Seiten selbst rendern und visuell lesen; der deutsche
-   Hauptkorpus von DOC-BMA-SN044 liegt auf den PDF-Seiten 1–19.
-2. Das vollständige Schema von
-   `content/tasks/sn-045-plus/de/03-anschluesse.json` übernehmen, aber keine Aussagen der
-   neueren Generation in den älteren Zweig übertragen.
-3. Jede Aussage in Schritt, Warnung und Fehlerfall direkt mit Dokument, PDF-Seite und
-   Seitenregion belegen; Figuren und Tabellen als echte Textentsprechungen ausarbeiten.
-4. Widersprüche offenlassen und in `change_reason` begründen. BLK-005, BLK-006 sowie die
-   gesperrten Werte aus Rückfrage 14, 16 und 17 beachten.
-5. Die Datei gegen die gerenderten Quellseiten gegenprüfen; `review_status` bleibt
-   `entwurf`, `placeholder` wird `false`.
+1. Aus `public.content_segments` in der initialen Supabase-Migration ein versioniertes,
+   kanonisches Repo-Format ableiten und durch Schema- und Referenzprüfungen absichern.
+2. Als ersten Batch DOC-BMA-SN044, deutsche PDF-Seiten 3–7, aus den vorhandenen Renderings
+   erneut visuell lesen und quellennahe Segmente für Lieferumfang/Montageort,
+   Betriebsarten, Anschlüsse und GPS-Diagnose anlegen.
+3. Jedes Segment mit stabilem Schlüssel, Generations- und Sprachkennung, Aufgabenzuordnung,
+   Seite, Region, Kontext, Sicherheitsklasse, Prüfsumme und Änderungsgrund versehen.
+4. Widersprüche offenlassen und mit vorhandenen DSC-Einträgen verknüpfen. BLK-005 gilt
+   auch für Segmente: keine SMS-Befehlszeichenfolge in übersetzbaren Text aufnehmen.
+5. Erst nach Gegenprüfung und grünen Tests ausschließlich die bearbeiteten Seiten 3–7
+   von `inspected` auf `extracted` setzen. `extracted` ist noch keine Validierung.
 6. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
    **in dieser Reihenfolge** –, committen, pushen und CI abwarten.
 
@@ -138,23 +139,21 @@ Impressum 72):
 
 ### Der aktuelle Haupthebel
 
-**Content-Modell und deutscher Master** (20 % Gewicht, aktuell 52 %). Alle vierzehn
-deutschen Aufgaben sind gefüllt, keine ist mehr Platzhalter. Was jetzt fehlt:
+**Content-Modell und deutscher Master** (20 % Gewicht, aktuell 72 %). Beide deutschen
+Generationszweige sind mit insgesamt 28 von 28 Aufgaben gefüllt, keine ist mehr
+Platzhalter. Was jetzt fehlt:
 
-1. **Die Generation bis SN-044**: nur 1 von 14 Aufgaben existiert. Die deutsche
-   Quellenlage dafür ist seit dem 2026-08-08 **komplett** (deutscher Teil von
-   DOC-BMA-SN044 vollständig geprüft) – die dreizehn fehlenden Dateien können jetzt
-   geschrieben und der vorhandene Platzhalter kann gefüllt werden. Die Befehlssperre aus
-   BLK-005 gilt unverändert; Vorbild ist
-   `content/tasks/sn-045-plus/de/03-anschluesse.json`.
-2. **Die Segment-Extraktion** als Grundlage für die Übersetzung (Status `extracted` statt
+1. **Die Segment-Extraktion** als Grundlage für die Übersetzung (Status `extracted` statt
    `inspected`).
+2. **Die unabhängige Validierung** der extrahierten Segmente (`validated` statt
+   `extracted`).
 3. **Der technische Review** aller sicherheitskritischen Werte. Der kann nicht im Pilot
    erledigt werden.
 
-Vorbild für neue Aufgaben ist `content/tasks/sn-045-plus/de/03-anschluesse.json`. Jede
-Aussage braucht Dokument, Seite und Seitenregion. **Quellseite immer selbst rendern und
-lesen** – niemals aus einer Zusammenfassung schreiben.
+Das Datenbankschema für Segmente steht in
+`supabase/migrations/20260806000001_initial_schema.sql`; ein kanonisches versioniertes
+Dateiformat im Repo fehlt noch und ist Teil der nächsten Aktion. **Quellseite immer selbst
+rendern und lesen** – niemals aus einer Zusammenfassung schreiben.
 
 ### Verbindliche Regeln
 

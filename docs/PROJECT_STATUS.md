@@ -5,13 +5,13 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 32.7 %**
+**Gesamtfortschritt: 36.7 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
 | Quelleninventar und PDF-Prüfung          | 20 %    | 25 %        |
-| Content-Modell und deutscher Master      | 20 %    | 52 %        |
+| Content-Modell und deutscher Master      | 20 %    | 72 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
 | Übersetzungspilot                        | 10 %    | 5 %         |
@@ -27,7 +27,7 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die Generation bis SN-044 in den Content-Layer ueberfuehren: zuerst content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json aus den selbst gerenderten deutschen Seiten von DOC-BMA-SN044 und den beiden Kurzanleitungen erstellen, danach 02-montageort bis 06-zielrufnummern sowie 08-meldungen bis 14-support. Den vorhandenen Platzhalter 07-status-led ebenfalls fuellen. Vor jeder Aufgabe die zugewiesenen deutschen Quellseiten selbst rendern und lesen; jede Aussage mit Dokument, PDF-Seite und Region belegen. BLK-005 strikt einhalten: keine SMS-Befehlszeichenfolge im Content-Layer. Ebenso kein Betriebsart-D-Intervall (Frage 16), kein Geofencing-Radius (Frage 14) und keine lokalisierten Meldungs-Stichwoerter (Frage 17) als freigegebene Aussage. SN-044 und SN-045 nicht vermischen. Vorgehen und Kontext stehen in docs/HANDOFF.md und docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die Segment-Extraktion als Uebersetzungsgrundlage beginnen. Zuerst das versionierte Repo-Format fuer content_segments aus dem bestehenden Datenbankschema ableiten und mit Schema-/Referenzpruefung absichern; danach DOC-BMA-SN044 PDF-Seiten 3-7 (deutsche Installation: Lieferumfang, Montageort, Betriebsarten, Anschluesse und GPS-Diagnose) aus den bereits erzeugten Renderings erneut visuell lesen, in quellennahe deutsche Segmente mit stabilem segment_key, task_slug, Seite, Region, Kontext, safety_class, checksum und change_reason ueberfuehren und nur diese fuenf Seiten von inspected auf extracted setzen. Befehlszeichenfolgen bleiben wegen BLK-005 aus uebersetzbaren Segmenten ausgeschlossen; Widersprueche bleiben mit DSC-Verweisen sichtbar. Details stehen in docs/HANDOFF.md.
 
 <!-- PROGRESS:END -->
 
@@ -49,9 +49,9 @@ Offene Blocker: 7 · Nächste Aktion: Die Generation bis SN-044 in den Content-L
   DSC-075), die Betriebsart D sagt schwedisch „8 minuter" (Endstand drei zu eins gegen
   Englisch, DSC-066), und der schwedische Befehl `fence av` ist im Seitenbild gesichert –
   die Vorlagenkontamination der englischen Seite 25 (DSC-067) ist damit auf beiden Seiten
-  bildlich belegt. Damit liegt die **komplette
-  inhaltliche Grundlage für die dreizehn fehlenden Aufgaben der Generation bis SN-044**
-  vor. Weil dieses Dokument als einziges eine echte Textebene hat, wurde jede Seite
+  bildlich belegt. Diese vollständige Quellenlage ist seit dem 2026-08-09 in den
+  **kompletten Aufgabensatz der Generation bis SN-044** überführt. Weil dieses Dokument
+  als einziges eine echte Textebene hat, wurde jede Seite
   zusätzlich Zeile für Zeile gegen das Seitenbild gehalten – daraus stammen die stärksten
   Funde: der englische Teil druckt den **schwedischen** Geofencing-Befehl (DSC-067), die
   Betriebsartentabelle nennt für die Stellung D deutsch und französisch **8 Minuten**,
@@ -108,12 +108,29 @@ Offene Blocker: 7 · Nächste Aktion: Die Generation bis SN-044 in den Content-L
 - die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu
   siebzehn entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende
   Sammelstelle für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
-- **alle vierzehn deutschen Aufgaben sind aus geprüften Quellseiten gefüllt**; keine ist
-  mehr Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Seitenregion, jede Datei
-  einen Änderungsgrund, alle stehen auf `entwurf`. Die acht zuletzt gefüllten Aufgaben
-  sind bewusst **ohne** die SMS-Befehle geschrieben (BLK-005); wo eine Aufgabe dadurch
-  unvollständig bleibt – Ausgänge, Geofencing, Zielrufnummern, Fehlerbehebung – steht das
-  ausdrücklich im `change_reason`, statt die Lücke zu verdecken;
+- **beide deutschen Generationszweige sind mit je vierzehn Aufgaben vollständig:** 28 von
+  28 Dateien sind aus geprüften Quellseiten gefüllt, keine ist mehr Platzhalter. Jede
+  Aussage nennt Dokument, PDF-Seite und Seitenregion, jede Datei einen Änderungsgrund,
+  alle stehen auf `entwurf`. Der komplette neue Satz
+  `content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json` bis
+  `14-support.json` wurde am 2026-08-09 aus den neu gerenderten deutschen Seiten 1–19 von
+  DOC-BMA-SN044 und beiden Seiten von DOC-KA-SN044 erstellt. Nur die
+  Generationsentscheidung verwendet zusätzlich DOC-IBA-SN045, Seiten 2, 6 und 25, und
+  kennzeichnet offen, dass die Grenze „ab -045“ allein aus der neueren Fassung stammt;
+- **die Sperren sind im gesamten SN-044-Aufgabensatz technisch gegengeprüft:** In `goal`,
+  `prerequisites`, `warnings`, `steps`, `expected_result`, `error_cases` und `tables_md`
+  steht keine SMS-Befehlszeichenfolge (BLK-005). Der Geofencing-Radius, das Intervall der
+  Betriebsart D, eine unbelegte Autorisierungsregel für Zielrufnummern und lokalisierte
+  Meldungs-Stichwörter bleiben unveröffentlicht. Ebenso wurden keine Beispielkoordinaten,
+  Kartenlinks oder Beispielrufnummern übernommen. Wo eine Aufgabe deshalb keinen
+  vollständigen Bedienweg anbieten kann, steht das ausdrücklich im `change_reason`;
+- **zwei Abweichungen innerhalb derselben Generation sind durch die Aufgabengegenprüfung
+  zusätzlich sichtbar geworden:** Dauergrün bedeutet in DOC-BMA-SN044 nur SMS-Versand,
+  in DOC-KA-SN044 Empfang oder Versand (DSC-059/Rückfrage 12). Außerdem nennt die
+  Bedienungsanleitung ca. 21 mA Normalstrom und 1999/5/EG, die Kurzanleitung ca. 16–21 mA
+  und 2014/53/EU; der Anschlussabschnitt derselben Bedienungsanleitung spricht von 12 V,
+  ihre technische Tabelle von 9–30 V (DSC-069/Rückfrage 2). Nichts davon wurde still
+  vereinheitlicht;
 - die Extraktion hat **vierzehn neue Registerpositionen** erzeugt (DSC-040 bis DSC-053).
   Dreizehn davon betreffen **den deutschen Text selbst**: drei falsche Querverweise, ein
   Verweis, der inhaltlich ins Leere führt, ein Statusbericht mit Feldern, die das
@@ -213,12 +230,12 @@ Offene Blocker: 7 · Nächste Aktion: Die Generation bis SN-044 in den Content-L
   Aussage im Record der englischen Seite 25 („einzige Stelle mit farbunabhängiger
   LED-Darstellung") war falsch – die deutschen Seiten 7 und 11 verwenden dieselben
   Balken – und wurde mit dokumentierter Korrektur berichtigt;
-- **alle acht** neu gefüllten deutschen Aufgaben sind einzeln gegen die Quellseiten
-  gegengeprüft worden; der Vermerk steht je Datei im `change_reason`. Der Schritt ist
-  nicht formal: entfernt wurden unter anderem ein frei erfundenes erwartetes Ergebnis,
-  eine nicht belegbare Farbangabe, zwei Kartenlinks und – im Statusbericht – ein zugedeckter
-  Widerspruch zwischen der Betriebsartentabelle und dem Fließtext. Das ersetzt trotzdem
-  keinen fachlichen Review: sämtliche technischen Werte sind weiterhin unbestätigt;
+- **alle vierzehn neu gefüllten SN-044-Aufgaben** sind einzeln gegen die am 2026-08-09
+  erzeugten Renderings gegengeprüft worden; der Vermerk steht je Datei im
+  `change_reason`. Die Gegenprüfung korrigierte unter anderem eine unbelegte
+  NMEA-Versionsangabe, hielt die zwei Bedeutungen von grünem Dauerlicht getrennt und
+  bewahrte die abweichenden Strom- und Konformitätsangaben. Das ersetzt trotzdem keinen
+  fachlichen Review: sämtliche technischen Werte sind weiterhin unbestätigt;
 - Netlify Preview, Zugriffsschutz und internes Staging: nicht verbunden/nicht abgenommen;
 - Karten-Andruck, QR, NFC, Braille, Reflexion und Tests mit betroffenen Personen: offen;
 - englischer Pilot: nur Struktur/Platzhalter, kein unabhängiger Sprachreview;
@@ -324,7 +341,10 @@ Offene Blocker: 7 · Nächste Aktion: Die Generation bis SN-044 in den Content-L
    Löschvorgang der Zielrufnummern hängt an einer farbcodierten Abbruchbedingung. Ein
    farbunabhängiges Merkmal ist in keiner der beiden Generationen dokumentiert. Das ist die
    umfangreichste gefundene Barriere, die **am Gerät** sitzt und nicht am Dokument – die
-   HTML-Anleitung kann sie beschreiben, aber nicht auflösen.
+   HTML-Anleitung kann sie beschreiben, aber nicht auflösen. Zusätzlich widersprechen sich
+   die zwei Unterlagen bis SN-044 bei grünem Dauerlicht: Die Bedienungsanleitung nennt nur
+   den SMS-Versand, die Kurzanleitung Empfang oder Versand. Auch die fachliche Bedeutung
+   des rein farbcodierten Zustands ist damit ungeklärt (Rückfrage 12).
 9. **Der Geofencing-Radius unterscheidet sich zwischen den Generationen (DSC-061).** Bis
    SN-044 nennt die Quelle ca. 1000 m beziehungsweise ca. 1 km, ab SN-045 rund 900 m. Ob
    das eine bewusste Änderung oder ein Fehler ist, lässt sich aus den Quellen nicht
@@ -334,6 +354,10 @@ Offene Blocker: 7 · Nächste Aktion: Die Generation bis SN-044 in den Content-L
    Micro-SIM gegen Nano-SIM, feste 21 mA gegen die Spanne 16–21 mA, Richtlinie 1999/5/EG
    gegen 2014/53/EU. Das SIM-Format ist unmittelbar nutzerrelevant: Wer nach der falschen
    Generationsanleitung eine SIM beschafft, hält die falsche Kartengröße in der Hand.
+   **Erweitert am 2026-08-09:** Selbst die zwei Unterlagen bis SN-044 widersprechen sich:
+   DOC-KA-SN044 nennt 16–21 mA und 2014/53/EU, DOC-BMA-SN044 21 mA und 1999/5/EG. Im
+   Anschlusskapitel des BMA stehen zudem 12 V, in seiner technischen Tabelle 9–30 V. Der
+   Pilot zeigt diese Werte getrennt und wartet mit einer Auswahl auf Rückfrage 2.
 10. **Das Intervall der Betriebsart D ist widersprüchlich dokumentiert (DSC-066).** Die
     deutsche Tabelle nennt 8 Minuten, die englische 8 seconds – Faktor 60, beide Zellen
     hochauflösend gesichert (Rückfrage 16). C und D sind die Ortungsmodi mit dem

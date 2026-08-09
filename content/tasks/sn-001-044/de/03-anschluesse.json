@@ -1,0 +1,179 @@
+{
+  "slug": "anschluesse",
+  "title": "Anschlüsse und Modul verkabeln",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die Anschlüsse des Pro-finder bis SN-044 erkennen und das Modul polungsrichtig, abgesichert und innerhalb der dokumentierten Belastungsgrenzen verbinden.",
+  "prerequisites": [
+    "Der Montageort ist gewählt.",
+    "Die Spannungsversorgung ist für die Anschlussarbeiten getrennt.",
+    "Kabelbaum, Sicherungshalter und beiliegende 3-A-Flachsicherung liegen bereit."
+  ],
+  "warnings": [
+    {
+      "text": "Schließen Sie Pin 1 und Pin 8 polungsrichtig an und sichern Sie die Plusleitung mit der beiliegenden 3-A-Flachsicherung ab.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3, 6",
+          "region": "Lieferumfang Position 5 und Abschnitt 1.5, erster Absatz"
+        }
+      ]
+    },
+    {
+      "text": "WiPro „all in one“ und Pro-finder müssen laut Handbuch an dieselbe Batterie angeschlossen sein.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6",
+          "region": "Abschnitt 1.5, rot gesetzter Warnsatz unter der Verbindung zur WiPro"
+        }
+      ]
+    },
+    {
+      "text": "Pin 6 und Pin 7 liefern 12 V und dürfen mit höchstens 500 mA belastet werden. Für höhere Lasten verlangt die Quelle ein hochwertiges KFZ-Relais mit Freilaufdiode; bei Überlastung erlischt die Garantie.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6",
+          "region": "Abschnitt 1.5, Absatz zu Pin 6 und Pin 7"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Identifizieren Sie am Gerät den Betriebsartenschalter, den Anschluss für WiPro III beziehungsweise WiPro „all in one“, den nicht verwendeten Rundanschluss, den vierpoligen Anschluss der optionalen GPS-Antenne, den achtpoligen Kabelbaumanschluss und die Status-LED.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4",
+          "region": "Abschnitt 1.3, beschriftetes Foto der Geräteschmalseite"
+        }
+      ]
+    },
+    {
+      "text": "Verbinden Sie Pin 1, die schwarze Ader für Masse, und Pin 8, die rote Ader für die Betriebsspannung, polungsrichtig mit der vorgesehenen 12-V-Gleichspannungsversorgung des Fahrzeugs.",
+      "expected": "Masse und Plus sind nicht vertauscht; die Plusleitung ist noch nicht ungesichert zugeschaltet.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4, 6",
+          "region": "Pinlegende in Abschnitt 1.3 und erster Absatz von Abschnitt 1.5"
+        }
+      ]
+    },
+    {
+      "text": "Setzen Sie die beiliegende 3-A-Flachsicherung in den Sicherungshalter der Plusleitung ein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3, 6",
+          "region": "Lieferumfang Positionen 4 und 5 sowie Absicherungsanweisung in Abschnitt 1.5"
+        }
+      ]
+    },
+    {
+      "text": "Nutzen Sie Pin 2 bis Pin 5 bei Bedarf als Messeingänge U2 bis U5. Die Quelle nennt dafür einen Messbereich von 0 bis 30 V; Pin 3 hat je nach Betriebsart zusätzliche Funktionen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4, 6",
+          "region": "Pinlegende und Abschnitt 1.5, erster Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Schließen Sie Verbraucher bei Bedarf an Pin 7 für Ausgang A oder Pin 6 für Ausgang B an. Bleiben Sie je Ausgang bei höchstens 500 mA oder verwenden Sie das vorgeschriebene Relais.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4, 6",
+          "region": "Pinlegende und Absatz zu den Transistorausgängen"
+        }
+      ]
+    },
+    {
+      "text": "Verbinden Sie eine vorhandene WiPro III beziehungsweise WiPro „all in one“ mit dem beiliegenden Anschlusskabel und versorgen Sie beide Geräte aus derselben Batterie.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3, 6",
+          "region": "Lieferumfang Position 7 und Abschnitt 1.5, zweiter Absatz"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Der Pro-finder ist polungsrichtig und mit 3 A abgesichert angeschlossen; Messeingänge, Ausgänge und eine vorhandene WiPro-Verbindung entsprechen der Pinbelegung dieser Gerätegeneration.",
+  "error_cases": [
+    {
+      "problem": "Ein Verbraucher benötigt mehr als 500 mA.",
+      "correction": "Schließen Sie ihn nicht direkt an. Verwenden Sie ein hochwertiges KFZ-Relais mit Freilaufdiode.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6",
+          "region": "Abschnitt 1.5, Absatz zu Pin 6 und Pin 7"
+        }
+      ]
+    },
+    {
+      "problem": "Die Betriebsspannungsangaben wirken widersprüchlich.",
+      "correction": "Der Anschlussabschnitt beschreibt eine geeignete 12-V-Gleichspannungsversorgung; die technischen Daten nennen 9 bis 30 V als Versorgungsspanne. Dieser Unterschied ist im Pilot nicht technisch aufgelöst. Verändern Sie die Fahrzeugversorgung nicht aufgrund der Tabelle und lassen Sie die Auslegung fachlich prüfen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.5, erster Absatz, und Abschnitt 3.1, Zeile „Spannungsversorgung“"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s04-anschlussseite",
+      "alt": "Beschriftete Anschlussseite des Pro-finder bis SN-044 mit Drehschalter, Buchsen, acht Pins und Status-LED.",
+      "long_description": "Foto der schmalen Geräteseite. Von links nach rechts sind ein Drehschalter mit den Stellungen 0 bis 9 und A bis F, eine RJ-Buchse für WiPro, ein als nicht verwendet beschrifteter Rundanschluss, der vierpolige GPS-Anschluss, der achtpolige Kabelbaumanschluss und die Status-LED zu sehen. Linien verbinden die Pins mit ihren Beschriftungen. Oben liegen Pin 5, 6, 7 und 8; unten Pin 4, 3, 2 und 1. Die Aderfarben werden im Bild gezeigt, aber nur Schwarz für Pin 1 und Rot für Pin 8 werden im Fließtext benannt.",
+      "steps_text": [
+        "Pin 1 ist Masse.",
+        "Pin 2 bis Pin 5 sind die Messeingänge U2 bis U5.",
+        "Pin 6 ist Ausgang B und Pin 7 Ausgang A.",
+        "Pin 8 ist die Betriebsspannung U1.",
+        "Der separate vierpolige Anschluss ist für die optionale GPS-Antenne."
+      ],
+      "data_table_md": "| Pin | Belegung |\n| --- | --- |\n| 1 | Masse (GND) |\n| 2 | Messeingang U2 |\n| 3 | Messeingang U3 |\n| 4 | Messeingang U4 |\n| 5 | Messeingang U5 |\n| 6 | Ausgang B |\n| 7 | Ausgang A |\n| 8 | Betriebsspannung U1, +12 V im Anschlussbild |",
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "4",
+        "region": "Abschnitt 1.3, beschriftetes Foto",
+        "note": "Die Quelle ordnet die Adern zusätzlich über Farbe und Linien zu. Die Farbstreifen der Pins 2 bis 5 werden im Fließtext nicht benannt."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Pin | Funktion |\n| --- | --- |\n| 1 | Masse (GND), schwarze Ader |\n| 2 | Messeingang U2 |\n| 3 | Messeingang U3; je nach Betriebsart Zusatzfunktion |\n| 4 | Messeingang U4 |\n| 5 | Messeingang U5 |\n| 6 | Ausgang B, 12 V, höchstens 500 mA |\n| 7 | Ausgang A, 12 V, höchstens 500 mA |\n| 8 | Betriebsspannung U1, rote Ader |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "3-6, 18",
+      "region": "Lieferumfang, Abschnitte 1.3 bis 1.5 und technische Daten",
+      "note": "Die für diese Aufgabe verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1",
+      "region": "Abschnitt 3 „Anschlüsse, Anzeigen und Bedienelemente“ mit Pinlegende und Verkabelungsbild",
+      "note": "Die Kurzanleitung bestätigt Pinbelegung und 3-A-Sicherung grafisch."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus den selbst gerenderten Seiten der Generation bis SN-044. Die Pinbelegung und die 3-A-Sicherung stammen aus DOC-BMA-SN044, Seiten 3–6, und DOC-KA-SN044, Seite 1. Der Anschlussabschnitt nennt 12 V DC, die technischen Daten 9–30 V; diese beiden Aussagen wurden nicht zu einer eigenen Anschlussfreigabe verschmolzen, sondern als offener Auslegungsunterschied benannt und bei DSC-069 ergänzt. Die drei Schaltarten der Ausgänge werden funktional beschrieben; die zugehörigen SMS-Befehle „A an“, „A aus“, „A impuls“ und „A XXX“ sind wegen BLK-005 ausschließlich hier als Begründung ihrer Auslassung zitiert. Keine Anschlussaussage der Generation ab SN-045 übernommen. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen; technischer Review steht aus."
+}

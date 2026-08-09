@@ -189,9 +189,23 @@ Drei Fassungen nennen den Bereich, die englische nur den oberen Wert. Alle übri
 Tabelle (9–30 V, ca. 37 mA Netzsuche, 2 × 12 V/500 mA, −10 bis +80 °C, Bänder, GPS/QZSS,
 zehn Zielrufnummern, Nano-SIM) stimmen überein.
 
-**Die Frage:** Gilt 16–21 mA? Dann ist die englische Fassung zu korrigieren.
+Der gleiche Gegensatz tritt jetzt auch **innerhalb der älteren Generation** auf:
 
-_Beleg: DSC-020_
+| Dokument bis SN-044  | Stromaufnahme im Normalbetrieb | Konformitätsbezug |
+| -------------------- | ------------------------------ | ----------------- |
+| DOC-BMA-SN044, S. 18 | ca. 21 mA                      | 1999/5/EG         |
+| DOC-KA-SN044, S. 2   | ca. 16–21 mA                   | 2014/53/EU        |
+
+Zusätzlich beschreibt DOC-BMA-SN044 auf Seite 6 den Anschluss an eine geeignete
+12-V-DC-Spannungsquelle, während die technische Tabelle auf Seite 18 einen Bereich von
+9–30 V nennt.
+
+**Die Fragen:** Gilt generationsübergreifend 16–21 mA, oder ist für bestimmte Hardware-
+beziehungsweise Softwarestände ca. 21 mA der Sollwert? Welche Konformitätsangabe gilt
+für die Generation bis SN-044? Ist die 12-V-Angabe nur der typische Fahrzeuganschluss
+innerhalb des zulässigen Bereichs 9–30 V?
+
+_Beleg: DSC-020, DSC-069_
 
 ---
 
@@ -455,10 +469,16 @@ und Frequenz die Quelle nicht nennt. Auch der Löschvorgang der Zielrufnummern h
 farbcodierten Abbruchbedingung („warten Sie bis die Status LED gelb/grün blinkt") und ist
 damit ohne Farbwahrnehmung nicht sicher durchführbar.
 
+Hinzu kommt ein Widerspruch innerhalb derselben Generation: DOC-BMA-SN044, Seite 11,
+ordnet grünes Dauerlicht nur dem **Versand** einer SMS zu. DOC-KA-SN044, Seite 2, nennt in
+der deutschen Zeile dagegen **Empfang oder Versand**. Die Anzeige ist damit nicht nur rein
+farbcodiert; selbst ihre fachliche Bedeutung ist zwischen den beiden Unterlagen unklar.
+
 **Die zusätzlichen Fragen:** Gibt es für die neun Zustände ein farbunabhängiges Merkmal –
 unterschiedliche Blinkfrequenzen, Blinkfolgen oder eine abrufbare Textrückmeldung? Lässt
-sich der Gerätezustand alternativ per SMS abfragen? Falls nicht, ist das der zentrale
-Befund des gesamten Pilots: die Anleitung lässt sich barrierefrei machen, das Gerät nicht.
+sich der Gerätezustand alternativ per SMS abfragen? Gilt grünes Dauerlicht nur beim Versand
+oder auch beim Empfang? Falls kein farbunabhängiger Weg besteht, ist das der zentrale Befund
+des gesamten Pilots: die Anleitung lässt sich barrierefrei machen, das Gerät nicht.
 
 _Belege: DSC-047, DSC-059_
 

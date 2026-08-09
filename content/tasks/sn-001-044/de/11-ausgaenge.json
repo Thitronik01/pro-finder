@@ -1,0 +1,192 @@
+{
+  "slug": "ausgaenge",
+  "title": "Ausgänge anschließen und einordnen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die Ausgänge A und B beim Pro-finder bis SN-044 elektrisch richtig zuordnen und ihre dokumentierten Schaltarten verstehen, ohne ungeprüfte SMS-Befehle zu veröffentlichen.",
+  "prerequisites": [
+    "Der Einbauplan und die Funktion des anzusteuernden Verbrauchers sind bekannt.",
+    "Die elektrische Last und eine gegebenenfalls notwendige Relaisansteuerung sind fachlich geklärt.",
+    "Der Pro-finder ist spannungsfrei, bevor Leitungen angeschlossen oder geändert werden."
+  ],
+  "warnings": [
+    {
+      "text": "Jeder Ausgang darf laut Quelle höchstens mit 500 mA belastet werden. Für leistungsstärkere Verbraucher muss ein geeignetes Relais verwendet werden.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.4.4 und technische Daten zu den Ausgängen"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "Anschlussplan und technische Daten"
+        }
+      ]
+    },
+    {
+      "text": "Die Anleitung erklärt die elektrische Sicherheit der angeschlossenen Verbraucher und Relais nicht im Detail. Arbeiten am Bordnetz gehören bei fehlender Fachkenntnis in die Hand eines Fachbetriebs.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "2, 6",
+          "region": "Haftungshinweis und Abschnitt 1.4.4 zur Relaisansteuerung"
+        }
+      ]
+    },
+    {
+      "text": "Die SMS-Befehlssprache ist gesperrt. Diese Aufgabe beschreibt deshalb die Schaltarten, aber keine Zeichenfolge zum Ausführen; lassen Sie die Bedienung bei Bedarf durch Fachhändler oder Support bestätigen.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "13, 16",
+          "region": "Hilfe-SMS und Abschnitt 2.7 „Ausgänge schalten“",
+          "note": "Die Abweichungen sind unter BLK-005 und DSC-058 dokumentiert."
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Ordnen Sie die Leitungen zu: Pin 7 ist Ausgang A und Pin 6 ist Ausgang B. Beide Ausgänge liefern laut Quelle 12 V und sind mit jeweils 500 mA angegeben.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4, 6, 18",
+          "region": "Anschlussbelegung, Abschnitt 1.4.4 und technische Daten"
+        }
+      ]
+    },
+    {
+      "text": "Vergleichen Sie die Stromaufnahme des Verbrauchers mit der Belastungsgrenze. Liegt sie über 500 mA oder ist sie nicht sicher bekannt, steuern Sie den Verbraucher nicht direkt an, sondern lassen Sie ein geeignetes Relais auslegen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6",
+          "region": "Abschnitt 1.4.4, Ausgangsbelastung und Relaisbeispiel"
+        }
+      ]
+    },
+    {
+      "text": "Wählen Sie fachlich die benötigte Schaltart. Die Quelle dokumentiert Dauerbetrieb, einen Impuls von einer Sekunde und einen zeitlich begrenzten Betrieb von 1 bis 120 Minuten.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "16",
+          "region": "Abschnitt 2.7, Unterabschnitte zu Ausgang A und B"
+        }
+      ]
+    },
+    {
+      "text": "Behandeln Sie Ausgang B funktional wie Ausgang A. Die Quelle sagt ausdrücklich, dass B auf dieselbe Weise geschaltet wird; die Zuordnung zum Pin bleibt dennoch getrennt.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "16",
+          "region": "Abschnitt 2.7.2 „Ausgang B“"
+        }
+      ]
+    },
+    {
+      "text": "Kontrollieren Sie nach einer autorisierten Schaltung den Zustand im nächsten Statusbericht. Die Meldungsfeldliste sieht für beide Ausgänge eine Zustandsangabe vor.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12, 16",
+          "region": "Feldliste des Statusberichts und Abschnitt 2.7"
+        }
+      ]
+    },
+    {
+      "text": "Führen Sie den ersten Funktionstest ohne sicherheitskritischen Verbraucher durch oder lassen Sie ihn durch einen Fachbetrieb ausführen. Die Quelle bietet keine vollständige Schutz- oder Rückwirkungsprüfung für angeschlossene Lasten.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "2, 6, 16",
+          "region": "Haftungshinweis, Anschlussbeispiel und Schaltarten"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Ausgang A und B sind den richtigen Pins zugeordnet, die Belastung ist auf höchstens 500 mA je Ausgang begrenzt oder über ein geeignetes Relais entkoppelt, und die gewählte Schaltart ist dokumentiert. Eine ungeprüfte SMS-Zeichenfolge wird nicht verwendet.",
+  "error_cases": [
+    {
+      "problem": "Der angeschlossene Verbraucher benötigt mehr als 500 mA.",
+      "correction": "Nicht direkt betreiben. Die Quelle verlangt für leistungsstärkere Verbraucher die Ansteuerung eines geeigneten Relais.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6",
+          "region": "Abschnitt 1.4.4"
+        }
+      ]
+    },
+    {
+      "problem": "Ausgang A und B wurden vertauscht.",
+      "correction": "Vergleichen Sie die Leitungen erneut mit der Belegung: Pin 7 gehört zu Ausgang A, Pin 6 zu Ausgang B.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4, 6",
+          "region": "Anschlussgrafik und Abschnitt 1.4.4"
+        }
+      ]
+    },
+    {
+      "problem": "Die zeitlich begrenzte Schaltung soll außerhalb von 1 bis 120 Minuten liegen.",
+      "correction": "Die Quelle dokumentiert nur diesen Bereich. Verwenden Sie keinen abweichenden Wert und klären Sie den Anwendungsfall mit Fachhändler oder Support.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "16",
+          "region": "Abschnitt 2.7, zeitlich begrenzte Aktivierung"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s06-ausgang-relais",
+      "alt": "Anschlussdarstellung der beiden 12-Volt-Ausgänge mit einer Belastungsgrenze von 500 Milliampere.",
+      "long_description": "Die Anschlussdarstellung ordnet Ausgang A Pin 7 und Ausgang B Pin 6 zu. Der Begleittext nennt für jeden Ausgang 12 Volt und maximal 500 Milliampere und empfiehlt für größere Verbraucher ein geeignetes Relais.",
+      "steps_text": [
+        "Ausgang dem richtigen Pin zuordnen.",
+        "Strombedarf des Verbrauchers bestimmen.",
+        "Bei höherer Last ein geeignetes Relais verwenden."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "6",
+        "region": "Abschnitt 1.4.4 und Anschlusszeichnung der Ausgänge"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Ausgang | Pin | Pegel laut Quelle | Maximale Belastung |\n| --- | --- | --- | --- |\n| A | 7 | 12 V | 500 mA |\n| B | 6 | 12 V | 500 mA |",
+    "| Schaltart | Dokumentierte Dauer |\n| --- | --- |\n| Dauerbetrieb | bis zum Ausschalten |\n| Impuls | 1 Sekunde |\n| Zeitbegrenzt | 1 bis 120 Minuten |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "2, 4, 6, 12-13, 16, 18",
+      "region": "Haftungshinweis, Anschlussbelegung, Ausgangsanschluss, Statusfelder, Hilfe-SMS, Schaltarten und technische Daten",
+      "note": "Alle verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und vollständig visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "Anschlussplan und technische Daten",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 250 dpi neu gerendert und vollständig visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion für die Generation bis SN-044 aus DOC-BMA-SN044, Seiten 2, 4, 6, 12–13, 16 und 18, ergänzt um DOC-KA-SN044, Seiten 1–2. BLK-005 ist eingehalten: Die in der Quelle gezeigten Varianten „A ON“, „A OFF“, „A PULSE“, „A 15“ und die entsprechenden B-Varianten stehen ausschließlich hier als Begründung der Auslassung; keine davon ist als Bedienanweisung veröffentlicht. Die Aufgabe bleibt deshalb beim eigentlichen Schaltvorgang absichtlich unvollständig, beschreibt aber Anschluss, Lastgrenze, Schaltarten und Kontrolle vollständig. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}
