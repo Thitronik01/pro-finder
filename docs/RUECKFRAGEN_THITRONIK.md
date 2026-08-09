@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 228 der 323 PDF-Seiten sowie die
+Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 238 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -19,8 +19,8 @@ Geprüft sind bisher der deutsche, englische, französische und tschechische Spr
 sowie beide Kurzanleitungen. Sechs Sprachteile stehen aus.
 
 **Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen weitgehend geprüft
-(DOC-BMA-SN044, Seiten 1–53 von 72) – der **deutsche, der englische und der französische
-Teil sind vollständig**; es fehlen der schwedische Teil und das Impressum. Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
+(DOC-BMA-SN044, Seiten 1–63 von 72) – Deutsch, Englisch und Französisch sind vollständig,
+der schwedische Teil zur Hälfte geprüft; es fehlen dessen Rest und das Impressum. Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
 bekommen – teils bestätigend, teils mit abweichenden Werten. Diese Ergänzungen stehen als
 **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie sind für Sie vermutlich der
 aufschlussreichste Teil dieses Dokuments, weil sich daran ablesen lässt, welche Punkte
@@ -493,10 +493,10 @@ nach der falschen Fassung plant, erhält im Ernstfall sechzigmal seltener eine P
 erwartet – oder produziert sechzigmal mehr kostenpflichtige SMS als kalkuliert. Solange der
 Wert nicht bestätigt ist, nennt der Pilot für die Betriebsart D kein Intervall.
 
-**Nachtrag 2026-08-09:** Die französische Tabelle (Seite 40) nennt ebenfalls **8 minutes**.
-Damit steht es zwei zu eins gegen die englische Fassung – dasselbe Muster wie bei der
-Stromaufnahme (Frage 2), wo ebenfalls die englische Fassung allein abweicht. Vermutlich
-ist „8 Minuten" richtig; bestätigen können nur Sie.
+**Nachtrag 2026-08-09:** Die französische Tabelle (Seite 40) nennt ebenfalls **8 minutes**,
+die schwedische (Seite 57) **8 minuter**. Endstand **drei zu eins** gegen die englische
+Fassung – dasselbe Muster wie bei der Stromaufnahme (Frage 2), wo ebenfalls die englische
+Fassung allein abweicht. Vermutlich ist „8 Minuten" richtig; bestätigen können nur Sie.
 
 _Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5, 23 und 40_
 
@@ -579,6 +579,8 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** der französische Teil nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius – dritter Wert neben 1000 m und 900 m          | DSC-078, S. 47 und 50          |
 | **bis SN-044:** der französische Statusbefehl lautet „Statut" – ein Buchstabe Abstand zu „Status"/„STATUS"                            | DSC-067, S. 50                 |
 | **bis SN-044:** der französische Konformitätsabschnitt ist unübersetzt englisch – samt der falschen „directive 1995/5/EG"             | DSC-071, S. 53                 |
+| **bis SN-044:** die späte Abfragecode-Ergänzung ist in drei von vier Sprachteilen sprachlich defekt – nur die deutsche ist sauber     | DSC-079, S. 27, 44, 61         |
+| **bis SN-044:** im schwedischen Verzeichnis fehlt die Kapitelnummer 3; „PGS-position" als Tippfehler im GPS-Diagnose-Erfolgszustand   | DSC-080, S. 54 und 59          |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

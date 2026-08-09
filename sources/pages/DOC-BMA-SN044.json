@@ -3992,143 +3992,649 @@
     },
     {
       "page": 54,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1332,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1091,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["sv"],
+      "summary": "Erste Seite des schwedischen Teils. Inhaltsverzeichnis \"Innehåll\" (Kapitel, Sidan, Innehåll): Kapitel 1 \"Installation\" (1.1 bis 1.10, interne Seiten 1 bis 9), Kapitel 2 \"Modulens funktioner\" (2.1 bis 2.8, interne Seiten 10 bis 15) und die Rubrik \"Diverse\" (3.1 bis 3.4, interne Seite 16) - vor \"Diverse\" fehlt die Kapitelnummer 3, die alle anderen Sprachteile führen. Der Eintrag 2.4 lautet korrekt \"Geofencing\"; der TOC-Fehler bleibt eine Eigenheit des englischen Teils (DSC-068). Darunter \"Undantag från ansvar:\" - die schwedische Haftungsklausel nennt wie die deutsche und französische auch die fehlerhafte Installation. Die Kopfzeile \"Handbok för Pro-finder\" ist sichtbar: Der schwedische Teil ist vom Kopfzeilenproblem des französischen (DSC-075) nicht betroffen; maschinell bestätigt (Balken Sequenz 17, Text 18-20 auf PDF-Seite 55).",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Innehåll",
+        "1 Installation",
+        "2 Modulens funktioner",
+        "Diverse",
+        "Undantag från ansvar:"
+      ],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Dreispaltiges Inhaltsverzeichnis (Kapitel, Sidan, Innehåll) mit 22 Einträgen; Tab-Layout, nicht als Tabelle ausgezeichnet",
+          "columns": ["Kapitel", "Sidan", "Innehåll"]
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Vor der Rubrik \"Diverse\" fehlt die Kapitelnummer 3 - die Einträge 3.1 bis 3.4 hängen an einer nummernlosen Überschrift; die Gliederungslogik bricht an dieser Stelle.",
+        "Das Verzeichnis ist ein Tab-Layout ohne Tabellenauszeichnung und ohne Verknüpfungen.",
+        "Der Sprachwechsel vom französischen zum schwedischen Teil ist nirgends angekündigt oder ausgezeichnet.",
+        "Keine aufgedruckte Seitenzahl auf der Verzeichnisseite (wie in allen Sprachteilen)."
+      ],
+      "discrepancies": [
+        "Die Kapitelnummer 3 fehlt vor \"Diverse\" - Deutsch, Englisch und Französisch führen sie (DSC-080).",
+        "Der Eintrag 2.4 lautet \"Geofencing\" - korrekt; der englische TOC-Fehler ist damit in keiner weiteren Sprachfassung aufgetreten (Nachtrag-Bestätigung zu DSC-068).",
+        "Die schwedische Haftungsklausel entspricht der deutschen einschließlich des Installationszusatzes (\"felaktig hantering resp installation\")."
+      ],
+      "terminology_findings": [
+        "\"larmnummer\" für die Zielrufnummern - vierter Benennungsansatz (DE Zielrufnummern, EN destination/target numbers, FR numéros favoris, SV larmnummer = Alarmnummern).",
+        "\"Modulens funktioner\" für \"Handhabung des Moduls\".",
+        "\"status LED-lampor\" im Eintrag 1.10 - Plural und ohne Bindestrich vor LED; der Fließtext schreibt \"Status-LED-lampan\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Kopfzeilen-Sichtbarkeit maschinell geprüft (Zeichenreihenfolge wie bei DSC-075 dokumentiert): Balken vor Text - sichtbar, kein französisches Muster. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert, vollständige Sprachbewertung braucht einen muttersprachlichen Review."
     },
     {
       "page": 55,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1217,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1005,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 1\" (sichtbar; Versatz des schwedischen Teils: aufgedruckt = PDF minus 54). Schwedisches Gegenstück zu den PDF-Seiten 3, 21 und 38. Einleitungssatz zwischen zwei Warndreiecken, \"1.1 Leveransomfång\" mit demselben Produktfoto und schwedischer Legende (1 Pro-finder, 2 Antenn, 3 Kabelträd, 4 Säkringshållare, 5 Plansäkring 3 A, 6 Fästskruvar, 7 Anslutningskabel WiPro III / \"all in one\"). \"1.2 Val av monteringsplats\": gesicherter, aber wartungszugänglicher Ort im Fahrzeuginneren, nie im Motorraum, Oberseite nach oben mit \"fri sikt\" zum Satelliten; bei externer GPS-Antenne heißt es wie im französischen Teil, die Kabellänge \"är 2 m\" - als fester Wert statt als Obergrenze (DSC-079).",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 1",
+        "1.1 Leveransomfång",
+        "1.2 Val av monteringsplats"
+      ],
+      "technical_values": [
+        {
+          "value": "Plansäkring 3 A",
+          "context": "Deckt sich mit den anderen Sprachteilen",
+          "safety_critical": true
+        },
+        {
+          "value": "Kabellänge GSM-Modul zu GPS-Antenne: \"är 2 m\" - als fester Wert formuliert",
+          "context": "Wie die französische Fassung (\"est de 2m\") macht die schwedische aus der Obergrenze der deutschen und englischen Fassung eine feste Länge (DSC-079). Zwei von vier Sprachteilen tragen damit dieselbe Sinnverschiebung",
+          "safety_critical": true
+        },
+        {
+          "value": "Montage nie im Motorraum, Oberseite nach oben, freie Sicht zum Satelliten",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Produktfoto mit Bildmarken 1 bis 7 - dasselbe Foto wie in allen Sprachteilen, Legende schwedisch",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung der Legende nur über die räumliche Position der Ziffern"
+        }
+      ],
+      "warnings_found": [
+        "\"Läs noggrant igenom följande anvisningar för att förhindra felmanövrering.\" - zwischen zwei grauen Warndreiecken, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Bildmarken-Zuordnung nur über Position, Warndreiecke ohne Textentsprechung - wie in allen Sprachteilen.",
+        "\"fri sikt\" dreimal in Anführungszeichen - dieselbe Auszeichnungsschwäche wie \"clear view\" im englischen Teil."
+      ],
+      "discrepancies": [
+        "\"kabellängden ... är 2 m\" - feste Länge statt Obergrenze; dieselbe Sinnverschiebung wie im französischen Teil (DSC-079).",
+        "Legende und Werte decken sich im Übrigen mit den anderen Sprachteilen."
+      ],
+      "terminology_findings": [
+        "\"Kabelträd\" für den Kabelbaum; \"huvudkabelträdet\" ab Seite 58 für den Hauptkabelbaum.",
+        "\"GPS-antenn\" - die schwedische Fassung folgt der deutschen Benennung (Antenne), nicht der englischen (receiver).",
+        "\"Plansäkring\" für die Flachsicherung."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Werte gegen die drei anderen Sprachteile gehalten; die 2-m-Formulierung ist die einzige inhaltliche Abweichung. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 56,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1363,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1137,
+      "content_type": "abbildung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 2\". Schwedisches Gegenstück zu den PDF-Seiten 4, 22 und 39. Obere Hälfte: \"1.3 Anslutningar, indikering och manöverelement\" mit demselben beschrifteten Foto; Beschriftungen schwedisch (\"Anslutning av extern GPS-antenn (tillval)\", \"Används ej\", \"Anslutning WiPro III / \"all in one\"\", \"Omkopplare driftarter\", \"Status-LED-lampa\", \"Pin 1 massa GND)\" - mit fehlender öffnender Klammer - bis \"Pin 8 driftspänning (U1) +12 V\"). Untere Hälfte: \"1.4 Val av driftart\" mit den ersten vier unterstrichenen Zwischentiteln (Anruf löst Statusbericht aus - mit korrekter Singular-Formulierung \"telefonnumret på det i Pro-finder inlagda SIM-kortet\", anders als die sinnverschobene französische Fassung; automatische Statusberichte; Statusbericht enthält U1-U5; Geofencing über Pin 3, ereignisgesteuert z. B. über Zündung oder Beleuchtung).",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 2",
+        "1.3 Anslutningar, indikering och manöverelement",
+        "1.4 Val av driftart",
+        "Anrop utlöser statusrapport:",
+        "Automatiska statusrapporter:",
+        "Statusrapporten innehåller U1, U2, U3, U4, U5:",
+        "Geofencing kan kopplas via pin 3:"
+      ],
+      "technical_values": [
+        {
+          "value": "Anschlussbelegung: Pin 1 Masse (GND), Pins 2-5 Messeingänge (U2-U5), Pin 6 Ausgang B, Pin 7 Ausgang A, Pin 8 Betriebsspannung +12 V",
+          "context": "Deckt sich mit allen Sprachteilen",
+          "safety_critical": true
+        },
+        {
+          "value": "Geofencing über Pin 3 ereignisgesteuert (Zündung, Beleuchtung)",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto der Geräteschmalseite mit farbigen Verbindungslinien - identisch mit den anderen Sprachteilen, Beschriftungen schwedisch; \"Används ej\" hellgrau",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung ausschließlich über die farbigen Linien, deren Farben den unbenannten Aderfarben entsprechen"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "\"Pin 1 massa GND)\" - die öffnende Klammer fehlt; beim Vorlesen entsteht eine unverständliche Zeichenfolge (DSC-080).",
+        "Die Zuordnung der Beschriftungen zur Steckerposition bleibt rein visuell über die farbigen Linien.",
+        "\"Används ej\" hellgrau - Status nur über Textfarbe.",
+        "Die vier Zwischentitel sind nur durch Unterstreichung ausgezeichnet."
+      ],
+      "discrepancies": [
+        "\"Pin 1 massa GND)\" mit fehlender öffnender Klammer - nur im schwedischen Teil (DSC-080).",
+        "Die Anruf-Formulierung ist korrekt singularisch - die sinnverschobene französische Plural-Formulierung (DSC-073) ist eine französische Eigenheit, kein Vorlagenfehler.",
+        "\"Omkopplare driftarter\" ohne Fugenelement gegen \"omkopplaren för driftarter\" im Fließtext - zwei Formen."
+      ],
+      "terminology_findings": [
+        "\"Omkopplare driftarter\"/\"omkopplaren för driftarter\" für den Betriebsartenschalter.",
+        "\"mätingång\" für den Messeingang.",
+        "\"Status-LED-lampa\" mit Doppelbindestrich - dritte Schreibvariante neben \"status LED-lampor\" (Verzeichnis) und \"status-LED-lampan\" (Fließtext)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Beschriftungen mit den drei anderen Sprachteilen verglichen; identisches Foto. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 57,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1621,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1243,
+      "content_type": "tabelle",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 3\". Schwedisches Gegenstück zu den PDF-Seiten 5, 23 und 40. Fortsetzung von 1.4 mit zwei Zwischentiteln (Anruf aktiviert/deaktiviert WiPro; Hilfe-SMS bei Spannung an Pin 3). Danach der Info-Absatz in gebrochenem Schwedisch: \"Info: Lägena 7 genom D är avsedda för användning utan WiPro. En anslutning med Wipro är inte möjlig med denna. Från Pro-finder SN 0686-010 en WiPro också kan kopplas i dessa lägen.\" - \"genom\" ist eine Lehnübersetzung des englischen \"through\", die Wortstellung des letzten Satzes ist englisch; der Absatz wurde erkennbar aus der englischen Fassung übersetzt (DSC-079); \"Wipro\" mit kleinem p wie in allen Sprachteilen. Untere Hälfte: \"Driftart-tabell\" mit 16 Zeilen; Betriebsart C \"90 sekunder\", Betriebsart D \"8 minuter\" - die schwedische Fassung bestätigt den deutschen und französischen Wert; die englischen \"8 seconds\" stehen jetzt drei zu eins allein (DSC-066). Betriebsart 8: \">6 V TILL / <5 V FRÅN\", Betriebsart B invertiert; E Radera larmnummer, F GPS-diagnos.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 3",
+        "1.4 Val av driftart",
+        "Anrop aktiverar / avaktiverar WiPro och utlöser statusrapport:",
+        "Hjälp SMS vid spänning mot pin 3:",
+        "Driftart-tabell"
+      ],
+      "technical_values": [
+        {
+          "value": "Ab Pro-finder SN 0686-010 kann auch in den Betriebsarten 7 bis D eine WiPro angeschlossen werden",
+          "context": "Seriennummerngrenze mit führender Null in allen vier Sprachteilen deckungsgleich",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart D: Intervall \"8 minuter (så snart spänning ligger an och Pro-finder är inbokad)\"",
+          "context": "Bei 150 dpi eindeutig lesbar. Damit nennen Deutsch, Französisch und Schwedisch 8 Minuten und nur Englisch 8 seconds - drei zu eins (Nachtrag zu DSC-066, Rückfrage 16)",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart C: 90 sekunder; Intervalle 15/60 minuter, 6/24 timmar; Betriebsart 8: >6 V TILL / <5 V FRÅN; B invertiert",
+          "context": "Alle übrigen Tabellenwerte decken sich mit den anderen Sprachteilen; TILL/FRÅN in Großbuchstaben als einzige Fassung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Betriebsartentabelle mit 16 Zeilen und gruppiertem Kopf - strukturgleich mit den anderen Sprachteilen",
+          "columns": [
+            "Driftart",
+            "Anrop utlöser statusrapport",
+            "Anrop aktiverar / avaktiverar WiPro",
+            "Intervall mellan automatiska statusrapporter",
+            "U1",
+            "U2",
+            "U3",
+            "U4",
+            "U5",
+            "Geofencing kan kopplas via pin 3",
+            "Hjälp-SMS vid spänning mot pin 3"
+          ]
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Gruppierter Tabellenkopf und verbundene Zellen ohne Tags - wie in allen Sprachteilen.",
+        "Die Betriebsarten 0 und 9 sind auch schwedisch in keiner Spalte unterscheidbar.",
+        "Die Schaltschwellen stehen als \"TILL\"/\"FRÅN\" in Großbuchstaben - einzige Fassung mit dieser Auszeichnung; ob damit eine Bedienbeschriftung zitiert wird, ist nicht erkennbar.",
+        "Die Zwischentitel sind nur durch Unterstreichung ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Betriebsart D: \"8 minuter\" - dritte Fassung mit 8 Minuten; die englischen \"8 seconds\" sind endgültig der Ausreißer (Nachtrag zu DSC-066).",
+        "Der Info-Absatz ist gebrochenes Schwedisch mit englischer Syntax (\"Lägena 7 genom D\", \"en WiPro också kan kopplas\") - wie der französische erkennbar unlektoriert maschinell übersetzt, und zwar aus der englischen Fassung (DSC-079).",
+        "\"Wipro\" mit kleinem p im Info-Absatz - vierter Sprachteil mit demselben Satzfehler an derselben Stelle: der Fehler ist Vorlage.",
+        "\"Hjälp SMS\" im Zwischentitel ohne, \"Hjälp-SMS\" im Fließtext und Tabellenkopf mit Bindestrich (DSC-080)."
+      ],
+      "terminology_findings": [
+        "\"skarp\"/\"oskarp\" für scharf/unscharf - deckt sich begrifflich mit der deutschen Geräteliste (SCHARF/UNSCHARF).",
+        "\"inbokad\" für eingebucht.",
+        "\"Driftart-tabell\" mit Bindestrich."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi; die Tabellenzeile D ist bei 150 dpi eindeutig (\"8 minuter\"). Alle Tabellenwerte gegen die drei anderen Sprachteile gehalten. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; die englische Syntax des Info-Absatzes ist auch ohne muttersprachliche Kompetenz eindeutig."
     },
     {
       "page": 58,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2100,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1731,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 4\". Schwedisches Gegenstück zu den PDF-Seiten 6, 24 und 41. \"1.5 Anslutning av modulen\": Pin 1 (schwarz) und Pin 8 (rot) polrichtig an 12 V DC, Pluskabel mit beiliegender Sicherung; Pins 2-5 Messeingänge (0-30 V), Pin 3 je nach Betriebsart Geofencing; WiPro III bzw. WiPro \"all in one\" mit beiliegendem Kabel verbinden; rote Warnung \"!!! WiPro och Pro-finder måste vara anslutna till samma batteri !!!\" - wie im französischen Teil ohne den Zusatz \"all in one\" (DSC-079); Pins 6/7 Transistorausgänge 12 V/500 mA, darüber Relais mit \"frikopplingsdiod\", Garantieverlust bei Überlast; drei Schaltarten; roter Verweis auf Kapitel 2.7. \"1.6 Montering av GPS-antennen (tillval)\": Klebepad nach oben, Fläche trocken/sauber/fettfrei, unter 15 °C vorwärmen, waagerecht. \"1.7 Anslutning av GPS-antennen\": spannungsfrei, Hauptkabelbaum ziehen, GPS-Stecker in die vierpolige Buchse; danach mindestens 5 Minuten über 13,5 V, Fahrzeug starten. Dasselbe GPS-Empfänger-Foto mit roten Linien.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 4",
+        "1.5 Anslutning av modulen",
+        "1.6 Montering av GPS-antennen (tillval)",
+        "1.7 Anslutning av GPS-antennen"
+      ],
+      "technical_values": [
+        {
+          "value": "Pin 1 schwarz, Pin 8 rot, 12 V DC; Messeingänge 0-30 V; Ausgänge 12 V/500 mA; Relais über 500 mA; Garantieverlust bei Überlast; 5 Minuten über 13,5 V",
+          "context": "Alle Werte decken sich mit den anderen Sprachteilen",
+          "safety_critical": true
+        },
+        {
+          "value": "WiPro und Pro-finder an derselben Batterie",
+          "context": "Die schwedische Warnung nennt wie die französische nur \"WiPro\" ohne \"all in one\" - zwei von vier Sprachteilen lassen den Zusatz weg (DSC-079)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des GPS-Empfängers mit Klebepad und Stecker, zwei rote Verbindungslinien - identisch mit den anderen Sprachteilen",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung ausschließlich über die roten Linien"
+        },
+        {
+          "description": "Zwei Zeigehand-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"!!! WiPro och Pro-finder måste vara anslutna till samma batteri !!!\" - rot, dreifache Ausrufezeichen, ohne Signalwort",
+        "\"Vid överbelastning blir garantin ogiltig.\" - schwarz im Fließtext",
+        "\"Hur utgångarna styrs per SMS, beskrivs i kapitel 2.7.\" - rot gesetzt, obwohl bloßer Querverweis"
+      ],
+      "accessibility_issues": [
+        "Rot kennzeichnet wieder Warnung und Querverweis zugleich - sprachübergreifendes Vorlagenmuster.",
+        "Die drei Schaltarten als Spiegelstrichliste ohne Listenauszeichnung.",
+        "Die roten Verbindungslinien zum Foto in Warnfarbe."
+      ],
+      "discrepancies": [
+        "Die Batteriewarnung ohne \"all in one\" - wie französisch, gegen Deutsch/Englisch (DSC-079).",
+        "\"frikopplingsdiod\" für die Freilaufdiode - plausibler als das englische \"recovery diode\" und das französische \"diode de marche à vide\"; die Übersetzungsqualität der Fachbegriffe schwankt je Sprachteil.",
+        "Alle technischen Werte decken sich mit den anderen Fassungen."
+      ],
+      "terminology_findings": [
+        "\"huvudkabelträdet\" für den Hauptkabelbaum.",
+        "\"fästkudden\" für das Klebepad.",
+        "\"frikopplingsdiod\" für die Freilaufdiode."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Werte gegen die drei anderen Sprachteile gehalten; deckungsgleich bis auf die dokumentierte Warnungs-Verkürzung. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 59,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1311,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1106,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 5\". Schwedisches Gegenstück zu den PDF-Seiten 7, 25 und 42, Fortsetzung von \"1.7 Anslutning av GPS-antennen\". GPS-Diagnose über Schalterstellung F; drei LED-Zustände mit denselben Farbbalken: rot leuchtend = GPS nicht angeschlossen (Anschluss spannungsfrei wiederholen, sonst Antenne eventuell defekt), gelb blinkend = \"GPS-data tas emot, men utan giltig position\" - korrekt übersetzt, anders als die sinnverschobene französische Fassung; nach 5 Minuten Montageort ungeeignet oder Fahrzeug unter Dach, grün leuchtend = \"PGS-position är OK\" - Tippfehler \"PGS\" statt \"GPS\", bei 400 dpi gesichert (DSC-080); Schalter zurück, rot = SIM fehlt, weitere Zustände in 1.10. Reflexions-Absatz (Fehlalarme möglich, Geofence-Funktion vor Halle/Dach deaktivieren) und die Anweisung: SMS mit \"fence av\" an die Nummer des GSM-Moduls - bei 500 dpi zeichengenau gesichert. Damit ist der schwedische Geofencing-Ausschaltbefehl im Seitenbild belegt; die englische Seite 25 druckt exakt diesen schwedischen Befehl (DSC-067).",
+      "headings": ["Handbok för Pro-finder", "Sidan 5", "1.7 Anslutning av GPS-antennen"],
+      "technical_values": [
+        {
+          "value": "Schalterstellung F = GPS-Diagnose; LED rot = nicht angeschlossen, gelb blinkend = Daten ohne gültige Position, grün = Position OK; 5-Minuten-Frist",
+          "context": "Zustände und Frist decken sich mit den anderen Fassungen; die gelbe Zustandsbeschreibung ist korrekt (anders als französisch, DSC-073)",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehl dieser Seite, wörtlich: \"fence av\" zum Deaktivieren des Geofencings",
+          "context": "Bei 500 dpi zeichengenau gesichert. Der schwedische Befehl ist damit im Seitenbild belegt - und er ist exakt der Befehl, den die englische Seite 25 fälschlich druckt (DSC-067): die Vorlagenkontamination ist jetzt auf beiden Seiten bildlich gesichert. Nur Quellenzitat für BLK-005; nicht für den Content-Layer",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Farbbalken (rot durchgezogen, gelb gestrichelt, grün durchgezogen) - identische Darstellung wie in allen Sprachteilen",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und Strichmuster; Blinken gegen Dauerlicht über das Muster, Zustände untereinander nur über Farbe"
+        },
+        {
+          "description": "Zeigehand-, Pfeil- und Uhr-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen"
+        }
+      ],
+      "warnings_found": [
+        "\"stöldlarm kan utlösas, fastän fordonet inte har flyttats\" - schwarz im Fließtext, ohne Hervorhebung"
+      ],
+      "accessibility_issues": [
+        "Der Tippfehler \"PGS-position\" betrifft genau die Erfolgsmeldung der Diagnose - wer den Begriff nachschlägt oder vorgelesen bekommt, findet kein \"PGS\" (DSC-080).",
+        "Die drei LED-Zustände innerhalb der Gruppen nur über Farbe unterscheidbar - sprachübergreifend.",
+        "Die Befehls-Anweisung ist nur durch das Zeigehand-Piktogramm als Handlung gekennzeichnet."
+      ],
+      "discrepancies": [
+        "\"fence av\" im Seitenbild gesichert - der Textebenen-Vorbehalt aus DSC-067 ist für Seite 59 geschlossen; zusammen mit der englischen Seite 25 ist die sprachübergreifende Befehlskontamination nun vollständig bildlich belegt.",
+        "\"PGS-position är OK\" - Tippfehler im Erfolgszustand der GPS-Diagnose, nur im schwedischen Teil (DSC-080, bei 400 dpi gesichert).",
+        "Die gelbe Zustandsbeschreibung ist korrekt - die französische Sinnverschiebung (DSC-073) ist eine französische Eigenheit.",
+        "\"Geofence-funktionen\" wie das deutsche \"Geofence Funktion\" gegen \"Geofencing\" an anderen Stellen."
+      ],
+      "terminology_findings": [
+        "\"Geofence-funktionen\" gegen \"Geofencing\" (Seiten 56/57) - dieselbe Doppelform wie in den anderen Sprachteilen.",
+        "\"GPS-diagnos\" für die GPS-Diagnose.",
+        "\"stöldlarm\" für die Diebstahlmeldung."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi; die Befehlszeile mit \"fence av\" bei 500 dpi und der Tippfehler \"PGS\" bei 400 dpi nachgerendert. Befehle nur als Quellenzitat für BLK-005. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 60,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2039,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1710,
+      "content_type": "warnhinweise",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 6\". Schwedisches Gegenstück zu den PDF-Seiten 8, 26, 43. \"1.8 Programmering av larmnummer\": gültige micro-SIM erforderlich (\"sättas in i mobilen\" - \"in das Mobiltelefon\" statt \"in das Modul\": ungenaue Wortwahl). Rosa Kasten mit sechs Warndreiecken: PIN auf 0000 ändern, PIN-Abfrage aktiviert, Rufumleitungen und Mailbox aus, Komfortfunktionen aus, spannungsfrei einlegen, Roaming für Auslandsnutzung - das Vorgabenpaar PIN 0000 plus aktive Abfrage steht damit in allen vier Sprachteilen (Rückfrage 15). Dasselbe Gerätefoto mit roter Linie und das gelbe ESD-Symbol ohne jeden erklärenden Text (DSC-063). Untere Hälfte: Anvant SIM-kort (Empfehlung t-mobile oder Vodafone, Prepaid ideal, Guthaben wird je SMS übertragen, Aufladung ohne Entnahme z. B. per EC-automat), Spara numret (Eintrag ALARM; für die Spitzenposition \"AAlarm\" - das doppelte A ist wie in Deutsch und Französisch erhalten, nur die englische Fassung hat es verloren, DSC-076; Landesvorwahl immer mitspeichern, +49 für Tyskland), Styrning via SMS eller telefon (jede SMS kostet; Steuerung erzeugt immer eine Status-SMS).",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 6",
+        "1.8 Programmering av larmnummer",
+        "Använt SIM-kort:",
+        "Spara numret för Pro-finder:",
+        "Styrning via SMS eller telefon:"
+      ],
+      "technical_values": [
+        {
+          "value": "PIN vor dem Einlegen auf 0000 ändern und PIN-Abfrage aktiviert lassen",
+          "context": "Vierter Sprachteil mit dem wortgleichen Vorgabenpaar - endgültig Vorlage, kein Einzelfehler (Rückfrage 15)",
+          "safety_critical": true
+        },
+        {
+          "value": "micro-SIM; spannungsfrei einlegen; Rufumleitungen, Mailbox, Komfortfunktionen aus; Roaming für Auslandsnutzung",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Adressbuch-Empfehlung \"AAlarm\" mit doppeltem A erhalten",
+          "context": "\"stavar alarm på följande sätt, står det allra först: AAlarm\" - dritter Sprachteil mit korrektem Doppel-A; der Verlust ist eine rein englische Eigenheit (Nachtrag zu DSC-076)",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des geöffneten Geräts mit eingelegter SIM und roter Verbindungslinie - identisch mit den anderen Sprachteilen",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung nur über die rote Linie"
+        },
+        {
+          "description": "Gelbes ESD-Warnsymbol ohne jeden erklärenden Text",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Symbol - der Befund aus DSC-063 gilt im vierten Sprachteil unverändert"
+        },
+        {
+          "description": "Sechs graue Warndreiecke am rosa Kasten",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position"
+        }
+      ],
+      "warnings_found": ["Rosa Kasten mit sechs SIM-Vorgaben, je mit Warndreieck, ohne Signalwort"],
+      "accessibility_issues": [
+        "Das ESD-Symbol bleibt auch im schwedischen Teil ohne ein Wort zur elektrostatischen Entladung.",
+        "Die sechs Vorgaben sind nur durch Kastenfarbe und Dreiecke als Pflichten erkennbar.",
+        "\"kostnader ,\" - Leerzeichen vor dem Komma (DSC-080)."
+      ],
+      "discrepancies": [
+        "\"sättas in i mobilen\" - die SIM wird laut schwedischem Text \"in das Mobiltelefon\" statt in das Modul eingesetzt; ungenau, aber durch den Kontext auffangbar (DSC-080).",
+        "\"AAlarm\" erhalten - der englische Verlust des doppelten A (DSC-076) bleibt ein Einzelfall.",
+        "\"t-mobile\" klein wie in Deutsch und Französisch.",
+        "\"EC-automat\" - der deutsche Begriff ist unübersetzt übernommen (DSC-080)."
+      ],
+      "terminology_findings": [
+        "\"frikopplat\" für freigeschaltet/aktiviert (SIM).",
+        "\"tillgodohavande\" für das Guthaben.",
+        "\"mobilen\" umgangssprachlich für das Gerät - kollidiert mit der Bedeutung Mobiltelefon."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Die sechs Kastenvorgaben einzeln gegen die deutsche Fassung gehalten; deckungsgleich. AAlarm-Stelle im Seitenbild geprüft. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 61,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1612,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1353,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 7\". Schwedisches Gegenstück zu den PDF-Seiten 9, 27 und 44. Fortsetzung von 1.8: LED-Ablauf nach dem Einlegen (kurz rot, dann gelb/grün - korrekt als Wechselblinken formuliert, anders als die französische Abfolge-Formulierung), Programmier-SMS, bei Erfolg grünes Blinken und Status-SMS. Bis zu 10 larmnummer. Vier Typen: Masternummer (Spitzenposition, programmiert jederzeit ohne Schalter), Auktoriserade nummer (dürfen Ausgänge steuern und Statusberichte anfordern - korrekt als zwei Rechte, anders als die französische Zweckverbindung), Ej auktoriserade nummer (kein Zugriff, erhalten nur Statusmeldungen - korrekt \"erhåller\", anders als das französische \"contiennent\"), Smartphone-nummer (mit kleinem fetten \"s\"; Kartenlink). Darunter zwei gebrochene Sätze zu den Abfragecodes: \"Mer information pa avfrågningskoder finns i dokumentationen för deras kortet.\" und \"För avfrågningskoder också ofta används på följande länk:\" - fehlendes å, falsche Possessive, englische Wortstellung (DSC-079) - gefolgt vom FAQ-Link, der anders als im französischen Teil vorhanden ist.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 7",
+        "1.8 Programmering av larmnummer",
+        "Masternummer:",
+        "Auktoriserade nummer:",
+        "Ej auktoriserade nummer:",
+        "Smartphone-nummer:"
+      ],
+      "technical_values": [
+        {
+          "value": "LED-Ablauf: kurz rot, dann gelb/grünes Wechselblinken; nach Erfolg grün plus Status-SMS",
+          "context": "Korrekt; die französische Abfolge-Formulierung (DSC-073) bleibt französische Eigenheit",
+          "safety_critical": true
+        },
+        {
+          "value": "Bis zu 10 larmnummer; Masternummer programmiert jederzeit ohne Schalter; autorisierte Nummern steuern Ausgänge und fordern Statusberichte an",
+          "context": "Deckt sich mit der deutschen Fassung; die Rechte sind korrekt als zwei getrennte formuliert",
+          "safety_critical": true
+        },
+        {
+          "value": "Smartphone-Kennzeichen: kleines fettes \"s\"",
+          "context": "Seite 62 schreibt in der Strukturerklärung \"S\" groß - der s/S-Widerspruch besteht damit in allen vier Sprachteilen (DSC-056)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die beiden Abfragecode-Sätze sind syntaktisch gebrochen und auch für sprachkundige Leser schwer verständlich (DSC-079).",
+        "Die vier Typdefinitionen sind eine zweispaltige Tab-Liste ohne Auszeichnung.",
+        "Der FAQ-Link steht als bloßer fetter Text ohne Verknüpfung (http, thitronik-automotive.de)."
+      ],
+      "discrepancies": [
+        "\"Mer information pa avfrågningskoder finns i dokumentationen för deras kortet.\" - \"pa\" ohne Ring, \"för deras kortet\" doppelt markiert; \"För avfrågningskoder också ofta används på följande länk\" - englische Wortstellung. Beide Sätze erkennbar maschinell übersetzt (DSC-079); die englische Parallelstelle enthält \"peovider\", die französische bricht ebenfalls - diese Passage ist in drei von vier Sprachteilen defekt, nur die deutsche ist sauber.",
+        "Der FAQ-Link ist vorhanden - das französische Fehlen (DSC-074) bleibt französische Eigenheit.",
+        "Das kleine \"s\" hier gegen \"S\" auf Seite 62 - vierter Sprachteil mit dem s/S-Widerspruch (Nachtrag zu DSC-056)."
+      ],
+      "terminology_findings": [
+        "\"Masternummer\" wie im Deutschen (unübersetzt master).",
+        "\"Ej auktoriserade nummer\" für nicht autorisierte Nummern.",
+        "\"erhåller endast statusmeddelanden\" - korrekt empfangen, nicht enthalten."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Typdefinitionen einzeln gegen die deutsche Fassung gehalten; deckungsgleich. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 62,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1960,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1654,
+      "content_type": "tabelle",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 8\". Schwedisches Gegenstück zu den PDF-Seiten 10, 28 und 45. Obere Hälfte: Strukturabbildung der Programmier-SMS mit rotem sechsstrahligem Stern vor \"100#\", \"P\", Pluszeichen, rotem \"S\" und drei Beispielrufnummern mit Führungslinien; Hinweis, dass Leerzeichen nur der Darstellung dienen. Roter Hinweis zum \"S\" (macht die Position zum Link, \"(se 2.5)\" - derselbe falsche Querverweis wie in allen Sprachteilen, gemeint ist 2.6, DSC-055) mit Warnung, es nur für Smartphones zu verwenden; roter Absatz zum Sternchencode (je nach Anbieter anders, steht \"tabellen över avfrågningskoder på föregående sida\" - die Tabelle existiert nicht, DSC-057) und Warnung, bei Vertragskarten keinen Code einzugeben. Untere Hälfte: dreispaltige Beispieltabelle - in den Zellen beginnt der Code mit ASCII-Sternchen, im Diagramm mit dem sechsstrahligen Stern (DSC-058); die Prepaid-Zelle bricht eine Rufnummer mitten in der Ziffernfolge. Erläuterungszeilen benennen die Nummern uneinheitlich: \"1:a larmnumret (masternumret)\", \"2:a larmnumret\", aber \"3:e inprogrammerat nummer\". Im P-Absatz fehlt die schließende Klammer (\"(förbetalt kort och bör användas ...\").",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 8",
+        "1.8 Programmering av larmnummer",
+        "Exempel på olika programmerings-SMS"
+      ],
+      "technical_values": [
+        {
+          "value": "Aufbau der Programmier-SMS strukturgleich mit allen Sprachteilen; keine Leerzeichen in der SMS",
+          "context": "Beispielrufnummern werden bewusst nicht wiedergegeben",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Vertragskarten keinen Abfragecode eingeben (Fehlfunktionsgefahr)",
+          "context": "\"Vid avtalskort får på inga villkor en avfrågningskod matas in\" - deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Zwei Glyphen für das erste Codezeichen: Stern im Diagramm, ASCII-Sternchen in den Tabellenzellen; Smartphone-Kennzeichen hier \"S\" groß",
+          "context": "Vierter Sprachteil mit beiden Vorlagenbefunden (DSC-058, DSC-056)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreispaltige Beispieltabelle (Anlass, Vertragskarte, Prepaid); die Prepaid-Spalte bricht eine Beispielnummer mitten in der Ziffernfolge um - wie in allen Sprachteilen",
+          "columns": [
+            "Programmerings-SMS vid",
+            "Innehåll i programmerings-SMS med avtalskort i Pro-finder",
+            "Innehåll i programmerings-SMS med förbetalt kort i Pro-finder"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "description": "Strukturabbildung der Programmier-SMS mit Führungslinien - strukturgleich mit allen Sprachteilen, Erläuterungen schwedisch",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung über die Führungslinien; das Sternzeichen steht in der Textebene als Private-Use-Zeichen (U+F0DA)"
+        }
+      ],
+      "warnings_found": [
+        "\"Används endast, om mottagaren är en \"Smartphone\".\" - rot und fett, ohne Signalwort",
+        "\"Vid avtalskort får på inga villkor en avfrågningskod matas in, eftersom det orsakar felfunktioner.\" - rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Das Sternzeichen in der Textebene als unbrauchbares Private-Use-Zeichen; ASCII-Sternchen nur in den Tabellenzellen (DSC-058).",
+        "Die Strukturabbildung transportiert ihre Information über Führungslinien.",
+        "Im P-Absatz fehlt die schließende Klammer - der eingeklammerte Einschub endet nie (DSC-080).",
+        "Die Erläuterungen benennen die Nummern uneinheitlich (\"larmnumret\" gegen \"inprogrammerat nummer\")."
+      ],
+      "discrepancies": [
+        "\"(se 2.5)\" für den Kartenlink - falscher Verweis (gemeint ist 2.6), wortgleich in allen vier Sprachteilen; der erste schwedische Beleg für die vier Vorlagen-Querverweisfehler (Nachtrag zu DSC-055).",
+        "\"tabellen över avfrågningskoder på föregående sida\" - die Tabelle existiert auch schwedisch nicht (Nachtrag zu DSC-057); anders als im Französischen ist der FAQ-Link auf der Vorseite aber vorhanden.",
+        "\"S\" groß gegen \"s\" klein auf Seite 61 (DSC-056).",
+        "Fehlende schließende Klammer im P-Absatz; \"3:e inprogrammerat nummer\" gegen \"1:a/2:a larmnumret\" (DSC-080)."
+      ],
+      "terminology_findings": [
+        "\"avtalskort\" für die Vertragskarte, \"förbetalt kort\" für Prepaid.",
+        "\"avfrågningskod\" für den Abfragecode.",
+        "\"inprogrammerat nummer\" als dritte Benennung neben \"larmnummer\" und \"masternummer\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Sternglyphen und Verweis im Seitenbild geprüft; Struktur mit den anderen Sprachteilen verglichen. Beispielrufnummern bewusst nicht übernommen. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 63,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1362,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1150,
+      "content_type": "tabelle",
+      "languages": ["sv"],
+      "summary": "Intern \"Sidan 9\". Schwedisches Gegenstück zu den PDF-Seiten 11, 29 und 46. \"1.9 Radering av larmnummer\" mit der beidseitig eingerahmten Bedingung \"!! SIM-kortet måste sitta i apparaten !!\". Vier Handlungsschritte mit Zeigehand-Piktogrammen (Hauptkabelbaum ab, Schalter auf E, Kabelbaum an und gelb/grünes Blinken abwarten, Schalter zurück); danach ist der Speicher leer. Rot: Der Speicher kann auch ohne Schalter von der Masternummer überschrieben werden; im Verweis fehlt die schließende Klammer (\"(se beskrivning under 1.8.\"). \"1.10 Indikering av drifttillstånd (status LED-lampor)\": neun Zustände mit denselben Farbbalken wie in allen Sprachteilen - Netzsuche+keine Nummern (rot/gelb), Netzsuche/kein GSM (rot blinkend), eingebucht+Nummern (grün blinkend), SIM fehlt/defekt (rot leuchtend), PIN nicht 0000 (rot/grün), Speicher leer (gelb blinkend), keine Nummern+eingebucht (gelb/grün), sendet SMS (grün leuchtend), Modemverbindung (gelb leuchtend). Abschließend fett: Im Normalbetrieb blinkt die LED grün.",
+      "headings": [
+        "Handbok för Pro-finder",
+        "Sidan 9",
+        "1.9 Radering av larmnummer",
+        "1.10 Indikering av drifttillstånd (status LED-lampor)"
+      ],
+      "technical_values": [
+        {
+          "value": "Löschvorgang: Kabelbaum ab, Schalter auf E, Kabelbaum an, gelb/grünes Blinken abwarten, Schalter zurück",
+          "context": "Deckt sich mit allen Sprachteilen; Abbruchbedingung farbcodiert",
+          "safety_critical": true
+        },
+        {
+          "value": "Neun LED-Zustände; \"PIN-koden är ej 0000\" als rot/grüner Blinkzustand",
+          "context": "Alle neun Zustände decken sich mit den anderen Listen; die PIN-0000-Erwartung ist damit in vier Sprachteilen belegt (Rückfrage 15)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige LED-Zustandsliste mit neun Zeilen und Farbbalken - strukturgleich mit allen Sprachteilen",
+          "columns": ["LED-Zustand", "Bedeutung"]
+        }
+      ],
+      "figures": [
+        {
+          "description": "Neun Farbbalken (gestrichelt/durchgezogen, Zweifarbwechsel) - identische Darstellung wie in allen Sprachteilen",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und Strichmuster; innerhalb der Gruppen bleibt die Farbe das einzige Merkmal (DSC-059)"
+        },
+        {
+          "description": "Vier Zeigehand-Piktogramme, ein Pfeil-Piktogramm, ein weiteres Zeigehand-Piktogramm beim roten Hinweis",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen"
+        }
+      ],
+      "warnings_found": [
+        "\"!! SIM-kortet måste sitta i apparaten !!\" - fett, beidseitige Ausrufezeichenpaare, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die neun Zustände innerhalb der Gruppen nur über Farbe unterscheidbar (DSC-059) - vierter Sprachteil.",
+        "Die vier Handlungsschritte weder nummeriert noch als Liste ausgezeichnet.",
+        "Der rote Verweis endet ohne schließende Klammer (\"(se beskrivning under 1.8.\") - der Einschub bleibt offen (DSC-080).",
+        "\"1.10\" und die Überschrift sind durch einen Tabulator getrennt - abweichende Überschriftsetzung gegenüber den übrigen Abschnitten."
+      ],
+      "discrepancies": [
+        "Alle neun LED-Zustände decken sich mit den anderen Sprachteilen.",
+        "Fehlende schließende Klammer im 1.8-Verweis - zweite fehlende Klammer des Sprachteils (DSC-080).",
+        "Die Ausrufezeichen-Rahmung folgt dem deutschen Original (beidseitig), wie französisch; die englische einseitige Variante bleibt Einzelfall."
+      ],
+      "terminology_findings": [
+        "\"Nätsökning\" für die Netzsuche, \"inbokad\"/\"inbokade\" für eingebucht.",
+        "\"Larmnummerminnet\" für den Zielrufnummernspeicher.",
+        "\"utgångsläge\" für die Ausgangsstellung."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 22, 2026-08-09, PNG-Rendering 150 dpi. Alle neun Zustände einzeln gegen die deutsche Liste gehalten; deckungsgleich. Sprache Schwedisch, Einzelbefunde dokumentiert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Einzelbefunde dokumentiert."
     },
     {
       "page": 64,

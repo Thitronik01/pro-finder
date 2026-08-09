@@ -879,6 +879,9 @@ belegt, nicht aus einer Zusammenfassung.
   comment retrouver votre véhicule" auf Seite 50. Damit sind die vier Vorlagenfehler in
   **allen drei geprüften Sprachteilen** wortgleich nachgewiesen; die zutreffenden
   Verweise treffen ebenfalls überall zu.
+- **Nachtrag 2026-08-09 (schwedischer Teil, erster Beleg):** Auch schwedisch steht
+  „(se 2.5)" für den Kartenlink (Seite 62, gemeint ist 2.6) – vierter Sprachteil,
+  derselbe Fehler; die übrigen drei Verweisstellen liegen auf den Seiten 64–68.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-056 – Die Steuerberechtigung hängt auch bis SN-044 an einem nirgends erklärten Zeichen (bis SN-044)
@@ -910,6 +913,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Nachtrag 2026-08-09 (französischer Teil):** Dritter Sprachteil, derselbe Widerspruch –
   Seite 44 führt das Kennzeichen als kleines fettes „s" ein, Seite 45 schreibt « S » groß.
   Auch die Plus-/Minus-Regel bleibt französisch unausgesprochen.
+- **Nachtrag 2026-08-09 (schwedischer Teil):** Vierter Sprachteil, derselbe Widerspruch –
+  Seite 61 kleines „s", Seite 62 großes „S". Der s/S-Konflikt ist damit vollständige
+  Vorlage; auch die Plus-/Minus-Regel bleibt schwedisch unausgesprochen.
 - **Schwere:** hoch · **Status:** offen – verstärkt BLK-006, an THITRONIK zu melden
   (Rückfrage 10)
 
@@ -965,10 +971,10 @@ belegt, nicht aus einer Zusammenfassung.
   Stern in Strukturabbildung und Erläuterung, ein gewöhnliches ASCII-Sternchen in den
   Zellen der Beispieltabelle (beide bei 400 dpi gesichert). Welches Zeichen tatsächlich zu
   tippen ist, lässt sich der Seite nicht entnehmen.
-- **Nachtrag 2026-08-09 (französischer Teil):** Identisches Muster auf Seite 45 –
-  sechsstrahliger Stern im Diagramm und in den roten Absätzen, ASCII-Sternchen in den
-  Tabellenzellen, Private-Use-Zeichen in der Textebene. Der Doppelglyphen-Befund ist
-  damit in allen drei geprüften Sprachteilen Vorlage.
+- **Nachtrag 2026-08-09 (französischer und schwedischer Teil):** Identisches Muster auf
+  den Seiten 45 und 62 – sechsstrahliger Stern im Diagramm und in den roten Absätzen,
+  ASCII-Sternchen in den Tabellenzellen, Private-Use-Zeichen in der Textebene. Der
+  Doppelglyphen-Befund ist damit in allen vier Sprachteilen Vorlage.
 - **Schwere:** hoch · **Status:** offen
 
 ### DSC-059 – Neun Gerätezustände, unterschieden allein über die LED-Farbe (bis SN-044)
@@ -1208,6 +1214,9 @@ belegt, nicht aus einer Zusammenfassung.
   **zwei zu eins gegen die englische Fassung**; dasselbe Ausreißermuster wie bei DSC-020,
   wo ebenfalls die englische Fassung allein abwich. Welcher Wert technisch gilt, bleibt
   trotzdem eine Frage an THITRONIK.
+- **Nachtrag 2026-08-09 (schwedischer Teil):** Auch die schwedische Tabelle (Seite 57)
+  nennt „8 minuter". Endstand **drei zu eins**: Deutsch, Französisch und Schwedisch gegen
+  die englischen „8 seconds".
 - **Schwere:** hoch (sicherheitsrelevanter technischer Wert) · **Status:** offen –
   Rückfrage 16 an THITRONIK
 
@@ -1236,8 +1245,9 @@ belegt, nicht aus einer Zusammenfassung.
   abstellen will.
 - **Generationenvergleich der Befehlssätze:** Auch bis SN-044 hat jede Sprachfassung einen
   eigenen Befehlssatz – DE „Fence an"/„fence aus", EN „Fence on"/„Fence off", SV „fence
-  pa"/„fence av" (Textebene, Seiten 59/67 noch ungeprüft), FR „gardiennage
-  active"/„gardiennage desactive". Der französische Ausschaltbefehl ist seit dem
+  pa"/„fence av" (der Ausschaltbefehl „fence av" ist seit dem 2026-08-09 auf Seite 59
+  **bei 500 dpi im Seitenbild gesichert**; „fence pa" liegt auf der noch ungeprüften
+  Seite 67), FR „gardiennage active"/„gardiennage desactive". Der französische Ausschaltbefehl ist seit dem
   2026-08-09 **bei 500 dpi im Seitenbild gesichert** (Seite 42). Die französischen Befehle
   unterscheiden sich zudem von denen der SN-045-Fassung („activer/desactiver le
   gardiennage", DSC-033) – **derselbe Befehl hat sich innerhalb einer Sprache zwischen den
@@ -1493,6 +1503,10 @@ belegt, nicht aus einer Zusammenfassung.
     sonst dokumentierten Problems (sichtbarer Inhalt fehlt in der Textebene, DSC-058
     u. a.): Ein Screenreader liest Kopfzeilen vor, die sehende Nutzer nicht sehen, und
     Sehende können die vorgelesene Seitenangabe nicht verifizieren.
+- **Gegenprobe 2026-08-09 (schwedischer Teil):** Die schwedischen Kopfzeilen sind
+  **sichtbar**; die Sequenzprüfung zeigt die korrekte Reihenfolge (Balken 17, Text 18–20
+  auf PDF-Seite 55; ebenso 58 und 62). Der Befund bleibt auf den französischen Sprachteil
+  beschränkt.
 - **Schwere:** mittel bis hoch (Orientierung und Zitierfähigkeit eines ganzen
   Sprachteils) · **Status:** offen
 
@@ -1510,6 +1524,9 @@ belegt, nicht aus einer Zusammenfassung.
   verloren, und der Satz „as shown below" verweist damit auf nichts Erkennbares: Der
   englische Leser sieht zweimal dieselbe Schreibung und kann die Empfehlung nicht
   befolgen.
+- **Nachtrag 2026-08-09 (schwedischer Teil):** Auch Schwedisch bewahrt das doppelte A
+  („står det allra först: AAlarm", Seite 60). Drei von vier Sprachteilen sind korrekt –
+  der Verlust ist eine rein englische Eigenheit.
 - **Schwere:** gering bis mittel (Komfortfunktion im Alarmfall) · **Status:** offen –
   gehört zur Liste der englischen Substanzfehler (DSC-066, DSC-067, DSC-071)
 
@@ -1584,3 +1601,50 @@ belegt, nicht aus einer Zusammenfassung.
   um die Dimension „je Sprachfassung" erweitert ist.
 - **Schwere:** hoch (sicherheitsrelevanter technischer Wert) · **Status:** offen –
   Nachtrag zu Rückfrage 14
+
+### DSC-079 – Inhaltliche Abweichungen im schwedischen Teil (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, schwedische Seiten 55 bis 61
+- **Befund:** Der schwedische Teil ist insgesamt sorgfältiger übersetzt als der
+  französische (korrekte Anruf-Formulierung, korrekte LED-Gelb-Beschreibung, korrektes
+  Wechselblinken, FAQ-Link vorhanden, „AAlarm" erhalten) – trägt aber eigene inhaltliche
+  Abweichungen:
+  - Seite 55: „kabellängden … **är 2 m**" – wie im Französischen wird aus der Obergrenze
+    der deutschen und englischen Fassung eine feste Kabellänge.
+  - Seite 58: Die Batteriewarnung nennt nur „WiPro" – der Zusatz „all in one" fehlt wie
+    im Französischen; zwei von vier Sprachteilen verkürzen die Warnung.
+  - Seite 57: Der Info-Absatz ist gebrochenes Schwedisch mit **englischer** Syntax
+    („Lägena 7 **genom** D" als Lehnübersetzung von „7 through D", englische Wortstellung
+    im Schlusssatz) – erkennbar maschinell aus der englischen Fassung übersetzt, mit dem
+    Vorlagenfehler „Wipro" an derselben Stelle wie in allen Sprachteilen.
+  - Seite 61: Die beiden Abfragecode-Sätze sind syntaktisch gebrochen („Mer information
+    **pa** avfrågningskoder finns i dokumentationen **för deras kortet**", „För
+    avfrågningskoder också ofta används på följande länk") – dieselbe Passage ist auch
+    englisch („peovider") und französisch defekt: **nur die deutsche Fassung dieser
+    späten Ergänzung ist sauber.**
+  - Seite 60: Die SIM wird laut Text „**i mobilen**" (ins Mobiltelefon) statt ins Modul
+    eingesetzt.
+- **Schwere:** mittel · **Status:** offen – muttersprachlicher Review; betroffene
+  Aussagen nie aus der schwedischen Fassung übernehmen
+
+### DSC-080 – Redaktionelle Befunde im schwedischen Teil bis SN-044 (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, schwedische Seiten 54 bis 63
+- **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite, analog DSC-064,
+  DSC-070 und DSC-077.
+  - Seite 54: Vor der Rubrik „Diverse" fehlt die **Kapitelnummer 3**, die alle anderen
+    Sprachteile führen; „status LED-lampor" (Verzeichnis) gegen „Status-LED-lampa"
+    (S. 56) und „status-LED-lampan" (Fließtext) – drei Schreibvarianten.
+  - Seite 56: „Pin 1 massa GND)" – fehlende öffnende Klammer.
+  - Seite 57: „Hjälp SMS" im Zwischentitel ohne, „Hjälp-SMS" in Fließtext und
+    Tabellenkopf mit Bindestrich; Schaltschwellen als „TILL"/„FRÅN" in Großbuchstaben –
+    einzige Fassung mit dieser Auszeichnung.
+  - Seite 59: „**PGS**-position är OK" – Tippfehler im Erfolgszustand der GPS-Diagnose
+    (bei 400 dpi gesichert).
+  - Seite 60: „kostnader ," – Leerzeichen vor dem Komma; „EC-automat" – der deutsche
+    Begriff unübersetzt; „t-mobile" klein wie in DE/FR.
+  - Seite 62: fehlende schließende Klammer im P-Absatz; „3:e inprogrammerat nummer"
+    gegen „1:a/2:a larmnumret" – uneinheitliche Benennung in einer Abbildung.
+  - Seite 63: fehlende schließende Klammer im 1.8-Verweis („(se beskrivning under 1.8.");
+    „1.10" von der Überschrift durch Tabulator getrennt.
+- **Schwere:** gering · **Status:** offen – gesammelt für den muttersprachlichen Review

@@ -29,23 +29,22 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 17,8 %): 95 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 18,4 %): 85 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 54–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, geprüft sind 53 von 72 Seiten. Struktur: Deutsch 1–19, Englisch 20–36 und
-  Französisch 37–53 (**alle drei vollständig**), Schwedisch 54–71, Impressum 72. Als
-  **einziges** Dokument mit echter Textebene erlaubt es die Gegenüberstellung von
-  extrahiertem Text und Seitenbild; genau daraus entsteht hier der Erkenntnisgewinn.
-  Mitzuerledigen im schwedischen Teil: **zuerst prüfen, ob die Kopfzeilen sichtbar oder
-  wie im französischen Teil vom Balken verdeckt sind** (DSC-075; Sequenzprüfung wie auf
-  Seite 40 dokumentiert); die Befehle `fence pa`/`fence av` (Seiten 59 und 67,
-  Textebenen-Beleg zu DSC-067) im Seitenbild sichern; Diebstahlmeldungs-Radius (DSC-078:
-  DE/EN 1000 m, FR 1500 m – was sagt Schwedisch?), Betriebsart-D-Intervall (DSC-066)
-  und Konformitätsabschnitt (DSC-071: unübersetzt englisch?) gegen die Register halten;
-  abschließend das Impressum (Seite 72, Herstelleradresse gegen die Kieler
+- **DOC-BMA-SN044, Seiten 64–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, geprüft sind 63 von 72 Seiten; es fehlen der Rest des schwedischen Teils
+  (64–71) und das Impressum (72). Die schwedischen Kopfzeilen sind **sichtbar**
+  (Gegenprobe zu DSC-075 erledigt). Mitzuerledigen im Restbatch: Diebstahlmeldungs-Radius
+  der schwedischen 2.1/2.4 (Seiten 64 und 67) gegen DSC-078 halten (DE/EN 1000 m,
+  FR 1500 m – was sagt Schwedisch?); den Befehl `fence pa` (Seite 67) im Seitenbild
+  sichern (`fence av` ist seit Seite 59 gesichert); die schwedischen Schalt- und
+  Ausgangsbefehle (Seiten 66/68) für den Befehlsvergleich erfassen; Meldungsbilder
+  erwartbar deutsch (DSC-072); die drei restlichen Querverweise (DSC-055); technische
+  Daten und Konformitätsabschnitt Seite 70 gegen DSC-069/DSC-071 (unübersetzt
+  englisch?); abschließend das Impressum (Seite 72, Herstelleradresse gegen die Kieler
   Beispieladresse der Screenshots). Danach ist das Dokument komplett und der
   sprachübergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben
   werden.
@@ -82,7 +81,7 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 228 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
+Geprüft sind 238 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
 Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
 Das Muster ist stabil und wiederholt sich erwartbar:
 
@@ -104,17 +103,17 @@ Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, te
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
 
-**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–53 geprüft; das Dokument ist
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–63 geprüft; das Dokument ist
 **viersprachig**: Deutsch 1–19, Englisch 20–36, Französisch 37–53, Schwedisch 54–71,
 Impressum 72):
 
 - Die aufgedruckte Seitenzahl liegt im deutschen Teil **zwei unter** der PDF-Seite, im
   englischen **zwanzig**, im französischen **siebenunddreißig**, im schwedischen
-  erwartbar **vierundfünfzig** (je Sprachteil beginnt die Zählung neu bei 1). Achtung:
+  **vierundfünfzig** (bestätigt; je Sprachteil beginnt die Zählung neu bei 1). Achtung:
   **Im französischen Teil sind die Kopfzeilen samt Seitenzahlen unsichtbar** – der graue
   Balken wird über den weißen Kopfzeilentext gezeichnet (DSC-075, maschinell über die
-  Zeichenreihenfolge belegt). Die Versätze stammen dort aus der Textebene; beim
-  schwedischen Teil zuerst prüfen, ob die Kopfzeilen sichtbar sind.
+  Zeichenreihenfolge belegt). Die Versätze stammen dort aus der Textebene. Die
+  schwedischen Kopfzeilen sind dagegen sichtbar (Sequenz-Gegenprobe erledigt).
 - **Die Sprachteile sind keine verlässlichen Übersetzungen.** Belegt sind: der schwedische
   Befehl `fence av` auf der englischen Seite 25 (DSC-067), „8 seconds" gegen deutsch und
   französisch „8 Minuten" in der Betriebsartentabelle (DSC-066), englisch gelehrte

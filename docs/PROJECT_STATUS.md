@@ -5,12 +5,12 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 31.2 %**
+**Gesamtfortschritt: 31.4 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 17.6 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 18.4 %      |
 | Content-Modell und deutscher Master      | 20 %    | 52 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
@@ -22,29 +22,33 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 18.4 %      |
+| DOC-BMA-SN044 | 72     | 21.9 %      |
 | DOC-IBA-SN045 | 247    | 17.3 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 95 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 54-72 (Schwedisch 54-71: Kopfzeilen-Sichtbarkeit pruefen (DSC-075), Befehle fence pa/av auf den Seiten 59 und 67 im Seitenbild sichern, Radius und Betriebsart-D-Intervall gegen DSC-078/DSC-066 halten, Konformitaetsabschnitt gegen DSC-071; Impressum 72) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Danach ist DOC-BMA-SN044 komplett und der sprachuebergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben werden. Parallel dazu koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 85 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 64-72 (Rest Schwedisch: Radius auf den Seiten 64/67 gegen DSC-078 halten, Befehl fence pa auf Seite 67 im Seitenbild sichern, Meldungsbilder erwartbar deutsch (DSC-072), drei restliche Querverweise (DSC-055), technische Daten und Konformitaet Seite 70 gegen DSC-069/071; Impressum 72 mit Herstelleradresse) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Danach ist DOC-BMA-SN044 komplett und der sprachuebergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben werden. Parallel dazu koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon **228 visuell geprüft** (`inspected`): DOC-IBA-SN045
-  Seiten 1–100 und 76 weitere Seiten aus den Batches 121–246, dazu **53 Seiten
+- 323 Seitenrecords angelegt; davon **238 visuell geprüft** (`inspected`): DOC-IBA-SN045
+  Seiten 1–100 und 76 weitere Seiten aus den Batches 121–246, dazu **63 Seiten
   DOC-BMA-SN044** und beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
   Englisch, Französisch, Tschechisch) von DOC-IBA-SN045 sind geprüft; die übrigen
   Sprachteile sind angefangen. Alle neuen Records sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße und Zeichenzahlen je Seite) – siehe
   `scripts/merge-page-records.mjs`. Die Prüfung hat dabei einen realen Fehler abgefangen:
   eine aus der Nachbarseite übernommene Zeichenzahl;
-- **DOC-BMA-SN044 ist zu 53 von 72 Seiten geprüft** – Deutsch (1–19), Englisch (20–36)
-  und Französisch (37–53) vollständig; es fehlen Schwedisch (54–71) und das Impressum
-  (72). Damit liegt die **komplette
+- **DOC-BMA-SN044 ist zu 63 von 72 Seiten geprüft** – Deutsch (1–19), Englisch (20–36)
+  und Französisch (37–53) vollständig, Schwedisch (54–71) zur Hälfte; es fehlen dessen
+  Rest und das Impressum (72). Die schwedischen Kopfzeilen sind sichtbar (Gegenprobe zu
+  DSC-075), die Betriebsart D sagt schwedisch „8 minuter" (Endstand drei zu eins gegen
+  Englisch, DSC-066), und der schwedische Befehl `fence av` ist im Seitenbild gesichert –
+  die Vorlagenkontamination der englischen Seite 25 (DSC-067) ist damit auf beiden Seiten
+  bildlich belegt. Damit liegt die **komplette
   inhaltliche Grundlage für die dreizehn fehlenden Aufgaben der Generation bis SN-044**
   vor. Weil dieses Dokument als einziges eine echte Textebene hat, wurde jede Seite
   zusätzlich Zeile für Zeile gegen das Seitenbild gehalten – daraus stammen die stärksten
@@ -78,8 +82,8 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 95 ungeprueften Seiten in
   Sprachmarken: die Marke des dänischen Teils ist eine zusammengesetzte Flagge aus
   norwegischer und dänischer Hälfte – bei 150 dpi nicht erkennbar, mit dem neuen
   Ausschnittswerkzeug auf den Seiten 1 und 101 belegt;
-- die Prüfung von DOC-BMA-SN044 hat inzwischen **fünfundzwanzig Registerpositionen**
-  erzeugt (DSC-054 bis DSC-078), zwölf davon mit hoher oder mittelhoher Schwere. Der Ertrag
+- die Prüfung von DOC-BMA-SN044 hat inzwischen **siebenundzwanzig Registerpositionen**
+  erzeugt (DSC-054 bis DSC-080), zwölf davon mit hoher oder mittelhoher Schwere. Der Ertrag
   liegt hier nicht in der Menge, sondern darin, dass sich drei bisher offene Punkte damit
   anders darstellen:
   - **BLK-005 ist kein Übersetzungsproblem.** Die Hilfe-SMS des Geräts ist auf Seite 13 als
@@ -150,7 +154,7 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 95 ungeprueften Seiten in
   einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
   Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
-- **die 76 Seitenrecords aus dem SN-045-Batch und die 48 neuen aus DOC-BMA-SN044 haben
+- **die 76 Seitenrecords aus dem SN-045-Batch und die 58 neuen aus DOC-BMA-SN044 haben
   keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber kein zweiter Prüfer hat
   die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Der Status `inspected`
