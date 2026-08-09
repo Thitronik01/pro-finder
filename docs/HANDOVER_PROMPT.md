@@ -28,59 +28,45 @@ Beleg in den Seitenrecord.
 
 ### Der schnellste Weg, den Fortschritt zu heben
 
-Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell rund 23 %): 30 der 323 Seiten sind noch
-`not_started`. Jede geprüfte Seite zählt unmittelbar.
+Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Die PDF-Seitenprüfung ist seit
+dem 2026-08-09 mit **323 von 323 Seiten vollständig**. Der nächste große, vollständig
+lokal lösbare Hebel ist deshalb der **deutsche Content-Layer der Generation bis SN-044**:
+dreizehn Aufgabendateien fehlen, `07-status-led.json` ist noch ein Platzhalter.
 
-Offen sind:
+Die exakte erste Datei, ihre Quellenroute und die Sperren stehen unter „First action" in
+`HANDOFF.md`. Kurzfassung des Vorgehens je Aufgabe:
 
-- **DOC-IBA-SN045**, zuerst Seiten 200–220, danach 233–240 und 247. Seite 199 eröffnet
-  den polnischen Teil; dessen Schlussseiten 221–224 sind bereits geprüft. Die genaue
-  Prüfroute für den ersten Batch 200–210 steht unter „First action" in `HANDOFF.md`;
-  BLK-005 bleibt bestehen.
+1. Die zugewiesenen deutschen PDF-Seiten selbst rendern und visuell lesen; der deutsche
+   Hauptkorpus von DOC-BMA-SN044 liegt auf den PDF-Seiten 1–19.
+2. Das vollständige Schema von
+   `content/tasks/sn-045-plus/de/03-anschluesse.json` übernehmen, aber keine Aussagen der
+   neueren Generation in den älteren Zweig übertragen.
+3. Jede Aussage in Schritt, Warnung und Fehlerfall direkt mit Dokument, PDF-Seite und
+   Seitenregion belegen; Figuren und Tabellen als echte Textentsprechungen ausarbeiten.
+4. Widersprüche offenlassen und in `change_reason` begründen. BLK-005, BLK-006 sowie die
+   gesperrten Werte aus Rückfrage 14, 16 und 17 beachten.
+5. Die Datei gegen die gerenderten Quellseiten gegenprüfen; `review_status` bleibt
+   `entwurf`, `placeholder` wird `false`.
+6. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
+   **in dieser Reihenfolge** –, committen, pushen und CI abwarten.
 
-Vorgehen je Batch von 9–10 Seiten:
-
-1. Rendern (poppler fehlt in dieser Umgebung, PyMuPDF ist vorhanden):
-   ```
-   python scripts/render-pdf-pages.py <pdf-pfad> 101 110 tmp/pdfs/batch-101-110 150
-   ```
-   `tmp/` ist ignoriert; die Renderings sind jederzeit reproduzierbar.
-2. Jede Seite mit dem Read-Tool als Bild ansehen. Nicht überspringen, auch nicht bei
-   Leer- oder Wiederholungsseiten.
-3. Reicht 150 dpi für ein Detail nicht (Flaggen, LED-Farben, Kabelfarben, Fußnoten,
-   aufgedruckte Seitenzahlen, Tabellenköpfe), **nicht raten**, sondern nachrendern:
-   ```
-   python scripts/crop-pdf-region.py <pdf-pfad> 101 0.28 0.31 0.60 0.37 tmp/zoom/x.png 400
-   ```
-   Koordinaten relativ (0.0–1.0), 0,0 oben links. Das Werkzeug hat beim ersten Einsatz
-   belegt, dass die Flagge auf Seite 101 eine verunglückte Überlagerung der norwegischen
-   und der dänischen Flagge ist – bei 150 dpi war das nicht zu sehen.
-4. Records als JSON-Array nach `tmp/records/<doc-id>-<von>-<bis>.json` schreiben, dann:
-   ```
-   node scripts/merge-page-records.mjs --dry-run   # prüft
-   node scripts/merge-page-records.mjs             # trägt ein
-   ```
-   Das Werkzeug gleicht Seitenmaße und Zeichenzahlen gegen die echte PDF ab, meldet
-   doppelte Seiten und überschreibt keine bereits geprüfte Seite. Es verträgt auch
-   abgebrochene Batches mit abweichenden Dateinamen.
-5. `npm run progress`, dann `npm run format`, dann `npm run check` – **in dieser
-   Reihenfolge**, sonst schlägt `format:check` fehl.
-6. Committen und pushen. CI abwarten.
+Die PDF-Werkzeuge bleiben für Aufgabenextraktion und Gegenprüfung verfügbar:
+`scripts/render-pdf-pages.py`, `scripts/crop-pdf-region.py` und
+`scripts/merge-page-records.mjs`. Details und Beispiele stehen im bisherigen Handoff und
+in den Skriptaufrufen der Seitenrecords.
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 293 von 323 Seiten. DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig;
-DOC-IBA-SN045 steht bei 217 von 247. Dort sind die Sprachteile Deutsch, Englisch,
-Französisch, Tschechisch, Dänisch, Spanisch, Italienisch und Niederländisch vollständig;
-das polnische Deckblatt sowie seine Schlussseiten 221–224 sind ebenfalls erfasst. Das
-Muster ist stabil und wiederholt sich erwartbar:
+Geprüft sind alle **323 von 323 Seiten**. DOC-BMA-SN044 ist mit 72 von 72 Seiten,
+DOC-IBA-SN045 mit 247 von 247 Seiten vollständig; beide Kurzanleitungen stehen bei 2/2.
+Alle zehn Sprachteile der neueren und alle vier Sprachteile der älteren Anleitung sind
+vollständig erfasst. Das Muster ist stabil:
 
-- **Acht geprüfte Sprachen ergeben acht unterschiedliche SMS-Befehlsprofile.** Spanisch
+- **Zehn geprüfte Sprachen ergeben zehn unterschiedliche SMS-Befehlsprofile.** Spanisch
   mischt `valla apagada` mit englischen Kapitelbefehlen und einer englischen Hilfe-SMS;
-  Italienisch und Niederländisch wechseln innerhalb ihrer Fassung den
-  Geofencing-Ausschaltbefehl. Tabelle in `DISCREPANCIES.md` DSC-033. Neue Sätze oder
-  weitere Übernahmen dort eintragen.
+  Italienisch, Niederländisch, Polnisch und Schwedisch wechseln innerhalb ihrer Fassung
+  den Geofencing-Ausschaltbefehl. Schwedisch nennt `fence pa` sogar sowohl für Ein- als
+  auch Ausschalten (DSC-085). Tabelle in `DISCREPANCIES.md` DSC-033.
 - **Niederländisch hat 24 statt der behaupteten 23 Seiten.** Die fast leere Seite 190
   verschiebt Kapitel 3 bis 6; die Schlussseite 198 trägt „Pagina 24 van 23". Dazu kommen
   `Pro-Zoeker`, das unvollständige `positi` und mehrere widersprüchliche Kernbegriffe
@@ -150,16 +136,17 @@ Impressum 72):
   Groß-/Kleinschreibung, vorreformierte Schreibung). Sie gehören gesammelt in DSC-064,
   nicht je Seite neu ins Register.
 
-### Der zweite Hebel
+### Der aktuelle Haupthebel
 
 **Content-Modell und deutscher Master** (20 % Gewicht, aktuell 52 %). Alle vierzehn
 deutschen Aufgaben sind gefüllt, keine ist mehr Platzhalter. Was jetzt fehlt:
 
 1. **Die Generation bis SN-044**: nur 1 von 14 Aufgaben existiert. Die deutsche
    Quellenlage dafür ist seit dem 2026-08-08 **komplett** (deutscher Teil von
-   DOC-BMA-SN044 vollständig geprüft) – die dreizehn Aufgaben können jetzt geschrieben
-   werden, parallel zur restlichen Seitenprüfung. Die Befehlssperre aus BLK-005 gilt
-   unverändert; Vorbild ist `content/tasks/sn-045-plus/de/03-anschluesse.json`.
+   DOC-BMA-SN044 vollständig geprüft) – die dreizehn fehlenden Dateien können jetzt
+   geschrieben und der vorhandene Platzhalter kann gefüllt werden. Die Befehlssperre aus
+   BLK-005 gilt unverändert; Vorbild ist
+   `content/tasks/sn-045-plus/de/03-anschluesse.json`.
 2. **Die Segment-Extraktion** als Grundlage für die Übersetzung (Status `extracted` statt
    `inspected`).
 3. **Der technische Review** aller sicherheitskritischen Werte. Der kann nicht im Pilot

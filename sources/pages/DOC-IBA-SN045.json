@@ -14276,115 +14276,449 @@
     },
     {
       "page": 233,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 8 av 22'. 'Tabell över driftlägen' mit 16 Zeilen 0 bis 9 und A bis F. Die Tabelle kombiniert Statusabruf, automatische Intervalle 15 Minuten, 60 Minuten, 6 Stunden und 24 Stunden, U1–U5, Geofencing über Pin 3, WiPro-Steuerung und manuellen Alarm. Stellung C nennt 90 Sekunden, D acht Minuten. Stellung F verweist für die GPS-Diagnose fälschlich auf 1.5.2 statt 1.5.3. Keine lesbare Textebene.",
+      "headings": ["Tabell över driftlägen"],
+      "technical_values": [
+        {
+          "value": "0–9, A–F",
+          "context": "16 Schalterstellungen",
+          "safety_critical": true
+        },
+        {
+          "value": "15 minuter; 60 minuter; 6 timmar; 24 timmar",
+          "context": "automatische Statusintervalle",
+          "safety_critical": true
+        },
+        {
+          "value": "90 sekunder; 8 minuter",
+          "context": "Intervalle der Stellungen C und D",
+          "safety_critical": true
+        },
+        {
+          "value": "> 6 V / < 5 V",
+          "context": "Schaltschwellen der Betriebsarten 8 und B",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Betriebsartentabelle für 16 Schalterstellungen und sechs Funktionsgruppen",
+          "has_headers": true,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die gesamte sicherheitsrelevante Betriebsartentabelle fehlt in der lesbaren Textebene.",
+        "Mehrzeilige, verbundene Zellen und willkürliche Wortumbrüche machen Gültigkeitsbereiche und Lesereihenfolge nur visuell erkennbar."
+      ],
+      "discrepancies": [
+        "Zeile F verweist auf 1.5.2; die GPS-Diagnose steht in 1.5.3. Schwedische Bestätigung des zweiten Fehlverweises aus DSC-040.",
+        "Stellung D nennt acht Minuten und stimmt damit mit allen SN-045-Parallelfassungen überein; der 8-Sekunden-Widerspruch betrifft nur die ältere englische Generation."
+      ],
+      "terminology_findings": [
+        "'Driftlägen' bezeichnet Betriebsarten; 'destinationsnummer' die Zielrufnummern."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; alle 16 Zeilen, Intervalle, Spannungsgrenzen und Verweis in Zeile F geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Struktur, Zahlen und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 234,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 9 av 22'. Abschnitt 1.4 'Ansluta modulen' nennt 12 V DC an Pins 1 und 8, 0–30 V an Pins 2 bis 5, Geofencing an Pin 3 sowie 12 V/500 mA an den Ausgängen 6 und 7. Höhere Lasten benötigen ein Fahrzeugrelais mit Freilaufdiode; Überlastung beendet die Garantie. Die Ausgänge schalten dauerhaft, eine Sekunde oder für eine gewählte Zeit; der rote Verweis auf 5.5 ist korrekt. 1.5 und 1.5.1 beginnen die optionale GPS-Antennenmontage; unter 15 °C ist die Klebefläche vorzuwärmen. Keine lesbare Textebene.",
+      "headings": [
+        "1.4 Ansluta modulen",
+        "1.5 GPS-antenn (extra tillbehör)",
+        "1.5.1 Montera GPS-antennen"
+      ],
+      "technical_values": [
+        {
+          "value": "12 V DC",
+          "context": "Versorgung an Pins 1 und 8",
+          "safety_critical": true
+        },
+        {
+          "value": "0–30 V",
+          "context": "Messeingänge Pins 2 bis 5",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V / 500 mA",
+          "context": "Belastungsgrenze der Ausgänge 6 und 7",
+          "safety_critical": true
+        },
+        {
+          "value": "15 °C",
+          "context": "Grenze zum Vorwärmen der Klebefläche",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto der GPS-Antenne mit magentafarben markierter Steckverbindung",
+          "has_text_equivalent": false,
+          "relies_on": "Foto, Farbe und Position"
+        }
+      ],
+      "warnings_found": [
+        "Ausgänge höchstens mit 500 mA belasten; für größere Lasten Relais mit Freilaufdiode verwenden.",
+        "Überlastung führt zum Garantieverlust."
+      ],
+      "accessibility_issues": [
+        "Pinwerte, Warnungen und Montagefolge fehlen in der lesbaren Textebene.",
+        "Die Steckverbindung wird im Foto nur durch magentafarbene Linien hervorgehoben; keine Alternativtexte."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'WiPro III-anslutningskabeln' bezeichnet das Verbindungskabel zur Alarmanlage."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; Pins, Spannungen, Ausgangsgrenze, Schaltarten und Antennenmontage geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; technische Werte und sichtbare Handlungsfolge dokumentiert."
     },
     {
       "page": 235,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "diagnose",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 10 av 22'. Abschnitte 1.5.2 und 1.5.3: Vor dem GPS-Antennenanschluss ist die Versorgung zu trennen; zum Speichern aktueller Satellitendaten müssen nach dem Einbau mindestens fünf Minuten mehr als 13,5 V anliegen. Stellung F diagnostiziert die Antenne: Rot nicht angeschlossen, Gelb blinkend keine gültige Position, Grün Einbauposition in Ordnung. Reflexionen in Hallen oder unter Dächern können Diebstahlfehlalarme auslösen. Der Text fordert deshalb ausdrücklich das Deaktivieren von Geofencing, nennt dafür aber den sichtbaren Befehl 'fence pa', den Kapitel 5.2 auf Seite 243 als Einschaltbefehl führt. Keine lesbare Textebene.",
+      "headings": ["1.5.2 Ansluta GPS-antennen", "1.5.3 Kontrollera GPS-antennens funktion"],
+      "technical_values": [
+        {
+          "value": "> 13,5 V i minst fem minuter",
+          "context": "Prüfbedingung nach GPS-Antennenmontage",
+          "safety_critical": true
+        },
+        {
+          "value": "F",
+          "context": "Schalterstellung der GPS-Diagnose",
+          "safety_critical": true
+        },
+        {
+          "value": "fence pa",
+          "context": "sichtbarer Befehl in einer ausdrücklichen Deaktivierungsanweisung; nur Quellenbeleg für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige GPS-Diagnose für rote, gelb blinkende und grüne Status-LED",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "Vor dem Antennenanschluss Pro-finder stromlos machen.",
+        "GPS-Reflexionen können Diebstahlfehlalarme auslösen."
+      ],
+      "accessibility_issues": [
+        "Diagnose, Warnungen und Befehl fehlen vollständig in der lesbaren Textebene.",
+        "Rot und Grün leuchten beide dauerhaft; diese beiden Diagnosezustände sind am Gerät ausschließlich über Farbe unterscheidbar."
+      ],
+      "discrepancies": [
+        "Sicherheitskritischer Selbstwiderspruch: Nach der ausdrücklichen Empfehlung, Geofencing zu deaktivieren, druckt die Quelle 'fence pa'. Kapitel 5.2 nennt 'fence pa' zum Einschalten und 'fence av' zum Ausschalten. Bei 600 dpi buchstabengetreu bestätigt; DSC-085/BLK-005.",
+        "Drei Benennungen für den Hauptkabelbaum im selben Abschnitt beziehungsweise Löschkapitel: 'huvudkabelhärvan', 'huvudledningsnätet' und auf Seite 239 'huvudkabelnätet'."
+      ],
+      "terminology_findings": [
+        "'fence pa' ist ASCII ohne schwedisches å; die Sprachbewertung ist offen, der Widerspruch Ein-/Ausschalten jedoch durch Kapitelvergleich eindeutig."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; Deaktivierungsanweisung und 'fence pa' zusätzlich als 600-dpi-Ausschnitt gesichert.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Befehlswortlaut ist ein Quellenzitat, keine Freigabe. Der Funktionswiderspruch folgt direkt aus den Seiten 235/243."
     },
     {
       "page": 236,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 11 av 22'. Kapitel 2, Abschnitt 2.1 'Konfigurera SIM-kort' verlangt Nano-SIM mit 2G/3G/4G, SMS, Telefonie und mobilen Daten; Multi-Provider-Karten sind ausgeschlossen, M2M wird empfohlen. PIN-Abfrage, Mailbox, Rufumleitungen und Komfortfunktionen sollen deaktiviert, Roaming aktiviert und auf iPhones iMessage ausgeschaltet werden. Prepaid-Karten müssen ohne Ausbau aufladbar sein. Abschnitt 2.2 beginnt den SIM-Einbau mit Foto und alleinstehendem ESD-Piktogramm. Keine lesbare Textebene.",
+      "headings": [
+        "2 Programmering och konfigurering",
+        "2.1 Konfigurera SIM-kort",
+        "2.2 Sätt i SIM-kortet i Pro-finder-modulen"
+      ],
+      "technical_values": [
+        {
+          "value": "Nano SIM",
+          "context": "erforderliches SIM-Format",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G (4G/LTE)",
+          "context": "erforderliche Netze und mobile Daten",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "SIM-Halter auf der Platine mit alleinstehendem ESD-Piktogramm",
+          "has_text_equivalent": false,
+          "relies_on": "Foto und Warnsymbol"
+        }
+      ],
+      "warnings_found": [
+        "Multi-Provider-SIM-Karten nicht verwenden.",
+        "iMessage auf iPhones deaktivieren.",
+        "ESD-Gefahr nur als Piktogramm."
+      ],
+      "accessibility_issues": [
+        "SIM-Anforderungen und vier Konfigurationsschritte fehlen in der lesbaren Textebene.",
+        "Warnblöcke sind nur durch Rot, Zentrierung und Linien ausgezeichnet; das ESD-Piktogramm besitzt keinen Begleittext."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "M2M und der Verweis auf eine FAQ werden ohne konkreten Link oder Erklärung genannt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; Netze, SIM-Typ, Ausschlüsse, vier Konfigurationsschritte und ESD-Zeichen geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; technische Anforderungen und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 237,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["sv", "en"],
+      "summary": "Intern 'Sida 12 av 22'. Abschnitte 2.3 bis 2.5: THITRONIK App über zwei QR-Codes aus App Store oder Google Play laden, Pro-finder aktivieren und seine Nummer im Adressbuch speichern. Nach dem Einschalten blinkt die Status-LED kurz rot, dann gelb-grün. Die App soll Schritte 2.5 bis 2.8 entbehrlich machen; ohne App ist die Programmier-SMS aus 2.8 zu verwenden. Der Fließtext empfiehlt den Namen 'ALARM', der rote Tipp direkt darunter 'AAlarm'. Für Schweden wird die Landesvorwahl +46 genannt. Keine lesbare Textebene und keine Linkannotation.",
+      "headings": [
+        "2.3 Ladda ner THITRONIK® App",
+        "2.4 Aktivera Pro-finder",
+        "2.5 Spara Pro-finder-numret"
+      ],
+      "technical_values": [
+        {
+          "value": "2.5–2.8",
+          "context": "laut Quelle bei App-Aktivierung entbehrliche Schritte",
+          "safety_critical": true
+        },
+        {
+          "value": "+46",
+          "context": "Landesvorwahlbeispiel für Schweden",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "QR-Codes und Plattformlogos für App Store und Google Play",
+          "has_text_equivalent": false,
+          "relies_on": "QR-Muster und Logos; keine sichtbaren URLs"
+        }
+      ],
+      "warnings_found": [
+        "Nummer mit Landesvorwahl speichern, damit sie aus dem Ausland erreichbar ist."
+      ],
+      "accessibility_issues": [
+        "QR-Ziele und Aktivierungsanweisungen fehlen in der lesbaren Textebene.",
+        "Die QR-Codes besitzen weder sichtbare URLs noch Linkannotationen.",
+        "Der Tipp ist nur durch rote Schrift, Zentrierung und Linien hervorgehoben."
+      ],
+      "discrepancies": [
+        "Fließtext 'ALARM' gegen Tipp 'AAlarm'; schwedische Bestätigung von DSC-016.",
+        "Die App soll 2.5 bis 2.8 ersetzen, obwohl 2.5 ein Adressbucheintrag am Telefon ist; schwedische Bestätigung von DSC-043.",
+        "Fehlendes Leerzeichen in 'kapitel 2.5 till 2.8utelämnas'."
+      ],
+      "terminology_findings": [
+        "'THITRONIK® App' wechselt in der Projektschreibweise zu 'THITRONIK App'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; QR-Codes, Aktivierung, LED-Folge, Namenswiderspruch und +46 geprüft; 0 Linkannotationen.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Struktur und zeichengetreue Einzelbefunde dokumentiert."
     },
     {
       "page": 238,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 13 av 22'. Abschnitt 2.6 erläutert SMS- und Anrufkosten. 2.7 unterscheidet bis zu zehn Zielrufnummern als Masternummer, berechtigte und unberechtigte Nummern. Abschnitt 2.8 beginnt die Syntaxgrafik einer Programmier-SMS: Erklärt werden Pluszeichen/Landesvorwahl und 'S' für Smartphone-Links. Die Grafik nennt +46 für Schweden, verwendet aber drei deutsche +49-Beispielnummern. Die sicherheitsrelevante Bedeutung des Minuszeichens ist weder hier noch in der Grafik erklärt. Keine lesbare Textebene.",
+      "headings": [
+        "2.6 Styra Pro-finder via SMS eller samtal",
+        "2.7 Olika destinationsnummer",
+        "2.8 Programmera destinationsnummer"
+      ],
+      "technical_values": [
+        {
+          "value": "10",
+          "context": "maximale Anzahl Zielrufnummern",
+          "safety_critical": true
+        },
+        {
+          "value": "+46",
+          "context": "Landesvorwahlbeispiel für Schweden im Diagramm",
+          "safety_critical": true
+        },
+        {
+          "value": "S",
+          "context": "Smartphone-Markierung der Programmier-SMS; nur Quellenbeleg für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige Rollenübersicht für Master-, berechtigte und unberechtigte Zielnummern",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Syntaxgrafik mit Linien zu Landesvorwahl, Smartphone-Markierung und drei Zielnummern",
+          "has_text_equivalent": true,
+          "relies_on": "visuelle Linienzuordnung; Bedeutung des Minuszeichens fehlt"
+        }
+      ],
+      "warnings_found": ["S nur verwenden, wenn das Endgerät ein Smartphone ist."],
+      "accessibility_issues": [
+        "Rollen, Syntaxgrafik und Beispiele fehlen in der lesbaren Textebene.",
+        "Die Zeichenbedeutung hängt an Linien, Farbe und Position; die Bedeutung des Minuszeichens fehlt vollständig."
+      ],
+      "discrepancies": [
+        "Lokalisierte Erläuterung '+46 för Sverige' steht neben drei deutschen +49-Beispielnummern.",
+        "Das Minuszeichen wird nicht erklärt; seine Berechtigungsfunktion wird erst aus der dritten Beispielzeile auf Seite 239 ableitbar. Schwedische Bestätigung von DSC-017/044 und BLK-006."
+      ],
+      "terminology_findings": [
+        "'Masternummer', 'behöriga nummer' und 'obehöriga nummer' bilden die drei Berechtigungsrollen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; Rollen, Syntaxzeichen, Linienzuordnung und Landesvorwahlen geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Syntax ist nur Quellenbeleg und wegen BLK-005/006 nicht zur Übernahme freigegeben."
     },
     {
       "page": 239,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 10,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 4,
+      "content_type": "anleitung",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 14 av 22'. Fortsetzung von 2.8 mit drei Programmier-SMS-Beispielen. Erst die dritte Zeile zeigt eine unberechtigte Nummer mit vorangestelltem Minuszeichen; eine ausdrückliche Regel fehlt. Abschnitt 2.9 'Radera destinationsnummer' beschreibt das Löschen aller Zielnummern: Nano-SIM muss eingesetzt sein, Hauptkabelnetz trennen, Betriebsartenschalter A auf E, wieder anschließen und auf gelb-grünes Blinken warten, danach zur Ausgangsstellung zurücksetzen. Nur vier lesbare Zeichen.",
+      "headings": ["Exempel på olika programmerings-SMS", "2.9 Radera destinationsnummer"],
+      "technical_values": [
+        {
+          "value": "-",
+          "context": "nur implizit aus dem dritten Beispiel ableitbare Markierung einer unberechtigten Nummer",
+          "safety_critical": true
+        },
+        {
+          "value": "E",
+          "context": "Schalterstellung zum Löschen des Nummernspeichers",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Drei Beispiele für Master-, berechtigte und unberechtigte Zielnummern",
+          "has_headers": true,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Rotes Warnpiktogramm mit Ausrufezeichen",
+          "has_text_equivalent": true,
+          "relies_on": "roter Begleittext; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": ["Nano-SIM muss zum Löschen in das Gerät eingesetzt sein."],
+      "accessibility_issues": [
+        "Beispieltabelle, Löschfolge und Warnung fehlen bis auf vier Zeichen in der lesbaren Textebene.",
+        "Die Berechtigungsregel für das Minuszeichen ist nur aus dem Tabellenvergleich erschließbar.",
+        "Warnung nur durch rotes Piktogramm, rote Schrift und Linien ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Die Steuerberechtigung hängt am nirgends erklärten Minuszeichen; schwedische Bestätigung von DSC-017/044 und BLK-006.",
+        "Der Hauptkabelbaum heißt hier 'huvudkabelnätet', auf Seite 235 dagegen 'huvudkabelhärvan' und 'huvudledningsnätet'."
+      ],
+      "terminology_findings": [
+        "Drei schwedische Benennungen für denselben Hauptkabelbaum verhindern einen stabilen Bedienanker."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; drei Beispiele, Minuszeichen, Warnung und vierstufige Löschfolge geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; sichtbare Rollen- und Terminologieunterschiede dokumentiert."
     },
     {
       "page": 240,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["sv"],
+      "summary": "Intern 'Sida 15 av 22'. Kapitel 3 'Driftlägen (status-LED)' zeigt neun farbige Leucht- und Blinkmuster: Netzsuche, Modemverbindung, fehlende/defekte SIM, aktive PIN-Abfrage, nicht gesendete SMS, SMS-Verkehr und Netzregistrierung mit oder ohne Zielnummern. Das letzte Muster blinkt grün und wird als Normalbetrieb bestätigt. Anders als im polnischen Teil sind Zustand 8 und 9 textlich getrennt und stimmen mit den Farben überein. Keine lesbare Textebene.",
+      "headings": ["3 Driftlägen (status-LED)"],
+      "technical_values": [
+        {
+          "value": "9",
+          "context": "Anzahl dargestellter LED-Zustände",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Neun LED-Muster mit farbigen Linien und textlichen Zustandsbeschreibungen",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Farbige Dauer- und Strichlinien für die neun LED-Zustände",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe und Strichrhythmus; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": [
+        "Nach Installation und Programmierung blinkt die Status-LED im Normalbetrieb grün."
+      ],
+      "accessibility_issues": [
+        "Die gesamte LED-Tabelle fehlt in der lesbaren Textebene.",
+        "Mehrere Zustände unterscheiden sich innerhalb derselben Blinkart wesentlich durch Rot, Gelb und Grün; die Geräteanzeige besitzt kein dokumentiertes farbunabhängiges Merkmal."
+      ],
+      "discrepancies": [
+        "Die Tabelle verwendet 'larmnummer' für Zielrufnummern, Kapitel 2 dagegen durchgehend 'destinationsnummer'.",
+        "Die GPS-Diagnose auf Seite 235 belegt dieselben drei Farben mit anderen Bedeutungen; schwedische Bestätigung von DSC-047."
+      ],
+      "terminology_findings": [
+        "'larmnummer' und 'destinationsnummer' bezeichnen im selben Sprachblock dieselben gespeicherten Empfänger."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 150 dpi; alle neun Linienmuster, Beschreibungen und Normalbetriebshinweis geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Farben, Muster und Terminologievergleich dokumentiert."
     },
     {
       "page": 241,
@@ -15022,17 +15356,100 @@
     },
     {
       "page": 247,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "rechtliches",
+      "languages": ["sv", "en", "de"],
+      "summary": "Intern 'Sida 22 av 22', letzte Seite des schwedischen Teils und des gesamten PDFs. Kapitel 6 enthält technische Daten mit 9–30 V, ca. 37 mA Netzsuche, ca. 16–21 mA Normalbetrieb, 2G/3G/4G (LTE), zehn Zielnummern, GPS/QZSS, zwei Ausgängen 12 V/500 mA, −10 bis +80 °C und Nano-SIM. Abschnitt 6.2 zeigt WEEE-Entsorgung, 6.3 CE und Richtlinie 2014/53/EU, 6.4 Support. Konformitäts- und Supportpfade führen auf englische '/en/'-Seiten; genannt werden +49 4351 76744-112 und kontakt@thitronik.de. Keine lesbare Textebene und keine Linkannotation.",
+      "headings": [
+        "6 Övrigt",
+        "6.1 Tekniska data",
+        "6.2 Instruktioner för avfallshantering",
+        "6.3 Överensstämmelse/Direktiv",
+        "6.4 Teknisk support"
+      ],
+      "technical_values": [
+        {
+          "value": "9–30 V",
+          "context": "Strömförsörjning",
+          "safety_critical": true
+        },
+        {
+          "value": "ca 37 mA; ca. 16–21 mA",
+          "context": "Netzsuche beziehungsweise Normalbetrieb",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G (LTE)",
+          "context": "Übertragungsstandards mit Bandlisten",
+          "safety_critical": true
+        },
+        {
+          "value": "10",
+          "context": "Anzahl Zielrufnummern",
+          "safety_critical": true
+        },
+        {
+          "value": "GPS/QZSS",
+          "context": "Schnittstellen beziehungsweise Satellitensysteme",
+          "safety_critical": true
+        },
+        {
+          "value": "2 x 12 V/500 mA",
+          "context": "Ausgänge",
+          "safety_critical": true
+        },
+        {
+          "value": "-10 till +80 °C",
+          "context": "Temperaturbereich",
+          "safety_critical": true
+        },
+        {
+          "value": "Nano SIM",
+          "context": "SIM-Format",
+          "safety_critical": true
+        },
+        {
+          "value": "2014/53/EU",
+          "context": "genannte Funkanlagenrichtlinie",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Liste der technischen Daten",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "WEEE-Piktogramm und CE-Zeichen",
+          "has_text_equivalent": true,
+          "relies_on": "sichtbarer Begleittext; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": [
+        "Elektrogerät nicht im Hausmüll entsorgen; kommunale Sammelstellen nutzen."
+      ],
+      "accessibility_issues": [
+        "Technische Daten, Entsorgung, Konformität und Support fehlen vollständig in der lesbaren Textebene.",
+        "WEEE- und CE-Symbole besitzen keine PDF-Alternativtexte.",
+        "Drei blau unterstrichene Web-/E-Mail-Adressen sehen interaktiv aus, besitzen aber keine Linkannotation."
+      ],
+      "discrepancies": [
+        "Schwedische Fassung verweist für Konformität und Support auf englische Pfade '/en/support/downloads' und '/en'.",
+        "Uneinheitliche Einheitensetzung innerhalb der technischen Daten: 'ca 37 mA', aber 'ca. 16–21mA' ohne Leerzeichen vor mA; '9–30 V' mit, '2 x 12 V/500 mA' teilweise ohne Leerzeichen."
+      ],
+      "terminology_findings": [
+        "Firmenname im Konformitätstext 'Thitronik GmbH', Markenname im Support 'THITRONIK® appen'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 29, 2026-08-09, PNG-Rendering 200 dpi; Seitenzählung, technische Werte, Richtlinie, Supportpfade und objektbezogen 0 Linkannotationen geprüft.",
+      "language_note": "Schwedisch nicht muttersprachlich beurteilbar; Struktur, Werte und sichtbare Einzelbefunde dokumentiert."
     }
   ]
 }

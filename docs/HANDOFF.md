@@ -1,70 +1,66 @@
 # Handoff
 
-Stand: 2026-08-09 (achte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-09 (neunte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-### Seitenprüfung: 293 → 314 von 323
+### PDF-Seitenprüfung: 314 → 323 von 323
 
-- **DOC-IBA-SN045, Seiten 200–220:** einundzwanzig neue polnische Records. Zusammen mit
-  dem bereits geprüften Deckblatt 199 und den Schlussseiten 221–224 ist der polnische
-  Sprachblock vollständig.
-- DOC-IBA-SN045 steht damit bei **238 von 247 Seiten**. Alle neuen Records wurden mit
-  `scripts/merge-page-records.mjs` gegen Seitenmaße und lesbare Zeichenzahlen der
-  Original-PDF geprüft. Jeder Record bleibt auf `inspected`, nicht `validated`.
-- Der Gesamtstand ist **314 von 323 Seiten**. Offen sind ausschließlich die schwedischen
-  Seiten 233–240 und 247.
+- **DOC-IBA-SN045, Seiten 233–240 und 247:** neun neue schwedische Records. Damit steht
+  das Dokument bei **247 von 247**, DOC-BMA-SN044 bei **72 von 72** und der gesamte
+  Seitenbestand bei **323 von 323** visuell geprüften Seiten (`inspected`).
+- Alle neun Records wurden mit `scripts/merge-page-records.mjs` gegen Seitenmaße und
+  lesbare Zeichenzahlen der Original-PDF geprüft. Schwedisch wurde nicht
+  muttersprachlich freigegeben; jeder Record trägt eine entsprechende `language_note`.
+- Der schwedische Teil umfasst regulär 22 interne Seiten und endet auf PDF-Seite 247 mit
+  „Sida 22 av 22“. Anders als FR, ES, NL und PL besitzt er keinen Fehler der internen
+  Seitenzählung (DSC-021).
 
-### Polnischer Sprachblock abgeschlossen
+### Schwedischer Sprachblock abgeschlossen
 
-1. Der Teil umfasst tatsächlich **25 statt 24 interne Seiten**. PDF-Seite 216 enthält
-   nur das isolierte Fragment „Programowanie numerów miejsc docelowych.". Diese Zusatzseite
-   verschiebt Kapitel 3 bis 6; die Schlussseite 224 trägt „Strona 25 z 24" (DSC-021).
-2. Die deutsche Bildbeschriftung „GPS-Antenne (Optional)", das unerklärte rote X, beide
-   falschen Querverweise, die implizite Minus-Regel und `ALARM`/`AAlarm` stehen auch
-   polnisch. Die Vorlagenbefunde sind damit in allen neun vollständig geprüften
-   SN-045-Fassungen belegt (DSC-016/017/022/040/044).
-3. Polen bildet das neunte Befehlsprofil: Die Diagnose nennt
-   `ogrodzenie wyłączone`, Kapitel 5 `fence off`; Status, Position, Ausgänge und
-   Anlernmodus verwenden englische Kapitelbefehle. Die englische Hilfe-SMS listet dagegen
-   nur `ARM`/`DISARM`/`STATUS`/`POS`. Alle Angaben bleiben reine Quellenzitate unter
-   BLK-005.
-4. Die LED-Tabelle dupliziert für Zustand 9 die Beschreibung von Zustand 8: Der Text nennt
-   erneut gelb-grünes Blinken und fehlende Zielnummern, obwohl die Grafik nur grün blinkt
-   und der Schluss-Hinweis Grün als Normalbetrieb bezeichnet. Zusammen mit `stuku 3`
-   gegen `styku 3` und `wuczeniu`/`wuczania` gegen `uczenia` ist das als DSC-084 erfasst.
-5. Die polnischen Meldungsseiten 218/219 besitzen trotz acht blau unterstrichener
-   Kartenadressen **null** Linkannotationen. Damit sind neunzehn nichtdeutsche
-   Meldungsseiten in EN/FR/CS/DA/ES/IT/NL/PL inert; die bekannte deutsche Seite mit
-   doppelten Annotationen bleibt die einzige Ausnahme (DSC-082).
-6. Ein früherer niederländischer Seitenrecord wurde berichtigt: Die feste
-   Zwei-Meter-Antennenleitung ist keine Abweichung vom deutschen SN-045-Master; auch der
-   deutsche Text schreibt wörtlich, dass die Kabellänge zwei Meter beträgt.
+1. Die gemeinsame deutsche Bildbeschriftung „GPS-Antenne (Optional)“, das unerklärte
+   rote X, `ALARM` gegen `AAlarm`, die implizite Minus-Regel sowie beide falschen
+   Querverweise stehen auch schwedisch. DSC-016/017/022/040/041/043/044/046/047 sind um
+   die Belege ergänzt; die Vorlagenfehler sind damit in allen zehn SN-045-Fassungen
+   geprüft.
+2. **DSC-085 neu:** Seite 235 fordert zum Deaktivieren des Geofencings `fence pa`.
+   Abschnitt 5.2 auf Seite 243 definiert dieselbe Zeichenfolge als Einschaltbefehl und
+   `fence av` als Ausschaltbefehl. Der entscheidende Wortlaut wurde zusätzlich bei
+   600 dpi geprüft. Keine Zeichenfolge wird wegen BLK-005 in den Content-Layer
+   übernommen.
+3. Schwedisch bildet das zehnte Befehlsprofil: `status`, `position`, `a pa`, `a av`,
+   `a impuls`, `a %min%`, `inlarningslage pa`; die Hilfe-SMS nennt dagegen
+   `SKARP`/`OSKARP`/`STATUS`/`POS`. Diese Texte stehen ausschließlich als Quellenzitate
+   in Register und Synthese.
+4. Die Meldungsseiten 241/242 besitzen trotz acht blau unterstrichener Kartenadressen
+   **null** Linkannotationen. Damit sind alle 21 nichtdeutschen Meldungsseiten in
+   EN/FR/CS/DA/ES/IT/NL/PL/SV inert; nur die deutsche Seite 20 besitzt Annotationen,
+   dort doppelt (DSC-082).
+5. Die Schlussseite bestätigt 9–30 V, ca. 37 mA Netzsuche, ca. 16–21 mA Normalbetrieb,
+   Nano-SIM, zwei Ausgänge mit je 12 V/500 mA und 2014/53/EU. Supportpfade zeigen auch im
+   schwedischen Teil auf `/en/`; sichtbare URLs besitzen keine Linkannotation.
 
-### Synthese und Register erweitert
+### Synthese und Register abgeschlossen
 
-- Die erste Synthese-Auswertung in `DISCREPANCIES.md` vergleicht jetzt neun vollständig
-  geprüfte Sprachfassungen ab SN-045 (DE, EN, FR, CS, DA, ES, IT, NL, PL) mit den vier
-  älteren Fassungen und der älteren Geräte-Hilfe-SMS. Neun Fassungen ergeben neun
-  unterschiedliche, teils intern widersprüchliche Profile.
-- DSC-016, DSC-017, DSC-021, DSC-022, DSC-033, DSC-040, DSC-041, DSC-044, DSC-046,
-  DSC-047 und DSC-082 sind um die polnischen Belege erweitert.
-- **DSC-084 neu:** polnische Widersprüche am LED-Normalbetrieb, Anschlusswort und
-  Anlernmodus. Der Fund steht unter „Laufend ergänzt" in den Rückfragen; es wurde keine
-  achtzehnte Frage eröffnet.
+- Die erste Synthese-Auswertung in `DISCREPANCIES.md` vergleicht jetzt alle zehn
+  vollständig geprüften SN-045-Sprachfassungen mit den vier älteren Fassungen und der
+  älteren Geräte-Hilfe-SMS. Ergebnis: **zehn Sprachen ergeben zehn unterschiedliche,
+  teils intern widersprüchliche Profile**; `a %min%` ist die einzige in allen zehn
+  SN-045-Fassungen gleiche Kapitelzeichenfolge.
+- DSC-085 ist die höchste Registernummer. Er wurde in Rückfrage 1 und unter „Laufend
+  ergänzt“ aufgenommen; es wurde keine achtzehnte Frage eröffnet.
+- Registerstand: weiterhin **siebzehn Fragen und sieben Blocker**; nichts still gelöst.
 
-Registerstand: DSC-084 neu; weiterhin siebzehn Fragen und sieben Blocker; nichts still
-gelöst.
+## Was weiterhin offen ist
 
-## Was in dieser Sitzung nicht erledigt wurde
-
-- **9 Seiten von DOC-IBA-SN045** sind noch `not_started`: 233–240 und 247.
-- Die dreizehn fehlenden Aufgaben der Generation bis SN-044 sind weiterhin nicht
-  geschrieben; die deutsche Quellenlage ist vollständig.
+- Die Generation bis SN-044 besitzt nur den Platzhalter
+  `content/tasks/sn-001-044/de/07-status-led.json`; die übrigen dreizehn Aufgabendateien
+  fehlen. Die deutschen Quellseiten sind vollständig geprüft und können jetzt ohne
+  THITRONIK-Antworten extrahiert werden.
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
-- Die 21 neuen Seitenrecords haben keine unabhängige Gegenprüfung; die polnischen Records
-  tragen eine `language_note`.
+- Die neuen Seitenrecords besitzen keine unabhängige Gegenprüfung; tragende Einzelwerte
+  wurden hochauflösend gesichert, der Status bleibt trotzdem `inspected`.
 - Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
 
 ## Externe/menschliche Blocker
@@ -80,56 +76,53 @@ gelöst.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045 200–220.
-- **Gesamtstand:** 314 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
-  DOC-IBA-SN045 238/247.
+- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045 233–240 und 247.
+- **Gesamtstand:** 323 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
+  DOC-IBA-SN045 247/247 und beide Kurzanleitungen je 2/2.
 - **Segmente:** keine neuen; alle neuen Seiten bleiben `inspected`.
 - **Aufgaben:** keine geändert; alle vierzehn deutschen SN-045-Aufgaben auf `entwurf`.
-- **Geänderte Bereiche:** Seitenrecords, Diskrepanzregister, Rückfragen, Fortschritts- und
-  Übergabedokumentation. Kein Anwendungscode und kein Content-Layer geändert.
+- **Geänderte Bereiche:** Seitenrecords, Diskrepanzregister, Rückfragen, Synthese,
+  Fortschritts- und Übergabedokumentation. Kein Anwendungscode geändert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
   `npm run format` → `npm run check` vollständig grün.
 - **Referenz-Repository:** sauber; Push-URL `DISABLED`.
 
 ```text
 Resume from:
-Dokument DOC-IBA-SN045, PDF-Seite 233, Segment –, Sprache sv.
+content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json, deutsche Quellenlage
+DOC-BMA-SN044 Seiten 1–19 und beide Kurzanleitungen vollständig geprüft.
 
 First action:
-DOC-IBA-SN045 Seiten 233–240 als letzten schwedischen Hauptbatch prüfen. Das Deckblatt
-225, Inhaltsverzeichnis 226/227, Haftung 228, Lieferumfang 229, Montage 230, Anschlüsse
-231, Betriebsarten 232 sowie die Schlusskapitel 241–246 sind bereits geprüft. Rendern mit:
+Die erste vollständige Aufgabe der Generation bis SN-044 erstellen:
+content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json. Als strukturelles
+Vorbild content/tasks/sn-045-plus/de/01-geraetegeneration-bestimmen.json verwenden, aber
+keine technischen Aussagen der neueren Generation übernehmen.
 
-python scripts/render-pdf-pages.py sources/pdf/pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf 233 240 tmp/pdfs/iba-sn045-233-240 150
+Vor dem Schreiben die einschlägigen Seiten selbst rendern und lesen: mindestens
+DOC-BMA-SN044 Seiten 1–3 und 18–19 sowie DOC-KA-SN044 Seiten 1–2; für die dokumentierte
+Grenze und die ungeklärte Leseregel zusätzlich die bereits geprüften Fundstellen
+DOC-IBA-SN045 Seiten 2, 6 und 25 heranziehen. Transparent festhalten: Die älteren
+Dokumente tragen selbst keinen Seriennummernbereich; die Grenze „ab -045“ stammt aus der
+neueren Fassung, und die Quelle erklärt weder Fundort am Gerät noch zu vergleichenden
+Nummernteil. Nicht raten, sondern auf Fachhändler/Support verweisen und DSC-023 beachten.
 
-Jede Seite visuell prüfen; Schwedisch nicht muttersprachlich freigeben, sondern Struktur,
-Werte, Terminologie und auffällige Einzelbefunde dokumentieren. Inhaltlich gegen die neun
-vollständig geprüften Parallelfassungen halten:
-1. Seite 233: Betriebsartentabelle – Stellung D, Intervalle, Spannungsgrenzen, Verweis
-   1.5.2/1.5.3 und Tabellenlesbarkeit gegen DSC-040 halten.
-2. Seiten 234–235: Modulanschluss, GPS-Antenne und Diagnose – 12 V/500 mA, 15 °C,
-   13,5 V/fünf Minuten, LED-Farben, Reflexionswarnung und schwedisches
-   Geofencing-Ausschaltwort gegen DSC-033/047 halten.
-3. Seiten 236–238: SIM-Konfiguration, Einsetzen, App/Aktivierung, Adressbuch und Rollen –
-   Nano-SIM, 2G/3G/4G, M2M/Prepaid, PIN/Mailbox/Roaming/iMessage, QR-/ESD-Zugang,
-   ALARM/AAlarm und zehn Zielnummern prüfen.
-4. Seiten 239–240: Programmier-SMS-Syntax und Löschen – Landesvorwahl gegen die
-   Beispielnummern, unerklärtes Minuszeichen (BLK-006), Schalterstellung E,
-   Hauptkabelbaum, LED-Abbruchbedingung und Seitenumbruch prüfen.
+Jede Aussage braucht Dokument, PDF-Seite und Seitenregion. Die Datei bleibt auf
+review_status „entwurf“, placeholder false. Anschließend gegen die Quellen gegenprüfen
+und content:check laufen lassen.
 
-Danach ohne Warten PDF-Seite 247 prüfen. Sie ist die letzte Seite des schwedischen Teils
-und des gesamten Dokuments: interne Seitenzählung, technische Daten, 2014/53/EU,
-Entsorgung, Supportpfade, Telefonnummer/E-Mail, Linkannotationen und Impressums-/
-Schlusslayout gegen die neun Parallelfassungen halten. Anschließend Seitenprüfung auf
-323/323, Synthese auf zehn SN-045-Profile und Register/Rückfragen abschließen.
+Danach ohne Warten die Aufgaben 02-montageort bis 06-zielrufnummern und 08-meldungen bis
+14-support erstellen sowie den vorhandenen Platzhalter 07-status-led füllen. Die
+deutschen DOC-BMA-SN044-Seiten 3–18 bilden dafür den Hauptkorpus; jede zugewiesene Seite
+vor der Extraktion selbst rendern. Vorbild für das vollständige Schema ist
+content/tasks/sn-045-plus/de/03-anschluesse.json.
 
-Keine Rufnummer, Kartenadresse oder SMS-Befehlszeichenfolge in den Content-Layer
-übernehmen. BLK-005 und BLK-006 gelten unverändert.
-
-Parallel möglich: die dreizehn fehlenden Aufgaben der Generation bis SN-044 – deutsche
-Quellenlage komplett, Vorbild content/tasks/sn-045-plus/de/03-anschluesse.json,
-Befehlssperre BLK-005, kein D-Intervall (Frage 16), kein Radius (Frage 14), keine
-Meldungs-Stichwörter (Frage 17).
+BLK-005 strikt einhalten: keine SMS-Befehlszeichenfolge in goal, prerequisites,
+warnings, steps, expected_result, error_cases oder tables_md. Befehle dürfen nur in
+change_reason beziehungsweise figures[].source.note die Auslassung belegen. Ebenfalls
+kein Betriebsart-D-Intervall (Rückfrage 16), kein Geofencing-Radius (Rückfrage 14) und
+keine lokalisierten Meldungs-Stichwörter (Rückfrage 17) als belastbare Anleitung
+ausgeben. BLK-006 bei Zielrufnummern beachten. SN-044 und SN-045 außerhalb der
+Generationsentscheidung nicht vermischen.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthält siebzehn entscheidungsreife Fragen; nicht auf Antworten
