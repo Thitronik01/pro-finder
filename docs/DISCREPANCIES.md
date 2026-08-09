@@ -873,10 +873,12 @@ belegt, nicht aus einer Zusammenfassung.
   zutreffend übernommen. Die Fehler liegen also in der Vorlage, nicht in einer
   Sprachfassung; jede weitere Sprachfassung dieses Dokuments wird sie erwartbar ebenfalls
   enthalten.
-- **Nachtrag 2026-08-09 (französischer Teil):** Erwartung eingetreten – der erste
-  betroffene Verweis des französischen Teils steht ebenfalls falsch: „(voir 2.5)" für den
-  Kartenlink auf Seite 45 (gemeint ist 2.6). Die übrigen drei Verweisstellen liegen auf
-  den noch ungeprüften Seiten 48–51.
+- **Nachtrag 2026-08-09 (französischer Teil, abgeschlossen):** Alle vier falschen
+  Querverweise stehen auch französisch – „(voir 2.5)" auf Seite 45, „comme décrit sous
+  2.3" auf Seite 47, „comme décrit sous 2.4" auf Seite 48 und „Le chapitre 2.6 explique
+  comment retrouver votre véhicule" auf Seite 50. Damit sind die vier Vorlagenfehler in
+  **allen drei geprüften Sprachteilen** wortgleich nachgewiesen; die zutreffenden
+  Verweise treffen ebenfalls überall zu.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-056 – Die Steuerberechtigung hängt auch bis SN-044 an einem nirgends erklärten Zeichen (bis SN-044)
@@ -1241,6 +1243,16 @@ belegt, nicht aus einer Zusammenfassung.
   gardiennage", DSC-033) – **derselbe Befehl hat sich innerhalb einer Sprache zwischen den
   Generationen geändert**, sogar in der Wortstellung (Substantiv+Partizip gegen
   Infinitiv+Artikel).
+- **Nachtrag 2026-08-09 (französischer SN-044-Befehlssatz vollständig, Seiten 49–51):**
+  `arme`, `desarme`, `alarm` (unübersetzt, ohne e), `gardiennage active`,
+  `gardiennage desactive`, `Statut`, `Pos`, `A active`, `A desactivee`, `A impulsion`,
+  `A XXX`. Bemerkenswert: **`Statut` weicht um einen Buchstaben von `Status`/`STATUS`
+  ab** – der einzige bisher gefundene Fall, in dem sich der Statusbefehl zwischen
+  Sprachfassungen unterscheidet; und das Ausgangspaar ist asymmetrisch geschrieben
+  (`A active` ohne, `A desactivee` mit doppeltem e). Kein französischer Befehl steht in
+  der Geräteliste; die Schaltbefehle `arme`/`desarme` widersprechen dem abgebildeten
+  `SCHARF`/`UNSCHARF` – dritter Sprachteil mit dem spiegelbildlichen
+  Handbuch-gegen-Gerät-Widerspruch (DSC-054).
 - **Schwere:** hoch (sicherheitsrelevanter Befehl) · **Status:** offen – gehört zu
   BLK-005; Nachtrag zu Rückfrage 1
 
@@ -1366,6 +1378,11 @@ belegt, nicht aus einer Zusammenfassung.
   übernimmt Konformitätsangaben grundsätzlich nur aus der jeweils zutreffenden
   Generationsquelle und für diese Generation nur aus der deutschen Fassung – die englische
   ist hier nachweislich fehlerhaft.
+- **Nachtrag 2026-08-09 (französischer Teil):** Der Abschnitt 3.2 des französischen Teils
+  (Seite 53) ist **gar nicht übersetzt** – er übernimmt wortgleich den englischen Text
+  einschließlich der „directive 1995/5/EG" (bei 400 dpi gesichert). Damit tragen zwei von
+  drei Sprachteilen die falsche Jahreszahl, und ein französischer Leser erhält die
+  rechtliche Erklärung in einer Fremdsprache.
 - **Schwere:** mittel · **Status:** offen – redaktioneller Befund mit rechtlichem Bezug
 
 ### DSC-072 – Der englische Teil verwendet unverändert die deutschen Abbildungen (bis SN-044)
@@ -1388,12 +1405,15 @@ belegt, nicht aus einer Zusammenfassung.
   Ob die Gerätetexte bis SN-044 in allen Sprachen deutsch sind, ist eine eigene Frage an
   THITRONIK (Rückfrage 17) – sie entscheidet, welche Erkennungsstichwörter eine
   englischsprachige Anleitung dieser Generation nennen müsste.
+- **Nachtrag 2026-08-09 (französischer Teil):** Dasselbe Muster – die Seiten 47, 48 und
+  52 verwenden unverändert die deutschen Beispiel-SMS-Bilder und Bildschirmfotos. Alle
+  drei geprüften Sprachteile teilen sich denselben deutschen Bildbestand.
 - **Schwere:** hoch (Meldungen sind ohne die abgebildeten Stichwörter nicht zuzuordnen) ·
   **Status:** offen – Rückfrage 17
 
 ### DSC-073 – Sinnverändernde Übersetzungsfehler im französischen Teil (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, französische Seiten 38 bis 44
+- **Dokument:** DOC-BMA-SN044, französische Seiten 38 bis 52
 - **Befund:** Anders als die redaktionellen Sammelpositionen verändern diese Stellen die
   **Aussage**:
   - Seite 38: „la longueur du câble … **est de 2m**" – aus der Obergrenze (DE „darf 2m
@@ -1420,6 +1440,18 @@ belegt, nicht aus einer Zusammenfassung.
     pas possible avec ce. De Pro-finder SN 0686-010 …") – fehlende Verneinung, hängendes
     „ce", kalkierte Präposition; er liest sich wie eine unlektorierte maschinelle
     Übersetzung mitten in einem sonst idiomatischen Text.
+  - Seite 47: Der rote 160-Zeichen-Hinweis samt POS-Anweisung **fehlt ersatzlos** – die
+    einzige Erklärung dafür, dass das Guthabenfeld in langen Meldungen entfallen kann.
+  - Seite 48: „SMS d'aide" ist sinnverkehrt – „Quand un numéro favori reçoit un SMS dont
+    le contenu n'est pas valide, **il** renvoie ce message" macht die Zielrufnummer zum
+    Empfänger des ungültigen Inhalts und zum Absender der Hilfe; tatsächlich empfängt das
+    **Gerät** den ungültigen Inhalt und antwortet. Ebenfalls Seite 48: Der Hinweis, dass
+    die Positions-SMS bei Programmierung nach 1.8 das Guthaben enthält, fehlt.
+  - Seite 49: „Seuls, les numéros autorisés peuvent **appeler** le Pro-finder" – verengt
+    die allgemeine Zugriffsbeschränkung der anderen Fassungen auf das Anrufen.
+  - Seite 52: „**Comme** dans le cas d'une alarme, l'alternateur étant actif, la position
+    est interrogée en permanence" – aus der Begründung („Da bei einem Alarm …") wird ein
+    schiefer Vergleich („Wie im Fall eines Alarms …").
 - **Warum das zählt:** Für den Übersetzungsworkflow des Piloten bestätigt das die Regel,
   dass der geprüfte deutsche Master die einzige Quelle ist. Die französische Fassung
   dieser Generation ist an mehreren funktionsrelevanten Stellen keine zuverlässige
@@ -1443,10 +1475,10 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-075 – Die Kopfzeilen des französischen Teils werden vom grauen Balken verdeckt (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, französische Seiten 37 bis 46 (geprüfter Bereich; der Rest
-  des Sprachteils ist beim Prüfen der Seiten 47–53 zu bestätigen)
-- **Beleg:** Auf allen zehn geprüften Seiten ist der graue Kopfzeilenbalken visuell leer
-  (150 und 300 dpi). Die Kopfzeilentexte („Manuel Pro-finder", „Page n") stehen als
+- **Dokument:** DOC-BMA-SN044, französische Seiten 37 bis 53 (**vollständiger
+  Sprachteil**; am 2026-08-09 auch für die Seiten 47–53 bestätigt)
+- **Beleg:** Auf allen siebzehn geprüften Seiten ist der graue Kopfzeilenbalken visuell
+  leer (150 und 300 dpi). Die Kopfzeilentexte („Manuel Pro-finder", „Page n") stehen als
   weißer Text an der korrekten Position in der Textebene. Maschinell nachgewiesen: Auf
   PDF-Seite 40 haben die Kopfzeilen-Textspans die Zeichenreihenfolge 406–408 und das
   graue Balkenrechteck die 409 – **der Balken wird nach dem Text gezeichnet und verdeckt
@@ -1504,6 +1536,51 @@ belegt, nicht aus einer Zusammenfassung.
     prépayés) pour le crédit, retirez des documents …" – Kongruenz und Syntax); „Comme
     vous aussi devez pouvoir trouver …" – Wortstellung.
   - Seite 45: „1er/2ème/3ème" – uneinheitliche Ordinalschreibung (üblich: 2e/3e).
+  - Seite 47: „11,2V" ohne gegen „12,5 V" mit Leerzeichen im selben Absatz; „texto" in
+    den roten Hinweisen gegen „SMS" im Fließtext; „le numéro central" (S. 47/48) gegen
+    „Numéro master" (S. 44/45) – zwei Benennungen der Masternummer.
+  - Seite 49: überflüssiges Komma („Seuls, les numéros …"); „message d'état" gegen
+    „compte-rendu d'état".
+  - Seite 50: Überschrift „Géofencing" mit Akzent gegen „Geofencing" im Sommaire;
+    «gardiennage desactive» ohne gegen « gardiennage desactive » mit
+    Guillemet-Leerzeichen (S. 42).
+  - Seite 52: **beide** Richtungsdreiecke der Bildunterschrift zeigen nach oben – das
+    zweite müsste wie in DE/EN abwärts auf das Smartphone-Foto zeigen; „Après que le vol
+    ait été signalé" – Subjonctif nach „après que".
+  - Seite 53: „de 9.00 à 16.00 **heure**" – Singular; „Carte SIM:" ohne Leerzeichen vor
+    dem Doppelpunkt als einzige Datenzeile; „Mhz" aus der deutschen Fassung übernommen
+    (die englische hatte korrekt „MHz").
   - Terminologie: „gardiennage" (Befehl), „géofencing" und „geofencing" (Fließtext) –
-    drei Formen für dieselbe Funktion im selben Sprachteil.
+    drei Formen für dieselbe Funktion im selben Sprachteil; „programme de cartographie"
+    gegen „logiciel de cartographie".
 - **Schwere:** gering · **Status:** offen – gesammelt für den muttersprachlichen Review
+
+### DSC-078 – Der französische Teil nennt 1500 m als Geofencing-Radius – dritter Wert für dieselbe Größe (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, französische Seiten 47 und 50; Vergleich mit den deutschen
+  Seiten 12/15, der englischen Seite 30/33 und der Fassung ab SN-045
+- **Beleg:** Seite 47: „Vous recevez ce message si votre véhicule se trouve **à plus de
+  1500 m** de son lieu d'origine" · Seite 50: „dès que le véhicule s'écarte **d'environ
+  1,5 km** de sa position d'origine" – beide bei 400 dpi gesichert, innerhalb des
+  französischen Teils konsistent.
+- **Befund:** Für denselben Auslöseradius der Diebstahlmeldung kursieren jetzt **drei
+  Werte**:
+
+  | Quelle                       | Radius              |
+  | ---------------------------- | ------------------- |
+  | bis SN-044, Deutsch/Englisch | ca. 1000 m / 1 km   |
+  | bis SN-044, **Französisch**  | **1500 m / 1,5 km** |
+  | ab SN-045 (DE/EN/FR)         | rund 900 m          |
+
+  Anders als bei den bisherigen Übersetzungsfehlern des französischen Teils (DSC-073) ist
+  hier ein **technischer Zahlenwert** verändert – die Differenz beträgt 50 Prozent. Ob
+  1500 eine Fehlübersetzung, ein Tippfehler (aus 1000) oder ein tatsächlich anderer
+  Auslegungswert ist, lässt sich aus den Quellen nicht entscheiden.
+
+- **Warum das zählt:** Der Radius bestimmt, ab welcher Entfernung ein gestohlenes
+  Fahrzeug gemeldet wird. Ein französischsprachiger Nutzer rechnet mit 50 Prozent mehr
+  Spielraum als ein deutscher – bei einem Sicherheitsprodukt ist das keine Stilfrage.
+  Der Wert gehört zusätzlich zu Rückfrage 14 (Geofencing-Radius je Generation), die damit
+  um die Dimension „je Sprachfassung" erweitert ist.
+- **Schwere:** hoch (sicherheitsrelevanter technischer Wert) · **Status:** offen –
+  Nachtrag zu Rückfrage 14

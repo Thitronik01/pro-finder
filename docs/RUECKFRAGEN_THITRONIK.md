@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 221 der 323 PDF-Seiten sowie die
+Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 228 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -18,9 +18,9 @@ Geprüft sind bisher der deutsche, englische, französische und tschechische Spr
 `pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf` (DOC-IBA-SN045)
 sowie beide Kurzanleitungen. Sechs Sprachteile stehen aus.
 
-**Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen zur Hälfte geprüft
-(DOC-BMA-SN044, Seiten 1–36 von 72) – der **deutsche und der englische Teil sind
-vollständig**. Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
+**Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen weitgehend geprüft
+(DOC-BMA-SN044, Seiten 1–53 von 72) – der **deutsche, der englische und der französische
+Teil sind vollständig**; es fehlen der schwedische Teil und das Impressum. Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
 bekommen – teils bestätigend, teils mit abweichenden Werten. Diese Ergänzungen stehen als
 **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie sind für Sie vermutlich der
 aufschlussreichste Teil dieses Dokuments, weil sich daran ablesen lässt, welche Punkte
@@ -427,23 +427,27 @@ _Beleg: DSC-043_
 
 ## 14. Welcher Geofencing-Radius gilt je Generation?
 
-Die beiden Gerätegenerationen nennen verschiedene Werte für dieselbe Auslösebedingung:
+Die beiden Gerätegenerationen nennen verschiedene Werte für dieselbe Auslösebedingung –
+und seit dem 2026-08-09 weicht zusätzlich eine **Sprachfassung** ab:
 
-| Generation | Angabe in der Quelle      | Fundstelle                  |
-| ---------- | ------------------------- | --------------------------- |
-| bis SN-044 | „ca.1000m" und „ca. 1 km" | DOC-BMA-SN044, S. 12 und 15 |
-| ab SN-045  | rund 900 m                | DOC-IBA-SN045               |
+| Generation                    | Angabe in der Quelle      | Fundstelle                  |
+| ----------------------------- | ------------------------- | --------------------------- |
+| bis SN-044 (Deutsch/Englisch) | „ca.1000m" und „ca. 1 km" | DOC-BMA-SN044, S. 12 und 15 |
+| bis SN-044 (**Französisch**)  | **„1500 m" und „1,5 km"** | DOC-BMA-SN044, S. 47 und 50 |
+| ab SN-045                     | rund 900 m                | DOC-IBA-SN045               |
 
-**Die Fragen:** Ist der Unterschied eine bewusste Änderung zwischen den Gerätegenerationen
-oder ein Fehler in einer der beiden Fassungen? Welcher Wert gilt jeweils, und bezieht er
-sich auf einen Radius um den Standort beim Schärfen oder um den letzten bekannten Standort?
+**Die Fragen:** Ist der Unterschied zwischen den Generationen eine bewusste Änderung oder
+ein Fehler? Welcher Wert gilt jeweils, und bezieht er sich auf einen Radius um den Standort
+beim Schärfen oder um den letzten bekannten Standort? Und: Woher stammen die französischen
+1500 m – Tippfehler, Fehlübersetzung oder tatsächlich anderer Auslegungswert? Die Differenz
+von 50 Prozent innerhalb **eines** Handbuchs ist mit einer Rundung nicht zu erklären.
 
 **Warum das drängt:** Der Radius entscheidet, wann eine Diebstahlmeldung ausgelöst wird. Der
 Projektauftrag verbietet, die Generationen zu vermischen – wir übernehmen deshalb keinen der
-beiden Werte in den jeweils anderen Zweig der Anleitung und nennen beide bis zur Klärung nur
-als Entwurf.
+Werte in den jeweils anderen Zweig der Anleitung und nennen sie bis zur Klärung nur als
+Entwurf.
 
-_Belege: DSC-061_
+_Belege: DSC-061, DSC-078_
 
 ---
 
@@ -572,6 +576,9 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** der im französischen Teil angekündigte FAQ-Link fehlt vollständig; kein Weg führt dort zu den Abfragecodes            | DSC-074, S. 44                 |
 | **bis SN-044:** die Kopfzeilen des französischen Teils werden vom grauen Balken verdeckt – keine sichtbaren Seitenzahlen              | DSC-075, S. 37–46              |
 | **bis SN-044:** die englische Fassung verliert das doppelte A der Adressbuch-Empfehlung („Alarm" statt „AAlarm")                      | DSC-076, S. 8, 26, 43          |
+| **bis SN-044:** der französische Teil nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius – dritter Wert neben 1000 m und 900 m          | DSC-078, S. 47 und 50          |
+| **bis SN-044:** der französische Statusbefehl lautet „Statut" – ein Buchstabe Abstand zu „Status"/„STATUS"                            | DSC-067, S. 50                 |
+| **bis SN-044:** der französische Konformitätsabschnitt ist unübersetzt englisch – samt der falschen „directive 1995/5/EG"             | DSC-071, S. 53                 |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

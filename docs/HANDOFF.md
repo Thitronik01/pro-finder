@@ -1,79 +1,71 @@
 # Handoff
 
-Stand: 2026-08-09 (zweite Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-09 (dritte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-### Seitenprüfung: 211 → 221 von 323; der französische Teil von DOC-BMA-SN044 zur Hälfte
+### Seitenprüfung: 221 → 228 von 323; der französische Teil von DOC-BMA-SN044 ist fertig
 
-Zehn neue Seitenrecords, DOC-BMA-SN044 Seiten 37–46 (Sommaire bis LED-Zustandsliste).
-Das Dokument steht bei 46 von 72 Seiten; es fehlen der Rest des französischen Teils
-(47–53), Schwedisch (54–71) und das Impressum (72).
+Sieben neue Seitenrecords, DOC-BMA-SN044 Seiten 47–53. Das Dokument steht bei 53 von 72
+Seiten – **drei der vier Sprachteile sind vollständig geprüft** (Deutsch, Englisch,
+Französisch); es fehlen Schwedisch (54–71) und das Impressum (72).
 
-### Der Hauptfund: die Kopfzeilen des französischen Teils sind unsichtbar (neu: DSC-075)
+### Der Hauptfund: der französische Radius weicht um 50 Prozent ab (neu: DSC-078)
 
-Auf allen zehn geprüften französischen Seiten ist der graue Kopfzeilenbalken leer. Die
-Kopfzeilen („Manuel Pro-finder", „Page n") stehen als weißer Text an der richtigen
-Position in der Textebene – aber der Balken wird **nach** ihnen gezeichnet und verdeckt
-sie. Maschinell belegt über die Zeichenreihenfolge des PDF: auf Seite 40 Text-Sequenzen
-406–408, Balken 409; auf den englischen Seiten umgekehrt (Balken 62, Text 63–65, dort
-sichtbar). Folgen: Der geprüfte französische Teil hat **keine sichtbaren Seitenzahlen**,
-das Sommaire verweist auf Zahlen, die kein Leser findet, und ein Screenreader liest
-Kopfzeilen vor, die Sehende nicht sehen – die Umkehrung des sonst dokumentierten
-Textebenen-Problems.
+Die französische Fassung nennt als Auslöseradius der Diebstahlmeldung „à plus de
+**1500 m**" (Seite 47) und „environ **1,5 km**" (Seite 50) – Deutsch und Englisch sagen
+ca. 1000 m/1 km, die Generation ab SN-045 rund 900 m. Für denselben sicherheitsrelevanten
+Wert kursieren damit **drei Zahlen**; die Differenz innerhalb eines einzigen Handbuchs
+beträgt 50 Prozent. Beide französischen Stellen sind bei 400 dpi gesichert und
+untereinander konsistent. Rückfrage 14 ist um die Dimension „je Sprachfassung" erweitert.
 
 ### Weitere Funde des Batches
 
-- **Frankreich bestätigt Deutschland gegen England (Nachtrag zu DSC-066):** Die
-  französische Betriebsartentabelle nennt für Stellung D „8 minutes" (400 dpi). Damit
-  steht es 2:1 gegen die englischen „8 seconds" – dasselbe Ausreißermuster wie bei
-  DSC-020. Rückfrage 16 hat einen entsprechenden Nachtrag.
-- **Der vierte Befehlssatz ist gesichert (Nachtrag zu DSC-067):** « gardiennage
-  desactive » bei 500 dpi (Seite 42). Gegenüber der SN-045-Fassung („desactiver le
-  gardiennage") hat sich sogar die Wortstellung geändert.
-- **Sinnverändernde französische Übersetzungsfehler (neu: DSC-073):** die maximale
-  GPS-Kabellänge wird als feste Länge ausgegeben („est de 2m"); der gelbe
-  LED-Diagnosezustand wird als Fehlposition statt als Empfangsaufbau beschrieben („la
-  position n'est pas la bonne"); aus zwei Rechten der autorisierten Nummern wird eine
-  Zweckverbindung; aus dem gelb/grünen Wechselblinken eine Abfolge; die Batteriewarnung
-  verliert den Zusatz « all in one »; der Info-Absatz der Betriebsartenseite ist
-  grammatisch zerbrochen („est pas possible avec ce") – erkennbar unlektorierte
-  maschinelle Übersetzung.
-- **Der angekündigte FAQ-Link fehlt französisch komplett (neu: DSC-074):** „se trouve
-  sur le lien suivant" – danach endet die Seite. Zusammen mit der nicht existierenden
-  Abfragecode-Tabelle (DSC-057) führt im französischen Teil kein Weg zu den
-  Abfragecodes.
-- **Die englische Fassung verliert das doppelte A (neu: DSC-076):** Deutsch und
-  Französisch empfehlen den Adressbucheintrag „AAlarm" (doppeltes A für die
-  Spitzenposition); die englische Seite 26 druckt nur „Alarm" – die Empfehlung ist dort
-  funktionslos. Alle drei Stellen bei 400 dpi gesichert; gefunden durch den
-  Dreisprachenvergleich.
-- **Das französische Sommaire ist korrekt** („2.4 Geofencing") – der TOC-Fehler ist eine
-  Eigenheit des englischen Teils (Nachtrag zu DSC-068). Der erste falsche Querverweis
-  („(voir 2.5)", Seite 45), der s/S-Widerspruch und die Doppelglyphen des
-  Abfragecode-Sterns bestehen dagegen auch französisch (Nachträge zu DSC-055, DSC-056,
-  DSC-058); die Sammelposition DSC-077 nimmt die redaktionellen Einzelfunde auf.
+- **Der französische SN-044-Befehlssatz ist vollständig belegt (Nachtrag zu DSC-067):**
+  `arme`, `desarme`, `alarm` (unübersetzt), `gardiennage active/desactive`, `Statut`,
+  `Pos`, `A active`, `A desactivee`, `A impulsion`, `A XXX`. Bemerkenswert: **`Statut`
+  weicht um einen Buchstaben von `Status`/`STATUS` ab** – der erste Fall, in dem sich der
+  Statusbefehl zwischen Sprachfassungen unterscheidet; und das Ausgangspaar ist
+  asymmetrisch geschrieben (`A active`/`A desactivee`). Kein französischer Befehl steht
+  in der Geräteliste – der spiegelbildliche Handbuch-gegen-Gerät-Widerspruch (DSC-054)
+  besteht im dritten Sprachteil.
+- **Der französische Konformitätsabschnitt ist unübersetzt englisch (Nachtrag zu
+  DSC-071):** Seite 53 übernimmt wortgleich den englischen Text samt der nicht
+  existierenden „directive 1995/5/EG". Zwei von drei Sprachteilen tragen damit die
+  falsche Jahreszahl; nur der deutsche nennt die richtige.
+- **Alle vier falschen Querverweise sind jetzt in allen drei Sprachteilen nachgewiesen
+  (Nachtrag zu DSC-055, abgeschlossen):** französisch „(voir 2.5)" S. 45, „sous 2.3"
+  S. 47, „sous 2.4" S. 48, „chapitre 2.6" S. 50.
+- **Zwei französische Auslassungen und eine Sinnumkehr (Nachträge zu DSC-073):** Der rote
+  160-Zeichen-Hinweis samt POS-Anweisung fehlt ersatzlos (S. 47); der Guthaben-Hinweis
+  zur Positions-SMS fehlt (S. 48); die SMS-d'aide-Beschreibung vertauscht Subjekt und
+  Richtung – laut Text empfängt die Zielrufnummer den ungültigen Inhalt und antwortet
+  selbst (S. 48).
+- **DSC-075 gilt für den kompletten Sprachteil:** Auch auf den Seiten 47–53 sind die
+  Kopfzeilen vom Balken verdeckt – alle 17 französischen Seiten ohne sichtbare
+  Seitenzahlen.
+- **DSC-072 gilt für den dritten Sprachteil:** Die Seiten 47, 48 und 52 verwenden die
+  unveränderten deutschen Bilder. Kurios auf Seite 52: **Beide** Richtungsdreiecke der
+  Bildunterschrift zeigen nach oben – das zweite müsste abwärts auf das Smartphone-Foto
+  zeigen (DSC-077).
 
-Registerstand: DSC-073 bis DSC-077 neu; Nachträge an DSC-055, DSC-056, DSC-057, DSC-058,
-DSC-066, DSC-067, DSC-068. Rückfrage 16 ergänzt; weiterhin siebzehn Fragen. Kein neuer
-Blocker.
+Registerstand: DSC-078 neu (hoch); Nachträge an DSC-055 (abgeschlossen über drei
+Sprachteile), DSC-067, DSC-071, DSC-072, DSC-073, DSC-075, DSC-077; Rückfrage 14
+erweitert. Weiterhin siebzehn Fragen, kein neuer Blocker.
 
 ## Was in dieser Sitzung NICHT gelungen ist
 
-- **Die Seitenprüfung ist nicht abgeschlossen.** 102 Seiten bleiben offen: DOC-BMA-SN044
-  Seiten 47–72 und DOC-IBA-SN045 Seiten 101–120, 145–150, 173–190, 198–220, 233–240, 247.
+- **Die Seitenprüfung ist nicht abgeschlossen.** 95 Seiten bleiben offen: DOC-BMA-SN044
+  Seiten 54–72 und DOC-IBA-SN045 Seiten 101–120, 145–150, 173–190, 198–220, 233–240, 247.
 - **Die schwedischen Befehlsbelege** (Seiten 59, 67) stammen weiter nur aus der
-  Textebene; ob die schwedischen Kopfzeilen ebenfalls verdeckt sind (DSC-075), ist
-  ungeprüft.
+  Textebene; die schwedische Kopfzeilen-Sichtbarkeit (DSC-075) ist ungeprüft.
 - **Die dreizehn fehlenden Aufgaben der Generation bis SN-044 sind weiterhin nicht
   geschrieben.**
 - **Die drei Synthese-Auswertungen fehlen weiterhin**; für den sprachübergreifenden
-  Befehlsvergleich fehlt nur noch der schwedische Teil.
-- **Die adversariale Gegenprüfung der Seitenrecords fehlt.** Die Records des
-  französischen Teils tragen wegen der Sprachbarriere eine ausdrückliche
-  `language_note`; sinnverändernde Stellen sind einzeln dokumentiert, eine
-  muttersprachliche Bewertung steht aus.
+  Befehlsvergleich fehlt nur noch Schwedisch.
+- **Die adversariale Gegenprüfung der Seitenrecords fehlt**; die französischen Records
+  tragen eine `language_note`, ein muttersprachlicher Review steht aus.
 - Kein Playwright-/axe-Lauf und keine manuelle AT-Matrix (kein Anwendungscode geändert;
   CI deckt beides ab).
 
@@ -85,59 +77,64 @@ Blocker.
 - finale Karten-URL und Supportkontakt unbestätigt;
 - Braille-Dienstleister und physische Testpersonen fehlen;
 - keine technische Freigabe sicherheitskritischer Inhalte (SMS-Befehle beider
-  Generationen, Betriebsart-D-Intervall, Sprache der Gerätemeldungen, Spannungsschwellen,
-  Geofencing-Radien, SIM-PIN-Vorgabe);
-- kein muttersprachlicher Review für Französisch (und später Schwedisch); keine
-  unabhängige englische Sprachprüfung.
+  Generationen einschließlich `Statut`, Diebstahlmeldungs-Radius 900/1000/1500 m,
+  Betriebsart-D-Intervall, Sprache der Gerätemeldungen, Spannungsschwellen,
+  SIM-PIN-Vorgabe);
+- kein muttersprachlicher Review für Französisch und Schwedisch; keine unabhängige
+  englische Sprachprüfung.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 Seiten 37–46 (zehn Records). Gesamtstand
-  `inspected`: **221 von 323**; DOC-BMA-SN044 **46 von 72**.
+- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 Seiten 47–53 (sieben Records). Gesamtstand
+  `inspected`: **228 von 323**; DOC-BMA-SN044 **53 von 72** (Deutsch, Englisch und
+  Französisch komplett).
 - **Segmente:** keine neuen; alle neuen Seiten auf `inspected`.
 - **Aufgaben:** keine geändert; alle vierzehn deutschen SN-045-Aufgaben auf `entwurf`.
-- **Neue Widersprüche:** DSC-073 bis DSC-077 (DSC-073 mittel-hoch, DSC-075 mittel-hoch).
-  Nachträge an DSC-055, DSC-056, DSC-057, DSC-058, DSC-066, DSC-067, DSC-068; Nachtrag
-  an Rückfrage 16. Keiner still gelöst.
+- **Neue Widersprüche:** DSC-078 (hoch). Nachträge an DSC-055, DSC-067, DSC-071,
+  DSC-072, DSC-073, DSC-075, DSC-077; Rückfrage 14 erweitert. Keiner still gelöst.
 - **Geänderte Dateien:** `sources/pages/DOC-BMA-SN044.json`, `docs/DISCREPANCIES.md`,
   `docs/RUECKFRAGEN_THITRONIK.md`, `docs/HANDOVER_PROMPT.md`,
   `docs/progress-input.json`, `docs/progress.json`, `docs/PROJECT_STATUS.md`,
   `docs/HANDOFF.md`. Kein Anwendungscode geändert.
-- **Tests:** `npm run check` lokal grün (23 Unit-Tests, Content-, Token-, Karten-,
-  Referenz-, Secret-, Lockfile- und Fortschrittsprüfung). CI-Ergebnis zum Commit dieser
-  Sitzung nach dem Push prüfen; CI der Vorsitzung (`a90e180`) war vollständig grün.
-- **Fortschritt:** siehe generierter Block in `PROJECT_STATUS.md` (PDF-Audit über 221
+- **Tests:** `npm run check` lokal grün (23 Unit-Tests und alle Content-, Sicherheits-
+  und Fortschrittsprüfungen). CI-Ergebnis zum Commit dieser Sitzung nach dem Push
+  prüfen; CI der Vorsitzung (`df3edc3`) war vollständig grün.
+- **Fortschritt:** siehe generierter Block in `PROJECT_STATUS.md` (PDF-Audit über 228
   geprüfte Seiten).
 
 ```text
 Resume from:
-Dokument DOC-BMA-SN044, PDF-Seite 47, Segment –, Sprache fr.
+Dokument DOC-BMA-SN044, PDF-Seite 54, Segment –, Sprache sv.
 
 First action:
-DOC-BMA-SN044 Seiten 47–53 prüfen (Rest des französischen Teils, Page 10 bis Page 16).
+DOC-BMA-SN044 Seiten 54–63 prüfen (schwedischer Teil: Innehåll und Sidan 1 bis etwa 9).
 Dabei mitzuerledigen, weil Register-Einträge an diesen Seiten hängen:
-1. Seiten 48/49 (2.1): Sind die Beispiel-SMS-Bilder wieder die deutschen (DSC-072)?
-   Die Erkennungsstichwörter mit den deutschen Bildern abgleichen.
-2. Seiten 48, 49, 51: die drei restlichen Querverweise (chapitre 2.3, 2.4, 2.6 –
-   erwartbar falsch wie in DE/EN, DSC-055).
-3. Seite 50: den Befehl „gardiennage active" zeichengenau sichern (DSC-067) und die
-   2.4-Abschnittsüberschrift gegen das korrekte Sommaire halten (DSC-068).
-4. Seite 52/53: technische Daten und Konformität gegen DSC-069/DSC-071 (nennt die
-   französische Fassung 1999/5, 1995/5 oder etwas Drittes?).
-5. Durchgehend: Kopfzeilen bleiben erwartbar verdeckt (DSC-075) – im Record vermerken;
-   Versatz Französisch: aufgedruckt = PDF − 37 (nur Textebene).
-Der Text liegt vollständig in tmp/bma-sn044-text.txt (je Seite „===== PAGE n =====").
+1. Zuerst die Kopfzeilen-Sichtbarkeit klären (DSC-075): Sind die schwedischen
+   Kopfzeilen sichtbar wie in DE/EN oder verdeckt wie im Französischen? Bei Verdacht die
+   Sequenzprüfung wiederholen (get_texttrace/get_drawings, dokumentiert im Record der
+   Seite 37 und in DSC-075).
+2. Seite 59: den Befehl „fence av" im Seitenbild zeichengenau sichern (DSC-067 –
+   bisher nur Textebene; er trägt die Vorlagenkontaminations-These mit).
+3. Das schwedische Innehåll (Seite 54) gegen die Abschnittsüberschriften halten –
+   der englische TOC-Fehler bei 2.4 (DSC-068) könnte auch hier stehen; die Textebene
+   sagt für Schwedisch „Geofencing".
+4. Durchgehend: Radius (900/1000/1500 m, DSC-078), Betriebsart-D-Intervall (DSC-066),
+   Beispiel-SMS-Bilder (erwartbar deutsch, DSC-072) und die vier Querverweise (DSC-055)
+   gegen die Register halten. language_note setzen (Schwedisch nicht muttersprachlich
+   beurteilbar).
+Der Text liegt vollständig in tmp/bma-sn044-text.txt (je Seite „===== PAGE n =====");
+Versatz Schwedisch erwartbar: aufgedruckt = PDF − 54.
 
-Danach Schwedisch 54–71 (Kopfzeilen-Sichtbarkeit prüfen; Befehle „fence pa"/„fence av"
-auf den Seiten 59 und 67 im Seitenbild sichern; language_note setzen) und Seite 72
-(Impressum; Herstelleradresse gegen die Kieler Beispieladresse der Screenshots halten).
-Damit wäre DOC-BMA-SN044 komplett und der sprachübergreifende Befehlsvergleich (erste
-der drei Synthese-Auswertungen) kann geschrieben werden.
+Danach Seiten 64–72 (Rest Schwedisch: Befehl „fence pa"/„fence av" auf Seite 67,
+technische Daten, Konformität; Impressum 72 mit Herstelleradresse). Damit ist
+DOC-BMA-SN044 komplett; als Nächstes den sprachübergreifenden Befehlsvergleich (erste
+der drei Synthese-Auswertungen) schreiben – das Material aus vier Sprachteilen bis
+SN-044, der Geräteliste und vier Sprachteilen ab SN-045 liegt dann vollständig vor.
 
 Parallel möglich: die dreizehn fehlenden Aufgaben der Generation bis SN-044 – deutsche
 Quellenlage komplett, Vorbild content/tasks/sn-045-plus/de/03-anschluesse.json,
-Befehlssperre aus BLK-005, kein D-Intervall (Frage 16), keine Meldungs-Stichwörter
-(Frage 17).
+Befehlssperre aus BLK-005, kein D-Intervall (Frage 16), kein Radius (Frage 14), keine
+Meldungs-Stichwörter (Frage 17).
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthält siebzehn entscheidungsreife Fragen und sollte an

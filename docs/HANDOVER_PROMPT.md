@@ -29,24 +29,26 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 17,1 %): 102 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 17,8 %): 95 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 47–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, geprüft sind 46 von 72 Seiten. Struktur: Deutsch 1–19 und Englisch 20–36
-  (**vollständig**), Französisch 37–53 (**geprüft bis 46**), Schwedisch 54–71,
-  Impressum 72. Als **einziges** Dokument mit echter Textebene erlaubt es die
-  Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus entsteht hier der
-  Erkenntnisgewinn. Mitzuerledigen: im restlichen französischen Teil (47–53) die drei
-  übrigen Querverweise (DSC-055), die Meldungsbilder (erwartbar deutsch, DSC-072), den
-  Befehl „gardiennage active" (Seite 50, DSC-067) und die technischen Daten (Seite 52/53,
-  gegen DSC-069/071) prüfen; im schwedischen Teil die Befehle `fence pa`/`fence av`
-  (Seiten 59 und 67, Textebenen-Beleg zu DSC-067) im Seitenbild sichern und **prüfen, ob
-  die Kopfzeilen wie im französischen Teil vom Balken verdeckt sind** (DSC-075);
+- **DOC-BMA-SN044, Seiten 54–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, geprüft sind 53 von 72 Seiten. Struktur: Deutsch 1–19, Englisch 20–36 und
+  Französisch 37–53 (**alle drei vollständig**), Schwedisch 54–71, Impressum 72. Als
+  **einziges** Dokument mit echter Textebene erlaubt es die Gegenüberstellung von
+  extrahiertem Text und Seitenbild; genau daraus entsteht hier der Erkenntnisgewinn.
+  Mitzuerledigen im schwedischen Teil: **zuerst prüfen, ob die Kopfzeilen sichtbar oder
+  wie im französischen Teil vom Balken verdeckt sind** (DSC-075; Sequenzprüfung wie auf
+  Seite 40 dokumentiert); die Befehle `fence pa`/`fence av` (Seiten 59 und 67,
+  Textebenen-Beleg zu DSC-067) im Seitenbild sichern; Diebstahlmeldungs-Radius (DSC-078:
+  DE/EN 1000 m, FR 1500 m – was sagt Schwedisch?), Betriebsart-D-Intervall (DSC-066)
+  und Konformitätsabschnitt (DSC-071: unübersetzt englisch?) gegen die Register halten;
   abschließend das Impressum (Seite 72, Herstelleradresse gegen die Kieler
-  Beispieladresse der Screenshots).
+  Beispieladresse der Screenshots). Danach ist das Dokument komplett und der
+  sprachübergreifende Befehlsvergleich (erste Synthese-Auswertung) kann geschrieben
+  werden.
 - **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
 
 Vorgehen je Batch von 9–10 Seiten:
@@ -80,7 +82,7 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 211 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
+Geprüft sind 228 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
 Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
 Das Muster ist stabil und wiederholt sich erwartbar:
 
@@ -102,7 +104,7 @@ Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, te
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
 
-**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–46 geprüft; das Dokument ist
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–53 geprüft; das Dokument ist
 **viersprachig**: Deutsch 1–19, Englisch 20–36, Französisch 37–53, Schwedisch 54–71,
 Impressum 72):
 

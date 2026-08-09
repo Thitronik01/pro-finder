@@ -3554,101 +3554,441 @@
     },
     {
       "page": 47,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1612,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1319,
+      "content_type": "anleitung",
+      "languages": ["fr", "de"],
+      "summary": "Intern \"Page 10\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 12 und 30. Beginn von \"2.1 Explication des messages reçus\": fünfteilige Begriffsliste (GPS : stand by; UTC; Pos; Vitesse; Solde) - der rote Zusatz zur 160-Zeichen-Grenze mit der POS-Anweisung, den Deutsch und Englisch führen, fehlt in der französischen Fassung ersatzlos (DSC-073). Untere Hälfte: drei Meldungsarten mit den unveränderten deutschen Beispiel-SMS-Bildern (DSC-072): Compte-rendu d'état (auf Anforderung nach 2.3 oder in Intervallen; Position, Geschwindigkeit, Ausgangszustände, je nach Betriebsart U2-U5 und Temperatur), Vol (bei aktivierter WiPro und mehr als **1500 m** Entfernung vom Ursprungsort - Deutsch und Englisch nennen ca. 1000 m; stiller Alarm, Blinker und Sirene per SMS nach 2.2 zuschaltbar; rot: nach dem Versand wird die Masternummer angerufen, hier \"le numéro central\") und Alerte tension (nicht in Betriebsart B; unter 11,2V Standby, Rückkehr über 12,5 V).",
+      "headings": [
+        "2.1 Explication des messages reçus",
+        "Compte-rendu d'état :",
+        "Vol :",
+        "Alerte tension (sauf en mode de service B) :"
+      ],
+      "technical_values": [
+        {
+          "value": "Diebstahlmeldung ab mehr als 1500 m Entfernung vom Ursprungsort (\"à plus de 1500 m\")",
+          "context": "Bei 400 dpi gesichert. Die deutsche Fassung nennt ca. 1000 m (Seite 12) bzw. ca. 1 km (Seite 15), die englische approx. 1000 m (Seite 30); die Fassung ab SN-045 rund 900 m. Damit kursieren für denselben Radius drei Werte: 900, 1000 und 1500 m (DSC-078, Nachtrag zu Rückfrage 14). Seite 50 bestätigt die französischen 1,5 km",
+          "safety_critical": true
+        },
+        {
+          "value": "Spannungswarnung: unter 11,2V Standby, Rückkehr über 12,5 V",
+          "context": "Werte decken sich mit den anderen Fassungen; \"11,2V\" ohne Leerzeichen, \"12,5 V\" mit - inkonsistent innerhalb des Absatzes",
+          "safety_critical": true
+        },
+        {
+          "value": "Der rote 160-Zeichen-Hinweis samt POS-Anweisung fehlt",
+          "context": "Die deutsche und englische Fassung erklären, dass bei langen Nachrichten das Guthaben entfallen kann und mit POS nachgefragt wird; die französische Begriffsliste endet ohne diesen Zusatz (DSC-073). Französischen Lesern fehlt damit die einzige Erklärung für ein fehlendes Guthabenfeld",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Beispiel-SMS-Abbildungen (Statusbericht mit U1-U5 und \"GPS Fencing aktiv\", \"Diebstahl\" mit dBm-Wert, \"Spannung unter 11,2V\") - unverändert die deutschen Bilder der Seiten 12 und 30",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; deutsche Gerätetexte in einem französischen Handbuch (DSC-072). Positionsangaben werden bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [
+        "\"! Après l'envoi du texto, le numéro central est appelé en plus !\" - rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die deutschen Erkennungsstichwörter der Meldungen (\"Diebstahl\", \"Spannung unter 11,2V\") stehen nur im Bild; der französische Text nennt keine Entsprechung (DSC-072).",
+        "Die Lesereihenfolge der Textebene beginnt mit den Meldungsarten der unteren Seitenhälfte; Überschrift und Begriffsliste folgen erst danach - wie im deutschen Original.",
+        "Die Begriffsliste ist eine Tab-Liste ohne Auszeichnung."
+      ],
+      "discrepancies": [
+        "\"à plus de 1500 m\" - dritter Wert für den Diebstahlmeldungs-Radius neben 1000 m (DE/EN bis SN-044) und rund 900 m (ab SN-045); innerhalb des französischen Teils konsistent mit den 1,5 km der Seite 50 (DSC-078).",
+        "Der Verweis \"comme décrit sous 2.3\" für das Anfordern des Statusberichts ist falsch (gemeint ist 2.5) - zweiter bestätigter französischer Querverweisfehler, wortgleich mit DE/EN (Nachtrag zu DSC-055).",
+        "Der rote 160-Zeichen-Hinweis fehlt ersatzlos (DSC-073).",
+        "\"le numéro central\" für die Masternummer - die Seiten 44/45 nennen dieselbe Nummer \"Numéro master\"; zwei Benennungen im selben Sprachteil (DSC-077).",
+        "\"texto\" für SMS im roten Hinweis, \"SMS\" im Fließtext - Registerwechsel (DSC-077).",
+        "\"11,2V\" ohne, \"12,5 V\" mit Leerzeichen im selben Absatz (DSC-077)."
+      ],
+      "terminology_findings": [
+        "\"Vol\" als Meldungsname für die Diebstahlmeldung; \"Solde\" für das Guthaben (die Bilder zeigen \"Aktuelles Guthaben\"/\"Kontostand\" deutsch).",
+        "\"numéro central\" gegen \"Numéro master\" - zweite Benennung der Masternummer.",
+        "\"stand by\" klein und getrennt wie im Deutschen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi; die 1500-m-Stelle bei 400 dpi nachgerendert, weil an ihr DSC-078 hängt. Abbildungen mit den deutschen Bildern der Seite 12 verglichen: identisch. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 48,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1217,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 989,
+      "content_type": "abbildung",
+      "languages": ["fr", "de"],
+      "summary": "Intern \"Page 11\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 13 und 31. Sechs weitere Meldungsarten mit den unveränderten deutschen Beispiel-SMS-Bildern (DSC-072), einschließlich der Hilfe-SMS mit der Geräteliste STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON: SMS d'appel au secours (Betriebsart A, Spannung an Broche 3), SMS de position pour des smartphones (Antwort auf die Positionsabfrage \"comme décrit sous 2.4\" - falscher Verweis; der Hinweis auf das Guthaben bei Programmierung nach 1.8, den Deutsch und Englisch führen, fehlt), SMS d'aide (sinnverkehrt formuliert: \"Quand un numéro favori reçoit un SMS dont le contenu n'est pas valide, il renvoie ce message\" - als ob die Zielrufnummer den ungültigen Inhalt empfängt und selbst antwortet; tatsächlich empfängt das Gerät den ungültigen Inhalt von einer Zielrufnummer und antwortet), Message d'effraction, Alarme gaz und Alarme manuelle (jeweils von der WiPro gemeldet); vier rote Hinweise auf den Anruf des \"numéro central\".",
+      "headings": [
+        "SMS d'appel au secours :",
+        "SMS de position pour des smartphones :",
+        "SMS d'aide :",
+        "Message d'effraction :",
+        "Alarme gaz :",
+        "Alarme manuelle :"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS d'appel au secours: Betriebsart A und Spannung an Broche 3",
+          "context": "Deckt sich mit den anderen Fassungen und der Betriebsartentabelle (Seite 40, Zeile A)",
+          "safety_critical": true
+        },
+        {
+          "value": "Die abgebildete Geräteliste (SCHARF/UNSCHARF u. a.) widerspricht den französischen Befehlen arme/desarme der Folgeseite",
+          "context": "Dritter Sprachteil mit demselben spiegelbildlichen Widerspruch Handbuch gegen Gerät (DSC-054). Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Sechs Beispiel-SMS-Abbildungen mit deutschen Gerätetexten (\"Hilfe erbeten\", \"Ungueltiger Befehl! Moeglich: ...\", \"Einbruch Tuer/Fenster\", \"Gas\", \"manueller Alarm\", \"Position:\" mit Kartenlink) - unverändert von den Seiten 13 und 31",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; die Erkennungsstichwörter stehen nur deutsch im Bild (DSC-072). Kartenlink mit Koordinaten wird bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [
+        "\"! Après l'envoi du texto, le numéro central est appelé en plus !\" - viermal, rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die einzige Befehlsliste des Geräts steht auch im französischen Teil nur als deutsch-englisches Bild ohne Alternativtext.",
+        "Alle sechs Erkennungsstichwörter nur deutsch im Bild; der französische Text nennt keine Entsprechung.",
+        "Die Umlaut-Ersatzschreibung der Gerätetexte bleibt unerklärt."
+      ],
+      "discrepancies": [
+        "\"comme décrit sous 2.4\" für die Positionsabfrage - falscher Verweis (gemeint ist 2.6), wortgleich mit DE/EN; dritter bestätigter französischer Querverweisfehler (Nachtrag zu DSC-055).",
+        "\"SMS d'aide\" ist sinnverkehrt formuliert: Subjekt und Richtung sind vertauscht - laut französischem Text empfängt der numéro favori den ungültigen Inhalt und antwortet selbst; tatsächlich antwortet das Gerät (DSC-073).",
+        "Der Hinweis, dass die Positions-SMS bei Programmierung nach 1.8 das Guthaben enthält, fehlt in der französischen Fassung (DE Seite 13, EN Seite 31) - zweite Auslassung nach dem 160-Zeichen-Hinweis (DSC-073).",
+        "Die Geräteliste des Bildes widerspricht den französischen Schaltbefehlen arme/desarme der Seite 49 - spiegelbildlicher Widerspruch wie im englischen Teil (Nachtrag zu DSC-054)."
+      ],
+      "terminology_findings": [
+        "\"Message d'effraction\" für die Einbruchmeldung, \"Alarme manuelle\" für den manuellen Alarm, \"alarme Panique\" für den Panikalarm.",
+        "\"texto\" wieder nur in den roten Hinweisen.",
+        "\"il renvoie\" - das Pronomen hat kein eindeutiges Bezugswort; grammatisch bezieht es sich auf den numéro favori."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi. Alle sechs Abbildungen mit den deutschen Bildern der Seite 13 verglichen: identisch (die Befehlsliste ist dort bei 700 dpi gesichert). Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 49,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1162,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 961,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 12\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 14 und 32. \"2.2 Commander le système d'alarme par SMS\": Einschalten der WiPro mit dem fett und allein stehenden Befehl \"arme\", Ausschalten der WiPro « all in one » mit \"desarme\"; das Gerät quittiert jeweils mit einer Statusmeldung. Rot: Bei einer Diebstahlmeldung (stiller Alarm) lassen sich Sirene und Blinker mit dem SMS-Befehl « alarm » zuschalten; « desarme » beendet den Alarm. \"2.3 Commander le système d'alarme par appel téléphonique\": In den Betriebsarten 2 und 3 schaltet ein Anruf die WiPro in den jeweils nächsten Zustand; das Gerät beendet den Anruf vor Zustandekommen einer kostenpflichtigen Verbindung und sendet nach erfolgreichem Schalten einen Statusbericht an den Anrufer. Abschließend fett: \"Seuls, les numéros autorisés peuvent appeler le Pro-finder.\" - die Formulierung verengt die Zugriffsbeschränkung der anderen Fassungen auf das Anrufen.",
+      "headings": [
+        "2.2 Commander le système d'alarme par SMS",
+        "2.3 Commander le système d'alarme par appel téléphonique"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"arme\" zum Einschalten, \"desarme\" zum Ausschalten, « alarm » zum Zuschalten von Sirene und Blinkern, « desarme » zum Beenden",
+          "context": "Fünfter belegter Schaltbefehlssatz des Dokumentkomplexes (DE scharf/unscharf, EN arm/disarm, FR arme/desarme; Gerät laut Hilfe-SMS SCHARF/UNSCHARF/ALARM AUS). Keine Sprachfassung deckt sich mit der Geräteliste. « alarm » ist weder französisch (alarme) noch in der Geräteliste (nur ALARM AUS). Ausdrücklich nur Quellenzitat für BLK-005; nicht für den Content-Layer",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsarten 2 und 3: Schalten per Anruf; Anruf wird vor Verbindungsaufbau beendet, danach Statusbericht",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Zwei Zeigehand- und zwei Pfeil-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "Roter Absatz zum Zuschalten von Sirene und Blinkern per « alarm », ohne Signalwort",
+        "\"Seuls, les numéros autorisés peuvent appeler le Pro-finder.\" - fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die Befehle stehen als alleinstehende fette Wörter ohne Kennzeichnung als einzugebender Text - wie in allen Sprachteilen.",
+        "Der rote Absatz nennt zwei weitere Befehle nur im laufenden Satz in Guillemets.",
+        "Die untere Seitenhälfte ist leer ohne Abschlusskennzeichnung."
+      ],
+      "discrepancies": [
+        "Die französischen Schaltbefehle arme/desarme fehlen in der Geräteliste (SCHARF/UNSCHARF) - dritter Sprachteil mit spiegelbildlichem Widerspruch Handbuch gegen Gerät (Nachtrag zu DSC-054/DSC-067).",
+        "« alarm » ohne e - weder die französische Schreibung (alarme) noch ein Befehl der Geräteliste; offenbar unübersetzt aus der Vorlage übernommen, während arme/desarme lokalisiert wurden - inkonsistente Lokalisierungstiefe innerhalb eines Absatzes.",
+        "\"Seuls, les numéros autorisés peuvent appeler le Pro-finder.\" - verengt die Aussage der anderen Fassungen (Zugriff insgesamt) auf das Anrufen; zudem überflüssiges Komma nach \"Seuls\" (DSC-073/DSC-077).",
+        "Die asymmetrische WiPro-Benennung ist übernommen: Einschalten \"le WiPro\", Ausschalten \"le WiPro « all in one »\"."
+      ],
+      "terminology_findings": [
+        "\"mettre en service\"/\"éteindre\" für das Schalten der Alarmanlage; \"armé\" auf Seite 50 - drei Verben für denselben Vorgang im Sprachteil.",
+        "\"message d'état\" hier gegen \"compte-rendu d'état\" auf den übrigen Seiten - zweite Benennung des Statusberichts.",
+        "\"liaison tarifée\" für die kostenpflichtige Verbindung."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi; die Befehle arme und desarme sind in großer Fettschrift bei 150 dpi eindeutig. Befehle nur als Quellenzitat für BLK-005. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 50,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2540,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 2101,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 13\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 15 und 33. \"2.4 Géofencing\" (Überschrift mit Akzent, das Sommaire schreibt \"Geofencing\"): virtueller Zaun; Diebstahlmeldung nach 2.1, sobald sich das Fahrzeug \"d'environ 1,5 km\" vom Ursprungsort entfernt - konsistent mit den 1500 m der Seite 47, gegen 1 km in DE/EN (DSC-078); in den Schalterstellungen 8 und B über Broche 3 schaltbar, sonst per SMS; Einschaltbefehl \"gardiennage active\" als alleinstehende fette Zeile, Ausschalten laut Ergebnistext mit «gardiennage desactive» (hier ohne Leerzeichen in den Guillemets); rot: bei geschärfter WiPro (\"Si le WiPro est armé\") ist Geofencing automatisch aktiv. \"2.5 Demander un compte-rendu d'état\": Inhalt nach 2.1; Befehl \"Statut\" - gegen \"Status\" der deutschen und englischen Fassung und STATUS der Geräteliste; alternativ Anruf (außer Betriebsarten 2 und 3), Bericht ohne Guthaben; bei ungültiger Position steht « pas de réception GPS » im Bericht und die letzte gültige Position wird gesendet; falscher Verweis \"Le chapitre 2.6 explique comment retrouver votre véhicule\" (gemeint ist 2.8). \"2.6 Questionnement de la position par smartphone\": Positions-SMS mit Link, Befehl \"Pos\".",
+      "headings": [
+        "2.4 Géofencing",
+        "2.5 Demander un compte-rendu d'état",
+        "2.6 Questionnement de la position par smartphone"
+      ],
+      "technical_values": [
+        {
+          "value": "Geofencing-Radius \"environ 1,5 km\"",
+          "context": "Bei 400 dpi gesichert; konsistent mit den 1500 m der Seite 47. DE/EN bis SN-044: ca. 1 km/1000 m; ab SN-045: rund 900 m - drei Werte für denselben Radius (DSC-078)",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellungen 8 und B: Geofencing über Broche 3; sonst per SMS; bei geschärfter WiPro automatisch aktiv",
+          "context": "Deckt sich mit den anderen Fassungen (BLK-007-Regelung)",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"gardiennage active\" zum Einschalten, «gardiennage desactive» zum Ausschalten, \"Statut\" für den Statusbericht, \"Pos\" für die Positionsabfrage",
+          "context": "\"Statut\" weicht von \"Status\" (DE/EN) und \"STATUS\" (Geräteliste) ab - ein Buchstabe Unterschied bei einem SMS-Befehl. Der französische SN-044-Befehlssatz ist damit vollständig belegt und unterscheidet sich durchgehend vom SN-045-Satz (statut existiert dort nicht; dort \"rapport d etat\", DSC-033). Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei ungültiger Position: « pas de réception GPS » im Bericht, letzte gültige Position wird gesendet",
+          "context": "Der Berichtstextbaustein erscheint französisch, die abgebildeten Berichte (Seiten 47/48) zeigen deutsche Gerätetexte - ob das Gerät französische Berichtstexte ausgibt, bleibt unbelegt (Rückfrage 17)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Vier Zeigehand- und vier Pfeil-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen"
+        }
+      ],
+      "warnings_found": [
+        "\"Si le WiPro est armé, la fonction de géofencing est automatiquement active ; il n'est pas besoin d'envoyer un SMS pour l'activer.\" - rot, ohne Signalwort",
+        "Der Hinweis auf die möglicherweise veraltete Position steht ohne Hervorhebung im Fließtext"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Der Einschaltbefehl steht als fette Zeile, der Ausschaltbefehl nur im Fließtext des Ergebnisabsatzes - wie in allen Sprachteilen.",
+        "Der rote Hinweis zur automatischen Aktivierung ist ausschließlich durch Farbe ausgezeichnet.",
+        "Die Bedingung \"(Sauf en modes de service 2 et 3)\" steht in einer Klammer ohne Verweis auf 2.3."
+      ],
+      "discrepancies": [
+        "\"environ 1,5 km\" - bestätigt den abweichenden französischen Radius (DSC-078).",
+        "\"Statut\" gegen \"Status\"/\"STATUS\" - der Statusbefehl unterscheidet sich zwischen den Sprachfassungen um einen Buchstaben; zusammen mit arme/desarme, gardiennage active/desactive und den Ausgangsbefehlen der Seite 51 ist der französische SN-044-Satz vollständig eigenständig (Nachtrag zu DSC-067).",
+        "\"Le chapitre 2.6 explique comment retrouver votre véhicule\" - falscher Verweis (gemeint ist 2.8, so auch das Sommaire); vierter und letzter bestätigter französischer Querverweisfehler - alle vier falschen Verweise der Vorlage sind damit in allen drei Sprachteilen nachgewiesen (Nachtrag zu DSC-055).",
+        "Überschrift \"Géofencing\" mit Akzent gegen \"Geofencing\" im Sommaire und \"gardiennage\" im Befehl (DSC-077).",
+        "«gardiennage desactive» hier ohne, « gardiennage desactive » auf Seite 42 mit Leerzeichen in den Guillemets (DSC-077)."
+      ],
+      "terminology_findings": [
+        "\"Statut\" als Befehl, \"compte-rendu d'état\" als Berichtsname, \"message d'état\" auf Seite 49 - die Benennungen divergieren.",
+        "\"armé\" für geschärft - drittes Verb neben \"mettre en service\" und \"activé\".",
+        "\"logiciel de cartographie\" für das Kartenprogramm."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi; die 1,5-km-Stelle bei 400 dpi nachgerendert (DSC-078). Die Befehle gardiennage active, Statut und Pos sind in großer Fettschrift bei 150 dpi eindeutig. Befehle nur als Quellenzitat für BLK-005. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 51,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1401,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1120,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 14\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 16 und 34. \"2.7 Commander les sorties par SMS\": zwei getrennt steuerbare Ausgänge, Anschluss nach Kapitel 1.5 (Verweis korrekt). Drei unterstrichene, kursiv-fette Zwischentitel mit Befehlen: \"A active\" (dauerhaft ein), \"A desactivee\" (aus - mit doppeltem e, asymmetrisch zum Einschaltbefehl), \"A impulsion\" (1 Sekunde), \"A XXX\" (frei wählbare Zeit 1 bis 120 Minuten, XXX durch Minutenzahl ersetzen). Jeder Schaltvorgang wird mit einem compte-rendu d'état quittiert. Abschließend rot und kursiv: für Ausgang B den Buchstaben A durch B ersetzen.",
+      "headings": [
+        "2.7 Commander les sorties par SMS",
+        "Activer durablement les sorties :",
+        "Commander les sorties par impulsions (allumées durant 1 seconde) :",
+        "Commander les sorties pour un temps déterminé :"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"A active\", \"A desactivee\", \"A impulsion\", \"A XXX\"; für Ausgang B den Buchstaben tauschen",
+          "context": "Die Geräteliste führt A ON, A OFF, A PULSE - die französischen Ausgangsbefehle fehlen ihr wie die deutschen. Die SN-045-Fassung schreibt französisch \"activer la sortie A\"/\"desactiver la sortie A\"/\"sortie A impulsion\" (DSC-033) - erneut andere Befehle innerhalb derselben Sprache zwischen den Generationen. Auffällig die asymmetrische Schreibung: \"A active\" ohne, \"A desactivee\" mit doppeltem e. Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "Impulsdauer 1 Sekunde; frei wählbare Einschaltdauer 1 bis 120 Minuten",
+          "context": "Deckt sich mit den anderen Fassungen; die offenen Fragen zu Bereichsüberschreitung und Verhalten (DSC-052) bleiben auch französisch unbeantwortet",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Zeigehand-, vier Pfeil- und zwei Uhr-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; die Uhr-Piktogramme sind die einzige Kennzeichnung der Zeitkomponente"
+        }
+      ],
+      "warnings_found": [
+        "\"Pour commander la sortie B, remplacez la lettre A par la lettre B dans le SMS.\" - rot, fett und kursiv, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die Zwischentitel sind unterstrichen und kursiv; Unterstreichung ergibt keine Strukturebene.",
+        "Die vier Befehle stehen als alleinstehende fette Zeilen ohne Kennzeichnung als einzugebender Text.",
+        "Der Platzhalter XXX ist nur durch den erklärenden Satz als Platzhalter erkennbar.",
+        "Die gesamte Seite beschreibt nur Ausgang A; der Buchstabentausch steht allein im roten Schlusssatz."
+      ],
+      "discrepancies": [
+        "\"A desactivee\" mit doppeltem e gegen \"A active\" ohne - asymmetrische Schreibung innerhalb des Befehlspaars; ob das Gerät die Schreibung unterscheidet, ist unbekannt (Nachtrag zu DSC-067).",
+        "Die französischen SN-044-Ausgangsbefehle unterscheiden sich sowohl von der Geräteliste als auch von den SN-045-Befehlen derselben Sprache - dritter Beleg für den Generationswechsel der Befehle innerhalb einer Sprache.",
+        "Der Zwischentitel wechselt die Verbform: \"Activer durablement ...\" gegen \"Commander les sorties ...\" - wie die Gerundium/Imperativ-Mischung der englischen Fassung (DSC-077).",
+        "Der Verweis auf Kapitel 1.5 trifft zu - wie in DE/EN."
+      ],
+      "terminology_findings": [
+        "\"jusqu'à nouvel ordre\" für \"bis auf Widerruf\".",
+        "\"par impulsions\" Plural im Zwischentitel, Befehl \"A impulsion\" Singular.",
+        "\"la durée choisie\" für die gewählte Dauer."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi; die vier Befehle sind in großer Fettschrift eindeutig, einschließlich der Doppel-e-Schreibung von \"A desactivee\". Befehle nur als Quellenzitat für BLK-005. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 52,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1687,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1392,
+      "content_type": "anleitung",
+      "languages": ["fr", "de"],
+      "summary": "Intern \"Page 15\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 17 und 35. \"2.8 Retrouver le véhicule\": Position in beliebige Kartenprogramme oder Navigationssysteme eingeben (oft hausnummerngenau); exakt wie auf dem Mobiltelefon angezeigt in die Suchzeile z. B. von Google Maps; Smartphone-Nutzer verwenden die Positionsabfrage nach 2.6; nach einer Diebstahlmeldung weitere Statusberichte nach 2.5. Ohne GPS-Empfang wartet das Gerät maximal 10 Minuten (\"attend 10 minutes maximum\") auf eine gültige Position, danach wird der Bericht mit der letzten bekannten Position gesendet. Der Absatz zur permanenten Positionsabfrage ist sinnentstellt eingeleitet: \"Comme dans le cas d'une alarme, l'alternateur étant actif, la position est interrogée en permanence\" - aus der Begründung (\"Da bei einem Alarm ... permanent abgefragt wird\") wird ein Vergleich (\"Wie im Fall eines Alarms\"). Dieselben deutschen Bildschirmfotos wie in den anderen Sprachteilen; in der Bildunterschrift zeigen **beide** Richtungsdreiecke nach oben - das zweite müsste wie in DE/EN nach unten auf das Smartphone-Foto zeigen.",
+      "headings": ["2.8 Retrouver le véhicule"],
+      "technical_values": [
+        {
+          "value": "Ohne GPS-Empfang wartet das Gerät maximal 10 Minuten (\"attend 10 minutes maximum\")",
+          "context": "Die französische Fassung erhält das \"maximal\", das die englische weggelassen hatte - näher am deutschen Original als die englische",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Alarm und aktivem Alternator permanente Positionsabfrage; UTC-Zeit = Zeit der letzten bekannten Position",
+          "context": "\"l'alternateur\" ist der fachlich korrekte Begriff (besser als das englische \"generator\"); die Satzkonstruktion ist aber sinnentstellt (DSC-073)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Deutsches Google-Maps-Bildschirmfoto und deutsches Smartphone-Foto - unverändert von den Seiten 17 und 35 (DSC-072). Bildunterschrift mit zwei Dreieckssymbolen, die beide nach oben zeigen",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; die Richtungsdreiecke stehen in der Textebene als Buchstabe \"p\" (zweimal). Koordinaten und Adresse werden bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Beide Richtungsdreiecke der Bildunterschrift zeigen nach oben - das zweite müsste auf das darunter stehende Smartphone-Foto nach unten zeigen; die Zuordnung der Beispiele ist damit auch visuell falsch, nicht nur (wie in DE/EN) nicht-visuell verloren.",
+        "Beide Bildschirmfotos zeigen deutschsprachige Oberflächen im französischen Handbuch.",
+        "Kopfzeile und Bildunterschrift werden in der Textebene erst nach dem Fließtext ausgegeben."
+      ],
+      "discrepancies": [
+        "\"Comme dans le cas d'une alarme, l'alternateur étant actif, ...\" - die kausale Aussage des Originals (\"Da bei einem Alarm und aktiver Lichtmaschine permanent abgefragt wird\") wird zu einem Vergleich verformt; der Satz ist grammatisch wie inhaltlich schief (DSC-073).",
+        "Beide Richtungsdreiecke zeigen nach oben - Satzfehler nur der französischen Fassung; DE und EN zeigen auf-/abwärts (DSC-077).",
+        "\"Après que le vol ait été signalé\" - Subjonctif nach \"après que\" (DSC-077).",
+        "Die Verweise 2.5 und 2.6 treffen zu - wie in DE/EN."
+      ],
+      "terminology_findings": [
+        "\"l'alternateur\" - korrekt für die Lichtmaschine.",
+        "\"programme de cartographie\" hier gegen \"logiciel de cartographie\" auf den Seiten 50/52 - zwei Benennungen.",
+        "\"appareil portable (tel un smartphone)\" für das mobile Endgerät."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi. Beide Bildschirmfotos mit den deutschen Bildern verglichen: identisch. Die beiden Aufwärtsdreiecke der Bildunterschrift sind bei 150 dpi eindeutig. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 53,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1698,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1398,
+      "content_type": "anleitung",
+      "languages": ["fr", "en"],
+      "summary": "Intern \"Page 16\" (verdeckt), letzte Seite des französischen Teils. Gegenstück zu den PDF-Seiten 18 und 36. \"3.1 Spécifications techniques\": neun Zeilen - Tension d'alimentation 9-30 V, Courant absorbé recherche de réseau environ 37 mA, Courant absorbé mode normal environ 21 mA, Fréquence d'émission 900/1800/850/1900 Mhz (wie im Deutschen falsch \"Mhz\"; die englische Fassung schreibt korrekt MHz), Nombre de numéros favoris 10, Interfaces NMEA (entrée GPS), Sorties 2 x 12 V/500 mA, Plage de température -10 °C à +80 °C, Carte SIM: micro-SIM (ohne Leerzeichen vor dem Doppelpunkt, einzige Zeile). \"3.2 Conformité / directives\": Der gesamte Erklärungstext steht **englisch** im französischen Teil - wortgleich mit Seite 36 einschließlich der nicht existierenden \"directive 1995/5/EG\" (DSC-071); der Abschnitt wurde schlicht nicht übersetzt. \"3.3 Mise au rebut\": WEEE- und Recyclingsymbol, nicht in den Hausmüll. \"3.4 Assistance technique\": erst Händler, dann Website, dann Telefonsupport \"du lundi au vendredi de 9.00 à 16.00 heure\" (Singular \"heure\") unter der Kieler Rufnummer; Feld \"SN :\".",
+      "headings": [
+        "3.1 Spécifications techniques",
+        "3.2 Conformité / directives",
+        "3.3 Mise au rebut",
+        "3.4 Assistance technique"
+      ],
+      "technical_values": [
+        {
+          "value": "Alle neun technischen Daten decken sich mit der deutschen Fassung: 9-30 V, environ 37 mA, environ 21 mA, 900/1800/850/1900 Mhz, 10 Zielrufnummern, NMEA, 2 x 12 V/500 mA, -10 °C bis +80 °C, micro-SIM",
+          "context": "Auch der Satzfehler \"Mhz\" ist aus der deutschen Fassung übernommen (die englische hatte ihn korrigiert). Der feste 21-mA-Wert bestätigt DSC-069 für den dritten Sprachteil",
+          "safety_critical": true
+        },
+        {
+          "value": "Konformitätserklärung: englischer Text mit \"directive 1995/5/EG\" im französischen Teil",
+          "context": "Bei 400 dpi gesichert. Der Abschnitt 3.2 ist nicht übersetzt - er übernimmt wortgleich den englischen Text der Seite 36 samt der falschen Jahreszahl (Nachtrag zu DSC-071). Ein französischer Leser erhält die rechtliche Erklärung in einer Fremdsprache mit falscher Richtlinienangabe",
+          "safety_critical": false
+        },
+        {
+          "value": "Telefonsupport Montag bis Freitag 9.00-16.00 Uhr, Kieler Rufnummer",
+          "context": "Historische Supportangabe; die heutige Kontaktangabe des Piloten stammt ausschließlich aus 14-support.json",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "CE-Zeichen, WEEE-Symbol und Recyclingsymbol - wie in den anderen Sprachteilen ohne Textentsprechung",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; \"CE\" kommt in der Textebene nicht vor"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Der Konformitätsabschnitt wechselt unangekündigt ins Englische - ein Screenreader mit französischer Sprachausgabe liest englischen Text; eine Sprachauszeichnung existiert nicht.",
+        "Die technischen Daten sind eine Tab-Liste ohne Tabellenauszeichnung; \"Carte SIM:\" bricht als einzige Zeile das Doppelpunkt-Muster (kein Leerzeichen davor).",
+        "Der Downloadlink steht als bloßer Text (http, thitronik-automotive.de).",
+        "Das Feld \"SN :\" ist ein reines Papierformular."
+      ],
+      "discrepancies": [
+        "Der Abschnitt 3.2 ist unübersetzt englisch - einschließlich der nicht existierenden \"directive 1995/5/EG\" (Nachtrag zu DSC-071). Damit tragen zwei von drei Sprachteilen die falsche Jahreszahl und nur der deutsche die richtige (1999/5/EG).",
+        "\"Mhz\" wie im Deutschen - der Satzfehler wurde in den französischen Teil übernommen, in den englischen nicht: die Datenzeilen der Sprachteile wurden unabhängig voneinander gesetzt (Nachtrag-Bestätigung zu DSC-069-Umfeld).",
+        "\"de 9.00 à 16.00 heure\" - Singular \"heure\" (DSC-077).",
+        "\"Carte SIM:\" ohne Leerzeichen vor dem Doppelpunkt gegen die übrigen Zeilen mit (DSC-077).",
+        "\"SN :\" mit Leerzeichen wie im Deutschen."
+      ],
+      "terminology_findings": [
+        "\"Spécifications techniques\" für die technischen Daten; \"Fréquence d'émission\" für die Sendefrequenz.",
+        "\"Carte SIM\" als Zeilenname, wo Deutsch \"SIM Format\" und Englisch \"SIM card type\" schreiben - drei Benennungen für dieselbe Zeile.",
+        "\"revendeur spécialisé\" für den Fachhändler."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 21, 2026-08-09, PNG-Rendering 150 dpi; der englische Konformitätsabsatz bei 400 dpi nachgerendert (DSC-071). Alle neun Datenzeilen gegen die deutsche und englische Fassung gehalten. Der französische Teil ist damit vollständig geprüft. Sprachen Französisch und (Abschnitt 3.2) Englisch.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 54,
