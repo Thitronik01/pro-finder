@@ -10592,255 +10592,916 @@
     },
     {
       "page": 173,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "rechtliches",
+      "languages": ["it", "en", "de"],
+      "summary": "Intern 'Pagina 23 da 23', letzte Seite der italienischen Fassung. Kapitel 6 enthält 6.1 'Dati tecnici' mit 9–30 V Versorgung, circa 37 mA bei Netzsuche, circa 16–21 mA im Normalbetrieb, 2G/3G/4G (LTE), zehn Zielnummern, GPS/QZSS, zwei Ausgängen mit 12 V/500 mA, −10 bis +80 °C und Nano-SIM. 6.2 zeigt den Entsorgungshinweis mit WEEE-Symbol, 6.3 CE und Richtlinie 2014/53/UE. Die Links in 6.3 und 6.4 führen trotz italienischer Fassung auf '/en/support/downloads' und '/en'; genannt werden außerdem +49 4351 76744-112 und kontakt@thitronik.de. Keine lesbare Textebene und keine Linkannotation.",
+      "headings": [
+        "6 Varie",
+        "6.1 Dati tecnici",
+        "6.2 Istruzioni per lo smaltimento",
+        "6.3 Conformità/Direttive",
+        "6.4 Assistenza tecnica"
+      ],
+      "technical_values": [
+        {
+          "value": "9–30 V",
+          "context": "Alimentazione",
+          "safety_critical": true
+        },
+        {
+          "value": "circa 37 mA; circa 16–21 mA",
+          "context": "Netzsuche beziehungsweise Normalbetrieb",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G (LTE)",
+          "context": "Sendefrequenz mit Bandlisten",
+          "safety_critical": true
+        },
+        {
+          "value": "10",
+          "context": "Numero di numeri di destinazione",
+          "safety_critical": true
+        },
+        {
+          "value": "GPS/QZSS",
+          "context": "Interfacce",
+          "safety_critical": true
+        },
+        {
+          "value": "2 x 12 V/500 mA",
+          "context": "Uscite",
+          "safety_critical": true
+        },
+        {
+          "value": "Da -10 a +80 °C",
+          "context": "Intervallo di temperatura",
+          "safety_critical": true
+        },
+        {
+          "value": "Nano SIM",
+          "context": "Formato SIM",
+          "safety_critical": true
+        },
+        {
+          "value": "2014/53/UE",
+          "context": "genannte Funkanlagenrichtlinie",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Liste der technischen Daten",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "WEEE-Piktogramm und CE-Zeichen",
+          "has_text_equivalent": true,
+          "relies_on": "sichtbarer Begleittext; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": [
+        "Elektrogerät nicht im Hausmüll entsorgen; kommunale Sammelstellen nutzen."
+      ],
+      "accessibility_issues": [
+        "Technische Daten, Entsorgung und Konformität fehlen vollständig in der lesbaren Textebene.",
+        "WEEE- und CE-Symbole besitzen keine PDF-Alternativtexte.",
+        "Die blau unterstrichenen Supportadressen sehen interaktiv aus, besitzen aber keine Linkannotation."
+      ],
+      "discrepancies": [
+        "Die italienische Fassung verweist für Konformität und Support auf englische Pfade '/en/support/downloads' und '/en'.",
+        "Der deutschsprachige Kontakt 'kontakt@thitronik.de' steht unverändert im italienischen Supportabschnitt."
+      ],
+      "terminology_findings": ["Richtlinie lokal als '2014/53/UE', SIM-Format als 'Nano SIM'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Seitenzählung, technische Werte, Konformität, Linkziele und Annotationen geprüft.",
+      "language_note": "Italienisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 174,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "titel",
+      "languages": ["nl"],
+      "summary": "Deckblatt der niederländischen Fassung, ohne interne Seitenangabe. Dunkelblaue Seite mit THITRONIK-Logo und Leiterbahnmuster, Titel 'Pro-finder (vanaf serienummer -045)', niederländischer Flagge und 'Installatie- en bedieningsinstructies'. Unten steht der Adressblock der Thitronik GmbH in Eckernförde, Duitsland, mit Webadresse, E-Mail und Telefonnummer. Keine lesbare Textebene.",
+      "headings": ["Pro-finder (vanaf serienummer -045)", "Installatie- en bedieningsinstructies"],
+      "technical_values": [
+        {
+          "value": "vanaf serienummer -045",
+          "context": "Geltungsbereich der niederländischen Anleitung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "THITRONIK-Logo, niederländische Flagge und dekoratives Leiterbahnmuster",
+          "has_text_equivalent": false,
+          "relies_on": "Flagge zur visuellen Sprachkennzeichnung"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Sprache wird zusätzlich nur durch eine Flagge ohne Alternativtext gekennzeichnet.",
+        "Titel und Kontaktangaben fehlen vollständig in der lesbaren Textebene."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": ["Niederländischer Titel 'Installatie- en bedieningsinstructies'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; niederländisches Teildeckblatt und Geltungsbereich geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 175,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 161,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 1 van 23'. Erste Seite des niederländischen Inhaltsverzeichnisses 'Inhoud'. Es listet Kapitel 1 bis 5.7 mit internen Zielseiten: Installation ab 5, Programmierung ab 11, Betriebszustände 16, Meldungen 17 und Funktionen 19 bis 22. Kapitel 6 fehlt auf dieser Seite und folgt allein auf PDF-Seite 176. Keine lesbare Textebene; die 129 Rohzeichen bestehen nur aus Steuerzeichen.",
+      "headings": ["Inhoud"],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Inhaltsverzeichnis mit Kapitelnummer, Titel, Punktführung und Zielseite",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Das vollständige Inhaltsverzeichnis fehlt in der lesbaren Textebene.",
+        "Punktführungen und Einrückung sind die einzigen visuellen Mittel zur Hierarchie."
+      ],
+      "discrepancies": [
+        "Kapitel 3 ist mit Seite 16 und Kapitel 6 mit Seite 23 angekündigt; durch die zusätzliche fast leere Seite 16 beginnen Kapitel 3 tatsächlich auf Seite 17 und Kapitel 6 auf Seite 24."
+      ],
+      "terminology_findings": [
+        "'Bestemmingsnummers' für Zielnummern; 'Bedrijfstoestanden' für Betriebszustände."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; alle Zielseiten gegen PDF-Seiten 176–198 gehalten.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Seitenziele und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 176,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 24,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 2 van 23'. Fortsetzung des Inhaltsverzeichnisses mit nur fünf Zeilen im oberen Seitenbereich: Kapitel 6 'Diverse' und 6.1 bis 6.4 werden sämtlich der internen Seite 23 zugeordnet. Der restliche Satzspiegel ist leer. Tatsächlich steht Kapitel 6 auf PDF-Seite 198 mit der Fußzeile 'Pagina 24 van 23'. Keine lesbare Textebene.",
+      "headings": [],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Fünf fortgesetzte Inhaltsverzeichniszeilen für Kapitel 6",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Seite besteht fast vollständig aus Leerraum und bietet weder Wiederholung der Überschrift noch Kontext für die Fortsetzung.",
+        "Die fünf Einträge fehlen in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Alle fünf Einträge nennen Seite 23; die tatsächliche Kapitel-6-Seite trägt 'Pagina 24 van 23'."
+      ],
+      "terminology_findings": [],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Fortsetzung und Zielseite gegen PDF-Seite 198 geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur und Seitenziele dokumentiert."
     },
     {
       "page": 177,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 3 van 23'. Die unnummerierten Abschnitte 'Disclaimer' und 'Beoogd gebruik' erklären: Der Pro-finder kann Diebstahl nur melden, nicht verhindern; die Startbatterie kann bei Tiefentladung das Starten verhindern; das Ortungssystem ist für Freizeitfahrzeuge, Positionsbestimmung und Überwachung bestimmt, nicht für Routenplanung oder Live-Tracking. Meldungen werden per SMS als Google-Maps-Link oder Koordinaten übertragen. Keine lesbare Textebene.",
+      "headings": ["Disclaimer", "Beoogd gebruik"],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Diebstahl kann nur gemeldet, nicht verhindert werden.",
+        "Tiefentladung der Starterbatterie kann das Starten verhindern.",
+        "Nicht für Routenplanung oder Live-Tracking bestimmt."
+      ],
+      "accessibility_issues": [
+        "Haftungs- und Nutzungshinweise fehlen vollständig in der lesbaren Textebene.",
+        "Die Warnungen stehen als gewöhnlicher Fließtext ohne Signalwort oder Piktogramm."
+      ],
+      "discrepancies": [
+        "Der erste Abschnittstitel bleibt als englisches 'Disclaimer' unübersetzt."
+      ],
+      "terminology_findings": [
+        "'volgsysteem' und 'alarmsysteem' werden für unterschiedliche Systemrollen verwendet."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Haftung, Zweck und Ausschlüsse gegen Parallelfassungen geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 178,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["nl", "de", "en"],
+      "summary": "Intern 'Pagina 4 van 23'. 'Omvang van de levering' zeigt ein breites Produktbild mit Kurzanleitung, Pro-finder, Antenne, Sicherungen, Schrauben, WiPro-III-Kabel und Kabelbaum. Darunter listet eine neunzeilige Legende die Teile 1 bis 9: Pro-finder, Antenne, Gel connector, Befestigungsschrauben, Sicherungshalter, Flachsicherung 3 A, Kurzanleitung, WiPro-III-Anschlusskabel und Anschlusskabel. Die Kurzanleitung im Bild trägt unter anderem 'SN 0699-045+'. Keine lesbare Textebene.",
+      "headings": ["Omvang van de levering"],
+      "technical_values": [
+        {
+          "value": "3 A",
+          "context": "Platte zekering",
+          "safety_critical": true
+        },
+        {
+          "value": "SN 0699-045+",
+          "context": "sichtbarer Geltungsbereich auf der abgebildeten Kurzanleitung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Neunzeilige Legende der Lieferumfangsteile",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Produktfotografie des kompletten Lieferumfangs",
+          "has_text_equivalent": true,
+          "relies_on": "Nummernfolge und sichtbare Legende; eingebettete Kurzanleitung bleibt deutsch/mehrsprachig"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Bild und Legende besitzen keine PDF-Struktur oder Alternativtexte.",
+        "Die Zuordnung der Teile erfolgt ausschließlich über Reihenfolge, da im Bild selbst keine Nummern stehen."
+      ],
+      "discrepancies": [
+        "'Gel connector' bleibt als englisch-niederländischer Mischbegriff stehen."
+      ],
+      "terminology_findings": [
+        "'Aansluitkabel' und 'WiPro III aansluitkabel' unterscheiden zwei Kabel; die Abgrenzung erfolgt nur über Bildposition."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Fußzeile zusätzlich bei 500 dpi vollständig bestätigt.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 179,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 1,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "anleitung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 5 van 23'. Kapitel 1 'Installatie en aansluiting', Abschnitt 1.1 'Installatielocatie kiezen': geschützter, servicezugänglicher Montageort im Fahrzeuginneren, nicht im Motorraum; Geräteoberseite nach oben und freie Sicht zum Satelliten. Für die externe GPS-Antenne wird die Kabellänge zwischen GSM-Modul und Antenne als zwei Meter angegeben. Drei unbeschriftete Abbildungen zeigen richtige/falsche Geräteorientierung und den Einbauort im Armaturenbrett. Keine lesbare Textebene.",
+      "headings": ["1 Installatie en aansluiting", "1.1 Installatielocatie kiezen"],
+      "technical_values": [
+        {
+          "value": "twee meter",
+          "context": "Kabellänge zwischen GSM-Modul und externer GPS-Antenne",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Bilder zu Geräteorientierung und Montageort",
+          "has_text_equivalent": false,
+          "relies_on": "Grün/Rot, Verbotssymbol, Pfeil und Schraffur ohne Bildunterschrift"
+        }
+      ],
+      "warnings_found": [
+        "Gerät niemals im Motorraum installieren.",
+        "Oberseite des Geräts muss nach oben zeigen."
+      ],
+      "accessibility_issues": [
+        "Richtig/falsch wird über Grün und Rot sowie ein Verbotssymbol vermittelt; eine textliche Bildentsprechung fehlt.",
+        "Alle Montagehinweise fehlen in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "'twee meter bedraagt' formuliert die Antennenleitung als feste Länge; der deutsche Master beschreibt eine maximale Länge von zwei Metern."
+      ],
+      "terminology_findings": [
+        "'installatielocatie', 'installatieplaats' und 'toestel' stehen für Montageort beziehungsweise Gerät."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Montagewerte und Bildaussagen gegen deutschen Master geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 180,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["nl", "de"],
+      "summary": "Intern 'Pagina 6 van 23'. Abschnitt 1.2 'Aansluitingen, displays en bedieningselementen' besteht aus Anschlussabbildung und Legende. Im Bild bleibt 'GPS-Antenne (Optional)' deutsch, daneben steht die niederländische Legende 'Externe GPS-antenne (optioneel)'. Ein rotes X über einem runden Anschluss besitzt keinen Legendeneintrag. Legende A–D sowie Pins 1–8: Betriebsartenschalter, WiPro III, GPS-Antenne, Status-LED, Masse, U2–U5, Ausgänge B/A und Dauerplus 12 V. Keine lesbare Textebene.",
+      "headings": ["1.2 Aansluitingen, displays en bedieningselementen"],
+      "technical_values": [
+        {
+          "value": "Pin 1–8",
+          "context": "vollständige Anschlussbelegung in der sichtbaren Legende",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V",
+          "context": "Pin 8 Permanent plus",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Legende A–D und 1–8",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Anschlussabbildung von WiPro III, GPS-Antenne und Pro-finder",
+          "has_text_equivalent": false,
+          "relies_on": "gelbe Verbindungslinien, farbige Pin-Kreise und rotes X"
+        }
+      ],
+      "warnings_found": [
+        "Rotes X kennzeichnet einen Anschluss offenbar als nicht zu verwenden, ohne Texterklärung."
+      ],
+      "accessibility_issues": [
+        "Rotes X ohne Legendeneintrag; seine Aussage wird nur über Form und Farbe vermittelt.",
+        "Pinfarben besitzen keine textliche Entsprechung und die Legende fehlt in der PDF-Textebene.",
+        "Die deutsche Bildbeschriftung ist für niederländische Nutzende nicht lokalisiert."
+      ],
+      "discrepancies": [
+        "Deutsch 'GPS-Antenne (Optional)' im Bild gegen niederländisch 'Externe GPS-antenne (optioneel)' in der Legende.",
+        "Der rot markierte runde Anschluss zwischen B und C fehlt vollständig in der Legende."
+      ],
+      "terminology_findings": [
+        "'Bedrijfstoestandschakelaar' für Betriebsartenschalter; 'Meet ingang' für U2–U5."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Fußzeile bei 300 dpi und Bildbeschriftung gegen Parallelfassungen geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 181,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 7 van 23'. Abschnitt 1.3 'Bedrijfsmodus selecteren' beschreibt sechs Betriebsfunktionen: Statusbericht per Anruf, automatische Statusberichte, U1–U5, Geofencing über Pin 3, Anruf schaltet WiPro und Statusbericht sowie manueller Alarm über Pin 3. Der Einleitungssatz verweist für Ausgangssteuerung fälschlich auf 5.4 'Positie opvragen met de smartphone' statt 5.5. Keine lesbare Textebene.",
+      "headings": [
+        "1.3 Bedrijfsmodus selecteren",
+        "Oproep triggert statusrapport",
+        "Automatische statusrapporten",
+        "Statusrapport bevat U1, U2, U3, U4, U5",
+        "Geofencing (schakelbaar via pin 3)",
+        "Oproep activeert/deactiveert WiPro en activeert statusrapport",
+        "Handmatig alarm met spanning op pin 3"
+      ],
+      "technical_values": [
+        {
+          "value": "U1–U5",
+          "context": "Spannungsfelder des Statusberichts",
+          "safety_critical": true
+        },
+        {
+          "value": "pin 3; bedrijfsmodus A",
+          "context": "manueller Panikalarm über anliegende Spannung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die sechs unnummerierten Zwischenüberschriften sind nur durch Fettdruck ausgezeichnet.",
+        "Der gesamte funktionskritische Inhalt fehlt in der lesbaren Textebene."
+      ],
+      "discrepancies": [
+        "Falscher Vorlagenverweis: Ausgangssteuerung steht in 5.5, nicht in 5.4; niederländische Bestätigung von DSC-040."
+      ],
+      "terminology_findings": [
+        "'bedrijfsmodusschakelaar' und 'bedrijfsmodus' für Betriebsartenschalter beziehungsweise Betriebsart."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Querverweise und Funktionsblöcke gegen Zielkapitel geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 182,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 8 van 23'. Eine ganzseitige Betriebsartentabelle ordnet die Stellungen 0 bis 9 sowie A bis F den Funktionen Statusbericht, Anrufsteuerung, automatische Berichte, Spannungen U1 bis U5, Geofencing und manuellem Alarm zu. Automatische Intervalle sind 15 Minuten, 60 Minuten, 6 Stunden und 24 Stunden; C wartet 90 Sekunden, D acht Minuten. Betriebsart 8 schaltet Geofencing bei >6 V ein und <5 V aus, B umgekehrt. Zeile F verweist fehlerhaft auf 1.5.2 statt auf die Diagnose in 1.5.3. Keine lesbare Textebene.",
+      "headings": ["Tabel met bedrijfsmodi:"],
+      "technical_values": [
+        {
+          "value": "15 minuten; 60 minuten; 6 uur; 24 uur",
+          "context": "Intervalle automatischer Statusberichte in Betriebsarten 4 bis 7",
+          "safety_critical": true
+        },
+        {
+          "value": ">6 V: aan; <5 V: uit",
+          "context": "Geofencing in Betriebsart 8",
+          "safety_critical": true
+        },
+        {
+          "value": ">6 V: uit; <5 V: aan",
+          "context": "Geofencing in Betriebsart B",
+          "safety_critical": true
+        },
+        {
+          "value": "90 seconden",
+          "context": "Startverzögerung in Betriebsart C",
+          "safety_critical": true
+        },
+        {
+          "value": "8 minuten",
+          "context": "Startverzögerung in Betriebsart D",
+          "safety_critical": true
+        },
+        {
+          "value": "F",
+          "context": "GPS-Diagnose",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Betriebsarten 0 bis 9 und A bis F mit sieben Funktionsspalten sowie U1 bis U5",
+          "has_headers": true,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die sicherheits- und funktionskritische Tabelle fehlt vollständig in der lesbaren Textebene.",
+        "Mehrzeilige Tabellenköpfe werden wegen zu schmaler Spalten mitten in Wörtern umbrochen und sind schwer lesbar.",
+        "Gedrehte beziehungsweise zusammengeführte Zellen und alleinstehende Striche haben ohne Tabellenstruktur keine eindeutige Zuordnung."
+      ],
+      "discrepancies": [
+        "Zeile F verweist auf '1.5.2 De GPS-antenne aansluiten'; die GPS-Diagnose steht in 1.5.3."
+      ],
+      "terminology_findings": [
+        "'Statusrapport', 'bedrijfsmodi' und 'bestemmingsnummers' werden in der Tabelle verwendet."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; sämtliche Zeilen, Schaltschwellen, Intervalle und Querverweise geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 183,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 9 van 23'. Abschnitt 1.4 beschreibt Versorgung und Anschluss: Pins 1 und 8 an 12 V DC, Messeingänge 0–30 V, optional Pin 3, WiPro-III-Verbindung sowie Transistorausgänge 6 und 7 mit 12 V und maximal 500 mA. Für höhere Lasten ist ein hochwertiges Kfz-Relais mit Freilaufdiode gefordert; Überlastung beendet die Garantie. Ein roter Hinweis verweist korrekt auf 5.5. Abschnitt 1.5.1 beginnt Montage der optionalen GPS-Antenne, einschließlich mindestens 15 °C für die Klebefläche. Keine lesbare Textebene.",
+      "headings": [
+        "1.4 Module aansluiten",
+        "1.5 GPS-antenne (optionele accessoire)",
+        "1.5.1 De GPS-antenne monteren"
+      ],
+      "technical_values": [
+        {
+          "value": "12 V DC",
+          "context": "Versorgung an Pin 1 und Pin 8",
+          "safety_critical": true
+        },
+        {
+          "value": "0–30 V",
+          "context": "Messbereich Pins 2 bis 5",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V; 500 mA",
+          "context": "Transistorausgänge an Pin 6 und 7",
+          "safety_critical": true
+        },
+        {
+          "value": "15 °C",
+          "context": "Mindesttemperatur der Klebefläche",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Produktfotografie der optionalen GPS-Antenne mit gestrichelten magentafarbenen Markierungen am Kabel",
+          "has_text_equivalent": false,
+          "relies_on": "Bild und Farblinien ohne Bildunterschrift"
+        }
+      ],
+      "warnings_found": [
+        "Für Lasten über 500 mA Relais mit Freilaufdiode verwenden; bei Überlastung entfällt die Garantie."
+      ],
+      "accessibility_issues": [
+        "Anschluss-, Belastungs- und Montagewerte fehlen in der lesbaren Textebene.",
+        "Der rote Querverweiskasten ist nur durch Farbe, Zentrierung und Linien hervorgehoben.",
+        "Die Bedeutung der magentafarbenen Markierungen am Antennenbild wird nicht textlich erklärt."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Module aansluiten' und 'GPS-antenne' sind die niederländischen Abschnittsbegriffe."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Anschlusswerte, Belastungsgrenze, Relaisanforderung und Temperatur geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 184,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["nl", "en"],
+      "summary": "Intern 'Pagina 10 van 23'. 1.5.2 verlangt spannungsfreien Anschluss der GPS-Antenne und nach Installation mindestens fünf Minuten Betriebsspannung über 13,5 V. 1.5.3 beschreibt Diagnose in Schalterstellung F und eine dreizeilige LED-Tabelle: rot nicht angeschlossen, gelb blinkend Empfang ohne gültige Position, grün Montageposition in Ordnung. Reflexionen in Gebäuden oder unter Dächern können Fehlalarme auslösen; empfohlen wird dann die englische SMS 'fence off'. Die Anrede wechselt von 'u' zu 'je'. Keine lesbare Textebene.",
+      "headings": [
+        "1.5.2 De GPS-antenne aansluiten",
+        "1.5.3 Controleer de werking van de GPS-antenne"
+      ],
+      "technical_values": [
+        {
+          "value": "minstens vijf minuten",
+          "context": "Dauer zur Aktualisierung der Satellitendaten",
+          "safety_critical": true
+        },
+        {
+          "value": "hoger zijn dan 13,5 V",
+          "context": "Betriebsspannung während der Aktualisierung",
+          "safety_critical": true
+        },
+        {
+          "value": "F",
+          "context": "Schalterstellung GPS-Diagnose",
+          "safety_critical": true
+        },
+        {
+          "value": "fence off",
+          "context": "SMS zum Abschalten von Geofencing; Quellenbefund",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige LED-Diagnosetabelle für Rot, Gelb und Grün",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "Reflexionen können Positionsfehler und Diebstahlalarme auslösen; Geofencing in Gebäuden oder unter Dächern abschalten."
+      ],
+      "accessibility_issues": [
+        "Diagnosewerte und Warnung fehlen in der lesbaren Textebene.",
+        "Die Diagnose beruht wesentlich auf Rot, Gelb und Grün; es gibt keine zusätzliche Form- oder Musterkennung.",
+        "Der wörtlich zu sendende Befehl ist typografisch nicht als Code oder Befehl ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Die Anrede wechselt innerhalb der Seite von der formellen Form 'u' zur informellen Form 'je'."
+      ],
+      "terminology_findings": [
+        "Der Diagnoseabschnitt verwendet den englischen Befehl 'fence off', während Kapitel 5 niederländische Befehle nennt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Spannungswert, Mindestdauer, LED-Zuordnung, Warnung und Quellenbefehl geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 185,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "warnhinweise",
+      "languages": ["nl", "en"],
+      "summary": "Intern 'Pagina 11 van 23'. Kapitel 2 und Abschnitt 2.1 behandeln eine aktivierte Nano-SIM. Ein großer roter Kasten fordert eine Karte ausschließlich für 2G/3G/4G, SMS, Telefonie und mobile Daten, verbietet Multi-Provider-SIM und empfiehlt M2M; Prepaidkarten müssen ohne Entnahme aufladbar sein. Danach folgen vier Schritte: PIN, Mailbox/Umleitungen und Komfortfunktionen deaktivieren, Roaming aktivieren. Ein weiterer roter Hinweis fordert bei iPhone die Abschaltung von iMessages. Keine lesbare Textebene.",
+      "headings": ["2 Programmeren en configureren", "2.1 SIM-kaart configureren"],
+      "technical_values": [
+        {
+          "value": "Nano SIM-formaat",
+          "context": "SIM-Format",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G; 4G/LTE",
+          "context": "geforderte Mobilfunkkompatibilität",
+          "safety_critical": true
+        },
+        {
+          "value": "M2M-kaart",
+          "context": "empfohlener Kartentyp",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Keine Multi-Provider-SIM verwenden; Prepaidkarte muss im Gerät aufladbar sein.",
+        "PIN, Mailbox, Umleitungen und SMS-Komfortfunktionen deaktivieren, Roaming aktivieren.",
+        "Bei iPhone iMessages für die Einrichtung deaktivieren."
+      ],
+      "accessibility_issues": [
+        "Alle SIM-Anforderungen und Warnungen fehlen in der lesbaren Textebene.",
+        "Die beiden Warnbereiche sind nur durch rote Schrift, Zentrierung und blaue Linien gekennzeichnet.",
+        "Signalwort 'Attentie' und Warninhalt besitzen kein Piktogramm beziehungsweise keine programmatische Rolle."
+      ],
+      "discrepancies": ["Die Nutzeransprache wechselt zwischen 'je' und neutralen Formulierungen."],
+      "terminology_findings": [
+        "'nano-simkaart' im Warntext gegen 'Nano SIM-formaat' im Fließtext; 'sms' klein, 'M2M' und 'LTE' groß."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; SIM-Typen, Netze, vier Konfigurationsschritte und iMessages-Hinweis geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und auffällige Einzelbefunde dokumentiert."
     },
     {
       "page": 186,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["nl", "en"],
+      "summary": "Intern 'Pagina 12 van 23'. 2.2 zeigt den Einbau der SIM-Karte mit ESD-Piktogramm. 2.3 bietet QR-Codes für App Store und Google Play. 2.4 beschreibt Aktivierung und Status-LED; die App-Empfehlung übersetzt den geschützten Produktnamen einmal zu 'Pro-Zoeker', während unmittelbar danach wieder 'Pro-finder' steht. Die Anrede wechselt von 'u' zu 'je'. Der Verweis auf 2.8 endet erst auf der Folgeseite. Keine lesbare Textebene.",
+      "headings": [
+        "2.2 Plaats de SIM-kaart in de Pro-finder module",
+        "2.3 THITRONIK® App downloaden",
+        "2.4 Pro-finder activeren"
+      ],
+      "technical_values": [],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des SIM-Halters mit ESD-Piktogramm",
+          "has_text_equivalent": false,
+          "relies_on": "Bild und Piktogramm ohne erklärenden Text"
+        },
+        {
+          "description": "Zwei QR-Codes für App Store und Google Play",
+          "has_text_equivalent": false,
+          "relies_on": "QR-Code und Store-Logos ohne ausgeschriebene Zieladresse"
+        }
+      ],
+      "warnings_found": ["ESD-Piktogramm am geöffneten Gerät ohne schriftliche Erläuterung."],
+      "accessibility_issues": [
+        "Einbauanweisung, App-Ziele und Aktivierung fehlen in der lesbaren Textebene.",
+        "Die QR-Codes besitzen keine ausgeschriebenen Zieladressen oder Linkannotationen.",
+        "Das ESD-Piktogramm besitzt weder Alternativtext noch erklärenden Warnsatz."
+      ],
+      "discrepancies": [
+        "Der Produktname wird in 'We raden aan de app te gebruiken om de Pro-Zoeker te activeren' übersetzt; sonst steht 'Pro-finder'.",
+        "Die Anrede wechselt innerhalb des Aktivierungsabschnitts von 'u' zu 'je'."
+      ],
+      "terminology_findings": [
+        "Schwerwiegende Produktnamensabweichung 'Pro-Zoeker' gegen 'Pro-finder'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; SIM-Bild, QR-Codes, Aktivierungsablauf und Produktnamen geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur und eindeutige Terminologieabweichung dokumentiert."
     },
     {
       "page": 187,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 13 van 23'. Die Seite beginnt mit dem Rest des Satzes aus 2.4 und setzt mit 2.5 bis 2.7 fort: Pro-finder-Nummer speichern, Bedienkosten und drei Typen von Zielnummern. Für die Sortierung im Adressbuch steht einmal 'ALARM', im roten Tipp jedoch 'AAlarm'. Als Landesvorwahl wird +31 für die Niederlande genannt. Die Tabelle unterscheidet 'Hoofdnummer', 'Toegestane nummers' und 'Onbevoegde nummers'. Anrede und SMS-Schreibung wechseln. Keine lesbare Textebene.",
+      "headings": [
+        "2.5 Het Pro-finder-nummer opslaan",
+        "2.6 Bedien Pro-finder via SMS of telefoon",
+        "2.7 Verschillende bestemmingsnummers"
+      ],
+      "technical_values": [
+        {
+          "value": "+31",
+          "context": "Beispiel-Landesvorwahl Niederlande",
+          "safety_critical": true
+        },
+        {
+          "value": "maximaal tien nummers",
+          "context": "maximale Zahl der Zielnummern",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige Definition von Hauptnummer, erlaubten und unbefugten Nummern",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "Roter Tipp empfiehlt die Schreibweise 'AAlarm' zur Sortierung an erster Position."
+      ],
+      "accessibility_issues": [
+        "Nummerntypen, Ländercode und Hinweis fehlen in der lesbaren Textebene.",
+        "Der Tipp ist nur durch rote Schrift, Zentrierung und Linien hervorgehoben.",
+        "Die Tabelle besitzt keine Kopfzeile und keine programmatische Struktur."
+      ],
+      "discrepancies": [
+        "Adressbuchname 'ALARM' im Fließtext gegen 'AAlarm' im Tipp.",
+        "Die formelle Anrede 'u/uw' und informelle Anrede 'je/jouw' wechseln auf derselben Seite.",
+        "'sms' und 'SMS' werden uneinheitlich geschrieben."
+      ],
+      "terminology_findings": [
+        "'Hoofdnummer' ist die erste von drei später widersprüchlich verwendeten Bezeichnungen für die Hauptnummer."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Fortsetzungssatz, Adressbuchbezeichnungen, Ländercode und Nummerntypen geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und eindeutige Konsistenzbefunde dokumentiert."
     },
     {
       "page": 188,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "abbildung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 14 van 23'. Abschnitt 2.8 zeigt die Struktur einer Programmier-SMS mit Pluszeichen, rotem 'S' für Smartphone, Ländercode und drei Beispielnummern. Der Text erklärt Pluszeichen und 'S', aber nicht das in den Beispielen sichtbare Minuszeichen. Die erste Nummer wird als 'hoofdnummer' bezeichnet. Die Aussage, dass Leerzeichen in der SMS unzulässig sind, steht nur im Fließtext; Linien ordnen grafisch die Bestandteile zu. Keine lesbare Textebene.",
+      "headings": ["2.8 Bestemmingsnummers programmeren"],
+      "technical_values": [
+        {
+          "value": "maximaal tien bestemmingsnummers",
+          "context": "maximale Zahl programmierbarer Zielnummern",
+          "safety_critical": true
+        },
+        {
+          "value": "+",
+          "context": "Ländercode beginnt mit Pluszeichen",
+          "safety_critical": true
+        },
+        {
+          "value": "S",
+          "context": "Kennzeichnung einer Smartphone-Zielnummer",
+          "safety_critical": true
+        },
+        {
+          "value": "+31",
+          "context": "Beispiel-Landesvorwahl Niederlande",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Aufgeschlüsselte Programmier-SMS mit drei Beispielnummern und Verbindungslinien zu Erklärungen",
+          "has_text_equivalent": true,
+          "relies_on": "Position, Linien und rote Farbe für das Zeichen S"
+        }
+      ],
+      "warnings_found": ["In der Programmier-SMS dürfen keine Leerzeichen verwendet werden."],
+      "accessibility_issues": [
+        "Die Programmierstruktur fehlt vollständig in der lesbaren Textebene.",
+        "Die Zuordnung der SMS-Bestandteile beruht auf räumlichen Linien und roter Farbe.",
+        "Das Minuszeichen ist im Beispiel funktionsrelevant, wird aber in der Legende nicht erklärt."
+      ],
+      "discrepancies": [
+        "Pluszeichen und Smartphone-Kennzeichen werden erläutert, das ebenfalls sichtbare Minuszeichen nicht."
+      ],
+      "terminology_findings": [
+        "'hoofdnummer' in der Grafik gegen großgeschriebenes 'Hoofdnummer' auf Seite 187 und die weiteren Bezeichnungen auf Seite 189."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Fußzeile zusätzlich hochauflösend bestätigt; Zeichen, Linien und Legenden geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur und eindeutige Konsistenzbefunde dokumentiert."
     },
     {
       "page": 189,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 10,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 4,
+      "content_type": "anleitung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 15 van 23'. Eine Tabelle zeigt drei Programmier-SMS-Beispiele. Dabei wird die Hauptnummer zweimal 'Stamnummer' genannt, während Seite 187 'Hoofdnummer' und der untere Absatz 'masternummer' verwendet. Abschnitt 2.9 erklärt das Löschen des Speichers: Nano-SIM muss eingesetzt sein, Hauptkabel trennen, Schalter auf E, wieder verbinden und zurückstellen. Dasselbe Kabel heißt nacheinander 'hoofdbedradingsbundel' und 'hoofdkabelboom'. Die abschließende Anweisung läuft auf Seite 190 weiter. Die vier extrahierbaren Zeichen sind nur Aufzählungsglyphen, kein lesbarer Text.",
+      "headings": ["2.9 Bestemmingsnummers verwijderen"],
+      "technical_values": [
+        {
+          "value": "E",
+          "context": "Schalterstellung zum Löschen aller Zielnummern",
+          "safety_critical": true
+        },
+        {
+          "value": "nanosimkaart moet in het toestel zitten",
+          "context": "Voraussetzung für das Löschen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige Tabelle mit Beispielen für eine Hauptnummer sowie erlaubte und unbefugte Nummern",
+          "has_headers": true,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Rotes Warnsymbol mit Ausrufezeichen über dem SIM-Hinweis",
+          "has_text_equivalent": true,
+          "relies_on": "Piktogramm, rote Farbe und Begleittext"
+        }
+      ],
+      "warnings_found": ["Die Nano-SIM-Karte muss beim Löschen im Gerät eingesetzt sein."],
+      "accessibility_issues": [
+        "Tabelle, Warnung und Löschschritte fehlen bis auf vier bedeutungslose Aufzählungsglyphen in der lesbaren Textebene.",
+        "Der Warnstatus wird über rotes Piktogramm, rote Schrift und Linien vermittelt.",
+        "Der letzte Löschhinweis wird ohne Wiederholung der Überschrift auf die nächste Seite umbrochen."
+      ],
+      "discrepancies": [
+        "Drei Bezeichnungen für die Hauptnummer: 'Hoofdnummer' auf Seite 187, 'Stamnummer' in der Tabelle und 'masternummer' im Schlussabsatz.",
+        "Dasselbe Hauptkabel heißt innerhalb einer vierstufigen Anleitung zuerst 'hoofdbedradingsbundel' und danach 'hoofdkabelboom'."
+      ],
+      "terminology_findings": [
+        "'Hoofdnummer', 'Stamnummer' und 'masternummer' bezeichnen dieselbe Rolle; 'hoofdbedradingsbundel' und 'hoofdkabelboom' dasselbe Kabel."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Tabelle, Warnung, vier Löschschritte und Terminologie geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und eindeutige Konsistenzbefunde dokumentiert."
     },
     {
       "page": 190,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["nl"],
+      "summary": "Intern 'Pagina 16 van 23'. Die Seite enthält nur einen einzelnen kursiven Fortsetzungssatz aus 2.9: Zielnummern werden von der Hauptnummer an den Pro-finder gesendet. Der gesamte restliche Satzspiegel ist leer. Diese zusätzliche Überlaufseite verschiebt Kapitel 3 bis 6 gegenüber dem Inhaltsverzeichnis jeweils um eine Seite. Keine lesbare Textebene.",
+      "headings": [],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Der einzelne Fortsetzungssatz fehlt in der lesbaren Textebene.",
+        "Ohne wiederholte Überschrift oder Abschnittskennung ist der Satz isoliert und sein Bezug zu 2.9 nur über den Seitenwechsel verständlich.",
+        "Nahezu die gesamte Seite ist leer; die unnötige Überlaufseite verursacht falsche Inhaltsverzeichnisziele."
+      ],
+      "discrepancies": [
+        "Die Überlaufseite verschiebt Kapitel 3 von angekündigt Seite 16 auf Seite 17 und Kapitel 6 von Seite 23 auf Seite 24."
+      ],
+      "terminology_findings": [
+        "Der Satz verwendet erneut 'masternummer' statt 'Hoofdnummer' oder 'Stamnummer'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Fußzeile zusätzlich hochauflösend bestätigt; Fortsetzung und Seitenverschiebung geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur und eindeutige Terminologieabweichung dokumentiert."
     },
     {
       "page": 191,
@@ -11666,31 +12327,139 @@
     },
     {
       "page": 198,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "rechtliches",
+      "languages": ["nl", "en", "de"],
+      "summary": "Intern widersprüchlich 'Pagina 24 van 23', tatsächliche letzte Seite der niederländischen Fassung. Kapitel 6 nennt 9–30 V, ungefähr 37 mA bei Netzsuche, circa 16–21 mA normal, 2G/3G/4G, zehn Zielnummern, GPS/QZSS, zwei Ausgänge 12 V/500 mA, −10 bis +80 °C und Nano-SIM. Der Verbrauchszustand heißt hier fehlerhaft 'Op het lichtnet zoeken', während Seite 191 'Netwerk zoeken' verwendet. Es folgen WEEE, CE, Richtlinie 2014/53/EU und Support; die blauen Adressen '/en/support/downloads', '/en' und kontakt@thitronik.de haben keine Linkannotation. Keine lesbare Textebene.",
+      "headings": [
+        "6 Diverse",
+        "6.1 Technische gegevens",
+        "6.2 Instructies voor verwijdering",
+        "6.3 Conformiteit/richtlijnen",
+        "6.4 Technische ondersteuning"
+      ],
+      "technical_values": [
+        {
+          "value": "9–30 V",
+          "context": "Stroomvoorziening",
+          "safety_critical": true
+        },
+        {
+          "value": "ongeveer 37 mA; ca. 16–21 mA",
+          "context": "Netzsuche beziehungsweise Normalbetrieb",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G (LTE)",
+          "context": "Zendfrequentie",
+          "safety_critical": true
+        },
+        {
+          "value": "10",
+          "context": "Aantal bestemmingsnummers",
+          "safety_critical": true
+        },
+        {
+          "value": "GPS/QZSS",
+          "context": "Interfaces",
+          "safety_critical": true
+        },
+        {
+          "value": "2 x 12 V/500 mA",
+          "context": "Uitgangen",
+          "safety_critical": true
+        },
+        {
+          "value": "−10 tot +80 °C",
+          "context": "Temperatuurbereik",
+          "safety_critical": true
+        },
+        {
+          "value": "Nano SIM",
+          "context": "SIM-indeling",
+          "safety_critical": true
+        },
+        {
+          "value": "2014/53/EU",
+          "context": "genannte Funkanlagenrichtlinie",
+          "safety_critical": false
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Liste der technischen Daten",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "WEEE-Piktogramm und CE-Zeichen",
+          "has_text_equivalent": true,
+          "relies_on": "sichtbarer Begleittext; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": [
+        "Elektrogerät nicht im Hausmüll entsorgen; kommunale Sammelstellen nutzen."
+      ],
+      "accessibility_issues": [
+        "Technische Daten, Entsorgung, Konformität und Support fehlen vollständig in der lesbaren Textebene.",
+        "WEEE- und CE-Symbole besitzen keine PDF-Alternativtexte.",
+        "Die blau unterstrichenen Supportadressen sehen interaktiv aus, besitzen aber keine Linkannotation.",
+        "Die Fußzeile bezeichnet Seite 24 zugleich als Teil eines 23-seitigen Abschnitts."
+      ],
+      "discrepancies": [
+        "Fußzeile 'Pagina 24 van 23'; Inhaltsverzeichnis und Seiten 175 bis 197 nennen fälschlich insgesamt 23 Seiten.",
+        "'Stroomverbruik Op het lichtnet zoeken' ist wörtlich eine Suche im Stromnetz; Seite 191 nennt denselben Zustand plausibel 'Netwerk zoeken'.",
+        "Die niederländische Fassung verweist auf englische Pfade '/en/support/downloads' und '/en' sowie die deutsche Kontaktadresse."
+      ],
+      "terminology_findings": [
+        "'Op het lichtnet zoeken' gegen 'Netwerk zoeken'; 'SIM-indeling' für SIM-Format."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; Technik, Terminologie, Konformität, Supportziele, Annotationen und widersprüchliche Fußzeile geprüft.",
+      "language_note": "Niederländisch nicht muttersprachlich beurteilbar; Struktur, Werte und eindeutige quelleninterne Konsistenzbefunde dokumentiert."
     },
     {
       "page": 199,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 1,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "extractable_chars": 0,
+      "content_type": "titel",
+      "languages": ["pl"],
+      "summary": "Deckblatt der polnischen Fassung, ohne interne Seitenangabe. Dunkelblaue Seite mit THITRONIK-Logo und Leiterbahnmuster, Titel 'Pro-finder (od numeru seryjnego -045)', polnischer Flagge und 'Instrukcja instalacji i obsługi'. Unten steht der Adressblock der Thitronik GmbH in Eckernförde, Niemcy, mit Webadresse, E-Mail und Telefonnummer. Keine lesbare Textebene.",
+      "headings": ["Pro-finder (od numeru seryjnego -045)", "Instrukcja instalacji i obsługi"],
+      "technical_values": [
+        {
+          "value": "od numeru seryjnego -045",
+          "context": "Geltungsbereich der polnischen Anleitung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "THITRONIK-Logo, polnische Flagge und dekoratives Leiterbahnmuster",
+          "has_text_equivalent": false,
+          "relies_on": "Flagge zur visuellen Sprachkennzeichnung"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Sprache wird zusätzlich nur durch eine Flagge ohne Alternativtext gekennzeichnet.",
+        "Titel und Kontaktangaben fehlen vollständig in der lesbaren Textebene."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": ["Polnischer Titel 'Instrukcja instalacji i obsługi'."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 27, 2026-08-09, PNG-Rendering 150 dpi; polnisches Teildeckblatt und Geltungsbereich geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 200,

@@ -1,6 +1,6 @@
 # Terminologiekonfliktregister
 
-Stand: 2026-08-06. Konflikte werden dokumentiert; Quellen werden nicht still korrigiert.
+Stand: 2026-08-09. Konflikte werden dokumentiert; Quellen werden nicht still korrigiert.
 Die aktuelle Produktschreibweise des Piloten bleibt bis zur fachlichen Entscheidung
 `Pro-finder`.
 
@@ -12,6 +12,10 @@ Die aktuelle Produktschreibweise des Piloten bleibt bis zur fachlichen Entscheid
 | TERM-004 | `SIM-Karte` / `SIM Karte`                                         | DOC-KA-SN045                                                                                                             | Master verwendet `SIM-Karte`; Original bleibt im Record                                    | akzeptierte Arbeitsnormalisierung          |
 | TERM-005 | `THITRONIK App` / `THITRONIK®App` / `THITRONIK® App`              | Kurzanleitungen/Referenz                                                                                                 | UI verwendet `THITRONIK App`; Marken-/Rechtsfreigabe für ® offen                           | offen                                      |
 | TERM-006 | `Thitronik GmbH` / `THITRONIK`                                    | juristische Adresse vs. Marke                                                                                            | Marke `THITRONIK`; juristische Firmierung in Quellen nicht umschreiben                     | geklärte Kontextregel                      |
+| TERM-007 | `Pro-finder` / `Pro-Zoeker`                                       | DOC-IBA-SN045 Seite 186; niederländische Aktivierung                                                                     | Produktname nie übersetzen; Quellabweichung als DSC-083 erhalten                           | offener niederländischer Sprachreview      |
+| TERM-008 | `Hoofdnummer` / `Stamnummer` / `masternummer`                     | DOC-IBA-SN045 Seiten 187 und 189                                                                                         | Keine Variante als niederländischen Master festlegen                                       | offener niederländischer Sprachreview      |
+| TERM-009 | `hoofdbedradingsbundel` / `hoofdkabelboom`                        | DOC-IBA-SN045 Seite 189; zwei Bezeichnungen innerhalb desselben Löschvorgangs                                            | Erst nach Bauteil- und Sprachreview vereinheitlichen                                       | offen                                      |
+| TERM-010 | `Netwerk zoeken` / `Op het lichtnet zoeken`                       | DOC-IBA-SN045 Seiten 191 und 198; gleicher Betriebszustand                                                               | Technischen Begriff nicht aus der Schlussseite übernehmen                                  | offen; DSC-083                             |
 
 Verbotene Normalisierungen: Seriennummernpräfixe, führende Nullen, SMS-Befehle,
 PIN-Regeln, URLs, Telefonnummern, Einheiten, Anschlüsse und Kabelfarben dürfen nie aus
@@ -20,11 +24,12 @@ Stilgründen verändert werden.
 ## Offene Grundsatzfrage: sind SMS-Befehle überhaupt geschützte Token?
 
 `AGENTS.md` und der Projektauftrag behandeln SMS-Befehle als vor der Übersetzung
-geschützte Token, die in allen Sprachen identisch bleiben. Der Seiten-Audit vom
-2026-08-07 widerlegt diese Annahme für DOC-IBA-SN045: dieselbe interne Seite 19 von 23
-nennt auf Deutsch `fence an`/`fence aus` und auf Englisch `fence on`/`fence off`; die
-Hilfe-SMS nennt auf Deutsch `SCHARF`/`UNSCHARF`, auf Englisch `ARM`/`DISARM`. `status`
-und `position` sind dagegen in beiden Fassungen gleich.
+geschützte Token, die in allen Sprachen identisch bleiben. Der Seiten-Audit bis
+2026-08-09 widerlegt diese Annahme für DOC-IBA-SN045: Acht vollständig geprüfte
+Sprachfassungen ergeben acht unterschiedliche Profile. Selbst innerhalb einzelner
+Fassungen wechseln die Zeichenfolgen; Italienisch nennt `recinto spento` und
+`fence disattivato`, Niederländisch `fence off` und `fence uit`. Der niederländische
+Positionsbefehl ist zudem nur als `positi` gedruckt, die Hilfe-SMS nennt `POS`.
 
 Damit gibt es drei mögliche Sachlagen, die das Projekt nicht selbst entscheiden darf:
 das Gerät akzeptiert beide Befehlssätze, die Befehlssprache ist konfigurierbar, oder eine
@@ -35,4 +40,4 @@ Arbeitsregel bis zur Klärung durch THITRONIK: SMS-Befehle werden **weder** auto
 er in der jeweiligen Quellsprachfassung steht, wird mit Dokument- und Seitenquelle
 geführt und als `sicherheitskritisch` markiert. Der Tokenvergleich darf für Befehle
 deshalb keine Gleichheit über Sprachen hinweg erzwingen. Siehe
-[DISCREPANCIES.md](DISCREPANCIES.md) DSC-013 und DSC-014.
+[DISCREPANCIES.md](DISCREPANCIES.md) DSC-013, DSC-014, DSC-033 und DSC-083.

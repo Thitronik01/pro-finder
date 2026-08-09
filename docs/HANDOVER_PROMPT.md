@@ -29,15 +29,15 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell rund 21 %): 50 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell rund 23 %): 30 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-IBA-SN045**, zuerst Seiten 173–190, danach 198–220, 233–240 und 247. Seite 173
-  schließt Italien ab; Seiten 174–190 schließen zusammen mit den bereits geprüften Seiten
-  191–197 den niederländischen Teil ab. Die genaue Prüfroute steht unter „First action"
-  in `HANDOFF.md`; BLK-005 bleibt bestehen.
+- **DOC-IBA-SN045**, zuerst Seiten 200–220, danach 233–240 und 247. Seite 199 eröffnet
+  den polnischen Teil; dessen Schlussseiten 221–224 sind bereits geprüft. Die genaue
+  Prüfroute für den ersten Batch 200–210 steht unter „First action" in `HANDOFF.md`;
+  BLK-005 bleibt bestehen.
 
 Vorgehen je Batch von 9–10 Seiten:
 
@@ -70,15 +70,21 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 273 von 323 Seiten. DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig. Bei
-DOC-IBA-SN045 sind die Sprachteile Deutsch, Englisch, Französisch, Tschechisch, Dänisch
-und Spanisch vollständig; Italienisch steht einschließlich Deckblatt bei 23 von 24
-PDF-Seiten. Das Muster ist stabil und wiederholt sich erwartbar:
+Geprüft sind 293 von 323 Seiten. DOC-BMA-SN044 ist mit 72 von 72 Seiten vollständig;
+DOC-IBA-SN045 steht bei 217 von 247. Dort sind die Sprachteile Deutsch, Englisch,
+Französisch, Tschechisch, Dänisch, Spanisch, Italienisch und Niederländisch vollständig;
+das polnische Deckblatt sowie seine Schlussseiten 221–224 sind ebenfalls erfasst. Das
+Muster ist stabil und wiederholt sich erwartbar:
 
-- **Sechs geprüfte Sprachen ergeben sechs unterschiedliche SMS-Befehlsprofile.** Spanisch
-  mischt `valla apagada` mit englischen Kapitelbefehlen und einer englischen Hilfe-SMS.
-  Tabelle in `DISCREPANCIES.md` DSC-033. Neue Sätze oder weitere Übernahmen dort
-  eintragen.
+- **Acht geprüfte Sprachen ergeben acht unterschiedliche SMS-Befehlsprofile.** Spanisch
+  mischt `valla apagada` mit englischen Kapitelbefehlen und einer englischen Hilfe-SMS;
+  Italienisch und Niederländisch wechseln innerhalb ihrer Fassung den
+  Geofencing-Ausschaltbefehl. Tabelle in `DISCREPANCIES.md` DSC-033. Neue Sätze oder
+  weitere Übernahmen dort eintragen.
+- **Niederländisch hat 24 statt der behaupteten 23 Seiten.** Die fast leere Seite 190
+  verschiebt Kapitel 3 bis 6; die Schlussseite 198 trägt „Pagina 24 van 23". Dazu kommen
+  `Pro-Zoeker`, das unvollständige `positi` und mehrere widersprüchliche Kernbegriffe
+  (DSC-021, DSC-083).
 - **Vorlagenfehler** treten in allen Fassungen auf: unübersetzte Bildbeschriftung
   „GPS-Antenne (Optional)", unerklärtes rotes X in der Anschlussabbildung, zerrissene
   Wörter in Tabellenköpfen, Wortdopplung „via SMS via SMS", falscher Verweis auf 5.4
@@ -124,7 +130,7 @@ Impressum 72):
   Bildseiten gehört deshalb `de` mit in `languages`; ob die Gerätemeldungen dieser
   Generation überhaupt lokalisiert sind, ist Rückfrage 17.
 - Für Sprachteile ohne muttersprachliche Beurteilbarkeit (Französisch, Schwedisch,
-  Dänisch) gilt:
+  Dänisch, Italienisch, Niederländisch, Polnisch) gilt:
   Struktur, Werte und Terminologie prüfen, auffällige Einzelbefunde dokumentieren und im
   Record eine `language_note` setzen – wie beim Tschechischen in DOC-IBA-SN045.
 - **Die Textebene ist nicht vollständig.** Sie enthält keine Piktogramme, keine
