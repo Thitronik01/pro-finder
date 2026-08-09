@@ -5,37 +5,39 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 36.7 %**
+**Gesamtfortschritt: 37.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 25 %        |
-| Content-Modell und deutscher Master      | 20 %    | 72 %        |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 25.4 %      |
+| Content-Modell und deutscher Master      | 20 %    | 74 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
-| Übersetzungspilot                        | 10 %    | 5 %         |
-| Accessibility-, Security- und Content-QA | 10 %    | 18 %        |
-| Staging und Übergabe                     | 5 %     | 35 %        |
+| Übersetzungspilot                        | 10 %    | 7 %         |
+| Accessibility-, Security- und Content-QA | 10 %    | 19 %        |
+| Staging und Übergabe                     | 5 %     | 36 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 25 %        |
+| DOC-BMA-SN044 | 72     | 26.7 %      |
 | DOC-IBA-SN045 | 247    | 25 %        |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die Segment-Extraktion als Uebersetzungsgrundlage beginnen. Zuerst das versionierte Repo-Format fuer content_segments aus dem bestehenden Datenbankschema ableiten und mit Schema-/Referenzpruefung absichern; danach DOC-BMA-SN044 PDF-Seiten 3-7 (deutsche Installation: Lieferumfang, Montageort, Betriebsarten, Anschluesse und GPS-Diagnose) aus den bereits erzeugten Renderings erneut visuell lesen, in quellennahe deutsche Segmente mit stabilem segment_key, task_slug, Seite, Region, Kontext, safety_class, checksum und change_reason ueberfuehren und nur diese fuenf Seiten von inspected auf extracted setzen. Befehlszeichenfolgen bleiben wegen BLK-005 aus uebersetzbaren Segmenten ausgeschlossen; Widersprueche bleiben mit DSC-Verweisen sichtbar. Details stehen in docs/HANDOFF.md.
+Offene Blocker: 7 · Nächste Aktion: Den ersten Segmentbatch unabhaengig validieren: DOC-BMA-SN044 PDF-Seiten 3-7 neu rendern und jedes der 17 Segmente in content/segments/v1/sn-001-044/de gegen Bild, Seitenregion und unmittelbaren Kontext pruefen. Inhaltliche Korrekturen mit neuer checksum dokumentieren; BLK-005 und die Auslassung des Betriebsart-D-Intervalls unveraendert einhalten. Erst nach einer echten zweiten Gegenpruefung die fuenf Seiten von extracted auf validated setzen. Danach den naechsten Extraktionsbatch aus DOC-BMA-SN044 Seiten 8-11 anlegen. Details stehen in docs/HANDOFF.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 visuell geprüft** (`inspected`):
-  DOC-IBA-SN045 247/247, DOC-BMA-SN044 72/72 und beide Kurzanleitungen mit je 2/2.
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 318 stehen auf
+  `inspected`, die fünf deutschen Seiten 3–7 von DOC-BMA-SN044 nach dem ersten
+  Segmentbatch auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
+  Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
   vollständig geprüft.
@@ -117,6 +119,21 @@ Offene Blocker: 7 · Nächste Aktion: Die Segment-Extraktion als Uebersetzungsgr
   DOC-BMA-SN044 und beiden Seiten von DOC-KA-SN044 erstellt. Nur die
   Generationsentscheidung verwendet zusätzlich DOC-IBA-SN045, Seiten 2, 6 und 25, und
   kennzeichnet offen, dass die Grenze „ab -045“ allein aus der neueren Fassung stammt;
+- **das versionierte Segmentformat v1 ist implementiert und erstmals belegt:**
+  `content/segments/v1/sn-001-044/de/` enthält 17 quellennahe Segmente aus
+  DOC-BMA-SN044, PDF-Seiten 3–7. Sie decken Lieferumfang, Montageort, Anschlüsse,
+  Betriebsarten, optionale GPS-Antenne und GPS-Diagnose ab. Alle bleiben `entwurf` und
+  besitzen Dokument, PDF-Seite, Seitenregion, Kontext, Sicherheitsklasse, aktuelle
+  SHA-256-Prüfsumme, Änderungsgrund und gegebenenfalls DSC-Verweise. Das Intervall der
+  Betriebsart D und die SMS-Anweisung der Seite 7 erscheinen nur als begründete
+  Auslassungen ohne gesperrten Bedienwert beziehungsweise ohne Befehlszeichenfolge;
+- **Schema- und Referenzprüfung sichern die Segmente in CI ab:**
+  `scripts/check-segments.mjs` prüft Schema v1, Pfad/Schlüssel, Dokumentinventar,
+  Seitenstatus, Aufgabenzuordnung, DSC-Verweise, Prüfsummen, BLK-005 und die
+  Segmentabdeckung aller Seiten ab `extracted`. Drei Unit-Tests prüfen zusätzlich Schema,
+  Schlüssel/Prüfsummen und die Freigabesperre sicherheitsrelevanter Segmente. Die
+  Datenbankmigration bleibt unverändert; der Importvertrag steht in
+  `content/segments/README.md`;
 - **die Sperren sind im gesamten SN-044-Aufgabensatz technisch gegengeprüft:** In `goal`,
   `prerequisites`, `warnings`, `steps`, `expected_result`, `error_cases` und `tables_md`
   steht keine SMS-Befehlszeichenfolge (BLK-005). Der Geofencing-Radius, das Intervall der
@@ -215,9 +232,10 @@ Offene Blocker: 7 · Nächste Aktion: Die Segment-Extraktion als Uebersetzungsgr
 - **die 131 Seitenrecords aus den SN-045-Batches und die 67 neuen aus DOC-BMA-SN044 haben
   keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber kein zweiter Prüfer hat
-  die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Der Status `inspected`
-  bedeutet ohnehin nur „visuell angesehen"; hier fehlt zusätzlich die eingebaute zweite
-  Meinung. Nachzuholen spätestens bei der Segment-Extraktion. Für die neuen Records gilt
+  die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Von den 67 neuen
+  DOC-BMA-SN044-Records stehen 62 auf `inspected` und fünf mit Segmenten auf `extracted`;
+  auch `extracted` bedeutet noch keine zweite Meinung. Nachzuholen in der unabhängigen
+  Segmentvalidierung. Für die neuen Records gilt
   einschränkend: die tragenden Einzelbefunde – die Befehlsliste der Hilfe-SMS, das
   fehlende Sternzeichen, die Verweisziele, die Abschnittsnummern 2.8 und 2.4, die Befehle
   `fence av` und `Fence on`/`off`, die Tabellenzellen „8 Minuten"/„8 seconds", die
@@ -366,6 +384,7 @@ Offene Blocker: 7 · Nächste Aktion: Die Segment-Extraktion als Uebersetzungsgr
 
 ## Statusdisziplin
 
-`inspected` bedeutet nur visuell/strukturell angesehen. Es ist weder extrahiert noch
-fachlich validiert. `entwurf` bedeutet nie freigegeben. Ein grüner Build oder axe-Lauf
-ist keine WCAG-Konformitätserklärung.
+`inspected` bedeutet nur visuell/strukturell angesehen. `extracted` bedeutet, dass
+versionierte, quellennahe Segmente vorliegen, aber noch keine unabhängige Validierung.
+`entwurf` bedeutet nie freigegeben. Ein grüner Build oder axe-Lauf ist keine
+WCAG-Konformitätserklärung.

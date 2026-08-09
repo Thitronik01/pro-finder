@@ -112,8 +112,8 @@
     },
     {
       "page": 3,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1108,
@@ -186,13 +186,14 @@
         "\"GPS-Antenne\" hier mit Bindestrich; auf PDF-Seite 6 in den Überschriften ohne (\"GPS Antenne\").",
         "Vorreformierte Schreibung \"Anschlußkabel\", \"muß\"."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "extracted_note": "Extraktionsbatch 1, 2026-08-09: vier versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
       "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Seitenkopf und Legende zusätzlich bei 400 dpi als Ausschnitt geprüft; Textebene aus tmp/bma-sn044-text.txt Zeile für Zeile gegen die visuelle Reihenfolge gestellt. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 4,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1228,
@@ -304,13 +305,14 @@
         "Vorreformierte Schreibung \"Anschluß\" in den Bildbeschriftungen.",
         "\"Messeingang\" wird in der Abbildung im Singular je Pin, im Text von PDF-Seite 6 als \"Messeingänge\" verwendet - konsistent."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "extracted_note": "Extraktionsbatch 1, 2026-08-09: zwei versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
       "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Anschlussabbildung in vier Ausschnitten bei 500 und 700 dpi nachgerendert, um Aderfarben, Steckerbelegung, Drehschalterskala und das Leerzeichen in \"(U5 )\" zu sichern; Textebene aus tmp/bma-sn044-text.txt gegengelesen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 5,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1343,
@@ -416,13 +418,14 @@
         "\"Geofencing\" projektkonform geschrieben, aber im Spaltenkopf mit abweichender Groß-/Kleinschreibung des Folgeworts (\"Schaltbar\").",
         "\"GPS Diagnose\" ohne Bindestrich in Zeile F der Tabelle; auf PDF-Seite 7 steht dieselbe Funktion als \"(GPS Diagnose)\" ebenfalls ohne Bindestrich - hier immerhin einheitlich."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "extracted_note": "Extraktionsbatch 1, 2026-08-09: drei versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; das Betriebsart-D-Intervall bleibt gemaess Rueckfrage 16/DSC-066 ausgelassen. Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
       "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Tabellenkopf und die Zeilen 8 bis F bei 500 dpi als Ausschnitte nachgerendert, um Spaltenköpfe, Schaltschwellen und die verbundenen Zellen zu sichern; Zellzahl je Zeile gegen die Textebene aus tmp/bma-sn044-text.txt abgezählt. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 6,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1955,
@@ -515,13 +518,14 @@
         "\"GPS Antenne\" ohne Bindestrich neben \"GPS-Antenne\" mit Bindestrich auf derselben Seite.",
         "\"KFZ-Relais\" und \"Freilaufdiode\" - Fachbegriffe ohne Erläuterung."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "extracted_note": "Extraktionsbatch 1, 2026-08-09: fuenf versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; drei Ausschnitte bei 300 und 400 dpi nachgerendert (Absatz mit den Messeingängen, roter Batteriehinweis, Antennenfoto), um das fehlende Leerzeichen in \"(0-30V)kontrolliert\", die doppelten Leerzeichen in \"WiPro  III\", die Farbe des Warnhinweises und die Aderfarben am GPS-Stecker zu sichern. Textebene aus tmp/bma-sn044-text.txt Zeile für Zeile gegen das Seitenbild gehalten. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 7,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1202,
@@ -596,7 +600,8 @@
         "\"GPS Diagnose\" ohne Bindestrich, \"GPS-Signal\" und \"GPS-Antenne\" mit.",
         "\"GSM Modul\" ohne Bindestrich; das Gerät heißt sonst durchgehend Pro-finder. \"die Nummer des GSM Moduls\" ist die einzige Stelle dieser Seiten, an der das Gerät als GSM-Modul bezeichnet wird."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "extracted_note": "Extraktionsbatch 1, 2026-08-09: drei versionierte Segmente in content/segments/v1/sn-001-044/de angelegt; der SMS-Befehl ist wegen BLK-005 nur als Auslassung dokumentiert und nicht im uebersetzbaren Inhalt enthalten. Schema-, Referenz- und Pruefsummenpruefung bestanden. Noch keine unabhaengige Validierung.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Farben der drei Balken und die Strichart (durchgezogen gegen gestrichelt) bei 150 dpi eindeutig. Textebene gegen das Seitenbild gehalten; die Zustandszeilen wurden dabei einzeln abgeglichen, weil die Textebene sie anders umbricht als das Bild. Sprache Deutsch, vollständig beurteilbar."
     },
     {

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P006-S01-VERSORGUNG-UND-MESSEINGAENGE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Versorgung und Messeingänge anschließen",
+  "body_md": "Schließen Sie Pin 1 (schwarz) und Pin 8 (rot) polungsrichtig an eine geeignete 12-V-Gleichspannungsquelle an und sichern Sie die Plusleitung mit der beiliegenden Sicherung ab. Die Pins 2 bis 5 sind Messeingänge für Spannungen von 0 bis 30 V. Pin 3 kann abhängig von der Betriebsart zusätzlich Geofencing schalten.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Abschnitt 1.5, erster Absatz",
+  "prev_context": "PDF-Seite 5 endet mit den Sonderstellungen E und F der Betriebsartentabelle.",
+  "next_context": "Danach folgt die Verbindung zu WiPro III beziehungsweise WiPro „all in one“.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f641de1a16a235a76a4cb109b71e566cef9a9ca16fe3dbaed3137149358ebe87",
+  "change_reason": "Quellennahe Extraktion der elektrischen Kernwerte. Der 12-V-Anschlusskontext bleibt getrennt von der 9-bis-30-V-Angabe der technischen Tabelle auf PDF-Seite 18; siehe DSC-069.",
+  "discrepancy_refs": ["DSC-069"]
+}

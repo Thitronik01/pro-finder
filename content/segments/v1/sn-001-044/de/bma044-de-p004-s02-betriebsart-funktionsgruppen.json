@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P004-S02-BETRIEBSART-FUNKTIONSGRUPPEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Funktionsgruppen der Betriebsarten",
+  "body_md": "Der Betriebsartenschalter legt fest, ob ein Anruf einen Bericht auslöst, ob Berichte automatisch in Intervallen versendet werden, welche Spannungen U1 bis U5 ein Bericht enthält und ob Geofencing über Pin 3 geschaltet wird. Ausgänge können laut Quelle in allen Betriebsarten geschaltet werden. Ein Anrufbericht wird nur für berechtigte Nummern beschrieben; wie diese Berechtigung eingerichtet wird, erklärt die Quelle an dieser Stelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 4,
+  "source_page_end": 4,
+  "source_region": "Abschnitt 1.4, Einleitung und vier unterstrichene Funktionsbeschreibungen",
+  "prev_context": "Abschnitt 1.3 ordnet die Anschlüsse und den Betriebsartenschalter am Gerät zu.",
+  "next_context": "PDF-Seite 5 setzt Abschnitt 1.4 fort und zeigt die vollständige Betriebsartentabelle.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:aadd0417b66851e4e42fe925e6655fe6863b292355a8fade48ff2b01e1c6ef99",
+  "change_reason": "Die vier durch Unterstreichung statt Überschriftenstruktur gegliederten Funktionsgruppen wurden als zusammenhängender Kontext extrahiert. Die ungeklärte Berechtigungsregel bleibt mit DSC-056 sichtbar.",
+  "discrepancy_refs": ["DSC-056", "DSC-063"]
+}

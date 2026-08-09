@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P007-S01-GPS-DIAGNOSE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "fehlerbehebung",
+  "title": "GPS-Diagnose in Betriebsart F",
+  "body_md": "Stellen Sie den Betriebsartenschalter zur GPS-Prüfung auf F.\n\n| Status-LED in Stellung F | Bedeutung und nächster Schritt |\n| --- | --- |\n| leuchtet rot | GPS-Antenne nicht angeschlossen; Anschluss bei getrennter Versorgung wiederholen, andernfalls ist ein Antennendefekt möglich |\n| blinkt gelb | GPS-Daten werden empfangen, aber es liegt keine gültige Position vor; besteht der Zustand nach fünf Minuten weiter, sind Montageort oder Überdachung zu prüfen |\n| leuchtet grün | GPS-Position in Ordnung; Betriebsartenschalter anschließend in die vorherige Ausgangsposition zurückstellen |\n\nLeuchtet die LED nach der Rückkehr in die Ausgangsposition rot, ordnet die Quelle dies einer noch nicht eingesetzten SIM-Karte zu und verweist für weitere Zustände auf Abschnitt 1.10.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.7, Diagnoseanweisung und drei farbige LED-Zustände",
+  "prev_context": "PDF-Seite 6 endet mit Anschluss und Speichern der Satellitendaten.",
+  "next_context": "Darunter warnt die Quelle vor GPS-Reflexionen in Hallen und unter Überdachungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f7dcbc2959a96ef751a6b6c9d0627b126f6d670b8a099202d90a0389c90d3b30",
+  "change_reason": "Die drei grafisch durch Farbe und Strichart codierten Zustände wurden als echte Tabelle extrahiert. Rot und Grün bleiben beide Dauerlicht und damit am Gerät ausschließlich farbunterscheidbar; die Barriere und die wechselnde Bedeutung von Rot werden nicht geglättet.",
+  "discrepancy_refs": ["DSC-059", "DSC-063"]
+}

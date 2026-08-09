@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 36.7,
+  "overall_percent": 37.5,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,13 +19,13 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 25,
+      "percent": 25.4,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
-      "percent": 72,
-      "note": "Am 2026-08-09 sind beide deutschen Generationszweige mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. Der neue SN-044-Satz wurde aus selbst gerenderten und visuell gelesenen Seiten von DOC-BMA-SN044 und DOC-KA-SN044 extrahiert; nur Aufgabe 01 zieht fuer die dokumentierte Grenze die neuere Quelle hinzu und kennzeichnet das transparent. Jede Aussage nennt Dokument, PDF-Seite und Region, jede Datei steht auf entwurf und enthaelt einen Aenderungsgrund. BLK-005/006 sowie die Rueckfragen 14, 16 und 17 sind eingehalten: keine SMS-Befehle in sichtbaren Bedienfeldern, kein Geofencing-Radius, kein Betriebsart-D-Intervall, keine lokalisierten Meldungsstichwoerter. Nicht bei 100 Prozent, weil die Segment-Extraktion als Uebersetzungsgrundlage und der technische Review saemtlicher sicherheitskritischer Werte fehlen; ein fachlicher Review wurde nicht vorgetaeuscht."
+      "percent": 74,
+      "note": "Am 2026-08-09 sind beide deutschen Generationszweige mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. Der neue SN-044-Satz wurde aus selbst gerenderten und visuell gelesenen Seiten von DOC-BMA-SN044 und DOC-KA-SN044 extrahiert; nur Aufgabe 01 zieht fuer die dokumentierte Grenze die neuere Quelle hinzu und kennzeichnet das transparent. Jede Aussage nennt Dokument, PDF-Seite und Region, jede Datei steht auf entwurf und enthaelt einen Aenderungsgrund. BLK-005/006 sowie die Rueckfragen 14, 16 und 17 sind eingehalten: keine SMS-Befehle in sichtbaren Bedienfeldern, kein Geofencing-Radius, kein Betriebsart-D-Intervall, keine lokalisierten Meldungsstichwoerter. Zusaetzlich liegen fuer DOC-BMA-SN044 Seiten 3-7 jetzt 17 versionierte, quellennahe Segmente vor; diese fuenf Seiten stehen erstmals auf extracted. Nicht bei 100 Prozent, weil die unabhaengige Segmentvalidierung und der technische Review saemtlicher sicherheitskritischer Werte fehlen; ein fachlicher Review wurde nicht vorgetaeuscht."
     },
     "card": {
       "label": "Setup-Karte",
@@ -39,27 +39,28 @@
     },
     "translation": {
       "label": "Übersetzungspilot",
-      "percent": 5,
-      "note": "Workflow und Schutzregeln definiert, EN-Pilotstruktur angelegt; kein unabhängiger Sprachreview erfolgt."
+      "percent": 7,
+      "note": "Workflow und Schutzregeln definiert, EN-Pilotstruktur angelegt. Das kanonische Repo-Format content/segments/v1 ist aus dem Datenbankschema abgeleitet; der erste deutsche Batch umfasst 17 quellennahe Segmente mit Kontext, Sicherheitsklasse und Pruefsumme. Noch keine Uebersetzung und kein unabhaengiger Sprachreview."
     },
     "qa": {
       "label": "Accessibility-, Security- und Content-QA",
-      "percent": 18,
-      "note": "npm run check und der Playwright/axe-Lauf sind gruen (Stand 2026-08-07). Am 2026-08-08 kamen vier Pruefungen dazu, die jeweils sofort einen realen Fehler gefunden haben: (1) jede Markdown-Tabelle des Content-Layers muss darstellbar sein - fand eine LED-Tabelle, die in der Oberflaeche spurlos verschwunden waere, weil ein Fliesstext-Absatz in der Tabelle stand; (2) keine Koordinaten, Kartenlinks oder Rufnummern aus den Beispiel-SMS im Content-Layer - fand zwei Kartenlinks in 09-geofencing.json; (3) jeder Schritt, Warnhinweis und Fehlerfall einer Nicht-Platzhalter-Aufgabe braucht eine eigene Quelle; (4) jeder DSC-Verweis in docs/ muss existieren und jede Nummer darf nur einmal vergeben sein - fand zwei doppelt vergebene Nummern. Der Tabellenparser liegt jetzt einmal in lib/content/markdown-table.ts statt in zwei Kopien, damit Renderer und Pruefung nicht auseinanderlaufen. Die manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix bleibt vollstaendig offen; sie ist der groesste verbliebene Posten dieses Workstreams."
+      "percent": 19,
+      "note": "npm run check und der Playwright/axe-Lauf sind gruen (Stand 2026-08-07). Am 2026-08-08 kamen vier Pruefungen dazu, die jeweils sofort einen realen Fehler gefunden haben: (1) jede Markdown-Tabelle des Content-Layers muss darstellbar sein - fand eine LED-Tabelle, die in der Oberflaeche spurlos verschwunden waere, weil ein Fliesstext-Absatz in der Tabelle stand; (2) keine Koordinaten, Kartenlinks oder Rufnummern aus den Beispiel-SMS im Content-Layer - fand zwei Kartenlinks in 09-geofencing.json; (3) jeder Schritt, Warnhinweis und Fehlerfall einer Nicht-Platzhalter-Aufgabe braucht eine eigene Quelle; (4) jeder DSC-Verweis in docs/ muss existieren und jede Nummer darf nur einmal vergeben sein - fand zwei doppelt vergebene Nummern. Der Tabellenparser liegt jetzt einmal in lib/content/markdown-table.ts statt in zwei Kopien, damit Renderer und Pruefung nicht auseinanderlaufen. Am 2026-08-09 kam segments:check hinzu: Schema v1, Pfade, Inventar und Seiten, Aufgabenzuordnung, DSC-Verweise, Pruefsummen, BLK-005 und die Segmentabdeckung aller Seiten ab extracted werden geprueft; 26 Unit-Tests sind gruen. Die unabhaengige Inhaltsvalidierung sowie die manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix bleiben offen."
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 35,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. Am 2026-08-08 sind zwei Werkzeuge dazugekommen, ohne die jede Folgesitzung die Seitenpruefung neu einrichten muesste: scripts/crop-pdf-region.py (Ausschnitte hoeher aufgeloest rendern, statt bei Flaggen, LED-Farben und Fussnoten zu raten - hat schon beim ersten Einsatz die verunglueckte Flagge auf Seite 101 belegt) und scripts/merge-page-records.mjs (Batch-Ergebnisse kontrolliert in die Seitenrecords eintragen, mit Abgleich von Seitenmassen und Zeichenzahlen gegen die echte PDF; vertraegt auch abgebrochene Batches). Staging-Abnahme weiterhin offen."
+      "percent": 36,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. Am 2026-08-08 sind zwei Werkzeuge dazugekommen, ohne die jede Folgesitzung die Seitenpruefung neu einrichten muesste: scripts/crop-pdf-region.py und scripts/merge-page-records.mjs. Am 2026-08-09 kam mit content/segments/README.md ein kanonischer Import- und Reviewvertrag fuer versionierte Segmente hinzu; Schema und Referenzpruefung sichern die Fortsetzung ab. Staging-Abnahme weiterhin offen."
     }
   },
   "pdf_documents": [
     {
       "doc_id": "DOC-BMA-SN044",
       "page_count": 72,
-      "percent": 25,
+      "percent": 26.7,
       "status_counts": {
-        "inspected": 72
+        "inspected": 67,
+        "extracted": 5
       }
     },
     {
@@ -161,5 +162,5 @@
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht."
   ],
-  "next_action": "Die Segment-Extraktion als Uebersetzungsgrundlage beginnen. Zuerst das versionierte Repo-Format fuer content_segments aus dem bestehenden Datenbankschema ableiten und mit Schema-/Referenzpruefung absichern; danach DOC-BMA-SN044 PDF-Seiten 3-7 (deutsche Installation: Lieferumfang, Montageort, Betriebsarten, Anschluesse und GPS-Diagnose) aus den bereits erzeugten Renderings erneut visuell lesen, in quellennahe deutsche Segmente mit stabilem segment_key, task_slug, Seite, Region, Kontext, safety_class, checksum und change_reason ueberfuehren und nur diese fuenf Seiten von inspected auf extracted setzen. Befehlszeichenfolgen bleiben wegen BLK-005 aus uebersetzbaren Segmenten ausgeschlossen; Widersprueche bleiben mit DSC-Verweisen sichtbar. Details stehen in docs/HANDOFF.md."
+  "next_action": "Den ersten Segmentbatch unabhaengig validieren: DOC-BMA-SN044 PDF-Seiten 3-7 neu rendern und jedes der 17 Segmente in content/segments/v1/sn-001-044/de gegen Bild, Seitenregion und unmittelbaren Kontext pruefen. Inhaltliche Korrekturen mit neuer checksum dokumentieren; BLK-005 und die Auslassung des Betriebsart-D-Intervalls unveraendert einhalten. Erst nach einer echten zweiten Gegenpruefung die fuenf Seiten von extracted auf validated setzen. Danach den naechsten Extraktionsbatch aus DOC-BMA-SN044 Seiten 8-11 anlegen. Details stehen in docs/HANDOFF.md."
 }

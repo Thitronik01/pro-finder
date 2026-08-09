@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P005-S01-ANRUF-UND-WIPRO",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "Anrufverhalten, Hilfeereignis und WiPro-Ausnahme",
+  "body_md": "Je nach Betriebsart kann ein Anruf die WiPro zwischen scharf und unscharf umschalten und anschließend einen Bericht an den berechtigten Anrufer auslösen. Eine beliebige Spannung an Pin 3 kann in einer dafür vorgesehenen Betriebsart eine Hilfe-SMS auslösen. Die Quelle bezeichnet die Betriebsarten 7 bis D zunächst als für den Betrieb ohne WiPro vorgesehen und erklärt eine Verbindung dort für nicht möglich; unmittelbar danach erlaubt sie den Anschluss einer WiPro ab Pro-finder SN 0686-010.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt 1.4 oberhalb der Tabelle, drei Absätze zu Anruf, Hilfe-SMS und Betriebsarten 7 bis D",
+  "prev_context": "PDF-Seite 4 führt in die Funktionsgruppen der Betriebsarten ein.",
+  "next_context": "Darunter folgt die Tabelle der Betriebsarten 0 bis F.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:41656b81b3c083755920c9c5b4cb8ac4db47b4657315532ff79086e574e858cd",
+  "change_reason": "Beide unmittelbar aufeinanderfolgenden Aussagen zur WiPro-Verfügbarkeit wurden erhalten und nicht vereinheitlicht. Die interne Seriennummerngrenze wird als Quellenwert geführt; eine Leseregel wird daraus wegen DSC-023 nicht abgeleitet.",
+  "discrepancy_refs": ["DSC-023", "DSC-056"]
+}

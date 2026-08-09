@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P005-S03-BETRIEBSART-D-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "statusbericht",
+  "title": "Auslassung des Intervalls der Betriebsart D",
+  "body_md": "Die deutsche Tabellenzeile D enthält ein konkretes Intervall für automatische Berichte. Der Wert bleibt aus übersetzbaren Segmenten ausgeschlossen, weil die englische Parallelfassung um den Faktor 60 abweicht und Rückfrage 16 offen ist. Das Segment dokumentiert die bewusste Auslassung; es gibt keinen Bedienwert frei.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Tabelle Betriebsarten, Zeile D",
+  "prev_context": "Die linearisierte Betriebsartentabelle führt Zeile D ohne Zahlenwert auf.",
+  "next_context": "Die Tabellenzeilen E und F verweisen auf Löschfunktion und GPS-Diagnose.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:434193950d631c274f82e309d5c3f8b671f960d1a1b29d892b2f7eba91a29458",
+  "change_reason": "Nicht übersetzbarer Sperrvermerk zu DSC-066. Die Seite kann als vollständig extrahiert gelten, ohne den ungeklärten Betriebswert zu veröffentlichen oder still zu verwerfen.",
+  "discrepancy_refs": ["DSC-066"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P006-S04-GPS-ANTENNE-MONTIEREN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "montageort",
+  "title": "Optionale GPS-Antenne montieren",
+  "body_md": "Montieren Sie die optionale GPS-Antenne mit dem vorhandenen Klebepad an einer sabotagegeschützten Stelle im Fahrzeuginneren. Die Empfangsseite mit dem Klebepad muss nach oben zeigen und möglichst waagerecht ausgerichtet sein. Die Montagestelle muss trocken, sauber und fettfrei sein. Bei Temperaturen unter 15 °C soll die Klebefläche erwärmt werden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Abschnitt 1.6 und Antennenfoto mit roter Linie zum Klebepad",
+  "prev_context": "Abschnitt 1.5 endet mit den drei Schaltarten der Ausgänge.",
+  "next_context": "Abschnitt 1.7 erklärt den spannungsfreien Anschluss der Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:5231eb143ed096b6415d8c8ee0ae2a3399385207f8983635b586eb325f57a0e1",
+  "change_reason": "Die Bildzuordnung des Klebepads wurde in den linearen Handlungstext integriert. Es wurden keine im Foto sichtbaren, aber textlich unbenannten Aderfarben ergänzt.",
+  "discrepancy_refs": ["DSC-063", "DSC-065"]
+}

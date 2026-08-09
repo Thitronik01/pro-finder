@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P003-S04-EXTERNE-GPS-ANTENNE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "montageort",
+  "title": "Reichweite und Sicht der externen GPS-Antenne",
+  "body_md": "Ermöglicht der Montageort des Hauptgeräts keinen GPS-Empfang, kann eine externe GPS-Antenne verwendet werden. Zwischen GSM-Modul und GPS-Antenne stehen 2 m Kabel zur Verfügung. Auch die externe Antenne benötigt möglichst freie Sicht zum Satelliten; sie darf laut Quelle unter Kunststoffverkleidungen des Armaturenbretts montiert werden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 3,
+  "source_page_end": 3,
+  "source_region": "Abschnitt 1.2, letzter Absatz",
+  "prev_context": "Zuvor werden die Anforderungen an den Montageort des Hauptgeräts erklärt.",
+  "next_context": "PDF-Seite 4 zeigt Anschlüsse, Anzeigen und Bedienelemente des Geräts.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1197e9d4aa3c934421b2128e379831a80a43ce2ecf134959482795e1af296684",
+  "change_reason": "Der Quellabsatz wurde sprachlich bereinigt, ohne den Wert 2 m oder die Montageaussage zu verändern. Die französische Fassung macht aus der maximal verfügbaren Länge eine feste Länge; der deutsche Ausgangswert bleibt deshalb mit DSC-073 verknüpft.",
+  "discrepancy_refs": ["DSC-073"]
+}

@@ -1,11 +1,38 @@
 # Handoff
 
-Stand: 2026-08-09 (zehnte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-09 (elfte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-### Deutscher Aufgabensatz bis SN-044: 1 → 14 von 14
+### Segmentformat v1 und erster Extraktionsbatch
+
+- `content/segments/v1/` ist jetzt das kanonische Repo-Format für
+  `public.content_segments`. `content/segments/README.md` beschreibt die Abbildung auf die
+  Datenbank; IDs, Projektbezug, Autor-/Reviewer-IDs und Zeitstempel bleiben
+  Datenbankverantwortung.
+- `lib/content/segment-schema.mjs` definiert Schema v1 und die normalisierte
+  SHA-256-Prüfsumme. `scripts/check-segments.mjs` prüft Pfade, eindeutige Schlüssel,
+  Dokumentinventar, Seitenstatus, Aufgabenzuordnung, DSC-Verweise, Prüfsummen, BLK-005
+  und die Segmentabdeckung jeder Seite ab Status `extracted`. Die Prüfung ist Teil von
+  `npm run check`; drei neue Unit-Tests decken Schema, Schlüssel/Prüfsummen und die
+  Freigabesperre sicherheitsrelevanter Segmente ab.
+- DOC-BMA-SN044, deutsche PDF-Seiten 3–7, wurde dafür bei 300 dpi neu gerendert und
+  vollständig visuell gelesen. 17 quellennahe deutsche Segmente bilden Lieferumfang,
+  Montageort, Anschlüsse, Betriebsarten, GPS-Antennenmontage und GPS-Diagnose ab.
+- Alle 17 Segmente nennen stabilen `segment_key`, Generation, Sprache, Aufgabenzuordnung,
+  Dokument, PDF-Seite, Seitenregion, vorherigen/nächsten Kontext, Sicherheitsklasse,
+  Prüfsumme, Änderungsgrund und gegebenenfalls DSC-Verweise. Sie bleiben auf
+  `review_status: entwurf`.
+- Betriebsart D besitzt ein eigenes `omission_note`-Segment ohne das gesperrte Intervall
+  (DSC-066/Rückfrage 16). Die SMS-Anweisung auf Seite 7 besitzt ebenfalls nur einen
+  Auslassungsvermerk ohne Befehlszeichenfolge (DSC-054/BLK-005).
+- Erst nach erfolgreicher Schema-, Referenz-, Prüfsummen- und BLK-005-Prüfung wurden
+  ausschließlich die Seiten 3–7 auf `extracted` (50 Prozent) gesetzt. Seiten 1–2 und 8–72
+  blieben unverändert `inspected`. `extracted` wird nicht als unabhängig validiert
+  ausgegeben.
+
+### Vorausgesetzter deutscher Aufgabensatz bis SN-044: 1 → 14 von 14
 
 - `content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json` bis
   `14-support.json` sind vollständig gefüllt. Der vorhandene Platzhalter
@@ -66,18 +93,15 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Was weiterhin offen ist
 
-- Die Segment-Extraktion als Grundlage für die Übersetzung fehlt vollständig. Alle 323
-  Seiten stehen weiterhin nur auf `inspected` und damit konservativ bei 25 Prozent
-  Quellenreife.
-- Für versionierte `content_segments` existiert im Dateisystem noch kein kanonisches
-  Repo-Format. Das Datenbankschema in
-  `supabase/migrations/20260806000001_initial_schema.sql` definiert bereits die benötigten
-  Felder. Das Format und seine Prüfung müssen vor dem ersten Extraktionsbatch festgelegt
-  werden.
+- Der erste Segmentbatch ist noch nicht unabhängig validiert. Die 17 Segmente bleiben
+  deshalb `entwurf`; die fünf Quellseiten stehen nur auf `extracted`, nicht `validated`.
+- Die Segment-Extraktion ist erst für DOC-BMA-SN044 Seiten 3–7 begonnen. Als nächster
+  Extraktionsbatch folgen nach der unabhängigen Validierung die deutschen Seiten 8–11
+  (SIM-Karte, Zielrufnummern, Löschen und Status-LED).
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
 - Die Seitenrecords besitzen keine unabhängige Gegenprüfung; tragende Einzelwerte und
-  alle für die Aufgaben verwendeten deutschen Seiten wurden visuell gesichert, der
-  Seitenstatus bleibt trotzdem `inspected`.
+  alle für die Aufgaben verwendeten deutschen Seiten wurden visuell gesichert. Fünf
+  Seiten sind quellennahe extrahiert, aber weiterhin nicht validiert.
 - Alle technischen und sicherheitskritischen Inhalte stehen auf `entwurf`; es gibt keine
   technische Freigabe und keinen muttersprachlichen Review der nichtdeutschen Fassungen.
 - Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
@@ -95,50 +119,53 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 1–19, DOC-KA-SN044 1–2 und
-  DOC-IBA-SN045 2, 6, 25 neu gerendert und visuell gelesen.
-- **Gesamtstand Quellen:** 323 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
-  DOC-IBA-SN045 247/247 und beide Kurzanleitungen je 2/2. Keine Seite wurde ohne
-  Segmentdatei auf `extracted` hochgestuft.
+- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 3–7 bei 300 dpi neu gerendert, visuell gelesen
+  und in 17 Segmente überführt. Der vorausgesetzte Aufgabenlauf hatte zusätzlich
+  DOC-BMA-SN044 1–19, DOC-KA-SN044 1–2 und DOC-IBA-SN045 2, 6, 25 gelesen.
+- **Gesamtstand Quellen:** 318 von 323 Seiten `inspected`, 5 von 323 `extracted`;
+  DOC-BMA-SN044 67 `inspected`/5 `extracted`, DOC-IBA-SN045 247 `inspected` und beide
+  Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne Segmentdatei hochgestuft.
+- **Segmente:** Schema v1 und 17 deutsche SN-044-Segmente; alle `entwurf`, alle mit
+  aktueller Prüfsumme, alle durch Dokument, Seite und Region belegt.
 - **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
   gefüllt, alle `entwurf`, kein Platzhalter.
 - **Register:** DSC-059 und DSC-069 ergänzt; Rückfragen 2 und 12 präzisiert. Höchster
   Eintrag bleibt DSC-085; siebzehn Fragen und sieben Blocker.
-- **Geänderte Bereiche:** deutscher SN-044-Content-Layer, Diskrepanzregister,
-  Rückfragen, Fortschritts- und Übergabedokumentation. Kein Anwendungscode geändert.
+- **Geänderte Bereiche:** versionierter Segment-Content, Segment-Schema und -Prüfung,
+  Unit-Tests, Seitenstatus sowie Fortschritts- und Übergabedokumentation. Keine
+  Produktoberfläche und keine Supabase-Migration geändert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
-  `npm run format` → `npm run check` vollständig grün.
+  `npm run format` → `npm run check` vollständig grün; darin 26 Unit-Tests sowie die
+  neue Segment-, Content-, Referenz-, Secret- und Lockfile-Prüfung.
 - **Referenz-Repository:** sauber; Push-URL `DISABLED`.
 
 ```text
 Resume from:
 content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json bis
 content/tasks/sn-001-044/de/14-support.json vollstaendig; beide deutschen
-Generationszweige mit 28 von 28 Aufgaben auf entwurf. Alle 323 PDF-Seiten weiterhin
-inspected, noch keine versionierten content_segments im Repo.
+Generationszweige mit 28 von 28 Aufgaben auf entwurf. content/segments/v1 ist als
+kanonisches Repo-Format samt Schema-/Referenzpruefung vorhanden. Der erste Batch aus
+DOC-BMA-SN044 PDF-Seiten 3-7 umfasst 17 deutsche Segmente; diese fuenf Seiten stehen auf
+extracted, alle uebrigen 318 Seiten auf inspected. Noch kein Segment ist unabhaengig
+validiert oder technisch freigegeben.
 
 First action:
-Die Segment-Extraktion als Uebersetzungsgrundlage beginnen. Zuerst aus der Tabelle
-public.content_segments in
-supabase/migrations/20260806000001_initial_schema.sql ein versioniertes kanonisches
-Repo-Format samt Schema- und Referenzpruefung ableiten. Keine Produktinhalte in die
-Migration selbst schreiben.
+Den ersten Segmentbatch unabhaengig validieren. DOC-BMA-SN044 PDF-Seiten 3 bis 7 erneut
+rendern und jedes der 17 Segmente unter content/segments/v1/sn-001-044/de einzeln gegen
+das Seitenbild, die angegebene Region sowie prev_context/next_context halten. Besonders
+pruefen: Pinbelegung und 12 V/500 mA, 0-30 V, 13,5 V/fuenf Minuten, Betriebsartentabelle,
+die WiPro-Ausnahme ab SN 0686-010 und alle drei GPS-Diagnosezustaende. Die Validierung muss
+eine echte zweite Gegenpruefung sein; nicht allein aufgrund gruenen Schemas hochstufen.
 
-Danach als ersten abgeschlossenen Batch DOC-BMA-SN044, deutsche PDF-Seiten 3 bis 7,
-erneut aus tmp/pdfs/sn044-bma-de-001-019 visuell lesen und in quellennahe deutsche
-Segmente ueberfuehren: Lieferumfang/Montageort, Betriebsarten, Anschluesse und
-GPS-Diagnose. Jedes Segment braucht mindestens stabilen segment_key, serial_range
-sn-001-044, language de, segment_type, task_slug, title/body_md, safety_class,
-source_document_id beziehungsweise doc_key, source_page_start/-end, source_region,
-prev_context, next_context, checksum und change_reason. BLK-005 gilt auch hier: keine
-SMS-Befehlszeichenfolge in ein uebersetzbares Segment aufnehmen; eine notwendige
-Auslassungsbegruendung bleibt nicht-uebersetzbarer Metadatenkontext.
+BLK-005 strikt beibehalten: keine SMS-Befehlszeichenfolge in title oder body_md. Das
+Betriebsart-D-Intervall bleibt wegen DSC-066/Rueckfrage 16 ausgelassen. Widersprueche
+nicht glatten. Inhaltliche Korrekturen im change_reason dokumentieren und danach die
+checksum aktualisieren. Erst nach vollstaendiger zweiter Gegenpruefung ausschliesslich
+die Seiten 3 bis 7 von extracted auf validated (75 Prozent) setzen.
 
-Erst wenn die Segmente angelegt, gegen die sichtbaren Seiten geprueft und alle neuen
-Pruefungen gruen sind, ausschliesslich die Seiten 3 bis 7 in
-sources/pages/DOC-BMA-SN044.json von inspected auf extracted (50 Prozent) setzen und
-next_action auf die unabhaengige Validierung dieses Batches umstellen. Seiten 1 bis 2 und
-8 bis 72 unveraendert lassen. Widersprueche nicht glatten; DSC-Verweise erhalten.
+Danach ohne Warten den naechsten Extraktionsbatch aus DOC-BMA-SN044 PDF-Seiten 8 bis 11
+anlegen: SIM-Karte, Zielrufnummern, Loeschvorgang und Status-LED. Vor jeder Extraktion
+selbst rendern und visuell lesen; BLK-005/006 und Rueckfragen 12, 15 und 17 beachten.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

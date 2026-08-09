@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P006-S03-AUSGAENGE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "ausgaenge",
+  "title": "Ausgänge und Belastungsgrenze",
+  "body_md": "Pin 6 und Pin 7 sind Transistorausgänge mit 12 V und höchstens 500 mA Belastung. Für Verbraucher mit höherem Strombedarf verlangt die Quelle ein hochwertiges Kraftfahrzeugrelais mit Freilaufdiode; bei Überlastung erlischt die Garantie. Dokumentiert sind Dauerbetrieb, ein Impuls von einer Sekunde und ein zeitlich begrenzter Betrieb. Die konkrete SMS-Bedienung bleibt wegen BLK-005 ausgeschlossen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Abschnitt 1.5, Absatz zu Pin 6 und Pin 7 sowie die drei folgenden Schaltarten",
+  "prev_context": "Zuvor fordert die Quelle eine gemeinsame Batterie für Pro-finder und WiPro „all in one“.",
+  "next_context": "Abschnitt 1.6 beschreibt die Montage der optionalen GPS-Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:24264049a163d55dc54e46e197ba624345e075c3cd2451b7f211bfb72df732e9",
+  "change_reason": "Technische Werte und Funktionsarten wurden extrahiert. Die Seite nennt selbst keine Befehlszeichenfolge, verweist aber auf Kapitel 2.7; der Übersetzungstext hält diese Bedienebene wegen BLK-005 ausdrücklich geschlossen.",
+  "discrepancy_refs": ["DSC-054", "DSC-063"]
+}

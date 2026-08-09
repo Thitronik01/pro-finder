@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P003-S03-MONTAGEORT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "montageort",
+  "title": "Montageort für das Hauptgerät wählen",
+  "body_md": "Wählen Sie im Fahrzeuginneren einen gegen unbefugten Zugriff gesicherten, für Servicearbeiten aber zugänglichen Montageort. Montieren Sie das Gerät keinesfalls im Motorraum. Die Geräteoberseite muss nach oben zeigen und der GPS-Empfänger freie Sicht zum Satelliten haben. Kunststoff, Glas und Holz werden laut Quelle vom GPS-Signal durchdrungen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 3,
+  "source_page_end": 3,
+  "source_region": "Abschnitt 1.2, erster und zweiter Absatz",
+  "prev_context": "Abschnitt 1.1 nennt die sieben Bestandteile des Lieferumfangs.",
+  "next_context": "Der folgende Absatz beschreibt die externe GPS-Antenne bei fehlendem Empfang am Hauptgerät.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:00d06461ab310ced867234fd5291f82b98b40b5309966ee4754f0709f59c5508",
+  "change_reason": "Quellennahe Zusammenführung der Montagebedingungen. Das Motorraumverbot wird wegen seiner technischen Tragweite als sicherheitskritisch geführt; die Quelle hebt es visuell nicht hervor.",
+  "discrepancy_refs": []
+}

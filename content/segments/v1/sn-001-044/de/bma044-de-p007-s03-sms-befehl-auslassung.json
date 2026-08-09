@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P007-S03-SMS-BEFEHL-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "geofencing",
+  "title": "Auslassung der SMS-Zeichenfolge zur Geofencing-Deaktivierung",
+  "body_md": "Die Seite endet mit einer konkreten SMS-Anweisung zum Deaktivieren von Geofencing. Ihre Zeichenfolge bleibt wegen BLK-005 aus dem übersetzbaren Segmentbestand ausgeschlossen: Andere Stellen desselben Handbuchs und die abgebildete Gerätehilfe nennen abweichende Formen. Der sichere Bedienweg muss von THITRONIK bestätigt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.7, letzter Handlungsabsatz mit SMS-Anweisung",
+  "prev_context": "Der vorherige Absatz empfiehlt die Deaktivierung bei GPS-Reflexionen in Gebäuden.",
+  "next_context": "PDF-Seite 8 beginnt mit den Voraussetzungen für die SIM-Karte.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:34bb9982a3e5372733c8b4d716dd8cd10b44b62968f30812c91089850956fb65",
+  "change_reason": "Nicht übersetzbarer Sperrvermerk zu BLK-005 und DSC-054. Er macht die Quellstelle vollständig nachvollziehbar, ohne eine der widersprüchlichen Zeichenfolgen zu reproduzieren.",
+  "discrepancy_refs": ["DSC-054"]
+}
