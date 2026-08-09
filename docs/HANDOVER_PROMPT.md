@@ -29,22 +29,24 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 16,3 %): 112 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 17,1 %): 102 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 37–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, geprüft sind 36 von 72 Seiten. Struktur: Deutsch 1–19 und Englisch 20–36
-  (**beide vollständig geprüft**), Französisch 37–53, Schwedisch 54–71, Impressum 72.
-  Als **einziges** Dokument mit echter Textebene erlaubt es die Gegenüberstellung von
-  extrahiertem Text und Seitenbild; genau daraus entsteht hier der Erkenntnisgewinn,
-  nicht aus „Textebene vorhanden". Alle vier bisherigen Batches haben ihre stärksten
-  Funde aus genau diesem Vergleich gezogen. Mitzuerledigen: im schwedischen Teil die
-  Befehle `fence pa`/`fence av` (Seiten 59 und 67, Textebenen-Beleg zu DSC-067) im
-  Seitenbild sichern und das Impressum (Seite 72, Herstelleradresse) erfassen; im
-  französischen Teil die Befehle `gardiennage active`/`desactive` (Seiten 42 und 50)
-  bestätigen und gegen die abweichenden SN-045-Befehle halten (DSC-067).
+- **DOC-BMA-SN044, Seiten 47–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, geprüft sind 46 von 72 Seiten. Struktur: Deutsch 1–19 und Englisch 20–36
+  (**vollständig**), Französisch 37–53 (**geprüft bis 46**), Schwedisch 54–71,
+  Impressum 72. Als **einziges** Dokument mit echter Textebene erlaubt es die
+  Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus entsteht hier der
+  Erkenntnisgewinn. Mitzuerledigen: im restlichen französischen Teil (47–53) die drei
+  übrigen Querverweise (DSC-055), die Meldungsbilder (erwartbar deutsch, DSC-072), den
+  Befehl „gardiennage active" (Seite 50, DSC-067) und die technischen Daten (Seite 52/53,
+  gegen DSC-069/071) prüfen; im schwedischen Teil die Befehle `fence pa`/`fence av`
+  (Seiten 59 und 67, Textebenen-Beleg zu DSC-067) im Seitenbild sichern und **prüfen, ob
+  die Kopfzeilen wie im französischen Teil vom Balken verdeckt sind** (DSC-075);
+  abschließend das Impressum (Seite 72, Herstelleradresse gegen die Kieler
+  Beispieladresse der Screenshots).
 - **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
 
 Vorgehen je Batch von 9–10 Seiten:
@@ -100,28 +102,35 @@ Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, te
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
 
-**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–36 geprüft; das Dokument ist
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–46 geprüft; das Dokument ist
 **viersprachig**: Deutsch 1–19, Englisch 20–36, Französisch 37–53, Schwedisch 54–71,
 Impressum 72):
 
 - Die aufgedruckte Seitenzahl liegt im deutschen Teil **zwei unter** der PDF-Seite, im
-  englischen **zwanzig**, im französischen erwartbar **sechsunddreißig**, im schwedischen
-  erwartbar **dreiundfünfzig** (die Zählung beginnt je Sprachteil neu bei 1; „Seite 15"
-  und „Page 15" existieren im selben PDF). Die Quelle verweist intern auf die
-  **aufgedruckten** Zahlen des jeweiligen Sprachteils – beim Prüfen eines Seitenverweises
-  immer umrechnen und den Versatz je Sprachteil aus dem Seitenbild bestätigen.
+  englischen **zwanzig**, im französischen **siebenunddreißig**, im schwedischen
+  erwartbar **vierundfünfzig** (je Sprachteil beginnt die Zählung neu bei 1). Achtung:
+  **Im französischen Teil sind die Kopfzeilen samt Seitenzahlen unsichtbar** – der graue
+  Balken wird über den weißen Kopfzeilentext gezeichnet (DSC-075, maschinell über die
+  Zeichenreihenfolge belegt). Die Versätze stammen dort aus der Textebene; beim
+  schwedischen Teil zuerst prüfen, ob die Kopfzeilen sichtbar sind.
 - **Die Sprachteile sind keine verlässlichen Übersetzungen.** Belegt sind: der schwedische
-  Befehl `fence av` auf der englischen Seite 25 (DSC-067), „8 seconds" gegen „8 Minuten"
-  in der Betriebsartentabelle (DSC-066), englisch gelehrte Befehle `arm`/`disarm` gegen
-  die abgebildete Geräteliste `SCHARF`/`UNSCHARF` (DSC-054), die nicht existierende
-  „directive 1995/5/EG" (DSC-071), der Verzeichniseintrag 2.4 „Installation instructions"
-  statt Geofencing (DSC-068) und alle vier wörtlich mitübersetzten falschen Querverweise
-  (DSC-055). Jeden Wert jedes Sprachteils gegen den deutschen halten; Abweichungen sind
+  Befehl `fence av` auf der englischen Seite 25 (DSC-067), „8 seconds" gegen deutsch und
+  französisch „8 Minuten" in der Betriebsartentabelle (DSC-066), englisch gelehrte
+  Befehle `arm`/`disarm` gegen die abgebildete Geräteliste `SCHARF`/`UNSCHARF` (DSC-054),
+  die nicht existierende „directive 1995/5/EG" (DSC-071), der englische
+  Verzeichniseintrag 2.4 „Installation instructions" (DSC-068; das französische
+  Verzeichnis ist korrekt), die wörtlich mitübersetzten falschen Querverweise (DSC-055),
+  sinnverändernde französische Übersetzungsfehler samt fehlendem FAQ-Link (DSC-073,
+  DSC-074) und das im Englischen verlorene doppelte A der Adressbuch-Empfehlung
+  (DSC-076). Jeden Wert jedes Sprachteils gegen den deutschen halten; Abweichungen sind
   Funde, keine Flüchtigkeit.
 - **Alle Abbildungen bleiben in jedem Sprachteil die deutschen** (DSC-072): Beispiel-SMS
   mit deutschen Gerätetexten, deutsche Kartenprogramm-Screenshots. In den Records der
   Bildseiten gehört deshalb `de` mit in `languages`; ob die Gerätemeldungen dieser
   Generation überhaupt lokalisiert sind, ist Rückfrage 17.
+- Für Sprachteile ohne muttersprachliche Beurteilbarkeit (Französisch, Schwedisch) gilt:
+  Struktur, Werte und Terminologie prüfen, auffällige Einzelbefunde dokumentieren und im
+  Record eine `language_note` setzen – wie beim Tschechischen in DOC-IBA-SN045.
 - **Die Textebene ist nicht vollständig.** Sie enthält keine Piktogramme, keine
   Farbauszeichnung, keine Warndreiecke, kein einziges der neun Beispiel-SMS-Bilder und an
   einer Stelle ein fehlendes Sternzeichen mitten in einem Befehlscode (DSC-058). Nichts

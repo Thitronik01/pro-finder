@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 31,
+  "overall_percent": 31.1,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,7 +19,7 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 16.3,
+      "percent": 17.1,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
@@ -57,10 +57,10 @@
     {
       "doc_id": "DOC-BMA-SN044",
       "page_count": 72,
-      "percent": 12.5,
+      "percent": 16,
       "status_counts": {
-        "inspected": 36,
-        "not_started": 36
+        "inspected": 46,
+        "not_started": 26
       }
     },
     {
@@ -155,7 +155,9 @@
     "Die englische Seite 25 bis SN-044 druckt den schwedischen Geofencing-Ausschaltbefehl fence av (DSC-067). Wer ihn wie gedruckt sendet, sendet mutmasslich einen ungueltigen Befehl und laesst das Geofencing unbemerkt aktiv. Der Befund verstaerkt BLK-005.",
     "Die technischen Daten weichen zwischen den Generationen ab: Micro-SIM gegen Nano-SIM, feste 21 mA gegen die Spanne 16-21 mA, Richtlinie 1999/5/EG gegen 2014/53/EU (DSC-069). Kein Wert darf generationsuebergreifend uebernommen werden.",
     "Der englische Teil bis SN-044 verwendet unveraendert die deutschen Beispiel-SMS-Bilder (DSC-072, Rueckfrage 17). In welcher Sprache ein Geraet bis SN-044 tatsaechlich meldet, ist unbelegt - eine englische Anleitung kann bis zur Klaerung keine Erkennungsstichwoerter fuer eingehende Meldungen nennen.",
-    "Die englische Konformitaetsangabe bis SN-044 nennt eine nicht existierende Richtlinie 1995/5/EG (DSC-071). Konformitaetsangaben dieser Generation nur aus der deutschen Fassung uebernehmen."
+    "Die englische Konformitaetsangabe bis SN-044 nennt eine nicht existierende Richtlinie 1995/5/EG (DSC-071). Konformitaetsangaben dieser Generation nur aus der deutschen Fassung uebernehmen.",
+    "Der franzoesische Teil bis SN-044 enthaelt sinnveraendernde Uebersetzungsfehler (DSC-073): u.a. wird die maximale GPS-Kabellaenge als feste Laenge ausgegeben und der gelbe LED-Diagnosezustand als Fehlposition statt als Empfangsaufbau beschrieben. Betroffene Aussagen nie aus der franzoesischen Fassung uebernehmen.",
+    "Betriebsart D steht jetzt zwei zu eins: deutsch und franzoesisch 8 Minuten, englisch 8 seconds (DSC-066). Der Wert bleibt bis zur Bestaetigung durch THITRONIK ungenannt."
   ],
-  "next_action": "Die verbliebenen 112 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 37-72 (Franzoesisch 37-53, Schwedisch 54-71, Impressum 72; dabei auf den Seiten 59 und 67 die Befehle fence pa/av im Seitenbild sichern) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Deutscher und englischer Teil von DOC-BMA-SN044 sind vollstaendig geprueft. Parallel dazu koennen jetzt die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
+  "next_action": "Die verbliebenen 102 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 47-72 (Rest Franzoesisch 47-53 mit den Querverweisen aus DSC-055 und den Meldungsbildern zu DSC-072; Schwedisch 54-71, dabei auf den Seiten 59 und 67 die Befehle fence pa/av im Seitenbild sichern und pruefen, ob die Kopfzeilen wie im franzoesischen Teil verdeckt sind, DSC-075; Impressum 72) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Parallel dazu koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
 }

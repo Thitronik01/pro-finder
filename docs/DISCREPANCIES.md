@@ -873,6 +873,10 @@ belegt, nicht aus einer Zusammenfassung.
   zutreffend übernommen. Die Fehler liegen also in der Vorlage, nicht in einer
   Sprachfassung; jede weitere Sprachfassung dieses Dokuments wird sie erwartbar ebenfalls
   enthalten.
+- **Nachtrag 2026-08-09 (französischer Teil):** Erwartung eingetreten – der erste
+  betroffene Verweis des französischen Teils steht ebenfalls falsch: „(voir 2.5)" für den
+  Kartenlink auf Seite 45 (gemeint ist 2.6). Die übrigen drei Verweisstellen liegen auf
+  den noch ungeprüften Seiten 48–51.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-056 – Die Steuerberechtigung hängt auch bis SN-044 an einem nirgends erklärten Zeichen (bis SN-044)
@@ -901,6 +905,9 @@ belegt, nicht aus einer Zusammenfassung.
   in beiden Sprachteilen. Auch die Berechtigungsregel bleibt englisch unausgesprochen: die
   Beispieltabelle auf Seite 28 reiht autorisierte Nummern mit Plus- und die nicht
   autorisierte mit Minuszeichen an, ohne dass irgendein Satz die Zeichen erklärt.
+- **Nachtrag 2026-08-09 (französischer Teil):** Dritter Sprachteil, derselbe Widerspruch –
+  Seite 44 führt das Kennzeichen als kleines fettes „s" ein, Seite 45 schreibt « S » groß.
+  Auch die Plus-/Minus-Regel bleibt französisch unausgesprochen.
 - **Schwere:** hoch · **Status:** offen – verstärkt BLK-006, an THITRONIK zu melden
   (Rückfrage 10)
 
@@ -925,6 +932,10 @@ belegt, nicht aus einer Zusammenfassung.
   „according to the query codes table" (Seite 28). Die Vorseite 27 enthält keine Tabelle,
   sondern nur den Verweis auf die Kartenunterlagen und einen FAQ-Link. Der Vorlagenfehler
   besteht in beiden Sprachteilen.
+- **Nachtrag 2026-08-09 (französischer Teil):** Auch französisch wird zweimal auf die
+  Tabelle verwiesen („dans le tableau des codes d'interrogation de la page précédente",
+  Seite 45). Dort ist die Lücke am größten: Die Vorseite 44 enthält weder Tabelle noch den
+  angekündigten FAQ-Link – der Link fehlt im französischen Teil vollständig (DSC-074).
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-058 – Ein funktionsrelevantes Zeichen fehlt in der Textebene (bis SN-044)
@@ -952,6 +963,10 @@ belegt, nicht aus einer Zusammenfassung.
   Stern in Strukturabbildung und Erläuterung, ein gewöhnliches ASCII-Sternchen in den
   Zellen der Beispieltabelle (beide bei 400 dpi gesichert). Welches Zeichen tatsächlich zu
   tippen ist, lässt sich der Seite nicht entnehmen.
+- **Nachtrag 2026-08-09 (französischer Teil):** Identisches Muster auf Seite 45 –
+  sechsstrahliger Stern im Diagramm und in den roten Absätzen, ASCII-Sternchen in den
+  Tabellenzellen, Private-Use-Zeichen in der Textebene. Der Doppelglyphen-Befund ist
+  damit in allen drei geprüften Sprachteilen Vorlage.
 - **Schwere:** hoch · **Status:** offen
 
 ### DSC-059 – Neun Gerätezustände, unterschieden allein über die LED-Farbe (bis SN-044)
@@ -1186,6 +1201,11 @@ belegt, nicht aus einer Zusammenfassung.
   wer sie nach der falschen Sprachfassung wählt, erhält im Ernstfall sechzigmal seltener
   eine Position als erwartet, oder produziert sechzigmal mehr kostenpflichtige SMS als
   kalkuliert.
+- **Nachtrag 2026-08-09 (französischer Teil):** Die französische Tabelle (Seite 40) nennt
+  „8 minutes (dès qu'une tension est délivrée …)" – bei 400 dpi gesichert. Damit steht es
+  **zwei zu eins gegen die englische Fassung**; dasselbe Ausreißermuster wie bei DSC-020,
+  wo ebenfalls die englische Fassung allein abwich. Welcher Wert technisch gilt, bleibt
+  trotzdem eine Frage an THITRONIK.
 - **Schwere:** hoch (sicherheitsrelevanter technischer Wert) · **Status:** offen –
   Rückfrage 16 an THITRONIK
 
@@ -1212,12 +1232,15 @@ belegt, nicht aus einer Zusammenfassung.
   ungültigen Befehl. Im besten Fall antwortet das Gerät mit einer Hilfe-SMS; im schlechteren
   bleibt das Geofencing aktiv und liefert genau die Fehlalarme weiter, die der Abschnitt
   abstellen will.
-- **Generationenvergleich der Befehlssätze (Stand der Textebene, Seiten teils ungeprüft):**
-  Auch bis SN-044 hat jede Sprachfassung einen eigenen Befehlssatz – DE „Fence an"/„fence
-  aus", EN „Fence on"/„Fence off", SV „fence pa"/„fence av", FR „gardiennage
-  active"/„gardiennage desactive". Die französischen Befehle unterscheiden sich zudem von
-  denen der SN-045-Fassung („activer/desactiver le gardiennage", DSC-033) – **derselbe
-  Befehl hat sich innerhalb einer Sprache zwischen den Generationen geändert.**
+- **Generationenvergleich der Befehlssätze:** Auch bis SN-044 hat jede Sprachfassung einen
+  eigenen Befehlssatz – DE „Fence an"/„fence aus", EN „Fence on"/„Fence off", SV „fence
+  pa"/„fence av" (Textebene, Seiten 59/67 noch ungeprüft), FR „gardiennage
+  active"/„gardiennage desactive". Der französische Ausschaltbefehl ist seit dem
+  2026-08-09 **bei 500 dpi im Seitenbild gesichert** (Seite 42). Die französischen Befehle
+  unterscheiden sich zudem von denen der SN-045-Fassung („activer/desactiver le
+  gardiennage", DSC-033) – **derselbe Befehl hat sich innerhalb einer Sprache zwischen den
+  Generationen geändert**, sogar in der Wortstellung (Substantiv+Partizip gegen
+  Infinitiv+Artikel).
 - **Schwere:** hoch (sicherheitsrelevanter Befehl) · **Status:** offen – gehört zu
   BLK-005; Nachtrag zu Rückfrage 1
 
@@ -1229,7 +1252,9 @@ belegt, nicht aus einer Zusammenfassung.
     Verzeichnis (Seite 2) führt 2.4 als „Geofencing" (im Seitenbild bestätigt), die
     deutsche Abschnittsüberschrift auf Seite 15 ebenso. **Am 2026-08-09 abgeschlossen:**
     Die englische Abschnittsüberschrift auf Seite 33 lautet im Seitenbild „2.4 Geofencing"
-    – der Verzeichniseintrag benennt den Abschnitt schlicht falsch.
+    – der Verzeichniseintrag benennt den Abschnitt schlicht falsch. Das **französische**
+    Verzeichnis (Seite 37) führt 2.4 korrekt als „Geofencing" – der Fehler ist eine
+    Eigenheit des englischen Teils, kein Vorlagenfehler.
   - Der Verweis „(see 2.1, Fig. 1)" auf Seite 22 nummeriert eine Abbildung, die es nicht
     gibt: Der englische Abschnitt 2.1 (Seiten 30–31, geprüft) trägt an keiner seiner neun
     Beispiel-SMS-Abbildungen eine Nummer oder Bildunterschrift. Der Verweis läuft ins
@@ -1365,3 +1390,120 @@ belegt, nicht aus einer Zusammenfassung.
   englischsprachige Anleitung dieser Generation nennen müsste.
 - **Schwere:** hoch (Meldungen sind ohne die abgebildeten Stichwörter nicht zuzuordnen) ·
   **Status:** offen – Rückfrage 17
+
+### DSC-073 – Sinnverändernde Übersetzungsfehler im französischen Teil (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, französische Seiten 38 bis 44
+- **Befund:** Anders als die redaktionellen Sammelpositionen verändern diese Stellen die
+  **Aussage**:
+  - Seite 38: „la longueur du câble … **est de 2m**" – aus der Obergrenze (DE „darf 2m
+    nicht überschreiten", EN „must not exceed 2 m") wird eine feste Kabellänge.
+  - Seiten 39/40: „Si vous appelez **les numéros de téléphone enregistrés sur la carte
+    SIM** du Pro-finder" – angerufen wird laut den anderen Fassungen die **Rufnummer der
+    eingelegten SIM-Karte**; die französische Formulierung spricht im Plural von auf der
+    Karte gespeicherten Nummern. Ein Leser kann verstehen, er müsse eine Zielrufnummer
+    anrufen.
+  - Seite 42: LED gelb blinkend = „la position **n'est pas la bonne**" – aus „noch keine
+    gültige Position" (normaler Empfangsaufbau) wird „die Position ist nicht die
+    richtige" (klingt nach Fehlfunktion).
+  - Seite 44: „peuvent commander les sorties du Pro-finder par SMS **pour** demander des
+    comptes-rendus d'état" – aus zwei getrennten Rechten der autorisierten Nummern
+    (Ausgänge steuern **und** Statusberichte anfordern) wird eine Zweckverbindung.
+  - Seite 44: „Ils ne **contiennent** que des messages d'état" – „enthalten" statt
+    „empfangen".
+  - Seite 44: „La LED d'état rouge clignote d'abord brièvement, **puis la LED jaune puis
+    verte clignote**" – aus dem gelb/grünen **Wechselblinken** (ein Zustand, so auch die
+    LED-Liste auf Seite 46) wird eine **Abfolge** zweier Blinkfarben.
+  - Seite 41: Die Batteriewarnung nennt nur „Le WiPro" – der Zusatz « all in one » der
+    deutschen und englischen Warnung fehlt.
+  - Seite 40: Der Info-Absatz ist grammatisch zerbrochen („Une connexion avec Wipro est
+    pas possible avec ce. De Pro-finder SN 0686-010 …") – fehlende Verneinung, hängendes
+    „ce", kalkierte Präposition; er liest sich wie eine unlektorierte maschinelle
+    Übersetzung mitten in einem sonst idiomatischen Text.
+- **Warum das zählt:** Für den Übersetzungsworkflow des Piloten bestätigt das die Regel,
+  dass der geprüfte deutsche Master die einzige Quelle ist. Die französische Fassung
+  dieser Generation ist an mehreren funktionsrelevanten Stellen keine zuverlässige
+  Wiedergabe – dieselbe Fehlerklasse, die ab SN-045 als DSC-026/DSC-032 dokumentiert ist.
+- **Schwere:** mittel bis hoch · **Status:** offen – muttersprachlicher Review;
+  betroffene Aussagen nie aus der französischen Fassung übernehmen
+
+### DSC-074 – Der angekündigte FAQ-Link fehlt im französischen Teil (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, französische Seite 44 (intern „Page 7", verdeckt)
+- **Beleg:** „Une liste des codes d'interrogation les plus courants se trouve sur le lien
+  suivant" – danach endet die Seite; die untere Seitenhälfte ist leer. Im Seitenbild
+  bestätigt.
+- **Befund:** Die deutsche (Seite 9) und die englische Fassung (Seite 27) drucken an
+  dieser Stelle die FAQ-URL. Die französische kündigt den Link an und lässt ihn weg. Wer
+  den Abfragecode seiner Prepaid-Karte sucht, wird auf ein nicht vorhandenes Ziel
+  verwiesen – zusätzlich verweist Seite 45 auf eine „Tabelle der vorherigen Seite", die
+  ebenfalls nicht existiert (DSC-057). Im französischen Teil führt damit **kein einziger**
+  der drei Wege zu den Abfragecodes (Kartenunterlagen ausgenommen).
+- **Schwere:** mittel · **Status:** offen
+
+### DSC-075 – Die Kopfzeilen des französischen Teils werden vom grauen Balken verdeckt (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, französische Seiten 37 bis 46 (geprüfter Bereich; der Rest
+  des Sprachteils ist beim Prüfen der Seiten 47–53 zu bestätigen)
+- **Beleg:** Auf allen zehn geprüften Seiten ist der graue Kopfzeilenbalken visuell leer
+  (150 und 300 dpi). Die Kopfzeilentexte („Manuel Pro-finder", „Page n") stehen als
+  weißer Text an der korrekten Position in der Textebene. Maschinell nachgewiesen: Auf
+  PDF-Seite 40 haben die Kopfzeilen-Textspans die Zeichenreihenfolge 406–408 und das
+  graue Balkenrechteck die 409 – **der Balken wird nach dem Text gezeichnet und verdeckt
+  ihn**. Auf den englischen Seiten ist die Reihenfolge umgekehrt (Balken 62, Text 63–65),
+  dort sind die Kopfzeilen sichtbar.
+- **Befund und Folgen:**
+  - Der gesamte geprüfte französische Teil hat **keine sichtbaren Seitenzahlen** und
+    keine sichtbaren Kolumnentitel – in jedem konformen Viewer und im Druck.
+  - Das Inhaltsverzeichnis (Seite 37) und interne Verweise nennen Seitenzahlen, die ein
+    Leser nirgends wiederfinden kann.
+  - Die Textebene enthält Text, der nicht sichtbar ist – die **umgekehrte** Richtung des
+    sonst dokumentierten Problems (sichtbarer Inhalt fehlt in der Textebene, DSC-058
+    u. a.): Ein Screenreader liest Kopfzeilen vor, die sehende Nutzer nicht sehen, und
+    Sehende können die vorgelesene Seitenangabe nicht verifizieren.
+- **Schwere:** mittel bis hoch (Orientierung und Zitierfähigkeit eines ganzen
+  Sprachteils) · **Status:** offen
+
+### DSC-076 – Die englische Fassung verliert das doppelte A der Adressbuch-Empfehlung (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, deutsche Seite 8, englische Seite 26, französische
+  Seite 43; alle drei Stellen bei 400 dpi gesichert
+- **Beleg:** DE „Wenn Sie Alarm folgendermaßen schreiben, steht Sie immer an erster
+  Stelle: **AAlarm**." · FR „nous vous conseillons de l'orthographier ainsi :
+  **AAlarm**." · EN „If you write alarm as shown below, it will always be at the top of
+  the list: **Alarm**."
+- **Befund:** Die Empfehlung, den Adressbucheintrag mit doppeltem A zu schreiben, damit
+  die Alarmnummer im Telefon ganz oben steht, ist im Deutschen und Französischen
+  erhalten. Die englische Fassung druckt nur „Alarm" – das funktionstragende zweite A ist
+  verloren, und der Satz „as shown below" verweist damit auf nichts Erkennbares: Der
+  englische Leser sieht zweimal dieselbe Schreibung und kann die Empfehlung nicht
+  befolgen.
+- **Schwere:** gering bis mittel (Komfortfunktion im Alarmfall) · **Status:** offen –
+  gehört zur Liste der englischen Substanzfehler (DSC-066, DSC-067, DSC-071)
+
+### DSC-077 – Redaktionelle Befunde im französischen Teil bis SN-044 (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, französische Seiten 37 bis 46
+- **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite, analog DSC-064
+  und DSC-070.
+  - Seite 39: „quelque soit le mode de service" statt „quel que soit"; „Geofencing" im
+    Zwischentitel gegen „géofencing" im Fließtext; „compte-rendu de l'état" gegen
+    „compte-rendu d'état" auf derselben Seite.
+  - Seite 40: „une WiPro peut également être connecté" – fehlende Angleichung
+    („connectée"); „Wipro" mit kleinem p im Info-Absatz (an derselben Stelle wie in DE
+    und EN – Vorlagenfehler).
+  - Seite 41: „doit être de plus 13,5 V" – fehlendes „de"; „des relais automobile" ohne
+    Pluralangleichung; „diode de marche à vide" für die Freilaufdiode (üblich: „diode de
+    roue libre") – parallel zum fragwürdigen „recovery diode" der englischen Fassung.
+  - Seite 42: „il est probable que l'antenne GPS est défectueuse" – Indikativ nach „il
+    est probable que".
+  - Seite 43: „t-mobile" klein (wie DE; EN schreibt „T-mobile" – keine Fassung trifft
+    „T-Mobile"); Überschrift „Programmer des numéros …" gegen Verzeichniseintrag
+    „Programmation des numéros …".
+  - Seite 44: zerbrochene Abfragecode-Sätze („Les codes d'interrogation (utilisé pour les
+    prépayés) pour le crédit, retirez des documents …" – Kongruenz und Syntax); „Comme
+    vous aussi devez pouvoir trouver …" – Wortstellung.
+  - Seite 45: „1er/2ème/3ème" – uneinheitliche Ordinalschreibung (üblich: 2e/3e).
+  - Terminologie: „gardiennage" (Befehl), „géofencing" und „geofencing" (Fließtext) –
+    drei Formen für dieselbe Funktion im selben Sprachteil.
+- **Schwere:** gering · **Status:** offen – gesammelt für den muttersprachlichen Review

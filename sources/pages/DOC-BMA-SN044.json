@@ -2887,143 +2887,670 @@
     },
     {
       "page": 37,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1528,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1244,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["fr"],
+      "summary": "Erste Seite des französischen Teils. Inhaltsverzeichnis \"Sommaire\" mit den Spaltenköpfen \"Chapitre\", \"Page\", \"Contenu\": Kapitel 1 \"Installation\" (1.1 bis 1.10, interne Seiten 1 bis 9), Kapitel 2 \"Utilisation du module\" (2.1 bis 2.8, interne Seiten 10 bis 15), Kapitel 3 \"Divers\" (3.1 bis 3.4, interne Seite 16). Der Eintrag 2.4 lautet korrekt \"Geofencing\" - der Benennungsfehler des englischen Verzeichnisses (\"Installation instructions\", DSC-068) ist auf den englischen Teil beschränkt. Darunter \"Exclusion de garantie :\" mit zwei Absätzen; die französische Haftungsklausel nennt wie die deutsche ausdrücklich auch die fehlerhafte Installation (\"ou de sa mauvaise installation\") - die englische Fassung hatte diesen Zusatz weggelassen. Der graue Kopfzeilenbalken ist visuell leer: Die Kopfzeile \"Manuel Pro-finder\" steht als weißer Text in der Textebene, wird aber vom Balken verdeckt (DSC-075).",
+      "headings": [
+        "Sommaire",
+        "1 Installation",
+        "2 Utilisation du module",
+        "3 Divers",
+        "Exclusion de garantie :"
+      ],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Dreispaltiges Inhaltsverzeichnis (Chapitre, Page, Contenu) mit 22 Einträgen; Tab-Layout, nicht als Tabelle ausgezeichnet",
+          "columns": ["Chapitre", "Page", "Contenu"]
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Kopfzeile des französischen Teils ist unsichtbar: Der weiße Kopfzeilentext steht in der Textebene an der richtigen Position, der graue Balken wird aber nach ihm gezeichnet und verdeckt ihn (maschinell belegt, DSC-075). Ein Screenreader liest eine Kopfzeile vor, die sehende Nutzer nicht sehen - die umgekehrte Richtung des sonst dokumentierten Problems.",
+        "Die Spalte \"Page\" des Verzeichnisses verweist auf interne Seitenzahlen, die im gesamten französischen Teil nirgends sichtbar aufgedruckt sind (DSC-075) - die Einträge sind für Leser nicht auffindbar.",
+        "Der Sprachwechsel vom englischen zum französischen Teil ist wie alle Sprachwechsel des Dokuments nirgends angekündigt oder ausgezeichnet.",
+        "Das Verzeichnis ist ein Tab-Layout ohne Tabellenauszeichnung und ohne Verknüpfungen.",
+        "Keine sichtbare Seitenzahl (Kopfzeile verdeckt); die Zuordnung aufgedruckt = PDF minus 37 ergibt sich nur aus der unsichtbaren Textebene."
+      ],
+      "discrepancies": [
+        "Der Eintrag 2.4 lautet \"Geofencing\" - korrekt, im Seitenbild bestätigt. Der TOC-Fehler \"Installation instructions\" ist damit eine Eigenheit des englischen Teils (Nachtrag zu DSC-068).",
+        "Die französische Haftungsklausel entspricht der deutschen einschließlich des Zusatzes zur fehlerhaften Installation; die englische Fassung (PDF-Seite 20) ist enger formuliert - die drei Fassungen der Klausel sind nicht deckungsgleich.",
+        "\"Questionnement de la position par smartphone\" für 2.6 - ungewöhnliche Substantivierung; die Abschnittsüberschrift auf PDF-Seite 50 ist beim Prüfen dieser Seite gegen den Eintrag zu halten."
+      ],
+      "terminology_findings": [
+        "\"numéros de téléphone favoris\" für die Zielrufnummern - dritter Benennungsansatz nach deutsch \"Zielrufnummern\" und englisch \"destination/target phone numbers\": die französische Fassung nennt sie \"Favoriten\".",
+        "\"Utilisation du module\" für \"Handhabung des Moduls\"/\"Operation of the module\".",
+        "\"Mise au rebut\" für die Entsorgungshinweise."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi; die Zeile 2.4 im Seitenbild geprüft. Die verdeckte Kopfzeile wurde maschinell nachgewiesen: Textspans der Kopfzeile (weiß, Sequenz 406-408 auf PDF-Seite 40) liegen vor dem grauen Balkenrechteck (Sequenz 409), auf den englischen Seiten ist die Reihenfolge umgekehrt (Balken 62, Text 63-65). Sprache Französisch; Struktur, Terminologie und Werte geprüft, Grammatik und Stil mit dokumentierten Einzelbefunden.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; auffällige Grammatik- und Sinnfehler sind einzeln dokumentiert (DSC-073, DSC-077), eine vollständige Sprachbewertung braucht einen muttersprachlichen Review."
     },
     {
       "page": 38,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1504,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1229,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 1\" (nur in der verdeckten Kopfzeile; Versatz des französischen Teils: aufgedruckt = PDF minus 37). Französisches Gegenstück zu den PDF-Seiten 3 und 21. Einleitungssatz zwischen zwei Warndreiecken, Abschnitt \"1.1 Étendue de la fourniture\" mit demselben Produktfoto und der Legende (1 Pro-finder, 2 Antenne, 3 Faisceau de câbles, 4 Porte-fusibles, 5 Fusible plat 3 A, 6 Vis de fixation, 7 Câble de branchement WiPro III / « all in one »). Abschnitt \"1.2 Choix de l'emplacement de montage\": gesicherter, aber wartungszugänglicher Ort im Fahrzeuginneren, nie im Motorraum, Geräteoberseite nach oben mit freier Sicht zum Satelliten, Kunststoff/Glas/Holz unproblematisch. Beim externen GPS-Empfänger weicht die Kabelangabe ab: \"la longueur du câble entre le module GSM et l'antenne GPS est de 2m\" - die Länge wird als fester Wert genannt, während Deutsch und Englisch ein Maximum angeben (DSC-073).",
+      "headings": ["1.1 Étendue de la fourniture", "1.2 Choix de l'emplacement de montage"],
+      "technical_values": [
+        {
+          "value": "Fusible plat 3 A",
+          "context": "Deckt sich mit \"Flachsicherung 3A\" und \"Blade-type fuse 3 A\"",
+          "safety_critical": true
+        },
+        {
+          "value": "Kabellänge GSM-Modul zu GPS-Antenne: \"est de 2m\" - als fester Wert formuliert",
+          "context": "Die deutsche Fassung (PDF-Seite 3) und die englische (PDF-Seite 21) geben 2 m als Obergrenze an (\"darf nicht überschreiten\"/\"must not exceed\"). Die französische Formulierung macht aus dem Maximum eine feste Länge (DSC-073)",
+          "safety_critical": true
+        },
+        {
+          "value": "Montage nie im Motorraum, Oberseite nach oben, freie Sicht zum Satelliten",
+          "context": "Deckt sich mit den beiden anderen Sprachteilen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Produktfoto mit Bildmarken 1 bis 7 - dasselbe Foto wie auf den PDF-Seiten 3 und 21, Legende französisch",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung der Legende zu den Teilen entsteht nur über die räumliche Position der Ziffern im Foto"
+        }
+      ],
+      "warnings_found": [
+        "\"Veuillez lire attentivement les consignes suivantes pour éviter toute fausse manœuvre.\" - zwischen zwei grauen Warndreiecken, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl vom grauen Balken verdeckt (DSC-075); die Seite trägt keine sichtbare Nummer.",
+        "Die Überschrift 1.1 ist zweizeilig umbrochen (\"1.1 Étendue / de la fourniture\") und steht links neben der Antenne des Produktfotos - die Zuordnung von Überschrift und Foto ist rein räumlich.",
+        "Bildmarken-Zuordnung nur über Position, wie in den anderen Sprachteilen.",
+        "Warndreiecke ohne Textentsprechung."
+      ],
+      "discrepancies": [
+        "\"est de 2m\" - die Kabellänge wird als fester Wert statt als Obergrenze angegeben; sinnverändernde Übersetzung (DSC-073).",
+        "\"2m\" ohne Leerzeichen wie im deutschen Original; die englische Fassung schreibt \"2 m\".",
+        "Legende und Werte decken sich im Übrigen mit den anderen Sprachteilen."
+      ],
+      "terminology_findings": [
+        "\"antenne GPS\" durchgehend - die französische Fassung folgt der deutschen Benennung (Antenne), nicht der englischen (receiver).",
+        "\"Faisceau de câbles\" für Kabelbaum; im SN-045-Dokument nennt die französische Fassung das Verbindungskabel abweichend \"câble de connexion RJ10\" (DSC-036).",
+        "\"fausse manœuvre\" für \"Fehlbedienung\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Werte gegen die deutsche (PDF-Seite 3) und englische Fassung (PDF-Seite 21) gehalten; die 2m-Abweichung ist die einzige inhaltliche. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 39,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1645,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1365,
+      "content_type": "abbildung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 2\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 4 und 22. Obere Seitenhälfte: \"1.3 Branchements, visualisation et organes de commande\" mit demselben beschrifteten Foto der Geräteschmalseite; Beschriftungen französisch (\"Branchement de l'antenne GPS externe (option)\", \"Non utilisé\", \"Branchement WiPro III / « all in one »\", \"Commutateur des modes de service\", \"LED d'état\", \"Broche 1 masse (GND)\" bis \"Broche 8 tension de service (U1) +12 V\", \"Broche 6 sortie B\", \"Broche 7 sortie A\"). Untere Seitenhälfte: \"1.4 Choix du mode de service\" mit den ersten vier unterstrichenen Zwischentiteln. Im ersten Zwischentitel weicht der Inhalt ab: \"Si vous appelez les numéros de téléphone enregistrés sur la carte SIM du Pro-finder\" - angerufen werden laut französischem Text die auf der SIM-Karte gespeicherten Nummern statt der Rufnummer der eingelegten SIM-Karte (DSC-073); dieselbe Formulierung wiederholt sich auf PDF-Seite 40.",
+      "headings": [
+        "1.3 Branchements, visualisation et organes de commande",
+        "1.4 Choix du mode de service",
+        "Appel déclenche un compte-rendu de l'état :",
+        "Comptes-rendus d'état automatiques :",
+        "Compte-rendu d'état contient U1, U2, U3, U4, U5 :",
+        "Geofencing commutable via broche 3 :"
+      ],
+      "technical_values": [
+        {
+          "value": "Anschlussbelegung: Broche 1 Masse (GND), Broches 2-5 Messeingänge (U2-U5), Broche 6 Ausgang B, Broche 7 Ausgang A, Broche 8 Betriebsspannung (U1) +12 V",
+          "context": "Deckt sich mit den PDF-Seiten 4 und 22",
+          "safety_critical": true
+        },
+        {
+          "value": "Geofencing über Broche 3 ereignisgesteuert schaltbar (z. B. Motor oder Licht)",
+          "context": "\"en allumant le moteur, ou la lumière\" - deckt sich sinngemäß mit Zündung/Innenlicht der anderen Fassungen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto der Geräteschmalseite mit farbigen Verbindungslinien zu den Broche-Beschriftungen - identisches Foto und identische Linienführung wie auf den PDF-Seiten 4 und 22, Beschriftungen französisch; \"Non utilisé\" hellgrau",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung von Beschriftung zu Steckerposition läuft ausschließlich über die farbigen Linien, deren Farben den Aderfarben entsprechen, ohne dass diese benannt würden"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die Pinbeschriftungen stehen wie im englischen Teil in der Textebene; die Zuordnung zur Position bleibt rein visuell über die farbigen Linien.",
+        "\"Non utilisé\" hellgrau - Status nur über Textfarbe.",
+        "Die vier Zwischentitel sind nur durch Unterstreichung ausgezeichnet.",
+        "\"etc …\" mit gebrochenem Auslassungszeichen am Absatzende (\"ou la lumière, etc …\")."
+      ],
+      "discrepancies": [
+        "\"Si vous appelez les numéros de téléphone enregistrés sur la carte SIM du Pro-finder\" - sinnverändernd: Deutsch und Englisch beschreiben den Anruf bei der Rufnummer der im Pro-finder eingelegten SIM-Karte; die französische Fassung spricht im Plural von den auf der Karte gespeicherten Nummern (DSC-073). Ein Leser könnte verstehen, er müsse eine der Zielrufnummern anrufen.",
+        "\"quelque soit le mode de service\" statt \"quel que soit\" (DSC-077).",
+        "\"Geofencing commutable via broche 3 :\" mit \"Geofencing\", der Fließtext darunter schreibt \"géofencing\" mit Akzent und klein - zwei Schreibweisen in einem Absatz (DSC-077)."
+      ],
+      "terminology_findings": [
+        "\"Broche\" für Pin - die SN-045-Fassung verwendet dieselbe Benennung.",
+        "\"Commutateur des modes de service\" für Betriebsartenschalter.",
+        "\"compte-rendu d'état\" für Statusbericht; im Zwischentitel einmal \"compte-rendu de l'état\" mit Artikel - zwei Formen auf einer Seite."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Beschriftungen mit den PDF-Seiten 4 und 22 verglichen; identisches Foto. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 40,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1971,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1535,
+      "content_type": "tabelle",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 3\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 5 und 23. Fortsetzung von 1.4 mit zwei Zwischentiteln (\"Appel active ou désactive le WiPro et déclenche le compte-rendu d'état :\" - mit derselben sinnverändernden Anruf-Formulierung wie PDF-Seite 39 - und \"SMS d'appel au secours quand tension sur broche 3 :\"). Danach der Info-Absatz in grammatisch zerbrochenem Französisch: \"Une connexion avec Wipro est pas possible avec ce. De Pro-finder SN 0686-010 une WiPro peut également être connecté à ces modes.\" - fehlende Verneinungspartikel, hängendes \"ce\", Wort-für-Wort-Kalkierung; liest sich wie eine unlektorierte maschinelle Übersetzung (DSC-073). \"Wipro\" mit kleinem p wie in der deutschen und englischen Fassung - der Vorlagenfehler ist sprachübergreifend. Untere Hälfte: \"Tableau des modes de service\" mit 16 Zeilen; Betriebsart C \"90 secondes\", Betriebsart D \"8 minutes\" - die französische Fassung stützt den deutschen Wert gegen die englischen \"8 seconds\" (DSC-066).",
+      "headings": [
+        "1.4 Choix du mode de service",
+        "Appel active ou désactive le WiPro et déclenche le compte-rendu d'état :",
+        "SMS d'appel au secours quand tension sur broche 3 :",
+        "Tableau des modes de service"
+      ],
+      "technical_values": [
+        {
+          "value": "Ab Pro-finder SN 0686-010 kann auch in den Betriebsarten 7 bis D eine WiPro angeschlossen werden (\"De Pro-finder SN 0686-010 ...\")",
+          "context": "Seriennummerngrenze mit führender Null deckungsgleich in allen drei geprüften Sprachteilen",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart D: Intervall \"8 minutes (dès qu'une tension est délivrée et que le Pro-finder est enregistré)\"",
+          "context": "Bei 400 dpi bestätigt. Die französische Fassung nennt wie die deutsche 8 Minuten; nur die englische nennt 8 seconds. Damit steht es zwei zu eins gegen die englische Fassung - dasselbe Ausreißermuster wie bei DSC-020 (Nachtrag zu DSC-066, Rückfrage 16)",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsart C: 90 secondes; Intervalle 15/60 minutes, 6/24 heures; Betriebsart 8: >6 V allumé / <5 V éteint; Betriebsart B: >6 V éteint / <5 V allumé",
+          "context": "Alle übrigen Tabellenwerte decken sich mit der deutschen und englischen Fassung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Betriebsartentabelle mit 16 Zeilen und gruppiertem Kopf (fünf Unterspalten U1-U5), verbundene Zellen in den Zeilen C-F - strukturgleich mit den PDF-Seiten 5 und 23",
+          "columns": [
+            "Mode de service",
+            "Appel déclenche un compte-rendu d'état",
+            "Appel active ou désactive le WiPro",
+            "Intervalle des comptes-rendus d'état automatiques",
+            "U1",
+            "U2",
+            "U3",
+            "U4",
+            "U5",
+            "Géofencing commutable via broche 3",
+            "SMS d'appel au secours quand tension sur broche 3"
+          ]
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Gruppierter Tabellenkopf und verbundene Zellen ohne Tags - wie in den anderen Sprachteilen nicht-visuell nicht nachvollziehbar.",
+        "Die Betriebsarten 0 und 9 sind auch in der französischen Tabelle in keiner Spalte unterscheidbar.",
+        "Die Zwischentitel sind nur durch Unterstreichung ausgezeichnet.",
+        "Der Spaltenkopf schreibt \"Géofencing\" mit Akzent, der Zwischentitel auf PDF-Seite 39 \"Geofencing\" ohne - zwei Schreibweisen im selben Tabellenkontext."
+      ],
+      "discrepancies": [
+        "Betriebsart D: \"8 minutes\" - die französische Fassung bestätigt den deutschen Wert; die englischen \"8 seconds\" (PDF-Seite 23) sind damit der Ausreißer unter drei Fassungen (Nachtrag zu DSC-066). Welcher Wert technisch gilt, bleibt trotzdem offen (Rückfrage 16).",
+        "Der Info-Absatz ist grammatisch zerbrochen: \"Une connexion avec Wipro est pas possible avec ce. De Pro-finder SN 0686-010 ...\" - fehlendes \"n'\", hängendes \"avec ce\", kalkierte Präposition \"De\" statt \"À partir de\" (DSC-073). Der Widerspruch Verbot/Erlaubnis in aufeinanderfolgenden Sätzen besteht wie in den anderen Fassungen.",
+        "\"Wipro\" mit kleinem p im Info-Absatz - derselbe Satzfehler an derselben Stelle in Deutsch, Englisch und Französisch: der Fehler liegt in der Vorlage (DSC-070/DSC-077).",
+        "\"connecté\" ohne Angleichung (\"une WiPro peut être connecté\") - Genusfehler (DSC-077)."
+      ],
+      "terminology_findings": [
+        "\"SMS d'appel au secours\" für die Hilfe-SMS - die SN-045-Fassung und PDF-Seite 48 sind dagegen zu halten, wenn geprüft.",
+        "\"enregistré\" für \"eingebucht\" in den Zeilen C und D.",
+        "\"Géofencing\"/\"Geofencing\" gemischt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi; die Tabellenzeilen C und D bei 400 dpi nachgerendert, weil an der Zeile D DSC-066 hängt. Alle Tabellenwerte gegen die deutsche und englische Fassung gehalten. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; die grammatischen Brüche des Info-Absatzes sind auch ohne muttersprachliche Kompetenz eindeutig."
     },
     {
       "page": 41,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2510,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 2047,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 4\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 6 und 24. \"1.5 Branchement du module\": Broche 1 (schwarz) und Broche 8 (rot) polrichtig an 12 V Gleichspannung, Pluskabel mit beiliegender Sicherung; Broches 2-5 Messeingänge (0-30 V), Broche 3 je nach Betriebsart Geofencing; WiPro III oder WiPro « all in one » mit beiliegendem Kabel verbinden; rote Warnung \"!!! Le WiPro et le Pro-finder doivent être branchés sur la même batterie !!!\" - ohne den Zusatz « all in one », den die deutsche und englische Warnung führen; Broches 6 und 7 Transistorausgänge 12 V/500 mA, darüber Relais mit \"diode de marche à vide\" (fragwürdige Übersetzung für Freilaufdiode), Garantieverlust bei Überlast; drei Schaltarten; roter Verweis auf Kapitel 2.7. \"1.6 Montage de l'antenne GPS (option)\": Klebepad nach oben, Fläche sauber/trocken/fettfrei, unter 15 °C vorwärmen, möglichst waagerecht. \"1.7 Branchement de l'antenne GPS\": spannungsfrei schalten, Kabelbaum trennen, GPS-Stecker in die vierpolige Buchse; danach mindestens 5 Minuten über 13,5 V (\"doit être de plus 13,5 V\" - fehlendes \"de\"), Fahrzeug starten, GPS-Empfang sicherstellen. Rechts dasselbe Foto des GPS-Empfängers mit zwei roten Verbindungslinien.",
+      "headings": [
+        "1.5 Branchement du module",
+        "1.6 Montage de l'antenne GPS (option)",
+        "1.7 Branchement de l'antenne GPS"
+      ],
+      "technical_values": [
+        {
+          "value": "Broche 1 schwarz, Broche 8 rot, 12 V c.c., Messeingänge 0-30 V, Ausgänge 12 V/500 mA, Relais über 500 mA, Garantieverlust bei Überlast",
+          "context": "Alle Werte decken sich mit der deutschen und englischen Fassung",
+          "safety_critical": true
+        },
+        {
+          "value": "Nach der Installation mindestens 5 Minuten über 13,5 V, Fahrzeug starten",
+          "context": "Wert deckungsgleich; die Formulierung \"doit être de plus 13,5 V\" lässt ein \"de\" aus (DSC-077)",
+          "safety_critical": true
+        },
+        {
+          "value": "WiPro und Pro-finder an derselben Batterie",
+          "context": "Die französische Warnung nennt nur \"Le WiPro\" - der Zusatz « all in one » der deutschen und englischen Fassung fehlt (DSC-073)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des GPS-Empfängers mit Klebepad und Stecker, zwei rote Verbindungslinien - identisch mit den PDF-Seiten 6 und 24",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung ausschließlich über die roten Linien"
+        },
+        {
+          "description": "Zwei Zeigehand-Piktogramme vor den Handlungsabsätzen von 1.5",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"!!! Le WiPro et le Pro-finder doivent être branchés sur la même batterie !!!\" - rot, dreifache Ausrufezeichen, ohne Signalwort",
+        "\"La garantie est perdue en cas de surcharge.\" - schwarz im Fließtext",
+        "\"Le chapitre 2.7 explique comment commander les sorties par SMS.\" - rot gesetzt, obwohl bloßer Querverweis"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Rot kennzeichnet wieder sowohl die Batteriewarnung als auch einen bloßen Querverweis - dieselbe Doppelverwendung wie in den anderen Sprachteilen.",
+        "Die drei Schaltarten stehen als Spiegelstrichliste ohne Listenauszeichnung.",
+        "Die roten Verbindungslinien zum Foto haben dieselbe Farbe wie die Warnung."
+      ],
+      "discrepancies": [
+        "Die Batteriewarnung lässt « all in one » weg - Deutsch und Englisch warnen ausdrücklich für die Kombination WiPro \"all in one\"; die französische Warnung nennt unspezifisch \"Le WiPro\" (DSC-073).",
+        "\"diode de marche à vide\" für die Freilaufdiode - fachlich üblich wäre \"diode de roue libre\"; \"marche à vide\" bedeutet Leerlauf (DSC-077); parallel zum fragwürdigen \"recovery diode\" der englischen Fassung.",
+        "\"doit être de plus 13,5 V\" - fehlendes \"de\" (\"de plus de 13,5 V\") (DSC-077).",
+        "\"des relais automobile de qualité supérieure\" - fehlende Pluralangleichung \"automobiles\" (DSC-077)."
+      ],
+      "terminology_findings": [
+        "\"12 V c.c.\" für 12 VDC.",
+        "\"coussinet adhésif\" für das Klebepad.",
+        "\"faisceau de câbles\" für den Hauptkabelbaum - ohne das Attribut \"Haupt-\", das die deutsche Fassung ab Seite 11 verwendet."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Alle Werte gegen die deutsche (PDF-Seite 6) und englische Fassung (PDF-Seite 24) gehalten; deckungsgleich bis auf die dokumentierten Formulierungsabweichungen. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 42,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1529,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1239,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 5\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 7 und 25, Fortsetzung von \"1.7 Branchement de l'antenne GPS\". GPS-Diagnose über Schalterstellung F; drei LED-Zustände mit denselben Farbbalken (rot durchgezogen, gelb gestrichelt, grün durchgezogen): rot leuchtend = GPS nicht verbunden (Anschluss spannungsfrei wiederholen, sonst Antenne vermutlich defekt), gelb blinkend = \"les données GPS sont bien reçues, cependant la position n'est pas la bonne\" - sinnverändernd: statt \"noch keine gültige Position\" sagt die französische Fassung, die Position sei \"nicht die richtige\" (DSC-073); nach 5 Minuten Montageort ungeeignet oder Fahrzeug überdacht (die Fassung übernimmt die englische Zusatzursache), grün leuchtend = Position bestimmt (Schalter zurück; leuchtet dann rot, fehlt die SIM-Karte; weitere Zustände in 1.10). Abschließend der Reflexions-Absatz (Fehlalarme ohne Fahrzeugbewegung möglich; Geofencing vor Garage/Überdachung deaktivieren) und die Anweisung: SMS mit « gardiennage desactive » an die Nummer des GSM-Moduls senden - bei 500 dpi zeichengenau gesichert.",
+      "headings": ["1.7 Branchement de l'antenne GPS"],
+      "technical_values": [
+        {
+          "value": "Schalterstellung F = GPS-Diagnose; LED rot = nicht verbunden, gelb blinkend = Daten ohne gültige Position, grün = Position bestimmt; 5-Minuten-Frist",
+          "context": "Zustände und Frist decken sich mit den anderen Fassungen; die gelbe Zustandsbeschreibung ist sinnverschoben (siehe Diskrepanzen)",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehl dieser Seite, wörtlich: « gardiennage desactive » zum Deaktivieren des Geofencings",
+          "context": "Bei 500 dpi zeichengenau gesichert, ohne Akzent gesetzt. Vierter Sprachbefehlssatz des Dokuments (DE fence aus, EN fence av/Fence off, SV fence pa/av laut Textebene). Die SN-045-Fassung schreibt französisch abweichend \"desactiver le gardiennage\" - umgekehrte Wortstellung; derselbe Befehl hat sich innerhalb der Sprache zwischen den Generationen geändert (DSC-067). Ausdrücklich nur Quellenzitat für BLK-005; nicht für den Content-Layer",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Farbbalken unter den Zustandszeilen (rot durchgezogen, gelb gestrichelt, grün durchgezogen) - identische Darstellung wie auf den PDF-Seiten 7 und 25",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und Strichmuster; Blinken gegen Dauerlicht über das Muster unterscheidbar, die Zustände untereinander nur über die Farbe"
+        },
+        {
+          "description": "Zeigehand-, Pfeil- und Uhr-Piktogramme",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"des alarmes de vol risquent d'être déclenchées sans que le véhicule ait changé de place\" - schwarz im Fließtext, ohne Hervorhebung"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die drei LED-Zustände sind innerhalb der Gruppen nur über Farbe unterscheidbar; die Balken tragen Blinken/Dauerlicht farbunabhängig - wie in den anderen Sprachteilen.",
+        "Die Anweisung mit dem SMS-Befehl ist nur durch das Zeigehand-Piktogramm als Handlung gekennzeichnet; der Befehl steht in Guillemets im Fließtext.",
+        "Der Hinweis auf Fehlalarme steht ohne Hervorhebung im Fließtext."
+      ],
+      "discrepancies": [
+        "\"la position n'est pas la bonne\" für den gelben Blinkzustand - sinnverändernd gegenüber \"jedoch ohne gültige Position\"/\"without a valid position\": Die französische Formulierung behauptet eine falsche Position statt einer noch fehlenden (DSC-073). Für die Diagnose ist der Unterschied real: Der Zustand beschreibt den normalen Empfangsaufbau, nicht einen Fehler.",
+        "« gardiennage desactive » - Wortstellung Substantiv+Partizip; die SN-045-Fassung schreibt \"desactiver le gardiennage\" (Infinitiv+Artikel). Innerhalb des Französischen haben sich die Befehle zwischen den Generationen geändert (Nachtrag zu DSC-067).",
+        "Die französische Fassung übernimmt die englische Zusatzursache für dauerhaft gelbes Blinken (Fahrzeug überdacht), die der deutschen fehlt - die Fassungen sind nicht aus einer einzigen Quelle abgeleitet.",
+        "\"il est probable que l'antenne GPS est défectueuse\" - nach \"il est probable que\" stünde üblicherweise der Subjonctif oder \"soit\" (DSC-077)."
+      ],
+      "terminology_findings": [
+        "\"gardiennage\" für Geofencing im Befehl, \"géofencing\" und \"geofencing\" im Fließtext - drei Formen im französischen Teil.",
+        "\"diagnostic GPS\" für GPS-Diagnose.",
+        "\"la position GPS est déterminée\" für \"GPS Position okay\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi; die Befehlszeile mit « gardiennage desactive » bei 500 dpi zeichengenau nachgerendert, weil an ihr der französische SN-044-Befehlssatz (DSC-067) hängt. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 43,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2413,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1992,
+      "content_type": "warnhinweise",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 6\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 8 und 26. Beginn von \"1.8 Programmer des numéros de téléphone favoris\" (Überschrift abweichend vom Verzeichniseintrag \"Programmation des numéros ...\"). Einleitung: gültige micro-SIM eines Mobilfunkanbieters erforderlich. Rosa Kasten mit sechs Warndreiecken: PIN vor dem Einlegen auf 0000 ändern; PIN-Abfrage muss aktiviert sein; Rufumleitungen und Mailbox deaktivieren; Komfortfunktionen deaktivieren; beim Einlegen spannungsfrei; Roamingfähigkeit für Auslandsnutzung. Rechts dasselbe Foto des geöffneten Geräts mit roter Verbindungslinie und das gelbe ESD-Symbol ohne jeden erklärenden Text. Untere Hälfte, drei fett betitelte Absätze: \"Carte SIM utilisée :\" (Empfehlung t-mobile oder Vodafone; Prepaid ideal; Guthaben wird mit jeder SMS übertragen; Karte muss ohne Entnahme aufladbar sein), \"Enregistrer le numéro du Pro-finder :\" (Namen vergeben, idealerweise ALARM; für die Spitzenposition \"AAlarm\" schreiben - das doppelte A ist hier wie im deutschen Original erhalten, die englische Fassung hat es verloren (DSC-076); Landesvorwahl immer mitspeichern, Beispiel +49 für Deutschland), \"Commander par SMS ou par appel :\" (jede SMS kostet je nach Betreiber; Steuerung erzeugt immer eine Status-SMS).",
+      "headings": [
+        "1.8 Programmer des numéros de téléphone favoris",
+        "Carte SIM utilisée :",
+        "Enregistrer le numéro du Pro-finder :",
+        "Commander par SMS ou par appel :"
+      ],
+      "technical_values": [
+        {
+          "value": "PIN vor dem Einlegen auf 0000 ändern und PIN-Abfrage aktiviert lassen",
+          "context": "Das Vorgabenpaar steht damit wortgleich in allen drei geprüften Sprachteilen - es ist Vorlage, nicht Übersetzungsfehler (Rückfrage 15)",
+          "safety_critical": true
+        },
+        {
+          "value": "micro-SIM; spannungsfrei einlegen; Rufumleitungen, Mailbox und Komfortfunktionen deaktivieren; Roaming für Auslandsnutzung",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Adressbuch-Empfehlung: Eintrag \"AAlarm\" mit doppeltem A für die Spitzenposition",
+          "context": "\"nous vous conseillons de l'orthographier ainsi : AAlarm\" - bei 400 dpi gesichert; deckt sich mit dem deutschen Original (Seite 8), während die englische Fassung nur \"Alarm\" druckt (DSC-076)",
+          "safety_critical": false
+        },
+        {
+          "value": "Landesvorwahl-Beispiel: +49 für Deutschland",
+          "context": "Die französische Fassung behält das deutsche Beispiel; die englische lokalisiert auf +44/UK - die Lokalisierungstiefe ist je Sprachteil verschieden",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Foto des geöffneten Geräts mit eingelegter SIM und roter Verbindungslinie - identisch mit den PDF-Seiten 8 und 26",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung nur über die rote Linie"
+        },
+        {
+          "description": "Gelbes ESD-Warnsymbol oberhalb des Fotos, ohne jeden erklärenden Text",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Symbol - der Befund aus DSC-063 gilt unverändert auch im französischen Teil"
+        },
+        {
+          "description": "Sechs graue Warndreiecke am rosa Kasten",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position"
+        }
+      ],
+      "warnings_found": [
+        "Rosa Kasten mit sechs SIM-Vorgaben, je mit Warndreieck, ohne Signalwort - in der Textebene gewöhnliche Absätze"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Das ESD-Symbol bleibt auch im französischen Teil ohne ein einziges Wort zur elektrostatischen Entladung (Nachtrag-Bestätigung zu DSC-063).",
+        "Die sechs Vorgaben sind nur durch Kastenfarbe und Dreiecke als Pflichten erkennbar.",
+        "Die Empfehlung \"AAlarm\" ist nur im Fließtext genannt; wer sie überliest, versteht den Zweck des doppelten A nicht."
+      ],
+      "discrepancies": [
+        "\"AAlarm\" mit doppeltem A - deckungsgleich mit dem deutschen Original; die englische Fassung (PDF-Seite 26) druckt an gleicher Stelle \"Alarm\" und verliert damit die funktionale Sortier-Empfehlung (DSC-076).",
+        "Die Abschnittsüberschrift lautet \"Programmer des numéros ...\", der Verzeichniseintrag \"Programmation des numéros ...\" - Verb gegen Substantiv (DSC-077).",
+        "\"t-mobile\" klein wie in der deutschen Fassung; die englische schreibt \"T-mobile\" - drei Fassungen, zwei Schreibungen, keine korrekt (T-Mobile).",
+        "\"depuis un guichet bancaire\" für das Aufladen am Automaten - die deutsche Fassung nennt \"EC-Automaten\", die englische \"ATM\"; inhaltlich deckungsgleich."
+      ],
+      "terminology_findings": [
+        "\"micro-SIM\" klein wie in der englischen Fassung; die deutsche schreibt \"Micro-SIM\".",
+        "\"fonctions confort\" für Komfortfunktionen.",
+        "\"numéro émetteur\" für die Absendernummer."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi; die AAlarm-Passage bei 400 dpi nachgerendert und mit der deutschen (Seite 8, 400 dpi) und englischen Stelle (Seite 26, 400 dpi) verglichen - daraus stammt DSC-076. Die sechs Kastenvorgaben einzeln gegen die deutsche Fassung gehalten; deckungsgleich. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 44,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1889,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1554,
+      "content_type": "anleitung",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 7\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 9 und 27. Fortsetzung von 1.8: Nach Einlegen und Verriegeln der SIM kann die Spannung angelegt werden; die LED-Beschreibung weicht ab: \"La LED d'état rouge clignote d'abord brièvement, puis la LED jaune puis verte clignote\" - aus dem gelb/grünen Wechselblinken der anderen Fassungen wird eine Abfolge erst gelb, dann grün (DSC-073). Danach Programmier-SMS, bei Erfolg grünes Blinken und Status-SMS. Bis zu 10 numéros favoris. Vier Typen: Numéro master (Spitzenposition, kann jederzeit ohne Schalter neue Nummern programmieren), Numéros autorisés (\"peuvent commander les sorties du Pro-finder par SMS pour demander des comptes-rendus d'état\" - aus zwei getrennten Rechten der anderen Fassungen wird eine Zweckverbindung, DSC-073), Numéros non autorisés (\"Ils ne contiennent que des messages d'état\" - \"enthalten\" statt \"empfangen\", DSC-073), Numéros de smartphone (mit kleinem fetten \"s\" bei der Programmierung; Kartenlink). Darunter zwei zerbrochene Sätze zu den Abfragecodes (\"Les codes d'interrogation (utilisé pour les prépayés) pour le crédit, retirez des documents ...\") und die Ankündigung \"Une liste des codes d'interrogation les plus courants se trouve sur le lien suivant\" - der angekündigte Link fehlt vollständig; die Seite endet ohne URL (DSC-074).",
+      "headings": [
+        "1.8 Programmer des numéros de téléphone favoris",
+        "Numéro master :",
+        "Numéros autorisés :",
+        "Numéros non autorisés :",
+        "Numéros de smartphone :"
+      ],
+      "technical_values": [
+        {
+          "value": "LED-Ablauf nach dem Einlegen laut französischer Fassung: erst kurz rot, dann \"la LED jaune puis verte clignote\"",
+          "context": "Sinnverändernd: Deutsch und Englisch beschreiben gelb/grünes Wechselblinken (ein Zustand), die französische Fassung eine Abfolge zweier Blinkfarben (DSC-073). Die LED-Zustandsliste auf PDF-Seite 46 führt korrekt \"Jaune / verte clignote\" als einen Zustand",
+          "safety_critical": true
+        },
+        {
+          "value": "Bis zu 10 numéros favoris; Masternummer programmiert jederzeit ohne Schalterzugriff",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Rechte der autorisierten Nummern laut französischer Fassung: Ausgänge per SMS steuern, um Statusberichte anzufordern (\"pour demander\")",
+          "context": "Die deutsche und englische Fassung nennen zwei getrennte Rechte (Ausgänge steuern UND Statusberichte anfordern); die französische verbindet sie zu einem Zweck (DSC-073). Für die Berechtigungsbeschreibung des Piloten ist die deutsche Fassung maßgeblich",
+          "safety_critical": true
+        },
+        {
+          "value": "Smartphone-Kennzeichen: kleines fettes \"s\"",
+          "context": "PDF-Seite 45 schreibt in der Strukturerklärung « S » groß - der s/S-Widerspruch besteht damit in allen drei geprüften Sprachteilen (DSC-056)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Der angekündigte Link fehlt: \"se trouve sur le lien suivant\" ohne folgende URL - wer die Abfragecodes sucht, wird auf ein nicht vorhandenes Ziel verwiesen (DSC-074). Die deutsche und englische Fassung drucken an dieser Stelle die FAQ-URL.",
+        "Die vier Typdefinitionen sind eine zweispaltige Tab-Liste ohne Auszeichnung.",
+        "Die beiden Abfragecode-Sätze sind syntaktisch zerbrochen und auch für sprachkundige Leser kaum verständlich."
+      ],
+      "discrepancies": [
+        "Der im Text angekündigte FAQ-Link fehlt vollständig (DSC-074) - inhaltliche Lücke nur der französischen Fassung; Deutsch (Seite 9) und Englisch (Seite 27) drucken die URL.",
+        "\"puis la LED jaune puis verte clignote\" - aus dem Wechselblinken wird eine Abfolge (DSC-073).",
+        "\"pour demander des comptes-rendus d'état\" statt \"et\" - aus zwei Rechten wird ein Zweck (DSC-073).",
+        "\"Ils ne contiennent que des messages d'état\" - \"contiennent\" (enthalten) statt \"reçoivent\" (empfangen) (DSC-073).",
+        "\"Les codes d'interrogation (utilisé pour les prépayés) pour le crédit, retirez des documents de votre carte prépayée ou demandez-le auprès de votre fournisseur.\" - Kongruenz- und Syntaxbrüche (\"utilisé\" Singular, \"retirez des documents\", \"demandez-le\") (DSC-077).",
+        "Das kleine \"s\" hier gegen « S » auf PDF-Seite 45 - dritte Sprachfassung mit demselben Widerspruch (Nachtrag zu DSC-056)."
+      ],
+      "terminology_findings": [
+        "\"numéros favoris\" durchgehend - die Kurzform von \"numéros de téléphone favoris\".",
+        "\"Numéro master\" - englisches Lehnwort wie im Deutschen (\"Masternummer\").",
+        "\"carte géographique\" für die Kartenanzeige."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Der fehlende Link ist im Seitenbild bestätigt: Nach der Ankündigungszeile folgt nichts mehr, die untere Seitenhälfte ist leer. Typdefinitionen einzeln gegen die deutsche und englische Fassung gehalten. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 45,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2351,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1919,
+      "content_type": "tabelle",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 8\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 10 und 28. Obere Hälfte: Strukturabbildung der Programmier-SMS mit rotem sechsstrahligem Stern vor \"100#\", \"P\", Pluszeichen, rotem \"S\" und drei Beispielrufnummern, erläutert über Führungslinien (1er/2ème/3ème numéro favori, Landesvorwahl mit +49-Beispiel, P für Prepaid, Sternchencode für die Guthabenabfrage); Hinweis, dass die Leerzeichen nur der Lesbarkeit dienen. Roter Hinweis zum « S » (macht die Positionsübertragung zum Link, \"(voir 2.5)\" - derselbe falsche Querverweis wie in Deutsch und Englisch, gemeint ist 2.6, DSC-055) mit der Warnung, es nur für Smartphones zu verwenden; roter Absatz zum Sternchencode (kann je nach Anbieter anders lauten, steht \"dans le tableau des codes d'interrogation de la page précédente\" - die Tabelle existiert nicht, und auf der Vorseite fehlt zusätzlich der angekündigte Link, DSC-057/DSC-074) und die Warnung, bei Vertragskarten keinesfalls einen Code einzugeben. Untere Hälfte: dreispaltige Beispieltabelle (ein Empfänger; Master plus autorisierte Nummer; Master als Smartphonenummer plus nicht autorisierte Nummer) - in den Zellen beginnt der Code mit einem ASCII-Sternchen, im Diagramm mit dem sechsstrahligen Stern; die Prepaid-Zelle bricht eine Rufnummer mitten in der Ziffernfolge um.",
+      "headings": [
+        "1.8 Programmer des numéros de téléphone favoris",
+        "Exemples de différents SMS de programmation"
+      ],
+      "technical_values": [
+        {
+          "value": "Aufbau der Programmier-SMS strukturgleich mit den anderen Fassungen; keine Leerzeichen in der SMS",
+          "context": "Beispielrufnummern werden bewusst nicht wiedergegeben",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Vertragskarten keinen Abfragecode eingeben (Fehlfunktionsgefahr)",
+          "context": "\"En aucun cas il ne faut donner de code d'interrogation si la carte est employée avec abonnement sous peine de dysfonctionnements du système.\" - deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        },
+        {
+          "value": "Zwei Glyphen für das erste Codezeichen auf einer Seite: sechsstrahliger Stern (Diagramm, rote Absätze) gegen ASCII-Sternchen (Tabellenzellen)",
+          "context": "Dasselbe Muster wie auf den PDF-Seiten 10 und 28 - der Befund ist sprachübergreifend Vorlage (Nachtrag zu DSC-058)",
+          "safety_critical": true
+        },
+        {
+          "value": "Das Smartphone-Kennzeichen erscheint hier als « S » groß",
+          "context": "Gegen das kleine \"s\" der Vorseite - s/S-Widerspruch wie in Deutsch und Englisch (DSC-056)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreispaltige Beispieltabelle; die Prepaid-Spalte bricht eine Beispielnummer mitten in der Ziffernfolge ohne Trennzeichen um - wie in den anderen Sprachteilen",
+          "columns": [
+            "SMS de programmation pour",
+            "Contenu du SMS de programmation si la carte dans le Pro-finder est avec abonnement",
+            "Contenu du SMS de programmation si la carte dans le Pro-finder est prépayée"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "description": "Strukturabbildung der Programmier-SMS mit Führungslinien - strukturgleich mit den PDF-Seiten 10 und 28, Erläuterungen französisch",
+          "has_text_equivalent": false,
+          "relies_on": "Zuordnung ausschließlich über die Führungslinien; das Sternzeichen steht in der Textebene als Private-Use-Zeichen (U+F0DA)"
+        }
+      ],
+      "warnings_found": [
+        "\"À n'utiliser que si l'appareil destinataire est réellement un « smartphone ».\" - rot und fett, ohne Signalwort",
+        "\"En aucun cas il ne faut donner de code d'interrogation ...\" - rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075); der rote Verweis \"de la page précédente\" funktioniert nur noch relativ, weil keine Seitenzahlen sichtbar sind.",
+        "Das Sternzeichen steht in der Textebene als unbrauchbares Private-Use-Zeichen; die Tabellenzellen verwenden ein ASCII-Sternchen - zwei Zeichen für denselben Code (Nachtrag zu DSC-058).",
+        "Die Strukturabbildung transportiert ihre Information über Führungslinien.",
+        "Rot kennzeichnet Warnungen und funktionstragende Zeichen zugleich."
+      ],
+      "discrepancies": [
+        "\"(voir 2.5)\" für den Kartenlink - derselbe falsche Querverweis wie im deutschen und englischen Teil (gemeint ist 2.6); dritter Sprachteil mit identischem Fehler, die Verweise sind Vorlage (Nachtrag zu DSC-055).",
+        "\"dans le tableau des codes d'interrogation de la page précédente\" - die Tabelle existiert im französischen Teil ebenso wenig wie in den anderen; zusätzlich fehlt auf der Vorseite sogar der angekündigte Link (Nachträge zu DSC-057 und DSC-074).",
+        "« S » groß gegen \"s\" klein auf der Vorseite (DSC-056).",
+        "Beispielnummern und Tabellenaufbau decken sich mit den anderen Fassungen; das +49-Beispiel bleibt deutsch."
+      ],
+      "terminology_findings": [
+        "\"lien hypertexte\" für den anklickbaren Link.",
+        "\"avec abonnement\" für Vertragskarte, \"prépayée\" für Prepaid.",
+        "\"1er/2ème/3ème numéro favori\" - Ordinalformen gemischt (üblich wäre 2e/3e)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Sternglyphen und Verweis im Seitenbild geprüft; Struktur mit den PDF-Seiten 10 und 28 verglichen. Beispielrufnummern bewusst nicht übernommen. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 46,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1555,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1271,
+      "content_type": "tabelle",
+      "languages": ["fr"],
+      "summary": "Intern \"Page 9\" (verdeckt). Französisches Gegenstück zu den PDF-Seiten 11 und 29. \"1.9 Suppression des numéros de téléphone favoris\" mit der beidseitig eingerahmten Bedingung \"!! La carte SIM doit être obligatoirement dans l'appareil !!\" (wie im deutschen Original; die englische Fassung rahmt nur einseitig). Vier Handlungsschritte mit Zeigehand-Piktogrammen: Kabelbaum abziehen, Schalter auf E, Kabelbaum wieder anschließen (warten bis gelb/grünes Blinken), Schalter zurück; danach ist der Speicher leer. Rot: Der Speicher kann auch ohne Schalter von der Masternummer per Programmier-SMS nach 1.8 überschrieben werden (\"écrasée\" in Anführungszeichen). \"1.10 Visualisation des états de service (LED d'état)\": neun Zustände mit denselben Farbbalken wie in den anderen Sprachteilen (gestrichelt für Blinken, durchgezogen für Dauerlicht, Zweifarbwechsel im Balken): rouge/jaune clignote (Netzsuche + keine Favoriten), rouge clignote (Netzsuche/kein GSM-Empfang), verte clignote (Empfang + Favoriten vorhanden), rouge allumée (SIM fehlt oder defekt), rouge/verte clignote (PIN nicht 0000), jaune clignote (Speicher leer), jaune/verte clignote (keine Favoriten + Empfang), verte allumée (sendet SMS), jaune allumée (Modemverbindung). Abschließend fett: Nach Installation und Programmierung blinkt die LED im Normalbetrieb grün.",
+      "headings": [
+        "1.9 Suppression des numéros de téléphone favoris",
+        "1.10 Visualisation des états de service (LED d'état)"
+      ],
+      "technical_values": [
+        {
+          "value": "Löschvorgang: Kabelbaum ab, Schalter auf E, Kabelbaum an, gelb/grünes Blinken abwarten, Schalter zurück",
+          "context": "Deckt sich mit den anderen Fassungen; die Abbruchbedingung hängt an einer zweifarbigen Blinkanzeige",
+          "safety_critical": true
+        },
+        {
+          "value": "Neun LED-Zustände; \"Rouge / verte clignote : PIN n'est pas 0000\"",
+          "context": "Alle neun Zustände decken sich mit der deutschen und englischen Liste; die PIN-0000-Erwartung des Geräts ist damit in drei Sprachteilen belegt (Rückfrage 15)",
+          "safety_critical": true
+        },
+        {
+          "value": "Masternummer kann den Speicher jederzeit ohne Schalter überschreiben",
+          "context": "Deckt sich mit den anderen Fassungen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige LED-Zustandsliste mit neun Zeilen und Farbbalken - strukturgleich mit den PDF-Seiten 11, 29",
+          "columns": ["LED-Zustand", "Bedeutung"]
+        }
+      ],
+      "figures": [
+        {
+          "description": "Neun Farbbalken (gestrichelt/durchgezogen, Zweifarbwechsel) unter den Zustandszeilen - identische Darstellung wie in den anderen Sprachteilen",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und Strichmuster; innerhalb der Blink- und Dauerlichtgruppe bleibt die Farbe das einzige Merkmal (DSC-059)"
+        },
+        {
+          "description": "Vier Zeigehand-Piktogramme, ein Pfeil-Piktogramm, ein weiteres Zeigehand-Piktogramm beim roten Hinweis",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen"
+        }
+      ],
+      "warnings_found": [
+        "\"!! La carte SIM doit être obligatoirement dans l'appareil !!\" - fett, beidseitige Ausrufezeichenpaare, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Kopfzeile und Seitenzahl verdeckt (DSC-075).",
+        "Die neun Zustände sind innerhalb der Gruppen nur über die Farbe unterscheidbar (DSC-059) - sprachübergreifend identisch.",
+        "Die vier Handlungsschritte sind weder nummeriert noch als Liste ausgezeichnet.",
+        "Die SIM-Bedingung steht als zweite Überschriftszeile und ist strukturell keine Warnung."
+      ],
+      "discrepancies": [
+        "Alle neun LED-Zustände decken sich mit der deutschen und englischen Liste; \"réception\" lässt wie die deutsche Kurzform das \"eingebucht\" der Langform weg - kein Wertunterschied.",
+        "\"écrasée\" in Anführungszeichen für das Überschreiben - stilistische Distanzierung, die die anderen Fassungen nicht haben.",
+        "Die Ausrufezeichen-Rahmung folgt dem deutschen Original (beidseitig), nicht der englischen Variante (einseitig) - die Sprachteile wurden unabhängig voneinander gesetzt."
+      ],
+      "terminology_findings": [
+        "\"recherche de réseau\" für Netzsuche, \"réception\" für eingebucht/Empfang.",
+        "\"la mémoire des numéros favoris\" für den Zielrufnummernspeicher.",
+        "\"position d'origine\" für die Ausgangsstellung des Schalters."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Alle neun Zustände einzeln gegen die deutsche (PDF-Seite 11) und englische Liste (PDF-Seite 29) gehalten; deckungsgleich. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
       "page": 47,

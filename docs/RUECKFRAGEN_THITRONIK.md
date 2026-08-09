@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 211 der 323 PDF-Seiten sowie die
+Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 221 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -489,7 +489,12 @@ nach der falschen Fassung plant, erhält im Ernstfall sechzigmal seltener eine P
 erwartet – oder produziert sechzigmal mehr kostenpflichtige SMS als kalkuliert. Solange der
 Wert nicht bestätigt ist, nennt der Pilot für die Betriebsart D kein Intervall.
 
-_Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5 und 23_
+**Nachtrag 2026-08-09:** Die französische Tabelle (Seite 40) nennt ebenfalls **8 minutes**.
+Damit steht es zwei zu eins gegen die englische Fassung – dasselbe Muster wie bei der
+Stromaufnahme (Frage 2), wo ebenfalls die englische Fassung allein abweicht. Vermutlich
+ist „8 Minuten" richtig; bestätigen können nur Sie.
+
+_Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5, 23 und 40_
 
 ---
 
@@ -563,6 +568,10 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** alle vier falschen Querverweise des deutschen Teils sind wörtlich in den englischen übernommen – Vorlagenfehler       | DSC-055, S. 28, 30, 31, 33     |
 | **bis SN-044:** die englische Konformitätserklärung nennt eine nicht existierende „directive 1995/5/EG" (deutsch: 1999/5/EG)          | DSC-071, S. 36                 |
 | **bis SN-044:** der Verweis „(see 2.1, Fig. 1)" nummeriert eine Abbildung, die es nicht gibt – keine der neun trägt eine Nummer       | DSC-068, S. 22, 30, 31         |
+| **bis SN-044:** der französische Teil enthält sinnverändernde Übersetzungsfehler (feste 2 m statt Maximum; LED-Zustand als Fehler)    | DSC-073, S. 38–44              |
+| **bis SN-044:** der im französischen Teil angekündigte FAQ-Link fehlt vollständig; kein Weg führt dort zu den Abfragecodes            | DSC-074, S. 44                 |
+| **bis SN-044:** die Kopfzeilen des französischen Teils werden vom grauen Balken verdeckt – keine sichtbaren Seitenzahlen              | DSC-075, S. 37–46              |
+| **bis SN-044:** die englische Fassung verliert das doppelte A der Adressbuch-Empfehlung („Alarm" statt „AAlarm")                      | DSC-076, S. 8, 26, 43          |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue
