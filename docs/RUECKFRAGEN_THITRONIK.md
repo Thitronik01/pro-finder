@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-08 · Grundlage: seitenweise Prüfung von 201 der 323 PDF-Seiten sowie die
+Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 211 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -18,16 +18,17 @@ Geprüft sind bisher der deutsche, englische, französische und tschechische Spr
 `pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf` (DOC-IBA-SN045)
 sowie beide Kurzanleitungen. Sechs Sprachteile stehen aus.
 
-**Neu am 2026-08-08:** Erstmals ist auch die Generation **bis SN-044** in nennenswertem
-Umfang geprüft (DOC-BMA-SN044, Seiten 1–26 von 72, darunter der komplette deutsche Teil
-und der Beginn des englischen). Mehrere der unten stehenden Fragen haben dadurch eine
-zweite Belegquelle bekommen – teils bestätigend, teils mit abweichenden Werten. Diese
-Ergänzungen stehen als **Nachtrag bis SN-044** bei der jeweiligen Frage. Sie sind für Sie
-vermutlich der aufschlussreichste Teil dieses Dokuments, weil sich daran ablesen lässt,
-welche Punkte seit zwei Gerätegenerationen unverändert offen sind und welche erst mit der
-neueren Fassung entstanden. Mit dem englischen Teil kam Frage 16 hinzu (Betriebsart D:
-8 Minuten oder 8 Sekunden), und Frage 1 hat einen zweiten Nachtrag erhalten (der englische
-Teil druckt den schwedischen Geofencing-Befehl).
+**Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen zur Hälfte geprüft
+(DOC-BMA-SN044, Seiten 1–36 von 72) – der **deutsche und der englische Teil sind
+vollständig**. Mehrere der unten stehenden Fragen haben dadurch weitere Belegquellen
+bekommen – teils bestätigend, teils mit abweichenden Werten. Diese Ergänzungen stehen als
+**Nachtrag bis SN-044** bei der jeweiligen Frage. Sie sind für Sie vermutlich der
+aufschlussreichste Teil dieses Dokuments, weil sich daran ablesen lässt, welche Punkte
+seit zwei Gerätegenerationen unverändert offen sind und welche erst mit der neueren
+Fassung entstanden. Aus dem englischen Teil stammen Frage 16 (Betriebsart D: 8 Minuten
+oder 8 Sekunden), Frage 17 (Sprache der Gerätemeldungen) und drei Nachträge zu Frage 1
+(schwedischer Befehl im englischen Teil; Handbuch und Gerät widersprechen sich
+spiegelbildlich in beiden Sprachen).
 
 ---
 
@@ -108,6 +109,16 @@ desactive`) – und die französischen Befehle unterscheiden sich von denen der 
 Sprache zwischen den Generationen geändert.** Welche Befehle akzeptiert ein Gerät bis
 SN-044 in welcher Sprache tatsächlich – und ist `fence av` auf der englischen Seite ein
 Druckfehler?
+
+**Dritter Nachtrag bis SN-044 – der Widerspruch Handbuch gegen Gerät ist spiegelbildlich.**
+Der inzwischen vollständig geprüfte englische Teil lehrt die Schaltbefehle `arm` und
+`disarm` (Seite 32) – auf der gegenüberliegenden Seite 31 ist dieselbe Hilfe-SMS des
+Geräts abgebildet wie im deutschen Teil, und sie führt stattdessen `SCHARF` und
+`UNSCHARF`. Umgekehrt decken sich die englischen **Ausgangsbefehle** (`A on`, `A off`,
+`A pulse`) mit der Geräteliste, die deutschen (`A an`, `A aus`, `A impuls`) nicht. Jede
+Sprachfassung stimmt also mit einem anderen Teil der Geräteliste überein und widerspricht
+dem anderen. Zusätzlich schreibt der englische Teil den Positionsbefehl in zwei Formen
+(`POS` auf Seite 30, `Pos` auf Seite 33) – wie der deutsche.
 
 _Belege: DSC-013, DSC-014, DSC-026, DSC-033, DSC-054, DSC-067_
 
@@ -482,6 +493,30 @@ _Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5 und 23_
 
 ---
 
+## 17. In welcher Sprache meldet ein Pro-finder bis SN-044?
+
+Der englische Teil des Handbuchs bis SN-044 verwendet für sämtliche Beispiel-SMS und
+Bildschirmfotos **unverändert die deutschen Abbildungen**: Die gezeigten Gerätemeldungen
+lauten „Diebstahl", „Spannung unter 11,2V", „Hilfe erbeten", „Einbruch Tuer/Fenster",
+„Gas" und „manueller Alarm", und die abgebildete Hilfe-SMS nennt `SCHARF` und `UNSCHARF` –
+alles in einem englischen Handbuch, das dieselben Meldungen nur als „Theft alert",
+„Voltage warning" usw. beschreibt.
+
+**Die Fragen:** Gibt ein Gerät bis SN-044 seine Meldungen ausschließlich deutsch aus, oder
+werden sie lokalisiert? Falls sie deutsch kommen: An welchen Stichwörtern soll ein
+englischsprachiger Nutzer eine eingehende Meldung erkennen? Und hängt die Sprache der
+akzeptierten **Befehle** (Frage 1) mit der Sprache der ausgegebenen **Meldungen**
+zusammen?
+
+**Warum das drängt:** Für die Generation ab SN-045 zeigt der tschechische Teil lokalisierte
+Geräte-SMS („Neplatny povel!"). Für die ältere Generation legt die Bildwahl das Gegenteil
+nahe. Eine barrierefreie englische Anleitung müsste die tatsächlichen Erkennungsstichwörter
+nennen – welche das sind, lässt sich aus der Quelle nicht entscheiden.
+
+_Beleg: DSC-072; Seitenrecords DOC-BMA-SN044, S. 30, 31 und 35_
+
+---
+
 ## Was der Pilot ohne diese Antworten nicht tun kann
 
 - **Keinen SMS-Befehl veröffentlichen** – weder im deutschen Master noch in einer Übersetzung.
@@ -525,6 +560,9 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** englisches Inhaltsverzeichnis nennt 2.4 „Installation instructions"; der Abschnitt ist Geofencing                     | DSC-068, S. 20                 |
 | **bis SN-044:** SIM-Format Micro-SIM gegen Nano-SIM ab SN-045; Konformität 1999/5/EG gegen 2014/53/EU – Werte nicht übertragbar       | DSC-069, S. 18                 |
 | **bis SN-044:** aufgedruckte Seitenzählung beginnt im englischen Teil neu bei „Page1"; „Seite 15" und „Page 15" im selben PDF         | DSC-068, S. 20–26              |
+| **bis SN-044:** alle vier falschen Querverweise des deutschen Teils sind wörtlich in den englischen übernommen – Vorlagenfehler       | DSC-055, S. 28, 30, 31, 33     |
+| **bis SN-044:** die englische Konformitätserklärung nennt eine nicht existierende „directive 1995/5/EG" (deutsch: 1999/5/EG)          | DSC-071, S. 36                 |
+| **bis SN-044:** der Verweis „(see 2.1, Fig. 1)" nummeriert eine Abbildung, die es nicht gibt – keine der neun trägt eine Nummer       | DSC-068, S. 22, 30, 31         |
 
 **Für die noch ausstehenden sechs Sprachteile gilt:** Erwartbar sind je Sprache ein eigener
 SMS-Befehlssatz, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue

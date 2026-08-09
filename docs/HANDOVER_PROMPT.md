@@ -29,22 +29,22 @@ Beleg in den Seitenrecord.
 ### Der schnellste Weg, den Fortschritt zu heben
 
 Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Der größte Hebel bleibt die
-**PDF-Seitenprüfung** (20 % Gewicht, aktuell 15,6 %): 122 der 323 Seiten sind noch
+**PDF-Seitenprüfung** (20 % Gewicht, aktuell 16,3 %): 112 der 323 Seiten sind noch
 `not_started`. Jede geprüfte Seite zählt unmittelbar.
 
 Offen sind:
 
-- **DOC-BMA-SN044, Seiten 27–72** – vorrangig. Einzige Quelle für die Generation bis
-  SN-044, geprüft sind 26 von 72 Seiten. Die Struktur ist seit dem 2026-08-08 bekannt:
-  Deutsch 1–19 (**vollständig geprüft**), Englisch 20–36 (geprüft bis 26), Französisch
-  37–53, Schwedisch 54–71, Impressum 72. Als **einziges** Dokument mit echter Textebene
-  erlaubt es die Gegenüberstellung von extrahiertem Text und Seitenbild; genau daraus
-  entsteht hier der Erkenntnisgewinn, nicht aus „Textebene vorhanden". Alle drei
-  bisherigen Batches haben ihre stärksten Funde aus genau diesem Vergleich gezogen.
-  Im nächsten Batch (27–36) sind mitzuerledigen: auf Seite 33 die englische
-  Abschnittsüberschrift 2.4 (DSC-068) und die Befehle `Fence on`/`Fence off` (DSC-067)
-  im Seitenbild bestätigen; später im schwedischen Teil die Befehle `fence pa`/`fence av`
-  (Seiten 59 und 67) und das Impressum (Seite 72, Herstelleradresse).
+- **DOC-BMA-SN044, Seiten 37–72** – vorrangig. Einzige Quelle für die Generation bis
+  SN-044, geprüft sind 36 von 72 Seiten. Struktur: Deutsch 1–19 und Englisch 20–36
+  (**beide vollständig geprüft**), Französisch 37–53, Schwedisch 54–71, Impressum 72.
+  Als **einziges** Dokument mit echter Textebene erlaubt es die Gegenüberstellung von
+  extrahiertem Text und Seitenbild; genau daraus entsteht hier der Erkenntnisgewinn,
+  nicht aus „Textebene vorhanden". Alle vier bisherigen Batches haben ihre stärksten
+  Funde aus genau diesem Vergleich gezogen. Mitzuerledigen: im schwedischen Teil die
+  Befehle `fence pa`/`fence av` (Seiten 59 und 67, Textebenen-Beleg zu DSC-067) im
+  Seitenbild sichern und das Impressum (Seite 72, Herstelleradresse) erfassen; im
+  französischen Teil die Befehle `gardiennage active`/`desactive` (Seiten 42 und 50)
+  bestätigen und gegen die abweichenden SN-045-Befehle halten (DSC-067).
 - **DOC-IBA-SN045**, Seiten 101–120, 145–150, 173–190, 198–220, 233–240 und 247.
 
 Vorgehen je Batch von 9–10 Seiten:
@@ -78,7 +78,7 @@ Vorgehen je Batch von 9–10 Seiten:
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind 201 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
+Geprüft sind 211 von 323 Seiten. Bei DOC-IBA-SN045 sind die Sprachteile Deutsch,
 Englisch, Französisch und Tschechisch vollständig und weitere Teile in Stücken erfasst.
 Das Muster ist stabil und wiederholt sich erwartbar:
 
@@ -100,21 +100,28 @@ Wenn du eine Sprache nicht beurteilen kannst: sag es. Struktur, Terminologie, te
 Werte und Layout lassen sich sprachunabhängig prüfen, Grammatik und Stil nicht. Das gehört
 in den `inspected_note` des Seitenrecords, so wie es beim Tschechischen gemacht wurde.
 
-**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–26 geprüft; das Dokument ist
+**Für DOC-BMA-SN044 gilt ein eigenes Muster** (Seiten 1–36 geprüft; das Dokument ist
 **viersprachig**: Deutsch 1–19, Englisch 20–36, Französisch 37–53, Schwedisch 54–71,
 Impressum 72):
 
 - Die aufgedruckte Seitenzahl liegt im deutschen Teil **zwei unter** der PDF-Seite, im
-  englischen Teil **zwanzig** (die Zählung beginnt je Sprachteil neu bei 1; „Seite 15"
+  englischen **zwanzig**, im französischen erwartbar **sechsunddreißig**, im schwedischen
+  erwartbar **dreiundfünfzig** (die Zählung beginnt je Sprachteil neu bei 1; „Seite 15"
   und „Page 15" existieren im selben PDF). Die Quelle verweist intern auf die
   **aufgedruckten** Zahlen des jeweiligen Sprachteils – beim Prüfen eines Seitenverweises
-  immer umrechnen.
-- **Der englische Teil ist keine verlässliche Übersetzung.** Belegt sind: der schwedische
+  immer umrechnen und den Versatz je Sprachteil aus dem Seitenbild bestätigen.
+- **Die Sprachteile sind keine verlässlichen Übersetzungen.** Belegt sind: der schwedische
   Befehl `fence av` auf der englischen Seite 25 (DSC-067), „8 seconds" gegen „8 Minuten"
-  in der Betriebsartentabelle (DSC-066), der Verzeichniseintrag 2.4 „Installation
-  instructions" statt Geofencing (DSC-068) und gemischte britisch/amerikanische
-  Schreibungen (DSC-070). Jeden Wert des englischen Teils gegen den deutschen halten;
-  Abweichungen sind Funde, keine Flüchtigkeit.
+  in der Betriebsartentabelle (DSC-066), englisch gelehrte Befehle `arm`/`disarm` gegen
+  die abgebildete Geräteliste `SCHARF`/`UNSCHARF` (DSC-054), die nicht existierende
+  „directive 1995/5/EG" (DSC-071), der Verzeichniseintrag 2.4 „Installation instructions"
+  statt Geofencing (DSC-068) und alle vier wörtlich mitübersetzten falschen Querverweise
+  (DSC-055). Jeden Wert jedes Sprachteils gegen den deutschen halten; Abweichungen sind
+  Funde, keine Flüchtigkeit.
+- **Alle Abbildungen bleiben in jedem Sprachteil die deutschen** (DSC-072): Beispiel-SMS
+  mit deutschen Gerätetexten, deutsche Kartenprogramm-Screenshots. In den Records der
+  Bildseiten gehört deshalb `de` mit in `languages`; ob die Gerätemeldungen dieser
+  Generation überhaupt lokalisiert sind, ist Rückfrage 17.
 - **Die Textebene ist nicht vollständig.** Sie enthält keine Piktogramme, keine
   Farbauszeichnung, keine Warndreiecke, kein einziges der neun Beispiel-SMS-Bilder und an
   einer Stelle ein fehlendes Sternzeichen mitten in einem Befehlscode (DSC-058). Nichts

@@ -2076,7 +2076,7 @@
         {
           "description": "Drei farbige Balken unter den drei LED-Zustandszeilen: durchgehend rot, gelb gestrichelt (acht Striche), durchgehend grün - eine grafische Nachbildung von Dauerleuchten und Blinken",
           "has_text_equivalent": false,
-          "relies_on": "Farbe und Strichmuster; die Balken fehlen in der Textebene vollständig. Das Blinken ist immerhin zusätzlich zum Farbton über das Muster (gestrichelt gegen durchgehend) unterscheidbar - die einzige Stelle beider bisher geprüfter Sprachteile, an der ein LED-Verhalten nicht allein über Farbe dargestellt wird",
+          "relies_on": "Farbe und Strichmuster; die Balken fehlen in der Textebene vollständig. Das Blinken ist zusätzlich zum Farbton über das Muster (gestrichelt gegen durchgehend) unterscheidbar. Korrektur 2026-08-09: Die ursprüngliche Einordnung als einzige derartige Stelle beider Sprachteile war falsch - der deutsche Teil verwendet dieselben Balken auf den Seiten 7 und 11, dort auch so dokumentiert. Die Balkendarstellung ist Vorlagenbestandteil, kein Alleinstellungsmerkmal dieser Seite",
           "has_text_equivalent_note": "die Zustände selbst stehen als Text (\"illuminated red\", \"flashes yellow\"), die Balken nicht"
         },
         {
@@ -2199,143 +2199,691 @@
     },
     {
       "page": 27,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1733,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1418,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 7\". Englisches Gegenstück zu PDF-Seite 9, Fortsetzung von \"1.8 Programming the destination phone numbers\". Ablauf: Nach Einlegen und Verriegeln der SIM-Karte kann die Versorgung angeschlossen werden; die Status-LED blinkt kurz rot, dann gelb/grün; danach kann die Programmier-SMS an die Nummer des Pro-finder gesendet werden; bei Erfolg blinkt die LED grün und der Absender erhält eine Status-SMS. Bis zu 10 Zielrufnummern. Vier Typen als zweispaltige Begriffsliste: Master number (steht beim Speichern an erster Stelle, kann jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren), Authorised numbers (dürfen Ausgänge per SMS steuern und Statusberichte anfordern), Non-authorised numbers (kein Zugriff auf Systemfunktionen, empfangen nur Statusmeldungen), Smartphone numbers (Master-, autorisierte oder nicht autorisierte Nummern, die beim Programmieren mit einem fett gesetzten kleinen \"s\" versehen wurden und die Position als Kartenlink empfangen). Abschließend: Abfragecodes für Prepaid-Karten stehen in den Kartenunterlagen (\"or ask your peovider\" - Tippfehler) bzw. hinter einem fett gesetzten FAQ-Link auf thitronik-automotive.de.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 7",
+        "1.8 Programming the destination phone numbers",
+        "Master number:",
+        "Authorised numbers:",
+        "Non-authorised numbers:",
+        "Smartphone numbers:"
+      ],
+      "technical_values": [
+        {
+          "value": "LED-Ablauf beim Programmieren: kurz rot blinken, dann gelb/grün blinken; nach erfolgreicher Programmierung grün blinken plus Status-SMS an den Absender",
+          "context": "Deckt sich mit der deutschen Fassung (PDF-Seite 9) und mit der Zustandsliste auf PDF-Seite 29",
+          "safety_critical": true
+        },
+        {
+          "value": "Bis zu 10 Zielrufnummern speicherbar",
+          "context": "Deckt sich mit den technischen Daten (PDF-Seiten 18 und 36)",
+          "safety_critical": false
+        },
+        {
+          "value": "Die Masternummer kann jederzeit ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren",
+          "context": "Sicherheitsrelevant: Wer die Masternummer kontrolliert, kontrolliert den Empfängerkreis. Deckt sich mit der deutschen Fassung",
+          "safety_critical": true
+        },
+        {
+          "value": "Das Smartphone-Kennzeichen wird auf dieser Seite als kleines \"s\" eingeführt",
+          "context": "PDF-Seite 28 schreibt in der Strukturerklärung dagegen ein großes \"S\". Der s/S-Widerspruch der deutschen Fassung (Seiten 9 und 10, DSC-056) ist damit wörtlich in den englischen Teil übernommen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die vier Nummerntypen sind eine zweispaltige Tab-Liste ohne Auszeichnung als Definitionsliste; die Zuordnung von Begriff und Erklärung entsteht nur über die horizontale Position.",
+        "Das funktionstragende Kennzeichen \"s\" ist allein durch Fettschrift und Anführungszeichen ausgezeichnet; dass es wörtlich in die SMS gehört, ergibt sich nur aus dem Zusammenhang.",
+        "Der FAQ-Link steht als bloßer fetter Text; die maschinelle Prüfung weist für die Seite keine Verknüpfung aus. Er verwendet http und die Domain thitronik-automotive.de.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 7\", tatsächlich PDF-Seite 27 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "\"or ask your peovider\" - Tippfehler für \"provider\" (bei 150 dpi eindeutig; DSC-070).",
+        "\"Sim Card\" in Gemischtschreibung gegen \"SIM card\" auf derselben Seite und den übrigen englischen Seiten (DSC-070).",
+        "Das Smartphone-Kennzeichen ist hier ein kleines \"s\", auf PDF-Seite 28 ein großes \"S\" - der s/S-Widerspruch der deutschen Quelle (DSC-056) ist mitübersetzt und besteht damit in beiden Sprachteilen.",
+        "\"Master number\" hier und auf PDF-Seite 28 mit kleinem n; die roten Hinweise der PDF-Seiten 30 und 31 schreiben \"Master number\" mit großem M mitten im Satz - innerhalb des englischen Teils uneinheitlich.",
+        "Die deutsche Fassung (PDF-Seite 9) unterscheidet die Typen wortgleich; inhaltliche Abweichungen wurden nicht gefunden."
+      ],
+      "terminology_findings": [
+        "\"destination phone numbers\" durchgehend auf dieser Seite - im Inhaltsverzeichnis \"target phone numbers\" (DSC-068).",
+        "\"Master number\", \"Authorised numbers\", \"Non-authorised numbers\", \"Smartphone numbers\" als englische Typenbezeichnungen für die deutschen \"Masternummer\", \"autorisierte\", \"nicht autorisierte\" und \"Smartphone Nummern\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Typendefinitionen einzeln mit der deutschen Fassung (PDF-Seite 9, geprüft) verglichen; deckungsgleich. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 28,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2072,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1669,
+      "content_type": "tabelle",
+      "languages": ["en"],
+      "summary": "Intern \"Page 8\". Englisches Gegenstück zu PDF-Seite 10. Obere Seitenhälfte: beschriftete Strukturabbildung einer Programmier-SMS, bei der alle Zielrufnummern autorisiert sind - Abfragecode (rot, beginnend mit einem sechsstrahligen Sternzeichen vor \"100#\"), \"P\" für Prepaid, Pluszeichen als Beginn der Landesvorwahl (\"+44 for the UK\" als Beispiel), rotes \"S\" für Smartphone sowie erste, zweite und dritte Zielrufnummer, alle über Führungslinien erläutert. Hinweis, dass die Leerzeichen nur der Darstellung dienen und in der SMS nicht vorkommen dürfen. Rote Absätze: das \"S\" macht die Position zum anklickbaren Link \"(see 2.5)\", nur für Smartphones verwenden; der Abfragecode kann je nach Anbieter anders lauten und steht in den Kartenunterlagen oder der Abfragecode-Tabelle \"on the previous page\"; bei Vertragskarten keinesfalls einen Abfragecode eingeben, da dies zu Fehlfunktionen führen kann. Untere Seitenhälfte: dreispaltige Tabelle \"Examples for various programming SMS messages\" mit drei Zeilen (ein Empfänger; Master plus eine autorisierte Nummer; Master als Smartphonenummer plus eine nicht autorisierte Nummer) für Vertrags- und Prepaid-Karten; in den Tabellenzellen beginnt der Abfragecode mit einem gewöhnlichen ASCII-Sternchen \"*100#\".",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 8",
+        "1.8 Programming the destination phone numbers",
+        "Examples for various programming SMS messages"
+      ],
+      "technical_values": [
+        {
+          "value": "Aufbau der Programmier-SMS: Abfragecode (nur Prepaid), \"P\" (nur Prepaid), je Nummer Pluszeichen, optional \"S\", Landesvorwahl, Rufnummer; keine Leerzeichen in der SMS",
+          "context": "Deckt sich strukturell mit der deutschen Fassung (PDF-Seite 10). Die Beispielrufnummern der Abbildung und der Tabelle werden hier bewusst nicht wiedergegeben",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Vertragskarten darf kein Abfragecode eingegeben werden (Fehlfunktionsgefahr)",
+          "context": "Rot und fett gesetzt, ohne Signalwort - wie im deutschen Original",
+          "safety_critical": true
+        },
+        {
+          "value": "Die nicht autorisierte Nummer wird in der Beispieltabelle mit einem Minuszeichen angereiht, autorisierte mit Pluszeichen",
+          "context": "Wie in der deutschen Fassung wird die Bedeutung der Zeichen nirgends ausgesprochen; die Berechtigungsregel bleibt auch im englischen Teil nur aus den Beispielen erschließbar (DSC-056, BLK-006)",
+          "safety_critical": true
+        },
+        {
+          "value": "Das Sternzeichen des Abfragecodes erscheint auf dieser Seite in zwei verschiedenen Glyphen: sechsstrahliger Stern in der Strukturabbildung und den roten Erläuterungen, gewöhnliches ASCII-Sternchen in den Tabellenzellen",
+          "context": "Beide bei 400 dpi gesichert. Welches Zeichen in der SMS zu tippen ist, lässt sich aus der Seite nicht entscheiden - ein falsches erstes Zeichen macht den Code unbrauchbar (Nachtrag zu DSC-058)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreispaltige Beispieltabelle (Anlass, Vertragskarte, Prepaid-Karte) mit drei Zeilen; in der Prepaid-Spalte bricht eine Beispielnummer mitten in der Ziffernfolge ohne Trennzeichen um - wie im deutschen Original",
+          "columns": [
+            "Programming SMS in case of",
+            "Data stored on a programming SMS of a contract card in Pro-finder",
+            "Data stored on a programming SMS of a pre-paid card in Pro-finder"
+          ]
+        }
+      ],
+      "figures": [
+        {
+          "description": "Strukturabbildung einer Beispiel-Programmier-SMS mit unterstrichenen Bestandteilen und Führungslinien zu sieben Erläuterungen; Abfragecode und \"S\" rot, übrige Bestandteile schwarz",
+          "has_text_equivalent": false,
+          "relies_on": "die Zuordnung läuft ausschließlich über die Führungslinien; die Textebene gibt die Erläuterungen in anderer Reihenfolge aus als das Bild"
+        }
+      ],
+      "warnings_found": [
+        "\"Use only if the end device is a smartphone.\" - rot und fett, ohne Signalwort",
+        "\"If a contract card is used, do not enter a query code, since this can result in malfunctions.\" - rot und fett, ohne Signalwort",
+        "\"The spaces are provided for presentation purposes only. Do not use any spaces in the SMS.\" - schwarz, ohne Hervorhebung"
+      ],
+      "accessibility_issues": [
+        "Das Sternzeichen des Abfragecodes steht in der Textebene der Strukturabbildung als Zeichen aus dem Unicode-Private-Use-Bereich (U+F0DA) - beim Kopieren oder Vorlesen entsteht daraus kein verwertbares Zeichen. Anders als im deutschen Teil (dort fehlt das Zeichen ganz, DSC-058) ist hier also ein Platzhalterzeichen vorhanden, aber ebenso unbrauchbar. Die Tabellenzellen verwenden dagegen ein echtes ASCII-Sternchen.",
+        "Die Strukturabbildung transportiert ihre gesamte Information über Führungslinien; die Lesereihenfolge der Textebene entspricht nicht der Bildlogik.",
+        "Die Prepaid-Beispielzelle bricht die Rufnummer mitten in der Ziffernfolge um, ohne Trennzeichen - während dieselbe Seite Leerzeichen in der SMS ausdrücklich verbietet; wörtlich aus dem deutschen Original übernommen.",
+        "Rot kennzeichnet auf dieser Seite sowohl zwei Warnungen als auch funktionstragende Zeichen (Abfragecode, \"S\") in der Abbildung - dieselbe Farbe für Warnung und Syntax.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 8\", tatsächlich PDF-Seite 28 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Der Verweis \"(see 2.5)\" für den anklickbaren Link ist falsch - 2.5 ist \"Requesting a status report\", gemeint ist 2.6 \"Position query via smartphone\". Das ist derselbe falsche Querverweis wie im deutschen Original (PDF-Seite 10, DSC-055): der Fehler ist wörtlich mitübersetzt.",
+        "Das Smartphone-Kennzeichen ist hier ein großes \"S\" (Abbildung und roter Text), auf PDF-Seite 27 ein kleines \"s\" - der s/S-Widerspruch der deutschen Quelle in beiden Sprachteilen (DSC-056).",
+        "Zwei Glyphen für das erste Zeichen des Abfragecodes auf einer Seite: sechsstrahliger Stern (Abbildung, rote Erläuterungen) gegen ASCII-Sternchen (Tabellenzellen). Bei 400 dpi gesichert.",
+        "\"query codes table on the previous page\" - die Abfragecode-Tabelle existiert auch im englischen Teil nicht: PDF-Seite 27 enthält nur den Verweis auf Kartenunterlagen und FAQ-Link. Derselbe Verweis auf eine nicht vorhandene Tabelle wie im deutschen Original (DSC-057), hier sogar doppelt: auch der Schlussabsatz verlangt \"Replace the query codes for pre-paid cards according to the query codes table\".",
+        "Die Beispieltabelle nennt in der Kopfzeile \"target phone numbers\" im Einleitungstext (\"all the target phone numbers are authorised numbers\") gegen \"destination phone numbers\" im Rest der Seite - beide Benennungen in einem Absatzpaar (DSC-068)."
+      ],
+      "terminology_findings": [
+        "\"query code\" für \"Abfragecode\".",
+        "\"contract card\" für \"Vertragskarte\", \"pre-paid card\" mit Bindestrich - PDF-Seite 26 schreibt ebenfalls \"pre-paid\", der deutsche Teil wechselt zwischen drei Schreibweisen (DSC-065).",
+        "\"target phone numbers\" gegen \"destination phone numbers\" auf derselben Seite."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi; Strukturabbildung und Tabellenzellen bei 400 dpi nachgerendert, weil an der Sternglyphe DSC-058 hängt. Beispielrufnummern bewusst nicht übernommen. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 29,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1352,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1112,
+      "content_type": "tabelle",
+      "languages": ["en"],
+      "summary": "Intern \"Page 9\". Englisches Gegenstück zu PDF-Seite 11. Abschnitt \"1.9 Deleting the destination phone numbers\" mit der unmittelbar unter der Überschrift stehenden fetten Bedingung \"SIM card must be in the device!!\". Vier Handlungsschritte mit Zeigehand-Piktogrammen: Hauptkabelbaum abziehen, Betriebsartenschalter auf E, Kabelbaum wieder anschließen (warten, bis die LED gelb/grün blinkt), Schalter zurück in die Ausgangsstellung; danach ist der Speicher leer. Rot: Der Speicher kann auch ohne Schalterbetätigung von der Masternummer per Programmier-SMS nach 1.8 überschrieben werden. Abschnitt \"1.10 Display of the operating states (Status LED)\": neun Zustände als zweispaltige Liste, jeder mit einem Farbbalken unter der Zeile - Blinkzustände gestrichelt, Dauerlichtzustände durchgezogen, Zweifarbzustände mit wechselnden Farbsegmenten: rot/gelb blinkend (Netzsuche, keine Zielrufnummern), rot blinkend (Netzsuche/kein GSM-Empfang), grün blinkend (eingebucht, Zielrufnummern vorhanden), rot leuchtend (SIM fehlt oder defekt), rot/grün blinkend (PIN nicht 0000), gelb blinkend (Speicher leer), gelb/grün blinkend (keine Zielrufnummern, eingebucht), grün leuchtend (Pro-finder sendet SMS), gelb leuchtend (Verbindungsaufbau zum Modem). Abschließend fett: Nach Abschluss von Installation und Programmierung blinkt die LED im Normalbetrieb grün.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 9",
+        "1.9 Deleting the destination phone numbers",
+        "1.10 Display of the operating states (Status LED)"
+      ],
+      "technical_values": [
+        {
+          "value": "Löschvorgang: Kabelbaum ab, Schalter auf E, Kabelbaum an, auf gelb/grünes Blinken warten, Schalter zurück",
+          "context": "Deckt sich mit der deutschen Fassung (PDF-Seite 11). Die Abbruchbedingung hängt an einer zweifarbigen Blinkanzeige",
+          "safety_critical": true
+        },
+        {
+          "value": "Die Masternummer kann den Speicher jederzeit ohne Schalterbetätigung überschreiben",
+          "context": "Rot gesetzt; deckt sich mit der deutschen Fassung und mit PDF-Seite 27",
+          "safety_critical": true
+        },
+        {
+          "value": "Neun LED-Zustände; \"Flashes red/green: PIN is not 0000\"",
+          "context": "Die Zustandsliste bestätigt wie im deutschen Teil, dass das Gerät die PIN 0000 erwartet (Rückfrage 15). Alle neun Zustände decken sich mit der deutschen Liste",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Zweispaltige Zustandsliste (Zustand, Bedeutung) mit neun Zeilen, je einem Farbbalken unter der Zeile; als Tab-Layout gesetzt, nicht als Tabelle ausgezeichnet",
+          "columns": ["LED-Zustand", "Bedeutung"]
+        }
+      ],
+      "figures": [
+        {
+          "description": "Neun waagerechte Farbbalken, je einer unter jeder Zustandszeile: gestrichelt für die sechs Blinkzustände, durchgezogen für die drei Dauerlichtzustände; Zweifarbzustände wechseln innerhalb des Balkens die Farbe - identisch mit der deutschen Seite 11",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe und Strichmuster; die Balken fehlen in der Textebene. Blinken gegen Dauerlicht ist über das Muster unterscheidbar, innerhalb jeder Gruppe bleibt die Farbe das einzige Merkmal (DSC-059)"
+        },
+        {
+          "description": "Vier Zeigehand-Piktogramme vor den Handlungsschritten, ein Pfeil-Piktogramm vor dem Ergebnisabsatz, ein weiteres Zeigehand-Piktogramm vor dem roten Hinweis",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen (U+F046, U+F0C4) vorhanden, die beim Vorlesen und Kopieren unbrauchbar sind"
+        }
+      ],
+      "warnings_found": [
+        "\"SIM card must be in the device!!\" - fett mit zwei schließenden Ausrufezeichen, ohne Signalwort; das deutsche Original rahmt denselben Satz beidseitig ein (\"!! ... !!\")"
+      ],
+      "accessibility_issues": [
+        "Die neun Gerätezustände sind wie im deutschen Teil innerhalb der Blink- bzw. Dauerlichtgruppe ausschließlich über die Farbe unterscheidbar (DSC-059); die Balken tragen nur die Unterscheidung Blinken/Dauerlicht farbunabhängig.",
+        "Die Piktogramme stehen in der Textebene als Private-Use-Zeichen (U+F046, U+F0C4) am Seitenende, losgelöst von den Absätzen, denen sie zugeordnet sind.",
+        "Die vier Handlungsschritte sind weder nummeriert noch als Liste ausgezeichnet; die Reihenfolge trägt allein die vertikale Anordnung.",
+        "Die Bedingung \"SIM card must be in the device!!\" steht als zweite Überschriftszeile und ist in der Textebene von einer Überschrift nicht zu unterscheiden.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 9\", tatsächlich PDF-Seite 29 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "\"SIM card must be in the device!!\" mit nur schließendem Ausrufezeichenpaar gegen das beidseitige \"!! SIM Karte muss im Gerät sein !!\" des Originals - die Auszeichnung ist asymmetrisch übernommen (DSC-070).",
+        "Alle neun LED-Zustände und ihre Bedeutungen decken sich mit der deutschen Liste (PDF-Seite 11); Abweichungen wurden nicht gefunden.",
+        "\"Logged in (reception)\" übersetzt das deutsche \"Eingebucht (Empfang)\" wörtlich - der Klammerzusatz bleibt auch englisch ohne Erklärung, was \"reception\" hier meint."
+      ],
+      "terminology_findings": [
+        "\"main cable assembly\" wie auf PDF-Seite 24; der Begriff wird wie im Deutschen (\"Hauptkabelbaum\", DSC-050) nirgends erklärt.",
+        "\"Network search\" für \"Netzsuche\"; \"Logged in\" für \"Eingebucht\".",
+        "\"operating mode switch\" konsistent auf dieser Seite; PDF-Seite 30 verwendet daneben \"program select switch\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Alle neun Zustände einzeln gegen die deutsche Liste (PDF-Seite 11, geprüft) gehalten; deckungsgleich. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 30,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1778,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1448,
+      "content_type": "anleitung",
+      "languages": ["en", "de"],
+      "summary": "Intern \"Page 10\". Englisches Gegenstück zu PDF-Seite 12. Beginn von \"2.1 Explanation of the messages received\". Obere Seitenhälfte: fünfteilige Begriffsliste der SMS-Angaben (GPS: Stand by; UTC; Pos; Speed; Credit balance) mit rotem Zusatz zur 160-Zeichen-Grenze und dem Hinweis, bei fehlendem Guthaben eine SMS mit dem Text POS zu senden. Untere Seitenhälfte: drei Meldungsarten mit je einer nebenstehenden Beispiel-SMS-Abbildung - Status report (nur auf Anforderung nach Kapitel 2.3 oder in Intervallen je nach Betriebsart; enthält Position, Geschwindigkeit, Ausgangszustände, je nach Betriebsart U2-U5 und Temperatur), Theft alert (bei geschärfter WiPro und mehr als ca. 1000 m Entfernung; stiller Alarm ohne Blinker und Sirene, beides per SMS nach 2.2 zuschaltbar; rot: nach dem Versand wird die Masternummer angerufen) und Voltage warning (nicht in Betriebsart B; unter 11,2 V dauerhaft Wechsel in Stand by, Rückkehr über 12,5 V). Die drei Beispiel-SMS-Abbildungen sind unverändert die deutschsprachigen Bilder des deutschen Teils: \"GPS Fencing aktiv\", \"Diebstahl\", \"Spannung unter 11,2V\", \"Aktuelles Guthaben\" mit Eurobetrag.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 10",
+        "2.1 Explanation of the messages received",
+        "Status report:",
+        "Theft alert:",
+        "Voltage warning (not in operating mode B):"
+      ],
+      "technical_values": [
+        {
+          "value": "Diebstahlmeldung ab ca. 1000 m Entfernung vom ursprünglichen Standort",
+          "context": "\"approx. 1000 m\" - deckt sich mit der deutschen Fassung (dort \"ca.1000m\"); der Generationsunterschied zu den rund 900 m ab SN-045 bleibt (DSC-061)",
+          "safety_critical": true
+        },
+        {
+          "value": "Spannungswarnung: unter 11,2 V dauerhaft Wechsel in Stand by, Rückkehr über 12,5 V",
+          "context": "\"below 11.2 V\" / \"above 12.5 V\" mit Dezimalpunkt - deckt sich mit der deutschen Fassung (Dezimalkomma) und der Fassung ab SN-045",
+          "safety_critical": true
+        },
+        {
+          "value": "Diebstahlmeldung ist ein stiller Alarm; Blinker und Sirene per SMS nach 2.2 zuschaltbar; nach dem Versand wird die Masternummer angerufen",
+          "context": "Der rote Hinweis lässt gegenüber dem deutschen Original das Wort \"zusätzlich\" weg (\"will call the Master number\" statt \"wird ... zusätzlich angerufen\") - inhaltlich gleich, sprachlich verkürzt",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei fehlendem Guthaben in der Meldung: SMS mit dem Text POS senden",
+          "context": "POS in Großbuchstaben; PDF-Seite 33 schreibt den Befehl als \"Pos\" - dieselbe Doppelschreibung wie im deutschen Teil (POS auf Seite 12, Pos auf Seite 15). Nur Quellenzitat für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Beispiel-SMS-Abbildungen (Statusbericht mit U1-U5 und \"GPS Fencing aktiv\", Diebstahlmeldung \"Diebstahl\" mit Empfangsfeldstärke in dBm, Spannungswarnung \"Spannung unter 11,2V\") - unverändert die deutschsprachigen Bilder von PDF-Seite 12",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; in der Textebene nicht vorhanden. Die Gerätetexte der Bilder sind deutsch, obwohl der umgebende Text englisch ist: Der Nutzer soll eine Meldung \"Diebstahl\" erkennen, die das Handbuch nur als \"Theft alert\" beschreibt (DSC-071-Komplex, siehe Record-Diskrepanzen). Positionsangaben werden bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [
+        "\"! After sending the SMS, Pro-finder will call the Master number !\" - rot und fett, ohne Signalwort",
+        "\"The message length is limited to 160 characters ...\" - rot, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die drei Beispiel-SMS existieren nur als Bild und zeigen deutschen Gerätetext in einem englischen Handbuch. Ein englischsprachiger Nutzer erfährt an keiner Stelle, dass die Meldungen seines Geräts deutsch beschriftet sind; die Stichwörter, an denen eine eingehende Meldung zu erkennen ist (\"Diebstahl\", \"Spannung unter 11,2V\"), stehen nirgends im englischen Text.",
+        "Die fünfteilige Begriffsliste erklärt wie im deutschen Original nicht alle in den Bildern sichtbaren Felder (\"GPS Fencing aktiv\", U1-U5, A/B-Zustände, dBm-Wert); das Guthabenfeld heißt in der Liste \"Credit balance\", in den Bildern \"Aktuelles Guthaben\" bzw. \"Kontostand\" - hier zusätzlich über die Sprachgrenze hinweg.",
+        "Die Positionsangaben der Bilder sind blau und unterstrichen gesetzt und wirken wie Verknüpfungen; die maschinelle Prüfung weist keine aus.",
+        "Der rote 160-Zeichen-Zusatz steht optisch innerhalb der Erklärung zu \"Credit balance\", betrifft aber die Nachrichtenlänge insgesamt.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 10\", tatsächlich PDF-Seite 30 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Der Verweis \"as described in chapter 2.3\" für das Anfordern des Statusberichts ist falsch - 2.3 ist \"Controlling the alarm system via phone call\", das Anfordern steht in 2.5. Derselbe falsche Querverweis wie im deutschen Original (PDF-Seite 12, DSC-055): wörtlich mitübersetzt.",
+        "Die drei Beispiel-SMS-Abbildungen sind die unveränderten deutschen Bilder; der englische Teil lokalisiert die Gerätetexte nicht. Ob das Gerät englischsprachige Meldungen ausgibt, ist damit aus dem englischen Teil nicht belegbar - im Gegenteil legt die Bildwahl nahe, dass die Meldungen deutsch kommen.",
+        "\"program select switch\" für den Betriebsartenschalter - dieselbe Seite des deutschen Teils verwendet \"Programmwahlschalter\" statt \"Betriebsartenschalter\" (DSC-065); die deutsche Benennungsinkonsistenz ist mit \"program select switch\" gegen \"operating mode switch\" (PDF-Seiten 22, 29) exakt in den englischen Teil übertragen.",
+        "POS (Großbuchstaben) hier gegen \"Pos\" auf PDF-Seite 33 - die Doppelschreibung des Positionsbefehls besteht in beiden Sprachteilen.",
+        "\"160  characters\" mit doppeltem Leerzeichen (DSC-070)."
+      ],
+      "terminology_findings": [
+        "\"program select switch\" gegen \"operating mode switch\" - zwei englische Namen für den Betriebsartenschalter, parallel zur deutschen Doppelbenennung.",
+        "\"Credit balance\" (Liste) gegen \"Aktuelles Guthaben\"/\"Kontostand\" (deutsche Bildtexte).",
+        "\"Theft alert\" für \"Diebstahlmeldung\", \"Voltage warning\" für \"Spannungswarnung\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Die drei Abbildungen wurden mit den Abbildungen der deutschen Seite 12 verglichen: identische Bilder, deutsche Gerätetexte. languages enthält deshalb auch \"de\" (Bildtexte). Positionsangaben und Beträge bewusst nicht übernommen. Sprache des Fließtexts Englisch, vollständig beurteilbar."
     },
     {
       "page": 31,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1122,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 917,
+      "content_type": "abbildung",
+      "languages": ["en", "de"],
+      "summary": "Intern \"Page 11\". Englisches Gegenstück zu PDF-Seite 13. Fortsetzung von 2.1: sechs weitere Meldungsarten, jede mit nebenstehender Beispiel-SMS-Abbildung - Emergency SMS (Betriebsart A, Spannung an Pin 3), Positions SMS for smartphones (Antwort auf die Positionsabfrage \"as described under 2.4\"; enthält das Guthaben, wenn nach Seite 8/Kapitel 1.8 programmiert), Help SMS (Antwort auf ungültigen Inhalt von einer Zielrufnummer, nennt die möglichen korrekten Befehle), Burglary alert, Gas alert und Manual alert (jeweils von der WiPro gemeldet). Vier Absätze schließen mit dem roten Hinweis, dass nach dem Versand die Masternummer angerufen wird. Alle sechs Abbildungen sind die unveränderten deutschsprachigen Bilder des deutschen Teils - einschließlich der Hilfe-SMS mit der Befehlsliste des Geräts: STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 11",
+        "Emergency SMS:",
+        "Positions SMS for smartphones:",
+        "Help SMS:",
+        "Burglary alert:",
+        "Gas alert:",
+        "Manual alert:"
+      ],
+      "technical_values": [
+        {
+          "value": "Emergency SMS: Betriebsart A und Spannung an Pin 3",
+          "context": "Deckt sich mit der deutschen Fassung und der Betriebsartentabelle (PDF-Seite 23, Zeile A)",
+          "safety_critical": true
+        },
+        {
+          "value": "Die abgebildete Hilfe-SMS nennt als gültige Befehle: STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF, GPS ON",
+          "context": "Identisches Bild wie auf der deutschen Seite 13 (dort bei 700 dpi gesichert). Im englischen Teil wiegt der Widerspruch schwerer: Die Geräteliste enthält SCHARF und UNSCHARF - deutsche Wörter -, während der englische Text auf der gegenüberliegenden PDF-Seite 32 die Befehle arm und disarm lehrt. Nur Quellenzitat für BLK-005/DSC-054; nicht für den Content-Layer",
+          "safety_critical": true
+        },
+        {
+          "value": "Einbruch-, Gas- und manueller Alarm setzen die meldende WiPro voraus",
+          "context": "Deckt sich mit der deutschen Fassung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Sechs Beispiel-SMS-Abbildungen mit deutschen Gerätetexten (\"Hilfe erbeten\", \"Ungueltiger Befehl! Moeglich: ...\", \"Einbruch Tuer/Fenster\", \"Gas\", \"manueller Alarm\", \"Position:\" mit Kartenlink) - unverändert von der deutschen Seite 13 übernommen",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; in der Textebene nicht vorhanden. Die Erkennungsstichwörter aller sechs Meldungsarten stehen nur deutsch im Bild; der Kartenlink der Positions-SMS enthält Koordinaten und wird bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [
+        "\"! After sending the SMS, Pro-finder will call the Master number !\" - viermal, rot und fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die einzige Befehlsliste des Geräts steht auch im englischen Teil nur als Bild - mit deutschen Befehlen (SCHARF, UNSCHARF) in einem englischen Handbuch, ohne Alternativtext und ohne Hinweis auf die Sprachmischung.",
+        "Alle sechs Erkennungsstichwörter (\"Hilfe erbeten\", \"Einbruch Tuer/Fenster\", \"Gas\", \"manueller Alarm\") stehen nur deutsch im Bild; der englische Fließtext nennt keine Entsprechung, an der eine tatsächlich eingehende Meldung wiederzuerkennen wäre.",
+        "Die Umlaut-Ersatzschreibung der Gerätetexte (\"Ungueltiger\", \"Tuer\") bleibt wie im deutschen Teil unerklärt.",
+        "Der Kartenlink der Positions-SMS ist über mehrere Zeilen umbrochen und wirkt wie eine Verknüpfung; die maschinelle Prüfung weist keine aus.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 11\", tatsächlich PDF-Seite 31 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Der Verweis \"as described under 2.4\" für die Positionsabfrage ist falsch - 2.4 ist Geofencing, die Positionsabfrage ist 2.6. Derselbe falsche Querverweis wie im deutschen Original (PDF-Seite 13, DSC-055): wörtlich mitübersetzt. Damit sind alle drei falschen Kapitel-2-Verweise des deutschen Teils im englischen Teil nachgewiesen (see 2.5 auf Seite 28, chapter 2.3 auf Seite 30, under 2.4 hier).",
+        "Die abgebildete Geräte-Befehlsliste (SCHARF/UNSCHARF) widerspricht den auf PDF-Seite 32 gelehrten englischen Befehlen arm/disarm - Handbuchtext und abgebildete Geräteauskunft widersprechen sich innerhalb des englischen Teils auf einer Doppelseite (Nachtrag zu DSC-054).",
+        "Der Verweis \"on page 8 chapter 1.8\" trifft zu (aufgedruckte Seite 8 = PDF-Seite 28, Abschnitt 1.8) - der englische Teil verweist wie der deutsche auf aufgedruckte Seitenzahlen des eigenen Sprachteils.",
+        "\"Positions SMS for smartphones\" übernimmt das deutsche Kompositum (\"Positions SMS\") statt englisch \"Position SMS\" (DSC-070).",
+        "Der rote Hinweis lässt wie auf PDF-Seite 30 das \"zusätzlich\" des Originals weg."
+      ],
+      "terminology_findings": [
+        "\"Burglary alert\" für \"Einbruchmeldung\", \"Manual alert\" für \"Manueller Alarm\", \"Emergency SMS\" für \"Notruf SMS\".",
+        "\"Positions SMS\" - deutsches Fugen-s im englischen Text.",
+        "\"Master number\" mit großem M im roten Hinweis gegen \"master number\" auf PDF-Seite 27."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Alle sechs Abbildungen mit denen der deutschen Seite 13 verglichen: identische Bilder einschließlich der Hilfe-SMS-Befehlsliste (dort bei 700 dpi gesichert; hier nicht erneut nachgerendert). languages enthält deshalb auch \"de\" (Bildtexte). Koordinaten und Beträge bewusst nicht übernommen. Sprache des Fließtexts Englisch, vollständig beurteilbar."
     },
     {
       "page": 32,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1109,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 887,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 12\". Englisches Gegenstück zu PDF-Seite 14. Abschnitt \"2.2 Controlling the alarm system via SMS\": Pro-finder kann die Alarmanlage ein- und ausschalten; zum Einschalten der WiPro wird eine SMS mit dem fett und allein stehenden Text \"arm\", zum Ausschalten der WiPro \"all in one\" eine SMS mit \"disarm\" gesendet; das Gerät antwortet jeweils mit einem Statusbericht. Rot: Bei einer Diebstahlmeldung (stiller Alarm) lassen sich Sirene und Blinker mit dem SMS-Befehl \"alarm\" zuschalten; beendet wird mit \"disarm\". Abschnitt \"2.3 Controlling the alarm system via phone call\": In den Betriebsarten 2 und 3 schaltet ein Anruf die WiPro in den jeweils nächsten Zustand; das Gerät beendet den Anruf, bevor eine kostenpflichtige Verbindung entsteht (\"a pay connection\"), und sendet nach erfolgreichem Schalten einen Statusbericht an den Anrufer. Abschließend fett: \"Access to Pro-finder is restricted to authorised numbers.\" Untere Seitenhälfte leer.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 12",
+        "2.2 Controlling the alarm system via SMS",
+        "2.3 Controlling the alarm system via phone call"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"arm\" zum Einschalten, \"disarm\" zum Ausschalten, \"alarm\" zum Zuschalten von Sirene und Blinker, beendet mit \"disarm\"",
+          "context": "Die abgebildete Hilfe-SMS des Geräts (PDF-Seite 31, identisch mit Seite 13) führt stattdessen SCHARF und UNSCHARF - deutsche Befehle - und statt eines alarm-Befehls nur ALARM AUS. Das deutsche Handbuch lehrt an gleicher Stelle scharf/unscharf/alarm. Damit lehrt jede Sprachfassung eigene Schaltbefehle, und keine deckt sich mit der Geräteliste. Ausdrücklich nur Quellenzitat für BLK-005/DSC-054; nicht für den Content-Layer",
+          "safety_critical": true
+        },
+        {
+          "value": "Betriebsarten 2 und 3: Schalten der WiPro per Anruf; Anruf wird vor Verbindungsaufbau beendet, danach Statusbericht an den Anrufer",
+          "context": "Deckt sich mit der deutschen Fassung und der Betriebsartentabelle (PDF-Seite 23)",
+          "safety_critical": true
+        },
+        {
+          "value": "Nur autorisierte Nummern haben Zugriff",
+          "context": "\"Access to Pro-finder is restricted to authorised numbers.\" - präziser als das deutsche \"Nur berechtigte Nummern können auf Pro-finder zugreifen\", weil der englische Satz die auf PDF-Seite 27 definierte Typbezeichnung \"authorised numbers\" verwendet, während der deutsche mit \"berechtigte Nummern\" einen dritten Ausdruck einführt",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Zwei Zeigehand-Piktogramme vor den Handlungsabsätzen und zwei Pfeil-Piktogramme vor den Ergebnisabsätzen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nicht vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"If you receive a theft alert in the form of a \\\"silent alert\\\", you can additionally activate sirens and flashers with the SMS command \\\"alarm\\\". The alarm can be discontinued with the \\\"disarm\\\" command.\" - rot, ohne Signalwort",
+        "\"Access to Pro-finder is restricted to authorised numbers.\" - fett, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die Befehle \"arm\" und \"disarm\" stehen als alleinstehende fette Wörter in eigener Zeile ohne Kennzeichnung als einzugebender Text - wie im deutschen Teil; in der Textebene sind sie von gewöhnlichen einzeiligen Absätzen nicht zu unterscheiden.",
+        "Der rote Absatz nennt zwei weitere Befehle nur im laufenden Satz in Anführungszeichen - dritte Auszeichnungsart für dieselbe Sache auf einer Seite.",
+        "Der Absatz zum Hörbarmachen eines stillen Alarms ist ausschließlich rot ausgezeichnet.",
+        "Die untere Seitenhälfte ist leer, ohne Kennzeichnung eines Abschnittsendes.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 12\", tatsächlich PDF-Seite 32 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Die Schaltbefehle des englischen Teils (arm, disarm) kommen in der Befehlsliste, die das Gerät laut der auf der gegenüberliegenden Seite 31 abgebildeten Hilfe-SMS ausgibt, nicht vor - dort stehen SCHARF und UNSCHARF. Der Widerspruch Handbuch gegen Gerät (DSC-054) besteht damit spiegelbildlich auch im englischen Teil: das deutsche Handbuch lehrt deutsche Schaltbefehle bei englischen Ausgangsbefehlen des Geräts, das englische Handbuch lehrt englische Schaltbefehle bei deutschen Schaltbefehlen des Geräts.",
+        "Das Beenden des zugeschalteten Alarms erfolgt laut englischem Text mit \"disarm\", laut deutschem mit \"unscharf\" - konsistent je Sprache, aber die Geräteliste kennt für das Beenden nur \"ALARM AUS\".",
+        "Die asymmetrische Benennung des deutschen Originals ist wörtlich übernommen: Einschalten betrifft \"WiPro\", Ausschalten \"WiPro \\\"all in one\\\"\" - zwei Bezeichnungen für dasselbe Gerät in zwei aufeinanderfolgenden Absätzen.",
+        "\"a pay connection\" - unidiomatische Direktübersetzung von \"kostenpflichtige Verbindung\" (DSC-070)."
+      ],
+      "terminology_findings": [
+        "\"arm/disarm\" für scharf/unscharf - deckt sich mit den Hilfe-SMS-Befehlen der englischen SN-045-Fassung (ARM/DISARM, DSC-033), nicht aber mit der Geräteliste bis SN-044.",
+        "\"alarm system\" als Oberbegriff für die WiPro, wie im Deutschen \"Alarmanlage\".",
+        "\"authorised numbers\" konsistent mit der Typdefinition auf PDF-Seite 27."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi; die Befehlswörter arm und disarm sind bei 150 dpi eindeutig lesbar (große Fettschrift). Befehle nur als Quellenzitat für BLK-005. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 33,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 2319,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1855,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 13\". Englisches Gegenstück zu PDF-Seite 15. Drei Abschnitte. \"2.4 Geofencing\" - die Abschnittsüberschrift ist im Seitenbild bestätigt; der Verzeichniseintrag \"Installation instructions\" (PDF-Seite 20) ist damit endgültig als falsch belegt. Inhalt: virtueller Zaun, Diebstahlmeldung nach 2.1 beim Verlassen eines Bereichs von ca. 1 km (\"approx. 1km\"); in den Schalterstellungen 8 und B über Pin 3 schaltbar, sonst per SMS; Einschaltbefehl \"Fence on\" als alleinstehende fette Zeile, Ausschalten laut Ergebnistext mit \"Fence off\", vor einem Standortwechsel zuerst \"Fence off\" senden; rot: bei geschärfter WiPro ist Geofencing automatisch aktiv und muss nicht per SMS eingeschaltet werden. \"2.5 Requesting a status report\": Inhalt nach 2.1, jederzeit anforderbar per Befehl \"Status\" oder durch Anruf (außer Betriebsarten 2 und 3; Gerät beendet nach mehreren Freizeichen, Bericht ohne Guthaben); der Bericht enthält den GPS-Status, bei ungültiger Position \"GPS no reception\" samt letzter gültiger Position, dazu beide Ausgangszustände und die Umgebungstemperatur; Verweis \"Chapter 2.6 explains how to find your vehicle\". \"2.6 Position query via smartphone\": speziell für Smartphones gedachte SMS mit anklickbarem Link, ausgelöst mit dem Befehl \"Pos\".",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 13",
+        "2.4 Geofencing",
+        "2.5 Requesting a status report",
+        "2.6 Position query via smartphone"
+      ],
+      "technical_values": [
+        {
+          "value": "Geofencing-Radius ca. 1 km (\"approx. 1km\")",
+          "context": "Deckt sich mit der deutschen Fassung (ca. 1 km / ca.1000m); Generationsunterschied zu rund 900 m ab SN-045 bleibt (DSC-061)",
+          "safety_critical": true
+        },
+        {
+          "value": "Schalterstellungen 8 und B: Geofencing über Pin 3; alle anderen Stellungen: per SMS; bei geschärfter WiPro automatisch aktiv",
+          "context": "Deckt sich wörtlich mit der deutschen Regelung (PDF-Seite 15), die für BLK-007 als Rückfrage 9 vorliegt",
+          "safety_critical": true
+        },
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"Fence on\" zum Einschalten, \"Fence off\" zum Ausschalten, \"Status\" für den Statusbericht, \"Pos\" für die Positionsabfrage",
+          "context": "Im Seitenbild bestätigt. Damit ist der Widerspruch innerhalb des englischen Teils belegt: PDF-Seite 25 weist zum Ausschalten \"fence av\" an - den schwedischen Befehl (DSC-067). Die Geräte-Hilfe-SMS führt \"FENCE ON\"/\"FENCE OFF\" in Großbuchstaben und keinen Pos-Befehl. Ausdrücklich nur Quellenzitat für BLK-005; nicht für den Content-Layer",
+          "safety_critical": true
+        },
+        {
+          "value": "Statusbericht per Anruf: außer in den Betriebsarten 2 und 3; ohne Guthabenanzeige",
+          "context": "Deckt sich mit der deutschen Fassung",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei ungültiger Position steht \"GPS no reception\" im Bericht, gesendet wird die letzte gültige Position",
+          "context": "Der Berichtstextbaustein erscheint hier englisch, während die abgebildeten Beispielberichte (PDF-Seiten 30/31) deutsche Gerätetexte zeigen; ob das Gerät englische Berichtstexte ausgibt, bleibt unbelegt",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Vier Zeigehand-Piktogramme vor den Handlungsabsätzen und vier Pfeil-Piktogramme vor den Ergebnisabsätzen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; in der Textebene nur als Private-Use-Zeichen am Seitenende vorhanden"
+        }
+      ],
+      "warnings_found": [
+        "\"Once WiPro is armed, Geofencing is enabled automatically and does not require an SMS to be activated.\" - rot, ohne Signalwort",
+        "\"If a valid position is not received, \\\"GPS no reception\\\" is shown in the status report, however, the last valid position will be sent.\" - schwarz im Fließtext, ohne Hervorhebung"
+      ],
+      "accessibility_issues": [
+        "Die Einschaltbefehle stehen als alleinstehende fette Wörter, der Ausschaltbefehl \"Fence off\" dagegen nur im Fließtext des Ergebnisabsatzes - wie im deutschen Original findet man den Einschaltweg leicht, den Ausschaltweg kaum.",
+        "Der sicherheitsrelevanteste Satz der Seite - dass eine übermittelte Position veraltet sein kann - steht ohne jede Auszeichnung im Fließtext.",
+        "Der rote Hinweis zur automatischen Aktivierung ist ausschließlich durch Farbe ausgezeichnet.",
+        "Die Bedingung \"(except in operating modes 2 and 3)\" steht in einer Klammer und verweist nicht auf 2.3, obwohl dieselbe Handlung dort eine andere Wirkung hat.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 13\", tatsächlich PDF-Seite 33 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Abschnittsüberschrift \"2.4 Geofencing\" im Seitenbild bestätigt - der Eintrag \"Installation instructions\" im englischen Inhaltsverzeichnis (PDF-Seite 20) benennt den Abschnitt falsch; DSC-068 ist damit auf der Ebene des Seitenbilds abgeschlossen belegt.",
+        "\"Fence on\" und \"Fence off\" im Seitenbild bestätigt - der offene Textebenen-Beleg aus DSC-067 ist geschlossen: der englische Teil verwendet in 2.4 die englischen Befehle und auf PDF-Seite 25 den schwedischen; der Widerspruch liegt innerhalb des englischen Teils.",
+        "Der Verweis \"Chapter 2.6 explains how to find your vehicle\" ist falsch - 2.6 ist die Positionsabfrage, das Wiederfinden ist 2.8 (PDF-Seite 35). Derselbe vierte falsche Querverweis wie im deutschen Original (PDF-Seite 15, DSC-055): wörtlich mitübersetzt. Damit sind alle vier falschen Querverweise des deutschen Teils im englischen Teil nachgewiesen.",
+        "\"receives an SMS with the text, \\\"Fence off\\\"\" - Komma vor dem Anführungszeichen (DSC-070).",
+        "Die Großschreibung der Befehle wiederholt das deutsche Muster: \"Fence on\"/\"Fence off\" und \"Status\"/\"Pos\" groß auf dieser Seite, \"fence av\" klein auf PDF-Seite 25, POS groß auf PDF-Seite 30 - drei Schreibweisen im englischen Teil."
+      ],
+      "terminology_findings": [
+        "\"Geofencing\" in der Überschrift, \"geofencing\" und \"Geofencing\" im Fließtext wechselnd; PDF-Seite 25 schreibt \"geofence function\".",
+        "\"switch position\" hier gegen \"operating mode\" (PDF-Seite 23) für die Schalterstellung.",
+        "\"map program\" für \"Kartenprogramm\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Diese Seite war der wichtigste offene Prüfpunkt des Batches: Überschrift 2.4 und die Befehle Fence on/Fence off sind im Seitenbild bestätigt (Fettschrift, bei 150 dpi eindeutig); die zuvor nur aus der Textebene belegten Teile von DSC-067 und DSC-068 sind damit bildlich gesichert. Befehle nur als Quellenzitat für BLK-005. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 34,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1348,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1070,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 14\". Englisches Gegenstück zu PDF-Seite 16. Abschnitt \"2.7 Controlling the outputs via SMS\". Einleitung: zwei getrennt steuerbare Ausgänge, Anschluss nach Kapitel 1.5. Drei unterstrichene, kursiv-fette Zwischentitel mit Befehlsanweisungen: Ausgänge dauerhaft schalten (\"A on\" bis auf Widerruf, \"A off\" zum Ausschalten), Ausgänge gepulst schalten (\"A pulse\", 1 Sekunde), Ausgänge für eine frei wählbare Zeit schalten (\"A XXX\" mit XXX als Minutenzahl zwischen 1 und 120; im Satz fehlt ein Wort: \"XXX must replaced with the desired number of minutes\"). Jede Anweisung wird mit Schaltvorgang plus Statusbericht quittiert. Abschließend rot und kursiv: Für Ausgang B den Buchstaben A in der SMS durch B ersetzen.",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 14",
+        "2.7 Controlling the outputs via SMS",
+        "Switching outputs permanently:",
+        "Switch outputs pulsed (on for 1 second):",
+        "Switch outputs for a freely specified time:"
+      ],
+      "technical_values": [
+        {
+          "value": "SMS-Befehle dieser Seite, wörtlich: \"A on\", \"A off\", \"A pulse\", \"A XXX\" mit XXX als Minutenzahl; für Ausgang B den Buchstaben tauschen",
+          "context": "Die englischen Ausgangsbefehle decken sich - anders als die deutschen (\"A an\", \"A aus\", \"A impuls\") - mit der Geräte-Hilfe-SMS (A ON, A OFF, A PULSE); nur der Zeitbefehl fehlt der Geräteliste in beiden Sprachteilen. Ausdrücklich nur Quellenzitat für BLK-005/DSC-054; nicht für den Content-Layer",
+          "safety_critical": true
+        },
+        {
+          "value": "Impulsdauer 1 Sekunde; frei wählbare Einschaltdauer 1 bis 120 Minuten",
+          "context": "Deckt sich mit der deutschen Fassung; was außerhalb des Bereichs geschieht, sagt auch der englische Teil nicht (vgl. DSC-052)",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Drei Zeigehand-Piktogramme, vier Pfeil-Piktogramme und zwei Uhr-Piktogramme neben den zeitbezogenen Befehlen",
+          "has_text_equivalent": false,
+          "relies_on": "Form und Position; die Uhr-Piktogramme sind die einzige Kennzeichnung der Zeitkomponente"
+        }
+      ],
+      "warnings_found": [
+        "\"To control output B, replace the letter A in the SMS with the letter B.\" - rot, fett und kursiv, ohne Signalwort"
+      ],
+      "accessibility_issues": [
+        "Die Zwischentitel sind unterstrichen und kursiv - Unterstreichung ergibt keine Strukturebene und ist von einer Verknüpfung nicht zu unterscheiden.",
+        "Die vier Befehle stehen als alleinstehende fette Zeilen ohne Kennzeichnung als einzugebender Text.",
+        "Der Platzhalter XXX ist nur durch den erklärenden Satz als Platzhalter erkennbar; beim Vorlesen wird er buchstabiert oder als Wort gelesen.",
+        "Die gesamte Seite beschreibt nur Ausgang A; der Buchstabentausch für B steht allein im roten Schlusssatz.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 14\", tatsächlich PDF-Seite 34 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "\"XXX must replaced with the desired number of minutes\" - fehlendes \"be\" (bei 150 dpi eindeutig; DSC-070).",
+        "Die englischen Ausgangsbefehle stimmen mit der Geräte-Hilfe-SMS überein, die deutschen nicht - innerhalb von BLK-005 ist der englische Teil hier die konsistentere Fassung; für den Zeitbefehl \"A XXX\" führt die Geräteliste weiterhin keinen Befehl.",
+        "Der Zwischentitel steht im Plural (\"Switching outputs\"), die Befehle betreffen einen einzelnen Ausgang - wie im deutschen Original.",
+        "Die Zwischentitel wechseln die Form: \"Switching outputs permanently:\" (Gerundium) gegen \"Switch outputs pulsed ...:\" und \"Switch outputs for ...:\" (Imperativ) - Inkonsistenz innerhalb der Seite (DSC-070)."
+      ],
+      "terminology_findings": [
+        "\"until cancelled\" für \"bis auf Widerruf\".",
+        "\"pulsed\" für \"gepulst\", mit demselben Klammerzusatz als einziger Erklärung.",
+        "Platzhalter \"XXX\" identisch mit dem deutschen Teil; die Fassung ab SN-045 schreibt \"%min%\" (vgl. DSC-033)."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Befehle gegen die deutsche Fassung (PDF-Seite 16) und die Geräteliste (PDF-Seiten 13/31) gehalten. Befehle nur als Quellenzitat für BLK-005. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 35,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1394,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1121,
+      "content_type": "anleitung",
+      "languages": ["en", "de"],
+      "summary": "Intern \"Page 15\". Englisches Gegenstück zu PDF-Seite 17. Abschnitt \"2.8 Finding a stolen vehicle\": Positionsangaben aus den Meldungen können in Kartenprogramme und Navigationsgeräte eingegeben werden (oft hausnummerngenau, je nach Kartenart); die Angabe ist exakt wie auf dem Mobiltelefon angezeigt in die Suchzeile z. B. von Google Maps einzugeben; Smartphone-Nutzer können die Positionsabfrage nach 2.6 verwenden; nach einer Diebstahlmeldung sind nach 2.5 jederzeit weitere Statusberichte anforderbar. Ohne GPS-Empfang wartet Pro-finder 10 Minuten auf eine gültige Position, danach wird der Bericht mit der zuletzt empfangenen Position gesendet. Bei Alarm und aktiver Lichtmaschine (\"an active generator\") wird die Position permanent abgefragt; die UTC-Zeit der SMS ist immer die Zeit der zuletzt empfangenen Position. Dieselben zwei Bildschirmfotos wie im deutschen Teil: deutschsprachiges Google Maps im Desktop-Browser und deutschsprachige Karten-App auf einem Smartphone, Bildunterschrift mit Auf- und Abwärtsdreieck.",
+      "headings": ["Pro-finder Manual", "Page 15", "2.8 Finding a stolen vehicle"],
+      "technical_values": [
+        {
+          "value": "Ohne GPS-Empfang wartet Pro-finder 10 Minuten auf eine gültige Position; danach wird die zuletzt empfangene gesendet",
+          "context": "Deckt sich mit der deutschen Fassung (\"bis zu 10 Minuten\"); die englische Formulierung \"will wait 10 minutes\" lässt das \"bis zu\" weg",
+          "safety_critical": true
+        },
+        {
+          "value": "Bei Alarm und aktiver Lichtmaschine permanente Positionsabfrage; UTC-Zeit = Zeit der letzten gültigen Position",
+          "context": "\"an active generator\" für die Lichtmaschine; die Bedingung erscheint wie im deutschen Teil nur an dieser Stelle",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Bildschirmfoto von Google Maps im Desktop-Browser und Smartphone-Karten-App - unverändert die deutschsprachigen Bilder von PDF-Seite 17 (deutsche Oberfläche, Kieler Beispieladresse)",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; nicht in der Textebene. Auch im englischen Teil zeigen die Beispiele eine deutsche Programmoberfläche; Koordinaten und Adresse werden bewusst nicht wiedergegeben"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Bildunterschrift verwendet wieder zwei Dreieckssymbole, die in der Textebene als \"p\" und \"q\" erscheinen (\"on a stationary PC p and on a mobile end device (smartphone) q\") - hier immerhin mit Leerzeichen, aber weiterhin als falsche Buchstaben vorgelesen.",
+        "Beide Bildschirmfotos zeigen deutschsprachige Oberflächen in einem englischen Handbuch und haben keine Textentsprechung.",
+        "Der Hinweis auf das mögliche Alter der Position steht ohne Hervorhebung im Fließtext, im Umbruch neben dem Smartphone-Foto.",
+        "Kopfzeile und Bildunterschrift werden in der Textebene erst nach dem gesamten Fließtext ausgegeben.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 15\", tatsächlich PDF-Seite 35 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "Die Verweise dieser Seite (2.5, 2.6) treffen zu - wie im deutschen Gegenstück.",
+        "\"will wait 10 minutes\" lässt das einschränkende \"bis zu\" der deutschen Fassung weg - kleiner, aber realer Wertunterschied in der Zusicherung.",
+        "\"an active generator\" für \"aktive Lichtmaschine\" - technisch wäre \"alternator\" das übliche Wort; \"generator\" ist zumindest missverständlich (DSC-070).",
+        "\"mobile end device\" - Direktübersetzung von \"mobiles Endgerät\" (DSC-070)."
+      ],
+      "terminology_findings": [
+        "\"map programs and navigation devices\" für \"Kartenprogramme und Navigationsgeräte\".",
+        "\"smartphone\" hier durchgehend klein und zusammengeschrieben; die Bildunterschrift der deutschen Seite schrieb \"(Smart Phone)\"."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi. Beide Bildschirmfotos mit der deutschen Seite 17 verglichen: identisch. languages enthält deshalb auch \"de\" (Bildtexte). Koordinaten und Adressen bewusst nicht übernommen. Sprache des Fließtexts Englisch, vollständig beurteilbar."
     },
     {
       "page": 36,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 148,
       "height_mm": 210,
-      "extractable_chars": 1517,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 1265,
+      "content_type": "anleitung",
+      "languages": ["en"],
+      "summary": "Intern \"Page 16\", letzte Seite des englischen Teils. Englisches Gegenstück zu PDF-Seite 18. Vier Abschnitte. \"3.1 Technical specifications\": neun Zeilen - Power supply 9-30 V, Current consumption network search approx. 37 mA, Current consumption during normal operation approx. 21 mA, Transmission frequency 900/1800/850/1900 MHz, Number of destination numbers 10, Interfaces NMEA (input GPS), Outputs 2 x 12 V/500 mA, Temperature range -10 °C to +80 °C, SIM card type micro-SIM. \"3.2 Conformity / directives\": CE-Zeichen; Konformitätserklärung der Thitronik GmbH nach \"the directive 1995/5/EG\" - falsche Jahreszahl (deutsch: 1999/5/EG) und deutsches Kürzel \"EG\" im englischen Text; Downloadlink auf thitronik-automotive.de. \"3.3 Disposal instructions\": WEEE- und Recyclingsymbol, Gerät nicht in den Hausmüll. \"3.4 Technical support\": erst Händler, dann Website, dann Telefonsupport \"Monday through Friday from 9:00 a.m. to 4:00 p.m.\" unter der Kieler Rufnummer; abschließend das Feld \"SN:\" zum Eintragen der Seriennummer (\"the serial number of your alarm\").",
+      "headings": [
+        "Pro-finder Manual",
+        "Page 16",
+        "3.1 Technical specifications",
+        "3.2 Conformity / directives",
+        "3.3 Disposal instructions",
+        "3.4 Technical support"
+      ],
+      "technical_values": [
+        {
+          "value": "Alle neun technischen Daten decken sich mit der deutschen Fassung: 9-30 V, ca. 37 mA, ca. 21 mA, 900/1800/850/1900 MHz, 10 Zielrufnummern, NMEA, 2 x 12 V/500 mA, -10 °C bis +80 °C, micro-SIM",
+          "context": "Die englische Fassung ist typografisch sauberer als die deutsche: alle Zeilen mit Doppelpunkt, \"MHz\" korrekt geschrieben, Leerzeichen vor Einheiten. Die auffällige Bandreihenfolge 900/1800/850/1900 ist identisch",
+          "safety_critical": true
+        },
+        {
+          "value": "Konformitätserklärung nach \"the directive 1995/5/EG\"",
+          "context": "Bei 400 dpi zeichengenau gesichert. Die deutsche Fassung (PDF-Seite 18) nennt die Richtlinie 1999/5/EG (R&TTE); eine Richtlinie 1995/5/EG existiert nicht. Zusätzlich steht das deutsche Kürzel \"EG\" statt \"EC\" im englischen Text (DSC-071)",
+          "safety_critical": false
+        },
+        {
+          "value": "Telefonsupport Montag bis Freitag 9:00 a.m. bis 4:00 p.m., Kieler Rufnummer",
+          "context": "Historische Supportangabe, Zeitformat auf a.m./p.m. lokalisiert; die heutige Kontaktangabe des Piloten stammt ausschließlich aus 14-support.json",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "CE-Zeichen als Grafik; WEEE-Symbol (durchgestrichene Mülltonne mit Balken) und Recyclingsymbol",
+          "has_text_equivalent": false,
+          "relies_on": "ausschließlich das Bild; die Zeichenfolge \"CE\" kommt in der Textebene nicht vor - wie im deutschen Teil"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die technischen Daten sind wieder eine zweispaltige Tab-Liste ohne Tabellenauszeichnung; anders als im deutschen Teil tragen hier alle neun Zeilen einen Doppelpunkt - die Struktur ist konsistent.",
+        "Der Downloadlink steht als bloßer Text (http, Domain thitronik-automotive.de); keine Verknüpfung ausgewiesen.",
+        "Das CE-Zeichen existiert nur als Grafik ohne Textentsprechung.",
+        "Das Feld \"SN:\" ist ein reines Papierformular.",
+        "Paginierungs-Diskrepanz: aufgedruckt \"Page 16\", tatsächlich PDF-Seite 36 (Versatz +20)."
+      ],
+      "discrepancies": [
+        "\"the directive 1995/5/EG\" gegen \"Richtlinie 1999/5/EG\" der deutschen Fassung - die englische Jahreszahl ist falsch; eine Richtlinie 1995/5 existiert nicht (DSC-071, bei 400 dpi gesichert). Dazu das deutsche Kürzel \"EG\" statt des englischen \"EC\".",
+        "Die englische Datenliste korrigiert stillschweigend drei Satzfehler der deutschen: der fehlende Doppelpunkt der Netzsuche-Zeile, \"Mhz\" und die fehlenden Leerzeichen vor Einheiten sind hier richtig - die Fassungen wurden offenbar getrennt gesetzt.",
+        "\"SIM card type: micro-SIM\" mit kleinem m gegen \"Micro-SIM\" der deutschen Fassung und der PDF-Seite 26 - dritte Schreibvariante des Formats im Dokument.",
+        "\"the serial number of your alarm\" - das Gerät wird als \"alarm\" bezeichnet, obwohl der Disclaimer (PDF-Seite 20) den Pro-finder ausdrücklich von einem Alarmsystem unterscheidet und die deutsche Fassung \"Ihres Gerätes\" schreibt (DSC-070).",
+        "\"Number of destination numbers\" lässt das \"phone\" der übrigen Seiten weg - vierte Variante der Zielrufnummern-Benennung im englischen Teil (DSC-068)."
+      ],
+      "terminology_findings": [
+        "\"Transmission frequency\" für \"Sendefrequenz\"; \"Power supply\" für \"Spannungsversorgung\".",
+        "\"micro-SIM\" klein gegen \"Micro-SIM\" (PDF-Seiten 18 und 26).",
+        "\"your alarm\" für das Gerät - einzige Stelle des englischen Teils, die den Pro-finder so nennt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 19, 2026-08-09, PNG-Rendering 150 dpi; die Konformitätszeile bei 400 dpi nachgerendert, weil an der Jahreszahl DSC-071 hängt. Alle neun Datenzeilen einzeln gegen die deutsche Fassung (PDF-Seite 18) gehalten. Sprache Englisch, vollständig beurteilbar."
     },
     {
       "page": 37,

@@ -1,16 +1,16 @@
 # Projektstatus
 
-Stand: 2026-08-08. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 30.8 %**
+**Gesamtfortschritt: 31 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 15.6 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 16.3 %      |
 | Content-Modell und deutscher Master      | 20 %    | 52 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
@@ -22,38 +22,41 @@ Stand: 2026-08-08. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 9 %         |
+| DOC-BMA-SN044 | 72     | 12.5 %      |
 | DOC-IBA-SN045 | 247    | 17.3 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 122 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 27-72 (englischer Teil ab Page 7, dann Franzoesisch 37-53, Schwedisch 54-71, Impressum 72) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Der deutsche Teil von DOC-BMA-SN044 ist vollstaendig geprueft; im englischen Teil sind auf Seite 33 die Abschnittsueberschrift 2.4 (DSC-068) und die Befehle Fence on/off (DSC-067) im Seitenbild zu bestaetigen, im schwedischen Teil auf den Seiten 59 und 67 die Befehle fence pa/av. Parallel dazu koennen jetzt die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 112 ungeprueften Seiten in Batches abarbeiten: DOC-BMA-SN044 Seiten 37-72 (Franzoesisch 37-53, Schwedisch 54-71, Impressum 72; dabei auf den Seiten 59 und 67 die Befehle fence pa/av im Seitenbild sichern) sowie DOC-IBA-SN045 Seiten 101-120, 145-150, 173-190, 198-220, 233-240 und 247. Deutscher und englischer Teil von DOC-BMA-SN044 sind vollstaendig geprueft. Parallel dazu koennen jetzt die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage dafuer ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon **201 visuell geprüft** (`inspected`): DOC-IBA-SN045
-  Seiten 1–100 und 76 weitere Seiten aus den Batches 121–246, dazu **26 Seiten
+- 323 Seitenrecords angelegt; davon **211 visuell geprüft** (`inspected`): DOC-IBA-SN045
+  Seiten 1–100 und 76 weitere Seiten aus den Batches 121–246, dazu **36 Seiten
   DOC-BMA-SN044** und beide Kurzanleitungen. **Vier vollständige Sprachteile** (Deutsch,
   Englisch, Französisch, Tschechisch) von DOC-IBA-SN045 sind geprüft; die übrigen
   Sprachteile sind angefangen. Alle neuen Records sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße und Zeichenzahlen je Seite) – siehe
   `scripts/merge-page-records.mjs`. Die Prüfung hat dabei einen realen Fehler abgefangen:
   eine aus der Nachbarseite übernommene Zeichenzahl;
-- **Der deutsche Teil von DOC-BMA-SN044 ist vollständig geprüft** (Seiten 1–19,
-  einschließlich „Fahrzeug wiederfinden", technischer Daten und Notizseite). Damit liegt
-  die **komplette inhaltliche Grundlage für die dreizehn fehlenden Aufgaben der Generation
-  bis SN-044** vor. Zusätzlich sind die ersten sieben Seiten des englischen Teils geprüft
-  (Seiten 20–26); die Struktur des Dokuments ist jetzt bekannt – Deutsch 1–19, Englisch
-  20–36, Französisch 37–53, Schwedisch 54–71, Impressum 72. Weil dieses Dokument als
-  einziges eine echte Textebene hat, wurde jede Seite zusätzlich Zeile für Zeile gegen das
-  Seitenbild gehalten – daraus stammen erneut die stärksten Funde: der englische Teil
-  druckt den **schwedischen** Geofencing-Befehl (DSC-067), und die Betriebsartentabelle
-  nennt für die Stellung D deutsch **8 Minuten**, englisch **8 seconds** (DSC-066);
+- **Der deutsche und der englische Teil von DOC-BMA-SN044 sind vollständig geprüft**
+  (Seiten 1–36 von 72; Struktur: Deutsch 1–19, Englisch 20–36, Französisch 37–53,
+  Schwedisch 54–71, Impressum 72). Damit liegt die **komplette inhaltliche Grundlage für
+  die dreizehn fehlenden Aufgaben der Generation bis SN-044** vor. Weil dieses Dokument
+  als einziges eine echte Textebene hat, wurde jede Seite zusätzlich Zeile für Zeile gegen
+  das Seitenbild gehalten – daraus stammen die stärksten Funde: der englische Teil druckt
+  den **schwedischen** Geofencing-Befehl (DSC-067), die Betriebsartentabelle nennt für die
+  Stellung D deutsch **8 Minuten**, englisch **8 seconds** (DSC-066), der englische Teil
+  lehrt `arm`/`disarm`, während die abgebildete Geräte-Hilfe-SMS `SCHARF`/`UNSCHARF`
+  führt (DSC-054), alle neun Beispiel-SMS-Bilder des englischen Teils zeigen **deutsche**
+  Gerätetexte (DSC-072), alle vier falschen Querverweise sind wörtlich mitübersetzt
+  (DSC-055), und die englische Konformitätsangabe nennt eine nicht existierende
+  „directive 1995/5/EG" (DSC-071);
 - die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu
-  sechzehn entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende
+  siebzehn entscheidungsreifen Fragen gebündelt; das Dokument ist zugleich die laufende
   Sammelstelle für weitere Funde, damit sie die Arbeit nicht mehr aufhalten;
 - **alle vierzehn deutschen Aufgaben sind aus geprüften Quellseiten gefüllt**; keine ist
   mehr Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Seitenregion, jede Datei
@@ -70,8 +73,8 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 122 ungeprueften Seiten i
   Sprachmarken: die Marke des dänischen Teils ist eine zusammengesetzte Flagge aus
   norwegischer und dänischer Hälfte – bei 150 dpi nicht erkennbar, mit dem neuen
   Ausschnittswerkzeug auf den Seiten 1 und 101 belegt;
-- die Prüfung von DOC-BMA-SN044 hat inzwischen **siebzehn Registerpositionen** erzeugt
-  (DSC-054 bis DSC-070), sieben davon mit hoher Schwere. Der Ertrag liegt hier nicht in der
+- die Prüfung von DOC-BMA-SN044 hat inzwischen **neunzehn Registerpositionen** erzeugt
+  (DSC-054 bis DSC-072), neun davon mit hoher Schwere. Der Ertrag liegt hier nicht in der
   Menge, sondern darin, dass sich drei bisher offene Punkte damit anders darstellen:
   - **BLK-005 ist kein Übersetzungsproblem.** Die Hilfe-SMS des Geräts ist auf Seite 13 als
     Abbildung wiedergegeben und nennt die Befehle, die das Gerät selbst für gültig hält.
@@ -141,20 +144,24 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 122 ungeprueften Seiten i
   einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
   Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
-- **die 76 Seitenrecords aus dem SN-045-Batch und die 21 neuen aus DOC-BMA-SN044 haben
+- **die 76 Seitenrecords aus dem SN-045-Batch und die 31 neuen aus DOC-BMA-SN044 haben
   keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber kein zweiter Prüfer hat
   die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Der Status `inspected`
   bedeutet ohnehin nur „visuell angesehen"; hier fehlt zusätzlich die eingebaute zweite
   Meinung. Nachzuholen spätestens bei der Segment-Extraktion. Für die neuen Records gilt
   einschränkend: die tragenden Einzelbefunde – die Befehlsliste der Hilfe-SMS, das
-  fehlende Sternzeichen, die Verweisziele, die Abschnittsnummer 2.8, der Befehl
-  `fence av` (500 dpi), die Tabellenzellen „8 Minuten"/„8 seconds" (300/400 dpi) und die
-  Zeilen der technischen Daten (400 dpi) – sind jeweils hochauflösend nachgerendert und
-  dadurch einzeln abgesichert. Das ersetzt keinen zweiten Prüfer, engt den ungeprüften
-  Rest aber auf die beschreibenden Teile ein. Die Belege aus **noch ungeprüften** Seiten
-  (englische Seite 33, schwedische Seiten 59 und 67) stammen ausschließlich aus der
-  Textebene und sind in DSC-067 und den Records ausdrücklich so gekennzeichnet;
+  fehlende Sternzeichen, die Verweisziele, die Abschnittsnummern 2.8 und 2.4, die Befehle
+  `fence av` und `Fence on`/`off`, die Tabellenzellen „8 Minuten"/„8 seconds", die
+  Sternglyphen der englischen Seite 28 und die Richtlinienangabe „1995/5/EG" – sind
+  jeweils hochauflösend nachgerendert oder im Seitenbild bestätigt und dadurch einzeln
+  abgesichert. Das ersetzt keinen zweiten Prüfer, engt den ungeprüften Rest aber auf die
+  beschreibenden Teile ein. Nur die schwedischen Befehlsbelege (Seiten 59 und 67) stammen
+  noch ausschließlich aus der Textebene und sind in DSC-067 so gekennzeichnet. Dass die
+  zweite Meinung real fehlt, hat sich am 2026-08-09 konkret gezeigt: Eine vergleichende
+  Aussage im Record der englischen Seite 25 („einzige Stelle mit farbunabhängiger
+  LED-Darstellung") war falsch – die deutschen Seiten 7 und 11 verwenden dieselben
+  Balken – und wurde mit dokumentierter Korrektur berichtigt;
 - **alle acht** neu gefüllten deutschen Aufgaben sind einzeln gegen die Quellseiten
   gegengeprüft worden; der Vermerk steht je Datei im `change_reason`. Der Schritt ist
   nicht formal: entfernt wurden unter anderem ein frei erfundenes erwartetes Ergebnis,
@@ -187,14 +194,24 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 122 ungeprueften Seiten i
    **Erneut verschärft am 2026-08-08 (DSC-067):** Die englische Seite 25 desselben
    Handbuchs druckt als Geofencing-Ausschaltbefehl `fence av` – den Befehl des
    **schwedischen** Teils –, während der eigene englische Abschnitt 2.4 `Fence on`/`off`
-   schreibt. Vorlagenkontamination zwischen Sprachfassungen ist damit innerhalb eines
-   Dokuments belegt; gedruckte Befehle sind ohne technische Bestätigung grundsätzlich
-   unzuverlässig.
+   schreibt (am 2026-08-09 im Seitenbild bestätigt). Vorlagenkontamination zwischen
+   Sprachfassungen ist damit innerhalb eines Dokuments belegt; gedruckte Befehle sind ohne
+   technische Bestätigung grundsätzlich unzuverlässig.
+   **Spiegelbildlich bestätigt am 2026-08-09 (DSC-054, DSC-072):** Der englische Teil
+   lehrt `arm`/`disarm`, die auf der gegenüberliegenden Seite abgebildete Hilfe-SMS des
+   Geräts führt `SCHARF`/`UNSCHARF`; umgekehrt decken sich die englischen Ausgangsbefehle
+   mit der Geräteliste, die deutschen nicht. Jede Sprachfassung stimmt mit einem anderen
+   Teil der Geräteliste überein.
 2. Die Sprachfassungen sind inhaltlich nicht gleichwertig: die SIM-Anbieterempfehlung
    lautet deutsch t-mobile/Vodafone, englisch nur allgemein „M2M-Karte" und französisch
    namentlich DOMOTEC (DSC-027). Zusätzlich weicht ein technischer Wert ab (DSC-020).
    Solange unklar ist, welche Fassung gilt, kann kein sprachübergreifender Master
    entstehen.
+   **Bis SN-044 zusätzlich (DSC-072):** Der englische Teil verwendet unverändert die
+   deutschen Beispiel-SMS-Bilder – in welcher Sprache ein Gerät dieser Generation
+   tatsächlich meldet, ist unbelegt (Rückfrage 17); die englische Konformitätsangabe
+   nennt eine nicht existierende Richtlinie (DSC-071); und das Betriebsart-D-Intervall
+   widerspricht sich zwischen den Fassungen um den Faktor 60 (DSC-066).
 3. Der genaue Fundort und die Leseregel der Seriennummer am Gerät sind nicht technisch
    bestätigt; die Startseite darf deshalb keine Ziffernregel behaupten (DSC-023).
 4. Karte: finale URL, Supportdaten, Mindestschrift, Braille-Dienstleister und physische

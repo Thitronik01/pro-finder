@@ -822,6 +822,16 @@ belegt, nicht aus einer Zusammenfassung.
   nirgends erwähnt und die vor jeder Übersetzung zu schützen ist. Das deckt sich mit der
   Beobachtung zu DSC-033, dass alle Geräte-SMS der neueren Generation ohne Diakritika
   gesetzt sind.
+- **Nachtrag 2026-08-09 (englischer Teil):** Der Widerspruch besteht spiegelbildlich auch
+  im englischen Teil – und dort auf einer Doppelseite. Die englische Seite 32 lehrt die
+  Schaltbefehle `arm` und `disarm`, die auf der gegenüberliegenden Seite 31 abgebildete
+  Hilfe-SMS des Geräts (unverändert das deutsche Bild) führt stattdessen `SCHARF` und
+  `UNSCHARF`. Umgekehrt decken sich die englischen **Ausgangsbefehle** (`A on`, `A off`,
+  `A pulse`, Seite 34) mit der Geräteliste (`A ON`, `A OFF`, `A PULSE`), während die
+  deutschen (`A an`, `A aus`, `A impuls`) abweichen. Jede Sprachfassung stimmt also mit
+  einem anderen Teil der Geräteliste überein und widerspricht dem anderen; der Zeitbefehl
+  `A XXX` fehlt der Geräteliste in beiden. Der zugeschaltete Alarm wird englisch mit
+  `disarm`, deutsch mit `unscharf` beendet – die Geräteliste kennt dafür nur `ALARM AUS`.
 - **Schwere:** hoch · **Status:** offen – verstärkt BLK-005, an THITRONIK zu melden
   (Rückfrage 1)
 
@@ -856,6 +866,13 @@ belegt, nicht aus einer Zusammenfassung.
 - **Bemerkenswert im Generationenvergleich:** Der Verweis auf Blinker und Sirene ist hier
   **richtig** (Seite 12 auf 2.2). In der Fassung ab SN-045 führt genau dieser Verweis ins
   Leere (DSC-041). Der Fehler ist dort erst entstanden.
+- **Nachtrag 2026-08-09 (englischer Teil):** Alle vier falschen Querverweise sind wörtlich
+  in den englischen Teil übernommen – „(see 2.5)" auf Seite 28, „as described in chapter
+  2.3" auf Seite 30, „as described under 2.4" auf Seite 31 und „Chapter 2.6 explains how
+  to find your vehicle" auf Seite 33. Die zutreffenden Verweise sind dort ebenfalls
+  zutreffend übernommen. Die Fehler liegen also in der Vorlage, nicht in einer
+  Sprachfassung; jede weitere Sprachfassung dieses Dokuments wird sie erwartbar ebenfalls
+  enthalten.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-056 – Die Steuerberechtigung hängt auch bis SN-044 an einem nirgends erklärten Zeichen (bis SN-044)
@@ -878,6 +895,12 @@ belegt, nicht aus einer Zusammenfassung.
   Seite 10 schreibt denselben Marker in der Strukturabbildung und im Erläuterungstext
   durchgehend als großes **S**. Ob das Gerät die Schreibung unterscheidet, sagt die Quelle
   nicht.
+- **Nachtrag 2026-08-09 (englischer Teil):** Beides ist wörtlich mitübersetzt. Die
+  englische Seite 27 führt das Smartphone-Kennzeichen als kleines **„s"** ein, Seite 28
+  schreibt in Strukturabbildung und Erläuterung ein großes **„S"** – derselbe Widerspruch
+  in beiden Sprachteilen. Auch die Berechtigungsregel bleibt englisch unausgesprochen: die
+  Beispieltabelle auf Seite 28 reiht autorisierte Nummern mit Plus- und die nicht
+  autorisierte mit Minuszeichen an, ohne dass irgendein Satz die Zeichen erklärt.
 - **Schwere:** hoch · **Status:** offen – verstärkt BLK-006, an THITRONIK zu melden
   (Rückfrage 10)
 
@@ -897,6 +920,11 @@ belegt, nicht aus einer Zusammenfassung.
   Prepaid-Karten. Ohne ihn wird das Guthaben nicht übertragen; mit einem falschen Code bei
   einer Vertragskarte führt die Quelle ausdrücklich Fehlfunktionen an. Die Anleitung
   verweist für diesen Wert auf eine Tabelle, die es nicht gibt.
+- **Nachtrag 2026-08-09 (englischer Teil):** Der englische Teil verweist ebenfalls zweimal
+  auf die nicht existierende Tabelle – „in the query codes table on the previous page" und
+  „according to the query codes table" (Seite 28). Die Vorseite 27 enthält keine Tabelle,
+  sondern nur den Verweis auf die Kartenunterlagen und einen FAQ-Link. Der Vorlagenfehler
+  besteht in beiden Sprachteilen.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-058 – Ein funktionsrelevantes Zeichen fehlt in der Textebene (bis SN-044)
@@ -916,6 +944,14 @@ belegt, nicht aus einer Zusammenfassung.
   würde die Seite für unauffällig halten. Für die HTML-Anleitung folgt daraus, dass Befehls-
   und Codebestandteile nicht aus der Textebene übernommen werden dürfen, sondern gegen das
   Seitenbild zu prüfen sind.
+- **Nachtrag 2026-08-09 (englischer Teil):** Die englische Parallelseite 28 zeigt eine
+  dritte Spielart desselben Problems. In ihrer Textebene ist das Sternzeichen nicht leer,
+  sondern ein Zeichen aus dem Unicode-Private-Use-Bereich (U+F0DA) – beim Kopieren oder
+  Vorlesen entsteht daraus ebenfalls kein verwertbares Zeichen. Zusätzlich verwendet die
+  Seite **zwei verschiedene Glyphen** für dasselbe erste Codezeichen: den sechsstrahligen
+  Stern in Strukturabbildung und Erläuterung, ein gewöhnliches ASCII-Sternchen in den
+  Zellen der Beispieltabelle (beide bei 400 dpi gesichert). Welches Zeichen tatsächlich zu
+  tippen ist, lässt sich der Seite nicht entnehmen.
 - **Schwere:** hoch · **Status:** offen
 
 ### DSC-059 – Neun Gerätezustände, unterschieden allein über die LED-Farbe (bis SN-044)
@@ -1049,10 +1085,14 @@ belegt, nicht aus einer Zusammenfassung.
   dort (Seite 26) ohne ein einziges Wort zur elektrostatischen Entladung, der rosa Kasten
   mit sechs Warndreiecken trägt die SIM-Vorgaben ohne Signalwort, rote Schrift kennzeichnet
   auf Seite 24 sowohl die Batteriewarnung als auch einen bloßen Querverweis, und die
-  Zwischentitel sind weiterhin nur unterstrichen. Einzige positive Abweichung: Auf Seite 25
-  ist das Blinken der Status-LED zusätzlich zur Farbe über ein Strichmuster dargestellt
-  (gestrichelter gegen durchgehenden Balken) – die bislang einzige Stelle beider
-  Sprachteile, an der ein LED-Verhalten nicht allein an der Farbe hängt.
+  Zwischentitel sind weiterhin nur unterstrichen. Ein Auszeichnungsmittel trägt in beiden
+  Sprachteilen tatsächlich Information farbunabhängig: die LED-Farbbalken (deutsch Seiten
+  7 und 11, englisch Seiten 25 und 29) unterscheiden Blinken von Dauerleuchten über
+  gestrichelte gegen durchgezogene Balken. **Innerhalb** der Blink- bzw. Dauerlichtgruppe
+  bleibt die Farbe aber auch dort das einzige Merkmal (DSC-059). _(Korrektur 2026-08-09:
+  Die frühere Fassung dieses Nachtrags nannte die Balken auf Seite 25 fälschlich die
+  einzige derartige Stelle beider Sprachteile – die deutschen Seiten 7 und 11 verwenden
+  dieselbe Darstellung und hatten sie auch dokumentiert.)_
 - **Schwere:** hoch (Sicherheitshinweise) · **Status:** offen
 
 ### DSC-064 – Redaktionelle Befunde im Handbuch bis SN-044 (bis SN-044)
@@ -1157,8 +1197,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Befund:** Der Befehl „fence av" ist kein Englisch. Er ist an dieser Stelle mit keiner
   anderen Angabe des Dokuments vereinbar:
   - die deutsche Parallelstelle (Seite 7, geprüft) schreibt „fence aus";
-  - der englische **eigene** Abschnitt 2.4 verwendet laut Textebene „Fence on" und
-    „Fence off" (Seite 33, noch ungeprüft);
+  - der englische **eigene** Abschnitt 2.4 verwendet „Fence on" und „Fence off"
+    (Seite 33; **am 2026-08-09 im Seitenbild bestätigt** – der Widerspruch liegt damit
+    belegt innerhalb des englischen Teils);
   - die Hilfe-SMS des Geräts (Seite 13, geprüft) führt „FENCE ON"/„FENCE OFF";
   - die englische SN-045-Fassung schreibt „fence off" (DSC-033).
     „av" ist das schwedische Wort für „aus", und der schwedische Teil dieses Dokuments
@@ -1186,12 +1227,17 @@ belegt, nicht aus einer Zusammenfassung.
 - **Befund:**
   - Der Verzeichniseintrag **2.4 lautet „Installation instructions"**. Das deutsche
     Verzeichnis (Seite 2) führt 2.4 als „Geofencing" (im Seitenbild bestätigt), die
-    deutsche Abschnittsüberschrift auf Seite 15 ebenso, und auch die Textebene des
-    englischen Teils behandelt in 2.4 Geofencing (Seite 33). Der Eintrag benennt den
-    Abschnitt schlicht falsch; die englische Abschnittsüberschrift auf Seite 33 ist noch im
-    Seitenbild zu bestätigen.
+    deutsche Abschnittsüberschrift auf Seite 15 ebenso. **Am 2026-08-09 abgeschlossen:**
+    Die englische Abschnittsüberschrift auf Seite 33 lautet im Seitenbild „2.4 Geofencing"
+    – der Verzeichniseintrag benennt den Abschnitt schlicht falsch.
+  - Der Verweis „(see 2.1, Fig. 1)" auf Seite 22 nummeriert eine Abbildung, die es nicht
+    gibt: Der englische Abschnitt 2.1 (Seiten 30–31, geprüft) trägt an keiner seiner neun
+    Beispiel-SMS-Abbildungen eine Nummer oder Bildunterschrift. Der Verweis läuft ins
+    Leere.
   - Das Verzeichnis nennt 1.8/1.9 „**target** phone numbers", Abschnittsüberschrift
     (Seite 26) und Tabellenzeile E (Seite 23) schreiben „**destination** phone numbers".
+    Seite 28 verwendet beide Formen in einem Absatzpaar; die technischen Daten (Seite 36)
+    schreiben als vierte Variante „Number of destination numbers" ohne „phone".
   - Verzeichnis 1.6 „Installation of the GPS receiver (optional)" gegen Überschrift
     „Installing the GPS receiver (optional)" (Seite 24); Verzeichnis 1.7 „Connecting the
     GPS receiver (optional)" gegen Überschrift „Connection of the GPS receiver" ohne
@@ -1238,12 +1284,12 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-070 – Redaktionelle Befunde im englischen Teil bis SN-044 (bis SN-044)
 
-- **Dokument:** DOC-BMA-SN044, englische Seiten 20 bis 26
+- **Dokument:** DOC-BMA-SN044, englische Seiten 20 bis 36
 - **Befund:** Sammelposition für Fehler ohne eigene sachliche Tragweite, analog DSC-064.
   - **Gemischte Rechtschreibvarianten:** „unauthorised" (S. 20) gegen „unauthorized"
     (S. 21); daneben durchgehend britisch „de-energised", „cancelled" (S. 24, 26).
   - Seite 21: Kopfzeile „Page1" ohne Leerzeichen – einzige Seite; alle übrigen schreiben
-    „Page 2" bis „Page 6".
+    „Page 2" bis „Page 16".
   - Seite 22: „(option)" gegen „(optional)" im Verzeichnis – wie im deutschen Teil.
   - Seite 23: „with Wipro" mit kleinem p zwischen zwei korrekten „WiPro" im selben Absatz
     (bei 500 dpi bestätigt).
@@ -1251,8 +1297,71 @@ belegt, nicht aus einer Zusammenfassung.
     „T-Mobile"; der Einleitungssatz endet ohne Punkt (wie sein deutsches Gegenstück auf
     Seite 8 – der Vorlagenfehler ist mitübersetzt); weiches Trennzeichen in der Textebene
     („­Alarm", auch „­voltage" im Tabellenkopf auf Seite 23).
+  - Seite 27: „or ask your **peovider**" statt „provider"; „Sim Card" in Gemischtschreibung.
+  - Seite 29: „SIM card must be in the device!!" mit nur schließendem
+    Ausrufezeichenpaar – das Original rahmt beidseitig ein.
+  - Seite 30: „160 characters" mit doppeltem Leerzeichen.
+  - Seite 31: „Positions SMS" mit deutschem Fugen-s; „Master number" mit großem M mitten
+    im Satz gegen „master number" (S. 27).
+  - Seite 32: „a pay connection" – Direktübersetzung von „kostenpflichtige Verbindung".
+  - Seite 33: „an SMS with the text, "Fence off"" – Komma vor dem Anführungszeichen.
+  - Seite 34: „XXX must replaced with" – fehlendes „be"; die Zwischentitel wechseln
+    zwischen Gerundium („Switching outputs permanently:") und Imperativ („Switch outputs
+    pulsed …:").
+  - Seite 35: „an active generator" für die Lichtmaschine (üblich wäre „alternator");
+    „mobile end device" – Direktübersetzung von „mobiles Endgerät".
+  - Seite 36: „the serial number of your alarm" – das Gerät wird als „alarm" bezeichnet,
+    obwohl der Disclaimer den Pro-finder ausdrücklich von einem Alarmsystem unterscheidet;
+    „micro-SIM" klein gegen „Micro-SIM" (S. 26).
   - Terminologie innerhalb des Teils: „mobile phone provider" gegen „mobile phone
     supplier" (beide S. 26); „Cable assembly" (S. 21) gegen „main cable assembly" (S. 24);
     „recovery diode" für die Freilaufdiode (fachlich üblich wäre „flyback/freewheeling
-    diode", S. 24).
+    diode", S. 24); „program select switch" (S. 30) gegen „operating mode switch"
+    (S. 22, 29) – die deutsche Doppelbenennung Betriebsartenschalter/Programmwahlschalter
+    ist exakt in den englischen Teil übertragen; „geofence function" (S. 25) gegen
+    „Geofencing" (S. 33).
+- **Positivbefund:** Die technischen Daten (S. 36) sind typografisch sauberer als die
+  deutschen: alle Zeilen mit Doppelpunkt, „MHz" korrekt, Leerzeichen vor Einheiten. Die
+  Sprachfassungen wurden offenbar getrennt gesetzt.
 - **Schwere:** gering · **Status:** offen – gesammelt für den redaktionellen Review
+
+### DSC-071 – Der englische Teil nennt eine nicht existierende Richtlinie „1995/5/EG" (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, englische Seite 36 (intern „Page 16"), Abschnitt 3.2
+- **Beleg:** „Thitronik GmbH hereby declares that this product complies with the
+  requirements and regulations of the directive 1995/5/EG." – bei 400 dpi zeichengenau
+  gesichert.
+- **Befund:** Die deutsche Fassung (Seite 18) nennt die Richtlinie **1999/5/EG** (R&TTE).
+  Eine Richtlinie „1995/5/EG" existiert nicht – die englische Jahreszahl ist falsch.
+  Zusätzlich steht im englischen Text das deutsche Kürzel „EG" statt des englischen „EC".
+  Die Generation ab SN-045 erklärt die Konformität nach 2014/53/EU (DSC-069); für die
+  ältere Generation weichen damit sogar die beiden Sprachfassungen **derselben** Erklärung
+  voneinander ab.
+- **Warum das zählt:** Eine Konformitätserklärung ist eine rechtliche Aussage. Der Pilot
+  übernimmt Konformitätsangaben grundsätzlich nur aus der jeweils zutreffenden
+  Generationsquelle und für diese Generation nur aus der deutschen Fassung – die englische
+  ist hier nachweislich fehlerhaft.
+- **Schwere:** mittel · **Status:** offen – redaktioneller Befund mit rechtlichem Bezug
+
+### DSC-072 – Der englische Teil verwendet unverändert die deutschen Abbildungen (bis SN-044)
+
+- **Dokument:** DOC-BMA-SN044, englische Seiten 30, 31 und 35; Vergleich mit den deutschen
+  Seiten 12, 13 und 17
+- **Befund:** Alle neun Beispiel-SMS-Abbildungen des englischen Abschnitts 2.1 und beide
+  Kartenprogramm-Bildschirmfotos in 2.8 sind die **unveränderten deutschen Bilder**:
+  - Die Meldungsbilder zeigen deutsche Gerätetexte – „Diebstahl", „Spannung unter 11,2V",
+    „Hilfe erbeten", „Einbruch Tuer/Fenster", „Gas", „manueller Alarm", „GPS Fencing
+    aktiv", „Aktuelles Guthaben"/„Kontostand". Der englische Fließtext beschreibt die
+    Meldungen als „Theft alert", „Voltage warning" usw., nennt aber an keiner Stelle die
+    deutschen Stichwörter, an denen eine tatsächlich eingehende Meldung zu erkennen wäre.
+  - Die abgebildete Hilfe-SMS enthält die deutschen Schaltbefehle `SCHARF`/`UNSCHARF`,
+    während der englische Text `arm`/`disarm` lehrt (Nachtrag zu DSC-054).
+  - Die Bildschirmfotos in 2.8 zeigen deutschsprachige Programmoberflächen.
+- **Was daraus folgt:** Der englische Teil belegt nirgends, dass das Gerät englischsprachige
+  Meldungen ausgibt – die Bildwahl legt das Gegenteil nahe. Für die Generation ab SN-045
+  zeigt der tschechische Teil dagegen lokalisierte Geräte-SMS („Neplatny povel!", DSC-033).
+  Ob die Gerätetexte bis SN-044 in allen Sprachen deutsch sind, ist eine eigene Frage an
+  THITRONIK (Rückfrage 17) – sie entscheidet, welche Erkennungsstichwörter eine
+  englischsprachige Anleitung dieser Generation nennen müsste.
+- **Schwere:** hoch (Meldungen sind ohne die abgebildeten Stichwörter nicht zuzuordnen) ·
+  **Status:** offen – Rückfrage 17
