@@ -1,69 +1,70 @@
 # Handoff
 
-Stand: 2026-08-09 (siebte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-09 (achte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
-### Seitenprüfung: 273 → 293 von 323
+### Seitenprüfung: 293 → 314 von 323
 
-- **DOC-IBA-SN045, Seiten 173–190:** achtzehn neue Records. Seite 173 schließt den
-  italienischen Teil ab; Seiten 174–190 ergänzen den zuvor bereits geprüften
-  niederländischen Block 191–197.
-- **DOC-IBA-SN045, Seiten 198–199:** zwei zusätzliche Records. Seite 198 ist die
-  unerwartete niederländische Schlussseite; Seite 199 eröffnet den polnischen Teil.
-- DOC-IBA-SN045 steht damit bei **217 von 247 Seiten**. Alle 20 neuen Records wurden mit
-  `scripts/merge-page-records.mjs` gegen die Original-PDF geprüft. Jeder Record bleibt
-  auf `inspected`, nicht `validated`.
+- **DOC-IBA-SN045, Seiten 200–220:** einundzwanzig neue polnische Records. Zusammen mit
+  dem bereits geprüften Deckblatt 199 und den Schlussseiten 221–224 ist der polnische
+  Sprachblock vollständig.
+- DOC-IBA-SN045 steht damit bei **238 von 247 Seiten**. Alle neuen Records wurden mit
+  `scripts/merge-page-records.mjs` gegen Seitenmaße und lesbare Zeichenzahlen der
+  Original-PDF geprüft. Jeder Record bleibt auf `inspected`, nicht `validated`.
+- Der Gesamtstand ist **314 von 323 Seiten**. Offen sind ausschließlich die schwedischen
+  Seiten 233–240 und 247.
 
-### Pflichtaktion und direkter Folgebatch erledigt
+### Polnischer Sprachblock abgeschlossen
 
-1. Der italienische Teil ist auf den PDF-Seiten 150–173 vollständig. Technische Daten,
-   Entsorgung, Konformität und Support sind erfasst; sichtbare Supportadressen besitzen
-   keine Linkannotation.
-2. Der niederländische Teil umfasst entgegen Inhaltsverzeichnis und Fußzeilen **24 statt
-   23 interne Seiten**. Die zusätzliche fast leere Seite 190 verschiebt Kapitel 3 bis 6;
-   die echte Schlussseite 198 trägt „Pagina 24 van 23" (DSC-021).
-3. Beide bekannten falschen Querverweise, die deutsche Bildbeschriftung
-   „GPS-Antenne (Optional)", das unerklärte rote X, die implizite Minus-Regel und die
-   ALARM/AAlarm-Abweichung stehen auch italienisch und niederländisch. Die
-   Vorlagenbefunde sind damit in allen acht vollständig geprüften Fassungen belegt.
-4. Italienisch und Niederländisch bilden zwei weitere, intern gemischte Befehlsprofile:
-   Diagnose und Kapitel verwenden jeweils verschiedene Geofencing-Ausschaltbefehle. Der
-   niederländische Positionsbefehl ist sichtbar nur als `positi` gesetzt. Alle Angaben
-   sind reine Quellenzitate; BLK-005 bleibt unangetastet.
-5. Die niederländische Schlussseite übersetzt „Netzsuche" als
-   `Op het lichtnet zoeken`, während die LED-Tabelle `Netwerk zoeken` verwendet. Dazu
-   kommen `Pro-Zoeker`, drei Begriffe für die Hauptnummer und zwei für denselben
-   Hauptkabelbaum (DSC-083).
+1. Der Teil umfasst tatsächlich **25 statt 24 interne Seiten**. PDF-Seite 216 enthält
+   nur das isolierte Fragment „Programowanie numerów miejsc docelowych.". Diese Zusatzseite
+   verschiebt Kapitel 3 bis 6; die Schlussseite 224 trägt „Strona 25 z 24" (DSC-021).
+2. Die deutsche Bildbeschriftung „GPS-Antenne (Optional)", das unerklärte rote X, beide
+   falschen Querverweise, die implizite Minus-Regel und `ALARM`/`AAlarm` stehen auch
+   polnisch. Die Vorlagenbefunde sind damit in allen neun vollständig geprüften
+   SN-045-Fassungen belegt (DSC-016/017/022/040/044).
+3. Polen bildet das neunte Befehlsprofil: Die Diagnose nennt
+   `ogrodzenie wyłączone`, Kapitel 5 `fence off`; Status, Position, Ausgänge und
+   Anlernmodus verwenden englische Kapitelbefehle. Die englische Hilfe-SMS listet dagegen
+   nur `ARM`/`DISARM`/`STATUS`/`POS`. Alle Angaben bleiben reine Quellenzitate unter
+   BLK-005.
+4. Die LED-Tabelle dupliziert für Zustand 9 die Beschreibung von Zustand 8: Der Text nennt
+   erneut gelb-grünes Blinken und fehlende Zielnummern, obwohl die Grafik nur grün blinkt
+   und der Schluss-Hinweis Grün als Normalbetrieb bezeichnet. Zusammen mit `stuku 3`
+   gegen `styku 3` und `wuczeniu`/`wuczania` gegen `uczenia` ist das als DSC-084 erfasst.
+5. Die polnischen Meldungsseiten 218/219 besitzen trotz acht blau unterstrichener
+   Kartenadressen **null** Linkannotationen. Damit sind neunzehn nichtdeutsche
+   Meldungsseiten in EN/FR/CS/DA/ES/IT/NL/PL inert; die bekannte deutsche Seite mit
+   doppelten Annotationen bleibt die einzige Ausnahme (DSC-082).
+6. Ein früherer niederländischer Seitenrecord wurde berichtigt: Die feste
+   Zwei-Meter-Antennenleitung ist keine Abweichung vom deutschen SN-045-Master; auch der
+   deutsche Text schreibt wörtlich, dass die Kabellänge zwei Meter beträgt.
 
-### Synthese und PDF-Zugänglichkeit erweitert
+### Synthese und Register erweitert
 
-- Die erste Synthese-Auswertung in `DISCREPANCIES.md` vergleicht jetzt alle acht
-  vollständig geprüften Sprachfassungen ab SN-045 (DE, EN, FR, CS, DA, ES, IT, NL) mit
-  den vier älteren Fassungen und der älteren Geräte-Hilfe-SMS. Acht Fassungen ergeben
-  acht unterschiedliche, teils intern widersprüchliche Profile. Sämtliche Befehle bleiben
-  reine Quellenzitate unter BLK-005.
-- DSC-016, DSC-017, DSC-021, DSC-022, DSC-033, DSC-040, DSC-041, DSC-044, DSC-046 und
-  DSC-082 sind um die italienischen und niederländischen Belege erweitert.
-- **DSC-083 neu:** bündelt die niederländischen Kernterminologie- und
-  Produktnamensabweichungen. Sie stehen unter „Laufend ergänzt" in den Rückfragen; es
-  wurde keine achtzehnte Frage eröffnet.
-- Blau unterstrichene Kartenadressen besitzen nun auf siebzehn nichtdeutschen
-  Meldungsseiten in EN/FR/CS/DA/ES/IT/NL keine Linkannotation. Die bekannte deutsche
-  Ausnahme mit doppelten Annotationen bleibt unverändert (DSC-082).
+- Die erste Synthese-Auswertung in `DISCREPANCIES.md` vergleicht jetzt neun vollständig
+  geprüfte Sprachfassungen ab SN-045 (DE, EN, FR, CS, DA, ES, IT, NL, PL) mit den vier
+  älteren Fassungen und der älteren Geräte-Hilfe-SMS. Neun Fassungen ergeben neun
+  unterschiedliche, teils intern widersprüchliche Profile.
+- DSC-016, DSC-017, DSC-021, DSC-022, DSC-033, DSC-040, DSC-041, DSC-044, DSC-046,
+  DSC-047 und DSC-082 sind um die polnischen Belege erweitert.
+- **DSC-084 neu:** polnische Widersprüche am LED-Normalbetrieb, Anschlusswort und
+  Anlernmodus. Der Fund steht unter „Laufend ergänzt" in den Rückfragen; es wurde keine
+  achtzehnte Frage eröffnet.
 
-Registerstand: DSC-083 neu; weiterhin siebzehn Fragen und sieben Blocker; nichts still
+Registerstand: DSC-084 neu; weiterhin siebzehn Fragen und sieben Blocker; nichts still
 gelöst.
 
 ## Was in dieser Sitzung nicht erledigt wurde
 
-- **30 Seiten von DOC-IBA-SN045** sind noch `not_started`: 200–220, 233–240 und 247.
+- **9 Seiten von DOC-IBA-SN045** sind noch `not_started`: 233–240 und 247.
 - Die dreizehn fehlenden Aufgaben der Generation bis SN-044 sind weiterhin nicht
   geschrieben; die deutsche Quellenlage ist vollständig.
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
-- Die 20 neuen Seitenrecords haben keine unabhängige Gegenprüfung; italienische,
-  niederländische und polnische Records tragen eine `language_note`.
+- Die 21 neuen Seitenrecords haben keine unabhängige Gegenprüfung; die polnischen Records
+  tragen eine `language_note`.
 - Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
 
 ## Externe/menschliche Blocker
@@ -79,46 +80,48 @@ gelöst.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045 173–190 und 198–199.
-- **Gesamtstand:** 293 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
-  DOC-IBA-SN045 217/247.
+- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045 200–220.
+- **Gesamtstand:** 314 von 323 Seiten `inspected`; DOC-BMA-SN044 72/72,
+  DOC-IBA-SN045 238/247.
 - **Segmente:** keine neuen; alle neuen Seiten bleiben `inspected`.
 - **Aufgaben:** keine geändert; alle vierzehn deutschen SN-045-Aufgaben auf `entwurf`.
 - **Geänderte Bereiche:** Seitenrecords, Diskrepanzregister, Rückfragen, Fortschritts- und
   Übergabedokumentation. Kein Anwendungscode und kein Content-Layer geändert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
-  `npm run format` → `npm run check` vollständig grün; Unit-, Content-, Token-,
-  Karten-, Referenz-, Secret-, Lockfile- und Fortschrittschecks bestanden.
+  `npm run format` → `npm run check` vollständig grün.
 - **Referenz-Repository:** sauber; Push-URL `DISABLED`.
 
 ```text
 Resume from:
-Dokument DOC-IBA-SN045, PDF-Seite 200, Segment –, Sprache pl.
+Dokument DOC-IBA-SN045, PDF-Seite 233, Segment –, Sprache sv.
 
 First action:
-DOC-IBA-SN045 Seiten 200–210 als ersten polnischen Batch prüfen. Das Deckblatt auf Seite
-199 und die Schlussseiten 221–224 sind bereits geprüft. Rendern mit:
+DOC-IBA-SN045 Seiten 233–240 als letzten schwedischen Hauptbatch prüfen. Das Deckblatt
+225, Inhaltsverzeichnis 226/227, Haftung 228, Lieferumfang 229, Montage 230, Anschlüsse
+231, Betriebsarten 232 sowie die Schlusskapitel 241–246 sind bereits geprüft. Rendern mit:
 
-python scripts/render-pdf-pages.py sources/pdf/pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf 200 210 tmp/pdfs/iba-sn045-200-210 150
+python scripts/render-pdf-pages.py sources/pdf/pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf 233 240 tmp/pdfs/iba-sn045-233-240 150
 
-Jede Seite visuell prüfen; Polnisch nicht muttersprachlich freigeben, sondern Struktur,
-Werte, Terminologie und auffällige Einzelbefunde dokumentieren. Inhaltlich gegen die acht
+Jede Seite visuell prüfen; Schwedisch nicht muttersprachlich freigeben, sondern Struktur,
+Werte, Terminologie und auffällige Einzelbefunde dokumentieren. Inhaltlich gegen die neun
 vollständig geprüften Parallelfassungen halten:
-1. Seiten 200–201: Inhaltsverzeichnis – tatsächliche Zielseiten, Gesamtseitenzahl und
-   bekannte falsche Querverweise gegen die polnischen Seiten 202–224 prüfen.
-2. Seiten 202–205: Haftung, bestimmungsgemäße Verwendung, Lieferumfang, Montage und
-   Anschlüsse. Deutsche Bildbeschriftung, unerklärtes rotes X, exakte/maximale
-   Antennenkabellänge, Spannungen und Pinbelegung gegen DSC-022/040 halten.
-3. Seiten 206–207: Betriebsarten und Tabelle – falsche Verweise 5.4/5.5 und 1.5.2/1.5.3,
-   Stellung D, Intervalle, Geofencing-Schwellen und Tabellenlesbarkeit prüfen.
-4. Seiten 208–209: Modulanschluss, GPS-Antenne und Diagnose – 13,5 V/fünf Minuten,
-   LED-Farben, Reflexionswarnung und Geofencing-Ausschaltwort gegen DSC-033/047 halten.
-5. Seite 210: SIM-Konfiguration – Nano-SIM, 2G/3G/4G, M2M/Prepaid, PIN, Mailbox,
-   Roaming, iMessages und Warnkennzeichnung prüfen.
+1. Seite 233: Betriebsartentabelle – Stellung D, Intervalle, Spannungsgrenzen, Verweis
+   1.5.2/1.5.3 und Tabellenlesbarkeit gegen DSC-040 halten.
+2. Seiten 234–235: Modulanschluss, GPS-Antenne und Diagnose – 12 V/500 mA, 15 °C,
+   13,5 V/fünf Minuten, LED-Farben, Reflexionswarnung und schwedisches
+   Geofencing-Ausschaltwort gegen DSC-033/047 halten.
+3. Seiten 236–238: SIM-Konfiguration, Einsetzen, App/Aktivierung, Adressbuch und Rollen –
+   Nano-SIM, 2G/3G/4G, M2M/Prepaid, PIN/Mailbox/Roaming/iMessage, QR-/ESD-Zugang,
+   ALARM/AAlarm und zehn Zielnummern prüfen.
+4. Seiten 239–240: Programmier-SMS-Syntax und Löschen – Landesvorwahl gegen die
+   Beispielnummern, unerklärtes Minuszeichen (BLK-006), Schalterstellung E,
+   Hauptkabelbaum, LED-Abbruchbedingung und Seitenumbruch prüfen.
 
-Danach ohne Warten Seiten 211–220 prüfen. Zusammen mit 199 und 221–224 ist der polnische
-Teil dann vollständig; anschließend fehlen nur noch die schwedischen Seiten 233–240 und
-247.
+Danach ohne Warten PDF-Seite 247 prüfen. Sie ist die letzte Seite des schwedischen Teils
+und des gesamten Dokuments: interne Seitenzählung, technische Daten, 2014/53/EU,
+Entsorgung, Supportpfade, Telefonnummer/E-Mail, Linkannotationen und Impressums-/
+Schlusslayout gegen die neun Parallelfassungen halten. Anschließend Seitenprüfung auf
+323/323, Synthese auf zehn SN-045-Profile und Register/Rückfragen abschließen.
 
 Keine Rufnummer, Kartenadresse oder SMS-Befehlszeichenfolge in den Content-Layer
 übernehmen. BLK-005 und BLK-006 gelten unverändert.

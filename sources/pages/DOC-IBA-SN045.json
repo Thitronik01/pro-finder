@@ -10910,7 +10910,7 @@
         "Alle Montagehinweise fehlen in der lesbaren Textebene."
       ],
       "discrepancies": [
-        "'twee meter bedraagt' formuliert die Antennenleitung als feste Länge; der deutsche Master beschreibt eine maximale Länge von zwei Metern."
+        "'twee meter bedraagt' formuliert die Antennenleitung als feste Länge; das stimmt mit dem deutschen SN-045-Master überein, der ebenfalls 'zwei Meter beträgt' schreibt."
       ],
       "terminology_findings": [
         "'installatielocatie', 'installatieplaats' und 'toestel' stehen für Montageort beziehungsweise Gerät."
@@ -12463,297 +12463,983 @@
     },
     {
       "page": 200,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 161,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 1 z 24'. Erste Seite des polnischen Inhaltsverzeichnisses 'Zawartość' mit Kapiteln 1 bis 5.7. Kapitel 1 beginnt laut Verzeichnis auf interner Seite 5, Kapitel 2 auf 11, Kapitel 3 auf 17, Kapitel 4 auf 18 und Kapitel 5 auf 20. Durch die fast leere Zusatzseite 17 auf PDF-Seite 216 liegen die Kapitel 3 bis 6 tatsächlich jeweils eine interne Seite später. Keine lesbare Textebene.",
+      "headings": ["Zawartość"],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Inhaltsverzeichnis mit Kapitelnummern, Punktführung und Zielseiten",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Das Inhaltsverzeichnis fehlt vollständig in der lesbaren Textebene.",
+        "Hierarchie und Zuordnung werden nur durch Einrückung, Punktführung und Position vermittelt; die Einträge sind nicht verlinkt."
+      ],
+      "discrepancies": [
+        "Kapitel 3 bis 5 sind ab Seite 17 jeweils eine Seite zu früh angegeben; die fast leere Zusatzseite auf PDF-Seite 216 wurde bei der Verzeichniserstellung nicht berücksichtigt."
+      ],
+      "terminology_findings": [
+        "Polnische Kapitelbezeichnungen sind vollständig lokalisiert; Produktname 'Pro-finder' bleibt unverändert."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; alle Zielseiten gegen PDF-Seiten 204–224 gehalten.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur, Seitenziele und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 201,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 24,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 0,
+      "content_type": "inhaltsverzeichnis",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 2 z 24'. Fortsetzung des Inhaltsverzeichnisses mit Kapitel 6 'Różne' und 6.1 bis 6.4; alle fünf Einträge verweisen auf interne Seite 24. Der übrige Satzspiegel ist leer. Tatsächlich steht Kapitel 6 auf PDF-Seite 224 mit der unmöglichen Fußzeile 'Strona 25 z 24'. Keine lesbare Textebene.",
+      "headings": [],
+      "technical_values": [],
+      "tables": [
+        {
+          "description": "Fünf fortgesetzte Inhaltsverzeichniszeilen für Kapitel 6",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die Fortsetzung besitzt keine wiederholte Überschrift und besteht fast vollständig aus Leerraum.",
+        "Die Einträge fehlen in der lesbaren Textebene und sind nicht verlinkt."
+      ],
+      "discrepancies": [
+        "Alle fünf Einträge nennen Seite 24; die tatsächliche Kapitel-6-Seite trägt 'Strona 25 z 24'."
+      ],
+      "terminology_findings": [],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Fortsetzung und Zielseite gegen PDF-Seite 224 geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur und Seitenziele dokumentiert."
     },
     {
       "page": 202,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "warnhinweise",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 3 z 24'. Die unnummerierten Abschnitte 'Zastrzeżenie' und 'Przeznaczenie' erklären, dass der Pro-finder Diebstahl nur melden, nicht verhindern kann, dass eine tiefentladene Starterbatterie das Starten verhindern kann und dass das System für Freizeitfahrzeuge, Ortung und Alarmmeldungen, nicht für Routenprotokollierung oder Live-Tracking bestimmt ist. Positionen werden per SMS als Kartenlink oder Koordinaten gesendet. Keine lesbare Textebene.",
+      "headings": ["Zastrzeżenie", "Przeznaczenie"],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Diebstahl kann nur gemeldet, nicht verhindert werden.",
+        "Tiefentladung der Starterbatterie kann das Starten verhindern.",
+        "Nicht für Routenprotokollierung oder Live-Tracking bestimmt."
+      ],
+      "accessibility_issues": [
+        "Haftungs-, Batterie- und Nutzungshinweise fehlen vollständig in der lesbaren Textebene.",
+        "Die sicherheitsrelevanten Aussagen stehen als gewöhnlicher Fließtext ohne Signalwort oder Piktogramm."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Przeznaczenie' fasst Ortung, WiPro-Alarmmeldungen und Gaswarnungen als bestimmungsgemäße Nutzung zusammen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Disclaimer, Batterierisiko und Nutzungsgrenzen geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur und sachliche Kernaussagen dokumentiert."
     },
     {
       "page": 203,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "lieferumfang",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 4 z 24'. 'Zakres dostawy' zeigt den Lieferumfang als Produktfoto mit neunteiliger Legende: Pro-finder, Antenne, Gelverbinder, Befestigungsschrauben, Sicherungshalter, 3-A-Flachsicherung, Kurzanleitung, WiPro-III-Verbindungskabel und Verbindungskabel. Auf der abgebildeten Kurzanleitung ist 'SN 0699-045+' erkennbar. Keine lesbare Textebene.",
+      "headings": ["Zakres dostawy"],
+      "technical_values": [
+        {
+          "value": "3 A",
+          "context": "Bezpiecznik płaski, Flachsicherung",
+          "safety_critical": true
+        },
+        {
+          "value": "SN 0699-045+",
+          "context": "Geltungsaufdruck auf der abgebildeten Kurzanleitung",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Neunteilige Lieferumfangslegende neben dem Produktfoto",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Produktfoto des vollständigen Lieferumfangs",
+          "has_text_equivalent": true,
+          "relies_on": "visuelle Zuordnung zur danebenstehenden Reihenfolge; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Foto und Legende besitzen keine PDF-Struktur oder Alternativtexte.",
+        "Die Zuordnung der Einzelteile hängt von Bildposition und Reihenfolge ab."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Kabel połączeniowy WiPro III' und allgemeines 'Kabel połączeniowy' werden als zwei getrennte Lieferbestandteile geführt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; neun Positionen und SN-Aufdruck geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; sichtbare Benennungen und Werte dokumentiert."
     },
     {
       "page": 204,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 1,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "extractable_chars": 0,
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 5 z 24'. Kapitel 1 'Instalacja i podłączenie', Abschnitt 1.1 'Wybierz lokalizację instalacji': geschützter, servicezugänglicher Montageort im Fahrzeuginneren, nie im Motorraum; Geräteoberseite nach oben und freie Sicht zum Satelliten. Für die optionale externe GPS-Antenne nennt der Text wie der deutsche SN-045-Master eine Kabellänge von zwei Metern. Drei unbeschriftete Abbildungen zeigen richtige und falsche Orientierung sowie den Einbauort. Keine lesbare Textebene.",
+      "headings": ["1 Instalacja i podłączenie", "1.1 Wybierz lokalizację instalacji"],
+      "technical_values": [
+        {
+          "value": "dwa metry",
+          "context": "Kabellänge zwischen GSM-Modul und externer GPS-Antenne; in SN-045 sprachübergreifend als feste Länge formuliert",
+          "safety_critical": false
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Richtig-/Falsch-Abbildungen zur Geräteorientierung und Montagezone im Reisemobil",
+          "has_text_equivalent": false,
+          "relies_on": "grüner Kreis, rotes Verbotssymbol, Pfeil und markierte Zone"
+        }
+      ],
+      "warnings_found": ["Gerät keinesfalls im Motorraum montieren."],
+      "accessibility_issues": [
+        "Einbauanweisungen fehlen in der lesbaren Textebene.",
+        "Richtig und falsch werden in den Bildern wesentlich über Rot/Grün und Symbolik vermittelt; die einzelnen Bilder sind nicht textlich beschriftet."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'Pro-finder' und 'moduł GSM' bezeichnen im selben Abschnitt dasselbe Gerät aus unterschiedlichen Perspektiven."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Einbaugrenzen, Antennenlänge und Bildaussagen gegen deutschen SN-045-Master geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur, Werte und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 205,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anschlussplan",
+      "languages": ["pl", "de"],
+      "summary": "Intern 'Strona 6 z 24'. Abschnitt 1.2 'Połączenia, wyświetlacze i elementy sterujące' zeigt den Anschlussplan mit Marken A bis D und Pins 1 bis 8. A ist der Betriebsartenschalter, B WiPro III, C die externe GPS-Antenne, D die Status-LED; Pins 1 bis 8 führen Masse, Messeingänge U2 bis U5, Ausgänge B/A und Dauerplus 12 V. Im Bild bleibt die Beschriftung 'GPS-Antenne (Optional)' deutsch; ein rotes X zwischen B und C ist unerklärt. Keine lesbare Textebene.",
+      "headings": ["1.2 Połączenia, wyświetlacze i elementy sterujące"],
+      "technical_values": [
+        {
+          "value": "Pin 1–8",
+          "context": "Masa; wejścia pomiarowe U2–U5; wyjścia B/A; stały plus 12 V",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V",
+          "context": "Dauerplus an Pin 8",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Legende A–D und Pinbelegung 1–8",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Anschlussfoto mit farbigen Pins, Buchstabenmarken und rotem X",
+          "has_text_equivalent": false,
+          "relies_on": "Farbe, Position und eingebettete deutsche Bildbeschriftung"
+        }
+      ],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Anschlussfoto und Pinlegende fehlen vollständig in der lesbaren Textebene.",
+        "Pinzuordnung und unerklärtes rotes X werden durch Farbe und Position vermittelt."
+      ],
+      "discrepancies": [
+        "Die eingebettete Bildbeschriftung 'GPS-Antenne (Optional)' bleibt im polnischen Teil deutsch; neunte vollständig geprüfte Sprachfassung mit DSC-022.",
+        "Das rote X zwischen den Anschlüssen B und C besitzt auch polnisch keinen Legendeneintrag."
+      ],
+      "terminology_findings": ["'Stały plus 12 V' bezeichnet den Dauerplusanschluss an Pin 8."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Marken, Pins, Bildsprache und deutsche Restbeschriftung geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Anschlusswerte und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 206,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 7 z 24'. Abschnitt 1.3 'Wybór trybu pracy' erläutert sechs Funktionsblöcke: Statusabruf per Anruf, automatische Statusberichte, Messeingänge U1 bis U5, Geofencing über Pin 3, WiPro-Schaltung per Anruf und manueller Alarm über Pin 3. Der Verweis für die Ausgangssteuerung nennt wie die acht vorherigen Fassungen fälschlich 5.4 statt 5.5. Keine lesbare Textebene.",
+      "headings": ["1.3 Wybór trybu pracy"],
+      "technical_values": [
+        {
+          "value": "U1–U5",
+          "context": "Messeingänge der Betriebsarten",
+          "safety_critical": true
+        },
+        {
+          "value": "styk 3",
+          "context": "Pin/Kontakt 3 für Geofencing und manuellen Alarm",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Betriebsarten und Querverweise fehlen vollständig in der lesbaren Textebene.",
+        "Die sechs Funktionsblöcke sind nur durch Abstand und blaue Zwischenzeilen gegliedert."
+      ],
+      "discrepancies": [
+        "Falscher Querverweis auf 5.4 für die Ausgangssteuerung; richtig ist 5.5. Polnische Bestätigung von DSC-040.",
+        "Der letzte Satz druckt 'do stuku 3', obwohl Titel und Parallelstellen 'styku 3' verlangen; sichtbarer Buchstabenfehler in einer sicherheitsrelevanten Anschlussangabe."
+      ],
+      "terminology_findings": [
+        "'styk 3' ist die konsistente Benennung für Pin/Kontakt 3; 'stuk 3' ist eine abweichende Einzelstelle."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; alle Funktionsblöcke, Pinangaben und Querverweise geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; der Buchstabenunterschied 'stuku'/'styku' ist zeichenweise belegt, sprachliche Bewertung ausstehend."
     },
     {
       "page": 207,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 8 z 24'. 'Tabela trybów pracy' mit 16 Zeilen 0 bis 9 und A bis F. Sie kombiniert Statusabruf, automatische Intervalle 15 Minuten, 60 Minuten, 6 Stunden und 24 Stunden, U1–U5, Geofencing über Pin 3, WiPro-Steuerung und manuellen Alarm. Stellung C nennt 90 Sekunden, D acht Minuten; Stellung F verweist für die GPS-Diagnose fälschlich auf 1.5.2 statt 1.5.3. Keine lesbare Textebene.",
+      "headings": ["Tabela trybów pracy"],
+      "technical_values": [
+        {
+          "value": "0–9, A–F",
+          "context": "16 Schalterstellungen",
+          "safety_critical": true
+        },
+        {
+          "value": "15 min; 60 min; 6 h; 24 h",
+          "context": "automatische Statusintervalle",
+          "safety_critical": true
+        },
+        {
+          "value": "90 s; 8 min",
+          "context": "Sonderintervalle der Stellungen C und D",
+          "safety_critical": true
+        },
+        {
+          "value": "> 6 V / < 5 V",
+          "context": "Schaltschwellen in den Betriebsarten 8 und B",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Betriebsartentabelle für 16 Schalterstellungen und sechs Funktionsspalten",
+          "has_headers": true,
+          "reading_order_ok": false
+        }
+      ],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Die gesamte sicherheitsrelevante Tabelle fehlt in der lesbaren Textebene.",
+        "Verbunden dargestellte Zellen und schmale Spalten machen Funktionsgültigkeit und Lesereihenfolge nur visuell erkennbar.",
+        "Mehrere Wörter sind an beliebigen Stellen auf Zeilen verteilt; in Zeile B kollidiert der Text der Schaltschwellen sichtbar."
+      ],
+      "discrepancies": [
+        "Zeile F verweist auf 1.5.2; die GPS-Diagnose steht in 1.5.3. Polnische Bestätigung des zweiten Fehlverweises aus DSC-040."
+      ],
+      "terminology_findings": [
+        "Die Betriebsartentabelle verwendet dieselben Spannungsgrenzen und Intervalle wie die vollständig geprüften Sprachfassungen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; alle 16 Zeilen, Werte und Verweis in Zeile F geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur, Zahlen und sichtbare Satzfehler dokumentiert."
     },
     {
       "page": 208,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 9 z 24'. Abschnitt 1.4 'Podłącz moduł' nennt 12 V DC an Pins 1 und 8, 0–30 V an Pins 2 bis 5, Geofencing an Pin 3 sowie 12 V/500 mA an den Ausgängen 6 und 7; für Relaislasten werden Relais und Freilaufdiode gezeigt. Die Ausgänge können dauerhaft, eine Sekunde oder für eine gewählte Zeit schalten; der rote Verweis auf 5.5 ist korrekt. Abschnitte 1.5 und 1.5.1 beginnen die optionale GPS-Antennenmontage. Keine lesbare Textebene.",
+      "headings": [
+        "1.4 Podłącz moduł",
+        "1.5 Antena GPS (akcesorium opcjonalne)",
+        "1.5.1 Montaż anteny GPS"
+      ],
+      "technical_values": [
+        {
+          "value": "12 V DC",
+          "context": "Versorgung an Pins 1 und 8",
+          "safety_critical": true
+        },
+        {
+          "value": "0–30 V",
+          "context": "Messeingänge Pins 2 bis 5",
+          "safety_critical": true
+        },
+        {
+          "value": "12 V / 500 mA",
+          "context": "maximale Belastung der Ausgänge 6 und 7",
+          "safety_critical": true
+        },
+        {
+          "value": "15 °C",
+          "context": "unter dieser Temperatur Klebefläche vorwärmen",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Relaisbeschaltung mit Freilaufdiode und Fotos der GPS-Antennenmontage",
+          "has_text_equivalent": false,
+          "relies_on": "Schaltbild, Pfeile und farbige Markierungen"
+        }
+      ],
+      "warnings_found": [
+        "Ausgänge mit höchstens 500 mA belasten; Überlastung führt zum Verlust der Garantie.",
+        "Bei Relaisbetrieb Freilaufdiode verwenden."
+      ],
+      "accessibility_issues": [
+        "Pinwerte, Schaltbild und Montagefolge fehlen in der lesbaren Textebene.",
+        "Fotos und Schaltbild besitzen keine Alternativtexte; magentafarbene Markierungen sind nicht textlich erklärt."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "Der korrekte Querverweis auf 5.5 steht im roten Hinweis, anders als der Fehlverweis auf Seite 206."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Pins, Spannungen, Ausgangsgrenze, Relaisbild und Antennenmontage geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; technische Werte und sichtbare Handlungsfolge dokumentiert."
     },
     {
       "page": 209,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "diagnose",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 10 z 24'. Abschnitte 1.5.2 'Podłączanie anteny GPS' und 1.5.3 'Sprawdź działanie anteny GPS'. Vor dem Antennenanschluss ist die Spannungsversorgung zu trennen; für den Funktionstest soll nach dem Einbau mindestens fünf Minuten eine Spannung über 13,5 V anliegen. Stellung F diagnostiziert die GPS-Antenne: Rot keine Antenne, gelb blinkend keine gültige Position, Grün Einbauposition in Ordnung. Reflexionen können Fehlalarme auslösen; zum Abschalten nennt der polnische Text den lokalisierten SMS-Quelltext 'ogrodzenie wyłączone'. Keine lesbare Textebene.",
+      "headings": ["1.5.2 Podłączanie anteny GPS", "1.5.3 Sprawdź działanie anteny GPS"],
+      "technical_values": [
+        {
+          "value": "> 13,5 V przez co najmniej 5 minut",
+          "context": "Prüfbedingung nach der GPS-Antennenmontage",
+          "safety_critical": true
+        },
+        {
+          "value": "F",
+          "context": "Betriebsartenschalter für GPS-Diagnose",
+          "safety_critical": true
+        },
+        {
+          "value": "ogrodzenie wyłączone",
+          "context": "sichtbar zitierter Geofencing-Ausschaltbefehl der polnischen Diagnose; nur Quellenbeleg für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige GPS-Diagnose für rote, gelb blinkende und grüne Status-LED",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "Vor dem Antennenanschluss Spannungsversorgung trennen.",
+        "GPS-Reflexionen können Diebstahlfehlalarme verursachen."
+      ],
+      "accessibility_issues": [
+        "Diagnose, Warnungen und Befehl fehlen vollständig in der lesbaren Textebene.",
+        "Rot und Grün leuchten beide dauerhaft; zwei Diagnosezustände sind am Gerät ausschließlich über Farbe unterscheidbar."
+      ],
+      "discrepancies": [
+        "Die Diagnose nennt mit 'ogrodzenie wyłączone' einen lokalisierten Ausschaltbefehl, Kapitel 5 dagegen 'fence off'; internes Mischprofil für DSC-033/BLK-005."
+      ],
+      "terminology_findings": [
+        "'ogrodzenie' bezeichnet hier das virtuelle Geofencing-Zaunsystem; Kapitel 5 verwendet stattdessen den englischen Fachbegriff 'Geofencing'."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Spannung, Prüfzeit, LED-Farben, Reflexionswarnung und Ausschaltwort geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; sichtbarer Befehlswortlaut ist Quellenzitat, keine Freigabe."
     },
     {
       "page": 210,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 11 z 24'. Kapitel 2 'Programowanie i konfiguracja', Abschnitt 2.1 'Konfiguracja karty SIM'. Verlangt wird eine Nano-SIM mit 2G/3G/4G, SMS, Telefonie und mobilen Daten; Multi-Provider-Karten sind ausgeschlossen, M2M wird empfohlen. PIN-Abfrage, Mailbox, Rufumleitungen und Komfortfunktionen sollen deaktiviert, Roaming aktiviert und auf iPhones iMessage ausgeschaltet werden. Prepaid-Karten müssen ohne Ausbau aufladbar sein. Keine lesbare Textebene.",
+      "headings": ["2 Programowanie i konfiguracja", "2.1 Konfiguracja karty SIM"],
+      "technical_values": [
+        {
+          "value": "Nano SIM",
+          "context": "erforderliches SIM-Format",
+          "safety_critical": true
+        },
+        {
+          "value": "2G/3G/4G (LTE)",
+          "context": "erforderliche Netze und mobile Daten",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Multi-Provider-SIM-Karten dürfen nicht verwendet werden.",
+        "iMessage auf iPhones deaktivieren."
+      ],
+      "accessibility_issues": [
+        "SIM-Anforderungen und vier Konfigurationsschritte fehlen in der lesbaren Textebene.",
+        "Warnungen sind nur durch rote Schrift, Zentrierung und Linien hervorgehoben; keine strukturelle Auszeichnung oder Signalwort-Hierarchie."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": [
+        "'karta M2M' wird empfohlen, ohne den Begriff für Laien zu erklären."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Netze, SIM-Typ, Ausschlüsse und vier Konfigurationsschritte geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; technische Anforderungen und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 211,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["pl", "en"],
+      "summary": "Intern 'Strona 12 z 24'. Abschnitte 2.2 bis 2.4: Nano-SIM in den Pro-finder einsetzen, THITRONIK App über zwei QR-Codes aus App Store oder Google Play laden und das Gerät aktivieren. Nach dem Einschalten blinkt die Status-LED kurz rot, dann gelb-grün. Die App führt durch die Aktivierung und soll die Schritte 2.5 bis 2.8 überspringbar machen; ohne App ist die Programmier-SMS aus 2.8 zu verwenden. Das ESD-Piktogramm steht ohne Begleittext im SIM-Foto. Keine lesbare Textebene und keine Linkannotation.",
+      "headings": [
+        "2.2 Włóż kartę SIM do modułu Pro-finder",
+        "2.3 Pobierz aplikację THITRONIK",
+        "2.4 Aktywuj Pro-finder"
+      ],
+      "technical_values": [
+        {
+          "value": "2.5–2.8",
+          "context": "laut Quelle bei App-Aktivierung überspringbare Schritte",
+          "safety_critical": true
+        },
+        {
+          "value": "2.8",
+          "context": "manuelle Aktivierung per Programmier-SMS",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "SIM-Halter mit ESD-Piktogramm sowie QR-Codes für App Store und Google Play",
+          "has_text_equivalent": false,
+          "relies_on": "Piktogramm, Plattformlogos und maschinenlesbare QR-Muster"
+        }
+      ],
+      "warnings_found": [
+        "ESD-Gefahr wird nur durch ein Piktogramm ohne erklärenden Text angezeigt."
+      ],
+      "accessibility_issues": [
+        "SIM-Foto, ESD-Warnung, QR-Ziele und Aktivierungstext fehlen in der lesbaren Textebene.",
+        "Die QR-Codes besitzen keine sichtbare URL und keine Linkannotation; ohne Kamera-App gibt es auf der Seite keinen alternativen Downloadweg."
+      ],
+      "discrepancies": [
+        "Die Behauptung, die App mache 2.5 bis 2.8 entbehrlich, umfasst auch den Adressbucheintrag des Pro-finder aus 2.5; polnische Bestätigung von DSC-043."
+      ],
+      "terminology_findings": [
+        "Markenname 'THITRONIK App' wird im Fließtext als 'aplikacja THITRONIK®' gesetzt."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; SIM-Einbau, ESD, QR-Codes, LED-Folge und Querverweise geprüft; 0 Linkannotationen.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Struktur und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 212,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 13 z 24'. Fast leere Fortsetzung von Abschnitt 2.4. Der Restabsatz erklärt, dass die Programmierung der Zielrufnummern an die Pro-finder-Nummer gesendet wird. Nach Empfang und Speichern blinkt die Status-LED grün und sendet dem Absender eine Status-SMS; danach ist das Gerät betriebsbereit. Keine Überschrift und keine lesbare Textebene.",
+      "headings": [],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Der kurze Fortsetzungstext fehlt in der lesbaren Textebene.",
+        "Die Seite wiederholt weder Abschnittsnummer noch Überschrift; der Kontext ist nur durch Umblättern erkennbar.",
+        "Fast die gesamte Seite ist leer."
+      ],
       "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "terminology_findings": ["'numery miejsc docelowych' bezeichnet die Zielrufnummern."],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Fortsetzung, LED-Bestätigung und Betriebsbereitschaft geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; sachliche Fortsetzung dokumentiert."
     },
     {
       "page": 213,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 14 z 24'. Abschnitt 2.5 empfiehlt, die Pro-finder-Nummer für schnelles Auffinden im Adressbuch als 'ALARM' zu speichern; der rote Tipp schreibt direkt darunter 'AAlarm', damit der Eintrag alphabetisch zuerst steht. 2.6 erklärt SMS- und Anrufkosten. 2.7 unterscheidet bis zu zehn Zielrufnummern als Hauptnummer, autorisierte und nicht autorisierte Nummern; nur autorisierte Nummern dürfen Ausgänge steuern und Statusberichte anfordern. Keine lesbare Textebene.",
+      "headings": [
+        "2.5 Zapisz numer Pro-finder",
+        "2.6 Sterowanie Pro-finder przez SMS lub połączenie",
+        "2.7 Różne numery docelowe"
+      ],
+      "technical_values": [
+        {
+          "value": "10",
+          "context": "maximale Anzahl Zielrufnummern",
+          "safety_critical": true
+        },
+        {
+          "value": "+48",
+          "context": "im Fließtext genanntes Beispiel für polnische Landesvorwahl",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Dreizeilige Rollenübersicht für Hauptnummer, autorisierte und nicht autorisierte Zielrufnummern",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [],
+      "warnings_found": [
+        "Nummer mit Landesvorwahl speichern, damit sie auch aus dem Ausland erreichbar ist."
+      ],
+      "accessibility_issues": [
+        "Adressbuchhinweis, Kostenhinweis und sicherheitsrelevante Rollen fehlen in der lesbaren Textebene.",
+        "Der Tipp ist nur durch rote Schrift, Zentrierung und Linien hervorgehoben."
+      ],
+      "discrepancies": [
+        "Fließtext 'ALARM' gegen Tipp 'AAlarm' auf derselben Seite; polnische Bestätigung von DSC-016."
+      ],
+      "terminology_findings": [
+        "'Numer główny', 'Autoryzowane numery' und 'Nieautoryzowane numery' bilden die drei Berechtigungsrollen."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Namenswiderspruch, Landesvorwahl, Kosten und drei Rollen geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Rollen und zeichengetreuer Namenswiderspruch dokumentiert."
     },
     {
       "page": 214,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 15 z 24'. Abschnitt 2.8 zeigt Aufbau und drei Beispiele einer Programmier-SMS für Zielrufnummern. Erklärt werden Pluszeichen/Landesvorwahl, 'S' für Smartphone-Links und die lückenlose Reihung der Nummern. Die dritte Beispielzeile zeigt eine nicht autorisierte Nummer mit vorangestelltem Minuszeichen; dessen Berechtigungsbedeutung wird weder im Diagramm noch im Fließtext erklärt. Die Beispiele verwenden deutsche +49-Nummern, obwohl der Diagrammtext +48 für Polen nennt. Keine lesbare Textebene.",
+      "headings": ["2.8 Programowanie numerów miejsc docelowych"],
+      "technical_values": [
+        {
+          "value": "+48",
+          "context": "Landesvorwahlbeispiel für Polen im Diagramm",
+          "safety_critical": true
+        },
+        {
+          "value": "S",
+          "context": "Schalter für Smartphone-Kartenlink in der Programmier-SMS; nur Quellenbeleg für BLK-005",
+          "safety_critical": true
+        },
+        {
+          "value": "-",
+          "context": "nur implizit aus dem dritten Beispiel ableitbare Markierung einer nicht autorisierten Nummer",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Drei Beispiele für Hauptnummer, autorisierte und nicht autorisierte Zielrufnummern",
+          "has_headers": true,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Syntaxgrafik mit Linien zu Landesvorwahl, Smartphone-Markierung und drei Zielnummern",
+          "has_text_equivalent": true,
+          "relies_on": "visuelle Linienzuordnung; Bedeutung des Minuszeichens fehlt"
+        }
+      ],
+      "warnings_found": ["S nur verwenden, wenn das Endgerät ein Smartphone ist."],
+      "accessibility_issues": [
+        "Syntaxgrafik und Beispiele fehlen in der lesbaren Textebene.",
+        "Die Bedeutung der Zeichen hängt an Linien, Farbe und Position; das sicherheitsrelevante Minuszeichen besitzt gar keine Erläuterung."
+      ],
+      "discrepancies": [
+        "Die Steuerberechtigung einer Nummer hängt am nirgends erklärten Minuszeichen; polnische Bestätigung von DSC-017/DSC-044.",
+        "Lokalisierte Erläuterung '+48 dla Polski' steht neben drei durchgängig deutschen +49-Beispielnummern."
+      ],
+      "terminology_findings": [
+        "'numer główny' bezeichnet hier die Hauptnummer; 'nieautoryzowany numer' die Nummer ohne Steuerrecht."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Syntaxzeichen, Linienzuordnung, drei Beispiele und Landesvorwahlen geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Syntax ist nur Quellenbeleg und wegen BLK-005 nicht zur Übernahme freigegeben."
     },
     {
       "page": 215,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
-      "extractable_chars": 10,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "extractable_chars": 4,
+      "content_type": "anleitung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 16 z 24'. Abschnitt 2.9 'Usuwanie numerów miejsc docelowych' beschreibt das Löschen aller Zielrufnummern: Nano-SIM muss eingesetzt sein, Hauptkabelbaum trennen, Betriebsartenschalter A auf E stellen, Kabelbaum wieder anschließen und auf gelb-grünes Blinken warten, dann den Schalter zur Ausgangsstellung zurücksetzen. Anschließend kann die Nummernliste neu programmiert oder über die Hauptnummer überschrieben werden. Nur vier lesbare Zeichen.",
+      "headings": ["2.9 Usuwanie numerów miejsc docelowych"],
+      "technical_values": [
+        {
+          "value": "E",
+          "context": "Schalterstellung zum Löschen des Nummernspeichers",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [
+        {
+          "description": "Warnpiktogramm mit Ausrufezeichen",
+          "has_text_equivalent": true,
+          "relies_on": "roter Begleittext; keine PDF-Alternativtexte"
+        }
+      ],
+      "warnings_found": ["Nano-SIM muss zum Löschen in das Gerät eingesetzt sein."],
+      "accessibility_issues": [
+        "Löschfolge und Warnung fehlen bis auf vier Zeichen in der lesbaren Textebene.",
+        "Der nicht definierte Hauptkabelbaum wird keiner Marke des Anschlussplans zugeordnet.",
+        "Warnung nur über rotes Piktogramm, rote Schrift und Linien ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Der für den gesamten Löschvorgang zentrale Hauptkabelbaum wird auch polnisch nicht erklärt oder im Anschlussbild identifiziert; Bestätigung von DSC-050."
+      ],
+      "terminology_findings": [
+        "'główna wiązka przewodów' bezeichnet einen nirgends definierten Hauptkabelbaum."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Warnung und vierstufige Löschfolge geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Handlungsfolge und sichtbare Einzelbefunde dokumentiert."
     },
     {
       "page": 216,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "fortsetzung",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 17 z 24'. Die Seite enthält oben lediglich die kursive Fragmentzeile 'Programowanie numerów miejsc docelowych.' und ansonsten keinen Inhalt. Diese Zusatzseite ist der konkrete Grund, warum Kapitel 3 bis 6 gegenüber dem Inhaltsverzeichnis um eine Seite verschoben sind und der polnische Teil mit Seite 25 von 24 endet. Keine lesbare Textebene.",
+      "headings": [],
+      "technical_values": [],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [],
+      "accessibility_issues": [
+        "Eine isolierte Fortsetzungszeile steht ohne Abschnittsnummer oder Kontext auf einer sonst leeren Seite.",
+        "Die Zeile fehlt in der lesbaren Textebene; die Seite erzeugt einen unnötigen Navigationsschritt."
+      ],
+      "discrepancies": [
+        "Unbeabsichtigte fast leere Zusatzseite; sie wurde weder in den Inhaltsverzeichniszielen noch im Seitennenner 24 berücksichtigt und verursacht 'Strona 25 z 24' auf PDF-Seite 224."
+      ],
+      "terminology_findings": [],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; einzig sichtbare Fragmentzeile und Paginierungsfolge geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Layout- und Paginierungsbefund ist eindeutig."
     },
     {
       "page": 217,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "tabelle",
+      "languages": ["pl"],
+      "summary": "Intern 'Strona 18 z 24'. Kapitel 3 'Stany pracy (dioda LED stanu)' zeigt neun farbige Leucht- und Blinkmuster für Netzsuche, Modemverbindung, fehlende/defekte SIM, aktive PIN-Abfrage, nicht gesendete SMS, SMS-Verkehr und Netzregistrierung. Die letzten beiden Beschreibungen sind wortgleich und nennen gelb-grünes Blinken plus fehlende Zielnummern, obwohl das letzte Muster nur grün blinkt und der rote Schluss-Hinweis gerade grünes Blinken als Normalbetrieb bezeichnet. Keine lesbare Textebene.",
+      "headings": ["3 Stany pracy (dioda LED stanu)"],
+      "technical_values": [
+        {
+          "value": "9",
+          "context": "Anzahl dargestellter LED-Zustände",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Neun LED-Muster mit farbigen Linien und textlichen Zustandsbeschreibungen",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Farbige Dauer- und Strichlinien zur Darstellung der Blinkfolgen",
+          "has_text_equivalent": true,
+          "relies_on": "Farbe und Strichrhythmus; letzte Beschreibung widerspricht dem Bild"
+        }
+      ],
+      "warnings_found": [
+        "Nach Installation und Programmierung blinkt die Status-LED im Normalbetrieb grün."
+      ],
+      "accessibility_issues": [
+        "Die gesamte LED-Tabelle fehlt in der lesbaren Textebene.",
+        "Mehrere Zustände unterscheiden sich wesentlich durch Rot, Gelb und Grün; die Farbnamen im Text helfen nur Sehenden, die Seite lesen können.",
+        "Die falsche letzte Beschreibung macht den Normalzustand auch textlich nicht eindeutig."
+      ],
+      "discrepancies": [
+        "Zustand 8 und 9 tragen wortgleich die Beschreibung 'Miga na żółto-zielono ... brak dostępnych numerów docelowych'; Zustand 9 zeigt aber nur grüne Striche und der Schluss-Hinweis nennt grünes Blinken als Normalbetrieb.",
+        "Die GPS-Diagnose auf Seite 209 belegt dieselben Farben mit anderen Bedeutungen; polnische Bestätigung von DSC-047."
+      ],
+      "terminology_findings": [
+        "Die Beschreibungen für Zustände 8 und 9 sind im polnischen Satz offenbar dupliziert; ein polnischer Sprach- und Technikreview ist erforderlich."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; alle neun Linienmuster, Beschreibungen und Normalbetriebshinweis geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Wortgleichheit, Farben und Widerspruch sind visuell eindeutig."
     },
     {
       "page": 218,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "meldungen",
+      "languages": ["pl", "en"],
+      "summary": "Intern 'Strona 19 z 24'. Kapitel 4 'Raporty, komunikaty i ostrzeżenia' erklärt GPS-, UTC-, Positions- und Geschwindigkeitsfelder sowie Beispiel-SMS für Status, Geofencing-Diebstahl und Unterspannung. Die Gerätebilder bleiben englisch ('WiPro ON', 'Fence ON', 'Theft (geofencing)', 'Voltage below 11.2 V'). Der Geofencing-Radius ist etwa 900 m; Unterspannungsgrenzen sind 11,2 V und 12,5 V im polnischen Fließtext. Drei sichtbare Kartenadressen sind blau unterstrichen, aber nicht annotiert. Keine lesbare Textebene.",
+      "headings": [
+        "4 Raporty, komunikaty i ostrzeżenia",
+        "Raport o stanie",
+        "Raport o kradzieży",
+        "Ostrzeżenie o napięciu"
+      ],
+      "technical_values": [
+        {
+          "value": "około 900 metrów",
+          "context": "Radius der Geofencing-Diebstahlmeldung",
+          "safety_critical": true
+        },
+        {
+          "value": "11,2 V / 12,5 V",
+          "context": "Schlaf- und Rückkehrschwelle im polnischen Fließtext",
+          "safety_critical": true
+        },
+        {
+          "value": "11.2 V / U1:13,53 V",
+          "context": "uneinheitliche Dezimaltrennzeichen in den sichtbaren Gerätebildern",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Meldungstabelle mit drei SMS-Bildern und polnischen Erläuterungen",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Drei schwarze SMS-Sprechblasen mit englischen Gerätetexten und blau unterstrichenen Kartenadressen",
+          "has_text_equivalent": true,
+          "relies_on": "Bildtext; keine PDF-Alternativtexte oder Links"
+        }
+      ],
+      "warnings_found": [
+        "Unter 11,2 V wechselt Pro-finder in den Batteriesparmodus; Normalbetrieb erst wieder oberhalb 12,5 V."
+      ],
+      "accessibility_issues": [
+        "Meldungen, Felddefinitionen und Spannungswarnung fehlen in der lesbaren Textebene.",
+        "Drei blau unterstrichene Kartenadressen sehen wie Links aus, besitzen aber null Linkannotationen.",
+        "Sprachwechsel zu englischen Gerätetexten ist nicht ausgezeichnet."
+      ],
+      "discrepancies": [
+        "Englische Geräte-SMS stehen unverändert im polnischen Meldungskapitel.",
+        "Gerätetext nutzt 11.2 V mit Punkt und U1:13,53 V mit Komma; polnische Bestätigung von DSC-046.",
+        "Der Diebstahltext verweist für Blinker und Sirene auf 5.1; der Zielabschnitt auf Seite 220 erklärt nur einen Anruf. Bestätigung von DSC-041."
+      ],
+      "terminology_findings": [
+        "'Poz' im Erläuterungsblock gegen unbezeichnete Kartenadresse in den SMS-Bildern; bekannte Feldlücke aus DSC-045."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Feldliste, drei Meldungen, Radius, Spannungen und objektbezogen 0 Linkannotationen geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Gerätetexte sind Quellenzitate, keine Freigabe."
     },
     {
       "page": 219,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "meldungen",
+      "languages": ["pl", "en"],
+      "summary": "Intern 'Strona 20 z 24'. Fortsetzung von Kapitel 4 mit sechs Beispielen: Positions-SMS für Smartphones, Hilfe-SMS, Einbruch, Gasalarm, manueller Alarm und Zubehördiebstahl. Alle Gerätetexte bleiben englisch. Die Hilfe-SMS lautet 'Invalid command! Possible: ARM, DISARM, STATUS, POS. Other commands see manual.' und stimmt weder vollständig mit den polnischen Kapitelbefehlen noch mit deren Langformen überein. Fünf sichtbare Kartenadressen sind blau unterstrichen, aber nicht annotiert. Keine lesbare Textebene.",
+      "headings": [
+        "Pozycjonowanie SMS dla smartfonów",
+        "Pomoc SMS",
+        "Zgłoszenie włamania",
+        "Alarm gazowy",
+        "Alarm ręczny",
+        "Akcesoria antykradzieżowe"
+      ],
+      "technical_values": [
+        {
+          "value": "ARM / DISARM / STATUS / POS",
+          "context": "sichtbare englische Hilfe-SMS im polnischen Teil; nur Quellenbeleg für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [
+        {
+          "description": "Sechs Meldungszeilen mit SMS-Bild links und polnischer Erklärung rechts",
+          "has_headers": false,
+          "reading_order_ok": true
+        }
+      ],
+      "figures": [
+        {
+          "description": "Sechs schwarze SMS-Sprechblasen mit englischen Gerätetexten und teils blau unterstrichenen Kartenadressen",
+          "has_text_equivalent": true,
+          "relies_on": "Bildtext; keine PDF-Alternativtexte oder Links"
+        }
+      ],
+      "warnings_found": [
+        "Nach Einbruch-, Gas- und manuellem Alarm wird zusätzlich die Hauptnummer angerufen."
+      ],
+      "accessibility_issues": [
+        "Alle sechs Meldungen fehlen in der lesbaren Textebene.",
+        "Fünf blau unterstrichene Kartenadressen sehen interaktiv aus, besitzen aber null Linkannotationen.",
+        "Englische Geräteausgaben wechseln unangekündigt in den polnischen Text; rote Zusatzhinweise sind nur farblich hervorgehoben."
+      ],
+      "discrepancies": [
+        "Hilfe-SMS nennt englisch ARM/DISARM/STATUS/POS, während Kapitel 5 status/position und gar keine SMS-Eingaben für Scharf/Unscharf dokumentiert; neuntes eigenständiges Mischprofil für DSC-033.",
+        "Alle Kartenadressen sind trotz Linkoptik inert; polnische Erweiterung von DSC-082."
+      ],
+      "terminology_findings": [
+        "Gerätemeldungen nutzen ausschließlich ASCII-Englisch; polnischer Fließtext nutzt Diakritika."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; sechs Meldungen, Hilfe-SMS und objektbezogen 0 Linkannotationen geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Befehle und Gerätetexte sind Quellenzitate, keine Freigabe."
     },
     {
       "page": 220,
-      "status": "not_started",
-      "progress_percent": 0,
+      "status": "inspected",
+      "progress_percent": 25,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
-      "content_type": null,
-      "languages": null,
-      "summary": null,
-      "accessibility_issues": [],
-      "discrepancies": [],
-      "next_action": "Seite rendern und vollstaendig visuell pruefen"
+      "content_type": "anleitung",
+      "languages": ["pl", "en"],
+      "summary": "Intern 'Strona 21 z 24'. Kapitel 5 'Funkcje'. Abschnitt 5.1 trägt den Titel 'Sterowanie systemem alarmowym za pomocą wiadomości SMS', erklärt aber ausschließlich das Umschalten der WiPro III durch einen kostenlosen Anruf autorisierter Nummern. Abschnitt 5.2 definiert Geofencing mit einem Radius von 900 m, Pin-3-Steuerung in Stellungen 8/B und SMS-Steuerung in anderen Stellungen. Genannt werden die englischen Befehle 'fence on' und 'fence off'; beim Scharf-/Unscharfschalten der WiPro erfolgt die Geofencing-Schaltung automatisch. Keine lesbare Textebene.",
+      "headings": [
+        "5 Funkcje",
+        "5.1 Sterowanie systemem alarmowym za pomocą wiadomości SMS",
+        "5.2 Geofencing"
+      ],
+      "technical_values": [
+        {
+          "value": "900 metrów",
+          "context": "Geofencing-Radius",
+          "safety_critical": true
+        },
+        {
+          "value": "8 / B; pin 3",
+          "context": "Betriebsarten und Eingang für hardwaregesteuertes Geofencing",
+          "safety_critical": true
+        },
+        {
+          "value": "fence on / fence off",
+          "context": "sichtbare Kapitelbefehle für Geofencing; nur Quellenbeleg für BLK-005",
+          "safety_critical": true
+        }
+      ],
+      "tables": [],
+      "figures": [],
+      "warnings_found": [
+        "Nur autorisierte Nummern dürfen auf den Pro-finder zugreifen.",
+        "Bei gekoppelter WiPro III ist Geofencing automatisch an den Scharf-/Unscharfzustand gebunden."
+      ],
+      "accessibility_issues": [
+        "Funktionsanweisungen, Berechtigungshinweis und Befehle fehlen in der lesbaren Textebene.",
+        "Befehle sind nur durch blaue Kursivschrift und Einrückung ausgezeichnet; rote Hinweise nur durch Farbe und Linien."
+      ],
+      "discrepancies": [
+        "Die Überschrift von 5.1 kündigt SMS-Steuerung an, der Abschnitt beschreibt nur einen Anruf; polnische Bestätigung von DSC-041.",
+        "Kapitel nennt 'fence off', die Diagnose auf Seite 209 'ogrodzenie wyłączone'; internes Befehls-Mischprofil für DSC-033.",
+        "Die Abhängigkeit des Geofencings von WiPro, Pin 3 und SMS bleibt wie im deutschen Master widersprüchlich; Bestätigung von DSC-042."
+      ],
+      "terminology_findings": [
+        "Der englische Fachbegriff 'Geofencing' steht im Titel, während die Diagnose das polnische 'ogrodzenie' verwendet."
+      ],
+      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "inspected_note": "Batch 28, 2026-08-09, PNG-Rendering 150 dpi; Anrufinhalt, Berechtigungsregel, Radius, Pinsteuerung, Befehle und roten Hinweis geprüft.",
+      "language_note": "Polnisch nicht muttersprachlich beurteilbar; Befehle sind Quellenzitate, keine Freigabe."
     },
     {
       "page": 221,

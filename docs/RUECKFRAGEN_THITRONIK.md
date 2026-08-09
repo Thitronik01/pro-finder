@@ -1,6 +1,6 @@
 # Rückfragen an THITRONIK
 
-Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 293 der 323 PDF-Seiten sowie die
+Stand: 2026-08-09 · Grundlage: seitenweise Prüfung von 314 der 323 PDF-Seiten sowie die
 Extraktion der vierzehn deutschen Aufgaben aus DOC-IBA-SN045, Seiten 1–25
 
 Dieses Dokument bündelt die Punkte, die der Pilot **nicht selbst entscheiden darf**. Es ist
@@ -15,11 +15,11 @@ Beleg und die Fundstelle; die vollständige Herleitung steht in
 > möglich ist, und markiert Betroffenes als Entwurf.
 
 Geprüft sind bisher der deutsche, englische, französische, tschechische, dänische,
-spanische, italienische und niederländische
+spanische, italienische, niederländische und polnische
 Sprachteil von
 `pro-finder_ab_sn045_bedienungs_und_installationsanleitung_zehn_sprachen.pdf`
-(DOC-IBA-SN045) sowie beide Kurzanleitungen. Die zwei übrigen Sprachteile sind in
-unterschiedlichem Umfang begonnen.
+(DOC-IBA-SN045) sowie beide Kurzanleitungen. Im schwedischen Sprachteil fehlen noch neun
+Seiten.
 
 **Neu am 2026-08-08/09:** Die Generation **bis SN-044** ist inzwischen vollständig geprüft
 (DOC-BMA-SN044, Seiten 1–72) – Deutsch, Englisch, Französisch, Schwedisch und Impressum.
@@ -37,21 +37,21 @@ spiegelbildlich in beiden Sprachen).
 
 ## 1. Welche SMS-Befehle akzeptiert das Gerät? (blockierend)
 
-Acht vollständig geprüfte Sprachfassungen dokumentieren **acht unterschiedliche
-Befehlsprofile** für dieselben Funktionen. Die spanische Fassung mischt dabei einen
+Neun vollständig geprüfte Sprachfassungen dokumentieren **neun unterschiedliche
+Befehlsprofile** für dieselben Funktionen. Die spanische und die polnische Fassung mischen dabei einen
 lokalisierten Einzelbefehl mit dem englischen Kapitel- und Gerätesatz; Italienisch und
-Niederländisch verwenden sogar innerhalb ihrer Fassung verschiedene Geofencing-Wörter.
+Niederländisch verwenden ebenfalls innerhalb ihrer Fassung verschiedene Geofencing-Wörter.
 
-| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch | Dänisch                   | Spanisch                      | Italienisch                            | Niederländisch            |
-| --------------- | ---------------- | --------------- | ----------------------------- | ----------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------- |
-| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`  | `fence fra`               | `valla apagada` / `fence off` | `recinto spento` / `fence disattivato` | `fence off` / `fence uit` |
-| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`      | `status`                  | `status`                      | `stato`                                | `status`                  |
-| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`     | `a til`                   | `a on`                        | `a attivo`                             | `a aan`                   |
-| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`  | `a impuls`                | `a pulse`                     | `impulso a`                            | `a impuls`                |
-| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`   | `a %min%`                 | `a %min%`                     | `a %min%`                              | `a %min%`                 |
-| Anlernmodus     | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap` | `Indlaeringsmodus taendt` | `teach mode on`               | `modalita di apprendimento attiva`     | `instelmodus aan`         |
+| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch | Dänisch                   | Spanisch                      | Italienisch                            | Niederländisch            | Polnisch                             |
+| --------------- | ---------------- | --------------- | ----------------------------- | ----------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------- | ------------------------------------ |
+| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`  | `fence fra`               | `valla apagada` / `fence off` | `recinto spento` / `fence disattivato` | `fence off` / `fence uit` | `ogrodzenie wyłączone` / `fence off` |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`      | `status`                  | `status`                      | `stato`                                | `status`                  | `status`                             |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`     | `a til`                   | `a on`                        | `a attivo`                             | `a aan`                   | `a on`                               |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`  | `a impuls`                | `a pulse`                     | `impulso a`                            | `a impuls`                | `a pulse`                            |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`   | `a %min%`                 | `a %min%`                     | `a %min%`                              | `a %min%`                 | `a %min%`                            |
+| Anlernmodus     | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap` | `Indlaeringsmodus taendt` | `teach mode on`               | `modalita di apprendimento attiva`     | `instelmodus aan`         | `teach mode on`                      |
 
-**Die Frage:** Akzeptiert der Pro-finder alle acht dokumentierten Befehlsprofile? Hängt die Befehlssprache
+**Die Frage:** Akzeptiert der Pro-finder alle neun dokumentierten Befehlsprofile? Hängt die Befehlssprache
 von einer Konfiguration ab? Oder sind einzelne Fassungen schlicht falsch?
 
 **Warum das drängt:** Ein nicht akzeptierter Befehl erzeugt keine Fehlermeldung, sondern nur
@@ -60,7 +60,7 @@ falschen Befehl verwendet, bekommt genau die Fehlalarme, die er vermeiden wollte
 
 **Auffällig dabei:**
 
-- `a %min%` lautet in allen acht Fassungen gleich. Der Impulsbefehl lautet je nach Fassung
+- `a %min%` lautet in allen neun Fassungen gleich. Der Impulsbefehl lautet je nach Fassung
   `a impuls`, `a pulse`, `sortie A impulsion` oder `impulso a`. Die Lokalisierung ist also
   nicht einmal in sich stimmig.
 - Alle Befehle und alle Geräte-SMS sind durchgängig **ohne Diakritika** gesetzt
@@ -95,8 +95,14 @@ wechselt von `fence off` zu `fence aan`/`fence uit`. Der niederländische Positi
 ist sichtbar nur als `positi` gesetzt, während die Hilfe-SMS `POS` nennt. Damit sind auch
 das siebte und achte Profil intern widersprüchlich.
 
+**Polnischer Nachtrag:** Die GPS-Diagnose auf Seite 209 nennt zum Ausschalten
+`ogrodzenie wyłączone`, Kapitel 5 auf Seite 220 dagegen `fence off`. Die übrigen
+Kapitelbefehle bleiben englisch (`status`, `position`, `a on`/`off`/`pulse`,
+`teach mode on`/`off`), während die Hilfe-SMS nur `ARM`, `DISARM`, `STATUS`, `POS` nennt.
+Damit ist auch das neunte Profil intern gemischt und unvollständig erklärt.
+
 **Nachtrag bis SN-044 – das Gerät widerspricht seinem eigenen Handbuch.** Bisher stützte
-sich diese Frage auf den Vergleich **zwischen** acht Sprachfassungen. Im Handbuch der
+sich diese Frage auf den Vergleich **zwischen** neun Sprachfassungen. Im Handbuch der
 älteren Generation widersprechen sich Handbuch und Gerät **innerhalb einer Sprache und
 eines Dokuments**. Die automatische Hilfe-SMS ist dort als Abbildung wiedergegeben und
 nennt wörtlich:
@@ -152,7 +158,7 @@ Generationenvergleich.** Der schwedische Satz lautet `skarp`, `oskarp`, `larm`,
 `A XXX`. Er widerspricht der deutschen Geräteliste ebenfalls. Innerhalb derselben Seite
 stehen zudem `oskarp` und `urkopplad` für das Beenden des Alarmzustands nebeneinander.
 `fence pa` und die Ausgangsbefehle sind bei 500 dpi gesichert. Die erstmals vollständige
-Gegenüberstellung aller vier Sprachteile bis SN-044, der Hilfe-SMS des Geräts und der acht
+Gegenüberstellung aller vier Sprachteile bis SN-044, der Hilfe-SMS des Geräts und der neun
 vollständig geprüften Sprachteile ab SN-045 steht als
 [Synthese-Auswertung 1](DISCREPANCIES.md#synthese-befehle). Ihr Ergebnis: Es existiert
 weder sprach- noch generationsübergreifend eine belastbare Masterliste; selbst die
@@ -285,7 +291,7 @@ je Sprache:
   Grafik wurde nie lokalisiert; belegt sind inzwischen DE, EN, FR, CS, DA, ES, IT und NL.
   _(DSC-022)_
 - In der Anschlussabbildung markiert ein **rotes X** einen Anschluss zwischen B und C, ohne
-  Legendeneintrag. In allen acht vollständig geprüften Fassungen unerklärt.
+  Legendeneintrag. In allen neun vollständig geprüften Fassungen unerklärt.
   _(Seitenrecords zu S. 8, 32, 56, 83, 107, 130, 156, 180)_
 
 Dazu kommen zerrissene Wörter in den Kopfzellen der Betriebsartentabelle und eine
@@ -588,50 +594,51 @@ Projektauftrag es verlangt.
 Hier sammeln sich Funde aus den noch ausstehenden Sprachteilen und Dokumenten, ohne dass sie
 die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber belegt.
 
-| Fund                                                                                                                                    | Beleg                           |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| Kabelbezeichnung uneinheitlich: „Verbindungskabel WiPro III" (Deutsch, Tschechisch) gegenüber „câble de connexion RJ10" (Französisch)   | DSC-036, S. 11, 59, 86          |
-| Produktname im tschechischen Teil mehrfach verstümmelt („hledáček Pro", „vyhledávač Pro")                                               | DSC-036, S. 86, 89, 93, 96      |
-| Vier tschechische Substantive für dasselbe Gerät; drei Bezeichnungen für den Anlernmodus                                                | DSC-037; S. 99 (Seitenrecord)   |
-| Links in IT, NL, CS und ES verweisen auf `/en/` statt auf die jeweilige Sprache                                                         | S. 100, 149, 173, 198; 6.3/6.4  |
-| Französische, spanische und niederländische interne Seitenzählung ist jeweils um eins zu kurz                                           | DSC-021                         |
-| Rotes X in der Anschlussabbildung – in allen acht vollständig geprüften Sprachfassungen ohne Legendeneintrag                            | DSC-022                         |
-| Zwei falsche Querverweise des **deutschen** Originals (5.4 statt 5.5; 1.5.2 statt 1.5.3) stehen in allen acht geprüften Sprachen        | DSC-040                         |
-| Abschnitt 5.5 trägt im Englischen und Dänischen wortgleich den Titel von 5.1, behandelt aber die Ausgänge                               | DSC-015, S. 46, 102, 110, 120   |
-| Verweis auf 5.1 für Blinker und Sirene führt ins Leere; 5.1 beschreibt nur einen Anruf, obwohl die Überschrift SMS ankündigt            | DSC-041                         |
-| „Hauptkabelbaum" wird nirgends erklärt – der gesamte Löschvorgang der Zielrufnummern hängt daran                                        | DSC-050, S. 17                  |
-| Dezimaltrennzeichen der Gerätemeldungen uneinheitlich (11.2 V mit Punkt, 13,53 V mit Komma) – in allen acht geprüften Sprachen          | DSC-046                         |
-| Revisionsstände der Kurzanleitung widersprechen sich (Rev. 1.3.2 gegenüber Rev. 1.0 auf dem abgebildeten Umschlag)                      | DSC-049                         |
-| Google-Play-Abzeichen so grob gerastert, dass es auch bei 900 dpi unlesbar bleibt                                                       | DSC-051, S. 14                  |
-| Vier Fragen zu den Ausgängen, die die Quelle gar nicht beantwortet (Empfänger, Grenzwerte, Abbruch, Zustand nach Neustart)              | DSC-052, S. 23                  |
-| Sprachmarke des dänischen Teils ist eine zusammengesetzte Flagge (links norwegisch, rechts dänisch, plus Diagonalstrich)                | DSC-053, S. 1 und 101           |
-| **bis SN-044:** vier falsche Querverweise in Kapitel 2; alle vier stehen in allen vier Sprachteilen – Vorlagenfehler                    | DSC-055                         |
-| **bis SN-044:** zweimal auf eine „Tabelle Abfragecodes" verwiesen, die es nicht gibt; die Vorseite hat an der Stelle eine Leerfläche    | DSC-057, S. 9 und 10            |
-| **bis SN-044:** das Sternzeichen des Abfragecodes steht im Seitenbild, fehlt aber in der Textebene – der Code wäre unbrauchbar          | DSC-058, S. 10                  |
-| **bis SN-044:** kein einziger Warnhinweis trägt ein Signalwort; ein ESD-Symbol ohne jeden Begleittext ist alleinige Warnungsträgerin    | DSC-063, S. 6–16                |
-| **bis SN-044:** die gekoppelte Alarmanlage heißt „WiPro „all in one"", ab SN-045 „WiPro III safe.lock" – verschiedene Produktnamen      | DSC-065, S. 6 und 14            |
-| **bis SN-044:** Gerätetexte ersetzen Umlaute durch Vokal plus e („Ungueltiger", „Tuer") – Zeichensatzgrenze, vor Übersetzung schützen   | DSC-054, S. 13                  |
-| **bis SN-044:** englisches Inhaltsverzeichnis nennt 2.4 „Installation instructions"; der Abschnitt ist Geofencing                       | DSC-068, S. 20                  |
-| **bis SN-044:** SIM-Format Micro-SIM gegen Nano-SIM ab SN-045; Konformität 1999/5/EG gegen 2014/53/EU – Werte nicht übertragbar         | DSC-069, S. 18                  |
-| **bis SN-044:** aufgedruckte Seitenzählung beginnt im englischen Teil neu bei „Page1"; „Seite 15" und „Page 15" im selben PDF           | DSC-068, S. 20–26               |
-| **bis SN-044:** alle vier falschen Querverweise des deutschen Teils sind wörtlich in den englischen übernommen – Vorlagenfehler         | DSC-055, S. 28, 30, 31, 33      |
-| **bis SN-044:** die englische Konformitätserklärung nennt eine nicht existierende „directive 1995/5/EG" (deutsch: 1999/5/EG)            | DSC-071, S. 36                  |
-| **bis SN-044:** der Verweis „(see 2.1, Fig. 1)" nummeriert eine Abbildung, die es nicht gibt – keine der neun trägt eine Nummer         | DSC-068, S. 22, 30, 31          |
-| **bis SN-044:** der französische Teil enthält sinnverändernde Übersetzungsfehler (feste 2 m statt Maximum; LED-Zustand als Fehler)      | DSC-073, S. 38–44               |
-| **bis SN-044:** der im französischen Teil angekündigte FAQ-Link fehlt vollständig; kein Weg führt dort zu den Abfragecodes              | DSC-074, S. 44                  |
-| **bis SN-044:** die Kopfzeilen des französischen Teils werden vom grauen Balken verdeckt – keine sichtbaren Seitenzahlen                | DSC-075, S. 37–46               |
-| **bis SN-044:** die englische Fassung verliert das doppelte A der Adressbuch-Empfehlung („Alarm" statt „AAlarm")                        | DSC-076, S. 8, 26, 43           |
-| **bis SN-044:** der französische Teil nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius – dritter Wert neben 1000 m und 900 m            | DSC-078, S. 47 und 50           |
-| **bis SN-044:** der französische Statusbefehl lautet „Statut" – ein Buchstabe Abstand zu „Status"/„STATUS"                              | DSC-067, S. 50                  |
-| **bis SN-044:** der französische Konformitätsabschnitt ist unübersetzt englisch – samt der falschen „directive 1995/5/EG"               | DSC-071, S. 53                  |
-| **bis SN-044:** die späte Abfragecode-Ergänzung ist in drei von vier Sprachteilen sprachlich defekt – nur die deutsche ist sauber       | DSC-079, S. 27, 44, 61          |
-| **bis SN-044:** im schwedischen Verzeichnis fehlt die Kapitelnummer 3; „PGS-position" als Tippfehler im GPS-Diagnose-Erfolgszustand     | DSC-080, S. 54 und 59           |
-| **bis SN-044:** auch der schwedische Konformitätsabschnitt ist unübersetzt englisch mit „directive 1995/5/EG" – drei von vier falsch    | DSC-071, S. 70                  |
-| **bis SN-044:** Notizseite und Impressum extrahieren vollständige unsichtbare Nachbarseiten außerhalb des sichtbaren Seitenrahmens      | DSC-081, S. 71 und 72           |
-| Blau unterstrichene Kartenadressen sind nur auf einer deutschen Seite anklickbar; dort doppelt annotiert, in EN/FR/CS/DA/ES/IT/NL inert | DSC-082                         |
-| Niederländisch: `Pro-Zoeker`, unvollständiges `positi`, drei Wörter für Hauptnummer und zwei für Hauptkabelbaum                         | DSC-083, S. 186/187/189/195/198 |
+| Fund                                                                                                                                       | Beleg                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
+| Kabelbezeichnung uneinheitlich: „Verbindungskabel WiPro III" (Deutsch, Tschechisch) gegenüber „câble de connexion RJ10" (Französisch)      | DSC-036, S. 11, 59, 86          |
+| Produktname im tschechischen Teil mehrfach verstümmelt („hledáček Pro", „vyhledávač Pro")                                                  | DSC-036, S. 86, 89, 93, 96      |
+| Vier tschechische Substantive für dasselbe Gerät; drei Bezeichnungen für den Anlernmodus                                                   | DSC-037; S. 99 (Seitenrecord)   |
+| Links in IT, NL, CS und ES verweisen auf `/en/` statt auf die jeweilige Sprache                                                            | S. 100, 149, 173, 198; 6.3/6.4  |
+| Französische, spanische, niederländische und polnische interne Seitenzählung ist jeweils um eins zu kurz                                   | DSC-021                         |
+| Rotes X in der Anschlussabbildung – in allen neun vollständig geprüften Sprachfassungen ohne Legendeneintrag                               | DSC-022                         |
+| Zwei falsche Querverweise des **deutschen** Originals (5.4 statt 5.5; 1.5.2 statt 1.5.3) stehen in allen neun geprüften Sprachen           | DSC-040                         |
+| Abschnitt 5.5 trägt im Englischen und Dänischen wortgleich den Titel von 5.1, behandelt aber die Ausgänge                                  | DSC-015, S. 46, 102, 110, 120   |
+| Verweis auf 5.1 für Blinker und Sirene führt ins Leere; 5.1 beschreibt nur einen Anruf, obwohl die Überschrift SMS ankündigt               | DSC-041                         |
+| „Hauptkabelbaum" wird nirgends erklärt – der gesamte Löschvorgang der Zielrufnummern hängt daran                                           | DSC-050, S. 17                  |
+| Dezimaltrennzeichen der Gerätemeldungen uneinheitlich (11.2 V mit Punkt, 13,53 V mit Komma) – in allen neun geprüften Sprachen             | DSC-046                         |
+| Revisionsstände der Kurzanleitung widersprechen sich (Rev. 1.3.2 gegenüber Rev. 1.0 auf dem abgebildeten Umschlag)                         | DSC-049                         |
+| Google-Play-Abzeichen so grob gerastert, dass es auch bei 900 dpi unlesbar bleibt                                                          | DSC-051, S. 14                  |
+| Vier Fragen zu den Ausgängen, die die Quelle gar nicht beantwortet (Empfänger, Grenzwerte, Abbruch, Zustand nach Neustart)                 | DSC-052, S. 23                  |
+| Sprachmarke des dänischen Teils ist eine zusammengesetzte Flagge (links norwegisch, rechts dänisch, plus Diagonalstrich)                   | DSC-053, S. 1 und 101           |
+| **bis SN-044:** vier falsche Querverweise in Kapitel 2; alle vier stehen in allen vier Sprachteilen – Vorlagenfehler                       | DSC-055                         |
+| **bis SN-044:** zweimal auf eine „Tabelle Abfragecodes" verwiesen, die es nicht gibt; die Vorseite hat an der Stelle eine Leerfläche       | DSC-057, S. 9 und 10            |
+| **bis SN-044:** das Sternzeichen des Abfragecodes steht im Seitenbild, fehlt aber in der Textebene – der Code wäre unbrauchbar             | DSC-058, S. 10                  |
+| **bis SN-044:** kein einziger Warnhinweis trägt ein Signalwort; ein ESD-Symbol ohne jeden Begleittext ist alleinige Warnungsträgerin       | DSC-063, S. 6–16                |
+| **bis SN-044:** die gekoppelte Alarmanlage heißt „WiPro „all in one"", ab SN-045 „WiPro III safe.lock" – verschiedene Produktnamen         | DSC-065, S. 6 und 14            |
+| **bis SN-044:** Gerätetexte ersetzen Umlaute durch Vokal plus e („Ungueltiger", „Tuer") – Zeichensatzgrenze, vor Übersetzung schützen      | DSC-054, S. 13                  |
+| **bis SN-044:** englisches Inhaltsverzeichnis nennt 2.4 „Installation instructions"; der Abschnitt ist Geofencing                          | DSC-068, S. 20                  |
+| **bis SN-044:** SIM-Format Micro-SIM gegen Nano-SIM ab SN-045; Konformität 1999/5/EG gegen 2014/53/EU – Werte nicht übertragbar            | DSC-069, S. 18                  |
+| **bis SN-044:** aufgedruckte Seitenzählung beginnt im englischen Teil neu bei „Page1"; „Seite 15" und „Page 15" im selben PDF              | DSC-068, S. 20–26               |
+| **bis SN-044:** alle vier falschen Querverweise des deutschen Teils sind wörtlich in den englischen übernommen – Vorlagenfehler            | DSC-055, S. 28, 30, 31, 33      |
+| **bis SN-044:** die englische Konformitätserklärung nennt eine nicht existierende „directive 1995/5/EG" (deutsch: 1999/5/EG)               | DSC-071, S. 36                  |
+| **bis SN-044:** der Verweis „(see 2.1, Fig. 1)" nummeriert eine Abbildung, die es nicht gibt – keine der neun trägt eine Nummer            | DSC-068, S. 22, 30, 31          |
+| **bis SN-044:** der französische Teil enthält sinnverändernde Übersetzungsfehler (feste 2 m statt Maximum; LED-Zustand als Fehler)         | DSC-073, S. 38–44               |
+| **bis SN-044:** der im französischen Teil angekündigte FAQ-Link fehlt vollständig; kein Weg führt dort zu den Abfragecodes                 | DSC-074, S. 44                  |
+| **bis SN-044:** die Kopfzeilen des französischen Teils werden vom grauen Balken verdeckt – keine sichtbaren Seitenzahlen                   | DSC-075, S. 37–46               |
+| **bis SN-044:** die englische Fassung verliert das doppelte A der Adressbuch-Empfehlung („Alarm" statt „AAlarm")                           | DSC-076, S. 8, 26, 43           |
+| **bis SN-044:** der französische Teil nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius – dritter Wert neben 1000 m und 900 m               | DSC-078, S. 47 und 50           |
+| **bis SN-044:** der französische Statusbefehl lautet „Statut" – ein Buchstabe Abstand zu „Status"/„STATUS"                                 | DSC-067, S. 50                  |
+| **bis SN-044:** der französische Konformitätsabschnitt ist unübersetzt englisch – samt der falschen „directive 1995/5/EG"                  | DSC-071, S. 53                  |
+| **bis SN-044:** die späte Abfragecode-Ergänzung ist in drei von vier Sprachteilen sprachlich defekt – nur die deutsche ist sauber          | DSC-079, S. 27, 44, 61          |
+| **bis SN-044:** im schwedischen Verzeichnis fehlt die Kapitelnummer 3; „PGS-position" als Tippfehler im GPS-Diagnose-Erfolgszustand        | DSC-080, S. 54 und 59           |
+| **bis SN-044:** auch der schwedische Konformitätsabschnitt ist unübersetzt englisch mit „directive 1995/5/EG" – drei von vier falsch       | DSC-071, S. 70                  |
+| **bis SN-044:** Notizseite und Impressum extrahieren vollständige unsichtbare Nachbarseiten außerhalb des sichtbaren Seitenrahmens         | DSC-081, S. 71 und 72           |
+| Blau unterstrichene Kartenadressen sind nur auf einer deutschen Seite anklickbar; dort doppelt annotiert, in EN/FR/CS/DA/ES/IT/NL/PL inert | DSC-082                         |
+| Niederländisch: `Pro-Zoeker`, unvollständiges `positi`, drei Wörter für Hauptnummer und zwei für Hauptkabelbaum                            | DSC-083, S. 186/187/189/195/198 |
+| Polnisch: LED-Normalzustand falsch dupliziert; `stuku 3`/`styku 3` und `wuczeniu`/`uczenia` widersprechen sich                             | DSC-084, S. 206/217/223         |
 
-**Für die zwei noch nicht vollständig geprüften Sprachteile gilt:** Erwartbar sind weitere
+**Für den noch nicht vollständig geprüften schwedischen Sprachteil gilt:** Erwartbar sind weitere
 Varianten oder – wie im Spanischen – die Übernahme eines bereits dokumentierten
 Befehlssatzes, dieselben Vorlagenfehler und ein bis zwei eigene Übersetzungsfehler. Neue
 Befehlssätze werden in die Tabelle in DSC-033 eingetragen; alles Übrige kommt hierher.

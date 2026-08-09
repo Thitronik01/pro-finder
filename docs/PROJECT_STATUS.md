@@ -5,12 +5,12 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 32.2 %**
+**Gesamtfortschritt: 32.6 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 22.7 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 24.3 %      |
 | Content-Modell und deutscher Master      | 20 %    | 52 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
 | Webanleitung und Review-UI               | 20 %    | 30 %        |
@@ -23,22 +23,22 @@ Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 25 %        |
-| DOC-IBA-SN045 | 247    | 22 %        |
+| DOC-IBA-SN045 | 247    | 24.1 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 30 ungeprueften Seiten von DOC-IBA-SN045 abarbeiten. Als Erstes die polnischen Seiten 200-220 visuell pruefen; zusammen mit Deckblatt 199 und den bereits geprueften Seiten 221-224 wird damit der polnische Teil vollstaendig. Werte, Befehle, Querverweise, Bildsprache und Seitenzaehlung gegen die acht vollstaendig geprueften Sprachteile halten; DSC-021/022/033/040/047/083, BLK-005 und BLK-006 beachten und Sprachbefunde ohne muttersprachliche Freigabe kennzeichnen. Danach die schwedischen Restseiten 233-240 und 247. DOC-BMA-SN044 ist mit 72 von 72 Seiten komplett; die erste Synthese-Auswertung umfasst acht vollstaendig gepruefte Sprachteile ab SN-045. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
+Offene Blocker: 7 · Nächste Aktion: Die letzten 9 ungeprueften Seiten von DOC-IBA-SN045 abschliessen: zuerst die schwedischen Seiten 233-240, danach die Schlussseite 247 mit technischen Daten, Konformitaet und Support. Inhaltsverzeichnisziele, Betriebsarten, Zielrufnummern-Syntax, LED-Normalbetrieb, englische Geraetetexte, Kartenlink-Annotationen, Geofencing-Befehle und Querverweise gegen die neun vollstaendig geprueften Sprachteile halten; DSC-021/022/033/040/047/082/084, BLK-005 und BLK-006 beachten und Schwedisch nicht muttersprachlich freigeben. Danach ist die Seitenpruefung mit 323 von 323 Seiten komplett; Synthese-Auswertung und Register auf zehn SN-045-Sprachprofile abschliessen. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt; davon **293 visuell geprüft** (`inspected`): DOC-IBA-SN045
-  Seiten 1–199, 221–232 und 241–246, das vollständige **DOC-BMA-SN044 mit 72 Seiten** und
-  beide Kurzanleitungen. **Acht vollständige Sprachteile** (Deutsch, Englisch,
-  Französisch, Tschechisch, Dänisch, Spanisch, Italienisch und Niederländisch) von
-  DOC-IBA-SN045 sind geprüft; mit Seite 199 ist außerdem das polnische Deckblatt erfasst.
+- 323 Seitenrecords angelegt; davon **314 visuell geprüft** (`inspected`): DOC-IBA-SN045
+  Seiten 1–232 und 241–246 mit nur neun schwedischen Lücken, das vollständige
+  **DOC-BMA-SN044 mit 72 Seiten** und beide Kurzanleitungen. **Neun vollständige
+  Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch, Spanisch,
+  Italienisch, Niederländisch und Polnisch) von DOC-IBA-SN045 sind geprüft.
   Alle neuen Records sind maschinell gegen die Original-PDF
   abgeglichen (Seitenmaße und Zeichenzahlen je Seite) – siehe
   `scripts/merge-page-records.mjs`. Die Prüfung hat dabei einen realen Fehler abgefangen:
@@ -73,14 +73,15 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 30 ungeprueften Seiten vo
   deutsches Inhaltsverzeichnis und nach dem Impressum ein viersprachiges Deckblatt lesen
   (DSC-081);
 - **erste Synthese-Auswertung abgeschlossen und erweitert:** In `DISCREPANCIES.md` stehen
-  die vier Befehlssätze bis SN-044, die geräteseitige Hilfe-SMS und die acht vollständig
+  die vier Befehlssätze bis SN-044, die geräteseitige Hilfe-SMS und die neun vollständig
   geprüften Sprachen ab SN-045 nebeneinander. Ergebnis: Sprache und Generation sind
   unabhängige Parameter; die Hilfe-Liste ist kein verlässlicher Master. Acht Sprachen
-  ergeben acht unterschiedliche Profile. Spanisch mischt `valla apagada` mit englischen
+  ergeben neun unterschiedliche Profile. Spanisch mischt `valla apagada` mit englischen
   Kapitelbefehlen und einer englischen Hilfe-SMS; Italienisch und Niederländisch wechseln
-  innerhalb ihrer Fassung den Geofencing-Ausschaltbefehl. Selbst im schwedischen Teil
+  innerhalb ihrer Fassung den Geofencing-Ausschaltbefehl; Polnisch mischt
+  `ogrodzenie wyłączone` mit `fence off`. Selbst im schwedischen Teil
   konkurrieren `oskarp` und `urkopplad`. BLK-005 bleibt;
-- **DOC-IBA-SN045, dänischer, spanischer, italienischer und niederländischer Teil
+- **DOC-IBA-SN045, dänischer, spanischer, italienischer, niederländischer und polnischer Teil
   vollständig geprüft:** Die dänischen
   Seiten 101–123 bestätigen die deutsche Bildbeschriftung „GPS-Antenne (Optional)", das
   unerklärte rote X, beide falschen Installationsverweise und den irreführenden
@@ -92,9 +93,12 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 30 ungeprueften Seiten vo
   Inhaltsverzeichnis und Fußzeilen erst auf Seite 198 mit „Pagina 24 van 23". Er enthält
   unter anderem den übersetzten Produktnamen `Pro-Zoeker`, das unvollständige `positi`
   und drei Wörter für dieselbe Hauptnummer (DSC-083). Alle Befehle bleiben reine
-  Quellenzitate unter BLK-005;
+  Quellenzitate unter BLK-005. Der polnische Teil umfasst 25 statt der angegebenen 24
+  internen Seiten; eine fast leere Zusatzseite verschiebt Kapitel 3 bis 6. Er bestätigt
+  die gemeinsamen Bild-, Querverweis-, Berechtigungs- und LED-Probleme und dupliziert
+  ausgerechnet die Beschreibung des grün blinkenden Normalbetriebs falsch (DSC-084);
 - **Linkzugänglichkeit objektbezogen geprüft:** Blau unterstrichene Kartenadressen besitzen
-  in EN/FR/CS/DA/ES/IT/NL auf siebzehn Meldungsseiten keine Linkannotation. Deutsche Seite
+  in EN/FR/CS/DA/ES/IT/NL/PL auf neunzehn Meldungsseiten keine Linkannotation. Deutsche Seite
   19 ist ebenfalls inert, Seite 20 besitzt dagegen zehn Annotationen für fünf sichtbare
   Adressen; ein Ziel ist zusätzlich gegenüber dem sichtbaren Text gekürzt (DSC-082);
 - die belegten Befunde sind in [RUECKFRAGEN_THITRONIK.md](RUECKFRAGEN_THITRONIK.md) zu
@@ -219,8 +223,8 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 30 ungeprueften Seiten vo
 ## Release-Blocker
 
 1. Die Befehlssprache der SMS-Kommandos ist widersprüchlich dokumentiert (DSC-013,
-   DSC-014, DSC-026, DSC-033). Acht geprüfte Sprachfassungen dokumentieren **acht
-   unterschiedliche Befehlsprofile**; Spanisch ist ein lokalisierter/englischer Mischsatz,
+   DSC-014, DSC-026, DSC-033). Neun geprüfte Sprachfassungen dokumentieren **neun
+   unterschiedliche Befehlsprofile**; Spanisch und Polnisch sind lokalisierte/englische Mischsätze,
    nur
    `a %min%` lautet überall gleich. Die
    Vergleichstabelle steht in DSC-033, die Frage an THITRONIK in
@@ -257,6 +261,10 @@ Offene Blocker: 7 · Nächste Aktion: Die verbliebenen 30 ungeprueften Seiten vo
    druckt zusätzlich den Positionsbefehl nur als `positi`, während die Hilfe-SMS `POS`
    nennt (DSC-033, DSC-083). Damit sind auch Profil sieben und acht intern
    widersprüchlich.
+   **Polnisch bestätigt am 2026-08-09:** Die Diagnose nennt `ogrodzenie wyłączone`,
+   Kapitel 5 dagegen `fence off`; die übrigen Kapitelbefehle und die Hilfe-SMS bleiben
+   englisch und stimmen trotzdem nicht vollständig überein. Damit ist auch Profil neun
+   intern gemischt (DSC-033).
 2. Die Sprachfassungen sind inhaltlich nicht gleichwertig: die SIM-Anbieterempfehlung
    lautet deutsch t-mobile/Vodafone, englisch nur allgemein „M2M-Karte" und französisch
    namentlich DOMOTEC (DSC-027). Zusätzlich weicht ein technischer Wert ab (DSC-020).

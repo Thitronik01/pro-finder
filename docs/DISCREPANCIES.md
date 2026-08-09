@@ -184,35 +184,36 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   („gratuitement"); deutsch und englisch treffen diese Aussage nicht.
 - **Schwere:** hoch · **Status:** offen – an THITRONIK zu melden
 
-### DSC-033 – Acht Sprachen dokumentieren acht unterschiedliche Befehlsprofile (ab SN-045)
+### DSC-033 – Neun Sprachen dokumentieren neun unterschiedliche Befehlsprofile (ab SN-045)
 
 - **Dokument:** DOC-IBA-SN045, französische Seiten 61, 71–75; tschechische Seiten 84,
   94 und 97–99; dänische Seiten 111, 118–122; spanische Seiten 134 und 144–147;
-  italienische Seiten 160, 168–172; niederländische Seiten 184 und 193–197
+  italienische Seiten 160, 168–172; niederländische Seiten 184 und 193–197; polnische
+  Seiten 209 und 219–223
 - **Befund:** Die französische Fassung dokumentiert durchgängig eigene Befehle, nicht nur
   an einer Stelle. Damit ist DSC-026 präzisiert: es ist kein einmaliger Ausrutscher im
   Fließtext.
 
-| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch     | Dänisch                   | Spanisch                      | Italienisch                            | Niederländisch            |
-| --------------- | ---------------- | --------------- | ----------------------------- | --------------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------- |
-| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      | `fence til`               | `fence on`                    | `fence attivo`                         | `fence aan`               |
-| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      | `fence fra`               | `valla apagada` / `fence off` | `recinto spento` / `fence disattivato` | `fence off` / `fence uit` |
-| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`          | `status`                  | `status`                      | `stato`                                | `status`                  |
-| Position        | `position`       | `position`      | `position`                    | `poloha`        | `position`                | `position`                    | `posizione`                            | `positi`                  |
-| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`         | `a til`                   | `a on`                        | `a attivo`                             | `a aan`                   |
-| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | `a vyp`         | `a fra`                   | `a off`                       | `a disattivato`                        | `a uit`                   |
-| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`      | `a impuls`                | `a pulse`                     | `impulso a`                            | `a impuls`                |
-| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`       | `a %min%`                 | `a %min%`                     | `a %min%`                              | `a %min%`                 |
-| Anlernmodus ein | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap`     | `Indlaeringsmodus taendt` | `teach mode on`               | `modalita di apprendimento attiva`     | `instelmodus aan`         |
-| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT | AKTIVERET/DEAKTIVERET     | ARM/DISARM                    | ABILITATO/DISABILITATO                 | SCHERP/ONSCHERP           |
+| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch     | Dänisch                   | Spanisch                      | Italienisch                            | Niederländisch            | Polnisch                             |
+| --------------- | ---------------- | --------------- | ----------------------------- | --------------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------- | ------------------------------------ |
+| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      | `fence til`               | `fence on`                    | `fence attivo`                         | `fence aan`               | `fence on`                           |
+| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      | `fence fra`               | `valla apagada` / `fence off` | `recinto spento` / `fence disattivato` | `fence off` / `fence uit` | `ogrodzenie wyłączone` / `fence off` |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`          | `status`                  | `status`                      | `stato`                                | `status`                  | `status`                             |
+| Position        | `position`       | `position`      | `position`                    | `poloha`        | `position`                | `position`                    | `posizione`                            | `positi`                  | `position`                           |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`         | `a til`                   | `a on`                        | `a attivo`                             | `a aan`                   | `a on`                               |
+| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | `a vyp`         | `a fra`                   | `a off`                       | `a disattivato`                        | `a uit`                   | `a off`                              |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`      | `a impuls`                | `a pulse`                     | `impulso a`                            | `a impuls`                | `a pulse`                            |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`       | `a %min%`                 | `a %min%`                     | `a %min%`                              | `a %min%`                 | `a %min%`                            |
+| Anlernmodus ein | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap`     | `Indlaeringsmodus taendt` | `teach mode on`               | `modalita di apprendimento attiva`     | `instelmodus aan`         | `teach mode on`                      |
+| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT | AKTIVERET/DEAKTIVERET     | ARM/DISARM                    | ABILITATO/DISABILITATO                 | SCHERP/ONSCHERP           | ARM/DISARM                           |
 
-Acht vollständig geprüfte Sprachfassungen ergeben acht unterschiedliche
+Neun vollständig geprüfte Sprachfassungen ergeben neun unterschiedliche
 Dokumentationsprofile. Das spanische Profil ist dabei kein konsistenter lokalisierter
 Satz: Seite 134 nennt `valla apagada`, Kapitel 5 dagegen `fence on`/`fence off` und die
 Hilfe-SMS bleibt vollständig englisch. Italienisch und Niederländisch sind ebenfalls
 intern gemischt: Diagnose und Kapitel nennen jeweils verschiedene Ausschaltbefehle
 (`recinto spento`/`fence disattivato` beziehungsweise `fence off`/`fence uit`). Nur
-`a %min%` lautet in allen acht gleich;
+`a %min%` lautet in allen neun gleich;
 `a impuls` ist in Deutsch, Tschechisch und Dänisch identisch, im Englischen und Spanischen
 aber `a pulse`, Italienisch dreht die Reihenfolge zu `impulso a`. Die Lokalisierung ist
 damit **nicht einmal in sich konsistent** – weder
@@ -220,7 +221,7 @@ sprachübergreifend noch innerhalb einer Fassung.
 
 Die dänische Geräte-Hilfe-SMS nennt `AKTIVERET`, `DEAKTIVERET`, `STATUS`, `POS`, während
 Abschnitt 5.1 trotz der Überschrift „Styre alarmsystemet via SMS" nur einen Anruf erklärt.
-`POS` steht zwar weiterhin in allen acht Hilfe-SMS, die Kapitel verwenden jedoch
+`POS` steht zwar weiterhin in allen neun Hilfe-SMS, die Kapitel verwenden jedoch
 unterschiedliche Wörter; Niederländisch druckt sogar das unvollständige `positi`.
 
 Die spanische Hilfe-SMS nennt `ARM`, `DISARM`, `STATUS`, `POS`; der spanische Fließtext
@@ -228,9 +229,14 @@ nennt dagegen `status` und `position`. Zusammen mit `valla apagada` gegen `fence
 bestätigt gerade dieser Mischsatz, dass die Hilfe-SMS nicht als vollständige oder
 zeichengetreue Befehlsliste taugt.
 
+Die polnische Fassung bildet ein neuntes Mischprofil: Die GPS-Diagnose nennt
+`ogrodzenie wyłączone`, Kapitel 5 dagegen `fence off`; Status, Position, Ausgänge und
+Anlernmodus übernehmen englische Kapitelbefehle. Auch die englische Hilfe-SMS
+`ARM`/`DISARM`/`STATUS`/`POS` erklärt nicht die im Kapitel sichtbaren Langformen.
+
 - **Der Widerspruch:** Auf Seite 74 sind drei der vier Ausgangsbefehle lokalisiert, der
   zeitgesteuerte bleibt `a %min%`. Entweder akzeptiert das Gerät gemischte Befehlssätze,
-  oder eine der beiden Formen ist falsch. `position` lautet in fünf der acht Fassungen
+  oder eine der beiden Formen ist falsch. `position` lautet in sechs der neun Fassungen
   gleich; Tschechisch verwendet `poloha`, Italienisch `posizione` und Niederländisch das
   unvollständige `positi`.
 - **Beobachtung:** Alle französischen Befehle sind konsequent **ohne Akzent** gesetzt
@@ -243,10 +249,10 @@ zeichengetreue Befehlsliste taugt.
   `tradlos` statt „dør" und „trådløs"; der ASCII-Befund steht damit in einer fünften
   Sprachfassung. Italienisch setzt `modalita` ohne Akzent; damit ist das ASCII-Muster in
   sechs Sprachfassungen belegt.
-- **Was daraus folgt:** Sieben Fassungen legen eine Lokalisierung von Eingaben und Ausgaben
-  nahe, die spanische mischt eine lokalisierte Einzelanweisung mit englischen Kapitel- und
-  Gerätetexten. Italienisch und Niederländisch mischen innerhalb der Diagnose und des
-  Kapitels ebenfalls verschiedene Sprachen beziehungsweise Wörter. Durchgängig sichtbares
+- **Was daraus folgt:** Acht Fassungen legen eine Lokalisierung von Eingaben und Ausgaben
+  nahe; Spanisch und Polnisch mischen lokalisierte Einzelanweisungen mit englischen
+  Kapitel- und Gerätetexten. Italienisch und Niederländisch mischen innerhalb der Diagnose
+  und des Kapitels ebenfalls verschiedene Sprachen beziehungsweise Wörter. Durchgängig sichtbares
   ASCII macht eine Zeichensatzgrenze plausibel,
   erklärt aber weder die Sprachwahl noch die gültigen Zeichenfolgen. Die Projektannahme
   „SMS-Befehle sind sprachneutrale geschützte Token" ist damit unhaltbar; genau deshalb
@@ -301,11 +307,12 @@ zeichengetreue Befehlsliste taugt.
 
 ## Mittel
 
-### DSC-021 – Französische, spanische und niederländische Seitenzählung ist jeweils um eins zu kurz (ab SN-045)
+### DSC-021 – Vier Sprachfassungen zählen jeweils eine interne Seite zu wenig (ab SN-045)
 
 - **Dokument:** DOC-IBA-SN045, französische Seiten 51–76 („Page 1 de 25" bis „Page 26 de
   25"), spanische Seiten 125–149 („Página 1 de 24" bis „Página 25 de 24") und
-  niederländische Seiten 174–198 („Pagina 1 van 23" bis „Pagina 24 van 23") gegenüber
+  niederländische Seiten 174–198 („Pagina 1 van 23" bis „Pagina 24 van 23") und
+  polnische Seiten 200–224 („Strona 1 z 24" bis „Strona 25 z 24") gegenüber
   deutscher Seite 3 und englischer Seite 27 („Seite/Page 1 von/of 23")
 - **Befund:** Die interne Paginierung ist kein sprachübergreifender Anker. Kapitel liegen ab
   Kapitel 3 auf abweichenden internen Seiten (FR: Kapitel 3 auf 18, Kapitel 4 auf 19,
@@ -325,6 +332,11 @@ zeichengetreue Befehlsliste taugt.
   **24** interne Seiten, nennt aber durchgehend 23. PDF-Seite 190 enthält nur den Rest eines
   Satzes aus 2.9. Dadurch beginnen Kapitel 3 bis 6 jeweils eine Seite später als im
   Inhaltsverzeichnis; die Schlussseite 198 trägt „Pagina 24 van 23".
+- **Polnische Bestätigung 2026-08-09:** Der polnische Teil umfasst tatsächlich **25**
+  interne Seiten, nennt aber durchgehend 24. PDF-Seite 216 enthält nur das isolierte
+  Satzfragment „Programowanie numerów miejsc docelowych."; dadurch beginnen Kapitel 3 bis
+  6 eine Seite später als im Inhaltsverzeichnis. Die Schlussseite 224 trägt folgerichtig
+  „Strona 25 z 24".
 - **Folge:** Segment-Mapping darf nicht über die interne Seitenzahl erfolgen, sondern nur
   über Kapitelnummer und PDF-Seite. **Status:** offen
 
@@ -332,12 +344,12 @@ zeichengetreue Befehlsliste taugt.
 
 - **Dokument:** DOC-IBA-SN045, Abschnitt 1.2 – deutsche Seite 8, englische Seite 32,
   französische Seite 56, tschechische Seite 83, dänische Seite 107, spanische Seite 130,
-  italienische Seite 156 und niederländische Seite 180
+  italienische Seite 156, niederländische Seite 180 und polnische Seite 205
 - **Beleg:** Die Beschriftung am Antennenfoto lautet in allen acht Fassungen deutsch
   „GPS-Antenne (Optional)", während die Legende danebensteht als „External GPS antenna
   (optional)" (EN) beziehungsweise „Antenne GPS externe (en option)" (FR).
 - **Bewertung:** Die Grafik wurde offenbar als fertiges Bild in alle Sprachteile übernommen.
-  Bestätigt sind DE, EN, FR, CS, DA, ES, IT und NL – acht von acht vollständig geprüften
+  Bestätigt sind DE, EN, FR, CS, DA, ES, IT, NL und PL – neun von neun vollständig geprüften
   Fassungen. Dass alle zehn betroffen sind, ist damit sehr wahrscheinlich.
 - **Schwere:** mittel (Terminologie und Verständlichkeit; verschärft, weil die Legende
   ohnehin nur Bildinhalt ist) · **Status:** offen
@@ -416,6 +428,9 @@ zeichengetreue Befehlsliste taugt.
   gegen `AAllarme`, die niederländische Seite 187 `ALARM` gegen `AAlarm`. Damit steht der
   Fehler in sieben von acht geprüften Sprachfassungen – er wurde konsequent mitübersetzt
   statt bemerkt.
+- **Polnische Bestätigung:** Seite 213 setzt ebenfalls `ALARM` im Fließtext gegen
+  `AAlarm` im unmittelbar folgenden Tipp. Der Fehler steht damit in acht von neun
+  vollständig geprüften Sprachfassungen.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-017 – Syntaxbedeutung des Minuszeichens nur implizit (ab SN-045)
@@ -436,6 +451,9 @@ zeichengetreue Befehlsliste taugt.
   188/189 erklären ebenfalls nur Landesvorwahl und `S`; die Bedeutung des Minuszeichens
   bleibt ausschließlich aus dem dritten Tabellenbeispiel ableitbar. Damit ist die Regel
   in allen acht vollständig geprüften Sprachfassungen implizit.
+- **Polnische Bestätigung:** Seite 214 erklärt ebenfalls Pluszeichen und `S`, nicht aber
+  das Minuszeichen vor der nicht autorisierten Nummer. Die Regel ist damit in allen neun
+  vollständig geprüften Sprachfassungen nur implizit.
 - **Schwere:** mittel (Berechtigungssteuerung, sicherheitsrelevant) · **Status:** offen
 
 ### DSC-004 – Fehlübersetzung IT-Schritt 8 (ab SN-045)
@@ -638,6 +656,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Italienische und niederländische Bestätigung 2026-08-09:** Italienisch übernimmt die
   Fehler auf den Seiten 157/158, Niederländisch auf 181/182. Beide Fehlverweise stehen
   damit in allen acht vollständig geprüften Fassungen.
+- **Polnische Bestätigung 2026-08-09:** Seite 206 verweist auf 5.4 statt 5.5, Seite 207
+  auf 1.5.2 statt 1.5.3. Beide Vorlagenfehler stehen damit in allen neun vollständig
+  geprüften Fassungen.
 - **Schwere:** mittel (Nutzende landen im falschen Kapitel) · **Status:** offen
 
 ### DSC-041 – Querverweis auf 5.1 führt inhaltlich ins Leere (ab SN-045)
@@ -658,6 +679,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Italienische und niederländische Bestätigung:** Die Zielabschnitte auf den Seiten 169
   und 194 kündigen ebenfalls eine SMS-Steuerung an, erklären aber nur einen Anruf. Damit
   ist der Vorlagenfehler in allen acht vollständig geprüften Fassungen belegt.
+- **Polnische Bestätigung:** Seite 218 verweist für Blinker und Sirene auf 5.1; der
+  polnische Zielabschnitt auf Seite 220 kündigt SMS-Steuerung an, beschreibt aber nur
+  einen Anruf. Der Fehler steht damit in allen neun vollständig geprüften Fassungen.
 - **Schwere:** mittel · **Status:** offen
 
 ### DSC-042 – Geofencing: Abhängigkeit von der WiPro III ist widersprüchlich (ab SN-045)
@@ -700,6 +724,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Sprachübergreifende Bestätigung:** Italienische Seite 164 und niederländische Seiten
   188/189 wiederholen dieselbe unerklärte Syntax. Die Regel ist damit in allen acht
   vollständig geprüften Fassungen nur implizit.
+- **Polnische Bestätigung:** Seite 214 zeigt denselben Unterschied ausschließlich im
+  dritten Beispiel. Die Berechtigungsregel bleibt damit in allen neun vollständig
+  geprüften Fassungen implizit.
 - **Schwere:** hoch (sicherheitskritisch: eine nicht autorisierte Nummer könnte
   Steuerrechte erhalten) · **Status:** offen – gehört in den technischen Review
 
@@ -733,6 +760,9 @@ belegt, nicht aus einer Zusammenfassung.
   Gerätebild gegen `11,2 V` im spanischen Fließtext. Italienische Seite 167 und
   niederländische Seite 192 wiederholen Punkt im Gerätebild gegen Komma im Fließtext. Das
   Muster steht damit in allen acht vollständig geprüften Sprachen.
+- **Polnische Bestätigung:** Seite 218 zeigt ebenfalls `Voltage below 11.2 V` im
+  Gerätebild gegen 11,2 V und 12,5 V im polnischen Fließtext. Das Muster steht damit in
+  allen neun vollständig geprüften Sprachen.
 - **Schwere:** niedrig, für den Token-Vergleich der Übersetzungen aber relevant ·
   **Status:** offen
 
@@ -753,6 +783,9 @@ belegt, nicht aus einer Zusammenfassung.
 - **Randbefund:** Die Tabelle auf Seite 12 ist entgegen der Arbeitsannahme **nicht**
   farbig gesetzt – sie nennt die Farben in schwarzer Schrift. Die Barriere sitzt am
   Gerät, nicht im Dokument.
+- **Polnische Bestätigung:** Seite 209 verwendet dieselben drei Diagnosefarben; die
+  Normalbetriebstabelle auf Seite 217 belegt Rot, Gelb und Grün erneut mit anderen
+  Bedeutungen. Der geräteseitige Farbkonflikt besteht auch in der neunten Fassung.
 - **Schwere:** hoch · **Status:** offen – an THITRONIK zu melden
 
 ### DSC-048 – Seriennummer: drei Schreibweisen, kein belegter Fundort (ab SN-045)
@@ -1795,7 +1828,7 @@ belegt, nicht aus einer Zusammenfassung.
 ### DSC-082 – Blau unterstrichene Kartenadressen sind je Sprachfassung unterschiedlich interaktiv (ab SN-045)
 
 - **Dokument:** DOC-IBA-SN045, Meldungskapitel DE Seiten 19/20, EN 42–44, FR 70–72,
-  CS 93–95, DA 117/118, ES 143/144, IT 167/168 und NL 192/193
+  CS 93–95, DA 117/118, ES 143/144, IT 167/168, NL 192/193 und PL 218/219
 - **Prüfweg:** Sämtliche Link-Annotationen der Meldungsseiten wurden mit PyMuPDF
   objektbezogen gezählt und ihre URI-Ziele mit dem sichtbaren Bildtext verglichen.
 - **Befund:** Alle Sprachfassungen zeigen die Kartenadressen blau und unterstrichen – also
@@ -1804,8 +1837,8 @@ belegt, nicht aus einer Zusammenfassung.
   - Deutsche Seite 20: fünf sichtbare Adressen, **zehn** Annotationen – jede Adresse liegt
     doppelt übereinander. Beim manuellen Alarm ist das hinterlegte Ziel zusätzlich kürzer
     als der sichtbare Text.
-  - Englisch, Französisch, Tschechisch, Dänisch, Spanisch, Italienisch und Niederländisch:
-    auf allen siebzehn geprüften Meldungsseiten **null** Link-Annotationen, obwohl die
+  - Englisch, Französisch, Tschechisch, Dänisch, Spanisch, Italienisch, Niederländisch und
+    Polnisch: auf allen neunzehn geprüften Meldungsseiten **null** Link-Annotationen, obwohl die
     Adressen gleich gestaltet sind.
 - **Folge:** Das Erscheinungsbild verspricht Bedienbarkeit, die weder innerhalb des
   deutschen Teils noch zwischen den Sprachen besteht. Tastatur- und Screenreader-Nutzer
@@ -1839,12 +1872,33 @@ belegt, nicht aus einer Zusammenfassung.
 - **Schwere:** hoch · **Status:** offen – niederländischer Sprachreview und technischer
   Review des Positionsbefehls; gehört bei Befehlen zu BLK-005
 
+### DSC-084 – Polnischer Normalbetrieb und Anschlussbegriff sind widersprüchlich (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, polnische Seiten 206, 217 und 223
+- **Befund:** Die vollständig geprüfte polnische Fassung enthält mehrere sichtbare
+  Widersprüche an Bedienankern:
+  - Seite 217 beschreibt LED-Zustand 8 und 9 wortgleich als gelb-grünes Blinken bei
+    fehlenden Zielrufnummern. Die Grafik von Zustand 9 zeigt dagegen nur grüne Striche;
+    der rote Schlusshinweis nennt grünes Blinken ausdrücklich als Normalbetrieb. Die
+    textliche Beschreibung des betriebsbereiten Zustands ist damit falsch dupliziert.
+  - Seite 206 druckt im letzten Satz `do stuku 3`, obwohl Titel, Kontext und Parallelstelle
+    auf derselben Seite `styku 3` für Kontakt/Pin 3 verwenden. Das betroffene Wort benennt
+    den Anschluss des manuellen Alarms.
+  - Seite 223 verwendet in zwei aufeinanderfolgenden Formen `wuczeniu` und `wuczania`,
+    während die Abschnittsüberschrift `trybu uczenia` schreibt. Derselbe Anlernmodus wird
+    innerhalb eines kurzen Abschnitts unterschiedlich benannt.
+- **Warum das zählt:** Status 9 ist die Bestätigung des Normalbetriebs; Pin 3 und
+  Anlernmodus sind konkrete Bedienziele. Die Fehler dürfen nicht als polnische
+  Terminologiebasis oder Fehlerhilfe übernommen werden.
+- **Schwere:** hoch · **Status:** offen – polnischer Sprachreview und technischer Review
+  der LED-Zeile
+
 <a id="synthese-befehle"></a>
 
 ## Synthese-Auswertung 1: SMS-Befehle im Sprach- und Generationenvergleich
 
 Diese Auswertung verbindet den **vollständig geprüften** viersprachigen Befehlssatz bis
-SN-044, die geräteseitige Hilfe-SMS dieser Generation und die acht vollständig geprüften
+SN-044, die geräteseitige Hilfe-SMS dieser Generation und die neun vollständig geprüften
 Sprachfassungen ab SN-045. Alle Angaben sind Quellenzitate für BLK-005, **keine
 zur Veröffentlichung freigegebenen Befehle**.
 
@@ -1879,26 +1933,26 @@ fehlen der Liste die im Handbuch gelehrten Positions- und Zeitbefehle, während 
 GPS-Befehle in keinem Sprachteil erklärt werden. Das englische `fence av` ist zusätzlich
 bildlich als aus dem schwedischen Teil kontaminiert belegt (DSC-067).
 
-### Ab SN-045: Acht Sprachfassungen, acht unterschiedliche Befehlsprofile
+### Ab SN-045: Neun Sprachfassungen, neun unterschiedliche Befehlsprofile
 
-| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch     | Dänisch                   | Spanisch                      | Italienisch                            | Niederländisch            |
-| --------------- | ---------------- | --------------- | ----------------------------- | --------------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------- |
-| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      | `fence til`               | `fence on`                    | `fence attivo`                         | `fence aan`               |
-| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      | `fence fra`               | `valla apagada` / `fence off` | `recinto spento` / `fence disattivato` | `fence off` / `fence uit` |
-| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`          | `status`                  | `status`                      | `stato`                                | `status`                  |
-| Position        | `position`       | `position`      | `position`                    | `poloha`        | `position`                | `position`                    | `posizione`                            | `positi`                  |
-| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`         | `a til`                   | `a on`                        | `a attivo`                             | `a aan`                   |
-| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | `a vyp`         | `a fra`                   | `a off`                       | `a disattivato`                        | `a uit`                   |
-| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`      | `a impuls`                | `a pulse`                     | `impulso a`                            | `a impuls`                |
-| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`       | `a %min%`                 | `a %min%`                     | `a %min%`                              | `a %min%`                 |
-| Anlernmodus ein | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap`     | `Indlaeringsmodus taendt` | `teach mode on`               | `modalita di apprendimento attiva`     | `instelmodus aan`         |
-| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT | AKTIVERET/DEAKTIVERET     | ARM/DISARM                    | ABILITATO/DISABILITATO                 | SCHERP/ONSCHERP           |
+| Funktion        | Deutsch          | Englisch        | Französisch                   | Tschechisch     | Dänisch                   | Spanisch                      | Italienisch                            | Niederländisch            | Polnisch                             |
+| --------------- | ---------------- | --------------- | ----------------------------- | --------------- | ------------------------- | ----------------------------- | -------------------------------------- | ------------------------- | ------------------------------------ |
+| Geofencing ein  | `fence an`       | `fence on`      | `activer le gardiennage`      | `plot zap`      | `fence til`               | `fence on`                    | `fence attivo`                         | `fence aan`               | `fence on`                           |
+| Geofencing aus  | `fence aus`      | `fence off`     | `desactiver le gardiennage`   | `plot vyp`      | `fence fra`               | `valla apagada` / `fence off` | `recinto spento` / `fence disattivato` | `fence off` / `fence uit` | `ogrodzenie wyłączone` / `fence off` |
+| Statusbericht   | `status`         | `status`        | `rapport d etat`              | `stav`          | `status`                  | `status`                      | `stato`                                | `status`                  | `status`                             |
+| Position        | `position`       | `position`      | `position`                    | `poloha`        | `position`                | `position`                    | `posizione`                            | `positi`                  | `position`                           |
+| Ausgang A ein   | `a an`           | `a on`          | `activer la sortie A`         | `a zap`         | `a til`                   | `a on`                        | `a attivo`                             | `a aan`                   | `a on`                               |
+| Ausgang A aus   | `a aus`          | `a off`         | `desactiver la sortie A`      | `a vyp`         | `a fra`                   | `a off`                       | `a disattivato`                        | `a uit`                   | `a off`                              |
+| Ausgang gepulst | `a impuls`       | `a pulse`       | `sortie A impulsion`          | `a impuls`      | `a impuls`                | `a pulse`                     | `impulso a`                            | `a impuls`                | `a pulse`                            |
+| Ausgang Zeit    | `a %min%`        | `a %min%`       | `a %min%`                     | `a %min%`       | `a %min%`                 | `a %min%`                     | `a %min%`                              | `a %min%`                 | `a %min%`                            |
+| Anlernmodus ein | `anlernmodus an` | `teach mode on` | `activer le mode d appairage` | `uceni zap`     | `Indlaeringsmodus taendt` | `teach mode on`               | `modalita di apprendimento attiva`     | `instelmodus aan`         | `teach mode on`                      |
+| Hilfe-SMS       | SCHARF/UNSCHARF  | ARM/DISARM      | ACTIVER/DESACTIVER            | ZAPNOUT/VYPNOUT | AKTIVERET/DEAKTIVERET     | ARM/DISARM                    | ABILITATO/DISABILITATO                 | SCHERP/ONSCHERP           | ARM/DISARM                           |
 
 Fundstellen und Einzelbelege stehen in DSC-013, DSC-014, DSC-026 und DSC-033. Auch hier
-existiert kein sprachneutraler Satz; nur `a %min%` bleibt über alle acht Fassungen gleich.
+existiert kein sprachneutraler Satz; nur `a %min%` bleibt über alle neun Fassungen gleich.
 Spanisch mischt `valla apagada` mit englischen Kapitelbefehlen und einer englischen
-Hilfe-SMS. Italienisch und Niederländisch wechseln sogar innerhalb des eigenen Teils beim
-Geofencing-Ausschaltbefehl; Niederländisch druckt zusätzlich `positi`. Die Großschreibung
+Hilfe-SMS. Italienisch, Niederländisch und Polnisch wechseln sogar innerhalb des eigenen
+Teils beim Geofencing-Ausschaltbefehl; Niederländisch druckt zusätzlich `positi`. Die Großschreibung
 der Hilfe-SMS und die abweichenden Kapitelwörter bleiben ungeklärt.
 
 ### Ergebnis des Generationenvergleichs

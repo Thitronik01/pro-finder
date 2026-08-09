@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 32.2,
+  "overall_percent": 32.6,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,7 +19,7 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 22.7,
+      "percent": 24.3,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
@@ -65,10 +65,10 @@
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 22,
+      "percent": 24.1,
       "status_counts": {
-        "inspected": 217,
-        "not_started": 30
+        "inspected": 238,
+        "not_started": 9
       }
     },
     {
@@ -160,5 +160,5 @@
     "Der franzoesische Teil bis SN-044 nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius; Deutsch, Englisch und Schwedisch nennen 1000 m/1 km, die neuere Generation 900 m. Franzoesisch steht damit innerhalb desselben Handbuchs allein und 50 Prozent ueber den drei Parallelfassungen (DSC-078, Rueckfrage 14). Kein Radius wird bis zur Klaerung genannt.",
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden."
   ],
-  "next_action": "Die verbliebenen 30 ungeprueften Seiten von DOC-IBA-SN045 abarbeiten. Als Erstes die polnischen Seiten 200-220 visuell pruefen; zusammen mit Deckblatt 199 und den bereits geprueften Seiten 221-224 wird damit der polnische Teil vollstaendig. Werte, Befehle, Querverweise, Bildsprache und Seitenzaehlung gegen die acht vollstaendig geprueften Sprachteile halten; DSC-021/022/033/040/047/083, BLK-005 und BLK-006 beachten und Sprachbefunde ohne muttersprachliche Freigabe kennzeichnen. Danach die schwedischen Restseiten 233-240 und 247. DOC-BMA-SN044 ist mit 72 von 72 Seiten komplett; die erste Synthese-Auswertung umfasst acht vollstaendig gepruefte Sprachteile ab SN-045. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
+  "next_action": "Die letzten 9 ungeprueften Seiten von DOC-IBA-SN045 abschliessen: zuerst die schwedischen Seiten 233-240, danach die Schlussseite 247 mit technischen Daten, Konformitaet und Support. Inhaltsverzeichnisziele, Betriebsarten, Zielrufnummern-Syntax, LED-Normalbetrieb, englische Geraetetexte, Kartenlink-Annotationen, Geofencing-Befehle und Querverweise gegen die neun vollstaendig geprueften Sprachteile halten; DSC-021/022/033/040/047/082/084, BLK-005 und BLK-006 beachten und Schwedisch nicht muttersprachlich freigeben. Danach ist die Seitenpruefung mit 323 von 323 Seiten komplett; Synthese-Auswertung und Register auf zehn SN-045-Sprachprofile abschliessen. Parallel koennen die 13 fehlenden Aufgaben der Generation bis SN-044 geschrieben werden - die deutsche Quellenlage ist komplett. Vorgehen und Kontext stehen in docs/HANDOVER_PROMPT.md."
 }
