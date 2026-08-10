@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P008-S01-SIM-VORAUSSETZUNGEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "sim-karte",
+  "title": "Micro-SIM sicher vorbereiten",
+  "body_md": "Verwenden Sie eine freigeschaltete Micro-SIM. Deaktivieren Sie vor dem Einsetzen alle Rufumleitungen, die Mailbox und Komfortfunktionen wie Rückruf bei besetzt oder Erinnerungen per SMS. Der Pro-finder muss beim Einsetzen spannungsfrei sein. Aktivieren Sie Roaming, wenn die Karte auch im Ausland genutzt werden soll.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 8,
+  "source_page_end": 8,
+  "source_region": "Abschnitt 1.8, Einleitung und rosa Warnkasten neben dem Foto des geöffneten Geräts",
+  "prev_context": "PDF-Seite 7 endet mit der GPS-Diagnose und einer gesperrten SMS-Anweisung.",
+  "next_context": "Die feste PIN-Vorgabe der Quelle wird im folgenden Segment als bewusste Auslassung dokumentiert.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6b875b8879ac9f0bff6d90eba7674057c0d08d000afbd82b618d4c227dce738b",
+  "change_reason": "Quellennahe Zusammenführung der sichtbar als Warnungen markierten SIM-Voraussetzungen. Der konkrete PIN-Wert bleibt wegen Rückfrage 15 außerhalb des übersetzbaren Inhalts und wird separat als Auslassung dokumentiert.",
+  "discrepancy_refs": ["DSC-063"]
+}

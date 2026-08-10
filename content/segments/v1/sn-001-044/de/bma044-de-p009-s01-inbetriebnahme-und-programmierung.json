@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P009-S01-INBETRIEBNAHME-UND-PROGRAMMIERUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Zielrufnummernspeicher in Betrieb nehmen",
+  "body_md": "Legen Sie die vorbereitete SIM-Karte ein, verriegeln Sie den Halter und schließen Sie danach die Spannungsversorgung an. Die Status-LED blinkt zunächst kurz rot und anschließend gelb-grün. Nach erfolgreicher Speicherung der Zielrufnummern blinkt sie grün und das Gerät sendet eine Status-SMS an den Absender. Danach ist der Pro-finder laut Quelle einsatzbereit. Insgesamt können bis zu zehn Zielrufnummern gespeichert werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.8, erste drei Absätze oberhalb der Rollenübersicht",
+  "prev_context": "PDF-Seite 8 nennt SIM-Voraussetzungen, Adressbuchhinweis und SMS-Kosten.",
+  "next_context": "Darunter definiert die Quelle vier Rollen von Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6705fb8f29de8a18db86fd3c29114bd6c47267c3bbd2a1fd5f514bf2c0baee18",
+  "change_reason": "Die beobachtbare Inbetriebnahmefolge wurde vollständig, aber ohne Inhalt oder Syntax der Programmier-SMS extrahiert. Die LED-Bedeutungen bleiben mit der Zustandsliste auf PDF-Seite 11 verknüpft.",
+  "discrepancy_refs": ["DSC-059"]
+}

@@ -1,42 +1,43 @@
 # Projektstatus
 
-Stand: 2026-08-09. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-10. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 37.5 %**
+**Gesamtfortschritt: 43.8 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 25.4 %      |
-| Content-Modell und deutscher Master      | 20 %    | 74 %        |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
+| Content-Modell und deutscher Master      | 20 %    | 86 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
-| Webanleitung und Review-UI               | 20 %    | 30 %        |
-| Übersetzungspilot                        | 10 %    | 7 %         |
-| Accessibility-, Security- und Content-QA | 10 %    | 19 %        |
-| Staging und Übergabe                     | 5 %     | 36 %        |
+| Webanleitung und Review-UI               | 20 %    | 39 %        |
+| Übersetzungspilot                        | 10 %    | 10 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 26 %        |
+| Staging und Übergabe                     | 5 %     | 49 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 26.7 %      |
+| DOC-BMA-SN044 | 72     | 36.1 %      |
 | DOC-IBA-SN045 | 247    | 25 %        |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Den ersten Segmentbatch unabhaengig validieren: DOC-BMA-SN044 PDF-Seiten 3-7 neu rendern und jedes der 17 Segmente in content/segments/v1/sn-001-044/de gegen Bild, Seitenregion und unmittelbaren Kontext pruefen. Inhaltliche Korrekturen mit neuer checksum dokumentieren; BLK-005 und die Auslassung des Betriebsart-D-Intervalls unveraendert einhalten. Erst nach einer echten zweiten Gegenpruefung die fuenf Seiten von extracted auf validated setzen. Danach den naechsten Extraktionsbatch aus DOC-BMA-SN044 Seiten 8-11 anlegen. Details stehen in docs/HANDOFF.md.
+Offene Blocker: 7 · Nächste Aktion: Das dritte P0-Pruefpaket P0-03 fuer Meldungen, Spannungswarnung, Alarm und Geofencing bis SN-044 vorbereiten. Die sicherheitskritischen Segmente aus DOC-BMA-SN044 Seiten 12-15 zu Statusbericht, Diebstahlmeldung, 11,2-/12,5-V-Schwellen, Notruf, WiPro-Alarm, Anrufberechtigung und Geofencing buendeln. SMS-Befehle, Koordinaten, Beispielrufnummern und ungeklaerte Radien bleiben ausgelassen. Pro Aussage Quelle, Gegenquelle, DSC-/Rueckfrage und benoetigte THITRONIK-Entscheidung nennen; P0-03 in der Review-Warteschlange suchbar machen. Details stehen in docs/HANDOFF.md.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 318 stehen auf
-  `inspected`, die fünf deutschen Seiten 3–7 von DOC-BMA-SN044 nach dem ersten
-  Segmentbatch auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 307 stehen auf
+  `inspected` und die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
+  unabhängigen Segment-Gegenprüfungen auf `validated`; keine Seite steht mehr auf
+  `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
   Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
@@ -119,14 +120,38 @@ Offene Blocker: 7 · Nächste Aktion: Den ersten Segmentbatch unabhaengig validi
   DOC-BMA-SN044 und beiden Seiten von DOC-KA-SN044 erstellt. Nur die
   Generationsentscheidung verwendet zusätzlich DOC-IBA-SN045, Seiten 2, 6 und 25, und
   kennzeichnet offen, dass die Grenze „ab -045“ allein aus der neueren Fassung stammt;
-- **das versionierte Segmentformat v1 ist implementiert und erstmals belegt:**
-  `content/segments/v1/sn-001-044/de/` enthält 17 quellennahe Segmente aus
-  DOC-BMA-SN044, PDF-Seiten 3–7. Sie decken Lieferumfang, Montageort, Anschlüsse,
-  Betriebsarten, optionale GPS-Antenne und GPS-Diagnose ab. Alle bleiben `entwurf` und
+- **das versionierte Segmentformat v1 ist implementiert und mit fünf Batches belegt:**
+  `content/segments/v1/sn-001-044/de/` enthält 56 quellennahe Segmente aus
+  DOC-BMA-SN044, PDF-Seiten 3–18. Die 17 Segmente der Seiten 3–7 decken Lieferumfang,
+  Montageort, Anschlüsse, Betriebsarten, optionale GPS-Antenne und GPS-Diagnose ab. Sie
+  wurden am 2026-08-10 bei 300 dpi unabhängig gegen Seitenbild, Region und Kontext
+  validiert; dabei wurden eine ungenaue Überschrift, eine ausgelassene Folge fehlender
+  Satellitendatenspeicherung und die zu enge Formulierung des roten GPS-Zustands
+  korrigiert. Die 13 Segmente der Seiten 8–11 behandeln SIM-Voraussetzungen,
+  Zielrufnummernrollen, Programmierstruktur, Löschweg und alle neun LED-Normalzustände;
+  sie wurden bei 400 dpi unabhängig validiert. Dabei wurden die belegte Einsatzbereitschaft
+  nach der Programmierung und die dritte formale Smartphone-Warnung ergänzt. Elf
+  Segmente der Seiten 12–14 behandeln Meldungsfelder, Statusbericht, Diebstahl- und
+  Spannungswarnung, die gesperrte Hilfe-SMS sowie Alarmsteuerung per SMS und Anruf. Sie
+  wurden bei 400 dpi unabhängig validiert; dabei wurden die Immer-Aussage zum
+  Restguthaben, der Auslöser des manuellen Alarms und die technische Möglichkeitsaussage
+  zum Nummernzugriff präzisiert. Acht Segmente der Seiten 15–16 behandeln Geofencing,
+  Status-/Positionsabfrage und drei Ausgangssteuerungsarten; sie wurden bei 400 dpi
+  unabhängig validiert. Dabei wurde die einschränkende Nur-Aussage zur gültigen
+  GPS-Position ergänzt. Sieben neue Segmente der Seiten 17–18 behandeln Kartennutzung,
+  GPS-Ersatzposition und UTC-Zeit, technische Daten, Konformität, Entsorgung und Support.
+  Sie wurden bei 400 dpi unabhängig validiert. Dabei wurde die Quellenregion des
+  Kartensegments vervollständigt und die Bezeichnungen `Sendefrequenz`, `Schnittstellen`
+  sowie `NMEA (Eingang GPS)` quellengetreu wiederhergestellt; kein technischer Wert wurde
+  verändert. Die deutsche Inhalts-Extraktion reicht damit validiert bis zur letzten
+  Inhaltsseite; PDF-Seite 19 ist nur eine leere Notizseite. Alle Segmente bleiben
+  `entwurf` und
   besitzen Dokument, PDF-Seite, Seitenregion, Kontext, Sicherheitsklasse, aktuelle
   SHA-256-Prüfsumme, Änderungsgrund und gegebenenfalls DSC-Verweise. Das Intervall der
-  Betriebsart D und die SMS-Anweisung der Seite 7 erscheinen nur als begründete
-  Auslassungen ohne gesperrten Bedienwert beziehungsweise ohne Befehlszeichenfolge;
+  Betriebsart D, die SMS-Anweisung der Seite 7, die Programmier-SMS, Beispielrufnummern,
+  die ungeklärte Berechtigungsregel, der feste PIN-Wert, der widersprüchliche Radius sowie
+  Koordinaten, Kartenlinks und Beispielbeträge erscheinen nur als begründete Auslassungen
+  ohne gesperrten Bedienwert oder Befehlszeichenfolge;
 - **Schema- und Referenzprüfung sichern die Segmente in CI ab:**
   `scripts/check-segments.mjs` prüft Schema v1, Pfad/Schlüssel, Dokumentinventar,
   Seitenstatus, Aufgabenzuordnung, DSC-Verweise, Prüfsummen, BLK-005 und die
@@ -134,6 +159,39 @@ Offene Blocker: 7 · Nächste Aktion: Den ersten Segmentbatch unabhaengig validi
   Schlüssel/Prüfsummen und die Freigabesperre sicherheitsrelevanter Segmente. Die
   Datenbankmigration bleibt unverändert; der Importvertrag steht in
   `content/segments/README.md`;
+- **die interne Review-Warteschlange arbeitet im Fixture-Modus jetzt mit dem kanonischen
+  Segmentbestand:** `/review` zeigt 56 statt fälschlich 28 Aufgaben. Die Prioritäten P0
+  (sicherheitskritisch), P1 (sicherheitsrelevant) und P2 (normal) werden als Text
+  ausgegeben, standardmäßig P0 zuerst sortiert und separat gefiltert. 41 Segmente stehen
+  auf P0, 14 auf P1 und eines auf P2. Der Generationsfilter verwendet nun den realen
+  Schemawert `beide` statt des wirkungslosen Werts `both`. Fünf Unit-Tests sichern
+  Zuordnung, Sortierung und Beschriftung. Die Browserprüfung bestätigte 56 Gesamt- und 41
+  reine P0-Treffer; bei 375 Pixeln hat die Seite keinen horizontalen Überlauf, während die
+  breite Datentabelle kontrolliert in ihrer eigenen Region scrollt;
+- **das erste technische Prüfpaket P0-01 ist reviewbereit:** Sechs P0-Segmente zu
+  Pinbelegung, Versorgung, Messeingängen, gemeinsamer Batterie, Ausgängen, optionaler
+  GPS-Antenne und technischen Daten sind in
+  `docs/review-packets/P0-01-ELEKTRIK-SN044.md` gebündelt. Jeder Wert nennt genaue Quelle,
+  Gegenquelle oder Quellenlücke, DSC-/Rückfrage und die benötigte THITRONIK-Entscheidung.
+  `/review` zeigt die Paket-ID in einer eigenen Spalte; der direkte Filter liefert genau
+  sechs Treffer. Das Paket enthält keine Freigabe und ändert keinen Segmentstatus;
+- **das zweite technische Prüfpaket P0-02 ist reviewbereit:** Elf P0-Segmente zu SIM,
+  PIN, Zielrufnummernrollen, Programmierung, Fernüberschreiben, physischem Löschen und
+  Status-LED sind in `docs/review-packets/P0-02-SIM-ZIELRUFNUMMERN-SN044.md` gebündelt.
+  34 Einzelentscheidungen besitzen Quelle, Gegenquelle oder Quellenlücke,
+  DSC-/Rückfragenbezug und benötigte THITRONIK-Rolle. DOC-BMA-SN044, Seiten 8–11, wurde
+  vollständig gegen die vorhandenen 400-dpi-Renderings gehalten; DOC-KA-SN044, Seiten
+  1–2, wurde für die Gegenprüfung bei 300 dpi neu gerendert und gelesen. BLK-005/006
+  bleiben intakt: keine Programmier-SMS, Beispielrufnummer, Guthabencode,
+  Smartphone-Kennzeichnung oder abgeleitete Berechtigungsregel wird reproduziert. Der
+  `/review`-Filter liefert genau elf P0-02-Treffer. Damit sind 17 von 41 P0-Segmenten in
+  entscheidungsreifen Dossiers gebündelt;
+- **eine eigene Fehlklassifikation zur GPS-Kabellänge ist transparent korrigiert:** Die
+  erneute 400-dpi-Gegenprüfung von DOC-BMA-SN044, PDF-Seiten 3, 21 und 38, gegen die
+  bereits hochauflösend geprüfte Seite 55 zeigt: Deutsch, Französisch und Schwedisch
+  formulieren eine feste Kabellänge von 2 m, nur Englisch eine Obergrenze. DSC-073,
+  DSC-079, betroffene Seitenrecords, Rückfragenübersicht, Risikoliste und Segmentgrund
+  dokumentieren die Korrektur. Offen bleibt die technische Bedeutung von 2 m;
 - **die Sperren sind im gesamten SN-044-Aufgabensatz technisch gegengeprüft:** In `goal`,
   `prerequisites`, `warnings`, `steps`, `expected_result`, `error_cases` und `tables_md`
   steht keine SMS-Befehlszeichenfolge (BLK-005). Der Geofencing-Radius, das Intervall der
@@ -229,13 +287,13 @@ Offene Blocker: 7 · Nächste Aktion: Den ersten Segmentbatch unabhaengig validi
   einen Teil der WCAG-Kriterien maschinell ab. Ein grüner Lauf heißt „keine der geprüften
   Regeln verletzt", nicht „WCAG 2.2 AA erfüllt";
 - manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix: offen;
-- **die 131 Seitenrecords aus den SN-045-Batches und die 67 neuen aus DOC-BMA-SN044 haben
-  keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell gegen die Original-PDF
-  abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber kein zweiter Prüfer hat
-  die inhaltlichen Behauptungen gegen das Seitenbild gehalten. Von den 67 neuen
-  DOC-BMA-SN044-Records stehen 62 auf `inspected` und fünf mit Segmenten auf `extracted`;
-  auch `extracted` bedeutet noch keine zweite Meinung. Nachzuholen in der unabhängigen
-  Segmentvalidierung. Für die neuen Records gilt
+- **die 131 Seitenrecords aus den SN-045-Batches und 51 der 67 neuen Records aus
+  DOC-BMA-SN044 haben keine unabhängige Gegenprüfung durchlaufen.** Sie sind maschinell
+  gegen die Original-PDF abgeglichen (Seitenmaße, Zeichenzahlen, keine Dopplungen), aber
+  kein zweiter Prüfer hat die inhaltlichen Behauptungen gegen das Seitenbild gehalten.
+  Von den 67 neuen DOC-BMA-SN044-Records stehen 51 auf `inspected` und sechzehn nach den
+  Gegenprüfungen vom 2026-08-10 auf `validated`; keine Seite steht mehr auf `extracted`.
+  Für die übrigen neuen Records gilt
   einschränkend: die tragenden Einzelbefunde – die Befehlsliste der Hilfe-SMS, das
   fehlende Sternzeichen, die Verweisziele, die Abschnittsnummern 2.8 und 2.4, die Befehle
   `fence av` und `Fence on`/`off`, die Tabellenzellen „8 Minuten"/„8 seconds", die

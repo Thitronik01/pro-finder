@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { loadFixtureReviewData, loadSupabaseReviewData, type ReviewItem } from '@/lib/review-data';
 import { createServerSupabaseClient, getSupabasePublicConfig } from '@/lib/supabase/server';
+import { reviewPriorityLabel, type ReviewPriority } from '@/lib/review-priority';
 import { signOut } from './actions';
 import styles from './review.module.css';
 
@@ -25,6 +26,7 @@ function filterItems(
   items: ReviewItem[],
   generation: string,
   status: string,
+  priority: string,
   query: string,
 ): ReviewItem[] {
   const normalizedQuery = query.toLocaleLowerCase('de');
@@ -32,8 +34,9 @@ function filterItems(
     (item) =>
       (!generation || item.generation === generation) &&
       (!status || item.status === status) &&
+      (!priority || item.priority === priority) &&
       (!normalizedQuery ||
-        `${item.title} ${item.key} ${item.sourceLabel}`
+        `${item.title} ${item.key} ${item.sourceLabel} ${item.packetId ?? ''}`
           .toLocaleLowerCase('de')
           .includes(normalizedQuery)),
   );
@@ -81,9 +84,10 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
   const params = await searchParams;
   const generation = first(params.generation);
   const status = first(params.status);
+  const priority = first(params.priority);
   const query = first(params.q);
-  const filteredItems = filterItems(data.items, generation, status, query);
-  const placeholders = data.items.filter((item) => item.placeholder).length;
+  const filteredItems = filterItems(data.items, generation, status, priority, query);
+  const drafts = data.items.filter((item) => item.placeholder).length;
   const safetyOpen = data.items.filter(
     (item) => item.safetyClass !== 'normal' && item.status !== 'freigegeben',
   ).length;
@@ -137,8 +141,8 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
             <dd>{data.items.length}</dd>
           </div>
           <div>
-            <dt>Entwürfe/Platzhalter</dt>
-            <dd>{placeholders}</dd>
+            <dt>Offene Entwürfe</dt>
+            <dd>{drafts}</dd>
           </div>
           <div>
             <dt>Sicherheitsreviews offen</dt>
@@ -168,6 +172,27 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
           <Link href="/dashboard">Gesamtfortschritt ansehen</Link>
         </div>
 
+        <aside className={styles.packetNotice} aria-labelledby="review-packets-title">
+          <h3 id="review-packets-title">Technische Prüfpakete</h3>
+          <ul>
+            <li>
+              <strong>P0-01:</strong> sechs Segmente zu Elektrik, Ausgängen, GPS und technischen
+              Daten. Dossier: <code>docs/review-packets/P0-01-ELEKTRIK-SN044.md</code>.{' '}
+              <Link href="/review?generation=sn-001-044&priority=P0&q=P0-01">
+                P0-01 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-02:</strong> elf Segmente zu SIM, PIN, Zielrufnummern, Programmierung,
+              Löschen und Status-LED. Dossier:{' '}
+              <code>docs/review-packets/P0-02-SIM-ZIELRUFNUMMERN-SN044.md</code>.{' '}
+              <Link href="/review?generation=sn-001-044&priority=P0&q=P0-02">
+                P0-02 in der Warteschlange öffnen
+              </Link>
+            </li>
+          </ul>
+        </aside>
+
         <form method="get" className={styles.filters} aria-label="Content filtern">
           <div>
             <label htmlFor="filter-query">Suche</label>
@@ -176,7 +201,7 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               type="search"
               name="q"
               defaultValue={query}
-              placeholder="Titel, Schlüssel oder Quelle"
+              placeholder="Titel, Schlüssel, Paket oder Quelle"
             />
           </div>
           <div>
@@ -185,7 +210,7 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               <option value="">Alle</option>
               <option value="sn-001-044">bis SN-044</option>
               <option value="sn-045-plus">ab SN-045</option>
-              <option value="both">beide</option>
+              <option value="beide">beide</option>
             </select>
           </div>
           <div>
@@ -195,6 +220,16 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               <option value="entwurf">Entwurf</option>
               <option value="in_review">In Review</option>
               <option value="freigegeben">Freigegeben</option>
+              <option value="abgelehnt">Abgelehnt</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="filter-priority">Priorität</label>
+            <select id="filter-priority" name="priority" defaultValue={priority}>
+              <option value="">Alle</option>
+              <option value="P0">P0 - sicherheitskritisch</option>
+              <option value="P1">P1 - sicherheitsrelevant</option>
+              <option value="P2">P2 - normal</option>
             </select>
           </div>
           <button type="submit">Filter anwenden</button>
@@ -212,12 +247,14 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
           >
             <table className={styles.table}>
               <caption id="queue-caption" className={styles.caption}>
-                Segmente der Warteschlange mit Gerätegeneration, Sprache, Reviewstatus,
-                Sicherheitsklasse und Quelle
+                Segmente der Warteschlange mit Prüfpaket, Priorität, Gerätegeneration, Sprache,
+                Reviewstatus, Sicherheitsklasse und Quelle
               </caption>
               <thead>
                 <tr>
                   <th scope="col">Segment</th>
+                  <th scope="col">Prüfpaket</th>
+                  <th scope="col">Priorität</th>
                   <th scope="col">Generation/Sprache</th>
                   <th scope="col">Status</th>
                   <th scope="col">Sicherheit</th>
@@ -231,6 +268,8 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                       {item.href ? <Link href={item.href}>{item.title}</Link> : item.title}
                       <span className={styles.itemKey}>{item.key}</span>
                     </th>
+                    <td>{item.packetId ?? '—'}</td>
+                    <td>{reviewPriorityLabel(item.priority as ReviewPriority)}</td>
                     <td>
                       {item.generation}, <span lang={item.language}>{item.language}</span>
                     </td>

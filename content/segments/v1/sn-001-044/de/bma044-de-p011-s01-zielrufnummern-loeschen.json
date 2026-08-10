@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P011-S01-ZIELRUFNUMMERN-LOESCHEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Zielrufnummernspeicher am Gerät löschen",
+  "body_md": "Lassen Sie die SIM-Karte im Gerät. Ziehen Sie den Hauptkabelbaum ab und stellen Sie den Betriebsartenschalter auf Position E. Stecken Sie den Hauptkabelbaum wieder ein und warten Sie, bis die Status-LED gelb-grün blinkt. Stellen Sie den Schalter anschließend in seine vorherige Ausgangsposition zurück. Danach ist der Zielrufnummernspeicher leer.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.9, Bedingungszeile, vier Handlungsschritte und Ergebnisabsatz",
+  "prev_context": "PDF-Seite 10 endet mit gesperrten Beispielen zur Programmier-SMS.",
+  "next_context": "Danach nennt die Quelle einen alternativen Überschreibweg über die Masternummer.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:45bcd795bcf3d8e49164adaac5e5ef91898b00be3e8774e6cbe703abd3bdb872",
+  "change_reason": "Der vollständig befehlsfreie physische Löschweg wurde quellengetreu extrahiert. Die farbabhängige Abbruchbedingung und die nicht numerisch definierte Ausgangsposition bleiben sichtbar und technisch unfreigegeben.",
+  "discrepancy_refs": ["DSC-059", "DSC-063"]
+}

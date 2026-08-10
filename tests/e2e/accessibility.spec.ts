@@ -95,6 +95,16 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
   await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText(
     'sn-001-044',
   );
+
+  await page.getByRole('link', { name: 'P0-01 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/q=P0-01/);
+  await expect(page.getByText('6 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-01');
+
+  await page.getByRole('link', { name: 'P0-02 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/q=P0-02/);
+  await expect(page.getByText('11 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-02');
 });
 
 test('Kernseiten verursachen bei 320 CSS-Pixeln keinen Seiten-Horizontalscroll', async ({

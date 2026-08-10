@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P014-S03-BERECHTIGTE-NUMMERN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Zugriff nur durch berechtigte Nummern",
+  "body_md": "Nur berechtigte Nummern können auf den Pro-finder zugreifen. Die Quelle setzt diesen Begriff hier nicht eindeutig mit den zuvor beschriebenen autorisierten Nummern gleich und erklärt die technische Kennzeichnung der Berechtigung nicht. Deshalb wird keine Kennzeichnungsregel ergänzt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.3, abschließender fett gesetzter Zugriffshinweis",
+  "prev_context": "Der vorherige Absatz beschreibt den Schaltvorgang per Anruf und die Statusantwort.",
+  "next_context": "PDF-Seite 15 setzt Kapitel 2 mit Geofencing und Statusabfragen fort.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b4458a56283f074c94c433ca78f0cf67e5ddbf956f3b99a06f7e46c5bd5b8e7d",
+  "change_reason": "Der sicherheitskritische Zugriffshinweis wurde mit der technischen Möglichkeitsaussage der Quelle erhalten, ohne die aus Beispielzeichen abgeleitete und weiterhin ungeklärte Berechtigungsregel zu erfinden.",
+  "discrepancy_refs": ["DSC-056", "DSC-063"]
+}

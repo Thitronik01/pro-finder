@@ -112,8 +112,8 @@
     },
     {
       "page": 3,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1108,
@@ -186,14 +186,15 @@
         "\"GPS-Antenne\" hier mit Bindestrich; auf PDF-Seite 6 in den Überschriften ohne (\"GPS Antenne\").",
         "Vorreformierte Schreibung \"Anschlußkabel\", \"muß\"."
       ],
-      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review vorbereiten (validated -> approved)",
       "extracted_note": "Extraktionsbatch 1, 2026-08-09: vier versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
+      "validated_note": "Unabhaengige Validierung, 2026-08-10: Seite bei 300 dpi neu gerendert und alle vier Segmente einzeln gegen Seitenbild, Region sowie Vor- und Nachkontext gehalten. Die ungenaue Segmentueberschrift zur Reichweite wurde auf den sichtbaren Befund Kabellaenge korrigiert. Alle technischen Werte und die Bildlegende bestaetigt; keine Freigabe technischer Inhalte.",
       "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Seitenkopf und Legende zusätzlich bei 400 dpi als Ausschnitt geprüft; Textebene aus tmp/bma-sn044-text.txt Zeile für Zeile gegen die visuelle Reihenfolge gestellt. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 4,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1228,
@@ -305,14 +306,15 @@
         "Vorreformierte Schreibung \"Anschluß\" in den Bildbeschriftungen.",
         "\"Messeingang\" wird in der Abbildung im Singular je Pin, im Text von PDF-Seite 6 als \"Messeingänge\" verwendet - konsistent."
       ],
-      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review vorbereiten (validated -> approved)",
       "extracted_note": "Extraktionsbatch 1, 2026-08-09: zwei versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
+      "validated_note": "Unabhaengige Validierung, 2026-08-10: Seite bei 300 dpi neu gerendert und beide Segmente einzeln gegen Anschlussgrafik, Beschriftungen, Seitenregion und unmittelbaren Kontext gehalten. Pinbelegung, U1 bis U5, Ausgaenge, +12 V, Bedienelemente und die vier Funktionsgruppen bestaetigt; keine Freigabe technischer Inhalte.",
       "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Anschlussabbildung in vier Ausschnitten bei 500 und 700 dpi nachgerendert, um Aderfarben, Steckerbelegung, Drehschalterskala und das Leerzeichen in \"(U5 )\" zu sichern; Textebene aus tmp/bma-sn044-text.txt gegengelesen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 5,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1343,
@@ -418,14 +420,15 @@
         "\"Geofencing\" projektkonform geschrieben, aber im Spaltenkopf mit abweichender Groß-/Kleinschreibung des Folgeworts (\"Schaltbar\").",
         "\"GPS Diagnose\" ohne Bindestrich in Zeile F der Tabelle; auf PDF-Seite 7 steht dieselbe Funktion als \"(GPS Diagnose)\" ebenfalls ohne Bindestrich - hier immerhin einheitlich."
       ],
-      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review vorbereiten (validated -> approved)",
       "extracted_note": "Extraktionsbatch 1, 2026-08-09: drei versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; das Betriebsart-D-Intervall bleibt gemaess Rueckfrage 16/DSC-066 ausgelassen. Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
+      "validated_note": "Unabhaengige Validierung, 2026-08-10: Seite bei 300 dpi neu gerendert und alle drei Segmente einzeln gegen Einleitung, Tabellenkopf, Zeilen 0 bis F, verbundene Zellen und Kontext gehalten. WiPro-Ausnahme ab SN 0686-010 sowie alle Schaltschwellen und Intervalle bestaetigt. Das gesperrte Intervall der Betriebsart D bleibt ausschliesslich als Auslassung dokumentiert; keine Freigabe technischer Inhalte.",
       "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Tabellenkopf und die Zeilen 8 bis F bei 500 dpi als Ausschnitte nachgerendert, um Spaltenköpfe, Schaltschwellen und die verbundenen Zellen zu sichern; Zellzahl je Zeile gegen die Textebene aus tmp/bma-sn044-text.txt abgezählt. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 6,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1955,
@@ -518,14 +521,15 @@
         "\"GPS Antenne\" ohne Bindestrich neben \"GPS-Antenne\" mit Bindestrich auf derselben Seite.",
         "\"KFZ-Relais\" und \"Freilaufdiode\" - Fachbegriffe ohne Erläuterung."
       ],
-      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review vorbereiten (validated -> approved)",
       "extracted_note": "Extraktionsbatch 1, 2026-08-09: fuenf versionierte, quellennah formulierte Segmente in content/segments/v1/sn-001-044/de angelegt; Schema-, Referenz-, Pruefsummen- und BLK-005-Pruefung bestanden. Noch keine unabhaengige Validierung.",
+      "validated_note": "Unabhaengige Validierung, 2026-08-10: Seite bei 300 dpi neu gerendert und alle fuenf Segmente einzeln gegen Seitenbild, technische Werte, Antennenabbildung und Kontext gehalten. Pin 1/8, 12 VDC, 0 bis 30 V, 12 V/500 mA, gemeinsame Batterie, 15 Grad Celsius sowie 13,5 V fuer mindestens fuenf Minuten bestaetigt. Die zuvor ausgelassene Folge fehlender Satellitendatenspeicherung wurde ergaenzt; keine Freigabe technischer Inhalte.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; drei Ausschnitte bei 300 und 400 dpi nachgerendert (Absatz mit den Messeingängen, roter Batteriehinweis, Antennenfoto), um das fehlende Leerzeichen in \"(0-30V)kontrolliert\", die doppelten Leerzeichen in \"WiPro  III\", die Farbe des Warnhinweises und die Aderfarben am GPS-Stecker zu sichern. Textebene aus tmp/bma-sn044-text.txt Zeile für Zeile gegen das Seitenbild gehalten. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 7,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1202,
@@ -600,14 +604,15 @@
         "\"GPS Diagnose\" ohne Bindestrich, \"GPS-Signal\" und \"GPS-Antenne\" mit.",
         "\"GSM Modul\" ohne Bindestrich; das Gerät heißt sonst durchgehend Pro-finder. \"die Nummer des GSM Moduls\" ist die einzige Stelle dieser Seiten, an der das Gerät als GSM-Modul bezeichnet wird."
       ],
-      "next_action": "Segmente unabhaengig gegen die sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review vorbereiten (validated -> approved)",
       "extracted_note": "Extraktionsbatch 1, 2026-08-09: drei versionierte Segmente in content/segments/v1/sn-001-044/de angelegt; der SMS-Befehl ist wegen BLK-005 nur als Auslassung dokumentiert und nicht im uebersetzbaren Inhalt enthalten. Schema-, Referenz- und Pruefsummenpruefung bestanden. Noch keine unabhaengige Validierung.",
+      "validated_note": "Unabhaengige Validierung, 2026-08-10: Seite bei 300 dpi neu gerendert und alle drei Segmente einzeln gegen Diagnoseanweisung, drei LED-Zustaende, Reflexionswarnung, Seitenregion und Kontext gehalten. Die rote Zustandsbeschreibung wurde auf den wörtlichen Befund GPS nicht angeschlossen korrigiert. Die SMS-Zeichenfolge bleibt wegen BLK-005 ausschliesslich als Auslassung dokumentiert; keine Freigabe technischer Inhalte.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Farben der drei Balken und die Strichart (durchgezogen gegen gestrichelt) bei 150 dpi eindeutig. Textebene gegen das Seitenbild gehalten; die Zustandszeilen wurden dabei einzeln abgeglichen, weil die Textebene sie anders umbricht als das Bild. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 8,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1760,
@@ -708,13 +713,15 @@
         "\"Micro -SIM Format\" - Schreibweise fehlerhaft, siehe Widersprüche.",
         "\"Komfortfunktionen\" wird nicht definiert, sondern nur mit zwei Beispielen belegt."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 2, 2026-08-10: vier versionierte Segmente zu SIM-Voraussetzungen, PIN-Auslassung, Kartenauswahl/Roaming sowie Rufnummernspeicherung und Kosten angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Der feste PIN-Wert bleibt wegen Rueckfrage 15 ausserhalb des uebersetzbaren Inhalts; keine Rufnummern oder Kundendaten uebernommen. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 2, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle vier Segmente Satz fuer Satz mit Warnkasten und Fliesstext abgeglichen. Keine inhaltliche Korrektur erforderlich; feste PIN, Kundendaten und Quellsuggestion fuer den Adressbucheintrag bleiben bewusst ausgelassen.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Das ESD-Symbol und die sechs Warndreiecke sind bei 150 dpi eindeutig identifizierbar. Die Textebene enthält weder das ESD-Symbol noch die Warndreiecke noch die Einfärbung des Kastens - der Vergleich Text gegen Bild ist hier der eigentliche Befund. Keine Rufnummer und keine Kundendaten übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 9,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1585,
@@ -789,13 +796,15 @@
         "\"des Pro-finder\" ohne Genitiv-s, während PDF-Seite 8 \"des Pro-finders\" schreibt.",
         "Die Internetadresse nennt die Herstellerdomain thitronik-automotive.de; die Schreibweise THITRONIK erscheint dort klein. Als Quellenangabe unverändert übernommen."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 2, 2026-08-10: drei versionierte Segmente zu Inbetriebnahme, Zielrufnummernrollen und der bewussten Syntax-Auslassung angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. BLK-005/006 bleiben erhalten; Smartphone-Merkmal, Abfragecodes und ungeklaerte Berechtigungszeichen erscheinen nicht im uebersetzbaren Inhalt. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 2, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle drei Segmente mit Inbetriebnahmefolge, Rollenuebersicht und Randhinweisen abgeglichen. Die belegte Einsatzbereitschaft nach erfolgreicher Speicherung wurde im ersten Segment ergaenzt; gesperrte Syntax blieb unveraendert.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; das fett gesetzte s bei 500 dpi nachgerendert, weil bei 150 dpi nicht sicher zu entscheiden war, ob die Auszeichnung Fettschrift oder Kursive ist. Die Leerfläche in der Seitenmitte wurde zusätzlich maschinell geprüft: die Seite enthält kein eingebettetes Bild und genau ein Zeichenobjekt (die Kopfzeile), dort steht also nichts Unsichtbares. Keine Rufnummer übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 10,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1760,
@@ -888,13 +897,15 @@
         "\"Smartphone\" in deutschen Anführungszeichen gesetzt, an anderer Stelle desselben Dokuments ohne.",
         "\"Restguthaben\" hier, \"Guthaben\" auf PDF-Seite 8, \"Kontostand\" in den Beispielbildern auf PDF-Seite 13 und \"Aktuelles Guthaben\" in denen auf PDF-Seite 12 - vier Benennungen desselben Werts."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 2, 2026-08-10: zwei versionierte Segmente beschreiben die visuelle Programmierstruktur und dokumentieren die vollstaendige Auslassung konkreter Zeichenfolgen und Beispielrufnummern. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. BLK-005/006, DSC-056 und DSC-058 bleiben unveraendert; belegte Warnungen wurden ohne Syntax uebernommen. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 2, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und beide Segmente mit Syntaxgrafik, roten Hinweisen und Beispieltabelle abgeglichen. Die zuvor fehlende Smartphone-Warnung wurde ergaenzt; Programmierzeichenfolgen, Abfragecodes und Beispielrufnummern bleiben vollstaendig ausgelassen.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; die Beispielzeile der Strukturabbildung bei 700 dpi nachgerendert, weil bei 150 dpi nicht zu entscheiden war, ob dem Abfragecode ein Sternzeichen vorangestellt ist. Das Zeichen ist im Bild vorhanden, in der Textebene nicht - dieser Abgleich ist der Hauptbefund der Seite. Beispiel-Rufnummern wurden bewusst nicht in den Record übernommen; erfasst ist nur ihre Struktur. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 11,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1139,
@@ -1004,13 +1015,15 @@
         "\"Zielrufnummernspeicher\" als zusammengesetzter Fachbegriff ohne Erläuterung.",
         "\"Eingebucht\" ohne Erläuterung; gemeint ist die Anmeldung im Mobilfunknetz."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 2, 2026-08-10: vier versionierte Segmente zum physischen Loeschweg, zur Fernueberschreibung durch die Masternummer, zu allen neun Normalzuständen der Status-LED und zur farbabhaengigen Geraetebarriere angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Der feste PIN-Wert und die Programmier-SMS bleiben gesperrt; Dauergruen wird wegen DSC-059 nicht vereinheitlicht. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 2, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle vier Segmente mit Loeschfolge, Fernueberschreibung, neun LED-Zustaenden und Farblegende abgeglichen. Keine inhaltliche Korrektur erforderlich; PIN-Wert, Programmier-SMS und LED-Widerspruch bleiben geschuetzt dokumentiert.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Die neun Farbbalken sind bei 150 dpi in Farbe und Strichart eindeutig; die Zuordnung Balken zu Zeile ergibt sich aus der Position unmittelbar unter der jeweiligen Zeile. Textebene vollständig gegen das Seitenbild gehalten - sie gibt die neun Zustände in derselben Reihenfolge wie das Bild aus, ohne die Balken. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 12,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1528,
@@ -1115,13 +1128,15 @@
         "\"Geofencing\" kommt auf dieser Seite nicht vor, obwohl die Diebstahlmeldung genau davon ausgelöst wird; die Abbildung nennt \"GPS Fencing\".",
         "\"Kontostand\" gegen \"Aktuelles Guthaben\" in den Abbildungen derselben Seite."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 3, 2026-08-10: vier versionierte Segmente zu Meldungsangaben, Statusbericht, Diebstahlmeldung und Spannungswarnung angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Koordinaten, Beispielwerte, SMS-Befehle und der widerspruechliche Geofencing-Radius bleiben ausgelassen; die Schwellen 11,2 V und 12,5 V sind quellennah erhalten. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 3, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle vier Segmente mit Begriffsliste, 160-Zeichen-Hinweis, Statusbericht, Diebstahlmeldung und Spannungswarnung abgeglichen. Keine inhaltliche Korrektur erforderlich; Radius, Befehle und Beispielwerte bleiben geschuetzt ausgelassen.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Die drei Abbildungen der Beispiel-SMS wurden Zeile für Zeile mit der Textebene abgeglichen; sie sind dort vollständig abwesend, was den Hauptbefund der Seite ausmacht. Koordinaten, Kartenlinks und Beträge aus den Beispiel-SMS wurden bewusst nicht in den Record übernommen, nur die Feldnamen und die Struktur. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 13,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1104,
@@ -1225,13 +1240,15 @@
         "Die Gerätetexte schreiben Umlaute als Vokal plus e - eine eigene Schreibkonvention des Geräts, die vor jeder Übersetzung zu schützen ist.",
         "\"Einbruchmeldung\" im Fließtext, \"Einbruch Tuer/Fenster\" im Gerätetext."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 3, 2026-08-10: vier versionierte Segmente zu Notruf, Smartphone-Position, gesperrter Hilfe-SMS und WiPro-Alarmmeldungen angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Keine Koordinate, Kartenadresse, Beispielbetrag oder Befehlszeichenfolge wurde uebernommen; der Handbuch-Geraet-Widerspruch bleibt ueber BLK-005/DSC-054 geschuetzt. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 3, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle vier Segmente mit Notruf, Smartphone-Position, Hilfe-SMS und drei WiPro-Alarmarten abgeglichen. Die Immer-Aussage zum Restguthaben und die genaue Ausloesung des manuellen Alarms wurden praezisiert; Koordinaten, Kartenadresse, Beispielwerte und Befehlsliste bleiben ausgelassen.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi; die Abbildung der Hilfe-SMS bei 700 dpi nachgerendert, weil die Befehlsliste bei 150 dpi nicht zeichengenau zu lesen war und die Abweichung gegenüber dem Fließtext davon abhängt. Die Liste ist damit wörtlich gesichert. Koordinaten, Kartenadressen und Beträge aus den Beispiel-SMS wurden bewusst nicht übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 14,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 977,
@@ -1304,13 +1321,15 @@
         "\"berechtigte Nummern\" als dritter Ausdruck für die Zugriffsberechtigung.",
         "\"SMS-Befehl\" hier mit Bindestrich; PDF-Seite 15 schreibt an vergleichbarer Stelle \"eine SMS mit folgendem Text\"."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 3, 2026-08-10: drei versionierte Segmente zur gesperrten SMS-Alarmsteuerung, zur Anrufsteuerung in den Betriebsarten 2 und 3 und zum Zugriff berechtigter Nummern angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Keine SMS-Zeichenfolge oder erfundene Berechtigungskennzeichnung wurde uebernommen; BLK-005/006 bleiben erhalten. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 3, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle drei Segmente mit SMS-Steuerung, stillem Alarm, Anrufsteuerung und Zugriffshinweis abgeglichen. Die normative Formulierung zum Nummernzugriff wurde auf die technische Möglichkeitsaussage der Quelle korrigiert; alle SMS-Zeichenfolgen bleiben gesperrt.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Das fehlende öffnende Anführungszeichen und die doppelten Leerzeichen sind bei 150 dpi eindeutig. Die Befehle werden hier ausschließlich als Quellenzitat zur Begründung von BLK-005 festgehalten und dürfen nicht in den Content-Layer übernommen werden. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 15,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 2056,
@@ -1401,13 +1420,15 @@
         "\"geschärft\" als Zustand der Alarmanlage; PDF-Seite 14 verwendet dafür \"einschalten\" und den Befehl \"scharf\".",
         "\"Kartenprogramm\" hier, \"Kartenansicht\" auf PDF-Seite 13."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 4, 2026-08-10: fuenf versionierte Segmente zu Geofencing-Definition, generationsspezifischen Steuerwegen, Anrufweg fuer Statusberichte, GPS-/Ausgangsangaben und Smartphone-Positionsmeldung angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Radius, Koordinaten, Kartenadresse und alle drei SMS-Zeichenfolgen bleiben ausgelassen; Schalterstellungen 8/B, Pin 3 und die automatische Aktivierung bei geschaerfter WiPro sind quellennah erhalten. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 4, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle fuenf Segmente mit Geofencing, Schalterstellungen, Statusbericht und Smartphone-Positionsmeldung abgeglichen. Die einschraenkende Nur-Aussage bei gueltigem GPS-Empfang wurde ergaenzt; Radius, Koordinaten, Kartenadresse und SMS-Zeichenfolgen bleiben geschuetzt ausgelassen.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Diese Seite wurde ursprünglich nur gerendert, um die Ziele der drei Querverweise von den PDF-Seiten 10, 12 und 13 zu prüfen; sie ist danach vollständig gelesen und regulär erfasst worden. Die drei Abschnittsüberschriften sind im Seitenbild bestätigt, nicht nur in der Textebene - darauf stützen sich die Verweisbefunde der genannten Seiten. Befehle nur als Quellenzitat für BLK-005. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 16,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1173,
@@ -1483,13 +1504,15 @@
         "\"gepulst\" als Fachbegriff ohne Erläuterung; die Bedeutung ergibt sich nur aus dem Klammerzusatz des Zwischentitels.",
         "\"bis auf Widerruf\" als Beschreibung des Dauerzustands; PDF-Seite 6 formuliert dieselbe Sache als \"bis der Befehl aufgehoben wird\"."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 4, 2026-08-10: drei versionierte Segmente zur Zwei-Ausgangs-Uebersicht, den drei Steuerungsarten und der vollstaendigen Befehlsauslassung angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Der Ein-Sekunden-Impuls und der Zeitbereich 1 bis 120 Minuten bleiben erhalten; keine Ausgangsbefehlszeichenfolge, Kennungsersetzung oder Minutenplatzhalter-Regel wurde uebernommen. Schema-, Referenz- und Pruefsummenpruefung bestanden.",
+      "validated_note": "Validierungsbatch 4, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle drei Segmente mit Zwei-Ausgangs-Einleitung, Dauerbetrieb, Ein-Sekunden-Impuls, Zeitbereich 1 bis 120 Minuten und rotem Schlussabsatz abgeglichen. Keine inhaltliche Korrektur erforderlich; alle vier Befehlsformen und die Ersetzungsregel bleiben gesperrt.",
       "inspected_note": "Batch 17, 2026-08-08, PNG-Rendering 150 dpi. Wie PDF-Seite 15 zunächst zur Prüfung eines Querverweises gerendert und danach vollständig gelesen und regulär erfasst. Textebene gegen das Seitenbild gehalten; sie gibt die Befehlszeilen in derselben Reihenfolge aus wie das Bild, ohne die Piktogramme und ohne die Unterstreichung der Zwischentitel. Befehle nur als Quellenzitat für BLK-005. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 17,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1272,
@@ -1555,13 +1578,15 @@
         "\"Kartenprogramme und Navigationsgeräte\" hier; PDF-Seite 13 schreibt \"Kartenansicht\", PDF-Seite 15 \"Kartenprogramm\".",
         "\"GPS Empfang\" und \"GPS-Empfanges\" in zwei Schreibweisen auf derselben Seite."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und redaktionellen Review durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 5, 2026-08-10: drei versionierte Segmente zur Kartennutzung, zur Zehn-Minuten-Wartezeit bei fehlendem GPS-Empfang sowie zur Bedeutung von Position und UTC-Zeit bei Alarm mit aktiver Lichtmaschine angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Koordinaten, Kartenadresse, Bildschirmtexte, Anbieter-URL und SMS-Zeichenfolgen bleiben ausserhalb des uebersetzbaren Inhalts.",
+      "validated_note": "Validierungsbatch 5, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle drei Segmente gegen Bild, Region sowie vorherigen und naechsten Kontext geprueft. Zehn-Minuten-Wartezeit, Rueckfall auf die zuletzt empfangene Position, Alarmbedingung mit aktiver Lichtmaschine und UTC-Zeitbezug sind bestaetigt. Beim Kartensegment wurde die Quellenregion um den tatsaechlich verwendeten Absatz unterhalb der Desktop-Abbildung ergaenzt; der uebersetzbare Inhalt blieb unveraendert. Koordinaten, Beispieladresse, Kartenanbieter-URL, Bildschirmtexte und SMS-Zeichenfolgen bleiben ausgelassen.",
       "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Die Abschnittsnummer 2.8 und die aufgedruckte Seite 15 sind im Seitenbild bestätigt; damit ist der in DSC-055 offen gebliebene Punkt geschlossen. Koordinaten und Adressen aus den Bildschirmfotos wurden bewusst nicht in den Record übernommen. Sprache Deutsch, vollständig beurteilbar."
     },
     {
       "page": 18,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 1430,
@@ -1666,7 +1691,9 @@
         "\"Micro-SIM\" hier mit Bindestrich korrekt; PDF-Seite 8 schreibt \"(Micro -SIM Format)\" mit versetztem Leerzeichen.",
         "\"Thitronik GmbH\" im Konformitätstext in Gemischtschreibung; die Projektschreibweise THITRONIK betrifft die Marke, der Firmenname bleibt als Zitat unverändert."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "Technischen und rechtlichen Review der Werte, Konformitaetsangabe und Supportwege durchfuehren (validated -> approved)",
+      "extracted_note": "Extraktionsbatch 5, 2026-08-10: vier versionierte Segmente zu den neun technischen Werten, dem widerspruechlichen Konformitaetsstand, den Entsorgungshinweisen und dem Supportweg angelegt. Die Seite wurde bei 300 dpi neu gerendert und vollstaendig visuell gelesen. Technische Werte sind strikt auf die Generation bis Seriennummer 044 begrenzt; historische Rufnummer, Oeffnungszeiten, Website und Downloadadresse werden nicht als aktuelle Kontakt- oder Konformitaetswege veroeffentlicht.",
+      "validated_note": "Validierungsbatch 5, 2026-08-10: Seite bei 400 dpi unabhaengig neu gerendert und alle vier Segmente gegen Bild, Region sowie vorherigen und naechsten Kontext geprueft. Alle neun technischen Werte, Entsorgungswege, Fachhaendler als erster Supportweg und das Seriennummernfeld sind bestaetigt. In der technischen Tabelle wurden die Quellenbezeichnungen Sendefrequenz und Schnittstellen sowie NMEA (Eingang GPS) quellengetreu wiederhergestellt. Historische Richtlinie, Downloadadresse, Website, Rufnummer und Oeffnungszeiten bleiben als unbestaetigte Quellenstaende geschuetzt und nicht als aktuelle Wege veroeffentlicht.",
       "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi; die Zeilen der technischen Daten bei 400 dpi nachgerendert (fehlender Doppelpunkt, \"Mhz\", Leerzeichen vor Einheiten). Alle neun Werte wurden gegen die bereits erfassten Werte der Generation ab SN-045 (DOC-IBA-SN045, deutsche Seite 25, englische Seite 49, französische Seite 76) gehalten; Abweichungen in DSC-069. Sprache Deutsch, vollständig beurteilbar."
     },
     {
@@ -1769,7 +1796,7 @@
         },
         {
           "value": "Kabellänge zwischen GSM-Modul und GPS-Empfänger maximal 2 m",
-          "context": "Deckt sich mit der deutschen Fassung (PDF-Seite 3: 2m). \"the GPS receiver must not exceed 2 m\"",
+          "context": "Nur die englische Fassung formuliert eine Obergrenze: \"must not exceed 2 m\". Deutsch (PDF-Seite 3), Französisch (Seite 38) und Schwedisch (Seite 55) formulieren dagegen eine feste Länge von 2 m; korrigierter Sprachwiderspruch DSC-073.",
           "safety_critical": true
         },
         {
@@ -2946,7 +2973,7 @@
       "extractable_chars": 1229,
       "content_type": "anleitung",
       "languages": ["fr"],
-      "summary": "Intern \"Page 1\" (nur in der verdeckten Kopfzeile; Versatz des französischen Teils: aufgedruckt = PDF minus 37). Französisches Gegenstück zu den PDF-Seiten 3 und 21. Einleitungssatz zwischen zwei Warndreiecken, Abschnitt \"1.1 Étendue de la fourniture\" mit demselben Produktfoto und der Legende (1 Pro-finder, 2 Antenne, 3 Faisceau de câbles, 4 Porte-fusibles, 5 Fusible plat 3 A, 6 Vis de fixation, 7 Câble de branchement WiPro III / « all in one »). Abschnitt \"1.2 Choix de l'emplacement de montage\": gesicherter, aber wartungszugänglicher Ort im Fahrzeuginneren, nie im Motorraum, Geräteoberseite nach oben mit freier Sicht zum Satelliten, Kunststoff/Glas/Holz unproblematisch. Beim externen GPS-Empfänger weicht die Kabelangabe ab: \"la longueur du câble entre le module GSM et l'antenne GPS est de 2m\" - die Länge wird als fester Wert genannt, während Deutsch und Englisch ein Maximum angeben (DSC-073).",
+      "summary": "Intern \"Page 1\" (nur in der verdeckten Kopfzeile; Versatz des französischen Teils: aufgedruckt = PDF minus 37). Französisches Gegenstück zu den PDF-Seiten 3 und 21. Einleitungssatz zwischen zwei Warndreiecken, Abschnitt \"1.1 Étendue de la fourniture\" mit demselben Produktfoto und der Legende (1 Pro-finder, 2 Antenne, 3 Faisceau de câbles, 4 Porte-fusibles, 5 Fusible plat 3 A, 6 Vis de fixation, 7 Câble de branchement WiPro III / « all in one »). Abschnitt \"1.2 Choix de l'emplacement de montage\": gesicherter, aber wartungszugänglicher Ort im Fahrzeuginneren, nie im Motorraum, Geräteoberseite nach oben mit freier Sicht zum Satelliten, Kunststoff/Glas/Holz unproblematisch. Beim externen GPS-Empfänger heißt es \"la longueur du câble entre le module GSM et l'antenne GPS est de 2m\". Das entspricht der festen Formulierung in Deutsch und Schwedisch; nur Englisch nennt eine Obergrenze (korrigierter Sprachwiderspruch DSC-073).",
       "headings": ["1.1 Étendue de la fourniture", "1.2 Choix de l'emplacement de montage"],
       "technical_values": [
         {
@@ -2956,7 +2983,7 @@
         },
         {
           "value": "Kabellänge GSM-Modul zu GPS-Antenne: \"est de 2m\" - als fester Wert formuliert",
-          "context": "Die deutsche Fassung (PDF-Seite 3) und die englische (PDF-Seite 21) geben 2 m als Obergrenze an (\"darf nicht überschreiten\"/\"must not exceed\"). Die französische Formulierung macht aus dem Maximum eine feste Länge (DSC-073)",
+          "context": "Deutsch (PDF-Seite 3) und Schwedisch (Seite 55) formulieren wie Französisch eine feste Länge. Nur Englisch (Seite 21) schreibt \"must not exceed 2 m\". Korrigierter Sprachwiderspruch DSC-073.",
           "safety_critical": true
         },
         {
@@ -2983,7 +3010,7 @@
         "Warndreiecke ohne Textentsprechung."
       ],
       "discrepancies": [
-        "\"est de 2m\" - die Kabellänge wird als fester Wert statt als Obergrenze angegeben; sinnverändernde Übersetzung (DSC-073).",
+        "\"est de 2m\" - feste Kabellänge wie in Deutsch und Schwedisch; nur Englisch formuliert eine Obergrenze (korrigierter Sprachwiderspruch DSC-073).",
         "\"2m\" ohne Leerzeichen wie im deutschen Original; die englische Fassung schreibt \"2 m\".",
         "Legende und Werte decken sich im Übrigen mit den anderen Sprachteilen."
       ],
@@ -2993,7 +3020,7 @@
         "\"fausse manœuvre\" für \"Fehlbedienung\"."
       ],
       "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
-      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Werte gegen die deutsche (PDF-Seite 3) und englische Fassung (PDF-Seite 21) gehalten; die 2m-Abweichung ist die einzige inhaltliche. Sprache Französisch, Einzelbefunde dokumentiert.",
+      "inspected_note": "Batch 20, 2026-08-09, PNG-Rendering 150 dpi. Am 2026-08-10 bei 400 dpi erneut gegen Deutsch (PDF-Seite 3), Englisch (Seite 21) und Schwedisch (Seite 55) gehalten: DE/FR/SV formulieren eine feste Länge von 2 m, nur EN eine Obergrenze. Frühere Fehlklassifikation in DSC-073 korrigiert. Sprache Französisch, weitere Einzelbefunde dokumentiert.",
       "language_note": "Französisch nicht muttersprachlich beurteilbar; sinnverändernde Stellen einzeln dokumentiert."
     },
     {
@@ -4051,7 +4078,7 @@
       "extractable_chars": 1005,
       "content_type": "anleitung",
       "languages": ["sv"],
-      "summary": "Intern \"Sidan 1\" (sichtbar; Versatz des schwedischen Teils: aufgedruckt = PDF minus 54). Schwedisches Gegenstück zu den PDF-Seiten 3, 21 und 38. Einleitungssatz zwischen zwei Warndreiecken, \"1.1 Leveransomfång\" mit demselben Produktfoto und schwedischer Legende (1 Pro-finder, 2 Antenn, 3 Kabelträd, 4 Säkringshållare, 5 Plansäkring 3 A, 6 Fästskruvar, 7 Anslutningskabel WiPro III / \"all in one\"). \"1.2 Val av monteringsplats\": gesicherter, aber wartungszugänglicher Ort im Fahrzeuginneren, nie im Motorraum, Oberseite nach oben mit \"fri sikt\" zum Satelliten; bei externer GPS-Antenne heißt es wie im französischen Teil, die Kabellänge \"är 2 m\" - als fester Wert statt als Obergrenze (DSC-079).",
+      "summary": "Intern \"Sidan 1\" (sichtbar; Versatz des schwedischen Teils: aufgedruckt = PDF minus 54). Schwedisches Gegenstück zu den PDF-Seiten 3, 21 und 38. Einleitungssatz zwischen zwei Warndreiecken, \"1.1 Leveransomfång\" mit demselben Produktfoto und schwedischer Legende (1 Pro-finder, 2 Antenn, 3 Kabelträd, 4 Säkringshållare, 5 Plansäkring 3 A, 6 Fästskruvar, 7 Anslutningskabel WiPro III / \"all in one\"). \"1.2 Val av monteringsplats\": gesicherter, aber wartungszugänglicher Ort im Fahrzeuginneren, nie im Motorraum, Oberseite nach oben mit \"fri sikt\" zum Satelliten; bei externer GPS-Antenne heißt es \"kabellängden ... är 2 m\". Das entspricht Deutsch und Französisch; nur Englisch nennt eine Obergrenze (korrigierter Sprachwiderspruch DSC-073).",
       "headings": [
         "Handbok för Pro-finder",
         "Sidan 1",
@@ -4066,7 +4093,7 @@
         },
         {
           "value": "Kabellänge GSM-Modul zu GPS-Antenne: \"är 2 m\" - als fester Wert formuliert",
-          "context": "Wie die französische Fassung (\"est de 2m\") macht die schwedische aus der Obergrenze der deutschen und englischen Fassung eine feste Länge (DSC-079). Zwei von vier Sprachteilen tragen damit dieselbe Sinnverschiebung",
+          "context": "Schwedisch stimmt mit der festen Formulierung in Deutsch und Französisch überein. Nur Englisch nennt eine Obergrenze; korrigierter Sprachwiderspruch DSC-073, kein eigener schwedischer Fehler.",
           "safety_critical": true
         },
         {
@@ -4091,7 +4118,7 @@
         "\"fri sikt\" dreimal in Anführungszeichen - dieselbe Auszeichnungsschwäche wie \"clear view\" im englischen Teil."
       ],
       "discrepancies": [
-        "\"kabellängden ... är 2 m\" - feste Länge statt Obergrenze; dieselbe Sinnverschiebung wie im französischen Teil (DSC-079).",
+        "\"kabellängden ... är 2 m\" - feste Länge wie in Deutsch und Französisch; nur Englisch formuliert eine Obergrenze (korrigierter Sprachwiderspruch DSC-073).",
         "Legende und Werte decken sich im Übrigen mit den anderen Sprachteilen."
       ],
       "terminology_findings": [

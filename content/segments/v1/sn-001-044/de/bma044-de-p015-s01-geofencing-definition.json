@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P015-S01-GEOFENCING-DEFINITION",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Geofencing bildet einen virtuellen Zaun",
+  "body_md": "Geofencing legt einen virtuellen Bereich um den ursprünglichen Standort des Fahrzeugs. Verlässt das Fahrzeug diesen Bereich, sieht die Quelle eine Diebstahlmeldung vor. Die konkrete Entfernungsschwelle bleibt wegen widersprüchlicher Angaben zwischen Generationen und Sprachfassungen ungeklärt und wird nicht freigegeben.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.4, einleitender Absatz zur Bedeutung von Geofencing",
+  "prev_context": "PDF-Seite 14 endet mit dem Zugriffshinweis für berechtigte Nummern.",
+  "next_context": "Der folgende Absatz ordnet die Geofencing-Steuerung den Schalterstellungen zu.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f828693fc776e5acfdcaabb811f777c7fab8cbac04e0da8e766192e7ec6bd7a0",
+  "change_reason": "Die Funktion des virtuellen Zauns wurde erhalten, der sichtbare Radius jedoch wegen Rückfrage 14 und DSC-061/078 bewusst nicht in den freigabefähigen Inhalt übernommen.",
+  "discrepancy_refs": ["DSC-061", "DSC-078"]
+}

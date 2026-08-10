@@ -5,7 +5,7 @@
   "language": "de",
   "segment_type": "technical_data",
   "task_slug": "montageort",
-  "title": "Reichweite und Sicht der externen GPS-Antenne",
+  "title": "Kabellänge und Sicht der externen GPS-Antenne",
   "body_md": "Ermöglicht der Montageort des Hauptgeräts keinen GPS-Empfang, kann eine externe GPS-Antenne verwendet werden. Zwischen GSM-Modul und GPS-Antenne stehen 2 m Kabel zur Verfügung. Auch die externe Antenne benötigt möglichst freie Sicht zum Satelliten; sie darf laut Quelle unter Kunststoffverkleidungen des Armaturenbretts montiert werden.",
   "safety_class": "sicherheitsrelevant",
   "review_status": "entwurf",
@@ -17,6 +17,6 @@
   "next_context": "PDF-Seite 4 zeigt Anschlüsse, Anzeigen und Bedienelemente des Geräts.",
   "glossary_version": "glossary-core-v1",
   "checksum": "sha256:1197e9d4aa3c934421b2128e379831a80a43ce2ecf134959482795e1af296684",
-  "change_reason": "Der Quellabsatz wurde sprachlich bereinigt, ohne den Wert 2 m oder die Montageaussage zu verändern. Die französische Fassung macht aus der maximal verfügbaren Länge eine feste Länge; der deutsche Ausgangswert bleibt deshalb mit DSC-073 verknüpft.",
+  "change_reason": "Der Quellabsatz wurde sprachlich bereinigt, ohne den Wert 2 m oder die Montageaussage zu verändern. Bei der unabhängigen Validierung am 2026-08-10 wurde die ungenaue Überschrift „Reichweite“ zu „Kabellänge“ korrigiert. Eine zusätzliche 400-dpi-Gegenprüfung am selben Tag korrigierte die frühere Einordnung von DSC-073: Deutsch, Französisch und Schwedisch formulieren eine feste Kabellänge von 2 m, nur Englisch eine Obergrenze. Die Verknüpfung bleibt als transparenter Sprachwiderspruch bestehen; das Segment selbst folgt dem deutschen Quellwortlaut.",
   "discrepancy_refs": ["DSC-073"]
 }

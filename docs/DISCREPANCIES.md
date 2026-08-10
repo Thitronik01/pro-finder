@@ -1609,8 +1609,14 @@ belegt, nicht aus einer Zusammenfassung.
 - **Dokument:** DOC-BMA-SN044, französische Seiten 38 bis 52
 - **Befund:** Anders als die redaktionellen Sammelpositionen verändern diese Stellen die
   **Aussage**:
-  - Seite 38: „la longueur du câble … **est de 2m**" – aus der Obergrenze (DE „darf 2m
-    nicht überschreiten", EN „must not exceed 2 m") wird eine feste Kabellänge.
+  - **Korrektur 2026-08-10:** Seite 38 („la longueur du câble … **est de 2m**") wurde
+    hier zunächst fälschlich als französischer Übersetzungsfehler geführt. Die erneute
+    Bildprüfung bei 400 dpi zeigt: Auch das deutsche Original auf Seite 3 sagt, die
+    Kabellänge „**beträgt** 2m"; Schwedisch auf Seite 55 formuliert ebenfalls eine feste
+    Länge. Nur Englisch auf Seite 21 schreibt „**must not exceed 2 m**". Belegt ist damit
+    ein sprachübergreifender Formulierungswiderspruch DE/FR/SV gegen EN, kein isolierter
+    französischer Fehler. Ob 2 m die feste Länge des gelieferten Kabels oder eine zulässige
+    Obergrenze bezeichnet, muss THITRONIK im technischen Review entscheiden.
   - Seiten 39/40: „Si vous appelez **les numéros de téléphone enregistrés sur la carte
     SIM** du Pro-finder" – angerufen wird laut den anderen Fassungen die **Rufnummer der
     eingelegten SIM-Karte**; die französische Formulierung spricht im Plural von auf der
@@ -1796,8 +1802,10 @@ belegt, nicht aus einer Zusammenfassung.
   französische (korrekte Anruf-Formulierung, korrekte LED-Gelb-Beschreibung, korrektes
   Wechselblinken, FAQ-Link vorhanden, „AAlarm" erhalten) – trägt aber eigene inhaltliche
   Abweichungen:
-  - Seite 55: „kabellängden … **är 2 m**" – wie im Französischen wird aus der Obergrenze
-    der deutschen und englischen Fassung eine feste Kabellänge.
+  - **Korrektur 2026-08-10:** Seite 55 („kabellängden … **är 2 m**") stimmt in der
+    Aussageform mit Deutsch und Französisch überein. Nur die englische Seite 21 nennt eine
+    Obergrenze. Dieser Punkt ist daher kein eigener schwedischer Übersetzungsfehler, sondern
+    derselbe unter DSC-073 transparent korrigierte Sprachwiderspruch.
   - Seite 58: Die Batteriewarnung nennt nur „WiPro" – der Zusatz „all in one" fehlt wie
     im Französischen; zwei von vier Sprachteilen verkürzen die Warnung.
   - Seite 57: Der Info-Absatz ist gebrochenes Schwedisch mit **englischer** Syntax

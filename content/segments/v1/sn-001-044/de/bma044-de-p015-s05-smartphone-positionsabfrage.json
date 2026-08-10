@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P015-S05-SMARTPHONE-POSITIONSABFRAGE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "meldungen",
+  "title": "Smartphone-Positionsmeldung öffnet einen Kartenlink",
+  "body_md": "Für Smartphones kann der Pro-finder eine speziell aufbereitete Positionsmeldung senden. Ihr anklickbarer Link öffnet die aktuelle Fahrzeugposition in einer Kartenansicht; eine manuelle Übertragung der Koordinaten in ein Kartenprogramm entfällt. Die auslösende SMS-Zeichenfolge bleibt gesperrt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.6 vollständig einschließlich Ergebnisabsatz zur Positionsmeldung",
+  "prev_context": "Der Statusbericht kann bei fehlendem GPS-Empfang die letzte gültige Position senden.",
+  "next_context": "PDF-Seite 16 beschreibt die Steuerungsmöglichkeiten der beiden Ausgänge.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:72adf882d3df86ee81056520d5c779158b21a35f565adee86aa97195c9873a43",
+  "change_reason": "Der Nutzen des Kartenlinks wurde ohne Koordinaten, Kartenadresse oder SMS-Befehl übernommen. Der in der Geräte-Hilfe fehlende Positionsbefehl bleibt über BLK-005/DSC-054 gesperrt.",
+  "discrepancy_refs": ["DSC-054", "DSC-060"]
+}

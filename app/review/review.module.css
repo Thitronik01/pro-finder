@@ -84,9 +84,30 @@
   margin-top: var(--space-5);
 }
 
+.packetNotice {
+  padding: var(--space-3);
+  margin-top: var(--space-3);
+  border: 2px solid var(--color-border);
+  border-left: 6px solid var(--color-accent);
+  background: var(--color-surface);
+}
+
+.packetNotice h3,
+.packetNotice p {
+  margin-top: 0;
+}
+
+.packetNotice p {
+  max-width: 75ch;
+}
+
+.packetNotice li + li {
+  margin-top: var(--space-2);
+}
+
 .filters {
   display: grid;
-  grid-template-columns: minmax(13rem, 2fr) repeat(2, minmax(10rem, 1fr));
+  grid-template-columns: minmax(13rem, 2fr) repeat(3, minmax(10rem, 1fr));
   gap: var(--space-3);
   align-items: end;
   padding: var(--space-3);

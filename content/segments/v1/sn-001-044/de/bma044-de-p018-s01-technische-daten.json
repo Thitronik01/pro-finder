@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P018-S01-TECHNISCHE-DATEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "technische-daten",
+  "title": "Technische Daten bis Seriennummer 044",
+  "body_md": "| Merkmal | Wert dieser Quellgeneration |\n| --- | --- |\n| Spannungsversorgung | 9-30 V |\n| Stromaufnahme bei Netzsuche | ca. 37 mA |\n| Stromaufnahme im Normalbetrieb | ca. 21 mA |\n| Sendefrequenz | 900 / 1800 / 850 / 1900 MHz |\n| Anzahl Zielrufnummern | 10 |\n| Schnittstellen | NMEA (Eingang GPS) |\n| Ausgänge | 2 x 12 V / 500 mA |\n| Temperaturbereich | -10 °C bis +80 °C |\n| SIM-Format | Micro-SIM |\n\nDiese Werte gelten laut Quelle für die Generation bis Seriennummer 044. Sie weichen teilweise von anderen Dokumenten und der Generation ab Seriennummer 045 ab und dürfen vor technischem Review nicht auf andere Geräte übertragen werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Abschnitt 3.1, vollständige zweispaltige Liste der technischen Daten",
+  "prev_context": "PDF-Seite 17 endet mit der Bedeutung der UTC-Zeit in Positionsmeldungen.",
+  "next_context": "Abschnitt 3.2 enthält eine historische Konformitätsangabe.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:88adb39bdf0d5ef3bfedb6f8e5625f16807c94a9d5bfd8aa98d3bade0f4bad57",
+  "change_reason": "Alle neun Tabellenwerte wurden lesbar strukturiert und eindeutig auf die Generation bis Seriennummer 044 begrenzt. Abweichungen bei Versorgungskontext, Normalstrom, SIM-Format und Konformität bleiben über DSC-069 sichtbar. Bei der Validierung wurden die Tabellenbezeichnungen Sendefrequenz und Schnittstellen sowie die Klammerstruktur von NMEA (Eingang GPS) quellengetreu wiederhergestellt; die Werte blieben unverändert.",
+  "discrepancy_refs": ["DSC-069"]
+}

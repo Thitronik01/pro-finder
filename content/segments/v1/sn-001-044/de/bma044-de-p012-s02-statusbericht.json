@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P012-S02-STATUSBERICHT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "Inhalt des Statusberichts",
+  "body_md": "Ein Statusbericht wird laut Quelle auf Anforderung oder, abhängig von der Betriebsart, in Intervallen versendet. Er enthält Position, Geschwindigkeit und die Zustände der Ausgänge. Je nach Betriebsart kommen die Spannungen U2 bis U5 und die Temperatur in unmittelbarer Nähe des Geräts hinzu. Der auf dieser Seite genannte Abschnitt für die Anforderung ist widersprüchlich und wird daher nicht als Bedienweg übernommen.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 2.1, Absatz Statusbericht und links daneben stehendes Beispielbild",
+  "prev_context": "Die Begriffsliste erläutert mögliche Angaben in eingehenden Meldungen.",
+  "next_context": "Darunter beschreibt die Quelle die Diebstahlmeldung als stillen Alarm.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d23a2adbec498b2e04e6b2db876b535276ec3781fc34ffc840baddc46e7a1750",
+  "change_reason": "Der belegte Berichtsinhalt bleibt erhalten. Der falsche Querverweis und sämtliche Beispielwerte aus dem SMS-Bild wurden bewusst nicht in eine Handlungsanweisung umgewandelt.",
+  "discrepancy_refs": ["DSC-055", "DSC-060"]
+}

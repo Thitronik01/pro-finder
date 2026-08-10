@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P014-S01-SMS-ALARMSTEUERUNG-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "meldungen",
+  "title": "SMS-Steuerung der Alarmanlage bleibt gesperrt",
+  "body_md": "Die Quelle beschreibt das Ein- und Ausschalten der WiPro per SMS; nach einem erfolgreichen Schaltvorgang antwortet der Pro-finder mit einer Statusmeldung. Bei einer Diebstahlmeldung kann außerdem der zunächst stille Alarm um Sirene und Blinker erweitert und anschließend beendet werden. Die hierfür abgedruckten SMS-Zeichenfolgen widersprechen der Geräte-Hilfe auf der vorherigen Seite und werden deshalb nicht als Bedienweg übernommen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.2 vollständig einschließlich rotem Absatz zum stillen Alarm",
+  "prev_context": "PDF-Seite 13 schließt die Übersicht empfangener Alarmmeldungen ab.",
+  "next_context": "Abschnitt 2.3 beschreibt eine alternative Steuerung per Anruf.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:973ff84e4cc7203aa03772637ae341b2d3a121d59a302f1e221ffa42f1ef5999",
+  "change_reason": "Funktionsumfang und Statusrückmeldung bleiben sichtbar, konkrete Steuerbefehle jedoch wegen BLK-005 und DSC-054 vollständig außerhalb des übersetzbaren Inhalts.",
+  "discrepancy_refs": ["DSC-054", "DSC-063"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P009-S03-SYNTAX-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "zielrufnummern",
+  "title": "Auslassung ungeklärter Programmiermerkmale",
+  "body_md": "Die Quelle nennt besondere Kennzeichnungen für Smartphone-Nummern und providerabhängige Guthabenabfragen, erklärt die Kennzeichnung der Berechtigungsstufen aber nicht. Zudem widerspricht sie sich bei der Groß- und Kleinschreibung des Smartphone-Merkmals. Zeichenfolgen und Kennzeichen bleiben deshalb wegen BLK-005 und BLK-006 aus dem übersetzbaren Segmentbestand ausgeschlossen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.8, Definition „Smartphone Nummern“ und Schlussabsätze zu Abfragecodes",
+  "prev_context": "Die Rollenübersicht beschreibt Rechte und Rückmeldungen der vier Nummernarten.",
+  "next_context": "PDF-Seite 10 zeigt die gesperrte Struktur und Beispiele einer Programmier-SMS.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f7eabf51588f79f05a97c1260f086aa0f379d58fd218bbc43246ea2416229be5",
+  "change_reason": "Sperrvermerk zu DSC-056 und der auf Seite 9 nur angekündigten Syntax. Auch der ins Leere laufende Verweis auf eine Abfragecode-Tabelle wird nicht als belastbarer Bedienweg übernommen.",
+  "discrepancy_refs": ["DSC-056", "DSC-057"]
+}

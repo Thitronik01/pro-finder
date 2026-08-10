@@ -3,7 +3,14 @@ import 'server-only';
 import fs from 'node:fs';
 import path from 'node:path';
 import type { SupabaseClient } from '@supabase/supabase-js';
-import { loadAllTasks } from './content/content';
+import { loadAllContentSegments } from './content/segment-schema.mjs';
+import {
+  compareReviewPriority,
+  reviewPacketId,
+  reviewPriority,
+  type ReviewPacketId,
+  type ReviewPriority,
+} from './review-priority';
 
 export type ReviewItem = {
   key: string;
@@ -12,6 +19,8 @@ export type ReviewItem = {
   language: string;
   status: string;
   safetyClass: string;
+  priority: ReviewPriority;
+  packetId: ReviewPacketId | null;
   placeholder: boolean;
   href: string | null;
   sourceLabel: string;
@@ -66,20 +75,23 @@ function loadPageFiles(): PageFile[] {
 }
 
 export function loadFixtureReviewData(): ReviewData {
-  const tasks = loadAllTasks().map(({ file, task }) => ({
-    key: `${task.generation}/${task.language}/${task.slug}`,
-    title: task.title,
-    generation: task.generation,
-    language: task.language,
-    status: task.review_status,
-    safetyClass: task.safety_class,
-    placeholder: task.placeholder,
-    href: `/pro-finder/${task.generation}/${task.language}/${task.slug}`,
-    sourceLabel:
-      task.sources
-        .map((source) => `${source.doc}${source.pages ? `, S. ${source.pages}` : ''}`)
-        .join('; ') || file,
-  }));
+  const items = loadAllContentSegments()
+    .map(({ segment }) => ({
+      key: segment.segment_key,
+      title: segment.title,
+      generation: segment.serial_range,
+      language: segment.language,
+      status: segment.review_status,
+      safetyClass: segment.safety_class,
+      priority: reviewPriority(segment.safety_class),
+      packetId: reviewPacketId(segment.segment_key),
+      placeholder: segment.review_status !== 'freigegeben',
+      href: ['sn-001-044', 'sn-045-plus'].includes(segment.serial_range)
+        ? `/pro-finder/${segment.serial_range}/${segment.language}/${segment.task_slug}`
+        : null,
+      sourceLabel: `${segment.source_doc_key}, S. ${segment.source_page_start}${segment.source_page_end !== segment.source_page_start ? `-${segment.source_page_end}` : ''}`,
+    }))
+    .sort(compareReviewPriority);
 
   const pageFiles = loadPageFiles();
   const documents = pageFiles.map((document) => ({
@@ -106,10 +118,10 @@ export function loadFixtureReviewData(): ReviewData {
   return {
     mode: 'fixtures',
     projectName: 'THITRONIK Pro-finder Barrierefreiheits-Pilot',
-    items: tasks,
+    items,
     documents,
     findings,
-    translationCount: tasks.filter((item) => item.language !== 'de').length,
+    translationCount: items.filter((item) => item.language !== 'de').length,
     assetRequestCount: 0,
     error: null,
   };
@@ -167,30 +179,35 @@ export async function loadSupabaseReviewData(supabase: SupabaseClient): Promise<
     };
   });
 
-  const items = segments.map((segment) => {
-    const generation = textValue(segment, 'serial_range');
-    const language = textValue(segment, 'language');
-    const slug = textValue(segment, 'task_slug', '');
-    const document = documentsById.get(textValue(segment, 'source_document_id'));
-    const start = segment.source_page_start;
-    const end = segment.source_page_end;
-    const pages = start ? `${start}${end && end !== start ? `–${end}` : ''}` : null;
+  const items = segments
+    .map((segment) => {
+      const generation = textValue(segment, 'serial_range');
+      const language = textValue(segment, 'language');
+      const slug = textValue(segment, 'task_slug', '');
+      const safetyClass = textValue(segment, 'safety_class');
+      const document = documentsById.get(textValue(segment, 'source_document_id'));
+      const start = segment.source_page_start;
+      const end = segment.source_page_end;
+      const pages = start ? `${start}${end && end !== start ? `–${end}` : ''}` : null;
 
-    return {
-      key: textValue(segment, 'segment_key'),
-      title: textValue(segment, 'title', textValue(segment, 'segment_key')),
-      generation,
-      language,
-      status: textValue(segment, 'review_status'),
-      safetyClass: textValue(segment, 'safety_class'),
-      placeholder: textValue(segment, 'review_status') !== 'freigegeben',
-      href:
-        slug && ['sn-001-044', 'sn-045-plus'].includes(generation)
-          ? `/pro-finder/${generation}/${language}/${slug}`
-          : null,
-      sourceLabel: `${document ? textValue(document, 'doc_key') : 'Quelle nicht verknüpft'}${pages ? `, S. ${pages}` : ''}`,
-    };
-  });
+      return {
+        key: textValue(segment, 'segment_key'),
+        title: textValue(segment, 'title', textValue(segment, 'segment_key')),
+        generation,
+        language,
+        status: textValue(segment, 'review_status'),
+        safetyClass,
+        priority: reviewPriority(safetyClass),
+        packetId: reviewPacketId(textValue(segment, 'segment_key')),
+        placeholder: textValue(segment, 'review_status') !== 'freigegeben',
+        href:
+          slug && ['sn-001-044', 'sn-045-plus'].includes(generation)
+            ? `/pro-finder/${generation}/${language}/${slug}`
+            : null,
+        sourceLabel: `${document ? textValue(document, 'doc_key') : 'Quelle nicht verknüpft'}${pages ? `, S. ${pages}` : ''}`,
+      };
+    })
+    .sort(compareReviewPriority);
 
   const findings = discrepancies.map((finding) => {
     const document = documentsById.get(textValue(finding, 'document_id'));

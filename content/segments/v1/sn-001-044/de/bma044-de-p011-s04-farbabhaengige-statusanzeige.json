@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P011-S04-FARBABHAENGIGE-STATUSANZEIGE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "status-led",
+  "title": "Statusanzeige ist innerhalb der Leuchtarten nur farbunterscheidbar",
+  "body_md": "Die Quelle unterscheidet sechs blinkende und drei dauerhaft leuchtende Zustände. Innerhalb jeder dieser beiden Gruppen ist die Farbe oder Farbkombination das einzige dokumentierte Unterscheidungsmerkmal; Blinkfrequenzen oder eine alternative Textausgabe nennt sie nicht. Dauerhaft rotes Licht hat außerdem je nach Schalterstellung unterschiedliche Bedeutungen. Eine Zuordnung allein nach Blinken oder Dauerlicht ist deshalb nicht zuverlässig.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.10, neun farbige Balken; Gegenbezug zur GPS-Diagnose auf PDF-Seite 7",
+  "prev_context": "Die vorherige Tabelle linearisiert alle neun Normalzustände.",
+  "next_context": "PDF-Seite 12 beginnt mit dem Statusbericht und Beispiel-SMS-Abbildungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:29fb0973c2eecc58aacacb89cf6bf5def7193946a2c8fcac9dd9984dd98407a2",
+  "change_reason": "Die am Gerät verbleibende Barriere wird als eigenständige Warnung erfasst. Farbe und Leuchtart wurden bei 300 dpi gegen alle neun Balken geprüft; die abweichende Bedeutung von Dauerrot und Dauergrün wird nicht geglättet.",
+  "discrepancy_refs": ["DSC-059"]
+}

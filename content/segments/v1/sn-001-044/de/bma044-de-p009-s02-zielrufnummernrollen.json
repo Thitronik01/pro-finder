@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P009-S02-ZIELRUFNUMMERNROLLEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "zielrufnummern",
+  "title": "Rollen der Zielrufnummern",
+  "body_md": "| Rolle | Bedeutung laut Quelle |\n| --- | --- |\n| Masternummer | erste gespeicherte Zielrufnummer; kann ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren |\n| autorisierte Nummer | darf Ausgänge per SMS steuern und Statusberichte anfordern |\n| nicht autorisierte Nummer | erhält Statusmeldungen, hat aber keinen Zugriff auf Gerätefunktionen |\n| Smartphone-Nummer | kann zusätzlich die Fahrzeugposition als Kartenlink erhalten |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.8, zweispaltige Übersicht von Masternummer, autorisierten, nicht autorisierten und Smartphone-Nummern",
+  "prev_context": "Oberhalb der Übersicht stehen Inbetriebnahmefolge und Speicherkapazität.",
+  "next_context": "Unterhalb folgen Hinweise zu providerabhängigen Guthaben-Abfragecodes und ein FAQ-Verweis.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b5cde565f213201080c752393ab0d8fa9363a945b29ae37e0fcc78181c441ae6",
+  "change_reason": "Die räumlich zweispaltige Rollenübersicht wurde als lineare Tabelle extrahiert. Die Quelle erklärt die Berechtigungsrollen, aber nicht ihre sichere Syntax; diese bleibt wegen BLK-006 ausgeschlossen.",
+  "discrepancy_refs": ["DSC-056", "DSC-065"]
+}

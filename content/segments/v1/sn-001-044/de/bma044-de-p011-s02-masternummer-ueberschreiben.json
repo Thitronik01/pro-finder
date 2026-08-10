@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P011-S02-MASTERNUMMER-UEBERSCHREIBEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Masternummer kann den Speicher aus der Ferne überschreiben",
+  "body_md": "Die Quelle erklärt, dass die Masternummer den Zielrufnummernspeicher ohne Betätigung des Betriebsartenschalters überschreiben kann. Dazu ist eine Programmier-SMS nach Abschnitt 1.8 vorgesehen; ihre Zeichenfolge bleibt wegen BLK-005 und der ungeklärten Berechtigungsregel aus dem übersetzbaren Inhalt ausgeschlossen. Eine zusätzliche Bestätigung oder Begrenzung nennt die Quelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.9, rote Absätze unter dem physischen Löschweg",
+  "prev_context": "Der vorherige Ablauf löscht den Speicher über Schalterstellung E am Gerät.",
+  "next_context": "Abschnitt 1.10 listet danach neun Zustände der Status-LED.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:02d03423f03391525763388c7332233a8f002b63804545f6656ebcc99cbcaf0f",
+  "change_reason": "Die sicherheitskritische Fernüberschreibbarkeit wird als Warnung erhalten, ohne die gesperrte Programmier-SMS zu reproduzieren. Die nicht erklärte Berechtigungsregel bleibt über DSC-056 offen.",
+  "discrepancy_refs": ["DSC-056", "DSC-063"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P012-S04-SPANNUNGSWARNUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Spannungswarnung und Batterieschutz",
+  "body_md": "Diese Funktion gilt laut Quelle nicht in Betriebsart B. Sinkt die Versorgungsspannung dauerhaft unter 11,2 V, wechselt der Pro-finder zum Schutz der Batterie in den Bereitschaftsbetrieb und sendet eine entsprechende Meldung. Erst bei einer Versorgungsspannung über 12,5 V kehrt das Gerät in den Normalbetrieb zurück.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 2.1, Absatz Spannungswarnung am Seitenende",
+  "prev_context": "Die Diebstahlmeldung wird als stiller Alarm mit zusätzlichem Anruf beschrieben.",
+  "next_context": "PDF-Seite 13 setzt Abschnitt 2.1 mit weiteren Meldungsarten fort.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ae2b7d82da0585b9dbd54bf42eb27176a4ca5bbdd8e9aa8cde818a2410a55335",
+  "change_reason": "Betriebsartenausnahme und beide belegten Spannungsschwellen wurden in ein eigenes Warnsegment überführt. Beispielkoordinaten und Guthabenwerte aus der Abbildung wurden ausgelassen.",
+  "discrepancy_refs": ["DSC-060", "DSC-063"]
+}

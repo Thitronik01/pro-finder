@@ -6,7 +6,7 @@
   "segment_type": "instruction",
   "task_slug": "anschluesse",
   "title": "Optionale GPS-Antenne anschließen und Satellitendaten speichern",
-  "body_md": "Machen Sie den Pro-finder vor dem Anschluss der optionalen GPS-Antenne spannungsfrei und ziehen Sie den Hauptkabelbaum ab. Stecken Sie den GPS-Stecker in den vierpoligen Antennenanschluss und verbinden Sie danach den Hauptkabelbaum wieder. Nach der Installation muss die Betriebsspannung mindestens fünf Minuten über 13,5 V liegen, damit aktuelle Satellitendaten empfangen und gespeichert werden. Dazu verlangt die Quelle, das Fahrzeug zu starten und Hallen sowie Überdachungen für den GPS-Empfang zu verlassen.",
+  "body_md": "Machen Sie den Pro-finder vor dem Anschluss der optionalen GPS-Antenne spannungsfrei und ziehen Sie den Hauptkabelbaum ab. Stecken Sie den GPS-Stecker in den vierpoligen Antennenanschluss und verbinden Sie danach den Hauptkabelbaum wieder. Nach der Installation muss die Betriebsspannung mindestens fünf Minuten über 13,5 V liegen, damit aktuelle Satellitendaten empfangen und gespeichert werden. Ohne diese Speicherung ist laut Quelle keine genaue Positionsbestimmung sichergestellt. Dazu verlangt die Quelle, das Fahrzeug zu starten und Hallen sowie Überdachungen für den GPS-Empfang zu verlassen.",
   "safety_class": "sicherheitskritisch",
   "review_status": "entwurf",
   "source_doc_key": "DOC-BMA-SN044",
@@ -16,7 +16,7 @@
   "prev_context": "Abschnitt 1.6 beschreibt Ausrichtung, Klebefläche und Montageort der Antenne.",
   "next_context": "PDF-Seite 7 setzt Abschnitt 1.7 mit der GPS-Diagnose in Betriebsart F fort.",
   "glossary_version": "glossary-core-v1",
-  "checksum": "sha256:97a8bfbb3028a901c1ded8566d788efefd0f84d46de77f776f0220deaa058762",
-  "change_reason": "Quellennahe Schrittfolge mit allen dokumentierten Schwellen. Die Forderung, das Fahrzeug zu starten, wird nicht als allgemein sichere Werkstattanweisung freigegeben; das Segment bleibt sicherheitskritischer Entwurf.",
+  "checksum": "sha256:3155a785511490193cbb84684fb2de2f4234b7ae9305b63a33b8f359721708e9",
+  "change_reason": "Quellennahe Schrittfolge mit allen dokumentierten Schwellen. Bei der unabhängigen Validierung am 2026-08-10 wurde die zuvor ausgelassene Folge einer fehlenden Satellitendatenspeicherung ergänzt. Die Forderung, das Fahrzeug zu starten, wird nicht als allgemein sichere Werkstattanweisung freigegeben; das Segment bleibt sicherheitskritischer Entwurf.",
   "discrepancy_refs": ["DSC-052", "DSC-063", "DSC-065"]
 }
