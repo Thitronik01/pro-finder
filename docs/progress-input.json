@@ -10,8 +10,8 @@
       "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Region; alle Aufgaben bleiben entwurf. 56 versionierte Segmente aus DOC-BMA-SN044 Seiten 3-18 sind quellenvalidiert; keine Seite steht mehr auf extracted. Seit 2026-08-11 sind zudem alle 41 sicherheitskritischen Segmente in den fuenf entscheidungsreifen Pruefpaketen P0-01 bis P0-05 gebuendelt. Jedes Paket nennt Quelle, Gegenquelle oder Luecke, DSC-/Rueckfragenbezug und benoetigte THITRONIK-Entscheidung. BLK-004/005/006 und Rueckfragen 2, 3, 6, 14, 15, 16 und 17 bleiben eingehalten: keine SMS-Zeichenfolgen, Koordinaten, Kartenlinks, Beispielwerte, ungeklaerten Berechtigungszeichen, feste PIN, historischen Kontaktdaten oder widerspruechlichen Werte werden als freigegebener Bedienweg veroeffentlicht. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review und Freigaben fehlen."
     },
     "card": {
-      "percent": 30,
-      "note": "Anforderungen, SVG-Entwürfe v0.1, Print-Spec und Testplan als Entwurf; alle physischen Tests offen, Braille nur als ungeprüfte Zone."
+      "percent": 42,
+      "note": "Anforderungen, Basis-SVGs, Print-Spec und Testplan stehen als Entwurf. Sieben am 2026-08-11 eingereichte Kartenvisualisierungen sind unveraendert mit SHA-256 als Konzeptreferenzen archiviert und in Vorderseite, Rueckseite, Praesentation und Detailstudien eingeordnet. Eine getrennte deutsche Beispielvariante fuer Vorder- und Rueckseite liegt als masshaltiges ID-1-SVG samt gerenderten PNG-Vorschauen vor; die bisherigen Basiskarten wurden nicht ueberschrieben. Der Preflight prueft jetzt vier SVGs sowie Integritaet und Bildmasse aller sieben Referenzen. QR-Code, URL, NFC-Ziel, Supportdaten, offizielles Logo-/Produktbild, Kerbengeometrie, Material, Braille und alle physischen Tests bleiben offen; Braille erscheint nur als ungepruefte Zone ohne Punktgeometrie."
     },
     "application": {
       "percent": 66,
@@ -22,12 +22,12 @@
       "note": "Zwei geschuetzte englische Vertical Slices umfassen Aufgaben 01 bis 10 ab SN-045. Alle zehn Dateien sind belegte KI-Uebersetzungsentwuerfe, placeholder false und review_status entwurf. tokens:check vergleicht alle zehn Paare erfolgreich; ein Unit-Test sichert zusaetzlich die task-level Quellenparitaet. SMS-Befehle, Berechtigungszeichen, Smartphone-Kennzeichen, Beispielnummern, Koordinaten, Kartenadressen und unbestaetigte Supportkontakte bleiben ausgelassen. EN-01 und EN-02 bereiten den unabhaengigen englischen Sprachreview vor. Aufgaben 11 bis 14 und beide realen Sprachreviews bleiben offen."
     },
     "qa": {
-      "percent": 47,
-      "note": "npm run check, der Produktions-Build mit 47 Seiten und 54 Playwright-/axe-Tests sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht zehn DE/EN-Aufgabenpaare; ein neuer Unit-Test prueft die task-level Dokument-/Seitenparitaet aller zehn Paare. Der Pin-1-Regressionstest bleibt aktiv. Browserpruefungen sichern zehn englische Entwurfsaufgaben, Sprachmetadaten, Quellenanzeige, Tabellen und axe auf allen zehn englischen Taskrouten in Desktop- und Mobilprofilen. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix bleibt offen."
+      "percent": 48,
+      "note": "npm run check, der Produktions-Build mit 47 Seiten und 54 Playwright-/axe-Tests sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht zehn DE/EN-Aufgabenpaare; ein Unit-Test prueft die task-level Dokument-/Seitenparitaet aller zehn Paare. Der Pin-1-Regressionstest bleibt aktiv. Der Karten-Preflight prueft vier SVGs auf Format, Mindestschrift, Entwurfsmarker und verbotene Scheininhalte sowie sieben Konzeptbilder auf Pixelmasse und SHA-256. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen."
     },
     "handoff": {
-      "percent": 76,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. EN-01 und EN-02 dokumentieren fuer die englischen Aufgaben 01 bis 10 Quelldateien, Reviewgrenzen, Terminologie, geschuetzte Token, Reviewer-Checklisten, Entscheidungsprotokolle und Exit-Kriterien, simulieren aber keine Freigabe. Staging-Abnahme, realer Fachreview und beide unabhaengigen englischen Sprachreviews bleiben offen."
+      "percent": 77,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. EN-01 und EN-02 dokumentieren fuer die englischen Aufgaben 01 bis 10 Quelldateien und Reviewgrenzen. Das Karten-Konzept-README dokumentiert jetzt Herkunft, Einordnung, Integritaet, bewusste Nichtuebernahmen und die Ableitung der deutschen Beispielvariante. Staging-Abnahme, realer Fachreview, beide unabhaengigen englischen Sprachreviews und alle Produktionsentscheidungen der Karte bleiben offen."
     }
   },
   "blockers": [
@@ -97,5 +97,5 @@
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht."
   ],
-  "next_action": "Die unabhaengigen englischen Sprachreviews fuer EN-01 und EN-02 organisatorisch einholen; bis dahin keine der Aufgaben 01 bis 10 hoeherstufen. Parallel den dritten geschuetzten englischen Vertical Slice fuer Aufgaben 11 bis 14 ab SN-045 vorbereiten: weiterhin aus dem deutschen Master, mit tokens:check und ohne SMS-Befehle, Beispielwerte, ungeklaerte Berechtigungsregeln oder unbestaetigte Supportwege."
+  "next_action": "Die deutsche Karten-Beispielvariante mit THITRONIK abstimmen und dafuer die freigegebenen druckfaehigen Logo-/Produktassets sowie Entscheidungen zu finaler URL, Supportdaten und Kerbengeometrie einholen; bis dahin weder echten QR-Code noch Braillepunkte oder Supportkontakte einsetzen. Parallel die unabhaengigen Sprachreviews EN-01/EN-02 und den dritten geschuetzten englischen Vertical Slice fuer Aufgaben 11 bis 14 weiterfuehren."
 }

@@ -1,9 +1,27 @@
 # Handoff
 
-Stand: 2026-08-11 (einundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-11 (zweiundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
+
+### Nutzerentwürfe eingeordnet und deutsche Kartenvariante erstellt
+
+- Sieben vom Projektauftraggeber bereitgestellte Kartenvisualisierungen liegen unverändert
+  unter `design/card/concepts/user-drafts-2026-08-11/`. Das README ordnet sie als
+  Vorderseite, Rückseite, Präsentationsbild, Kerbenstudie sowie QR-/NFC-Details ein und
+  dokumentiert Maße, SHA-256 und die byteidentische Dublette 05/07.
+- `card-front-de-example.svg` und `card-back-de-example.svg` übertragen die stärkste
+  Richtung aus Vorderseite 06, Rückseite 02 sowie den Details 01, 04 und 05 in das
+  maßhaltige ID-1-System. Die Basiskarten blieben unverändert. Gerenderte PNG-Vorschauen
+  liegen unter `design/card/previews/`.
+- Die verbindliche Schreibweise wurde normalisiert: Die Nutzerbilder zeigen
+  `PRO-FINDER`, der Projektentwurf verwendet `Pro-finder`. Illustrative QR-Muster und
+  Braillepunkte wurden nicht übernommen. URL, NFC-Ziel, Supportdaten, offizielles
+  Logo-/Produktbild und Produktionsparameter bleiben als offene Gates sichtbar.
+- Der erste Rendercheck fand zwei Überläufe bei Kurzadresse und NFC-Handlungszeile; beide
+  wurden im SVG korrigiert. Der Karten-Preflight prüft nun vier SVGs sowie Integrität und
+  Maße aller sieben Rasterreferenzen.
 
 ### Geschützter englischer Vertical Slice für Aufgaben 06 bis 10
 
@@ -321,6 +339,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - Alle technischen und sicherheitskritischen Inhalte stehen auf `entwurf`; es gibt keine
   technische Freigabe und keinen muttersprachlichen Review der nichtdeutschen Fassungen.
 - Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
+- Die deutsche Kartenvariante ist nur ein visuell und automatisch geprüfter Entwurf. Es
+  fehlen weiterhin ein freigegebenes druckfähiges THITRONIK-Logo und Produktbild, die
+  finale URL, Supportdaten, QR-Code, NFC-Inlayentscheidung, Kerbengeometrie,
+  Braille-Dienstleister, Andruck und Tests mit betroffenen Personen.
 
 ## Externe/menschliche Blocker
 
@@ -362,6 +384,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   Quellenparitäts-/Token-/E2E-Abdeckung sowie Fortschritts- und Übergabedokumentation.
   Deutsche Master, Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
   Supabase-Migrationen blieben unverändert.
+- **Karten-Nachtrag:** sieben unveränderte Nutzerentwürfe samt Integritätsmanifest, zwei
+  deutsche SVG-Beispiele, zwei gerenderte Vorschauen, erweiterter Karten-Preflight sowie
+  aktualisierte Anforderungen, Druckspezifikation und Inhalts-Quellen-Zuordnung. Keine
+  technische Kartenfunktion und kein Produktionswert wurde freigegeben.
 - **Genutzte Skills:** PDF aus `openai-primary-runtime` 26.805.11740 für Render- und
   Sichtprüfung der Seiten 3–7 und 12–17 sowie das GitHub-Plugin 0.1.8-2841cf9749ae zum
   Anlegen des Draft-PR und Überwachen der CI. Nutzung und verfügbare beziehungsweise
@@ -386,15 +412,17 @@ Resume from:
 Englischer Pilot ab SN-045 mit Aufgaben 01 bis 10 als belegte KI-Uebersetzungsentwuerfe;
 tokens:check vergleicht alle zehn DE/EN-Paare und ein Unit-Test sichert die task-level
 Quellenparitaet. EN-01 und EN-02 sind fuer unabhaengige Sprachreviews vorbereitet, aber
-unbeantwortet. Kein technischer oder sprachlicher Inhalt ist freigegeben; BLK-005/006 und
-sechs aktive Blocker bleiben offen.
+unbeantwortet. Sieben Kartenvisualisierungen sind als Konzeptreferenzen eingeordnet; eine
+deutsche Vorder-/Rueckseitenvariante liegt als SVG-Entwurf vor. Kein technischer,
+sprachlicher oder physischer Inhalt ist freigegeben; BLK-005/006 und sechs aktive Blocker
+bleiben offen.
 
 First action:
-Die unabhaengigen englischen Sprachreviews fuer EN-01 und EN-02 organisatorisch einholen;
-Aufgaben 01 bis 10 bis dahin nicht hoeherstufen. Parallel den dritten geschuetzten Vertical
-Slice fuer Aufgaben 11 bis 14 aus dem deutschen Master ab SN-045 vorbereiten. BLK-005/006
-strikt erhalten und keine SMS-Befehle, Beispielwerte oder unbestaetigten Supportwege
-uebernehmen.
+Die deutsche Karten-Beispielvariante mit THITRONIK abstimmen und freigegebene
+druckfaehige Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und
+Kerbengeometrie einholen. Bis dahin keinen echten QR-Code, keine Braillepunkte und keine
+Supportkontakte einsetzen. Parallel EN-01/EN-02 und den dritten geschuetzten englischen
+Slice 11 bis 14 weiterfuehren.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

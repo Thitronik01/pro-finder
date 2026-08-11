@@ -1,9 +1,11 @@
 # Inhalts-Quellen-Zuordnung: Setup-Karte „THITRONIK Pro-finder"
 
-Status: **Entwurf (v0.2-draft)** · Stand: 2026-08-06
+Status: **Entwurf (v0.3-draft)** · Stand: 2026-08-11
 
-Jedes Inhaltselement der Karte (Vorder- und Rückseite, Dateien `card-front.svg` und
-`card-back.svg`) ist hier mit Quelle und Status erfasst. **Kein Element ohne Quellenzeile.**
+Jedes Inhaltselement der Kartenentwürfe (Basisdateien `card-front.svg` und
+`card-back.svg` sowie deutsche Beispielvariante `card-front-de-example.svg` und
+`card-back-de-example.svg`) ist hier mit Quelle und Status erfasst. **Kein Element ohne
+Quellenzeile.**
 
 Statuswerte:
 
@@ -26,6 +28,24 @@ Statuswerte:
 | Fühlbare Kerbe (taktile Orientierung) | gekappte Ecke oben rechts (vorn) / oben links (hinten); keine interne Erläuterung auf der Druckfläche         | `CARD_REQUIREMENTS.md` Abschnitt 5; Geometrie Entwurf, Validierung über Testplan T1                                                                                                                     | zu bestätigen (Nutzertest offen)                                                   |
 | Taktile QR-/NFC-Zonenmarkierung       | durchgezogene Rahmen um QR-Zone (vorn) und NFC-Zone (hinten); keine Produktionsannotation auf der Druckfläche | `CARD_REQUIREMENTS.md` Abschnitt 5; `card-print-spec.md` Abschnitt 4; Validierung über Testplan T2                                                                                                      | zu bestätigen (Nutzertest offen)                                                   |
 | Entwurfsstatus                        | „ENTWURF“ sowie maschinenlesbar `data-card-status="draft"`; keine kleine Revisionszeile auf der Druckfläche   | dieses Entwurfspaket (`design/card/`, v0.2-draft)                                                                                                                                                       | belegt (projektintern)                                                             |
+
+## Konzeptreferenzen vom 2026-08-11
+
+Die sieben vom Projektauftraggeber bereitgestellten Rasterentwürfe liegen unverändert
+unter `concepts/user-drafts-2026-08-11/`. Ihr README dokumentiert Dateiintegrität,
+Einordnung und bewusste Nichtübernahmen. Für die deutsche Beispielvariante wurden daraus
+nur Gestaltungsprinzipien übernommen:
+
+| Prinzip                           | Konzeptreferenz                                  | Umsetzung im SVG                                       | Status                                      |
+| --------------------------------- | ------------------------------------------------ | ------------------------------------------------------ | ------------------------------------------- |
+| klare Zweiteilung der Vorderseite | `06-front-layout.png`                            | Produkt-/Handlungsbereich links, QR-Platzhalter rechts | Gestaltungsentwurf                          |
+| NFC als Hauptaktion der Rückseite | `02-back-nfc-support.png`, `05-nfc-detail-a.png` | große, textlich redundante NFC-Zone                    | Gestaltungsentwurf; Ziel und Hardware offen |
+| sichtbare Orientierungskerbe      | `01-orientation-notch.png`                       | gekappte Kartenecke in der Kontur                      | Geometrie und Taktilität zu bestätigen      |
+| reservierte Braillezone           | Bilder 2, 3 und 6                                | schraffurfreier Platzhalter ohne Punkte                | blockierend offen beim Dienstleister        |
+| QR-Aktion plus Kurzadresse        | `04-qr-detail.png`, `06-front-layout.png`        | nicht scannbarer Platzhalter plus URL-Entwurf          | finales Ziel zu bestätigen                  |
+
+Die dargestellten THITRONIK-Logos und Produktbilder wurden nicht als Produktionsassets
+übernommen. Dafür fehlen im Repository freigegebene, druckfähige Originaldateien.
 
 ## Anmerkungen
 

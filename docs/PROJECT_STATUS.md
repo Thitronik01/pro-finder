@@ -5,18 +5,18 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 58.7 %**
+**Gesamtfortschritt: 60.1 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
 | Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
-| Setup-Karte                              | 10 %    | 30 %        |
+| Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 66 %        |
 | Übersetzungspilot                        | 10 %    | 60 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 47 %        |
-| Staging und Übergabe                     | 5 %     | 76 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 48 %        |
+| Staging und Übergabe                     | 5 %     | 77 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -27,7 +27,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 und EN-02 organisatorisch einholen; bis dahin keine der Aufgaben 01 bis 10 hoeherstufen. Parallel den dritten geschuetzten englischen Vertical Slice fuer Aufgaben 11 bis 14 ab SN-045 vorbereiten: weiterhin aus dem deutschen Master, mit tokens:check und ohne SMS-Befehle, Beispielwerte, ungeklaerte Berechtigungsregeln oder unbestaetigte Supportwege.
+Offene Blocker: 6 · Nächste Aktion: Die deutsche Karten-Beispielvariante mit THITRONIK abstimmen und dafuer die freigegebenen druckfaehigen Logo-/Produktassets sowie Entscheidungen zu finaler URL, Supportdaten und Kerbengeometrie einholen; bis dahin weder echten QR-Code noch Braillepunkte oder Supportkontakte einsetzen. Parallel die unabhaengigen Sprachreviews EN-01/EN-02 und den dritten geschuetzten englischen Vertical Slice fuer Aufgaben 11 bis 14 weiterfuehren.
 
 <!-- PROGRESS:END -->
 
@@ -285,7 +285,12 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   Hintergrundfarbe;
 - Produktions-Build lokal erfolgreich;
 - Referenzklon sauber und Push-URL `DISABLED`;
-- Setup-Karten-Lieferdateien als klar markierte Entwürfe vorhanden;
+- Setup-Karten-Lieferdateien als klar markierte Entwürfe vorhanden. Sieben am 2026-08-11
+  eingereichte Visualisierungen sind unverändert mit SHA-256 als Konzeptreferenzen
+  archiviert und fachlich eingeordnet. Eine getrennte deutsche Vorder-/Rückseitenvariante
+  liegt als maßhaltiges ID-1-SVG samt gerenderten PNG-Vorschauen vor; die Basiskarten
+  blieben unverändert. Der Preflight prüft vier SVGs und die Integrität aller sieben
+  Referenzbilder;
 - Supabase CLI und Client-Bibliotheken exakt gepinnt;
 - **Supabase-Härtung in CI gegen eine echte Datenbank bewiesen.** Der Job
   `Supabase reset and RLS tests` ist grün: `supabase start`, `db reset` (Schema, Migrationen
@@ -332,7 +337,9 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   bewahrte die abweichenden Strom- und Konformitätsangaben. Das ersetzt trotzdem keinen
   fachlichen Review: sämtliche technischen Werte sind weiterhin unbestätigt;
 - Netlify Preview, Zugriffsschutz und internes Staging: nicht verbunden/nicht abgenommen;
-- Karten-Andruck, QR, NFC, Braille, Reflexion und Tests mit betroffenen Personen: offen;
+- Karten-Andruck, finaler QR-Code, bestätigte URL, NFC-Inlay und -Ziel, Supportdaten,
+  druckfähige Logo-/Produktassets, Kerbengeometrie, Braille, Reflexion und Tests mit
+  betroffenen Personen: offen. Die deutsche Beispielvariante ist keine Produktionsfreigabe;
 - englischer Pilot: Aufgaben 01 bis 10 ab SN-045 als belegte KI-Übersetzungsentwürfe,
   geschützte Token und task-level Dokument-/Seitenmengen maschinell abgeglichen; EN-01
   und EN-02 sind vorbereitet, aber ohne unabhängigen Sprachreview;

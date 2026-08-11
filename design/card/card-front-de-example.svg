@@ -1,0 +1,103 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="85.6mm"
+  height="53.98mm"
+  viewBox="0 0 85.6 53.98"
+  data-card-status="draft"
+  data-card-language="de"
+  data-min-font-size-mm="2.25"
+>
+  <title>THITRONIK Pro-finder Setup-Karte – deutsche Vorderseite (Beispielentwurf)</title>
+  <desc>
+    Maßhaltiger deutscher Beispielentwurf im Format ISO/IEC 7810 ID-1. Links stehen
+    THITRONIK, Pro-finder und der Hinweis auf Anleitung und Einrichtung. Rechts befindet
+    sich eine klar als nicht scannbar gekennzeichnete QR-Platzhalterfläche. Darunter steht
+    die noch nicht freigegebene Kurzadresse. Am unteren Rand ist eine Braillefläche ohne
+    Punktgeometrie reserviert. Die gekappte Ecke oben rechts ist als vorgesehene taktile
+    Orientierung dargestellt. Der Entwurf ist nicht für die Produktion freigegeben.
+  </desc>
+
+  <g font-family="Arial, Helvetica, 'DejaVu Sans', sans-serif">
+    <path
+      d="M 3.38 0.2 H 78.52 L 85.4 7.08 V 50.6 A 3.18 3.18 0 0 1 82.22 53.78 H 3.38 A 3.18 3.18 0 0 1 0.2 50.6 V 3.38 A 3.18 3.18 0 0 1 3.38 0.2 Z"
+      fill="#ffffff"
+      stroke="#102a4c"
+      stroke-width="0.4"
+    />
+
+    <rect x="3.6" y="3.4" width="1.2" height="6.2" fill="#b01822" />
+    <text x="6.3" y="8.2" fill="#102a4c" font-size="3.4" font-weight="700">THITRONIK</text>
+    <text x="81" y="8.2" fill="#1a1a1a" font-size="2.25" font-weight="700" text-anchor="end">
+      ENTWURF
+    </text>
+
+    <text x="4" y="17.2" fill="#102a4c" font-size="6.2" font-weight="700">Pro-finder</text>
+    <text x="4" y="22" fill="#1a1a1a" font-size="2.85" font-weight="700">
+      ANLEITUNG &amp; EINRICHTUNG
+    </text>
+
+    <rect x="5.2" y="27" width="7" height="11.8" rx="0.8" fill="none" stroke="#102a4c" stroke-width="0.65" />
+    <rect x="6" y="28.2" width="5.4" height="8.4" fill="none" stroke="#102a4c" stroke-width="0.35" />
+    <circle cx="8.7" cy="37.6" r="0.45" fill="#102a4c" />
+    <text x="15" y="31.6" fill="#1a1a1a" font-size="3" font-weight="700">QR-Code</text>
+    <text x="15" y="35.5" fill="#1a1a1a" font-size="3" font-weight="700">scannen</text>
+    <text x="15" y="39.2" fill="#1a1a1a" font-size="2.25">öffnet die digitale Anleitung</text>
+
+    <rect
+      x="56.1"
+      y="10.5"
+      width="25.4"
+      height="25.4"
+      rx="1.2"
+      data-placeholder="qr"
+      fill="#ffffff"
+      stroke="#102a4c"
+      stroke-width="0.7"
+    />
+    <rect
+      x="58.1"
+      y="12.5"
+      width="21.4"
+      height="21.4"
+      fill="#ffffff"
+      stroke="#102a4c"
+      stroke-width="0.35"
+      stroke-dasharray="1.2 1"
+    />
+    <text x="68.8" y="20.8" fill="#102a4c" font-size="2.8" font-weight="700" text-anchor="middle">
+      QR-FLÄCHE
+    </text>
+    <text x="68.8" y="24.8" fill="#102a4c" font-size="2.4" font-weight="700" text-anchor="middle">
+      PLATZHALTER
+    </text>
+    <text x="68.8" y="29" fill="#1a1a1a" font-size="2.25" text-anchor="middle">
+      NICHT SCANNBAR
+    </text>
+
+    <text x="68.8" y="38.4" fill="#1a1a1a" font-size="2.25" font-weight="700" text-anchor="middle">
+      URL-ENTWURF:
+    </text>
+    <text x="68.8" y="41.2" fill="#102a4c" font-size="2.25" font-weight="700" text-anchor="middle">
+      thitronik.de/
+    </text>
+    <text x="68.8" y="44" fill="#102a4c" font-size="2.25" font-weight="700" text-anchor="middle">
+      pro-finder/start
+    </text>
+
+    <rect
+      x="4"
+      y="46"
+      width="77.6"
+      height="5"
+      data-placeholder="braille"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.35"
+      stroke-dasharray="1.4 1.1"
+    />
+    <text x="42.8" y="49.35" fill="#1a1a1a" font-size="2.25" font-weight="700" text-anchor="middle">
+      BRAILLE-FLÄCHE · PLATZHALTER
+    </text>
+  </g>
+</svg>

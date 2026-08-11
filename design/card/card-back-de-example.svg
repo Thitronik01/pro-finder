@@ -1,0 +1,70 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="85.6mm"
+  height="53.98mm"
+  viewBox="0 0 85.6 53.98"
+  data-card-status="draft"
+  data-card-language="de"
+  data-min-font-size-mm="2.25"
+>
+  <title>THITRONIK Pro-finder Setup-Karte – deutsche Rückseite (Beispielentwurf)</title>
+  <desc>
+    Maßhaltiger deutscher Beispielentwurf der Rückseite im Format ISO/IEC 7810 ID-1.
+    Die gekappte Ecke liegt in Rückseitenansicht oben links. Eine große umrahmte NFC-Zone
+    enthält Symbol und Text. Darunter folgen eine reservierte Braillefläche ohne
+    Punktgeometrie und offene Platzhalter für Supporttelefon und E-Mail. NFC-Ziel,
+    Supportdaten und taktile Produktionsparameter sind noch nicht freigegeben.
+  </desc>
+
+  <g font-family="Arial, Helvetica, 'DejaVu Sans', sans-serif">
+    <path
+      d="M 7.08 0.2 H 82.22 A 3.18 3.18 0 0 1 85.4 3.38 V 50.6 A 3.18 3.18 0 0 1 82.22 53.78 H 3.38 A 3.18 3.18 0 0 1 0.2 50.6 V 7.08 Z"
+      fill="#ffffff"
+      stroke="#102a4c"
+      stroke-width="0.4"
+    />
+
+    <rect x="9" y="3.3" width="1.2" height="6" fill="#b01822" />
+    <text x="11.7" y="8.1" fill="#102a4c" font-size="3.3" font-weight="700">
+      THITRONIK Pro-finder
+    </text>
+    <text x="81" y="8.1" fill="#1a1a1a" font-size="2.25" font-weight="700" text-anchor="end">
+      ENTWURF
+    </text>
+
+    <rect x="4" y="11.4" width="77.6" height="20.4" rx="1.8" fill="#ffffff" stroke="#102a4c" stroke-width="0.7" />
+    <circle cx="17" cy="21.5" r="1" fill="#102a4c" />
+    <path d="M 19.3 18.3 Q 24.3 21.5 19.3 24.7" fill="none" stroke="#102a4c" stroke-width="0.7" />
+    <path d="M 21.8 15.8 Q 30.6 21.5 21.8 27.2" fill="none" stroke="#102a4c" stroke-width="0.7" />
+    <path d="M 14.7 18.3 Q 9.7 21.5 14.7 24.7" fill="none" stroke="#102a4c" stroke-width="0.7" />
+    <path d="M 12.2 15.8 Q 3.4 21.5 12.2 27.2" fill="none" stroke="#102a4c" stroke-width="0.7" />
+    <text x="35" y="17.7" fill="#102a4c" font-size="3.05" font-weight="700">
+      NFC · SMARTPHONE
+    </text>
+    <text x="35" y="21.3" fill="#102a4c" font-size="3.05" font-weight="700">HIER ANHALTEN</text>
+    <text x="35" y="25.4" fill="#1a1a1a" font-size="2.55" font-weight="700">
+      öffnet Anleitung &amp; Einrichtung
+    </text>
+    <text x="35" y="29.2" fill="#1a1a1a" font-size="2.25">NFC-ZIEL NOCH OFFEN</text>
+
+    <rect
+      x="4"
+      y="34"
+      width="77.6"
+      height="6.3"
+      data-placeholder="braille"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.35"
+      stroke-dasharray="1.4 1.1"
+    />
+    <text x="42.8" y="38.1" fill="#1a1a1a" font-size="2.25" font-weight="700" text-anchor="middle">
+      BRAILLE-FLÄCHE · PLATZHALTER
+    </text>
+
+    <text x="4" y="44.7" fill="#102a4c" font-size="2.65" font-weight="700">THITRONIK SUPPORT</text>
+    <text x="4" y="48.4" fill="#1a1a1a" font-size="2.25" font-weight="700">Telefon: [TELEFON OFFEN]</text>
+    <text x="46" y="48.4" fill="#1a1a1a" font-size="2.25" font-weight="700">E-Mail: [E-MAIL OFFEN]</text>
+  </g>
+</svg>

@@ -1,10 +1,14 @@
 # Barrierefreiheits-Testplan: Setup-Karte „THITRONIK Pro-finder"
 
-Status: **Entwurf (v0.2-draft)** · Stand: 2026-08-06
+Status: **Entwurf (v0.3-draft)** · Stand: 2026-08-11
 
 > **Alle Tests in diesem Plan sind offen. Es liegen keine Ergebnisse vor, und es
 > werden hier keine Ergebnisse vorweggenommen oder erfunden.** Getestet wird an
 > physischen Kartenmustern, nicht an Bildschirmentwürfen.
+
+Die am 2026-08-11 ergänzten Dateien `card-front-de-example.svg` und
+`card-back-de-example.svg` sind reine Bildschirm- und Layoutentwürfe. Ihr automatisierter
+Preflight und die gerenderten Vorschauen schließen keinen Test dieses Plans ab.
 
 ## 1. Testziele
 

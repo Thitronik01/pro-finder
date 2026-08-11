@@ -1,6 +1,6 @@
 # Anforderungen: Barrierefreie Setup-Karte „THITRONIK Pro-finder"
 
-Status: Entwurf (v0.1-draft) · Stand: 2026-08-06 · Alle mit **[zu bestätigen durch THITRONIK]** markierten Punkte sind offen.
+Status: Entwurf (v0.3-draft) · Stand: 2026-08-11 · Alle mit **[zu bestätigen durch THITRONIK]** markierten Punkte sind offen.
 
 ## 1. Zweck
 
@@ -11,6 +11,14 @@ gepflegten Online-Anleitung. Inhaltliche Erklärungen, Bedienschritte oder techn
 gehören **nicht** auf die Karte, sondern auf die Zielseite. Die Zielseite unterscheidet dort,
 wo nötig, zwischen den Gerätegenerationen „bis SN-044" und „ab SN-045" – die Karte selbst
 ist generationsneutral.
+
+### Konzeptstand 2026-08-11
+
+Sieben vom Projektauftraggeber bereitgestellte Visualisierungen sind unter
+`concepts/user-drafts-2026-08-11/` als unveränderte Konzeptreferenzen archiviert. Die
+separaten Dateien `card-front-de-example.svg` und `card-back-de-example.svg` übertragen
+deren stärkste Layoutideen in den maßhaltigen, automatisiert prüfbaren Kartenaufbau.
+Weder Rasterbilder noch SVG-Beispiele sind Produktionsdaten oder eine Freigabe.
 
 ## 2. Primärer permanenter Pfad
 

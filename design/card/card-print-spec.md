@@ -1,12 +1,17 @@
 # Druckspezifikation: Setup-Karte „THITRONIK Pro-finder"
 
-Status: **Entwurf (v0.2-draft)** · Stand: 2026-08-06
+Status: **Entwurf (v0.3-draft)** · Stand: 2026-08-11
 
 > **Verbindlicher Hinweis:** Alle Angaben in diesem Dokument haben Entwurfsstatus.
 > Vor Produktionsfreigabe müssen sämtliche Werte mit der Druckerei, dem
 > Braille-Dienstleister und anhand physischer Andrucke/Muster validiert werden
 > (siehe `card-accessibility-test-plan.md`). Braillemaße werden hier bewusst
 > **nicht** festgelegt (siehe Abschnitt 5).
+
+Die deutschsprachigen Dateien `card-front-de-example.svg` und
+`card-back-de-example.svg` sind eine getrennte Layoutstudie auf Basis der am 2026-08-11
+eingereichten Konzeptbilder. Für sie gelten dieselben offenen Produktions-Gates wie für
+die Basisdateien.
 
 ## 1. Format und Beschnitt
 
