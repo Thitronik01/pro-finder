@@ -1,9 +1,40 @@
 # Handoff
 
-Stand: 2026-08-10 (achtzehnte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-11 (neunzehnte Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
+
+### P0-Reviewabdeckung auf 41 von 41 geschlossen
+
+- P0-03 bündelt elf Segmente aus DOC-BMA-SN044, Seiten 12–15, zu Meldungsfeldern,
+  Statusbericht, Diebstahl- und Spannungswarnung, Notruf, WiPro-Alarm, Anrufberechtigung
+  und Geofencing. 29 Einzelentscheidungen nennen Quelle, Gegenquelle oder Lücke,
+  DSC-/Rückfrage und benötigte THITRONIK-Entscheidung.
+- P0-04 bündelt acht Segmente aus Seiten 3–7 zu Montage, Betriebsarten 0 bis F,
+  Betriebsart-D-Auslassung, GPS-Diagnose und Reflexionen in 20 Einzelentscheidungen.
+  P0-05 bündelt die letzten fünf P0-Segmente aus Seiten 16–17 zu Ausgangssteuerung,
+  letzter GPS-Position und UTC-Zeit in 13 Einzelentscheidungen.
+- Die Quellseiten 3–7 und 12–17 wurden am 2026-08-11 erneut bei 300 beziehungsweise
+  400 dpi gerendert und vollständig gelesen. Die Segmentinhalte blieben unverändert;
+  keine erneute Prüfung wurde als technische Freigabe ausgegeben.
+- BLK-005/006 bleiben intakt. Kein Dossier reproduziert eine SMS-Zeichenfolge,
+  Zielrufnummer, Koordinate, Kartenadresse, Berechtigungszeichenregel oder einen
+  ungeklärten Geofencing-Radius.
+- P0-01 bis P0-05 decken jetzt exakt 6/11/11/8/5 Segmente ab. Zusammen sind alle 41
+  sicherheitskritischen Segmente genau einem entscheidungsreifen, aber vollständig offenen
+  Fachreviewdossier zugeordnet.
+
+### Review-UI mit eigenem Paketfilter und Abdeckungsnachweis
+
+- `/review` zeigt die Kennzahl `41 / 41` für P0-Segmente in Prüfpaketen. Ein eigener
+  Select filtert P0-01 bis P0-05 unabhängig von der Freitextsuche; alle fünf Dossiers sind
+  direkt verlinkt.
+- Die fünf Filterwege liefern deterministisch 6, 11, 11, 8 und 5 Treffer. Ein Unit-Test
+  lädt den kanonischen Segmentbestand und bricht ab, sobald ein P0-Segment kein Paket
+  besitzt. Der E2E-Test prüft Kennzahl, Direktlinks und Paket-Select.
+- Kein Reviewstatus wurde geändert. Die Oberfläche bleibt im Fixture-Modus read-only;
+  echte Supabase-Arbeitsdaten und Statuswechsel bleiben offen.
 
 ### Zweites technisches Prüfpaket P0-02 reviewbereit
 
@@ -239,12 +270,12 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 - Alle 56 deutschen Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
   eine technische oder rechtliche Freigabe.
-- P0-01 und P0-02 sind intern reviewbereit, warten aber auf den realen
-  THITRONIK-Fachreview. Keine vorbereitete Entscheidung ist beantwortet und kein
-  Segmentstatus wurde geändert.
-- Als nächstes soll P0-03 die sicherheitskritischen Meldungs-, Spannungs-, Alarm- und
-  Geofencing-Segmente der PDF-Seiten 12–15 bündeln. SMS-Befehle, Koordinaten,
-  Beispielrufnummern und ungeklärte Radien bleiben ausgelassen.
+- P0-01 bis P0-05 sind intern reviewbereit und decken alle 41 P0-Segmente ab, warten aber
+  auf den realen THITRONIK-Fachreview. Keine der 121 vorbereiteten Einzelentscheidungen
+  ist beantwortet und kein Segmentstatus wurde geändert.
+- Als nächstes beginnt der englische Pilot mit einem geschützten Vertical Slice aus den
+  deutschen Aufgaben 01 bis 05 ab SN-045. Er bleibt Entwurf; geschützte Token werden
+  maschinell verglichen und ein unabhängiger englischer Sprachreview vorbereitet.
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
   unabhängige Gegenprüfung; 51 bleiben auf
@@ -266,10 +297,11 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 8–11 vollständig anhand der 400-dpi-Renderings
-  gegengeprüft; DOC-KA-SN044 1–2 bei 300 dpi neu gerendert und vollständig als Gegenquelle
-  gelesen. Seiten 3–18 samt allen 56 deutschen Segmenten bleiben quellenvalidiert; Seite
-  19 enthält nur ein leeres Notizfeld.
+- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 3–7 und 16–17 bei 300 dpi sowie 12–15 bei
+  400 dpi neu gerendert und vollständig für P0-03 bis P0-05 gelesen. Seiten 8–11 und
+  DOC-KA-SN044 1–2 bleiben durch P0-02 hochauflösend gegengeprüft. Seiten 3–18 samt allen
+  56 deutschen Segmenten bleiben quellenvalidiert; Seite 19 enthält nur ein leeres
+  Notizfeld.
 - **Gesamtstand Quellen:** 307 von 323 Seiten `inspected`, 16 von 323 `validated`, keine
   Seite `extracted`; DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 247
   `inspected` und beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne
@@ -280,45 +312,46 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   `change_reason`.
 - **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
   gefüllt, alle `entwurf`, kein Platzhalter.
-- **Prüfpakete:** P0-01 enthält sechs, P0-02 elf P0-Segmente. 17 von 41 P0-Segmenten sind
-  damit in entscheidungsreifen, aber vollständig offenen Dossiers gebündelt. Die Review-UI
-  macht beide Paket-IDs such- und filterbar.
+- **Prüfpakete:** P0-01 bis P0-05 enthalten 6/11/11/8/5 P0-Segmente und zusammen 121
+  einzeln referenzierbare Entscheidungen. Damit sind 41 von 41 P0-Segmenten genau einem
+  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Die Review-UI zeigt
+  41/41 und macht alle fünf Paket-IDs über einen eigenen Select und Direktlinks filterbar.
 - **Register:** Die Fehlklassifikation der 2-m-Aussage wurde in DSC-073 und DSC-079
   transparent korrigiert; Rückfragenübersicht und Seitenrecords sind synchron. Höchster
   Eintrag bleibt DSC-085; siebzehn Fragen und sieben Blocker.
-- **Geänderte Bereiche:** versionierter Segment-Content, Seitenstatus, Fixture-Datenquelle
-  und Prioritätsfilter der internen Reviewoberfläche sowie Fortschritts- und
-  Übergabedokumentation. Setup-Karte, Content-Schema und Supabase-Migrationen blieben
-  unverändert.
+- **Geänderte Bereiche:** fünf technische Prüfpakete samt Index, Paketzuordnung und
+  Paketfilter der internen Reviewoberfläche, Unit-/E2E-Abdeckung sowie Fortschritts- und
+  Übergabedokumentation. Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
+  Supabase-Migrationen blieben unverändert.
+- **Genutzter Skill:** PDF aus `openai-primary-runtime` 26.805.11740 für Render- und
+  Sichtprüfung der Seiten 3–7 und 12–17. Nutzung und fehlende öffentliche
+  Repository-/Lizenzmetadaten stehen transparent in `.agent/SKILLS_USAGE.md` und
+  `.agent/SKILLS_LOCK.json`; kein Skill-Inhalt wurde in Produktcode kopiert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
-  `npm run format` → `npm run check` vollständig grün; darin 31 Unit-Tests sowie Segment-,
-  Content-, Referenz-, Secret- und Lockfile-Prüfung. `npm run build` ist grün. 32 von 32
-  Playwright-/axe-Tests einschließlich der P0-01- und P0-02-Filter bei Desktop- und
-  Mobilbreite bestanden.
+  `npm run format` → `npm run check` vollständig grün; darin 35 Unit-Tests sowie Segment-,
+  Content-, Referenz-, Secret-, Token-, Lockfile- und Fortschrittsprüfung. `npm run build`
+  ist grün. 32 von 32 Playwright-/axe-Tests einschließlich der Abdeckungskennzahl 41/41,
+  aller P0-01-bis-P0-05-Filter und des Paket-Selects bei Desktop- und Mobilbreite
+  bestanden.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
   erwartungsgemäß nichts zu prüfen.
 
 ```text
 Resume from:
-content/tasks/sn-001-044/de/01-geraetegeneration-bestimmen.json bis
-content/tasks/sn-001-044/de/14-support.json vollstaendig; beide deutschen
-Generationszweige mit 28 von 28 Aufgaben auf entwurf. content/segments/v1 ist als
-kanonisches Repo-Format samt Schema-/Referenzpruefung vorhanden. Vier Batches aus
-DOC-BMA-SN044 PDF-Seiten 3-18 umfassen zusammen 56 deutsche Segmente. Alle fuenf Batches
-und alle sechzehn Inhaltsseiten sind unabhaengig gegen hochaufloesende Renderings
-validiert. Keine Seite steht mehr auf extracted. Die Reviewoberflaeche zeigt den
-kanonischen Segmentbestand und priorisiert 41 P0-, 14 P1- und ein P2-Segment. P0-01 und
-P0-02 buendeln zusammen 17 P0-Segmente mit Einzelentscheidungen und sind ueber ihre
-Paket-IDs suchbar. Kein technischer Inhalt ist fachlich freigegeben.
+Beide deutschen Generationszweige mit 28 von 28 Aufgaben auf entwurf; content/segments/v1
+enthaelt 56 deutsche SN-044-Segmente aus PDF-Seiten 3-18, alle quellenvalidiert. P0-01 bis
+P0-05 decken alle 41 sicherheitskritischen Segmente mit 121 offenen Einzelentscheidungen
+ab. /review zeigt die Kennzahl 41/41 und filtert die Pakete mit exakt 6/11/11/8/5 Treffern.
+Kein technischer Inhalt ist fachlich freigegeben; BLK-005/006 und alle sieben Blocker
+bleiben offen.
 
 First action:
-Das dritte P0-Pruefpaket P0-03 fuer Meldungen, Spannungswarnung, Alarm und Geofencing bis
-SN-044 vorbereiten. Die sicherheitskritischen Segmente aus DOC-BMA-SN044 Seiten 12-15 zu
-Statusbericht, Diebstahlmeldung, 11,2-/12,5-V-Schwellen, Notruf, WiPro-Alarm,
-Anrufberechtigung und Geofencing buendeln. SMS-Befehle, Koordinaten, Beispielrufnummern und
-ungeklaerte Radien bleiben ausgelassen. Pro Aussage Quelle, Gegenquelle, DSC-/Rueckfrage
-und benoetigte THITRONIK-Entscheidung nennen; P0-03 in der Review-Warteschlange suchbar
-machen.
+Den englischen Pilot als geschuetzten Vertical Slice aus dem deutschen Master ab SN-045
+beginnen: Aufgaben 01 bis 05 quellengetreu uebersetzen, als Entwurf markieren und alle
+Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit
+`npm run tokens:check` vergleichen. Keine SMS-Befehle, ungeklaerte Berechtigungsregel oder
+unbestaetigten Supportweg uebernehmen. Danach den unabhaengigen englischen Sprachreview
+vorbereiten.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

@@ -86,6 +86,7 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
   await expect(page.locator('h1')).toHaveText('Reviewoberfläche');
   await expect(page.getByText('Git-Fixtures', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Freigaben bleiben gesperrt' })).toBeVisible();
+  await expect(page.getByText('41 / 41', { exact: true })).toBeVisible();
 
   // exact: true, weil getByLabel per Teilzeichenkette sucht und die
   // Tabellen-Caption der Warteschlange den Begriff ebenfalls enthaelt.
@@ -97,14 +98,34 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
   );
 
   await page.getByRole('link', { name: 'P0-01 in der Warteschlange öffnen' }).click();
-  await expect(page).toHaveURL(/q=P0-01/);
+  await expect(page).toHaveURL(/packet=P0-01/);
   await expect(page.getByText('6 Treffer', { exact: true })).toBeVisible();
   await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-01');
 
   await page.getByRole('link', { name: 'P0-02 in der Warteschlange öffnen' }).click();
-  await expect(page).toHaveURL(/q=P0-02/);
+  await expect(page).toHaveURL(/packet=P0-02/);
   await expect(page.getByText('11 Treffer', { exact: true })).toBeVisible();
   await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-02');
+
+  await page.getByRole('link', { name: 'P0-03 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/packet=P0-03/);
+  await expect(page.getByText('11 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-03');
+
+  await page.getByRole('link', { name: 'P0-04 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/packet=P0-04/);
+  await expect(page.getByText('8 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-04');
+
+  await page.getByRole('link', { name: 'P0-05 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/packet=P0-05/);
+  await expect(page.getByText('5 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-05');
+
+  await page.getByLabel('Prüfpaket', { exact: true }).selectOption('P0-01');
+  await page.getByRole('button', { name: 'Filter anwenden' }).click();
+  await expect(page).toHaveURL(/packet=P0-01/);
+  await expect(page.getByText('6 Treffer', { exact: true })).toBeVisible();
 });
 
 test('Kernseiten verursachen bei 320 CSS-Pixeln keinen Seiten-Horizontalscroll', async ({

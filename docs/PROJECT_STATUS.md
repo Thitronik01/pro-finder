@@ -1,22 +1,22 @@
 # Projektstatus
 
-Stand: 2026-08-10. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 43.8 %**
+**Gesamtfortschritt: 50.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 85 %        |
 | Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
-| Content-Modell und deutscher Master      | 20 %    | 86 %        |
+| Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
-| Webanleitung und Review-UI               | 20 %    | 39 %        |
+| Webanleitung und Review-UI               | 20 %    | 58 %        |
 | Übersetzungspilot                        | 10 %    | 10 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 26 %        |
-| Staging und Übergabe                     | 5 %     | 49 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 38 %        |
+| Staging und Übergabe                     | 5 %     | 67 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -27,7 +27,7 @@ Stand: 2026-08-10. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Das dritte P0-Pruefpaket P0-03 fuer Meldungen, Spannungswarnung, Alarm und Geofencing bis SN-044 vorbereiten. Die sicherheitskritischen Segmente aus DOC-BMA-SN044 Seiten 12-15 zu Statusbericht, Diebstahlmeldung, 11,2-/12,5-V-Schwellen, Notruf, WiPro-Alarm, Anrufberechtigung und Geofencing buendeln. SMS-Befehle, Koordinaten, Beispielrufnummern und ungeklaerte Radien bleiben ausgelassen. Pro Aussage Quelle, Gegenquelle, DSC-/Rueckfrage und benoetigte THITRONIK-Entscheidung nennen; P0-03 in der Review-Warteschlange suchbar machen. Details stehen in docs/HANDOFF.md.
+Offene Blocker: 7 · Nächste Aktion: Den englischen Pilot als ersten geschuetzten Vertical Slice aus dem deutschen Master ab SN-045 beginnen: Aufgaben 01 bis 05 quellengetreu uebersetzen, weiterhin als Entwurf markieren und alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit tokens:check vergleichen. SMS-Befehle, ungeklaerte Berechtigungsregeln und unbestaetigte Supportwege bleiben ausgelassen. Danach einen unabhaengigen englischen Sprachreview vorbereiten; Details stehen in docs/HANDOFF.md.
 
 <!-- PROGRESS:END -->
 
@@ -164,9 +164,10 @@ Offene Blocker: 7 · Nächste Aktion: Das dritte P0-Pruefpaket P0-03 fuer Meldun
   (sicherheitskritisch), P1 (sicherheitsrelevant) und P2 (normal) werden als Text
   ausgegeben, standardmäßig P0 zuerst sortiert und separat gefiltert. 41 Segmente stehen
   auf P0, 14 auf P1 und eines auf P2. Der Generationsfilter verwendet nun den realen
-  Schemawert `beide` statt des wirkungslosen Werts `both`. Fünf Unit-Tests sichern
-  Zuordnung, Sortierung und Beschriftung. Die Browserprüfung bestätigte 56 Gesamt- und 41
-  reine P0-Treffer; bei 375 Pixeln hat die Seite keinen horizontalen Überlauf, während die
+  Schemawert `beide` statt des wirkungslosen Werts `both`. Neun Unit-Tests sichern
+  Zuordnung, Sortierung, Beschriftung und die vollständige P0-Paketabdeckung. Die
+  Browserprüfung bestätigt 56 Gesamt-, 41 reine P0-Treffer und die Paketgrößen
+  6/11/11/8/5; bei 375 Pixeln hat die Seite keinen horizontalen Überlauf, während die
   breite Datentabelle kontrolliert in ihrer eigenen Region scrollt;
 - **das erste technische Prüfpaket P0-01 ist reviewbereit:** Sechs P0-Segmente zu
   Pinbelegung, Versorgung, Messeingängen, gemeinsamer Batterie, Ausgängen, optionaler
@@ -184,8 +185,23 @@ Offene Blocker: 7 · Nächste Aktion: Das dritte P0-Pruefpaket P0-03 fuer Meldun
   1–2, wurde für die Gegenprüfung bei 300 dpi neu gerendert und gelesen. BLK-005/006
   bleiben intakt: keine Programmier-SMS, Beispielrufnummer, Guthabencode,
   Smartphone-Kennzeichnung oder abgeleitete Berechtigungsregel wird reproduziert. Der
-  `/review`-Filter liefert genau elf P0-02-Treffer. Damit sind 17 von 41 P0-Segmenten in
-  entscheidungsreifen Dossiers gebündelt;
+  `/review`-Filter liefert genau elf P0-02-Treffer;
+- **die sicherheitskritische Reviewabdeckung ist mit P0-03 bis P0-05 vollständig:**
+  P0-03 bündelt elf Segmente zu Meldungsfeldern, 11,2-/12,5-V-Schwellen, Diebstahl-,
+  Notruf- und WiPro-Alarm, Berechtigung und Geofencing in 29 Einzelentscheidungen.
+  P0-04 umfasst acht Segmente zu Montage, Betriebsarten 0 bis F, der gesperrten
+  Betriebsart D sowie GPS-Diagnose und Reflexionen in 20 Einzelentscheidungen. P0-05
+  umfasst die letzten fünf P0-Segmente zu Ausgangssteuerung, letzter GPS-Position und
+  UTC-Zeit in 13 Einzelentscheidungen. DOC-BMA-SN044, Seiten 3–7 und 12–17, wurden dafür
+  am 2026-08-11 erneut bei 300 beziehungsweise 400 dpi gerendert und vollständig gelesen.
+  SMS-Befehle, Radius, Berechtigungszeichen, Koordinaten, Kartenadressen und
+  Beispielkontakte bleiben ausgelassen. Damit sind **41 von 41 P0-Segmenten** genau einem
+  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet;
+- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 41/41,
+  ein Paket-Select filtert P0-01 bis P0-05 unabhängig von der Freitextsuche, und die fünf
+  Direktlinks liefern exakt 6/11/11/8/5 Treffer. Ein Unit-Test bricht ab, sobald ein
+  sicherheitskritisches Segment kein Paket besitzt; der Browsertest prüft Kennzahl,
+  Direktlinks und Select. Kein Segmentstatus wurde dadurch geändert;
 - **eine eigene Fehlklassifikation zur GPS-Kabellänge ist transparent korrigiert:** Die
   erneute 400-dpi-Gegenprüfung von DOC-BMA-SN044, PDF-Seiten 3, 21 und 38, gegen die
   bereits hochauflösend geprüfte Seite 55 zeigt: Deutsch, Französisch und Schwedisch

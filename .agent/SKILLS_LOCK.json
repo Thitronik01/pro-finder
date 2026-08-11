@@ -8,6 +8,19 @@
   },
   "sources": [
     {
+      "name": "openai-primary-runtime-pdf",
+      "source_uri": "bundled://openai-primary-runtime/pdf/26.805.11740",
+      "version": "26.805.11740",
+      "repository": null,
+      "commit": null,
+      "retrieved_at": "2026-08-11",
+      "license": {
+        "spdx": null,
+        "status": "bundled-runtime-metadata-not-exposed",
+        "note": "Lokaler Codex-Bestandteil; kein öffentlicher Repository-URL, Commit-SHA oder separater Lizenztext in der Laufzeitmetadaten-Ausgabe verfügbar. Es wurden keine Skill-Inhalte in Produktcode kopiert."
+      }
+    },
+    {
       "name": "anthropic-skills",
       "repository": "https://github.com/anthropics/skills.git",
       "commit": "b29e7cf65e5cb78a5ac33d582270551bc74a14eb",

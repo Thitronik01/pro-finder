@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { loadAllContentSegments } from '@/lib/content/segment-schema.mjs';
 import {
   compareReviewPriority,
   reviewPacketId,
@@ -43,5 +44,36 @@ describe('Reviewpriorität', () => {
     expect(reviewPacketId('BMA044-DE-P010-S02-SYNTAX-UND-BEISPIELE-AUSLASSUNG')).toBe('P0-02');
     expect(reviewPacketId('BMA044-DE-P011-S04-FARBABHAENGIGE-STATUSANZEIGE')).toBe('P0-02');
     expect(reviewPacketId('BMA044-DE-P008-S03-SIM-AUSWAHL-UND-ROAMING')).toBeNull();
+  });
+
+  it('ordnet die elf Meldungs-, Alarm- und Geofencingsegmente P0-03 zu', () => {
+    expect(reviewPacketId('BMA044-DE-P012-S03-DIEBSTAHLMELDUNG')).toBe('P0-03');
+    expect(reviewPacketId('BMA044-DE-P014-S03-BERECHTIGTE-NUMMERN')).toBe('P0-03');
+    expect(reviewPacketId('BMA044-DE-P015-S03-STATUSBERICHT-ANFORDERN')).toBe('P0-03');
+    expect(reviewPacketId('BMA044-DE-P015-S04-STATUSBERICHT-GPS-UND-AUSGAENGE')).toBeNull();
+  });
+
+  it('ordnet Montage, Betriebsarten und GPS-Diagnose P0-04 zu', () => {
+    expect(reviewPacketId('BMA044-DE-P003-S03-MONTAGEORT')).toBe('P0-04');
+    expect(reviewPacketId('BMA044-DE-P005-S03-BETRIEBSART-D-AUSLASSUNG')).toBe('P0-04');
+    expect(reviewPacketId('BMA044-DE-P007-S03-SMS-BEFEHL-AUSLASSUNG')).toBe('P0-04');
+    expect(reviewPacketId('BMA044-DE-P006-S04-GPS-ANTENNE-MONTIEREN')).toBeNull();
+  });
+
+  it('ordnet Ausgangssteuerung und Positionsbewertung P0-05 zu', () => {
+    expect(reviewPacketId('BMA044-DE-P016-S01-AUSGAENGE-UEBERSICHT')).toBe('P0-05');
+    expect(reviewPacketId('BMA044-DE-P017-S03-POSITION-UND-UTC-ZEIT')).toBe('P0-05');
+    expect(reviewPacketId('BMA044-DE-P017-S01-POSITION-IN-KARTEN-NUTZEN')).toBeNull();
+  });
+
+  it('deckt alle 41 sicherheitskritischen Segmente mit genau einem Prüfpaket ab', () => {
+    const p0Segments = loadAllContentSegments().filter(
+      ({ segment }) => reviewPriority(segment.safety_class) === 'P0',
+    );
+
+    expect(p0Segments).toHaveLength(41);
+    for (const { file, segment } of p0Segments) {
+      expect(reviewPacketId(segment.segment_key), file).not.toBeNull();
+    }
   });
 });

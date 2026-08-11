@@ -28,27 +28,24 @@ Beleg in den Seitenrecord.
 
 ### Der schnellste Weg, den Fortschritt zu heben
 
-Die Gewichtung steht in `docs/MASTERPLAN.md` Abschnitt 19. Die PDF-Seitenprüfung ist seit
-dem 2026-08-09 mit **323 von 323 Seiten vollständig**. Beide deutschen
+Die PDF-Seitenprüfung ist mit **323 von 323 Seiten vollständig**. Beide deutschen
 Generationszweige besitzen je vierzehn vollständig gefüllte Aufgaben; alle 28 Dateien
-stehen auf `entwurf`, keine ist mehr Platzhalter. Das kanonische Segmentformat v1 ist
-vorhanden, und DOC-BMA-SN044 Seiten 3–7 bilden mit 17 Segmenten den ersten
-Extraktionsbatch. Diese fünf Seiten stehen auf `extracted`, alle übrigen auf `inspected`.
+stehen auf `entwurf`. DOC-BMA-SN044 Seiten 3–18 sind mit 56 Segmenten vollständig
+quellenvalidiert. P0-01 bis P0-05 decken alle 41 sicherheitskritischen Segmente in fünf
+entscheidungsreifen, aber vollständig offenen Fachreviewdossiers ab.
 
 Der exakte erste Batch und seine Sperren stehen unter „First action" in `HANDOFF.md`.
 Kurzfassung:
 
-1. DOC-BMA-SN044 PDF-Seiten 3–7 neu rendern und jedes der 17 Segmente in
-   `content/segments/v1/sn-001-044/de/` unabhängig gegen Bild, Region und Kontext prüfen.
-2. Besonders Pinbelegung, Spannungen, Belastungsgrenze, Betriebsartentabelle,
-   WiPro-Ausnahme und GPS-Diagnose kontrollieren. Inhaltliche Korrekturen mit
-   `change_reason` und neuer Prüfsumme dokumentieren.
-3. BLK-005 und die Auslassung des Betriebsart-D-Intervalls strikt erhalten. Die zweite
-   Gegenprüfung darf keine technische Freigabe vortäuschen.
-4. Erst nach vollständiger unabhängiger Gegenprüfung ausschließlich Seiten 3–7 von
-   `extracted` auf `validated` setzen.
-5. Danach ohne Warten Seiten 8–11 selbst rendern und den nächsten Segmentbatch zu
-   SIM-Karte, Zielrufnummern, Löschen und Status-LED anlegen.
+1. Den englischen Pilot mit den Aufgaben 01 bis 05 ab SN-045 beginnen.
+2. Ausschließlich den quellengeprüften deutschen Master übertragen; Generation,
+   Dokumente, PDF-Seiten, Regionen und Sicherheitsklassen unverändert bewahren.
+3. Alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit
+   `npm run tokens:check` vergleichen.
+4. BLK-005/006 strikt erhalten: keine SMS-Befehle oder aus Beispielen abgeleitete
+   Berechtigungsregel ergänzen.
+5. Jede Datei bleibt `review_status: entwurf`; ohne unabhängigen englischen Sprachreview
+   keine Freigabe und keine höhere Fortschrittsstufe behaupten.
 6. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
    **in dieser Reihenfolge** –, committen, pushen und CI abwarten.
 
@@ -59,10 +56,10 @@ in den Skriptaufrufen der Seitenrecords.
 
 ### Was du über die Quellen schon weißt
 
-Geprüft sind alle **323 von 323 Seiten**. Davon stehen 318 auf `inspected` und die fünf
-extrahierten deutschen Seiten 3–7 von DOC-BMA-SN044 auf `extracted`. DOC-BMA-SN044 ist
-mit 72 von 72 Seiten, DOC-IBA-SN045 mit 247 von 247 Seiten vollständig; beide
-Kurzanleitungen stehen bei 2/2.
+Geprüft sind alle **323 von 323 Seiten**. Davon stehen 307 auf `inspected` und die sechzehn
+deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 auf `validated`; keine Seite steht auf
+`extracted`. DOC-BMA-SN044 ist mit 72 von 72 Seiten, DOC-IBA-SN045 mit 247 von 247 Seiten
+vollständig; beide Kurzanleitungen stehen bei 2/2.
 Alle zehn Sprachteile der neueren und alle vier Sprachteile der älteren Anleitung sind
 vollständig erfasst. Das Muster ist stabil:
 
@@ -142,15 +139,14 @@ Impressum 72):
 
 ### Der aktuelle Haupthebel
 
-**Content-Modell und deutscher Master** (20 % Gewicht, aktuell 74 %). Beide deutschen
-Generationszweige sind mit insgesamt 28 von 28 Aufgaben gefüllt, keine ist mehr
-Platzhalter. Was jetzt fehlt:
+**Übersetzungspilot** (10 % Gewicht). Der deutsche Master und seine Quellenbelege stehen;
+die englische Pilotstruktur ist noch Platzhalter. Als nächstes:
 
-1. **Die unabhängige Validierung** des ersten Extraktionsbatches (`validated` statt
-   `extracted`).
-2. **Die weitere Segment-Extraktion** ab DOC-BMA-SN044 Seite 8.
-3. **Der technische Review** aller sicherheitskritischen Werte. Der kann nicht im Pilot
-   erledigt werden.
+1. Aufgaben 01 bis 05 als ersten geschützten englischen Vertical Slice übertragen.
+2. Geschützte Token maschinell vergleichen und jede Datei als KI-Übersetzungsentwurf
+   kennzeichnen.
+3. Unabhängigen englischen Sprachreview vorbereiten. Der technische Fachreview aller
+   sicherheitskritischen Werte bleibt parallel offen.
 
 Das Datenbankschema für Segmente steht in
 `supabase/migrations/20260806000001_initial_schema.sql`; das kanonische Dateiformat und

@@ -1,6 +1,6 @@
 # Skill-Nutzung
 
-Stand: 2026-08-06
+Stand: 2026-08-11
 
 Diese Datei dokumentiert die tatsächliche Anwendung in der laufenden Projektsitzung.
 Eine bloße Installation oder Sichtung gilt nicht als Nutzung. Die zugehörigen,
@@ -11,6 +11,7 @@ unveränderlichen Quellenstände stehen in [`SKILLS_LOCK.json`](SKILLS_LOCK.json
 | Quelle | Skill oder Methode | Anwendung im Projekt |
 | --- | --- | --- |
 | `anthropic-skills` | PDF | PDF-Seiten visuell geprüft sowie Text und Metadaten für die quellengenaue Inhaltsinventur ausgewertet. Die Ergebnisse bleiben Entwürfe bis zum fachlichen Review. |
+| `openai-primary-runtime` 26.805.11740 | PDF | DOC-BMA-SN044, PDF-Seiten 3–7 und 12–17, mit gebündeltem Poppler bei 300/400 dpi erneut gerendert und vor der Erstellung von P0-03 bis P0-05 vollständig visuell gegen die validierten Segmente geprüft. Keine technische Freigabe abgeleitet. |
 | `supabase-agent-skills` | Supabase | Schema, Migrationen, Row Level Security (RLS), Storage-Policies und Datenzugriffsgrenzen auf Sicherheits- und Rollenrisiken geprüft. |
 | `supabase-agent-skills` | Postgres Best Practices | Rollen-, Rechte-, Foreign-Key- und RLS-Regeln für die Sicherheitsprüfung der Datenbank angewendet. |
 | `vercel-agent-skills` | Next.js | Next.js-16-Konventionen für asynchrone Request-APIs, `proxy.ts` und Content Security Policy (CSP) bei den App-Änderungen berücksichtigt. |

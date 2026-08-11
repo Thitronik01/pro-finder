@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { loadFixtureReviewData, loadSupabaseReviewData, type ReviewItem } from '@/lib/review-data';
 import { createServerSupabaseClient, getSupabasePublicConfig } from '@/lib/supabase/server';
-import { reviewPriorityLabel, type ReviewPriority } from '@/lib/review-priority';
+import { REVIEW_PACKET_IDS, reviewPriorityLabel, type ReviewPriority } from '@/lib/review-priority';
 import { signOut } from './actions';
 import styles from './review.module.css';
 
@@ -27,6 +27,7 @@ function filterItems(
   generation: string,
   status: string,
   priority: string,
+  packet: string,
   query: string,
 ): ReviewItem[] {
   const normalizedQuery = query.toLocaleLowerCase('de');
@@ -35,6 +36,7 @@ function filterItems(
       (!generation || item.generation === generation) &&
       (!status || item.status === status) &&
       (!priority || item.priority === priority) &&
+      (!packet || item.packetId === packet) &&
       (!normalizedQuery ||
         `${item.title} ${item.key} ${item.sourceLabel} ${item.packetId ?? ''}`
           .toLocaleLowerCase('de')
@@ -85,12 +87,15 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
   const generation = first(params.generation);
   const status = first(params.status);
   const priority = first(params.priority);
+  const packet = first(params.packet);
   const query = first(params.q);
-  const filteredItems = filterItems(data.items, generation, status, priority, query);
+  const filteredItems = filterItems(data.items, generation, status, priority, packet, query);
   const drafts = data.items.filter((item) => item.placeholder).length;
   const safetyOpen = data.items.filter(
     (item) => item.safetyClass !== 'normal' && item.status !== 'freigegeben',
   ).length;
+  const p0Items = data.items.filter((item) => item.priority === 'P0');
+  const preparedP0 = p0Items.filter((item) => item.packetId !== null).length;
   const inspectedPages = data.documents.reduce(
     (sum, document) =>
       sum +
@@ -149,6 +154,12 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
             <dd>{safetyOpen}</dd>
           </div>
           <div>
+            <dt>P0 in Prüfpaketen</dt>
+            <dd>
+              {preparedP0} / {p0Items.length}
+            </dd>
+          </div>
+          <div>
             <dt>PDF-Seiten mind. inspiziert</dt>
             <dd>{inspectedPages}</dd>
           </div>
@@ -178,7 +189,7 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
             <li>
               <strong>P0-01:</strong> sechs Segmente zu Elektrik, Ausgängen, GPS und technischen
               Daten. Dossier: <code>docs/review-packets/P0-01-ELEKTRIK-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&q=P0-01">
+              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-01">
                 P0-01 in der Warteschlange öffnen
               </Link>
             </li>
@@ -186,8 +197,31 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               <strong>P0-02:</strong> elf Segmente zu SIM, PIN, Zielrufnummern, Programmierung,
               Löschen und Status-LED. Dossier:{' '}
               <code>docs/review-packets/P0-02-SIM-ZIELRUFNUMMERN-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&q=P0-02">
+              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-02">
                 P0-02 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-03:</strong> elf Segmente zu Meldungen, Spannungswarnung, Alarm,
+              Berechtigung und Geofencing. Dossier:{' '}
+              <code>docs/review-packets/P0-03-MELDUNGEN-ALARM-GEOFENCING-SN044.md</code>.{' '}
+              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-03">
+                P0-03 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-04:</strong> acht Segmente zu Montage, Betriebsarten, GPS-Diagnose und
+              Reflexionen. Dossier:{' '}
+              <code>docs/review-packets/P0-04-MONTAGE-BETRIEBSARTEN-GPS-SN044.md</code>.{' '}
+              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-04">
+                P0-04 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-05:</strong> fünf Segmente zu Ausgangssteuerung und Positionsbewertung.
+              Dossier: <code>docs/review-packets/P0-05-AUSGAENGE-POSITION-SN044.md</code>.{' '}
+              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-05">
+                P0-05 in der Warteschlange öffnen
               </Link>
             </li>
           </ul>
@@ -230,6 +264,17 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               <option value="P0">P0 - sicherheitskritisch</option>
               <option value="P1">P1 - sicherheitsrelevant</option>
               <option value="P2">P2 - normal</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="filter-packet">Prüfpaket</label>
+            <select id="filter-packet" name="packet" defaultValue={packet}>
+              <option value="">Alle</option>
+              {REVIEW_PACKET_IDS.map((packetId) => (
+                <option key={packetId} value={packetId}>
+                  {packetId}
+                </option>
+              ))}
             </select>
           </div>
           <button type="submit">Filter anwenden</button>
