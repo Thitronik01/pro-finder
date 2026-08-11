@@ -1,9 +1,28 @@
 # Handoff
 
-Stand: 2026-08-11 (zweiundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-11 (dreiundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
+
+### Geschützter englischer Vertical Slice für Aufgaben 11 bis 14
+
+- `control-outputs`, `troubleshoot-problems`, `technical-data` und
+  `get-help-and-support` sind aus dem deutschen Master ab SN-045 übertragen. Damit sind
+  alle vierzehn englischen Aufgaben belegt, `placeholder: false` und
+  `review_status: entwurf`.
+- Ausgangsbefehle und die Syntaxregel für Ausgang B bleiben wegen BLK-005 ausgelassen.
+  Pins, Belastungsgrenze, Betriebsarten, Zeitbereiche und Rückmeldung bleiben sichtbar,
+  aber technisch ungeprüft. Die Fehlerbehebung bewahrt die offenen Widersprüche zu
+  Status-LED, Betriebsart B, stillem Alarm, GPS-Feldern und WiPro-III-Abhängigkeit.
+- Aufgabe 14 veröffentlicht weder historische Rufnummer noch E-Mail oder Website. Der
+  Tokencheck erlaubt für Position 14 ausschließlich das Entfernen einer Telefonnummer
+  unter BLK-004 und protokolliert dies; hinzugefügte oder veränderte Kontakte bleiben
+  Fehler. Alle vierzehn DE/EN-Paare bestehen den Token- und Quellenparitätsvergleich.
+- EN-03 dokumentiert Scope, Reviewgrenzen, geschützte Werte, Checkliste,
+  Entscheidungsprotokoll und Exit-Kriterien. Browser- und axe-Abdeckung umfasst jetzt
+  alle vierzehn englischen Taskrouten sowie das Fehlen von `tel:`- und `mailto:`-Links in
+  der Supportaufgabe.
 
 ### Nutzerentwürfe eingeordnet und deutsche Kartenvariante erstellt
 
@@ -328,10 +347,8 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - P0-01 bis P0-05 sind intern reviewbereit und decken alle 41 P0-Segmente ab, warten aber
   auf den realen THITRONIK-Fachreview. Keine der 121 vorbereiteten Einzelentscheidungen
   ist beantwortet und kein Segmentstatus wurde geändert.
-- Die unabhängigen englischen Sprachreviews von EN-01 und EN-02 sind organisatorisch
-  offen. Keine der zehn Aufgaben darf vorher höhergestuft werden. Parallel kann der
-  dritte geschützte Vertical Slice aus den deutschen Aufgaben 11 bis 14 ab SN-045
-  vorbereitet werden.
+- Die unabhängigen englischen Sprachreviews von EN-01 bis EN-03 sind organisatorisch
+  offen. Keine der vierzehn Aufgaben darf vorher höhergestuft werden.
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
   unabhängige Gegenprüfung; 51 bleiben auf
@@ -371,8 +388,8 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   Batches besitzen eine unabhängige Gegenprüfung; Korrekturen stehen im jeweiligen
   `change_reason`.
 - **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
-  gefüllt, alle `entwurf`, kein Platzhalter. Englisch ab SN-045 besitzt zusätzlich zehn
-  belegte Aufgabenentwürfe (01 bis 10), ebenfalls ohne Platzhalter.
+  gefüllt, alle `entwurf`, kein Platzhalter. Englisch ab SN-045 besitzt zusätzlich alle
+  vierzehn belegten Aufgabenentwürfe, ebenfalls ohne Platzhalter.
 - **Prüfpakete:** P0-01 bis P0-05 enthalten 6/11/11/8/5 P0-Segmente und zusammen 121
   einzeln referenzierbare Entscheidungen. Damit sind 41 von 41 P0-Segmenten genau einem
   entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Die Review-UI zeigt
@@ -380,7 +397,7 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - **Register:** Die Fehlklassifikation der 2-m-Aussage wurde in DSC-073 und DSC-079
   transparent korrigiert; Rückfragenübersicht und Seitenrecords sind synchron. Höchster
   Eintrag bleibt DSC-085; siebzehn Fragen und sechs aktive Blocker.
-- **Geänderte Bereiche:** fünf weitere englische Aufgabenentwürfe (06 bis 10), EN-02,
+- **Geänderte Bereiche:** vier weitere englische Aufgabenentwürfe (11 bis 14), EN-03,
   Quellenparitäts-/Token-/E2E-Abdeckung sowie Fortschritts- und Übergabedokumentation.
   Deutsche Master, Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
   Supabase-Migrationen blieben unverändert.
@@ -396,8 +413,8 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
   `npm run format` → `npm run check` vollständig grün; darin 38 Unit-Tests sowie Segment-,
   Content-, Referenz-, Secret-, Token-, Lockfile- und Fortschrittsprüfung. `npm run build`
-  ist mit 47 generierten Seiten grün. 54 von 54 Playwright-/axe-Tests einschließlich aller
-  zehn englischen Taskrouten, Entwurfs-/Quellennachweis, Pin-Tabelle, der
+  ist mit 51 generierten Seiten grün. 62 von 62 Playwright-/axe-Tests einschließlich aller
+  vierzehn englischen Taskrouten, Entwurfs-/Quellennachweis, Pin-Tabelle, der
   Abdeckungskennzahl 41/41 und aller P0-01-bis-P0-05-Filter bei Desktop- und Mobilbreite
   bestanden.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
@@ -409,20 +426,19 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ```text
 Resume from:
-Englischer Pilot ab SN-045 mit Aufgaben 01 bis 10 als belegte KI-Uebersetzungsentwuerfe;
-tokens:check vergleicht alle zehn DE/EN-Paare und ein Unit-Test sichert die task-level
-Quellenparitaet. EN-01 und EN-02 sind fuer unabhaengige Sprachreviews vorbereitet, aber
-unbeantwortet. Sieben Kartenvisualisierungen sind als Konzeptreferenzen eingeordnet; eine
-deutsche Vorder-/Rueckseitenvariante liegt als SVG-Entwurf vor. Kein technischer,
-sprachlicher oder physischer Inhalt ist freigegeben; BLK-005/006 und sechs aktive Blocker
-bleiben offen.
+Englischer Pilot ab SN-045 mit allen Aufgaben 01 bis 14 als belegte
+KI-Uebersetzungsentwuerfe; tokens:check vergleicht alle vierzehn DE/EN-Paare und ein
+Unit-Test sichert die task-level Quellenparitaet. EN-01 bis EN-03 sind fuer unabhaengige
+Sprachreviews vorbereitet, aber unbeantwortet. Die historische Support-Rufnummer bleibt
+in EN-14 unter BLK-004 bewusst verborgen. Kein technischer, sprachlicher oder physischer
+Inhalt ist freigegeben; BLK-005/006 und sechs aktive Blocker bleiben offen.
 
 First action:
-Die deutsche Karten-Beispielvariante mit THITRONIK abstimmen und freigegebene
-druckfaehige Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und
-Kerbengeometrie einholen. Bis dahin keinen echten QR-Code, keine Braillepunkte und keine
-Supportkontakte einsetzen. Parallel EN-01/EN-02 und den dritten geschuetzten englischen
-Slice 11 bis 14 weiterfuehren.
+Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen
+und keine Aufgabe vorher hoeherstufen. Parallel die zweite Synthese-Auswertung der
+dokumentierten Widersprueche vorbereiten. Fuer die Karte weiterhin freigegebene Assets
+und Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen
+echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

@@ -1,0 +1,44 @@
+{
+  "slug": "technical-data",
+  "title": "Technical data",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Look up the draft technical characteristics of the Pro-finder for the generation from serial-number range -045, for example before sizing the power supply or connecting loads.",
+  "prerequisites": [],
+  "warnings": [
+    {
+      "text": "Each output is rated at 12 V and no more than 500 mA. A higher-current load requires a relay; the source states that overloading voids the warranty.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.1, output rating"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, relay and overload warning"
+        }
+      ]
+    }
+  ],
+  "steps": [],
+  "expected_result": "The source values are available as an unapproved technical draft and are not treated as a production specification.",
+  "error_cases": [],
+  "figures": [],
+  "tables_md": [
+    "| Characteristic | Draft source value |\n| --- | --- |\n| Supply voltage | 9–30 V |\n| Current during network search | approx. 37 mA |\n| Current during normal operation | approx. 16–21 mA |\n| Transmission system | 2G/3G/4G (LTE) |\n| 2G bands | Quad |\n| 3G bands | 1, 2, 5, 8 |\n| 4G bands | 1, 2, 3, 4, 5, 7, 8, 18, 19, 20, 26, 28 |\n| Destination numbers | 10 |\n| Interfaces | GPS/QZSS |\n| Outputs | 2 × 12 V/500 mA |\n| Temperature range | −10 to +80 °C |\n| SIM format | Nano-SIM |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Section 6.1, technical data"
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. The German, French and Czech source sections state approximately 16–21 mA for normal operation, while the English source states approximately 21 mA (DSC-020). The German-master value is retained as an unresolved draft, not a technical approval. Independent technical and English-language reviews are pending."
+}

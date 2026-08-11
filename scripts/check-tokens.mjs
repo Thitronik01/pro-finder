@@ -35,6 +35,24 @@ const PROTECTED_PATTERNS = [
   /\b[A-Z]{2,}\d{2,}\b/g,
 ];
 
+// Ein gesperrter Wert darf aus einer Übersetzung entfernt, aber niemals still durch
+// einen anderen ersetzt werden. Ausnahmen bleiben auf Aufgabe und Werttyp begrenzt.
+const INTENTIONAL_OMISSIONS = new Map([
+  [
+    '14',
+    [
+      {
+        pattern: /^\+\d/u,
+        reason: 'historische Support-Rufnummer bleibt bis zur Bestätigung unter BLK-004 verborgen',
+      },
+    ],
+  ],
+]);
+
+function omissionReason(taskNumber, token) {
+  return INTENTIONAL_OMISSIONS.get(taskNumber)?.find(({ pattern }) => pattern.test(token))?.reason;
+}
+
 function extractTokens(text) {
   const tokens = [];
   for (const pattern of PROTECTED_PATTERNS) {
@@ -75,8 +93,14 @@ if (fs.existsSync(deDir) && fs.existsSync(enDir)) {
     compared++;
     const deTokens = extractTokens(taskText(de));
     const enTokens = extractTokens(taskText(en));
-    const missing = deTokens.filter((t) => !enTokens.includes(t));
+    const missingCandidates = deTokens.filter((t) => !enTokens.includes(t));
+    const omitted = missingCandidates.filter((t) => omissionReason(num, t));
+    const missing = missingCandidates.filter((t) => !omissionReason(num, t));
     const added = enTokens.filter((t) => !deTokens.includes(t));
+    for (const token of [...new Set(omitted)]) {
+      console.log(`Token bewusst ausgelassen ${deFile} ↔ ${enFile}: ${token.trim()}`);
+      console.log(`  Grund: ${omissionReason(num, token)}`);
+    }
     if (missing.length > 0 || added.length > 0) {
       console.error(`Token-Abweichung ${deFile} ↔ ${enFile}:`);
       for (const t of missing) console.error(`  fehlt in EN: ${t}`);

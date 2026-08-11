@@ -1,0 +1,247 @@
+{
+  "slug": "control-outputs",
+  "title": "Control the outputs safely",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Understand how output A or output B can switch a connected load remotely and how the Pro-finder reports the result, without publishing unconfirmed SMS commands.",
+  "prerequisites": [
+    "The load is already wired. Output A is on pin 7 of the eight-pin connector and output B is on pin 6.",
+    "A load requiring more than 500 mA is connected through a high-quality automotive relay with a flyback diode, not directly to pin 6 or pin 7.",
+    "The Pro-finder is powered and contains a Nano-SIM.",
+    "You know the device number to which an SMS would be sent."
+  ],
+  "warnings": [
+    {
+      "text": "Pins 6 and 7 are transistor outputs. They provide 12 V and may be loaded with no more than 500 mA. Use a high-quality automotive relay with a flyback diode for a higher-current load. The source states that overloading voids the warranty.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, third paragraph and output-control list"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.1, output rating"
+        }
+      ]
+    },
+    {
+      "text": "A continuously enabled output remains on until a separate command switches it off. The reviewed pages do not describe an automatic timeout for this mode.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Section 5.5.1, continuous output control"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, output-control list"
+        }
+      ]
+    },
+    {
+      "text": "Remote switching takes place without a view of the vehicle. Treat the returned status report as the only confirmation described by the reviewed pages.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3, response after switching"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Section 5.3, output states in the status report"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Identify the connected load by pin number. Output A is pin 7 and output B is pin 6; the two outputs are controlled independently.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2, connector legend for pins 6 and 7"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Section 5.5, introduction"
+        }
+      ]
+    },
+    {
+      "text": "Choose one of the three documented modes: continuous operation, a one-second pulse, or a selected duration from 1 to 120 minutes. Both outputs support the same modes.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, output-control list"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Section 5.5, second paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3"
+        }
+      ]
+    },
+    {
+      "text": "Do not copy a command from another language version. The exact SMS command and the rule that distinguishes output B from output A are intentionally omitted until the manufacturer confirms the command language.",
+      "expected": "The required operating mode is understood, but no unconfirmed command has been sent.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3 and the red note at the bottom of the page",
+          "note": "Four command lines and the output-B substitution rule are present in the source but remain blocked by BLK-005."
+        }
+      ]
+    },
+    {
+      "text": "After a technically confirmed command becomes available, send only that confirmed command to the Pro-finder. The source says that switching is followed by an SMS status report.",
+      "expected": "The selected output changes state and the Pro-finder returns a status report.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3, action and response sentences"
+        }
+      ]
+    },
+    {
+      "text": "For continuous operation, switch the output off again with a separate confirmed command. A pulse ends after one second; a timed operation ends after the selected number of minutes.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3"
+        }
+      ]
+    },
+    {
+      "text": "Read the returned status report and verify the states of both outputs. If no report arrives, do not assume that switching succeeded.",
+      "expected": "The report confirms the expected state of the selected output.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Section 5.3, output states in the status report"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3, response after switching"
+        }
+      ]
+    }
+  ],
+  "expected_result": "The intended output mode, duration, connector pin and confirmation method are understood. The task remains deliberately non-executable until the manufacturer confirms the SMS command set; no command is inferred from a translated manual.",
+  "error_cases": [
+    {
+      "problem": "The load requires more than 500 mA.",
+      "correction": "Do not connect it directly to pin 6 or pin 7. Use a high-quality automotive relay with a flyback diode. The source states that overloading voids the warranty.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, third paragraph"
+        }
+      ]
+    },
+    {
+      "problem": "No status report arrives after a switching attempt.",
+      "correction": "Treat the operation as unconfirmed. The source describes a status report after each output change. Do not repeat the command blindly. A report can also be requested by calling outside operating modes 2 and 3, but the source limits this call response to authorised numbers.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 to 5.5.3, response sentences"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Section 5.3, report request by call"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Section 1.3, authorised callers"
+        }
+      ]
+    },
+    {
+      "problem": "The load must run longer than the adjustable timed range.",
+      "correction": "The documented timed range is 1 to 120 minutes. The source offers continuous operation for a longer period, which then requires an explicit switch-off. It does not state what happens with an out-of-range value.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Sections 5.5.1 and 5.5.3"
+        }
+      ]
+    },
+    {
+      "problem": "A running timed operation must be stopped early.",
+      "correction": "The reviewed pages do not say whether a timed operation can be cancelled. Do not infer a command; obtain technical confirmation from the manufacturer.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Section 5.5.3 in full"
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "tables_md": [
+    "| Output mode | Documented duration |\n| --- | --- |\n| Continuous | Until a separate command switches the output off |\n| Pulse | One second |\n| Timed | Selected duration from 1 to 120 minutes |",
+    "| Output | Eight-pin connector | Rating |\n| --- | --- | --- |\n| Output A | Pin 7 | 12 V, maximum 500 mA |\n| Output B | Pin 6 | 12 V, maximum 500 mA |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "23",
+      "region": "Sections 5.5.1 to 5.5.3 and red note at the bottom of the page"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "22",
+      "region": "Sections 5.3 and 5.5"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "11",
+      "region": "Section 1.4, output ratings and operating modes"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Section 1.3, operating modes and report request by call"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "8",
+      "region": "Section 1.2, connector legend for pins 6 and 7"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Section 6.1, output rating"
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. All four SMS command lines and the output-B substitution rule remain omitted under BLK-005. Electrical ratings, connector pins, durations and the status-report limitation are preserved. Technical and independent English-language reviews are pending."
+}

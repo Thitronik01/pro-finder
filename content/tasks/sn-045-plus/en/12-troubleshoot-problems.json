@@ -1,0 +1,287 @@
+{
+  "slug": "troubleshoot-problems",
+  "title": "Troubleshoot common problems",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Match unusual Pro-finder behaviour to a documented case, distinguish normal operation from a fault and identify when technical help is required.",
+  "prerequisites": [
+    "The Pro-finder is installed, connected and powered.",
+    "You can see the Status-LED or ask another person to describe it.",
+    "You know the current position of the operating-mode switch.",
+    "For message-related cases, the device is reachable and at least one destination number has been stored."
+  ],
+  "warnings": [
+    {
+      "text": "Always interpret the Status-LED together with the switch position. In position F, steady red means that GPS is not connected and steady green means that the GPS antenna position is suitable. In the switch's initial position, steady red instead indicates a missing or defective SIM and steady green indicates SMS activity. The source does not map every remaining switch position to the nine general LED states.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.3, GPS diagnostic LED table"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, nine Status-LED states"
+        }
+      ]
+    },
+    {
+      "text": "The voltage-warning heading explicitly excludes operating mode B. The source does not say whether standby behaviour is also disabled there, so do not rely on receiving a low-voltage warning in mode B.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, voltage-warning heading and explanation"
+        }
+      ]
+    },
+    {
+      "text": "A theft alert is silent: the source says that neither indicators nor siren are activated. Reliable receipt and recognition of the SMS is therefore essential.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, theft-alert explanation"
+        }
+      ]
+    }
+  ],
+  "steps": [],
+  "expected_result": "This task has no fixed sequence. Find the observation that matches the device, follow the documented correction and retain every stated uncertainty. You can then distinguish expected behaviour from a condition that requires further support.",
+  "error_cases": [
+    {
+      "problem": "The Pro-finder stops responding normally, or a message reports a voltage below 11,2 V.",
+      "correction": "This can be battery protection rather than a defect. The source says that a sustained voltage below 11,2 V puts the device into standby and produces an SMS notice. Normal operation resumes only after the voltage rises above 12,5 V. The heading excludes operating mode B, but the source does not explain whether only the warning or also standby is excluded.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, voltage warning"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED cannot be interpreted.",
+      "correction": "Check the switch position first. Position F uses the GPS-diagnostic meanings in the first table below. In the initial position, use the nine general states described in the Status-LED task. The source does not state exactly which other switch positions use those nine meanings.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, nine Status-LED states"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.3, GPS diagnostic LED table"
+        }
+      ]
+    },
+    {
+      "problem": "No messages arrive from the Pro-finder.",
+      "correction": "Use the Status-LED to narrow the cause. Alternating yellow/green means network registration without stored destination numbers; alternating red/yellow adds an ongoing network search. Blinking yellow means that the last SMS could not be sent. Blinking red means network search or no GSM reception. Steady red indicates a missing or defective SIM, alternating red/green indicates that the SIM PIN is still active, and steady yellow indicates modem connection setup.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, Status-LED states"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED colours cannot be distinguished reliably.",
+      "correction": "The source provides no colour-independent signal for all cases: red and green are both steady in GPS diagnosis, while chapter 3 uses red, yellow and green in steady and blinking combinations. Ask another person to describe the colour if necessary; this accessibility recommendation is not part of the original manual. Use the text descriptions rather than colour alone.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.3, GPS diagnostic LED table"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, nine Status-LED states"
+        }
+      ]
+    },
+    {
+      "problem": "GPS reception must be checked.",
+      "correction": "Set the operating-mode switch to F. Steady red, blinking yellow and steady green then show the GPS condition as listed below. Return the switch to its initial position after the check.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.3, GPS diagnostic procedure"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED is steady red in switch position F.",
+      "correction": "In position F this means that GPS is not connected. First check whether the optional GPS antenna is installed. If it is installed, disconnect power before checking the connector: remove the main harness, connect the GPS plug to the four-pin GPS socket and reconnect the main harness. The source does not identify what it calls the main harness. Return the switch to its initial position afterwards.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Sections 1.5.2 and 1.5.3"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED is still blinking yellow in position F after five minutes.",
+      "correction": "GPS data are arriving without a valid position. Move the vehicle into the open and, if necessary, relocate the antenna to a position with a clear view of the sky. Steady green indicates that the antenna position is suitable.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.3, yellow and green diagnostic states"
+        }
+      ]
+    },
+    {
+      "problem": "The reported position is inaccurate even though the antenna position appears suitable.",
+      "correction": "After installation, the source requires the operating voltage to remain above 13,5 V for at least five minutes so that current satellite data can be received and stored. GPS reception must be available during this process, and the vehicle should not be inside a building or beneath a roof.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.2, satellite-data storage"
+        }
+      ]
+    },
+    {
+      "problem": "A theft alert appears although the vehicle has not moved.",
+      "correction": "GPS reflections in buildings or beneath roofs can shift the calculated position and trigger an alert. The source links a theft alert to movement of approximately 900 m while WiPro III (safe.lock) is active and recommends disabling Geofencing before parking under cover. The required SMS command is intentionally omitted under BLK-005. The source also leaves unclear whether a device without WiPro III can send this alert; clarification from THITRONIK is pending.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Section 1.5.3, GPS reflections and Geofencing note"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, theft-alert explanation"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Section 5.2, Geofencing"
+        }
+      ]
+    },
+    {
+      "problem": "A theft alert arrives without visible indicators or an audible siren.",
+      "correction": "This matches the source's silent-alarm description. Its cross-reference for activating indicators and siren does not resolve the procedure: section 5.1 covers call-based WiPro III state changes in modes 2 and 3 and does not provide the claimed SMS method. No command is inferred here; the discrepancy remains open.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, theft-alert explanation"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Section 5.1 in full"
+        }
+      ]
+    },
+    {
+      "problem": "An alarm SMS is followed by a call, or no call follows a theft alert.",
+      "correction": "The reviewed pages describe an additional call to the master number after intrusion, gas and manual alarms. They do not describe an additional call after a Geofencing theft alert or an accessory-theft message. Do not rely on a call for those cases; monitor the SMS.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Chapter 4, intrusion, gas, manual and accessory-theft messages"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, theft-alert explanation"
+        }
+      ]
+    },
+    {
+      "problem": "A device message shows GPS as standby.",
+      "correction": "The source defines this as the GPS antenna being in standby and says that an event reactivates it automatically. However, the printed example messages do not contain the GPS or position fields listed in the chapter introduction, so their exact appearance remains unverified.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, field list and example messages"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Chapter 4, example messages"
+        }
+      ]
+    },
+    {
+      "problem": "An SMS sent to the device produces an input-help message instead of the expected response.",
+      "correction": "The source says that an invalid SMS received from a destination number triggers a help message listing possible commands. Those command strings are intentionally omitted because the accepted command language is unresolved. Compare against the original manual or obtain confirmed guidance; the source does not explain what happens when the sender is not a stored destination number.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Chapter 4, SMS input-help section"
+        }
+      ]
+    },
+    {
+      "problem": "None of the documented cases applies, or the problem remains.",
+      "correction": "Contact the specialist dealer first. The source also lists manufacturer support routes, but their current details are not repeated in this English draft because they have not been confirmed. Keep the Pro-finder serial number and software version available; the source says that both can be found on the device or in the THITRONIK App.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4, technical support"
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "tables_md": [
+    "| Status-LED colour in switch position F | Pattern | Meaning |\n| --- | --- | --- |\n| Red | Steady | GPS not connected |\n| Yellow | Blinking | GPS data are received without a valid position; if this remains after five minutes, check the vehicle and antenna location |\n| Green | Steady | GPS antenna position is suitable |",
+    "| Supply voltage | Documented Pro-finder behaviour (voltage-warning heading excludes mode B) |\n| --- | --- |\n| Sustained below 11,2 V | Enters standby to protect the battery and sends an SMS notice |\n| Between 11,2 V and 12,5 V | The source names only 12,5 V as the threshold for returning to normal operation |\n| Above 12,5 V | Returns to normal operation |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "12",
+      "region": "Sections 1.5.2 and 1.5.3"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Chapter 3, nine Status-LED states"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Chapter 4, report fields, theft alert and voltage warning"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "20",
+      "region": "Chapter 4, input help and alarm messages"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "21",
+      "region": "Sections 5.1 and 5.2"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Section 6.4, technical support"
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German troubleshooting master. All SMS commands, example coordinates and map addresses remain omitted. The mode-B voltage gap, silent-alert cross-reference, GPS-field mismatch and WiPro III dependency remain unresolved. Unconfirmed manufacturer contact details are not published. Technical and independent English-language reviews are pending."
+}

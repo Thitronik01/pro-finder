@@ -5,7 +5,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 60.1 %**
+**Gesamtfortschritt: 62.3 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
@@ -13,10 +13,10 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
-| Webanleitung und Review-UI               | 20 %    | 66 %        |
-| Übersetzungspilot                        | 10 %    | 60 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 48 %        |
-| Staging und Übergabe                     | 5 %     | 77 %        |
+| Webanleitung und Review-UI               | 20 %    | 68 %        |
+| Übersetzungspilot                        | 10 %    | 75 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 50 %        |
+| Staging und Übergabe                     | 5 %     | 79 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -27,7 +27,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die deutsche Karten-Beispielvariante mit THITRONIK abstimmen und dafuer die freigegebenen druckfaehigen Logo-/Produktassets sowie Entscheidungen zu finaler URL, Supportdaten und Kerbengeometrie einholen; bis dahin weder echten QR-Code noch Braillepunkte oder Supportkontakte einsetzen. Parallel die unabhaengigen Sprachreviews EN-01/EN-02 und den dritten geschuetzten englischen Vertical Slice fuer Aufgaben 11 bis 14 weiterfuehren.
+Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel die zweite Synthese-Auswertung der dokumentierten Widersprueche vorbereiten. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
 
 <!-- PROGRESS:END -->
 
@@ -120,6 +120,13 @@ Offene Blocker: 6 · Nächste Aktion: Die deutsche Karten-Beispielvariante mit T
   DOC-BMA-SN044 und beiden Seiten von DOC-KA-SN044 erstellt. Nur die
   Generationsentscheidung verwendet zusätzlich DOC-IBA-SN045, Seiten 2, 6 und 25, und
   kennzeichnet offen, dass die Grenze „ab -045“ allein aus der neueren Fassung stammt;
+- **der englische Pilot ab SN-045 umfasst alle vierzehn Aufgaben als belegte
+  KI-Übersetzungsentwürfe:** Drei getrennte Slices 01–05, 06–10 und 11–14 besitzen
+  task-level Quellenparität zum deutschen Master und bleiben `review_status: entwurf`.
+  EN-01 bis EN-03 bereiten den unabhängigen Sprachreview vor, enthalten aber keine
+  Entscheidung. Aufgabe 14 veröffentlicht die historischen Supportkontakte nicht; der
+  Tokencheck protokolliert ausschließlich die erlaubte Entfernung der Rufnummer unter
+  BLK-004 und verbietet weiterhin neue oder veränderte Kontakte;
 - **das versionierte Segmentformat v1 ist implementiert und mit fünf Batches belegt:**
   `content/segments/v1/sn-001-044/de/` enthält 56 quellennahe Segmente aus
   DOC-BMA-SN044, PDF-Seiten 3–18. Die 17 Segmente der Seiten 3–7 decken Lieferumfang,
@@ -298,10 +305,11 @@ Offene Blocker: 6 · Nächste Aktion: Die deutsche Karten-Beispielvariante mit T
   `security_behavior_test.sql`. Damit sind die beiden früher ausnutzbaren Umgehungen des
   Vier-Augen-Prinzips nicht mehr nur konstruktiv adressiert, sondern im Verhalten geprüft;
 - CI-Jobs `Code, content, security and build` (Prüfkette und Produktions-Build) grün;
-- **Playwright und axe laufen: 54 von 54 Tests bestanden**, davon axe-Prüfungen auf
-  WCAG-A/AA-Regeln über Chromium und ein 375-px-Mobilprofil. Alle zehn englischen
-  Taskrouten 01 bis 10 sind einzeln enthalten; ein zusätzlicher Pfad prüft Entwurfsstatus,
-  Sprache, Quellen und die zugängliche Pin-Tabelle. Der Produktions-Build erzeugt 47
+- **Playwright und axe laufen: 62 von 62 Tests bestanden**, davon axe-Prüfungen auf
+  WCAG-A/AA-Regeln über Chromium und ein 375-px-Mobilprofil. Alle vierzehn englischen
+  Taskrouten sind einzeln enthalten; ein zusätzlicher Pfad prüft Entwurfsstatus, Sprache,
+  Quellen, die zugängliche Pin-Tabelle und das Fehlen unbestätigter Supportlinks. Der
+  Produktions-Build erzeugt 51
   Seiten. Der erste echte Browserlauf hat drei reale Mängel aufgedeckt und behoben (siehe
   unten).
 
@@ -340,9 +348,9 @@ Offene Blocker: 6 · Nächste Aktion: Die deutsche Karten-Beispielvariante mit T
 - Karten-Andruck, finaler QR-Code, bestätigte URL, NFC-Inlay und -Ziel, Supportdaten,
   druckfähige Logo-/Produktassets, Kerbengeometrie, Braille, Reflexion und Tests mit
   betroffenen Personen: offen. Die deutsche Beispielvariante ist keine Produktionsfreigabe;
-- englischer Pilot: Aufgaben 01 bis 10 ab SN-045 als belegte KI-Übersetzungsentwürfe,
+- englischer Pilot: Aufgaben 01 bis 14 ab SN-045 als belegte KI-Übersetzungsentwürfe,
   geschützte Token und task-level Dokument-/Seitenmengen maschinell abgeglichen; EN-01
-  und EN-02 sind vorbereitet, aber ohne unabhängigen Sprachreview;
+  bis EN-03 sind vorbereitet, aber ohne unabhängigen Sprachreview;
 - technische und sicherheitskritische Inhalte: nicht fachlich freigegeben.
 
 ## Release-Blocker

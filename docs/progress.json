@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 60.1,
+  "overall_percent": 62.3,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -34,23 +34,23 @@
     },
     "application": {
       "label": "Webanleitung und Review-UI",
-      "percent": 66,
-      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt jetzt die zehn belegten Aufgaben 01 bis 10 ab SN-045 als klar markierte Entwuerfe mit englischen Warnungen, Tabellen, Textalternativen und Quellen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt 41/41 und filtert 6/11/11/8/5 Treffer. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
+      "percent": 68,
+      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt jetzt alle 14 belegten Aufgaben ab SN-045 als klar markierte Entwuerfe mit englischen Warnungen, Tabellen und Quellen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt 41/41 und filtert 6/11/11/8/5 Treffer. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
     },
     "translation": {
       "label": "Übersetzungspilot",
-      "percent": 60,
-      "note": "Zwei geschuetzte englische Vertical Slices umfassen Aufgaben 01 bis 10 ab SN-045. Alle zehn Dateien sind belegte KI-Uebersetzungsentwuerfe, placeholder false und review_status entwurf. tokens:check vergleicht alle zehn Paare erfolgreich; ein Unit-Test sichert zusaetzlich die task-level Quellenparitaet. SMS-Befehle, Berechtigungszeichen, Smartphone-Kennzeichen, Beispielnummern, Koordinaten, Kartenadressen und unbestaetigte Supportkontakte bleiben ausgelassen. EN-01 und EN-02 bereiten den unabhaengigen englischen Sprachreview vor. Aufgaben 11 bis 14 und beide realen Sprachreviews bleiben offen."
+      "percent": 75,
+      "note": "Drei geschuetzte englische Vertical Slices umfassen jetzt alle 14 Aufgaben ab SN-045. Alle Dateien sind belegte KI-Uebersetzungsentwuerfe, placeholder false und review_status entwurf. tokens:check vergleicht alle 14 Paare; ein Unit-Test sichert die task-level Quellenparitaet. Fuer Aufgabe 14 protokolliert der Check als enge Ausnahme nur die bewusste Auslassung der historischen Support-Rufnummer unter BLK-004; neue oder veraenderte Kontakte bleiben verboten. SMS-Befehle, Berechtigungszeichen, Beispielnummern, Koordinaten und Kartenadressen bleiben ausgelassen. EN-01 bis EN-03 bereiten die unabhaengigen englischen Sprachreviews vor; alle drei realen Reviews bleiben offen."
     },
     "qa": {
       "label": "Accessibility-, Security- und Content-QA",
-      "percent": 48,
-      "note": "npm run check, der Produktions-Build mit 47 Seiten und 54 Playwright-/axe-Tests sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht zehn DE/EN-Aufgabenpaare; ein Unit-Test prueft die task-level Dokument-/Seitenparitaet aller zehn Paare. Der Pin-1-Regressionstest bleibt aktiv. Der Karten-Preflight prueft vier SVGs auf Format, Mindestschrift, Entwurfsmarker und verbotene Scheininhalte sowie sieben Konzeptbilder auf Pixelmasse und SHA-256. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen."
+      "percent": 50,
+      "note": "npm run check und der Produktions-Build mit 51 Seiten sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht 14 DE/EN-Aufgabenpaare; ein Unit-Test prueft deren task-level Dokument-/Seitenparitaet. Browser- und axe-Abdeckung umfasst alle 14 englischen Taskrouten in Desktop- und Mobilprofil sowie den fehlenden tel-/mailto-Link der bewusst gesperrten Supportangaben. Der Karten-Preflight prueft vier SVGs und sieben Konzeptbilder. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen."
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 77,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. EN-01 und EN-02 dokumentieren fuer die englischen Aufgaben 01 bis 10 Quelldateien und Reviewgrenzen. Das Karten-Konzept-README dokumentiert jetzt Herkunft, Einordnung, Integritaet, bewusste Nichtuebernahmen und die Ableitung der deutschen Beispielvariante. Staging-Abnahme, realer Fachreview, beide unabhaengigen englischen Sprachreviews und alle Produktionsentscheidungen der Karte bleiben offen."
+      "percent": 79,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. Das Karten-Konzept-README dokumentiert Herkunft, Einordnung und bewusste Nichtuebernahmen. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews und alle Produktionsentscheidungen der Karte bleiben offen."
     }
   },
   "pdf_documents": [
@@ -156,5 +156,5 @@
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht."
   ],
-  "next_action": "Die deutsche Karten-Beispielvariante mit THITRONIK abstimmen und dafuer die freigegebenen druckfaehigen Logo-/Produktassets sowie Entscheidungen zu finaler URL, Supportdaten und Kerbengeometrie einholen; bis dahin weder echten QR-Code noch Braillepunkte oder Supportkontakte einsetzen. Parallel die unabhaengigen Sprachreviews EN-01/EN-02 und den dritten geschuetzten englischen Vertical Slice fuer Aufgaben 11 bis 14 weiterfuehren."
+  "next_action": "Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel die zweite Synthese-Auswertung der dokumentierten Widersprueche vorbereiten. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen."
 }
