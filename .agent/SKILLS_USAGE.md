@@ -12,6 +12,7 @@ unveränderlichen Quellenstände stehen in [`SKILLS_LOCK.json`](SKILLS_LOCK.json
 | --- | --- | --- |
 | `anthropic-skills` | PDF | PDF-Seiten visuell geprüft sowie Text und Metadaten für die quellengenaue Inhaltsinventur ausgewertet. Die Ergebnisse bleiben Entwürfe bis zum fachlichen Review. |
 | `openai-primary-runtime` 26.805.11740 | PDF | DOC-BMA-SN044, PDF-Seiten 3–7 und 12–17, mit gebündeltem Poppler bei 300/400 dpi erneut gerendert und vor der Erstellung von P0-03 bis P0-05 vollständig visuell gegen die validierten Segmente geprüft. Keine technische Freigabe abgeleitet. |
+| `openai-github-plugin` 0.1.8-2841cf9749ae | GitHub | Den vorgeschriebenen Draft-PR angelegt und den PR-gebundenen CI-Lauf bis zum grünen Endstatus aller drei Jobs überwacht. Keine automatische Freigabe oder Zusammenführung vorgenommen. |
 | `supabase-agent-skills` | Supabase | Schema, Migrationen, Row Level Security (RLS), Storage-Policies und Datenzugriffsgrenzen auf Sicherheits- und Rollenrisiken geprüft. |
 | `supabase-agent-skills` | Postgres Best Practices | Rollen-, Rechte-, Foreign-Key- und RLS-Regeln für die Sicherheitsprüfung der Datenbank angewendet. |
 | `vercel-agent-skills` | Next.js | Next.js-16-Konventionen für asynchrone Request-APIs, `proxy.ts` und Content Security Policy (CSP) bei den App-Änderungen berücksichtigt. |

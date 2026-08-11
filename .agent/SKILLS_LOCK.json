@@ -21,6 +21,19 @@
       }
     },
     {
+      "name": "openai-github-plugin",
+      "source_uri": "plugin://openai-curated-remote/github/0.1.8-2841cf9749ae",
+      "version": "0.1.8-2841cf9749ae",
+      "repository": "https://github.com/openai/plugins",
+      "commit": null,
+      "retrieved_at": "2026-08-11",
+      "license": {
+        "spdx": "MIT",
+        "status": "declared-in-plugin-manifest",
+        "note": "Die lokale Plugin-Metadatei nennt Repository und MIT-Lizenz; ein vollständiger Commit-SHA wird im gebündelten Cache nicht ausgewiesen. Verwendet wurden nur die GitHub-App-Aufrufe für PR- und CI-Status, keine Skill-Inhalte im Produktcode."
+      }
+    },
+    {
       "name": "anthropic-skills",
       "repository": "https://github.com/anthropics/skills.git",
       "commit": "b29e7cf65e5cb78a5ac33d582270551bc74a14eb",

@@ -323,9 +323,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   Paketfilter der internen Reviewoberfläche, Unit-/E2E-Abdeckung sowie Fortschritts- und
   Übergabedokumentation. Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
   Supabase-Migrationen blieben unverändert.
-- **Genutzter Skill:** PDF aus `openai-primary-runtime` 26.805.11740 für Render- und
-  Sichtprüfung der Seiten 3–7 und 12–17. Nutzung und fehlende öffentliche
-  Repository-/Lizenzmetadaten stehen transparent in `.agent/SKILLS_USAGE.md` und
+- **Genutzte Skills:** PDF aus `openai-primary-runtime` 26.805.11740 für Render- und
+  Sichtprüfung der Seiten 3–7 und 12–17 sowie das GitHub-Plugin 0.1.8-2841cf9749ae zum
+  Anlegen des Draft-PR und Überwachen der CI. Nutzung und verfügbare beziehungsweise
+  fehlende Herkunftsmetadaten stehen transparent in `.agent/SKILLS_USAGE.md` und
   `.agent/SKILLS_LOCK.json`; kein Skill-Inhalt wurde in Produktcode kopiert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
   `npm run format` → `npm run check` vollständig grün; darin 35 Unit-Tests sowie Segment-,
@@ -335,6 +336,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   bestanden.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
   erwartungsgemäß nichts zu prüfen.
+- **GitHub-Abschluss:** Der dafür vorgesehene Bootstrap-Platzhalter `079f05e` wurde als
+  `main` wiederhergestellt, ohne einen neuen Commit direkt auf `main` zu erzeugen. Draft-PR
+  #1 enthält den Feature-Branch-Stand. CI-Lauf #32 ist mit allen drei Jobs grün; Merge und
+  fachliche Abnahme bleiben ausdrücklich menschlich.
 
 ```text
 Resume from:
