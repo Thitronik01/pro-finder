@@ -1,0 +1,187 @@
+{
+  "slug": "wire-connections",
+  "title": "Wire the connections and module",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Identify the Pro-finder connections and connect the module to the vehicle supply with the correct polarity and fuse, optionally linking it to the WiPro III (safe.lock).",
+  "prerequisites": [
+    "The installation location has been selected.",
+    "The power supply is disconnected while work is carried out.",
+    "The supplied fuse and wiring harness are available."
+  ],
+  "warnings": [
+    {
+      "text": "Protect the positive supply lead with the supplied fuse.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4 “Modul anschließen”, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "Pin 6 and Pin 7 supply 12 V and may each be loaded with no more than 500 mA. Switch higher-current loads through a high-quality automotive relay with a flyback diode. Overloading voids the warranty.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, third paragraph"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Use the connection overview to identify the four controls and the eight-pin connector: operating-mode switch (A), WiPro III connection (B), external GPS antenna connection (C) and Status-LED (D).",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2 “Anschlüsse, Anzeigen und Bedienelemente”"
+        }
+      ]
+    },
+    {
+      "text": "Connect Pin 1 (ground) and Pin 8 (permanent positive 12 V) to a suitable 12 V DC supply with the correct polarity.",
+      "expected": "The supply is connected and positive and ground have not been reversed.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, first paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2, legend for Pin 1 and Pin 8"
+        }
+      ]
+    },
+    {
+      "text": "Protect the positive supply lead with the supplied fuse.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "If required, connect loads to the outputs: Pin 7 is output A and Pin 6 is output B. Observe the 500 mA limit for each output.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2, legend for Pin 6 and Pin 7"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, third paragraph"
+        }
+      ]
+    },
+    {
+      "text": "If required, use Pins 2 to 5 as measurement inputs U2 to U5. They can monitor voltages from 0 to 30 V; depending on the operating mode, Geofencing can also be activated through Pin 3.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, first paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2, legend for Pins 2 to 5"
+        }
+      ]
+    },
+    {
+      "text": "If applicable, use the supplied WiPro III connection cable at connection B to link the WiPro III (safe.lock) and the Pro-finder.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, second paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2, legend entry B"
+        }
+      ]
+    }
+  ],
+  "expected_result": "The Pro-finder is connected to the vehicle supply with the correct polarity and fuse. Connected loads remain within the stated limit, and an installed WiPro III (safe.lock) is linked through connection B.",
+  "error_cases": [
+    {
+      "problem": "A load requires more than 500 mA.",
+      "correction": "Switch it through a high-quality automotive relay with a flyback diode. A direct connection overloads the output; overloading voids the warranty.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Section 1.4, third paragraph"
+        }
+      ]
+    },
+    {
+      "problem": "The pin assignment at the connector is unclear.",
+      "correction": "The legend in section 1.2 gives the full assignment: Pin 1 ground (GND), Pins 2 to 5 measurement inputs U2 to U5, Pin 6 output B, Pin 7 output A and Pin 8 permanent positive 12 V. The table below reproduces it as text.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2, complete connector legend"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s08-anschlussseite",
+      "alt": "Annotated photograph of the Pro-finder connection side with labels A to D and numbered Pins 1 to 8.",
+      "long_description": "Photograph of the narrow device side. From left to right: a white rotary operating-mode switch labelled A; a black WiPro III socket labelled B; an unexplained red X over another opening; a square external-GPS-antenna socket labelled C; the eight-pin connector with Pins 5, 6, 7 and 8 above Pins 4, 3, 2 and 1; and a small green Status-LED labelled D. Additional photographs above show the WiPro III connected to B and the optional GPS antenna connected to C.",
+      "steps_text": [
+        "A is the operating-mode switch.",
+        "B is the WiPro III connection.",
+        "C is the external GPS antenna connection.",
+        "D is the Status-LED.",
+        "The table gives the assignment for Pins 1 to 8."
+      ],
+      "data_table_md": "| Label | Meaning |\n| --- | --- |\n| A | Operating-mode switch |\n| B | WiPro III connection |\n| C | External GPS antenna (optional) |\n| D | Status-LED |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "8",
+        "region": "Section 1.2, annotated photograph and legend"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Pin | Assignment |\n| --- | --- |\n| 1 | Ground (GND) |\n| 2 | Measurement input (U2) |\n| 3 | Measurement input (U3) |\n| 4 | Measurement input (U4) |\n| 5 | Measurement input (U5) |\n| 6 | Output B |\n| 7 | Output A |\n| 8 | Permanent positive 12 V |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "8",
+      "region": "Section 1.2 “Anschlüsse, Anzeigen und Bedienelemente”",
+      "note": "Rendered and fully reviewed visually; the connector legend is image content."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "11",
+      "region": "Section 1.4 “Modul anschließen”",
+      "note": "Rendered and fully reviewed visually."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted translation draft based exclusively on the reviewed German master. The source says to fuse the positive lead but does not assign that lead to Pin 1; the corrected master and this translation retain Pin 1 as ground and Pin 8 as permanent positive. SMS output commands remain omitted under BLK-005. Technical and independent English-language reviews are pending."
+}

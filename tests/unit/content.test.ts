@@ -38,6 +38,25 @@ describe('Content-Layer', () => {
     }
   });
 
+  it('der englische Pilot enthält die Aufgaben 01 bis 05 als ungeprüfte Entwürfe', () => {
+    const tasks = loadTasks('sn-045-plus', 'en');
+    expect(tasks.map((task) => task.slug)).toEqual([
+      'determine-device-generation',
+      'choose-installation-location',
+      'wire-connections',
+      'prepare-and-insert-sim-card',
+      'install-app-and-activate',
+    ]);
+    for (const task of tasks) {
+      expect(task.placeholder, task.slug).toBe(false);
+      expect(task.review_status, task.slug).toBe('entwurf');
+      expect(
+        task.sources.some((source) => source.pages !== null),
+        task.slug,
+      ).toBe(true);
+    }
+  });
+
   it('SN-044 hat eine repräsentative Aufgabe (Versionstest)', () => {
     const tasks = loadTasks('sn-001-044', 'de');
     expect(tasks.length).toBeGreaterThanOrEqual(1);
@@ -52,6 +71,14 @@ describe('Content-Layer', () => {
         expect(task.review_status, file).not.toBe('freigegeben');
       }
     }
+  });
+
+  it('Pin 1 wird im SN-045-Master nie als Plus-Leitung bezeichnet', () => {
+    const task = loadTasks('sn-045-plus', 'de').find((entry) => entry.slug === 'anschluesse');
+    expect(task).toBeDefined();
+    expect(JSON.stringify(task)).not.toContain('Plus-Leitung an Pin 1');
+    expect(task?.tables_md.join('\n')).toContain('| 1 | Masse (GND) |');
+    expect(task?.tables_md.join('\n')).toContain('| 8 | Dauerplus 12 V |');
   });
 
   // Eine unparsbare Tabelle rendert `TaskView` als nichts: kein Fehler, keine Lücke,

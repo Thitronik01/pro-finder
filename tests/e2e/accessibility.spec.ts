@@ -15,6 +15,11 @@ const PAGES = [
   '/pro-finder/sn-045-plus/de/status-led',
   '/pro-finder/sn-001-044/de',
   '/pro-finder/sn-045-plus/en',
+  '/pro-finder/sn-045-plus/en/determine-device-generation',
+  '/pro-finder/sn-045-plus/en/choose-installation-location',
+  '/pro-finder/sn-045-plus/en/wire-connections',
+  '/pro-finder/sn-045-plus/en/prepare-and-insert-sim-card',
+  '/pro-finder/sn-045-plus/en/install-app-and-activate',
   '/pro-finder/wechsel?von=sn-045-plus&nach=sn-001-044&sprache=de',
   '/dashboard',
   '/review',
@@ -79,6 +84,24 @@ test('Dokumentsprache und CSP werden serverseitig korrekt gesetzt', async ({ pag
 
   await page.goto('/pro-finder/sn-045-plus/en');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+});
+
+test('englischer Pilot zeigt fünf belegte Entwurfsaufgaben ohne Platzhalter', async ({ page }) => {
+  await page.goto('/pro-finder/sn-045-plus/en');
+  const taskLinks = page.getByRole('navigation', { name: 'Tasks' }).getByRole('link');
+  await expect(taskLinks).toHaveCount(5);
+  await expect(page.getByText('– draft', { exact: true })).toHaveCount(5);
+  await expect(page.getByText('– in preparation', { exact: true })).toHaveCount(0);
+
+  await page.getByRole('link', { name: 'Wire the connections and module' }).click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.getByText('Draft – content has not yet been reviewed')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Sources' })).toBeVisible();
+  const pinTable = page.getByRole('table', {
+    name: 'Table 1: Wire the connections and module',
+  });
+  await expect(pinTable.getByRole('columnheader', { name: 'Pin' })).toBeVisible();
+  await expect(pinTable.getByRole('row', { name: '1 Ground (GND)' })).toBeVisible();
 });
 
 test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ page }) => {

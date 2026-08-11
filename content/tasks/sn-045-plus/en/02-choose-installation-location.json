@@ -1,0 +1,137 @@
+{
+  "slug": "choose-installation-location",
+  "title": "Choose the installation location",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Choose a location for the Pro-finder that is protected against unauthorised access, allows GPS reception and remains accessible for later servicing.",
+  "prerequisites": [
+    "The supplied parts have been checked and are complete.",
+    "The vehicle is positioned so that you can reach the intended installation area."
+  ],
+  "warnings": [
+    {
+      "text": "The installation location must be inside the vehicle. Never install the device in the engine compartment.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1 “Montageort wählen”, second paragraph"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Choose a location that is adequately protected against unauthorised access but remains accessible for later servicing, such as replacing the SIM card.",
+      "expected": "The location is not readily accessible from outside, but you can reach it without dismantling the installation.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "Orient the device with its top side facing upwards. The Pro-finder has an integrated GPS receiver, so its orientation affects reception.",
+      "expected": "The top side with the GPS emblem faces upwards.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, second paragraph"
+        }
+      ]
+    },
+    {
+      "text": "Provide a clear view towards the satellites. The source states that plastics, glass and wood are penetrated by the GPS signal and do not obstruct this view.",
+      "expected": "Only plastic, glass or wood is above the device, not metal.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, third paragraph"
+        }
+      ]
+    },
+    {
+      "text": "If the chosen location does not allow GPS reception, plan to use an external GPS antenna. The source states that the cable between the GSM module and GPS antenna is two metres long; the external antenna also needs the clearest possible view of the satellites.",
+      "expected": "The planned antenna position can be reached with the supplied two-metre cable.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, fourth paragraph"
+        }
+      ]
+    },
+    {
+      "text": "A possible location for the external GPS antenna is beneath plastic dashboard trim, for example the instrument-cluster cover.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, fifth paragraph"
+        }
+      ]
+    }
+  ],
+  "expected_result": "The Pro-finder is installed inside the vehicle, top side facing upwards, in a protected but service-accessible location with a clear view towards the sky.",
+  "error_cases": [
+    {
+      "problem": "GPS reception is not possible at the intended installation location.",
+      "correction": "Connect the optional external GPS antenna. The cable between the GSM module and antenna is two metres long, and the antenna itself needs the clearest possible view of the satellites.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, fourth paragraph"
+        }
+      ]
+    },
+    {
+      "problem": "The only accessible location is in the engine compartment.",
+      "correction": "Do not use that location. The manual expressly prohibits installation in the engine compartment; choose a location inside the vehicle.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "7",
+          "region": "Section 1.1, second paragraph"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s07-einbaulage",
+      "alt": "Three illustrations showing the correct device orientation, the incorrect orientation and a motorhome with a marked antenna location.",
+      "long_description": "On the left, the Pro-finder module has its top side and blue GPS emblem facing upwards and is enclosed by a green circle. In the centre, the same module is upside down and enclosed by a red prohibition circle. On the right, a line drawing of a motorhome uses a satellite symbol and dotted line to indicate a green area in the dashboard as a possible location for the external GPS antenna.",
+      "steps_text": [
+        "Correct: the top side with the GPS emblem faces upwards.",
+        "Incorrect: the device is upside down and its top side faces downwards.",
+        "The external GPS antenna may be placed beneath plastic dashboard trim."
+      ],
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "7",
+        "region": "Section 1.1, illustration strip below the text"
+      }
+    }
+  ],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "7",
+      "region": "Section 1.1 “Montageort wählen”",
+      "note": "Rendered and fully reviewed visually; the page has no usable text layer."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted translation draft based exclusively on the reviewed German master. The engine-compartment prohibition and the stated antenna cable length were preserved without reinterpretation. Technical and independent English-language reviews are pending."
+}

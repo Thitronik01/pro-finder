@@ -5,18 +5,18 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 50.5 %**
+**Gesamtfortschritt: 54.8 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
-| Bootstrap                                | 5 %     | 85 %        |
+| Bootstrap                                | 5 %     | 90 %        |
 | Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 30 %        |
-| Webanleitung und Review-UI               | 20 %    | 58 %        |
-| Übersetzungspilot                        | 10 %    | 10 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 38 %        |
-| Staging und Übergabe                     | 5 %     | 67 %        |
+| Webanleitung und Review-UI               | 20 %    | 62 %        |
+| Übersetzungspilot                        | 10 %    | 35 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 43 %        |
+| Staging und Übergabe                     | 5 %     | 72 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -27,7 +27,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 7 · Nächste Aktion: Den englischen Pilot als ersten geschuetzten Vertical Slice aus dem deutschen Master ab SN-045 beginnen: Aufgaben 01 bis 05 quellengetreu uebersetzen, weiterhin als Entwurf markieren und alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit tokens:check vergleichen. SMS-Befehle, ungeklaerte Berechtigungsregeln und unbestaetigte Supportwege bleiben ausgelassen. Danach einen unabhaengigen englischen Sprachreview vorbereiten; Details stehen in docs/HANDOFF.md.
+Offene Blocker: 6 · Nächste Aktion: Den unabhaengigen englischen Sprachreview fuer EN-01 organisatorisch einholen; bis dahin keine der Aufgaben 01 bis 05 hoeherstufen. Parallel den zweiten geschuetzten englischen Vertical Slice fuer Aufgaben 06 bis 10 ab SN-045 vorbereiten: weiterhin aus dem deutschen Master, mit tokens:check und ohne SMS-Befehle, ungeklaerte Berechtigungsregeln, Beispielnummern oder unbestaetigte Supportwege.
 
 <!-- PROGRESS:END -->
 
@@ -293,9 +293,11 @@ Offene Blocker: 7 · Nächste Aktion: Den englischen Pilot als ersten geschuetzt
   `security_behavior_test.sql`. Damit sind die beiden früher ausnutzbaren Umgehungen des
   Vier-Augen-Prinzips nicht mehr nur konstruktiv adressiert, sondern im Verhalten geprüft;
 - CI-Jobs `Code, content, security and build` (Prüfkette und Produktions-Build) grün;
-- **Playwright und axe laufen: 32 von 32 Tests bestanden**, davon axe-Prüfungen auf
-  WCAG-A/AA-Regeln über Chromium und ein 375-px-Mobilprofil. Der erste echte Browserlauf
-  hat drei reale Mängel aufgedeckt und behoben (siehe unten).
+- **Playwright und axe laufen: 44 von 44 Tests bestanden**, davon axe-Prüfungen auf
+  WCAG-A/AA-Regeln über Chromium und ein 375-px-Mobilprofil. Alle fünf englischen
+  Taskrouten 01 bis 05 sind einzeln enthalten; ein zusätzlicher Pfad prüft Entwurfsstatus,
+  Sprache, Quellen und die zugängliche Pin-Tabelle. Der erste echte Browserlauf hat drei
+  reale Mängel aufgedeckt und behoben (siehe unten).
 
 ## Nicht als bestanden behaupten
 
@@ -330,7 +332,8 @@ Offene Blocker: 7 · Nächste Aktion: Den englischen Pilot als ersten geschuetzt
   fachlichen Review: sämtliche technischen Werte sind weiterhin unbestätigt;
 - Netlify Preview, Zugriffsschutz und internes Staging: nicht verbunden/nicht abgenommen;
 - Karten-Andruck, QR, NFC, Braille, Reflexion und Tests mit betroffenen Personen: offen;
-- englischer Pilot: nur Struktur/Platzhalter, kein unabhängiger Sprachreview;
+- englischer Pilot: Aufgaben 01 bis 05 ab SN-045 als belegte KI-Übersetzungsentwürfe,
+  geschützte Token maschinell abgeglichen; kein unabhängiger Sprachreview;
 - technische und sicherheitskritische Inhalte: nicht fachlich freigegeben.
 
 ## Release-Blocker

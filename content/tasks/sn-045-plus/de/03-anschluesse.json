@@ -11,7 +11,7 @@
   ],
   "warnings": [
     {
-      "text": "Sichern Sie die Plus-Leitung an Pin 1 mit der beiliegenden Sicherung ab.",
+      "text": "Sichern Sie die Plus-Leitung mit der beiliegenden Sicherung ab.",
       "safety_class": "sicherheitskritisch",
       "sources": [
         {
@@ -144,5 +144,5 @@
   "safety_class": "sicherheitskritisch",
   "review_status": "entwurf",
   "placeholder": false,
-  "change_reason": "Erstextraktion aus zwei geprüften deutschen Quellseiten. Die Pinbelegung liegt in der Quelle nur als Bildlegende vor und ist hier zusätzlich als Tabelle wiedergegeben. Die drei Schaltarten der Ausgänge sind bewusst NICHT als SMS-Befehle ausgeführt: die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1). Technischer Review steht aus."
+  "change_reason": "Erstextraktion aus zwei geprüften deutschen Quellseiten. Die Pinbelegung liegt in der Quelle nur als Bildlegende vor und ist hier zusätzlich als Tabelle wiedergegeben. Die drei Schaltarten der Ausgänge sind bewusst NICHT als SMS-Befehle ausgeführt: die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1). Am 2026-08-11 wurde die unbelegte Ergänzung „an Pin 1“ aus der Sicherungswarnung entfernt: Abschnitt 1.4 verlangt nur, die Plus-Leitung abzusichern; Abschnitt 1.2 weist Pin 1 eindeutig Masse (GND) und Pin 8 Dauerplus 12 V zu. Technischer Review steht aus."
 }

@@ -1,13 +1,16 @@
 # Manuelle Accessibility-Testmatrix
 
-Stand: 2026-08-07. `offen` bedeutet: nicht ausgeführt. Automatische axe-Prüfungen ersetzen
+Stand: 2026-08-11. `offen` bedeutet: nicht ausgeführt. Automatische axe-Prüfungen ersetzen
 keinen Test mit assistiven Technologien und keine Konformitätserklärung.
 
 ## Automatisierter Lauf (Playwright + axe)
 
-Am 2026-08-07 lief die Suite erstmals mit echtem Browser: 32 von 32 Tests bestanden,
-über Chromium und ein 375-px-Mobilprofil. Der erste Lauf hatte fünf Fehlschläge, die auf
-drei reale Mängel in der eigenen Oberfläche zurückgingen. Alle drei sind behoben:
+Der aktuelle Lauf am 2026-08-11 umfasst **44 von 44 bestandene Tests** über Chromium und
+ein 375-px-Mobilprofil. Alle fünf englischen Taskrouten 01 bis 05 werden einzeln mit axe
+geprüft; zusätzlich sichert ein Browserpfad fünf Entwurfslinks, englisches `lang`,
+Quellenanzeige und die zugängliche Pin-Tabelle. Beim erstmaligen Browserlauf am
+2026-08-07 gingen fünf Fehlschläge auf drei reale Mängel in der eigenen Oberfläche
+zurück. Alle drei sind behoben:
 
 1. **Scrollbereiche ohne Tastaturzugang** (`/dashboard`, axe-Regel
    `scrollable-region-focusable`, Schwere „serious"). Die Tabellen lagen in einer

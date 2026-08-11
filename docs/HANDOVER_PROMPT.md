@@ -34,19 +34,22 @@ stehen auf `entwurf`. DOC-BMA-SN044 Seiten 3–18 sind mit 56 Segmenten vollstä
 quellenvalidiert. P0-01 bis P0-05 decken alle 41 sicherheitskritischen Segmente in fünf
 entscheidungsreifen, aber vollständig offenen Fachreviewdossiers ab.
 
-Der exakte erste Batch und seine Sperren stehen unter „First action" in `HANDOFF.md`.
+Der exakte nächste Batch und seine Sperren stehen unter „First action" in `HANDOFF.md`.
 Kurzfassung:
 
-1. Den englischen Pilot mit den Aufgaben 01 bis 05 ab SN-045 beginnen.
-2. Ausschließlich den quellengeprüften deutschen Master übertragen; Generation,
+1. EN-01 für die bereits übertragenen englischen Aufgaben 01 bis 05 einem unabhängigen
+   englischen Sprachreview zuführen; bis dahin keine Statusanhebung.
+2. Parallel den zweiten englischen Vertical Slice mit Aufgaben 06 bis 10 ab SN-045
+   vorbereiten.
+3. Ausschließlich den quellengeprüften deutschen Master übertragen; Generation,
    Dokumente, PDF-Seiten, Regionen und Sicherheitsklassen unverändert bewahren.
-3. Alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit
+4. Alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit
    `npm run tokens:check` vergleichen.
-4. BLK-005/006 strikt erhalten: keine SMS-Befehle oder aus Beispielen abgeleitete
+5. BLK-005/006 strikt erhalten: keine SMS-Befehle oder aus Beispielen abgeleitete
    Berechtigungsregel ergänzen.
-5. Jede Datei bleibt `review_status: entwurf`; ohne unabhängigen englischen Sprachreview
+6. Jede Datei bleibt `review_status: entwurf`; ohne unabhängigen englischen Sprachreview
    keine Freigabe und keine höhere Fortschrittsstufe behaupten.
-6. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
+7. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
    **in dieser Reihenfolge** –, committen, pushen und CI abwarten.
 
 Die PDF-Werkzeuge bleiben für Aufgabenextraktion und Gegenprüfung verfügbar:
@@ -140,12 +143,13 @@ Impressum 72):
 ### Der aktuelle Haupthebel
 
 **Übersetzungspilot** (10 % Gewicht). Der deutsche Master und seine Quellenbelege stehen;
-die englische Pilotstruktur ist noch Platzhalter. Als nächstes:
+die englischen Aufgaben 01 bis 05 sind belegte KI-Übersetzungsentwürfe und EN-01 ist für
+den unabhängigen Sprachreview vorbereitet. Als nächstes:
 
-1. Aufgaben 01 bis 05 als ersten geschützten englischen Vertical Slice übertragen.
-2. Geschützte Token maschinell vergleichen und jede Datei als KI-Übersetzungsentwurf
-   kennzeichnen.
-3. Unabhängigen englischen Sprachreview vorbereiten. Der technische Fachreview aller
+1. EN-01 organisatorisch einem unabhängigen englischen Reviewer zuweisen.
+2. Aufgaben 06 bis 10 als zweiten geschützten englischen Vertical Slice übertragen und
+   die geschützten Token maschinell vergleichen.
+3. Jede Datei als KI-Übersetzungsentwurf kennzeichnen. Der technische Fachreview aller
    sicherheitskritischen Werte bleibt parallel offen.
 
 Das Datenbankschema für Segmente steht in

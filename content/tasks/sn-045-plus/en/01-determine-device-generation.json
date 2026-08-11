@@ -3,23 +3,228 @@
   "title": "Determine your device generation",
   "generation": "sn-045-plus",
   "language": "en",
-  "goal": "Find out whether the manual „up to SN-044“ or „from SN-045“ applies to your device.",
-  "prerequisites": [],
-  "warnings": [],
-  "steps": [],
-  "expected_result": null,
-  "error_cases": [],
-  "figures": [],
-  "tables_md": [],
+  "goal": "Determine whether the information marked “from SN-045” applies to your Pro-finder and continue with the version of the manual that matches your device.",
+  "prerequisites": [
+    "You can access your Pro-finder module or have the THITRONIK App available.",
+    "The supplied quick reference guide is available in case the serial number was entered on it."
+  ],
+  "warnings": [
+    {
+      "text": "The cover of the German-language manual section limits its scope with the printed wording “(ab Seriennr. -045)”, including the hyphen before the number. If your device is older, the connection values, operating modes and messages in this version do not apply to it.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Cover of the German-language section, title block “Pro-finder (ab Seriennr. -045)”"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "3",
+          "region": "German table of contents, entries for operating mode, module connection, reports, messages and warnings"
+        }
+      ]
+    },
+    {
+      "text": "The manual does not say where the serial number is located on the device or how it must be read. It names only the device itself and the THITRONIK App as places to find it. Do not guess; ask for confirmation if the assignment remains unclear.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4 “Technische Unterstützung”, second paragraph"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Find the serial number of your Pro-finder. Section 6.4 names two possible locations: the device itself and the THITRONIK App.",
+      "expected": "You have a serial number in front of you.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4 “Technische Unterstützung”, second paragraph"
+        }
+      ]
+    },
+    {
+      "text": "Also check the front of the supplied quick reference guide. It provides an empty field labelled “Serial number:” where the number can be entered.",
+      "expected": "If the number was entered there, you can read it. The printed field itself is empty.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Section “Lieferumfang”, product photograph and item 7 in the parts list"
+        },
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Outside of the folded guide, title panel and “Serial number:” field"
+        }
+      ]
+    },
+    {
+      "text": "Compare the serial number with the 045 boundary. The German section cover says “Pro-finder (ab Seriennr. -045)”; the quick reference guide shown with the product writes the same range as “Pro-finder SN 0699 - 045 +”.",
+      "expected": "You can say whether the device falls within this range, or identify that you cannot determine it safely.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Cover of the German-language section, title block"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Section “Lieferumfang”, product photograph"
+        }
+      ]
+    },
+    {
+      "text": "Choose the “from SN-045” version if your device falls within this range. Otherwise switch to the “up to SN-044” version; the information in this manual does not apply to the older range.",
+      "expected": "You continue with the manual version that matches the stated scope of your device.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Cover of the German-language section, title block"
+        }
+      ]
+    },
+    {
+      "text": "If you cannot find the number or cannot assign it safely, confirm the generation before continuing. Ask your specialist dealer first; if they cannot help, contact THITRONIK technical support.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4 “Technische Unterstützung”, first and second paragraphs"
+        }
+      ]
+    }
+  ],
+  "expected_result": "You know whether your Pro-finder falls within the range from serial number 045 and continue with the matching manual. If the assignment remains unclear, it has been confirmed by a specialist dealer or technical support before you proceed.",
+  "error_cases": [
+    {
+      "problem": "I cannot find the serial number.",
+      "correction": "The manual gives no position on the device and no reading rule. It only says that the serial number and software version can be found on the device itself or in the THITRONIK App. Ask your specialist dealer first. If they cannot help, contact THITRONIK technical support and have the serial number and software version ready if available.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4 “Technische Unterstützung”, first and second paragraphs"
+        }
+      ]
+    },
+    {
+      "problem": "I have a number but cannot safely assign it to the 045 boundary.",
+      "correction": "Do not assign it by assumption. The source expresses the range in three forms: “(ab Seriennr. -045)” on the German cover, “(as of serial no. -045)” on the English cover and “SN 0699 - 045 +” on the supplied quick reference guide. It never explains which part of a serial number must be compared. Ask a specialist dealer or technical support to confirm the assignment.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Cover of the German-language section"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "26",
+          "region": "Cover of the English-language section"
+        },
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Quick reference guide title panel"
+        }
+      ]
+    },
+    {
+      "problem": "The cover in front of me does not mention a serial number.",
+      "correction": "Check which cover you are viewing. The multilingual cover for the complete document has the product name, ten title lines, the manufacturer address and “Rev.: 1.3/Stand: 06/2025”, but no serial-number range. The range appears on the cover of each language section. A cover without the range says nothing about your device; use the number on the device or in the THITRONIK App.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "1",
+          "region": "Multilingual document cover"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Cover of the German-language section"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4 “Technische Unterstützung”, second paragraph"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s02-deckblatt-deutsch",
+      "alt": "Cover of the German-language manual section; the title states that it applies from serial number 045.",
+      "long_description": "Portrait page with a dark-blue background and the THITRONIK logo at the top left in a white curved header. The centred title has two lines: “Pro-finder” and “(ab Seriennr. -045)”. Beneath it, a small black-red-gold flag and the italic wording “Installations- und Bedienungsanleitung” identify the German section. The lower-left area contains the manufacturer address and contact labels. A circuit-board pattern is decorative. The complete page is an image and exposes no readable text to assistive software.",
+      "steps_text": [
+        "The first title line names the product: Pro-finder.",
+        "The second title line gives the scope: ab Seriennr. -045.",
+        "The flag identifies the following section as German.",
+        "The wording beside the flag identifies the document as an installation and operating manual."
+      ],
+      "data_table_md": "| Cover element | Printed text |\n| --- | --- |\n| Title, line 1 | Pro-finder |\n| Title, line 2 | (ab Seriennr. -045) |\n| Text beside the flag | Installations- und Bedienungsanleitung |\n| Language | indicated only by the black-red-gold flag |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "2",
+        "region": "Cover of the German-language section"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Location | Printed range wording |\n| --- | --- |\n| German section cover, PDF page 2 | Pro-finder (ab Seriennr. -045) |\n| English section cover, PDF page 26 | Pro-finder (as of serial no. -045) |\n| Supplied quick reference guide shown on PDF page 6 | Pro-finder SN 0699 - 045 + |\n| Multilingual cover, PDF page 1 | no serial-number range |"
+  ],
   "sources": [
     {
       "doc": "DOC-IBA-SN045",
-      "pages": null,
-      "note": "Seitenangabe folgt aus der seitenweisen PDF-Prüfung."
+      "pages": "1",
+      "region": "Multilingual cover, title block, language list and revision notice",
+      "note": "Rendered and visually reviewed; the page gives no serial-number range."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "2",
+      "region": "Cover of the German-language section, title block",
+      "note": "Rendered and visually reviewed; the title is image content."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "3",
+      "region": "German table of contents, chapters 1 to 5.7",
+      "note": "Documents the generation-dependent subjects covered by this manual section."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "6",
+      "region": "Section “Lieferumfang”, product photograph and parts list"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Section 6.4 “Technische Unterstützung”"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "26",
+      "region": "Cover of the English-language section, title block"
+    },
+    {
+      "doc": "DOC-KA-SN045",
+      "pages": "1",
+      "region": "Outside of the folded guide, title panel and serial-number field"
     }
   ],
-  "safety_class": "normal",
+  "safety_class": "sicherheitsrelevant",
   "review_status": "entwurf",
-  "placeholder": true,
-  "change_reason": "Initial English pilot skeleton; awaiting reviewed German master."
+  "placeholder": false,
+  "change_reason": "AI-assisted translation draft based exclusively on the reviewed German master. The unknown serial-number location and reading rule remain unresolved (DSC-023). No value from the device generation up to SN-044 was imported as technical guidance. Protected product names and serial-number boundaries are preserved for automated comparison. Independent English-language review is pending."
 }

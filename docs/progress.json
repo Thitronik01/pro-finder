@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 50.5,
+  "overall_percent": 54.8,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -14,8 +14,8 @@
   "workstreams": {
     "bootstrap": {
       "label": "Bootstrap",
-      "percent": 85,
-      "note": "Repo, Branch, Basisdokumente, Stack, CI, Netlify-Konfiguration stehen; offen: verifizierter Deploy Preview und lokaler Supabase-Stack (Docker-Daemon lief in Sitzung 1 nicht)."
+      "percent": 90,
+      "note": "Repo, main-Basispunkt, Feature-Branch, Draft-PR #1, Basisdokumente, Stack, CI und Netlify-Konfiguration stehen; der finale Head-Commit wurde mit allen drei CI-Jobs gruen geprueft. Offen: verifizierter Deploy Preview und lokaler Supabase-Stack (Docker-Daemon lief in Sitzung 1 nicht)."
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
@@ -34,23 +34,23 @@
     },
     "application": {
       "label": "Webanleitung und Review-UI",
-      "percent": 58,
-      "note": "Startseite, Versionsrouten, Wechselbestätigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind jetzt genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt die Abdeckung 41/41, besitzt einen eigenen Pruefpaketfilter und direkte Paketlinks mit 6/11/11/8/5 Treffern. Paket-ID, Prioritaet, Generation und Quelle bleiben textlich sichtbar. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
+      "percent": 62,
+      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt jetzt die fuenf belegten Aufgaben 01 bis 05 ab SN-045 als klar markierte Entwuerfe mit englischen Warnungen, Tabellen, Textalternativen und Quellen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt 41/41 und filtert 6/11/11/8/5 Treffer. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
     },
     "translation": {
       "label": "Übersetzungspilot",
-      "percent": 10,
-      "note": "Workflow und Schutzregeln definiert, EN-Pilotstruktur angelegt. Das kanonische Repo-Format content/segments/v1 ist aus dem Datenbankschema abgeleitet; fuenf deutsche Batches umfassen jetzt 56 quellennahe Segmente mit Kontext, Sicherheitsklasse und Pruefsumme. Alle fuenf Batches und alle 56 Segmente sind quellenvalidiert, aber weiterhin nicht technisch freigegeben. Die deutsche Inhalts-Extraktion reicht bis zur letzten Inhaltsseite. Noch keine Uebersetzung und kein unabhaengiger Sprachreview."
+      "percent": 35,
+      "note": "Der erste geschuetzte englische Vertical Slice umfasst Aufgaben 01 bis 05 ab SN-045: Generation bestimmen, Montageort, Anschluesse, SIM-Karte sowie App und Aktivierung. Alle fuenf Dateien sind belegte KI-Uebersetzungsentwuerfe, placeholder false und review_status entwurf. tokens:check vergleicht alle fuenf Paare erfolgreich; SMS-Befehle, Beispielnummern, Koordinaten, ungeklaerte Berechtigungsregeln und unbestaetigte Supportkontakte bleiben ausgelassen. EN-01 bereitet den unabhaengigen englischen Sprachreview vor. Aufgaben 06 bis 14 und der reale Sprachreview bleiben offen."
     },
     "qa": {
       "label": "Accessibility-, Security- und Content-QA",
-      "percent": 38,
-      "note": "npm run check und der Playwright/axe-Lauf sind gruen. Inhaltspruefungen sichern darstellbare Markdown-Tabellen, den Ausschluss von Koordinaten/Kartenlinks/Rufnummern aus Beispiel-SMS, vollstaendige Quellen, eindeutige DSC-Verweise, Segmentpruefsummen und BLK-005. Alle fuenf Segmentbatches sind gegen hochaufloesende Renderings validiert. Neun Unit-Tests sichern Prioritaeten, die exakten P0-01-bis-P0-05-Zuordnungen und die vollstaendige Abdeckung aller 41 P0-Segmente. Der E2E-Test prueft die Abdeckungskennzahl 41/41, alle fuenf direkten Paketfilter mit 6/11/11/8/5 Treffern sowie den eigenen Paket-Select. Fuer P0-03 bis P0-05 wurden DOC-BMA-SN044 Seiten 3-7 und 12-17 am 2026-08-11 erneut visuell gerendert und gelesen; gesperrte Befehle, Radien, Berechtigungszeichen, Koordinaten und Beispielkontakte bleiben ausgelassen. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix bleibt offen."
+      "percent": 43,
+      "note": "npm run check und der Playwright/axe-Lauf sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht jetzt fuenf DE/EN-Aufgabenpaare. Ein neuer Regressionstest verhindert, dass Pin 1 erneut als Plus-Leitung bezeichnet wird, und prueft Pin 1 = Masse sowie Pin 8 = Dauerplus 12 V. Unit- und Browsertests sichern fuenf englische Entwurfsaufgaben, Sprachmetadaten, Quellenanzeige, Tabellen und axe auf allen fuenf englischen Taskrouten. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix bleibt offen."
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 67,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. Zwei Hilfswerkzeuge sichern die Seitenpruefung; content/segments/README.md dokumentiert den kanonischen Import- und Reviewvertrag. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente pro Wert beziehungsweise Aussage Quelle, Gegenquelle oder Quellenluecke, DSC-/Rueckfrage und benoetigte THITRONIK-Entscheidung zusammen. Die Dossiers umfassen Elektrik/GPS, SIM/PIN/Zielrufnummern, Meldungen/Alarm/Geofencing, Montage/Betriebsarten/GPS-Diagnose sowie Ausgaenge/Positionsbewertung. Sie wahren BLK-005/006, sind in /review eindeutig filterbar, simulieren keine Freigabe und trennen bis SN-044 strikt von ab SN-045. Staging-Abnahme und realer Fachreview bleiben offen."
+      "percent": 72,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. EN-01 dokumentiert fuer die englischen Aufgaben 01 bis 05 Quelldateien, Reviewgrenzen, Terminologie, geschuetzte Token, Reviewer-Checkliste, Entscheidungsprotokoll und Exit-Kriterien, simuliert aber keine Freigabe. Staging-Abnahme, realer Fachreview und unabhaengiger englischer Sprachreview bleiben offen."
     }
   },
   "pdf_documents": [
@@ -95,12 +95,6 @@
       "title": "Docker-Daemon lief nicht – lokaler Supabase-Stack ungetestet",
       "detail": "supabase start / db reset / test db konnten lokal nicht ausgeführt werden; Migrationen und RLS-Tests sind versioniert, laufen aber erst in CI bzw. nach Docker-Start. Am 2026-08-07 erneut versucht: Docker Desktop ist installiert, startet in dieser Umgebung aber keinen Daemon (kein Prozess, npipe fehlt). Die Härtungsmigration und die behavioral pgTAP-Tests sind damit ausschließlich statisch geprüft.",
       "severity": "hoch"
-    },
-    {
-      "id": "BLK-002",
-      "title": "Kein GitHub-CLI/Token für automatische PR-Erstellung",
-      "detail": "Branch-Push über Git Credential Manager; Draft-PR muss ggf. über die GitHub-Weboberfläche erstellt werden (Compare-URL in HANDOFF).",
-      "severity": "niedrig"
     },
     {
       "id": "BLK-003",
@@ -162,5 +156,5 @@
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht."
   ],
-  "next_action": "Den englischen Pilot als ersten geschuetzten Vertical Slice aus dem deutschen Master ab SN-045 beginnen: Aufgaben 01 bis 05 quellengetreu uebersetzen, weiterhin als Entwurf markieren und alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit tokens:check vergleichen. SMS-Befehle, ungeklaerte Berechtigungsregeln und unbestaetigte Supportwege bleiben ausgelassen. Danach einen unabhaengigen englischen Sprachreview vorbereiten; Details stehen in docs/HANDOFF.md."
+  "next_action": "Den unabhaengigen englischen Sprachreview fuer EN-01 organisatorisch einholen; bis dahin keine der Aufgaben 01 bis 05 hoeherstufen. Parallel den zweiten geschuetzten englischen Vertical Slice fuer Aufgaben 06 bis 10 ab SN-045 vorbereiten: weiterhin aus dem deutschen Master, mit tokens:check und ohne SMS-Befehle, ungeklaerte Berechtigungsregeln, Beispielnummern oder unbestaetigte Supportwege."
 }
