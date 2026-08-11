@@ -38,7 +38,7 @@ describe('Content-Layer', () => {
     }
   });
 
-  it('der englische Pilot enthält die Aufgaben 01 bis 05 als ungeprüfte Entwürfe', () => {
+  it('der englische Pilot enthält die Aufgaben 01 bis 10 als ungeprüfte Entwürfe', () => {
     const tasks = loadTasks('sn-045-plus', 'en');
     expect(tasks.map((task) => task.slug)).toEqual([
       'determine-device-generation',
@@ -46,6 +46,11 @@ describe('Content-Layer', () => {
       'wire-connections',
       'prepare-and-insert-sim-card',
       'install-app-and-activate',
+      'manage-destination-numbers',
+      'understand-status-led',
+      'understand-messages',
+      'use-geofencing',
+      'request-status-report',
     ]);
     for (const task of tasks) {
       expect(task.placeholder, task.slug).toBe(false);
@@ -55,6 +60,18 @@ describe('Content-Layer', () => {
         task.slug,
       ).toBe(true);
     }
+  });
+
+  it('englische Aufgaben 01 bis 10 behalten die Quellenmenge ihrer deutschen Master', () => {
+    const de = loadTasks('sn-045-plus', 'de').slice(0, 10);
+    const en = loadTasks('sn-045-plus', 'en');
+    const sourceSet = (task: (typeof de)[number]) =>
+      [...new Set(task.sources.map((source) => `${source.doc}:${source.pages}`))].sort();
+
+    expect(en).toHaveLength(de.length);
+    en.forEach((task, index) => {
+      expect(sourceSet(task), task.slug).toEqual(sourceSet(de[index]));
+    });
   });
 
   it('SN-044 hat eine repräsentative Aufgabe (Versionstest)', () => {

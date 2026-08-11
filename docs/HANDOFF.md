@@ -1,9 +1,27 @@
 # Handoff
 
-Stand: 2026-08-11 (zwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-11 (einundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
+
+### Geschützter englischer Vertical Slice für Aufgaben 06 bis 10
+
+- Die englischen Aufgaben `manage-destination-numbers`, `understand-status-led`,
+  `understand-messages`, `use-geofencing` und `request-status-report` sind aus dem
+  geprüften deutschen Master ab SN-045 übertragen. Alle fünf bleiben
+  `review_status: entwurf`, sind keine Platzhalter und besitzen Dokument-/Seitenquellen.
+- Der Slice übernimmt die sicherheitsrelevanten Grenzen ausdrücklich: keine SMS-Befehle,
+  Berechtigungszeichen, Smartphone-Kennzeichen, Beispielrufnummern, Koordinaten oder
+  vollständigen Kartenadressen. Widersprüche zu Geofencing, Pin-3-Priorität, UTC,
+  veralteten GPS-Positionen, Statusberichtsfeldern und Betriebsarten C bis F bleiben
+  sichtbar, statt sprachlich aufgelöst zu werden.
+- `npm run tokens:check` vergleicht jetzt zehn DE/EN-Paare. Ein zusätzlicher Unit-Test
+  sichert für Aufgaben 01 bis 10 die task-level Dokument-/Seitenparität mit dem deutschen
+  Master. EN-02 dokumentiert Reviewgrenzen, geschützte Werte, Checkliste,
+  Entscheidungsprotokoll und Exit-Kriterien für den unabhängigen Sprachreview.
+- Der Produktions-Build erzeugt 47 Seiten. 54 Playwright-/axe-Tests prüfen alle zehn
+  englischen Taskrouten im Desktop- und Mobilprofil; alle Läufe sind grün.
 
 ### Geschützter englischer Vertical Slice für Aufgaben 01 bis 05
 
@@ -292,9 +310,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - P0-01 bis P0-05 sind intern reviewbereit und decken alle 41 P0-Segmente ab, warten aber
   auf den realen THITRONIK-Fachreview. Keine der 121 vorbereiteten Einzelentscheidungen
   ist beantwortet und kein Segmentstatus wurde geändert.
-- Der unabhängige englische Sprachreview von EN-01 ist organisatorisch offen. Keine der
-  fünf Aufgaben darf vorher höhergestuft werden. Parallel kann der zweite geschützte
-  Vertical Slice aus den deutschen Aufgaben 06 bis 10 ab SN-045 vorbereitet werden.
+- Die unabhängigen englischen Sprachreviews von EN-01 und EN-02 sind organisatorisch
+  offen. Keine der zehn Aufgaben darf vorher höhergestuft werden. Parallel kann der
+  dritte geschützte Vertical Slice aus den deutschen Aufgaben 11 bis 14 ab SN-045
+  vorbereitet werden.
 - Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
   unabhängige Gegenprüfung; 51 bleiben auf
@@ -330,8 +349,8 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   Batches besitzen eine unabhängige Gegenprüfung; Korrekturen stehen im jeweiligen
   `change_reason`.
 - **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
-  gefüllt, alle `entwurf`, kein Platzhalter. Englisch ab SN-045 besitzt zusätzlich fünf
-  belegte Aufgabenentwürfe (01 bis 05), ebenfalls ohne Platzhalter.
+  gefüllt, alle `entwurf`, kein Platzhalter. Englisch ab SN-045 besitzt zusätzlich zehn
+  belegte Aufgabenentwürfe (01 bis 10), ebenfalls ohne Platzhalter.
 - **Prüfpakete:** P0-01 bis P0-05 enthalten 6/11/11/8/5 P0-Segmente und zusammen 121
   einzeln referenzierbare Entscheidungen. Damit sind 41 von 41 P0-Segmenten genau einem
   entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Die Review-UI zeigt
@@ -339,9 +358,9 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - **Register:** Die Fehlklassifikation der 2-m-Aussage wurde in DSC-073 und DSC-079
   transparent korrigiert; Rückfragenübersicht und Seitenrecords sind synchron. Höchster
   Eintrag bleibt DSC-085; siebzehn Fragen und sechs aktive Blocker.
-- **Geänderte Bereiche:** fünf englische Aufgabenentwürfe, EN-01, die korrigierte deutsche
-  Sicherungswarnung, Token-/Unit-/E2E-Abdeckung sowie Fortschritts- und
-  Übergabedokumentation. Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
+- **Geänderte Bereiche:** fünf weitere englische Aufgabenentwürfe (06 bis 10), EN-02,
+  Quellenparitäts-/Token-/E2E-Abdeckung sowie Fortschritts- und Übergabedokumentation.
+  Deutsche Master, Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
   Supabase-Migrationen blieben unverändert.
 - **Genutzte Skills:** PDF aus `openai-primary-runtime` 26.805.11740 für Render- und
   Sichtprüfung der Seiten 3–7 und 12–17 sowie das GitHub-Plugin 0.1.8-2841cf9749ae zum
@@ -349,10 +368,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   fehlende Herkunftsmetadaten stehen transparent in `.agent/SKILLS_USAGE.md` und
   `.agent/SKILLS_LOCK.json`; kein Skill-Inhalt wurde in Produktcode kopiert.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
-  `npm run format` → `npm run check` vollständig grün; darin 37 Unit-Tests sowie Segment-,
+  `npm run format` → `npm run check` vollständig grün; darin 38 Unit-Tests sowie Segment-,
   Content-, Referenz-, Secret-, Token-, Lockfile- und Fortschrittsprüfung. `npm run build`
-  ist mit 42 generierten Seiten grün. 44 von 44 Playwright-/axe-Tests einschließlich aller
-  fünf englischen Taskrouten, Entwurfs-/Quellennachweis, Pin-Tabelle, der
+  ist mit 47 generierten Seiten grün. 54 von 54 Playwright-/axe-Tests einschließlich aller
+  zehn englischen Taskrouten, Entwurfs-/Quellennachweis, Pin-Tabelle, der
   Abdeckungskennzahl 41/41 und aller P0-01-bis-P0-05-Filter bei Desktop- und Mobilbreite
   bestanden.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
@@ -364,17 +383,18 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ```text
 Resume from:
-Englischer Pilot ab SN-045 mit Aufgaben 01 bis 05 als belegte KI-Uebersetzungsentwuerfe;
-tokens:check vergleicht alle fuenf DE/EN-Paare. EN-01 ist fuer den unabhaengigen
-Sprachreview vorbereitet, aber unbeantwortet. Der deutsche Anschluss-Master nennt nach
-Korrektur Pin 1 nur als Masse und Pin 8 als Dauerplus 12 V. Kein technischer oder
-sprachlicher Inhalt ist freigegeben; BLK-005/006 und sechs aktive Blocker bleiben offen.
+Englischer Pilot ab SN-045 mit Aufgaben 01 bis 10 als belegte KI-Uebersetzungsentwuerfe;
+tokens:check vergleicht alle zehn DE/EN-Paare und ein Unit-Test sichert die task-level
+Quellenparitaet. EN-01 und EN-02 sind fuer unabhaengige Sprachreviews vorbereitet, aber
+unbeantwortet. Kein technischer oder sprachlicher Inhalt ist freigegeben; BLK-005/006 und
+sechs aktive Blocker bleiben offen.
 
 First action:
-Den unabhaengigen englischen Sprachreview fuer EN-01 organisatorisch einholen; Aufgaben 01
-bis 05 bis dahin nicht hoeherstufen. Parallel den zweiten geschuetzten Vertical Slice fuer
-Aufgaben 06 bis 10 aus dem deutschen Master ab SN-045 vorbereiten. BLK-005/006 strikt
-erhalten und keine SMS-Befehle, Beispielnummern oder unbestaetigten Supportwege uebernehmen.
+Die unabhaengigen englischen Sprachreviews fuer EN-01 und EN-02 organisatorisch einholen;
+Aufgaben 01 bis 10 bis dahin nicht hoeherstufen. Parallel den dritten geschuetzten Vertical
+Slice fuer Aufgaben 11 bis 14 aus dem deutschen Master ab SN-045 vorbereiten. BLK-005/006
+strikt erhalten und keine SMS-Befehle, Beispielwerte oder unbestaetigten Supportwege
+uebernehmen.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

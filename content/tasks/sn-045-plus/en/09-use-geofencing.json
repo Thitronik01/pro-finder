@@ -1,0 +1,247 @@
+{
+  "slug": "use-geofencing",
+  "title": "Use geofencing",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Know when the virtual fence around the vehicle can be switched through pin 3, when a connected WiPro III (safe.lock) changes it automatically, and how to recognise a theft message.",
+  "prerequisites": [
+    "The Pro-finder is connected, operational and reachable through the number of its installed SIM card.",
+    "Your telephone number is saved as an authorised number. Only authorised numbers can access the Pro-finder.",
+    "You know the operating-mode selector position because it determines whether pin 3 can switch geofencing.",
+    "For switching through pin 3, the selector is at 8 or B and pin 3 receives a voltage that can be switched deliberately.",
+    "For automatic coupling, a WiPro III (safe.lock) is connected to the Pro-finder.",
+    "The vehicle has GPS reception. Reflections in buildings or beneath a roof can seriously affect position accuracy."
+  ],
+  "warnings": [
+    {
+      "text": "A connected WiPro III (safe.lock) changes geofencing without a separate action: arming activates geofencing and disarming deactivates it. Do not assume that a previously selected geofencing state will remain unchanged.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2, red note box" }]
+    },
+    {
+      "text": "GPS-signal reflections inside buildings or beneath a roof can seriously reduce position accuracy and can trigger a theft message even though the vehicle has not moved. THITRONIK recommends switching geofencing off while the vehicle is parked in such a location.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2, final paragraph" }
+      ]
+    },
+    {
+      "text": "A theft message is a silent alarm. Neither indicators nor siren are activated, so make sure that Pro-finder SMS messages can be received and noticed.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4, theft-message explanation" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Geofencing creates a virtual fence around the vehicle. The source describes the distance once as a 900 m area and once as movement beyond approximately 900 m. The theft-message explanation also requires an active WiPro III (safe.lock), while section 5.2 does not state that condition.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2" },
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4, theft-message explanation" }
+      ]
+    },
+    {
+      "text": "Read the operating-mode selector and compare it with the table below. Only positions 8 and B give switching thresholds for pin 3. Positions 0 to 7, 9 and A show a dash, while C to F have no separate geofencing cell.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "Operating-mode table, geofencing column"
+        }
+      ]
+    },
+    {
+      "text": "In selector position 8, more than 6 V at pin 3 switches geofencing on and less than 5 V switches it off. The voltage may, for example, follow the ignition or interior lighting.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table, position 8" },
+        { "doc": "DOC-IBA-SN045", "pages": "9", "region": "Section 1.3, geofencing through pin 3" }
+      ]
+    },
+    {
+      "text": "In selector position B, the logic is reversed: more than 6 V at pin 3 switches geofencing off and less than 5 V switches it on.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table, position B" }
+      ]
+    },
+    {
+      "text": "For other selector positions, section 5.2 describes switching geofencing by SMS to the Pro-finder number. This draft deliberately omits the command words because their valid language remains unresolved.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2" }]
+    },
+    {
+      "text": "If a WiPro III (safe.lock) is connected, arming it automatically activates geofencing and disarming it automatically deactivates geofencing. The source does not define priority if pin 3 simultaneously requests the opposite state.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2, note box" },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "Operating-mode table, positions 8 and B"
+        }
+      ]
+    },
+    {
+      "text": "Remember where geofencing was activated. Before using it at a new location, switch it off at the previous location and only then activate it at the new one.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Section 5.2, location-change instruction"
+        }
+      ]
+    },
+    {
+      "text": "Switch geofencing off before parking inside a building or beneath a roof.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2, GPS-reflection warning" }
+      ]
+    },
+    {
+      "text": "Request a status report to check the geofencing state. In positions 8 and B, calling the installed SIM number causes the Pro-finder to end the call and send a report to the caller. Do not call for this purpose in modes 2 and 3: the call changes the WiPro III (safe.lock) state instead.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" },
+        { "doc": "DOC-IBA-SN045", "pages": "9", "region": "Section 1.3, call functions" },
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.1" }
+      ]
+    },
+    {
+      "text": "Read the Fence line in the status report. The printed example shows Fence ON but does not show how the off state is written.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "19", "region": "Status-report example" }]
+    }
+  ],
+  "expected_result": "You know which selector positions allow pin-3 control, when a connected WiPro III (safe.lock) changes geofencing automatically, and how to check the state. With geofencing active, the manual describes a silent theft SMS containing the event, UTC time, position and speed after the vehicle leaves the area around the original location. Whether that message is also sent without an active WiPro III (safe.lock) remains unresolved.",
+  "error_cases": [
+    {
+      "problem": "A theft message arrives although the vehicle has not moved.",
+      "correction": "Check whether the vehicle is inside a building or beneath a roof. GPS reflections can greatly reduce position accuracy. THITRONIK recommends disabling geofencing while parked there.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2, GPS-reflection warning" }
+      ]
+    },
+    {
+      "problem": "Geofencing cannot be activated at a new location.",
+      "correction": "First deactivate it at the previous location; then activate it at the new location.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Section 5.2, location-change instruction"
+        }
+      ]
+    },
+    {
+      "problem": "The geofencing state changed without a direct command.",
+      "correction": "Check the WiPro III (safe.lock) state. Arming activates geofencing and disarming deactivates it. If pin 3 requests the opposite state in position 8 or B, the source does not define which input has priority; check the reported state rather than assuming one.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2, note box" },
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" }
+      ]
+    },
+    {
+      "problem": "You want to rely on geofencing without a connected and armed WiPro III (safe.lock).",
+      "correction": "The manual is ambiguous. Section 5.2 describes geofencing without this condition, but the theft-message explanation expressly requires an active WiPro III (safe.lock). Do not rely on an alarm in this configuration until THITRONIK clarifies it.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2" },
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Theft-message explanation" }
+      ]
+    },
+    {
+      "problem": "Pin 3 is between 5 V and 6 V in selector position 8 or B.",
+      "correction": "The table defines only above 6 V and below 5 V. It gives no behaviour for the range between those thresholds. Use a signal clearly outside that undefined range and do not rely on the intermediate range.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "Operating-mode table, positions 8 and B"
+        }
+      ]
+    },
+    {
+      "problem": "The selector is at C, D, E or F and it is unclear whether geofencing works.",
+      "correction": "The operating-mode table has no separate geofencing statement for these rows, while section 5.2 broadly says all other positions use SMS. The source does not establish whether that includes C to F; clarify this before relying on geofencing.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "Operating-mode table, positions C to F"
+        },
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2" }
+      ]
+    },
+    {
+      "problem": "An SMS is sent to the Pro-finder, but nothing happens.",
+      "correction": "Check that it was sent from an authorised number. This draft omits the unconfirmed command words; consult the original manual until the command language is clarified.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.1 note and section 5.2" },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Section 1.3 reference to destination-number roles"
+        }
+      ]
+    },
+    {
+      "problem": "The supply voltage falls while you rely on geofencing.",
+      "correction": "Below 11,2 V, the Pro-finder enters battery-protection standby; it returns to normal operation only above 12,5 V. The manual does not say whether geofencing still reports in standby. It also states that mode B has no voltage warning, and reports in positions 8 and B contain none of U1 to U5.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Voltage-warning explanation" },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "Operating-mode table, positions 8 and B"
+        }
+      ]
+    },
+    {
+      "problem": "You expect indicators or a siren after a theft message.",
+      "correction": "The theft message is silent. Chapter 4 claims both can be activated by SMS and points to section 5.1, but that section describes only changing WiPro III (safe.lock) by phone call and does not mention indicators, siren or such an SMS command. The broken reference must be clarified with THITRONIK.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Theft-message explanation" },
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.1" }
+      ]
+    },
+    {
+      "problem": "It is unclear which telephone number should receive the geofencing SMS.",
+      "correction": "Section 5.2 says the Pro-finder number, while section 1.5.3 says the GSM-module number. The source does not confirm that these are identical, and this draft omits the unconfirmed command words.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2" },
+        { "doc": "DOC-IBA-SN045", "pages": "12", "region": "Section 1.5.3" }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s19-diebstahlmeldung-sms",
+      "alt": "Example theft message shown as a black SMS bubble with white text.",
+      "long_description": "A black rounded speech bubble represents an incoming SMS. It contains four items: theft through geofencing, a UTC time, an underlined map-service address containing vehicle coordinates, and speed in kilometres per hour. All values are examples; the address and coordinates are deliberately omitted from this task. The source explanation appears beside the bubble rather than inside it.",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "19",
+        "region": "Chapter 4, theft-message SMS example"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Operating mode (selector position) | Geofencing switchable through pin 3 |\n| --- | --- |\n| 0 | not through pin 3 (source: dash) |\n| 1 | not through pin 3 (source: dash) |\n| 2 | not through pin 3 (source: dash) |\n| 3 | not through pin 3 (source: dash) |\n| 4 | not through pin 3 (source: dash) |\n| 5 | not through pin 3 (source: dash) |\n| 6 | not through pin 3 (source: dash) |\n| 7 | not through pin 3 (source: dash) |\n| 8 | above 6 V: on; below 5 V: off |\n| 9 | not through pin 3 (source: dash) |\n| A | not through pin 3 (source: dash) |\n| B | above 6 V: off; below 5 V: on |\n| C | no geofencing statement; merged cell gives only a 90-second status-report interval |\n| D | no geofencing statement; merged cell gives only an 8-minute status-report interval |\n| E | no geofencing statement; row gives only deletion of destination numbers |\n| F | no geofencing statement; row gives only GPS diagnostics |"
+  ],
+  "sources": [
+    { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Sections 5.1 and 5.2" },
+    { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Section 1.3, calls and geofencing through pin 3"
+    },
+    { "doc": "DOC-IBA-SN045", "pages": "12", "region": "Section 1.5.3, GPS-antenna test" },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Chapter 4, message fields, theft and voltage warnings"
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. No geofencing command word, example coordinate or map address was imported. The unresolved command language, pin-3/WiPro priority, theft prerequisites and C-to-F behaviour remain explicit. Technical and independent English-language reviews are pending."
+}

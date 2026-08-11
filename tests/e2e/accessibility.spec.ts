@@ -20,6 +20,11 @@ const PAGES = [
   '/pro-finder/sn-045-plus/en/wire-connections',
   '/pro-finder/sn-045-plus/en/prepare-and-insert-sim-card',
   '/pro-finder/sn-045-plus/en/install-app-and-activate',
+  '/pro-finder/sn-045-plus/en/manage-destination-numbers',
+  '/pro-finder/sn-045-plus/en/understand-status-led',
+  '/pro-finder/sn-045-plus/en/understand-messages',
+  '/pro-finder/sn-045-plus/en/use-geofencing',
+  '/pro-finder/sn-045-plus/en/request-status-report',
   '/pro-finder/wechsel?von=sn-045-plus&nach=sn-001-044&sprache=de',
   '/dashboard',
   '/review',
@@ -86,11 +91,11 @@ test('Dokumentsprache und CSP werden serverseitig korrekt gesetzt', async ({ pag
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
 });
 
-test('englischer Pilot zeigt fünf belegte Entwurfsaufgaben ohne Platzhalter', async ({ page }) => {
+test('englischer Pilot zeigt zehn belegte Entwurfsaufgaben ohne Platzhalter', async ({ page }) => {
   await page.goto('/pro-finder/sn-045-plus/en');
   const taskLinks = page.getByRole('navigation', { name: 'Tasks' }).getByRole('link');
-  await expect(taskLinks).toHaveCount(5);
-  await expect(page.getByText('– draft', { exact: true })).toHaveCount(5);
+  await expect(taskLinks).toHaveCount(10);
+  await expect(page.getByText('– draft', { exact: true })).toHaveCount(10);
   await expect(page.getByText('– in preparation', { exact: true })).toHaveCount(0);
 
   await page.getByRole('link', { name: 'Wire the connections and module' }).click();
