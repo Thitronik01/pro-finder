@@ -27,7 +27,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel die zweite Synthese-Auswertung der dokumentierten Widersprueche vorbereiten. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
+Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
 
 <!-- PROGRESS:END -->
 
@@ -85,6 +85,19 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   `ogrodzenie wyłączone` mit `fence off`. Schwedisch weist `fence pa` sowohl dem Ein- als
   auch dem Ausschalten zu, während das Kapitel zum Ausschalten `fence av` nennt
   (DSC-085). BLK-005 bleibt;
+- **zweite Synthese-Auswertung abgeschlossen:** Die technischen Werte sind jetzt nach
+  Gerätegeneration, Dokumentstand und Sprachfassung gegenübergestellt. Die Matrix bündelt
+  Generationsauswahl, SIM-Format, Stromaufnahme, Versorgung, Konformitätsbezug,
+  GPS-Kabellänge, Geofencing-Radius und Betriebsart D mit Dokument- und Seitenbelegen.
+  Ergebnis: Selbst innerhalb einer Generation widersprechen sich Unterlagen oder
+  Sprachfassungen; Mehrheiten und gleiche Zahlen sind keine technische Freigabe. Kein
+  Reviewstatus wurde angehoben, und Rückfragen 2, 4, 14, 15 und 16 bleiben offen;
+- **dritte Synthese-Auswertung abgeschlossen:** Die Zugänglichkeitsbefunde sind nach
+  PDF-Struktur, Textebene, visueller Semantik, nicht lokalisiertem Bildinhalt,
+  Status-LED am Gerät und ungeklärter Produktlogik getrennt. Ergebnis: Semantisches HTML
+  kann die Quellstruktur neu ausdrücken, aber weder die farbabhängige Geräteanzeige noch
+  widersprüchliche technische Funktionen reparieren. Automatische Browser- und axe-Tests
+  bleiben klar von PDF/UA, manueller AT-Prüfung und physischer Kartenabnahme abgegrenzt;
 - **DOC-IBA-SN045 vollständig geprüft:** Die dänischen
   Seiten 101–123 bestätigen die deutsche Bildbeschriftung „GPS-Antenne (Optional)", das
   unerklärte rote X, beide falschen Installationsverweise und den irreführenden

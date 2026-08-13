@@ -37,19 +37,18 @@ entscheidungsreifen, aber vollständig offenen Fachreviewdossiers ab.
 Der exakte nächste Batch und seine Sperren stehen unter „First action" in `HANDOFF.md`.
 Kurzfassung:
 
-1. EN-01 für die bereits übertragenen englischen Aufgaben 01 bis 05 einem unabhängigen
-   englischen Sprachreview zuführen; bis dahin keine Statusanhebung.
-2. Parallel den zweiten englischen Vertical Slice mit Aufgaben 06 bis 10 ab SN-045
-   vorbereiten.
-3. Ausschließlich den quellengeprüften deutschen Master übertragen; Generation,
-   Dokumente, PDF-Seiten, Regionen und Sicherheitsklassen unverändert bewahren.
-4. Alle Produktnamen, Seriennummerngrenzen, Einheiten, URLs und technischen Werte mit
-   `npm run tokens:check` vergleichen.
-5. BLK-005/006 strikt erhalten: keine SMS-Befehle oder aus Beispielen abgeleitete
-   Berechtigungsregel ergänzen.
-6. Jede Datei bleibt `review_status: entwurf`; ohne unabhängigen englischen Sprachreview
-   keine Freigabe und keine höhere Fortschrittsstufe behaupten.
-7. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
+1. EN-01 bis EN-03 für alle vierzehn bereits übertragenen englischen Aufgaben einem
+   unabhängigen englischen Sprachreview zuführen; bis dahin keine Statusanhebung.
+2. Parallel den ersten manuellen QA-Batch für Tastatur, 200/400-Prozent-Zoom, Reflow,
+   Forced Colors und Reduced Motion vorbereiten und nachvollziehbar protokollieren.
+3. Nur tatsächlich ausgeführte Prüfungen als bestanden markieren. NVDA, VoiceOver,
+   TalkBack und physische Kartentests bleiben offen, solange die nötigen Geräte und
+   Testpersonen fehlen.
+4. BLK-005/006/007 strikt erhalten: keine SMS-Befehle, aus Beispielen abgeleitete
+   Berechtigungsregel oder unbelegte Geofencing-Funktion ergänzen.
+5. Für die Karte weiterhin bestätigte URL, Supportdaten, Logo-/Produktassets und
+   Kerbengeometrie anfordern; keinen echten QR-Code und keine Braillepunkte erfinden.
+6. Am Sitzungsende `npm run progress`, dann `npm run format`, dann `npm run check` –
    **in dieser Reihenfolge** –, committen, pushen und CI abwarten.
 
 Die PDF-Werkzeuge bleiben für Aufgabenextraktion und Gegenprüfung verfügbar:
@@ -142,15 +141,17 @@ Impressum 72):
 
 ### Der aktuelle Haupthebel
 
-**Übersetzungspilot** (10 % Gewicht). Der deutsche Master und seine Quellenbelege stehen;
-die englischen Aufgaben 01 bis 05 sind belegte KI-Übersetzungsentwürfe und EN-01 ist für
-den unabhängigen Sprachreview vorbereitet. Als nächstes:
+**Unabhängige Reviews und manuelle QA.** Der deutsche Master und seine Quellenbelege
+stehen; alle vierzehn englischen Aufgaben sind belegte KI-Übersetzungsentwürfe. EN-01 bis
+EN-03 sind vorbereitet, aber unbeantwortet. Die drei dokumentierten Synthese-Auswertungen
+decken SMS-Befehle, technische Werte sowie die Grenze zwischen PDF, HTML und Gerät ab.
+Als nächstes:
 
-1. EN-01 organisatorisch einem unabhängigen englischen Reviewer zuweisen.
-2. Aufgaben 06 bis 10 als zweiten geschützten englischen Vertical Slice übertragen und
-   die geschützten Token maschinell vergleichen.
-3. Jede Datei als KI-Übersetzungsentwurf kennzeichnen. Der technische Fachreview aller
-   sicherheitskritischen Werte bleibt parallel offen.
+1. EN-01 bis EN-03 organisatorisch unabhängigen englischen Reviewern zuweisen.
+2. Den ersten manuellen QA-Batch protokolliert ausführen, soweit er ohne spezialisierte
+   Hardware möglich ist.
+3. Jede englische Datei bis zum unabhängigen Review als `entwurf` belassen. Technischer
+   Fachreview und physische Kartenprüfung bleiben parallel offen.
 
 Das Datenbankschema für Segmente steht in
 `supabase/migrations/20260806000001_initial_schema.sql`; das kanonische Dateiformat und

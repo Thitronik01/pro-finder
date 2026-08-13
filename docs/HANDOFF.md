@@ -1,9 +1,35 @@
 # Handoff
 
-Stand: 2026-08-11 (dreiundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-13 (vierundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
+
+### Dritte Synthese-Auswertung: Grenze zwischen Quelle, HTML und Gerät
+
+- `DISCREPANCIES.md` ordnet die Zugänglichkeitsbefunde jetzt sechs Ebenen zu:
+  PDF-Struktur, Textebene, visuelle Semantik, nicht lokalisierter Bildinhalt,
+  Status-LED am Gerät und ungeklärte Produktlogik.
+- Die Auswertung benennt für jede Ebene, was der HTML-Pilot kompensieren kann und was eine
+  separate PDF-Sanierung, THITRONIK-Entscheidung oder physische Prüfung benötigt. Sie
+  hält ausdrücklich fest, dass axe-/Browserläufe weder PDF/UA noch die Geräte- oder
+  Kartenbarrieren abnehmen.
+- Kein Status wurde angehoben. Rückfrage 12 zur farbunabhängigen Statusrückmeldung,
+  Rückfrage 17 zur Gerätemeldungssprache sowie BLK-005 bis BLK-007 bleiben offen.
+
+### Zweite Synthese-Auswertung: technische Werte und Generation
+
+- `DISCREPANCIES.md` stellt jetzt Generationsauswahl, SIM-Format, Stromaufnahme,
+  Spannungsversorgung, Konformitätsbezug, GPS-Kabellänge, Geofencing-Radius und
+  Betriebsart D in einer gemeinsamen Matrix gegenüber. Jede Zeile nennt Dokument und
+  PDF-Seiten; es wurde kein neuer Sollwert abgeleitet.
+- Die Auswertung trennt drei unabhängige Fehlerachsen: Gerätegeneration, Dokumentstand
+  innerhalb einer Generation und Sprachfassung. Sie dokumentiert insbesondere, dass sich
+  bis SN-044 Bedienungs- und Kurzanleitung bei Stromaufnahme und Konformitätsbezug
+  widersprechen und dass Mehrheitsverhältnisse bei Radius und Betriebsart D keine
+  Freigabe ersetzen.
+- `RUECKFRAGEN_THITRONIK.md` verknüpft die Matrix mit den offenen Fragen 2, 4, 14, 15 und 16. Kein Aufgaben-, Segment- oder Reviewstatus wurde verändert; die P0-Pakete bleiben
+  das Entscheidungsinstrument für den realen Fachreview.
 
 ### Geschützter englischer Vertical Slice für Aufgaben 11 bis 14
 
@@ -349,7 +375,6 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   ist beantwortet und kein Segmentstatus wurde geändert.
 - Die unabhängigen englischen Sprachreviews von EN-01 bis EN-03 sind organisatorisch
   offen. Keine der vierzehn Aufgaben darf vorher höhergestuft werden.
-- Die zweite und dritte Synthese-Auswertung fehlen weiterhin.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
   unabhängige Gegenprüfung; 51 bleiben auf
   `inspected`. Die SN-045-Seitenrecords besitzen weiterhin keine zweite Meinung.
@@ -374,11 +399,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** DOC-BMA-SN044 3–7 und 16–17 bei 300 dpi sowie 12–15 bei
-  400 dpi neu gerendert und vollständig für P0-03 bis P0-05 gelesen. Seiten 8–11 und
-  DOC-KA-SN044 1–2 bleiben durch P0-02 hochauflösend gegengeprüft. Seiten 3–18 samt allen
-  56 deutschen Segmenten bleiben quellenvalidiert; Seite 19 enthält nur ein leeres
-  Notizfeld.
+- **Bearbeitete PDF-Seiten:** keine neuen Renderings oder Statusänderungen. Die drei
+  Synthesen verwenden ausschließlich bereits dokumentierte Seitenbelege. Seiten 3–18 von
+  DOC-BMA-SN044 samt allen 56 deutschen Segmenten bleiben quellenvalidiert; Seite 19
+  enthält nur ein leeres Notizfeld.
 - **Gesamtstand Quellen:** 307 von 323 Seiten `inspected`, 16 von 323 `validated`, keine
   Seite `extracted`; DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 247
   `inspected` und beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne
@@ -394,51 +418,49 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   einzeln referenzierbare Entscheidungen. Damit sind 41 von 41 P0-Segmenten genau einem
   entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Die Review-UI zeigt
   41/41 und macht alle fünf Paket-IDs über einen eigenen Select und Direktlinks filterbar.
-- **Register:** Die Fehlklassifikation der 2-m-Aussage wurde in DSC-073 und DSC-079
-  transparent korrigiert; Rückfragenübersicht und Seitenrecords sind synchron. Höchster
-  Eintrag bleibt DSC-085; siebzehn Fragen und sechs aktive Blocker.
-- **Geänderte Bereiche:** vier weitere englische Aufgabenentwürfe (11 bis 14), EN-03,
-  Quellenparitäts-/Token-/E2E-Abdeckung sowie Fortschritts- und Übergabedokumentation.
-  Deutsche Master, Segmentdateien, Seitenstatus, Setup-Karte, Content-Schema und
-  Supabase-Migrationen blieben unverändert.
+- **Register:** Nach der vorhandenen SMS-Befehlssynthese bündeln zwei neue Auswertungen
+  technische Werte sowie die Zugänglichkeitsgrenzen zwischen PDF, HTML und Gerät. Keine
+  neue DSC-Nummer und keine neue Rückfrage waren erforderlich. Höchster Eintrag bleibt
+  DSC-085; siebzehn Fragen und sechs aktive Blocker.
+- **Geänderte Bereiche:** `DISCREPANCIES.md`, `RUECKFRAGEN_THITRONIK.md`,
+  `PROJECT_STATUS.md`, `HANDOFF.md`, `HANDOVER_PROMPT.md`, `progress-input.json` und die
+  daraus generierte `progress.json`. Aufgaben, Segmente, Seitenstatus, Anwendung,
+  Setup-Karte, Content-Schema und Supabase-Migrationen blieben unverändert.
 - **Karten-Nachtrag:** sieben unveränderte Nutzerentwürfe samt Integritätsmanifest, zwei
   deutsche SVG-Beispiele, zwei gerenderte Vorschauen, erweiterter Karten-Preflight sowie
   aktualisierte Anforderungen, Druckspezifikation und Inhalts-Quellen-Zuordnung. Keine
   technische Kartenfunktion und kein Produktionswert wurde freigegeben.
-- **Genutzte Skills:** PDF aus `openai-primary-runtime` 26.805.11740 für Render- und
-  Sichtprüfung der Seiten 3–7 und 12–17 sowie das GitHub-Plugin 0.1.8-2841cf9749ae zum
-  Anlegen des Draft-PR und Überwachen der CI. Nutzung und verfügbare beziehungsweise
-  fehlende Herkunftsmetadaten stehen transparent in `.agent/SKILLS_USAGE.md` und
-  `.agent/SKILLS_LOCK.json`; kein Skill-Inhalt wurde in Produktcode kopiert.
+- **Genutzte Skills:** keine. Die Synthesen wurden aus den versionierten
+  Seitenbefunden, DSC-Einträgen und Reviewfragen erstellt; es wurde kein Skill-Inhalt in
+  Produktcode oder Dokumentation übernommen.
 - **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
   `npm run format` → `npm run check` vollständig grün; darin 38 Unit-Tests sowie Segment-,
-  Content-, Referenz-, Secret-, Token-, Lockfile- und Fortschrittsprüfung. `npm run build`
-  ist mit 51 generierten Seiten grün. 62 von 62 Playwright-/axe-Tests einschließlich aller
-  vierzehn englischen Taskrouten, Entwurfs-/Quellennachweis, Pin-Tabelle, der
-  Abdeckungskennzahl 41/41 und aller P0-01-bis-P0-05-Filter bei Desktop- und Mobilbreite
-  bestanden.
+  Content-, Referenz-, Secret-, Token-, Lockfile- und Fortschrittsprüfung. Build und E2E
+  wurden nicht erneut ausgeführt, weil ausschließlich Dokumentations- und generierte
+  Fortschrittsdateien geändert wurden; der letzte belegte Stand bleibt 51 Seiten und 62
+  von 62 Playwright-/axe-Tests.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
   erwartungsgemäß nichts zu prüfen.
-- **GitHub-Abschluss:** Der dafür vorgesehene Bootstrap-Platzhalter `079f05e` liegt als
-  `main` vor, ohne einen neuen Commit direkt auf `main` zu erzeugen. Draft-PR #1 enthält
-  den Feature-Branch-Stand; seine CI wird nach jedem finalen Push bis zum Endstatus
-  überwacht. Merge und fachliche Abnahme bleiben ausdrücklich menschlich.
+- **GitHub-Abschluss:** Arbeit erfolgt auf `bootstrap/accessibility-pilot`; kein direkter
+  Commit auf `main`. Draft-PR #1 bleibt der menschlich abzunehmende Integrationsweg.
 
 ```text
 Resume from:
-Englischer Pilot ab SN-045 mit allen Aufgaben 01 bis 14 als belegte
-KI-Uebersetzungsentwuerfe; tokens:check vergleicht alle vierzehn DE/EN-Paare und ein
-Unit-Test sichert die task-level Quellenparitaet. EN-01 bis EN-03 sind fuer unabhaengige
-Sprachreviews vorbereitet, aber unbeantwortet. Die historische Support-Rufnummer bleibt
-in EN-14 unter BLK-004 bewusst verborgen. Kein technischer, sprachlicher oder physischer
-Inhalt ist freigegeben; BLK-005/006 und sechs aktive Blocker bleiben offen.
+Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die
+Zugaenglichkeitsgrenzen zwischen PDF, HTML und Geraet. Alle vierzehn englischen Aufgaben
+ab SN-045 bleiben belegte KI-Uebersetzungsentwuerfe; EN-01 bis EN-03 sind fuer
+unabhaengige Sprachreviews vorbereitet, aber unbeantwortet. Kein technischer, sprachlicher
+oder physischer Inhalt ist freigegeben; BLK-005/006/007 und sechs aktive Blocker bleiben
+offen.
 
 First action:
 Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen
-und keine Aufgabe vorher hoeherstufen. Parallel die zweite Synthese-Auswertung der
-dokumentierten Widersprueche vorbereiten. Fuer die Karte weiterhin freigegebene Assets
-und Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen
-echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
+und keine Aufgabe vorher hoeherstufen. Parallel den ersten dokumentierten manuellen
+QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion
+vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die
+Karte weiterhin freigegebene Assets und Entscheidungen zu URL, Supportdaten und
+Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine
+Supportkontakte einsetzen.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

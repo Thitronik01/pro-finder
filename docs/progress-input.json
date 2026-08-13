@@ -27,7 +27,7 @@
     },
     "handoff": {
       "percent": 79,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. Das Karten-Konzept-README dokumentiert Herkunft, Einordnung und bewusste Nichtuebernahmen. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews und alle Produktionsentscheidungen der Karte bleiben offen."
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet, ohne einen Sollwert oder Reviewstatus abzuleiten. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. Das Karten-Konzept-README dokumentiert Herkunft, Einordnung und bewusste Nichtuebernahmen. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen."
     }
   },
   "blockers": [
@@ -97,5 +97,5 @@
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht."
   ],
-  "next_action": "Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel die zweite Synthese-Auswertung der dokumentierten Widersprueche vorbereiten. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen."
+  "next_action": "Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen."
 }

@@ -482,6 +482,10 @@ des gesamten Pilots: die Anleitung lässt sich barrierefrei machen, das Gerät n
 
 _Belege: DSC-047, DSC-059_
 
+Die Trennung zwischen behebbaren Dokumentbarrieren und der geräteseitigen Grenze steht in
+[Synthese-Auswertung 3](DISCREPANCIES.md#synthese-zugaenglichkeitsgrenzen). Die HTML-Fassung
+kann die Farbbedeutungen erklären, erzeugt aber kein zusätzliches Signal am Gerät.
+
 ---
 
 ## 13. Ersetzt die THITRONIK App wirklich die Kapitel 2.5 bis 2.8?
@@ -575,6 +579,12 @@ Fassung – dasselbe Muster wie bei der Stromaufnahme (Frage 2), wo ebenfalls di
 Fassung allein abweicht. Vermutlich ist „8 Minuten" richtig; bestätigen können nur Sie.
 
 _Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5, 23 und 40_
+
+Die Fragen 2, 4, 14, 15 und 16 sind zusätzlich in
+[Synthese-Auswertung 2](DISCREPANCIES.md#synthese-technische-werte) gemeinsam eingeordnet.
+Die Matrix zeigt, dass technische Abweichungen unabhängig nach Generation, Dokumentstand
+und Sprachfassung auftreten. Aus einem Mehrheitsverhältnis oder einem identischen
+Zahlenwert wird deshalb keine Freigabe abgeleitet.
 
 ---
 

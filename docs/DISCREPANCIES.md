@@ -2048,3 +2048,108 @@ Die Großschreibung der Hilfe-SMS und die abweichenden Kapitelwörter bleiben un
    `error_cases`, `expected_result` oder `tables_md` erscheinen, bis THITRONIK je
    Generation die akzeptierten Zeichenfolgen, Spracheinstellung, Groß-/Kleinschreibung
    und die Rolle der Hilfe-SMS bestätigt hat.
+
+<a id="synthese-technische-werte"></a>
+
+## Synthese-Auswertung 2: Technische Werte, Dokumentstand und Generation
+
+Diese Auswertung verbindet ausschließlich bereits dokumentierte und gegen die jeweiligen
+PDF-Seiten geprüfte Befunde. Sie wählt keinen Sollwert aus und ersetzt keinen technischen
+oder rechtlichen Review. Die Gegenüberstellung zeigt drei voneinander unabhängige
+Fehlerachsen: **Gerätegeneration, Dokument innerhalb einer Generation und Sprachfassung**.
+
+### Vergleichsmatrix
+
+| Prüfpunkt                      | Bis SN-044                                                                                                                 | Ab SN-045                                                                                                              | Konflikt und Fundstellen                                                                                                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Auswahl der Generation         | DOC-BMA-SN044 und DOC-KA-SN044 tragen keine Bereichsangabe.                                                                | `ab Seriennr. -045`, `as of serial no. -045` und `SN 0699 - 045 +`; kein genauer Fundort und keine Leseregel am Gerät. | Die Abwesenheit einer Kennzeichnung beweist nicht „bis SN-044“. DOC-IBA-SN045, S. 1/2/6/26; DOC-KA-SN045, S. 1 (DSC-023, DSC-048).                                                                                        |
+| SIM-Format                     | Micro-SIM                                                                                                                  | Nano-SIM                                                                                                               | Echte generationsabhängige Abweichung. DOC-BMA-SN044, S. 18; DOC-IBA-SN045, S. 25/49/76 (DSC-069).                                                                                                                        |
+| Stromaufnahme im Normalbetrieb | DOC-BMA-SN044: ca. 21 mA; DOC-KA-SN044: ca. 16–21 mA.                                                                      | DE/FR und weitere geprüfte Fassungen: ca. 16–21 mA; EN: ca. 21 mA.                                                     | Der Konflikt liegt sowohl zwischen zwei Unterlagen der älteren Generation als auch zwischen den Sprachfassungen der neueren vor. DOC-BMA-SN044, S. 18; DOC-KA-SN044, S. 2; DOC-IBA-SN045, S. 25/49/76 (DSC-020, DSC-069). |
+| Spannungsversorgung            | Anschlusskapitel: geeignete 12-V-DC-Spannungsquelle; technische Tabelle: 9–30 V.                                           | Technische Tabellen: 9–30 V.                                                                                           | 12 V kann ein typischer Anschlusskontext innerhalb von 9–30 V sein; die ältere Quelle erklärt die Beziehung nicht. DOC-BMA-SN044, S. 6/18; DOC-IBA-SN045, S. 25/49/76 (DSC-069).                                          |
+| Konformitätsbezug              | DOC-BMA-SN044: 1999/5/EG; DOC-KA-SN044: 2014/53/EU. EN/FR/SV im BMA drucken zusätzlich die nicht existierende `1995/5/EG`. | 2014/53/EU                                                                                                             | Weder Dokumentstand noch Übersetzung liefern für die ältere Generation einen widerspruchsfreien Wert. DOC-BMA-SN044, S. 18/36/53/70; DOC-KA-SN044, S. 2; DOC-IBA-SN045, S. 25/49/76 (DSC-069, DSC-071).                   |
+| GPS-Kabellänge                 | DE/FR/SV nennen eine feste Länge von 2 m; EN formuliert eine Obergrenze von 2 m.                                           | Kein Wert aus dieser Gegenüberstellung übertragen.                                                                     | Der Zahlenwert ist gleich, seine technische Bedeutung nicht. DOC-BMA-SN044, S. 3/21/38/55 (DSC-073, DSC-079).                                                                                                             |
+| Geofencing-Radius              | DE/EN/SV: ca. 1000 m beziehungsweise 1 km; FR: 1500 m beziehungsweise 1,5 km.                                              | Deutscher Master: rund 900 m.                                                                                          | Drei Werte für dieselbe Auslösebedingung; der französische Wert liegt 50 Prozent über den drei Parallelfassungen. DOC-BMA-SN044, S. 12/15/30/33/47/50/64/67; DOC-IBA-SN045, S. 19/21 (DSC-061, DSC-078).                  |
+| Betriebsart D                  | DE/FR/SV: Statusbericht alle 8 Minuten; EN: alle 8 Sekunden.                                                               | Keine Übertragung aus der älteren Generation.                                                                          | Faktor 60 innerhalb desselben Handbuchs; drei Sprachfassungen stehen gegen eine. DOC-BMA-SN044, S. 5/23/40/57 (DSC-066).                                                                                                  |
+
+### Was die Matrix belegt
+
+1. **Die Generation muss vor jeder technischen Anweisung belastbar feststehen.** Das
+   SIM-Format unterscheidet sich nachweislich. Gleichzeitig reicht die Dokumentkennzeichnung
+   für die Auswahl nicht aus, weil die älteren Unterlagen keinen Bereich nennen und die
+   neueren Unterlagen keine sichere Leseregel für die Seriennummer liefern.
+2. **Ein deutsches Dokument ist nicht automatisch der technische Master.** Bis SN-044
+   widersprechen sich Bedienungs- und Kurzanleitung bei Stromaufnahme und
+   Konformitätsbezug; das Anschlusskapitel und die technische Tabelle erklären 12 V
+   gegenüber 9–30 V nicht.
+3. **Mehrheitsverhältnisse sind keine Freigabe.** Bei Betriebsart D stehen drei
+   Sprachfassungen gegen eine, beim Geofencing-Radius ebenfalls. Das macht Ausreißer
+   wahrscheinlich, entscheidet aber weder den gültigen Wert noch den betroffenen
+   Hardwarestand.
+4. **Gleiche Zahlen können unterschiedliche Regeln ausdrücken.** Die 2-m-Angabe zur
+   GPS-Kabellänge ist je Sprachfassung feste Länge oder Obergrenze. Ein reiner
+   Tokenvergleich würde diesen Bedeutungsunterschied nicht erkennen.
+5. **Kein Wert darf durch Nähe zu einer anderen Generation plausibilisiert werden.** Die
+   englische SN-045-Angabe von ca. 21 mA gleicht zwar dem älteren BMA-Wert; daraus folgt
+   weder, dass sie korrekt ist, noch dass die Hardware technisch identisch ist.
+
+### Konsequenz für den Pilot
+
+- Die Routen `sn-001-044` und `sn-045-plus` bleiben strikt getrennt; die Startseite nennt
+  bis zur Antwort auf Rückfrage 4 keine erfundene Seriennummern-Leseregel.
+- Micro-SIM und Nano-SIM, Radius, Stromaufnahme, Versorgung und Konformitätsangaben werden
+  nicht generationsübergreifend übernommen.
+- Der Radius und das Intervall der Betriebsart D bleiben bis zu den Antworten auf
+  Rückfragen 14 und 16 aus ausführbaren Bedienanweisungen heraus.
+- Die PIN-Vorgabe aus DOC-BMA-SN044, S. 8/11/26 bleibt als eigener sicherheitskritischer
+  Prüfpunkt unter Rückfrage 15 offen; das Fehlen eines widersprechenden Werts ist keine
+  Bestätigung für die andere Generation.
+- Maßgeblich für die Freigabe sind die einzeln vorbereiteten Entscheidungen in P0-01 bis
+  P0-05, nicht diese Übersicht. Die Synthese verdichtet die Belege, hebt aber keinen
+  `review_status` an.
+
+<a id="synthese-zugaenglichkeitsgrenzen"></a>
+
+## Synthese-Auswertung 3: Zugänglichkeit von PDF, Bildinhalt und Gerät
+
+Die dritte Auswertung trennt die gefundenen Barrieren nach dem Ort, an dem sie entstehen.
+Das ist für die Abnahme entscheidend: Eine semantische HTML-Anleitung kann viele Mängel
+der Ausgangs-PDFs kompensieren, aber weder fehlende Produktfunktionen noch unklare
+technische Regeln reparieren.
+
+### Drei Ebenen mit unterschiedlichen Abhilfen
+
+| Ebene                          | Belegter Befund                                                                                                                                                                                                                                                                             | Was der Pilot leisten kann                                                                                                                       | Was offen bleibt                                                                                                                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PDF-Struktur ab SN-045         | 202 von 247 Seiten ohne Textebene, 34 nur mit U+0003, zehn nur mit `••••`; nur Seite 1 enthält lesbaren Fließtext. Keine Lesezeichen, keine robuste Lesereihenfolge und keine verlässlichen Sprachwechsel.                                                                                  | Inhalt als semantisches HTML mit Seitensprache, Überschriften, Listen, Tabellen und Quellenangaben neu strukturieren.                            | Eine barrierefreie PDF-Fassung oder PDF/UA-Sanierung ist nicht Bestandteil des Pilotstands. Sie müsste separat erstellt und geprüft werden.                     |
+| Textebene bis SN-044           | Das Sternzeichen eines Abfragecodes fehlt oder wird als Private-Use-Zeichen extrahiert; neun Beispiel-SMS fehlen vollständig. Auf französischen Seiten ist Text extrahierbar, aber sichtbar verdeckt; auf den Schlussseiten ist unsichtbarer Text außerhalb des Seitenrahmens extrahierbar. | Sichtbaren Inhalt und Textebene getrennt prüfen; technische Zeichen gegen das Seitenbild halten; Off-page-Inhalt nicht in HTML übernehmen.       | Die Original-PDFs bleiben als Quellen unverändert und damit für Screenreader unzuverlässig (DSC-058, DSC-060, DSC-075, DSC-081).                                |
+| Visuelle Semantik              | Warnungen besitzen bis SN-044 kein Signalwort; Rot, Piktogramme, Unterstreichung und Position tragen Struktur. Kartenadressen sehen in allen Sprachen wie Links aus, sind aber überwiegend inert oder doppelt annotiert.                                                                    | Sicherheitsklasse als Wort ausgeben, Handlungen als echte Listen strukturieren und nur bestätigte Ziele als genau einen benannten Link anbieten. | PDF-Sanierung und erneute Prüfung von Lesereihenfolge, Linkzielen und visueller Kennzeichnung (DSC-063, DSC-082).                                               |
+| Nicht lokalisierter Bildinhalt | Ab SN-045 bleibt die Beschriftung `GPS-Antenne (Optional)` in allen zehn Sprachteilen deutsch. Bis SN-044 verwenden alle vier Sprachteile dieselben deutschen Meldungs- und Kartenbilder.                                                                                                   | Abbildungen nicht als alleinigen Informationsträger verwenden; Textalternativen und sprachlich passende Erläuterungen im HTML bereitstellen.     | Die tatsächliche Gerätemeldungssprache bis SN-044 ist unbestätigt; Erkennungsstichwörter bleiben unter Rückfrage 17 offen (DSC-022, DSC-072).                   |
+| Status-LED am Gerät            | Ab SN-045 sind zwei GPS-Diagnosezustände nur durch Dauerlichtfarbe unterscheidbar. Bis SN-044 reduzieren sich neun Zustände ohne sichere Farbwahrnehmung auf zwei Blinkarten; auch ein Löschvorgang hängt an einer Farbkombination.                                                         | Bedeutungen, Schalterstellung und bekannte Grenzen verständlich beschreiben; keine WCAG-Erfüllung des Geräts behaupten.                          | Nur THITRONIK kann ein farbunabhängiges Signal oder eine textliche Rückmeldung bestätigen beziehungsweise am Produkt ergänzen (DSC-047, DSC-059; Rückfrage 12). |
+| Fachliche Produktlogik         | Geofencing-Voraussetzungen, Berechtigungszeichen, SMS-Befehle, Radius und weitere Werte sind widersprüchlich oder unbelegt.                                                                                                                                                                 | Unsicherheit sichtbar machen, Generationen trennen und betroffene Schritte sperren oder als Entwurf kennzeichnen.                                | HTML kann keine unbekannte Gerätefunktion erschließen; BLK-005, BLK-006 und BLK-007 bleiben technische Blocker.                                                 |
+
+### Ergebnis
+
+1. **Eine vorhandene Textebene ist kein Zugänglichkeitsnachweis.** Sie kann sichtbare
+   Zeichen auslassen, unsichtbare oder außerhalb der Seite liegende Inhalte vorlesen und
+   eine falsche Lesereihenfolge erzeugen. Deshalb bleibt die visuelle Seitenprüfung neben
+   der maschinellen Extraktion verpflichtend.
+2. **Barrierefreies HTML ist der Primärzugang, nicht eine Darstellung des PDFs.** Der
+   Content-Layer muss Bedeutung neu ausdrücken: Warnungen als Wörter, Schritte als Listen,
+   Tabellen mit Kopfzellen, Abbildungen mit Textalternativen und Sprachwechsel über die
+   jeweilige Route.
+3. **Die Grenze des Pilots liegt am physischen Gerät.** Eine Anleitung kann die
+   Farbcodierung der Status-LED erklären, aber keine zusätzliche Blinkfolge, akustische
+   Rückmeldung oder Textausgabe erzeugen. Rückfrage 12 ist deshalb kein redaktioneller
+   Restpunkt, sondern eine Produktentscheidung.
+4. **Automatische Tests sind notwendig, aber nicht hinreichend.** Die grünen axe- und
+   Browserläufe belegen nur die geprüften Regeln der HTML-Oberfläche. Sie sagen nichts über
+   PDF/UA, korrekte technische Inhalte, die Status-LED oder die offene manuelle
+   AT-/Zoom-/Reflow-/Forced-Colors-/Reduced-Motion-Matrix aus.
+5. **Die Setup-Karte ist ein eigener physischer Zugangskanal.** Ohne bestätigte URL,
+   Supportdaten, Kerbengeometrie, Braille-Dienstleister, Andruck und Tests mit betroffenen
+   Personen bleibt sie ein Entwurf; SVG-Preflight und Bildvorschau ersetzen diese
+   Prüfungen nicht.
+
+Die Synthese ändert keine Freigabe. Sie ordnet die bestehenden Befunde den zuständigen
+Folgearbeiten zu: HTML-QA, separate PDF-Sanierung, THITRONIK-Fachentscheidung oder
+physische Prüfung.
