@@ -196,3 +196,52 @@ test('Start- und Reviewseite bleiben in Dark Mode und Reduced Motion axe-sauber'
     expect(results.violations).toEqual([]);
   }
 });
+
+test('Kernrouten respektieren Reduced Motion ohne laufende Bewegung oder Autoplay', async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  const paths = [
+    '/pro-finder/start',
+    '/pro-finder/sn-001-044/de',
+    '/pro-finder/sn-045-plus/de/status-led',
+    '/pro-finder/sn-045-plus/en/understand-status-led',
+    '/pro-finder/wechsel?generation=sn-045-plus&language=de',
+    '/review',
+    '/dashboard',
+  ];
+
+  for (const path of paths) {
+    await page.goto(path);
+    expect(
+      await page.evaluate(() => {
+        const parseDurations = (value: string) =>
+          value.split(',').map((duration) => {
+            const normalized = duration.trim();
+            return normalized.endsWith('ms')
+              ? Number.parseFloat(normalized)
+              : Number.parseFloat(normalized) * 1000;
+          });
+
+        const nonReducedStyles = [...document.querySelectorAll('*')]
+          .map((element) => {
+            const style = getComputedStyle(element);
+            return {
+              element: element.tagName.toLowerCase(),
+              animationMs: Math.max(...parseDurations(style.animationDuration)),
+              transitionMs: Math.max(...parseDurations(style.transitionDuration)),
+            };
+          })
+          .filter(({ animationMs, transitionMs }) => animationMs > 1 || transitionMs > 1);
+
+        const runningAnimations = document
+          .getAnimations()
+          .filter((animation) => animation.playState === 'running').length;
+        const autoplayMedia = document.querySelectorAll('audio[autoplay], video[autoplay]').length;
+
+        return { autoplayMedia, nonReducedStyles, runningAnimations };
+      }),
+      `${path} enthält trotz Reduced Motion Bewegung`,
+    ).toEqual({ autoplayMedia: 0, nonReducedStyles: [], runningAnimations: 0 });
+  }
+});

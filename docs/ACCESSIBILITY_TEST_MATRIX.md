@@ -1,14 +1,14 @@
 # Manuelle Accessibility-Testmatrix
 
-Stand: 2026-08-11. `offen` bedeutet: nicht ausgeführt. Automatische axe-Prüfungen ersetzen
+Stand: 2026-08-13. `offen` bedeutet: nicht ausgeführt. Automatische axe-Prüfungen ersetzen
 keinen Test mit assistiven Technologien und keine Konformitätserklärung.
 
 ## Automatisierter Lauf (Playwright + axe)
 
-Der aktuelle Lauf am 2026-08-11 umfasst **44 von 44 bestandene Tests** über Chromium und
-ein 375-px-Mobilprofil. Alle fünf englischen Taskrouten 01 bis 05 werden einzeln mit axe
-geprüft; zusätzlich sichert ein Browserpfad fünf Entwurfslinks, englisches `lang`,
-Quellenanzeige und die zugängliche Pin-Tabelle. Beim erstmaligen Browserlauf am
+Der aktuelle Lauf am 2026-08-13 umfasst **64 von 64 bestandene Tests** über Chromium und
+ein 375-px-Mobilprofil. Alle vierzehn englischen Taskrouten werden einzeln mit axe
+geprüft; zusätzlich sichert ein Browserpfad Entwurfsstatus, englisches `lang`,
+Quellenanzeige, die zugängliche Pin-Tabelle und gesperrte Supportlinks. Beim erstmaligen Browserlauf am
 2026-08-07 gingen fünf Fehlschläge auf drei reale Mängel in der eigenen Oberfläche
 zurück. Alle drei sind behoben:
 
@@ -32,25 +32,31 @@ Der dritte Punkt ist über `/review` hinaus relevant: Deutsche Komposita sprenge
 Spalten regelmäßig. Die Silbentrennung greift jetzt dokumentweit und stützt sich auf das
 serverseitig korrekt gesetzte `lang`-Attribut.
 
+Seit dem 2026-08-13 prüft ein eigener Reduced-Motion-Pfad sieben Kernrouten mit emulierter
+Nutzereinstellung `reduce`. Er bricht bei laufenden Animationen, Autoplay-Medien oder
+berechneten Animations-/Übergangsdauern über 1 ms ab. Damit ist die technische Reaktion
+der Oberfläche automatisiert abgesichert. Die manuelle Betriebssystem-/Browserprüfung
+bleibt trotzdem offen.
+
 Was der Lauf **nicht** belegt: axe prüft nur einen Teil der WCAG-Kriterien maschinell.
 Die folgende Matrix bleibt maßgeblich.
 
-| Test                                      | Zielroute/-artefakt                                   | Status             | Nachweis/Abweichung                         |
-| ----------------------------------------- | ----------------------------------------------------- | ------------------ | ------------------------------------------- |
-| Nur Tastatur, Fokusreihenfolge, Skip-Link | Start, Generationen, Wechsel, Task, Review, Dashboard | offen              | Playwright deckt Teilpfad automatisiert ab  |
-| NVDA + Firefox                            | deutsche Start-/Taskroute                             | offen              | Testperson und Version protokollieren       |
-| NVDA + Chrome                             | deutsche und englische Route                          | offen              | Sprachwechsel und Tabellen prüfen           |
-| VoiceOver + Safari/macOS                  | kompletter Kernpfad                                   | offen              |                                             |
-| VoiceOver iOS                             | Start, QR-Ziel, Task                                  | offen              |                                             |
-| TalkBack Android                          | Start, NFC-/QR-Ziel, Task                             | offen              |                                             |
-| 200 % Zoom                                | alle Kernrouten                                       | offen              | kein Informationsverlust                    |
-| 400 % Zoom / Reflow                       | alle Kernrouten                                       | offen              | 320 CSS px, kein 2D-Scrollen außer Tabellen |
-| Windows Forced Colors                     | alle Kernrouten                                       | offen              | Status/Fokus nicht nur farblich             |
-| Reduced Motion                            | alle Kernrouten                                       | offen              | kein Autoplay/unnötige Animation            |
-| Bilder deaktiviert                        | Tasks mit Abbildungen                                 | offen              | Textalternative und Schritte vollständig    |
-| Langsame Verbindung                       | Start und Task                                        | offen              | Basisinhalt bleibt nutzbar                  |
-| Kartenkontrast/Reflexion                  | physischer Andruck                                    | offen, blockierend | Messwert und Lichtbedingungen erfassen      |
-| QR-Scan iOS/Android                       | physischer Andruck                                    | offen, blockierend | Distanz, Winkel, Licht, Beschädigung        |
-| NFC iOS/Android + Write-Lock              | physische Karte                                       | offen, blockierend | erst nach URL-Freigabe sperren              |
-| Taktile Orientierung                      | physische Karte                                       | offen, blockierend | betroffene Testpersonen einbeziehen         |
-| Braille                                   | physische Karte                                       | offen, blockierend | Dienstleister + Braille lesende Personen    |
+| Test                                      | Zielroute/-artefakt                                   | Status             | Nachweis/Abweichung                           |
+| ----------------------------------------- | ----------------------------------------------------- | ------------------ | --------------------------------------------- |
+| Nur Tastatur, Fokusreihenfolge, Skip-Link | Start, Generationen, Wechsel, Task, Review, Dashboard | offen              | Playwright deckt Teilpfad automatisiert ab    |
+| NVDA + Firefox                            | deutsche Start-/Taskroute                             | offen              | Testperson und Version protokollieren         |
+| NVDA + Chrome                             | deutsche und englische Route                          | offen              | Sprachwechsel und Tabellen prüfen             |
+| VoiceOver + Safari/macOS                  | kompletter Kernpfad                                   | offen              |                                               |
+| VoiceOver iOS                             | Start, QR-Ziel, Task                                  | offen              |                                               |
+| TalkBack Android                          | Start, NFC-/QR-Ziel, Task                             | offen              |                                               |
+| 200 % Zoom                                | alle Kernrouten                                       | offen              | kein Informationsverlust                      |
+| 400 % Zoom / Reflow                       | alle Kernrouten                                       | offen              | 320 CSS px, kein 2D-Scrollen außer Tabellen   |
+| Windows Forced Colors                     | alle Kernrouten                                       | offen              | Status/Fokus nicht nur farblich               |
+| Reduced Motion                            | alle Kernrouten                                       | offen              | technischer Pfad automatisiert; manuell offen |
+| Bilder deaktiviert                        | Tasks mit Abbildungen                                 | offen              | Textalternative und Schritte vollständig      |
+| Langsame Verbindung                       | Start und Task                                        | offen              | Basisinhalt bleibt nutzbar                    |
+| Kartenkontrast/Reflexion                  | physischer Andruck                                    | offen, blockierend | Messwert und Lichtbedingungen erfassen        |
+| QR-Scan iOS/Android                       | physischer Andruck                                    | offen, blockierend | Distanz, Winkel, Licht, Beschädigung          |
+| NFC iOS/Android + Write-Lock              | physische Karte                                       | offen, blockierend | erst nach URL-Freigabe sperren                |
+| Taktile Orientierung                      | physische Karte                                       | offen, blockierend | betroffene Testpersonen einbeziehen           |
+| Braille                                   | physische Karte                                       | offen, blockierend | Dienstleister + Braille lesende Personen      |

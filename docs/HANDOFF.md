@@ -5,6 +5,17 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
 
+### Kleiner QA-Schritt: Reduced Motion technisch abgesichert
+
+- Ein neuer Playwright-Pfad emuliert `prefers-reduced-motion: reduce` und prüft sieben
+  Kernrouten: Start, beide Generationsübersichten, deutsche und englische Taskroute,
+  Wechsel, Review und Dashboard.
+- Der Test schlägt bei laufenden Animationen, Autoplay-Medien oder berechneten
+  Animations-/Übergangsdauern über 1 ms fehl. Er läuft im Desktop- und 375-px-Mobilprofil;
+  der vollständige E2E-Lauf steht jetzt bei 64 von 64 bestandenen Tests.
+- Die manuelle Betriebssystem-/Browserprüfung bleibt ausdrücklich offen. Der QA-Fortschritt
+  steigt für den zusätzlichen technischen Nachweis vorsichtig von 50 auf 51 Prozent.
+
 ### Dritte Synthese-Auswertung: Grenze zwischen Quelle, HTML und Gerät
 
 - `DISCREPANCIES.md` ordnet die Zugänglichkeitsbefunde jetzt sechs Ebenen zu:
@@ -433,12 +444,11 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - **Genutzte Skills:** keine. Die Synthesen wurden aus den versionierten
   Seitenbefunden, DSC-Einträgen und Reviewfragen erstellt; es wurde kein Skill-Inhalt in
   Produktcode oder Dokumentation übernommen.
-- **Abschlussläufe:** in der vorgeschriebenen Reihenfolge `npm run progress` →
-  `npm run format` → `npm run check` vollständig grün; darin 38 Unit-Tests sowie Segment-,
-  Content-, Referenz-, Secret-, Token-, Lockfile- und Fortschrittsprüfung. Build und E2E
-  wurden nicht erneut ausgeführt, weil ausschließlich Dokumentations- und generierte
-  Fortschrittsdateien geändert wurden; der letzte belegte Stand bleibt 51 Seiten und 62
-  von 62 Playwright-/axe-Tests.
+- **Abschlussläufe:** der neue Reduced-Motion-Test bestand gezielt 2 von 2 Läufen und im
+  vollständigen E2E-Lauf 64 von 64 Playwright-/axe-Tests. Die abschließende Reihenfolge
+  `npm run progress` → `npm run format` → `npm run check` ist ebenfalls grün; darin 38
+  Unit-Tests sowie Segment-, Content-, Referenz-, Secret-, Token-, Lockfile- und
+  Fortschrittsprüfung.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
   erwartungsgemäß nichts zu prüfen.
 - **GitHub-Abschluss:** Arbeit erfolgt auf `bootstrap/accessibility-pilot`; kein direkter
@@ -451,7 +461,8 @@ Zugaenglichkeitsgrenzen zwischen PDF, HTML und Geraet. Alle vierzehn englischen 
 ab SN-045 bleiben belegte KI-Uebersetzungsentwuerfe; EN-01 bis EN-03 sind fuer
 unabhaengige Sprachreviews vorbereitet, aber unbeantwortet. Kein technischer, sprachlicher
 oder physischer Inhalt ist freigegeben; BLK-005/006/007 und sechs aktive Blocker bleiben
-offen.
+offen. Reduced Motion ist ueber sieben Kernrouten technisch automatisiert abgesichert;
+die manuelle Betriebssystem-/Browserpruefung bleibt offen.
 
 First action:
 Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen

@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 62.3,
+  "overall_percent": 62.4,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -44,8 +44,8 @@
     },
     "qa": {
       "label": "Accessibility-, Security- und Content-QA",
-      "percent": 50,
-      "note": "npm run check und der Produktions-Build mit 51 Seiten sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht 14 DE/EN-Aufgabenpaare; ein Unit-Test prueft deren task-level Dokument-/Seitenparitaet. Browser- und axe-Abdeckung umfasst alle 14 englischen Taskrouten in Desktop- und Mobilprofil sowie den fehlenden tel-/mailto-Link der bewusst gesperrten Supportangaben. Der Karten-Preflight prueft vier SVGs und sieben Konzeptbilder. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen."
+      "percent": 51,
+      "note": "npm run check und der Produktions-Build mit 51 Seiten sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht 14 DE/EN-Aufgabenpaare; ein Unit-Test prueft deren task-level Dokument-/Seitenparitaet. Browser- und axe-Abdeckung umfasst alle 14 englischen Taskrouten in Desktop- und Mobilprofil sowie den fehlenden tel-/mailto-Link der bewusst gesperrten Supportangaben. Ein eigener Reduced-Motion-Pfad prueft sieben Kernrouten auf laufende Animationen, Autoplay und nicht reduzierte Animations- oder Uebergangsdauern. Der Karten-Preflight prueft vier SVGs und sieben Konzeptbilder. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen."
     },
     "handoff": {
       "label": "Staging und Übergabe",

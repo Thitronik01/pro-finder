@@ -5,7 +5,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 62.3 %**
+**Gesamtfortschritt: 62.4 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
@@ -15,7 +15,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 68 %        |
 | Übersetzungspilot                        | 10 %    | 75 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 50 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 51 %        |
 | Staging und Übergabe                     | 5 %     | 79 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
@@ -318,11 +318,12 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   `security_behavior_test.sql`. Damit sind die beiden früher ausnutzbaren Umgehungen des
   Vier-Augen-Prinzips nicht mehr nur konstruktiv adressiert, sondern im Verhalten geprüft;
 - CI-Jobs `Code, content, security and build` (Prüfkette und Produktions-Build) grün;
-- **Playwright und axe laufen: 62 von 62 Tests bestanden**, davon axe-Prüfungen auf
+- **Playwright und axe laufen: 64 von 64 Tests bestanden**, davon axe-Prüfungen auf
   WCAG-A/AA-Regeln über Chromium und ein 375-px-Mobilprofil. Alle vierzehn englischen
   Taskrouten sind einzeln enthalten; ein zusätzlicher Pfad prüft Entwurfsstatus, Sprache,
   Quellen, die zugängliche Pin-Tabelle und das Fehlen unbestätigter Supportlinks. Der
-  Produktions-Build erzeugt 51
+  neue Reduced-Motion-Pfad prüft sieben Kernrouten auf laufende Animationen, Autoplay und
+  nicht reduzierte Bewegungsdauern. Der Produktions-Build erzeugt 51
   Seiten. Der erste echte Browserlauf hat drei reale Mängel aufgedeckt und behoben (siehe
   unten).
 
