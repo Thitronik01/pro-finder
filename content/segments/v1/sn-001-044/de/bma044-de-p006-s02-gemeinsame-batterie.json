@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P006-S02-GEMEINSAME-BATTERIE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "anschluesse",
+  "title": "Pro-finder und WiPro an dieselbe Batterie anschließen",
+  "body_md": "Verbinden Sie WiPro III beziehungsweise WiPro „all in one“ und Pro-finder mit dem beiliegenden Verbindungskabel. WiPro „all in one“ und Pro-finder müssen an dieselbe Batterie angeschlossen sein.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Abschnitt 1.5, zweiter Absatz und rote Warnzeile",
+  "prev_context": "Der erste Absatz ordnet Versorgung und Messeingänge zu.",
+  "next_context": "Der folgende Absatz beschreibt Ausgangslast und Relais.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8dea355fa0f7596693ce029f418bcbb7d9f23e42478f896435361042a37ecf11",
+  "change_reason": "Die allein durch rote Schrift und Ausrufezeichen markierte Pflicht wurde als eigenes Warnsegment mit ausgeschriebener Sicherheitsklasse extrahiert. Die generationsspezifische Produktbezeichnung bleibt erhalten.",
+  "discrepancy_refs": ["DSC-063", "DSC-065"]
+}

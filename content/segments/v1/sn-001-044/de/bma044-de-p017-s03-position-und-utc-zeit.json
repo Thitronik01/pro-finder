@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P017-S03-POSITION-UND-UTC-ZEIT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "meldungen",
+  "title": "Position und UTC-Zeit während eines Alarms einordnen",
+  "body_md": "Bei einem Alarm und aktiver Lichtmaschine fragt der Pro-finder laut Quelle die Position fortlaufend ab. Bricht der GPS-Empfang ab, ist die zuletzt empfangene Position damit die unmittelbar vor dem Empfangsabbruch gespeicherte Angabe. Die UTC-Zeit in der Meldung gehört immer zum Zeitpunkt dieser zuletzt empfangenen Position. Das Verhalten bei einem Alarm ohne aktive Lichtmaschine beschreibt die Quelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.8, Schlussabsatz",
+  "prev_context": "Ohne gültigen GPS-Empfang kann ein Statusbericht eine ältere, zuletzt empfangene Position enthalten.",
+  "next_context": "PDF-Seite 18 beginnt mit den technischen Daten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:2c3906e7992ac66501ab6699b402725cf0068c5cdcf06503ad10126f910d8aee",
+  "change_reason": "Die Bedingung aus Alarm und aktiver Lichtmaschine sowie die zeitliche Bedeutung der UTC-Angabe wurden quellengetreu erhalten. Der unbelegte Fall ohne aktive Lichtmaschine bleibt ausdrücklich offen.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,36 @@
+.choiceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.choiceCard {
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  background: var(--color-surface);
+}
+
+.choiceCard h3 {
+  margin-top: 0;
+}
+
+.choiceCard a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+}
+
+.draftNote {
+  border-left: 6px solid var(--color-warning-border);
+  background: var(--color-warning-bg);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+}
+
+.sourceNote {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}

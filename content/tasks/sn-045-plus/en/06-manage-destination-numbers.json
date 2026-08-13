@@ -1,0 +1,290 @@
+{
+  "slug": "manage-destination-numbers",
+  "title": "Set up and delete destination numbers",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Define which telephone numbers the Pro-finder contacts after an alarm, understand the three roles assigned to those numbers and, when necessary, delete the complete destination-number memory.",
+  "prerequisites": [
+    "The Nano-SIM is inserted in the device.",
+    "The Pro-finder is wired and connected to its power supply.",
+    "You know which telephone numbers should be notified after an alarm. Up to ten numbers can be saved.",
+    "For every number, you know whether the receiving device is a smartphone.",
+    "To delete the memory, you can reach the main wiring harness and the operating-mode selector.",
+    "To delete the memory, you know the selector's current position. The source requires a return to the “starting position” but does not identify that position by number or letter."
+  ],
+  "warnings": [
+    {
+      "text": "The deletion procedure always clears the entire destination-number memory; it cannot remove a single number. With no destination number saved, the Pro-finder will notify nobody after an alarm. The source gives no time limit for reprogramming, so save new destination numbers before relying on the alarm function again.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Section 2.9 “Zielrufnummern löschen”" }
+      ]
+    },
+    {
+      "text": "The master number can replace the complete destination-number memory without access to the operating-mode selector. The source does not say whether a confirmation or password is required. Use only a number you control as the master number.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Section 2.7, master-number description"
+        }
+      ]
+    },
+    {
+      "text": "In a programming SMS, punctuation determines whether a destination number is authorised to control the system or only receives messages. This rule can be inferred only from the source examples; the prose does not state it. This draft omits the unconfirmed punctuation and command syntax. Use the THITRONIK App or section 2.8 of the original manual.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Sections 2.7 and 2.8" },
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Programming-SMS examples" }
+      ]
+    },
+    {
+      "text": "Marking a destination number as a smartphone number changes the vehicle position into a clickable link. The source expressly says to use that option only when the receiving device is a smartphone.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "Smartphone marker in the programming-SMS diagram"
+        }
+      ]
+    },
+    {
+      "text": "The Nano-SIM must be installed before the destination-number memory is deleted.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "17",
+          "region": "Red warning box before the deletion procedure"
+        }
+      ]
+    },
+    {
+      "text": "Every SMS sent by the Pro-finder incurs a charge set by your network provider. Each time the system is controlled by SMS or a phone call, the Pro-finder sends a status SMS.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.6" }]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Collect the telephone numbers that should be notified after an alarm. These are the destination numbers; up to ten can be saved.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "15", "region": "Sections 2.7 and 2.8" }]
+    },
+    {
+      "text": "Assign one of three roles to every number. The first number saved is the master number and can later replace the destination numbers without access to the operating-mode selector. Authorised numbers can control the Pro-finder outputs by SMS and request status reports. Non-authorised numbers only receive status messages.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.7 table" }]
+    },
+    {
+      "text": "Write each destination number with its country code beginning with a plus sign, for example +49 for Germany.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "16",
+          "region": "Country-code label in the programming-SMS diagram"
+        }
+      ]
+    },
+    {
+      "text": "Set up the destination numbers with the THITRONIK App. The source expressly recommends this route and says the app guides you through the individual steps.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "14", "region": "Section 2.4, second paragraph" }
+      ]
+    },
+    {
+      "text": "Without the app, the source uses a programming SMS sent to the Pro-finder number. This draft does not reproduce the exact character sequence, smartphone marker, punctuation or example numbers because the device command language remains unconfirmed. Use the THITRONIK App or section 2.8 of the original manual.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.8 introduction" },
+        { "doc": "DOC-IBA-SN045", "pages": "16", "region": "Programming-SMS diagram" },
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Programming-SMS examples" }
+      ]
+    },
+    {
+      "text": "If you work from the original manual, do not insert spaces into the programming SMS. Spaces in the diagram are for presentation only, and all recipient entries continue without spaces.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Section 2.8, note below the introductory text"
+        }
+      ]
+    },
+    {
+      "text": "Check the result at the Status-LED. Green flashing means that the device is registered, has reception and has destination numbers. Alternating yellow and green means it is registered but has no destination numbers; alternating red and yellow means it is still searching for a network and has no destination numbers.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "18", "region": "Chapter 3, relevant Status-LED states" }
+      ]
+    },
+    {
+      "text": "Continue only if you intend to delete every stored destination number. Record the operating-mode selector's current position before disconnecting anything. Positions 0 to D are operating modes; E deletes destination numbers and F is GPS diagnostics.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "Operating-mode table, positions 0 to F"
+        }
+      ]
+    },
+    {
+      "text": "Disconnect the main wiring harness, set operating-mode selector A to position E and reconnect the main wiring harness. Wait until the Status-LED flashes alternately yellow and green.",
+      "expected": "The destination-number memory is empty.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Section 2.9 deletion procedure" },
+        { "doc": "DOC-IBA-SN045", "pages": "8", "region": "Section 1.2, selector A" },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, yellow/green flashing state"
+        }
+      ]
+    },
+    {
+      "text": "Return selector A to the position you recorded before deletion. Do not leave it at E or F.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Final step of section 2.9" },
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" }
+      ]
+    },
+    {
+      "text": "If the selector is inaccessible, the destination-number memory can instead be overwritten from the master number using the programming-SMS procedure in section 2.8 of the original manual.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Section 2.7, master-number description"
+        }
+      ]
+    }
+  ],
+  "expected_result": "The Pro-finder has the intended destination numbers, each with a known role, and its Status-LED flashes green. After deletion, the memory is empty, the Status-LED flashes alternately yellow and green, and no number remains that can be notified after an alarm.",
+  "error_cases": [
+    {
+      "problem": "The Status-LED flashes alternately yellow and green instead of green.",
+      "correction": "The device is registered and has reception, but no destination numbers are saved. Set them up again, preferably with the THITRONIK App.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, yellow/green flashing state"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED flashes alternately red and yellow.",
+      "correction": "The device is still searching for a network and has no destination numbers. Wait for network registration; if the pattern remains, check the SIM card and reception before trying again.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "18", "region": "Chapter 3, red/yellow flashing state" }
+      ]
+    },
+    {
+      "problem": "A programming SMS did not save the destination numbers.",
+      "correction": "Check the two visible formatting rules in the source: do not use spaces, and begin every number with a plus sign and country code, such as +49 for Germany. The remaining command syntax is not reproduced in this draft.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.8" },
+        { "doc": "DOC-IBA-SN045", "pages": "16", "region": "Programming-SMS diagram" }
+      ]
+    },
+    {
+      "problem": "A number that should control the system only receives messages, or the reverse.",
+      "correction": "The role depends on punctuation in the programming SMS, a rule shown only through examples. Reprogram the numbers with the THITRONIK App because this draft deliberately omits the unconfirmed punctuation.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.7" },
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Programming-SMS examples" }
+      ]
+    },
+    {
+      "problem": "A destination number belongs to a mobile phone without smartphone functionality.",
+      "correction": "Do not mark it as a smartphone number. That marker changes the vehicle position into a clickable link and is intended only for a smartphone.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "16", "region": "Smartphone note in the diagram" }
+      ]
+    },
+    {
+      "problem": "The Pro-finder is installed where the operating-mode selector cannot be reached.",
+      "correction": "Use the master number. It can replace the destination-number memory without access to the selector.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Section 2.7, master-number description"
+        }
+      ]
+    },
+    {
+      "problem": "It is unclear which cable is the “main wiring harness”.",
+      "correction": "The German manual uses the term in sections 1.5.2 and 2.9 but does not identify it in the labelled connector figure. Do not guess; ask the installation workshop. This documentation gap must be clarified with THITRONIK.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "12", "region": "Section 1.5.2" },
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Section 2.9" },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Section 1.2 connector figure",
+          "note": "The legend identifies the operating-mode selector, WiPro III connection, optional external GPS antenna, Status-LED and eight pins, but not a main wiring harness."
+        }
+      ]
+    },
+    {
+      "problem": "After deletion, it is unclear which selector position is the “starting position”.",
+      "correction": "The source gives no number or letter. It means the operating mode selected before deletion, within positions 0 to D. E is deletion and F is GPS diagnostics. If the previous position was not recorded, ask the installation workshop which operating mode applies.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Final step of section 2.9" },
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s16-programmier-sms-aufbau",
+      "alt": "Labelled diagram showing the structure of a programming SMS with three destination numbers; angled lines connect parts of the SMS line to four labels.",
+      "long_description": "The diagram contains one horizontal programming-SMS example with four labels below it. It begins with a plus sign, followed by a single red capital letter used as the smartphone marker, the country code and first destination number, then two more numbers with country codes. The actual marker and example numbers are deliberately omitted here. Lines identify the initial plus sign as the start of a country code, the first number as the master number and the following entries as the second and third destination numbers. Colour alone links the red smartphone marker to its red explanation. The diagram is internally inconsistent about underlining and spacing, while the prose states that the real SMS contains no spaces.",
+      "steps_text": [
+        "The programming SMS is one character sequence without spaces.",
+        "Each number begins with a plus sign and country code; the first is the master number.",
+        "A separate marker changes position delivery for a smartphone, but its unconfirmed character is omitted from this draft.",
+        "The example contains three authorised destination numbers; up to ten numbers are possible.",
+        "The exact syntax and example telephone numbers are not reproduced."
+      ],
+      "data_table_md": "| Part of the line, in order | Diagram label or treatment |\n| --- | --- |\n| Initial plus sign | Country code beginning with + (+49 for Germany) |\n| Red capital letter for smartphone numbers | Red explanatory text; exact character omitted |\n| Country code of first number | Underlined but not separately labelled |\n| First number | 1st destination number (master number) |\n| Second number with country code | 2nd destination number |\n| Third number with country code | 3rd destination number |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "16",
+        "region": "Full-page labelled diagram continuing section 2.8",
+        "note": "The command-language character and all example telephone numbers are deliberately omitted because command syntax remains blocked and telephone-number data is excluded from product content."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Destination-number role | Meaning in section 2.7 |\n| --- | --- |\n| Master number | The first telephone number saved. It can later program new destination numbers without access to the operating-mode selector. |\n| Authorised numbers | May control the Pro-finder outputs by SMS and request status reports. |\n| Non-authorised numbers | Cannot access system functions and only receive status messages. |",
+    "| Programming case | Programming-SMS content in Pro-finder |\n| --- | --- |\n| One recipient (master number) | Character sequence omitted from this pilot draft; clarification from THITRONIK pending |\n| Master number and one authorised number | Character sequence omitted from this pilot draft; clarification from THITRONIK pending |\n| Master number as a smartphone number and one non-authorised number | Character sequence omitted from this pilot draft; clarification from THITRONIK pending |"
+  ],
+  "sources": [
+    { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Sections 2.6, 2.7 and 2.8" },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "16",
+      "region": "Full-page programming-SMS diagram continuing section 2.8"
+    },
+    { "doc": "DOC-IBA-SN045", "pages": "17", "region": "Programming-SMS examples and section 2.9" },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "14",
+      "region": "Section 2.4, app recommendation and activation feedback"
+    },
+    { "doc": "DOC-IBA-SN045", "pages": "18", "region": "Chapter 3, Status-LED states" },
+    { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table, positions 0 to F" },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "12",
+      "region": "Section 1.5.2, use of the term main wiring harness"
+    },
+    { "doc": "DOC-IBA-SN045", "pages": "8", "region": "Section 1.2, operating-mode selector A" }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. No SMS command string, command punctuation, smartphone marker or example telephone number was imported. The unconfirmed device command language, inaccessible-selector path and undefined “starting position” remain explicit. Technical and independent English-language reviews are pending."
+}

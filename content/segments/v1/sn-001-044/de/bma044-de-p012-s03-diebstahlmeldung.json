@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P012-S03-DIEBSTAHLMELDUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Diebstahlmeldung ist zunächst ein stiller Alarm",
+  "body_md": "Bei aktivierter WiPro sendet der Pro-finder eine Diebstahlmeldung, wenn sich das Fahrzeug weiter als die vorgesehene Entfernungsschwelle vom ursprünglichen Standort entfernt. Der konkrete Radius bleibt wegen widersprüchlicher Quellenwerte ungeklärt und wird nicht freigegeben. Die Meldung ist zunächst ein stiller Alarm: Blinker und Sirene werden nicht automatisch aktiviert. Nach dem Versand der Meldung wird die Masternummer zusätzlich angerufen. Die Quelle sieht eine nachträgliche Aktivierung von Blinker und Sirene per SMS vor; die Befehlszeichenfolge bleibt gesperrt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 2.1, Absatz Diebstahlmeldung einschließlich rotem Anrufhinweis",
+  "prev_context": "Der Statusbericht beschreibt reguläre Zustandsdaten des Fahrzeugs und Geräts.",
+  "next_context": "Der nächste Absatz erläutert den Batterieschutz bei Unterspannung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6f6c3cec9ca3f753f31098a711e2c5d2b8972d49e33d9148fcd685a62a4636d9",
+  "change_reason": "Alarmwirkung und zusätzlicher Anruf wurden erhalten. Der umstrittene Radius und der SMS-Befehl bleiben wegen Rückfrage 14, DSC-061/078 und BLK-005 außerhalb des freigabefähigen Inhalts.",
+  "discrepancy_refs": ["DSC-061", "DSC-063", "DSC-078"]
+}

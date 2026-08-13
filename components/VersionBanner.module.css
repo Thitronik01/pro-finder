@@ -1,0 +1,25 @@
+.banner {
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  margin-block: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.text {
+  margin: 0;
+}
+
+.switch {
+  margin: 0;
+}
+
+.switch a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+}

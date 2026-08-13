@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P005-S02-BETRIEBSARTENTABELLE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "statusbericht",
+  "title": "Betriebsarten 0 bis F",
+  "body_md": "| Betriebsart | Anrufverhalten oder Sonderfunktion | Automatischer Bericht | Spannungen im Bericht | Pin 3 |\n| --- | --- | --- | --- | --- |\n| 0 | Bericht | – | keine | – |\n| 1 | Bericht | – | U1, U2 | – |\n| 2 | WiPro umschalten | – | keine | – |\n| 3 | WiPro umschalten | – | U1, U2 | – |\n| 4 | Bericht | 15 Minuten | U1 bis U5 | – |\n| 5 | Bericht | 60 Minuten | U1 bis U5 | – |\n| 6 | Bericht | 6 Stunden | U1 bis U5 | – |\n| 7 | Bericht | 24 Stunden | U1 bis U5 | – |\n| 8 | Bericht | – | keine | über 6 V: Geofencing ein; unter 5 V: aus |\n| 9 | Bericht | – | keine | – |\n| A | Bericht | – | keine | Hilfe-SMS bei Spannung |\n| B | Bericht | – | keine | über 6 V: Geofencing aus; unter 5 V: ein |\n| C | Bericht | 90 Sekunden, sobald Spannung anliegt und das Gerät eingebucht ist | gemeinsame Tabellenzelle ohne Einzelangabe | gemeinsame Tabellenzelle |\n| D | Bericht | Wert wegen DSC-066 nicht in den übersetzbaren Inhalt übernommen | gemeinsame Tabellenzelle ohne Einzelangabe | gemeinsame Tabellenzelle |\n| E | Zielrufnummern löschen, Verweis auf Abschnitt 1.9 | – | – | – |\n| F | GPS-Diagnose, Verweis auf Abschnitt 1.7 | – | – | – |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Tabelle Betriebsarten, vollständige Zeilen 0 bis F",
+  "prev_context": "Oberhalb der Tabelle stehen Erläuterungen zu Anruf, Hilfe-SMS und WiPro-Verfügbarkeit.",
+  "next_context": "PDF-Seite 6 beginnt mit dem elektrischen Anschluss des Moduls.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:43929ef24a1b6d92e827b9e00906788c026a0ead27fa76c1bc01156a3454cb74",
+  "change_reason": "Die bildartige Tabelle wurde in eine lineare Markdown-Tabelle überführt. Leere beziehungsweise mit Nachbarspalten verbundene Zellen bleiben als solche erkennbar. Das widersprüchliche Intervall der Betriebsart D ist wegen Rückfrage 16 nicht als übersetzbarer Wert enthalten und wird separat begründet.",
+  "discrepancy_refs": ["DSC-056", "DSC-066"]
+}

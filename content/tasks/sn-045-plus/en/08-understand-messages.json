@@ -1,0 +1,241 @@
+{
+  "slug": "understand-messages",
+  "title": "Understand messages",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Identify the type of an incoming Pro-finder SMS, read the information it contains and know what happens next at the device and telephone.",
+  "prerequisites": [
+    "The Pro-finder is installed, connected and ready for operation.",
+    "An operating mode is selected; it affects which information a message contains.",
+    "Your telephone number is saved as a destination number that the Pro-finder should notify after an alarm."
+  ],
+  "warnings": [
+    {
+      "text": "A theft message is a silent alarm. It does not activate the indicators or siren, so do not expect an audible or visible signal at the vehicle.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4, theft-message explanation" }
+      ]
+    },
+    {
+      "text": "Chapter 4 gives two conditions for a theft message: the WiPro III (safe.lock) must be active and the vehicle must move more than approximately 900 m from its original location. Section 5.2 adds a condition omitted from chapter 4: geofencing itself must be switched on.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4, theft-message explanation" },
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2 “Geofencing”" }
+      ]
+    },
+    {
+      "text": "If the supply voltage remains below 11,2 V, the Pro-finder enters standby to protect the battery and sends an SMS. It returns to normal operation only after the voltage rises above 12,5 V.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Chapter 4, voltage-warning explanation"
+        }
+      ]
+    },
+    {
+      "text": "In operating mode B, the Pro-finder does not issue a voltage warning. B is a selector position, not a category; the operating-mode table lists positions 0 to 9 and A to F.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4, voltage warning" },
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" }
+      ]
+    },
+    {
+      "text": "After sending an intrusion, gas or manual-alarm SMS, the Pro-finder also calls the master number. That call is part of the alarm notification. The master number is the first destination number saved.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Intrusion, gas and manual-alarm explanations"
+        },
+        { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.7, master-number definition" }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Read the SMS from top to bottom. Seven of the nine examples begin with the event type: geofencing theft, intrusion through a wireless magnetic contact, gas alarm, manual alarm, wireless cable-loop activation, low voltage or an invalid command. The status report instead begins with WiPro and Fence state lines, while the position SMS begins with a time.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "First three example messages" },
+        { "doc": "DOC-IBA-SN045", "pages": "20", "region": "Remaining six example messages" }
+      ]
+    },
+    {
+      "text": "Read the time after UTC. Chapter 4 calls this the event time in coordinated universal time. Section 5.7 instead says it is always the time of the most recently received position, which may pre-date the event when GPS reception is unavailable.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4 field list" },
+        { "doc": "DOC-IBA-SN045", "pages": "24", "region": "Section 5.7" }
+      ]
+    },
+    {
+      "text": "Open or enter the position to locate the vehicle. Depending on the mobile device, the Pro-finder sends the position as a Google Maps link or as coordinates. Read the speed below it; the accessory-theft example is the only one of the nine without a speed line.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4 field list and examples" },
+        { "doc": "DOC-IBA-SN045", "pages": "20", "region": "Position and accessory-theft examples" }
+      ]
+    },
+    {
+      "text": "If the GPS field says Standby, the GPS antenna is in standby. No action is required; it is reactivated automatically when an event occurs.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4 field list" }]
+    },
+    {
+      "text": "Interpret a status report using its additional lines. Depending on the operating mode, it can contain the supply voltage U1, measurement-input voltages U2 to U5, output states A and B, and the temperature close to the device. The printed example omits the temperature and GPS lines even though the prose names them.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Status-report example and explanation"
+        },
+        { "doc": "DOC-IBA-SN045", "pages": "9", "region": "Section 1.3, status-report voltages" },
+        { "doc": "DOC-IBA-SN045", "pages": "22", "region": "Section 5.3" }
+      ]
+    },
+    {
+      "text": "A status report can be requested by calling the Pro-finder number. The device ends the call after a few ring tones and replies with a report. According to section 5.3, this route does not apply in operating modes 2 and 3. Only authorised numbers may request a report.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "22", "region": "Section 5.3" },
+        { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.7, authorised numbers" }
+      ]
+    },
+    {
+      "text": "Treat an intrusion message, gas alarm or manual alarm as both an SMS and a call to the master number. Treat a wireless cable-loop message as an accessory-theft alarm.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "20", "region": "Four alarm-message explanations" }
+      ]
+    },
+    {
+      "text": "An input-help SMS reports an invalid command and lists possible commands. This draft deliberately omits the command words because their valid language and capitalisation remain unresolved; consult the original manufacturer manual.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "20", "region": "Input-help SMS example" },
+        { "doc": "DOC-IBA-SN045", "pages": "22", "region": "Sections 5.3 and 5.4" }
+      ]
+    }
+  ],
+  "expected_result": "You can assign each incoming Pro-finder SMS to a message type, read its time, position and speed, and recognise when the master number is called in addition and when no signal should be expected at the vehicle.",
+  "error_cases": [
+    {
+      "problem": "A message says that the SMS command was invalid.",
+      "correction": "The Pro-finder did not recognise the content and therefore lists possible commands. Those device-response words conflict in capitalisation and, for position retrieval, in wording with the German manual. This draft does not reproduce them while clarification from THITRONIK remains open.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "20", "region": "Input-help SMS" },
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.1" },
+        { "doc": "DOC-IBA-SN045", "pages": "22", "region": "Sections 5.3 and 5.4" }
+      ]
+    },
+    {
+      "problem": "The supply voltage is low, but no voltage warning arrives.",
+      "correction": "Check the operating-mode selector. The Pro-finder issues no voltage warning in position B.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Voltage-warning explanation" },
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" }
+      ]
+    },
+    {
+      "problem": "The vehicle moved, but no theft message arrived.",
+      "correction": "The source is incomplete across sections. Chapter 4 requires an active WiPro III (safe.lock) and movement beyond approximately 900 m; section 5.2 additionally requires geofencing to be on. The interaction with selector positions 8 and B is partly contradictory and must be clarified with THITRONIK.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Theft-message explanation" },
+        { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Section 5.2" },
+        { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" }
+      ]
+    },
+    {
+      "problem": "The SMS contains coordinates instead of a clickable map link.",
+      "correction": "The source says the transmission form depends on the mobile device but does not explain how to change it. Section 5.7 suggests entering the position in any map or navigation program.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4 position field" },
+        { "doc": "DOC-IBA-SN045", "pages": "24", "region": "Section 5.7" }
+      ]
+    },
+    {
+      "problem": "The UTC time does not match the apparent event time.",
+      "correction": "The source contradicts itself. Chapter 4 calls UTC the event time, while section 5.7 says it is the time of the last received position and may therefore be older. The contradiction remains unresolved.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4 field list" },
+        { "doc": "DOC-IBA-SN045", "pages": "24", "region": "Section 5.7" }
+      ]
+    },
+    {
+      "problem": "The status report has no temperature line even though the text says it should.",
+      "correction": "Chapter 4 and section 5.3 name a temperature, but the printed example has no such line. This unresolved contradiction is preserved. U1 is not the missing temperature; section 1.3 identifies U1 as the supply voltage.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Status-report example and explanation"
+        },
+        { "doc": "DOC-IBA-SN045", "pages": "22", "region": "Section 5.3" },
+        { "doc": "DOC-IBA-SN045", "pages": "9", "region": "Section 1.3" }
+      ]
+    },
+    {
+      "problem": "A message has neither a GPS field nor a Pos label.",
+      "correction": "The chapter introduction describes both fields, but none of its nine examples has a GPS line and the examples show the position without a Pos label. The source says the actual fields depend on the event type and operating-mode setting.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "19", "region": "Chapter 4 field list and examples" },
+        { "doc": "DOC-IBA-SN045", "pages": "20", "region": "Remaining examples" }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s19-beispiel-sms",
+      "alt": "Three black SMS bubbles showing examples of a status report, theft message and voltage warning, each with an explanation beside it.",
+      "long_description": "Three black speech bubbles with white text appear beside explanatory paragraphs. The first is a status report with WiPro and Fence state lines, UTC, a map address, speed, U1 to U5, and outputs A and B. The second is a geofencing theft message with UTC, position and speed. The third is a low-voltage warning with WiPro state, UTC, position and speed. The concrete coordinates and complete map addresses are deliberately omitted.",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "19",
+        "region": "Chapter 4, three example SMS bubbles"
+      }
+    },
+    {
+      "asset_key": "iba-sn045-s20-beispiel-sms",
+      "alt": "Six black SMS bubbles showing examples of a position SMS, input help, intrusion, gas alarm, manual alarm and accessory theft.",
+      "long_description": "Six black speech bubbles appear beside explanatory text: a position SMS; an input-help reply whose command words are omitted here; intrusion, gas and manual-alarm messages; and an accessory-theft message. The last example alone has no speed line. Red text beside the intrusion, gas and manual examples states that the master number is called after the SMS. Concrete coordinates and map addresses are omitted.",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "20",
+        "region": "Chapter 4, six example SMS bubbles"
+      }
+    }
+  ],
+  "tables_md": [
+    "| SMS field | Meaning |\n| --- | --- |\n| GPS | Standby means that the GPS antenna is in standby and is reactivated automatically after an event. |\n| UTC | Coordinated universal time; chapter 4 calls it the event time, while section 5.7 calls it the time of the last received position. |\n| Pos | Vehicle position as a Google Maps link or coordinates, depending on the mobile device. |\n| Speed | Current vehicle speed; not present in every message. |\n| U1 | Supply voltage, explained in section 1.3 but omitted from chapter 4's field list. |",
+    "| Message | When it is received | What else happens |\n| --- | --- | --- |\n| Status report | On request or at intervals selected by the operating mode; a phone call requests it except in modes 2 and 3. | Depending on the mode, it includes position, speed, output states, U2 to U5 and nearby temperature. |\n| Theft message (geofencing) | When the vehicle moves beyond approximately 900 m with the required functions active; the source states those conditions inconsistently. | Silent alarm: no indicators or siren. |\n| Voltage warning | When supply voltage remains below 11,2 V; not issued in mode B. | Pro-finder enters standby and returns to normal operation above 12,5 V. |\n| Position SMS | In reply to a position request. | A smartphone can open the map link. |\n| Input-help SMS | When a destination number sends invalid SMS content. | Lists possible commands; those words are omitted from this draft. |\n| Intrusion message | When WiPro III (safe.lock) reports an alarm. | The master number is also called. |\n| Gas alarm | When WiPro III (safe.lock) reports a gas alarm. | The master number is also called. |\n| Manual alarm | When WiPro III (safe.lock) is activated by a panic alarm. | The master number is also called. |\n| Accessory theft | When the wireless cable loop triggers. | No additional call is stated. |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Chapter 4, field list and first three example messages"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "20",
+      "region": "Chapter 4, remaining six example messages"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Section 1.3, automatic reports and status-report voltages"
+    },
+    { "doc": "DOC-IBA-SN045", "pages": "10", "region": "Operating-mode table" },
+    { "doc": "DOC-IBA-SN045", "pages": "15", "region": "Section 2.7, destination-number roles" },
+    { "doc": "DOC-IBA-SN045", "pages": "21", "region": "Sections 5.1 and 5.2" },
+    { "doc": "DOC-IBA-SN045", "pages": "22", "region": "Sections 5.3 to 5.5" },
+    { "doc": "DOC-IBA-SN045", "pages": "24", "region": "Section 5.7" }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. No command word, example coordinate or complete map address was imported. Contradictions concerning theft prerequisites, UTC meaning, report fields and command language remain explicit. Technical and independent English-language reviews are pending."
+}

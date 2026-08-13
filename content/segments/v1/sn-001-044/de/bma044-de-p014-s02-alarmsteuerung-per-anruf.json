@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P014-S02-ALARMSTEUERUNG-PER-ANRUF",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "meldungen",
+  "title": "Alarmanlage in den Betriebsarten 2 und 3 per Anruf schalten",
+  "body_md": "In den Betriebsarten 2 und 3 kann die WiPro durch einen Anruf beim Pro-finder in den jeweils nächsten Zustand geschaltet werden. Das Gerät beendet den Anruf automatisch, bevor eine kostenpflichtige Verbindung zustande kommt. Nach einem erfolgreichen Schaltvorgang sendet es einen Statusbericht an den Anrufer.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.3, erster Absatz zur Anrufsteuerung",
+  "prev_context": "Abschnitt 2.2 nennt eine SMS-Steuerung, deren Befehlszeichenfolgen gesperrt bleiben.",
+  "next_context": "Der abschließende Fettdruck begrenzt den Zugriff auf berechtigte Nummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7f548a1ea4e0264dea614801b37274bca84c257bd2415f79cfdcdf17c77a4a5a",
+  "change_reason": "Der befehlsfreie Anrufablauf wurde als eigenes Segment erhalten. Die Wirkung anderer Betriebsarten wird nicht aus dem späteren Statusberichtskapitel ergänzt.",
+  "discrepancy_refs": ["DSC-064"]
+}

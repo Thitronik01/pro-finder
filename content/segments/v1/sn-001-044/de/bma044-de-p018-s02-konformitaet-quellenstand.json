@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P018-S02-KONFORMITAET-QUELLENSTAND",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "technische-daten",
+  "title": "Konformitätsangabe nur als historischen Quellenstand behandeln",
+  "body_md": "Die Anleitung erklärt die Konformität des Pro-finder mit der Richtlinie 1999/5/EG und nennt einen historischen Downloadweg. Eine andere Quelle derselben Gerätegeneration und die Anleitung ab Seriennummer 045 nennen dagegen die Richtlinie 2014/53/EU. Deshalb wird weder die Richtlinienangabe noch der alte Downloadweg als aktuell freigegebene Konformitätsauskunft übernommen. Maßgeblich ist ausschließlich eine von THITRONIK für die konkrete Gerätegeneration bestätigte Erklärung.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Abschnitt 3.2, CE-Zeichen, Konformitätssatz und Downloadadresse",
+  "prev_context": "Abschnitt 3.1 listet technische Werte der Generation bis Seriennummer 044.",
+  "next_context": "Abschnitt 3.3 beschreibt die Entsorgung von Gerät und Verpackung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:be2c45c08f84e8d448939a894e402be45625ec2a8d045868b126bdeb60130915",
+  "change_reason": "Die widersprüchliche rechtliche Angabe wird nicht still vereinheitlicht. Historische Richtlinie und Downloadadresse bleiben als belegter Quellenstand benannt, aber von einer aktuellen Freigabe klar getrennt.",
+  "discrepancy_refs": ["DSC-069", "DSC-071"]
+}

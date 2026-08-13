@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P017-S02-KEIN-GPS-EMPFANG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "fehlerbehebung",
+  "title": "Statusbericht bei fehlendem GPS-Empfang einordnen",
+  "body_md": "Befindet sich das Fahrzeug in einem Gebäude oder an einem anderen Ort ohne GPS-Empfang, wartet der Pro-finder laut Quelle bis zu 10 Minuten auf eine gültige Position. Liegt danach weiterhin keine gültige Position vor, sendet er den Statusbericht mit der zuletzt empfangenen Position. Behandeln Sie diese Angabe deshalb nicht automatisch als aktuellen Fahrzeugstandort.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.8, Absatz unterhalb der beiden Kartenabbildungen",
+  "prev_context": "Positionsangaben können manuell in Kartenprogramme übertragen oder über einen Smartphone-Link geöffnet werden.",
+  "next_context": "Der Schlussabsatz erläutert die fortlaufende Positionsabfrage während eines Alarms bei aktiver Lichtmaschine.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:030d770ce226931bbc9886735067d691043aec47e2ae8c12d7cca87d8ab56be8",
+  "change_reason": "Die Zehn-Minuten-Wartezeit und der Rückfall auf die letzte empfangene Position wurden als ausdrücklicher Aktualitätshinweis strukturiert. Die Quelle nennt für die gespeicherte Position keine maximale Altersgrenze.",
+  "discrepancy_refs": []
+}

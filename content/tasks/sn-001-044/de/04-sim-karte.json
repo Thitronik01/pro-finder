@@ -1,0 +1,195 @@
+{
+  "slug": "sim-karte",
+  "title": "SIM-Karte vorbereiten und einlegen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Eine freigeschaltete Micro-SIM für den Pro-finder bis SN-044 vorbereiten und spannungsfrei in das Modul einsetzen.",
+  "prerequisites": [
+    "Die Gerätegeneration bis SN-044 ist bestätigt.",
+    "Eine freigeschaltete Micro-SIM ist vorhanden.",
+    "Die PIN-Konfiguration wurde vorab mit Fachhändler oder Support geklärt, weil der Pilot den unbestätigten festen PIN-Wert nicht veröffentlicht."
+  ],
+  "warnings": [
+    {
+      "text": "Setzen Sie die SIM-Karte nur bei vollständig spannungsfreiem Pro-finder ein.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8",
+          "region": "Abschnitt 1.8, rosa Warnkasten, fünfte Anforderung"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 2 „SIM Karte vorbereiten“, Schritt 6"
+        }
+      ]
+    },
+    {
+      "text": "Das Handbuch verlangt eine feste PIN-Einstellung bei aktivierter PIN-Abfrage. Diese sicherheitskritische Vorgabe ist technisch unbestätigt und wird im Pilot nicht als Zahlenwert ausgegeben. Klären Sie sie vor dem Einsetzen mit dem Fachhändler oder Support.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11",
+          "region": "Rosa Warnkasten in Abschnitt 1.8 und LED-Zustand für eine abweichende PIN-Einstellung"
+        }
+      ]
+    },
+    {
+      "text": "Die Kurzanleitung untersagt für ihre ersten sechs Vorbereitungsschritte die Verwendung eines iPhone.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 2, roter Achtung-Hinweis oberhalb der deutschen Schrittliste"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Verwenden Sie eine freigeschaltete Micro-SIM eines Mobilfunkanbieters. Der Tarif muss Telefonie und SMS unterstützen; mobile Daten sind laut Kurzanleitung nicht erforderlich.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 18",
+          "region": "Beginn von Abschnitt 1.8 und technische Daten, Zeile „SIM Format“"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 2, deutscher Einleitungsabsatz"
+        }
+      ]
+    },
+    {
+      "text": "Deaktivieren Sie Mailbox, alle Rufumleitungen und Komfortfunktionen wie Rückruf bei besetzt oder SMS-Erinnerungen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8",
+          "region": "Abschnitt 1.8, rosa Warnkasten, zweite bis vierte Anforderung"
+        }
+      ]
+    },
+    {
+      "text": "Aktivieren Sie Roaming, wenn das Fahrzeug auch im Ausland genutzt werden soll.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8",
+          "region": "Abschnitt 1.8, rosa Warnkasten, sechste Anforderung"
+        }
+      ]
+    },
+    {
+      "text": "Lassen Sie die erforderliche PIN-Einstellung vor dem Einsetzen bestätigen. Ohne diese Bestätigung bleibt die Inbetriebnahme an dieser Stelle bewusst unterbrochen.",
+      "expected": "Die Karte ist gemäß einer bestätigten technischen Vorgabe konfiguriert.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11",
+          "region": "PIN-Anforderungen und zugehöriger LED-Fehlerzustand"
+        },
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 3.4, Verweis auf Fachhändler und technischen Support"
+        }
+      ]
+    },
+    {
+      "text": "Trennen Sie den Pro-finder vollständig von der Spannungsversorgung, öffnen Sie das Gehäuse und setzen Sie die Micro-SIM in den Kartenhalter auf der Platine ein.",
+      "expected": "Die Karte sitzt entsprechend der abgebildeten Lage im Halter.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8",
+          "region": "Abschnitt 1.8, Warnkasten und Foto des geöffneten Geräts"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 2, Bildfolge 1 bis 6"
+        }
+      ]
+    },
+    {
+      "text": "Schließen Sie den Kartenhalter und das Gehäuse, bevor Sie die Spannungsversorgung wieder anschließen.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 2, Bildfolge zum Verriegeln des Halters und Schließen des Gehäuses"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die vorbereitete Micro-SIM sitzt bei geschlossenem Gehäuse im spannungsfreien Pro-finder. Die Spannungsversorgung wird erst danach wieder angeschlossen.",
+  "error_cases": [
+    {
+      "problem": "Die Status-LED leuchtet nach dem Einschalten dauerhaft rot.",
+      "correction": "Im Normalbetrieb bedeutet das laut Handbuch, dass die SIM-Karte fehlt oder defekt ist. Trennen Sie die Spannung und prüfen Sie Karte und Sitz.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, Zustand „Leuchtet rot“"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt abwechselnd rot und grün.",
+      "correction": "Die PIN-Einstellung entspricht nicht der vom Gerät erwarteten Vorgabe. Verändern Sie sie nicht durch Raten; lassen Sie den unbestätigten Wert fachlich klären.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11",
+          "region": "PIN-Anforderungen in Abschnitt 1.8 und LED-Zustand „Blinkt rot/grün“"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s08-sim-einsetzen",
+      "alt": "Geöffneter Pro-finder bis SN-044 mit eingesetzter Micro-SIM und ESD-Warnsymbol.",
+      "long_description": "Das Foto zeigt das geöffnete schwarze Gehäuse mit grüner Platine. Eine rote Linie führt vom Wort SIM-Karte zum Kartenhalter. Oben rechts steht ein gelbes ESD-Warnsymbol mit schwarzem Dreieck und Hand. Das Symbol wird im Fließtext nicht erklärt; konkrete Schutzmaßnahmen gegen elektrostatische Entladung nennt die Quelle nicht.",
+      "steps_text": [
+        "Vor dem Einsetzen die Spannungsversorgung trennen.",
+        "Die Micro-SIM in den Kartenhalter auf der Platine einsetzen.",
+        "Kartenhalter und Gehäuse vor dem Wiedereinschalten schließen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "8",
+        "region": "Abschnitt 1.8, Foto und ESD-Symbol",
+        "note": "Einbaulage und ESD-Hinweis werden nur grafisch vermittelt."
+      }
+    }
+  ],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "8, 11, 18",
+      "region": "Abschnitt 1.8, LED-Zustände und technische Daten",
+      "note": "Am 2026-08-09 bei 200 dpi neu gerendert und visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "SIM-Vorbereitung, Bildfolge und technische Daten",
+      "note": "Am 2026-08-09 bei 250 dpi neu gerendert und visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus DOC-BMA-SN044, Seiten 8, 11 und 18, sowie DOC-KA-SN044, Seiten 1–2. Das Micro-SIM-Format ist strikt auf diesen Generationszweig begrenzt. Die Quelle verlangt, die PIN auf 0000 zu ändern und die PIN-Abfrage aktiviert zu lassen; wegen Rückfrage 15 wird der Zahlenwert in keinem nutzerseitigen Feld veröffentlicht und nur hier als Begründung der Auslassung festgehalten. Die namentliche Anbieterempfehlung wurde wegen des sprachübergreifenden Konflikts DSC-027 nicht übernommen. Das ESD-Symbol besitzt keinen erklärenden Quelltext, daher wurden keine Schutzschritte erfunden. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen; technischer Review steht aus."
+}

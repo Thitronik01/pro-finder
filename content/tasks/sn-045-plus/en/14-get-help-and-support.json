@@ -1,0 +1,83 @@
+{
+  "slug": "get-help-and-support",
+  "title": "Get help and support",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Know what information to prepare and which confirmed first step to take when this guide does not resolve a Pro-finder problem.",
+  "prerequisites": [],
+  "warnings": [
+    {
+      "text": "The manufacturer contact details printed in the source have not been confirmed as current and are therefore not published in this English draft. Do not copy a telephone number, email address or website from an older manual without verification.",
+      "safety_class": "normal",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4, technical support"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "For installation or operating questions, contact the specialist dealer first.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "If the issue remains, use only a current manufacturer support route that has been confirmed as current. The exact website, telephone number and email address remain withheld here until that confirmation is available.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4, manufacturer support routes",
+          "note": "The historical details are intentionally omitted under BLK-004."
+        }
+      ]
+    },
+    {
+      "text": "Prepare the serial number and software version of the Pro-finder. The source says that both can be found on the device or in the THITRONIK App, but it does not provide a precise location or reading rule.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4, information required for a support call"
+        }
+      ]
+    }
+  ],
+  "expected_result": "You have contacted the confirmed first point of assistance and prepared the device information needed for a focused response, without relying on an unverified support route.",
+  "error_cases": [
+    {
+      "problem": "The serial number cannot be located on the device.",
+      "correction": "The source names only the device or the THITRONIK App and gives no exact position or reading rule. Do not infer which number fragment determines the generation; ask the specialist dealer or a confirmed support route.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Section 6.4, serial number and software version"
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "tables_md": [
+    "| Support path | Status in this draft |\n| --- | --- |\n| Specialist dealer | Confirmed first point of contact in the source |\n| Manufacturer website | Withheld pending current confirmation |\n| Telephone | Withheld pending current confirmation |\n| Email | Withheld pending current confirmation |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Section 6.4, technical support"
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. The historical manufacturer website, telephone number and email address remain intentionally omitted under BLK-004 because THITRONIK has not confirmed them as current support routes. The specialist dealer, required device information and source limitation remain visible. Independent English-language review is pending."
+}

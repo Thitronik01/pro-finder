@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P018-S04-SUPPORTWEG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "support",
+  "title": "Supportanfrage vorbereiten",
+  "body_md": "Wenden Sie sich bei technischen Problemen zuerst an Ihren Fachhändler. Halten Sie für eine weitere Supportanfrage die Seriennummer des eigenen Geräts bereit, sofern Sie sie sicher ablesen können. Die in der alten Anleitung gedruckten Öffnungszeiten, die Rufnummer und die Website sind nicht als heute erreichbar bestätigt und werden deshalb nicht als aktueller Kontaktweg veröffentlicht.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Abschnitt 3.4, Supportkette und leeres Feld für die Seriennummer",
+  "prev_context": "Abschnitt 3.3 fordert die getrennte Entsorgung des Geräts.",
+  "next_context": "PDF-Seite 19 ist eine leere Notizseite ohne weitere Bedieninformation.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c194dff5979b912477ec78af9e6148dea361bac5713ee02268a5a916667ebc26",
+  "change_reason": "Der Fachhändler als erster Weg und die Vorbereitung der Seriennummer wurden übernommen. Historische Kontaktdaten bleiben wegen BLK-004, DSC-023 und DSC-032 außerhalb des übersetzbaren Inhalts; der nicht erklärte Fundort der Seriennummer wird nicht ergänzt.",
+  "discrepancy_refs": ["DSC-023", "DSC-032"]
+}

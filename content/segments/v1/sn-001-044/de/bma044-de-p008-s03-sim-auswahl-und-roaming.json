@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P008-S03-SIM-AUSWAHL-UND-ROAMING",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "sim-karte",
+  "title": "SIM-Karte, Guthaben und Roaming",
+  "body_md": "Die Quelle empfiehlt für diese deutsche Gerätegeneration Karten von t-mobile oder Vodafone, lässt aber grundsätzlich auch andere Mobilfunkanbieter zu. Bei einer Prepaid-Karte soll das Guthaben ohne Entnahme aus dem Gerät aufgeladen werden können; das aktuelle Guthaben kann laut Quelle mit jeder Geräte-SMS übertragen werden. Für eine Nutzung im Ausland muss die Karte für Roaming freigeschaltet sein.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 8,
+  "source_page_end": 8,
+  "source_region": "Abschnitt 1.8, Warnkasten und Absatz „Verwendete SIM-Karte“",
+  "prev_context": "Zuvor nennt die Quelle die technischen und sicherheitsbezogenen Voraussetzungen der Karte.",
+  "next_context": "Der folgende Absatz empfiehlt die Speicherung der Gerätenummer im Adressbuch.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3a650e3a9588a29ef05720cbf715f35100238881fc039dc6fa692d77b827003b",
+  "change_reason": "Quellennahe Extraktion ohne Anbieterempfehlungen anderer Sprachfassungen zu vereinheitlichen. Der sprachübergreifende Konflikt bleibt über DSC-027 sichtbar.",
+  "discrepancy_refs": ["DSC-027", "DSC-065"]
+}

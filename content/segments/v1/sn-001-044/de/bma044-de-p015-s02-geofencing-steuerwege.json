@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P015-S02-GEOFENCING-STEUERWEGE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Geofencing-Steuerweg hängt von der Schalterstellung ab",
+  "body_md": "In den Schalterstellungen 8 und B kann Geofencing laut Quelle über Pin 3 ein- und ausgeschaltet werden. In allen anderen Schalterstellungen ist dafür eine SMS vorgesehen. Ist die WiPro geschärft, wird Geofencing automatisch aktiviert und benötigt keine separate Aktivierung per SMS. Die konkreten SMS-Zeichenfolgen bleiben gesperrt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.4, zweiter Absatz, SMS-Anweisung und roter WiPro-Hinweis",
+  "prev_context": "Der erste Absatz erklärt Geofencing als virtuellen Bereich mit ungeklärter Entfernungsschwelle.",
+  "next_context": "Abschnitt 2.5 beschreibt zwei Wege zum Anfordern eines Statusberichts.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:48def69128dbac0eae2b4066bee9c110147fb44640dfe5e3135d07899d3b391e",
+  "change_reason": "Die generationsspezifische Zuordnung zu Pin 3 und WiPro wurde erhalten, ohne sie auf neuere Geräte zu übertragen. Beide abgedruckten SMS-Befehle bleiben wegen BLK-005 außerhalb des übersetzbaren Inhalts.",
+  "discrepancy_refs": ["DSC-062", "DSC-063"]
+}

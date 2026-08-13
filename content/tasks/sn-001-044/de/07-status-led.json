@@ -1,0 +1,148 @@
+{
+  "slug": "status-led",
+  "title": "Status-LED verstehen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die Status-LED des Pro-finder bis SN-044 im Normalbetrieb und in der GPS-Diagnose einordnen und Grenzen der rein farblichen Anzeige erkennen.",
+  "prerequisites": [
+    "Der Pro-finder ist mit Spannung versorgt.",
+    "Die aktuelle Stellung des Betriebsartenschalters ist bekannt.",
+    "Sie können die LED sehen oder eine andere Person kann Leuchtart und Farbe beschreiben."
+  ],
+  "warnings": [
+    {
+      "text": "Die neun Normalzustände unterscheiden sich innerhalb der Gruppen „blinkend“ und „dauerhaft leuchtend“ nur durch Farbe. Die Quelle nennt weder Blinkfrequenzen noch ein anderes farbunabhängiges Merkmal.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, neun Zustände mit farbigen Balken",
+          "note": "Siehe DSC-059 und Rückfrage 12."
+        }
+      ]
+    },
+    {
+      "text": "Dauerhaftes rotes Licht hat je nach Schalterstellung verschiedene Bedeutungen: im Normalbetrieb fehlt die SIM-Karte oder ist defekt; in Stellung F ist die GPS-Antenne nicht angeschlossen. Prüfen Sie deshalb zuerst die Schalterstellung.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7, 11",
+          "region": "GPS-Diagnose und Normalzustandsliste"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Prüfen Sie die Stellung des Betriebsartenschalters. Verwenden Sie die Tabelle für die GPS-Diagnose nur in Stellung F; verwenden Sie sonst die Tabelle der Normalzustände.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5, 7",
+          "region": "Betriebsartentabelle, Zeile F, und Beginn der GPS-Diagnose"
+        }
+      ]
+    },
+    {
+      "text": "Beobachten Sie einige Sekunden lang, ob die LED blinkt oder dauerhaft leuchtet und welche Farbe oder Farbkombination sichtbar ist.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7, 11",
+          "region": "Farbbalken der GPS-Diagnose und der Normalzustände"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie das Muster mit der passenden Tabelle zu. Nach abgeschlossener Installation und Programmierung nennt das Handbuch grünes Blinken als Normalbetrieb.",
+      "expected": "Sie haben Schalterstellung, Leuchtart und Farbe gemeinsam ausgewertet.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10 und fett gesetzter Abschlusssatz"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die Anzeige ist unter Berücksichtigung der Schalterstellung einem dokumentierten Zustand zugeordnet. Ist eine Farbdifferenzierung nicht möglich, bleibt die Diagnose als Barriere offen und wird nicht geraten.",
+  "error_cases": [
+    {
+      "problem": "Die LED leuchtet dauerhaft rot.",
+      "correction": "Prüfen Sie die Schalterstellung. In Stellung F bedeutet dies eine nicht angeschlossene GPS-Antenne; im Normalbetrieb fehlt die SIM-Karte oder ist defekt.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7, 11",
+          "region": "Jeweils der Zustand mit dauerhaft rotem Licht"
+        }
+      ]
+    },
+    {
+      "problem": "Die LED blinkt abwechselnd rot und grün.",
+      "correction": "Die PIN-Einstellung entspricht nicht der Herstellervorgabe. Der genaue, sicherheitskritische Wert ist im Pilot nicht veröffentlicht; klären Sie ihn mit Fachhändler oder Support.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11",
+          "region": "PIN-Anforderung und Zustand „Blinkt rot/grün“"
+        }
+      ]
+    },
+    {
+      "problem": "Ich kann die Farben nicht sicher unterscheiden.",
+      "correction": "Die Quelle bietet kein farbunabhängiges Merkmal. Lassen Sie sich die Anzeige beschreiben oder verwenden Sie eine fachlich bestätigte alternative Diagnose; ordnen Sie den Zustand nicht nur anhand von Blinken oder Dauerlicht zu.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7, 11",
+          "region": "Alle LED-Balken; sechs Blink- und drei Dauerlichtzustände"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s11-led-muster",
+      "alt": "Neun farbige Balken für die Status-LED im Normalbetrieb.",
+      "long_description": "Die Seite zeigt neun Zustandszeilen. Unter jeder Zeile liegt ein waagerechter Balken: gestrichelte Balken stehen für Blinken, durchgezogene für Dauerlicht; Zweifarbzustände wechseln farbige Segmente. Es gibt sechs Blinkzustände und drei Dauerlichtzustände. Innerhalb dieser Gruppen ist die Farbe das einzige unterscheidende Merkmal.",
+      "steps_text": [
+        "Zuerst Blinken oder Dauerlicht feststellen.",
+        "Danach Farbe oder Farbkombination bestimmen.",
+        "Bedeutung nur zusammen mit der Schalterstellung aus der Tabelle ablesen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "11",
+        "region": "Abschnitt 1.10, komplette LED-Liste",
+        "note": "Die Balken vermitteln Blinken gegen Dauerlicht über Strichart; die Zustände innerhalb einer Gruppe bleiben allein farbcodiert."
+      }
+    }
+  ],
+  "tables_md": [
+    "| LED-Verhalten im Normalbetrieb | Bedeutung laut Handbuch |\n| --- | --- |\n| Blinkt rot/gelb | Netzsuche und keine Zielrufnummern vorhanden |\n| Blinkt rot | Netzsuche oder kein GSM-Empfang |\n| Blinkt grün | eingebucht und Zielrufnummern vorhanden; dokumentierter Normalbetrieb |\n| Leuchtet rot | SIM-Karte fehlt oder ist defekt |\n| Blinkt rot/grün | PIN-Einstellung entspricht nicht der Herstellervorgabe |\n| Blinkt gelb | Zielrufnummernspeicher ist leer |\n| Blinkt gelb/grün | eingebucht, aber keine Zielrufnummern vorhanden |\n| Leuchtet grün | Handbuch: Gerät versendet eine SMS; Kurzanleitung: Gerät empfängt oder versendet eine SMS |\n| Leuchtet gelb | Verbindungsaufbau mit dem Modem |",
+    "| LED-Verhalten in Schalterstellung F | Bedeutung | Nächster Schritt |\n| --- | --- | --- |\n| Leuchtet rot | GPS-Antenne nicht angeschlossen | spannungsfrei Anschluss prüfen; bleibt der Zustand, ist ein Antennendefekt möglich |\n| Blinkt gelb | GPS-Daten vorhanden, aber keine gültige Position | nach fünf Minuten Montageort und freie Sicht prüfen |\n| Leuchtet grün | GPS-Position in Ordnung | Schalter in die vorherige Ausgangsposition zurückstellen |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "7, 11",
+      "region": "GPS-Diagnose und Abschnitt 1.10 „Anzeige der Betriebszustände (Status LED)“",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "2",
+      "region": "Abschnitt 5, neun LED-Zustände",
+      "note": "Am 2026-08-09 bei 250 dpi neu gerendert und visuell gelesen. Die Kurzanleitung erweitert dauerhaftes Grün von „versendet“ auf „empfängt/versendet“."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Der vorhandene Platzhalter wurde vollständig aus DOC-BMA-SN044, Seiten 7 und 11, sowie DOC-KA-SN044, Seite 2, gefüllt. Die neun Normalzustände und drei GPS-Diagnosezustände sind als echte Tabellen mit Leuchtart, Farbe und Bedeutung wiedergegeben. Nicht geglättet: Dauerrot bedeutet je nach Schalterstellung etwas anderes; außerdem sagt das Handbuch bei Dauergrün nur „Pro-finder versendet eine SMS“, die Kurzanleitung dagegen „empfängt/versendet“. Der Unterschied wurde bei DSC-059 und Rückfrage 12 ergänzt. Der Quellwert „PIN ist nicht 0000“ wird wegen Rückfrage 15 nur hier als Begründung der neutralen Nutzerformulierung zitiert. Die rein farbliche Gerätebarriere bleibt offen. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

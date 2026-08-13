@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P018-S03-ENTSORGUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "technische-daten",
+  "title": "Gerät und Verpackung entsorgen",
+  "body_md": "Entsorgen Sie den Pro-finder bei Außerbetriebnahme nicht im Hausmüll, sondern geben Sie ihn bei einer kommunalen Sammelstelle für elektronische Geräte ab. Führen Sie die Verpackung dem Wertstoffrecycling zu.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Abschnitt 3.3 einschließlich Symbolen für getrennte Sammlung und Recycling",
+  "prev_context": "Abschnitt 3.2 enthält eine nicht als aktuell freigegebene Konformitätsangabe.",
+  "next_context": "Abschnitt 3.4 nennt Fachhändler, historische Supportdaten und ein Seriennummernfeld.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:36545f78cda1af7ada0ec90046d54419a4737eb3c37b23d45e24d3ce22039bc4",
+  "change_reason": "Die nur durch Piktogramme unterstützten Entsorgungsaussagen wurden als eigenständiger Textweg wiedergegeben. Der Rechtschreibfehler der Quelle wurde nicht übernommen.",
+  "discrepancy_refs": ["DSC-063", "DSC-064"]
+}

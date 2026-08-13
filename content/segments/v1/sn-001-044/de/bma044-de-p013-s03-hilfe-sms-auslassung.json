@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P013-S03-HILFE-SMS-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "fehlerbehebung",
+  "title": "Befehlsliste der Hilfe-SMS bleibt gesperrt",
+  "body_md": "Empfängt der Pro-finder von einer Zielrufnummer eine SMS mit ungültigem Inhalt, antwortet er laut Quelle mit einer Hilfe-SMS und einer Liste möglicher Befehle. Diese Liste widerspricht an mehreren Stellen den Befehlen im Fließtext desselben Handbuchs. Deshalb wird keine der abgebildeten Zeichenfolgen als Bedienweg übernommen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, Absatz Hilfe-SMS und vollständige Geräteabbildung mit Befehlsliste",
+  "prev_context": "Die Smartphone-Positionsmeldung kann einen Kartenlink und Prepaid-Guthaben enthalten.",
+  "next_context": "Die untere Seitenhälfte beschreibt Einbruch-, Gas- und manuelle Alarmmeldungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1b12798b8db48c3db705cb026e2d470c9cdf472e1a15636decfeb4a45d531037",
+  "change_reason": "Expliziter Sperrvermerk zu BLK-005. Weder die gemischtsprachige Gerätebefehlsliste noch ihre Großschreibung oder Zeichensetzung wird im übersetzbaren Inhalt reproduziert.",
+  "discrepancy_refs": ["DSC-054", "DSC-060"]
+}

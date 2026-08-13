@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P003-S01-FEHLBEDIENUNGSHINWEIS",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "montageort",
+  "title": "Anweisungen vor der Installation lesen",
+  "body_md": "Lesen Sie die folgenden Anweisungen aufmerksam, um Fehlbedienungen zu vermeiden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 3,
+  "source_page_end": 3,
+  "source_region": "Seitenkopf zwischen den beiden grauen Warndreiecken",
+  "prev_context": null,
+  "next_context": "Danach folgt Abschnitt 1.1 mit dem Lieferumfang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e95fb7d99fe1de42343ec925a896b449d7fc0d1e03295c7753d807ded7b1f8ad",
+  "change_reason": "Quellennahe Erstextraktion. Die im PDF nur durch zwei graue Warndreiecke markierte Warnrolle wird als segment_type warning und mit ausgeschriebener Sicherheitsklasse erhalten.",
+  "discrepancy_refs": []
+}

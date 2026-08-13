@@ -1,0 +1,194 @@
+{
+  "slug": "prepare-and-insert-sim-card",
+  "title": "Prepare and insert the SIM card",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Prepare a Nano-SIM so the Pro-finder can register on the mobile network, then insert it into the module.",
+  "prerequisites": [
+    "You have a network-activated Nano-SIM card.",
+    "You have a mobile phone that lets you change the SIM-card settings.",
+    "The Pro-finder is disconnected from power and its circuit board is accessible."
+  ],
+  "warnings": [
+    {
+      "text": "The SIM-card PIN request must be disabled. Without this step the module will not register on the network, and the Status-LED will flash alternately red and green.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 1"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3 “Betriebszustände (Status-LED)”, red/green flashing state"
+        }
+      ]
+    },
+    {
+      "text": "If an iPhone is used, iMessages must be disabled while carrying out steps 1 to 4.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, red caution block below the list of steps"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Insert the SIM card into a mobile device.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, introduction to the list of steps"
+        }
+      ]
+    },
+    {
+      "text": "Disable the PIN request.",
+      "expected": "The card can be used without entering a PIN.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 1"
+        }
+      ]
+    },
+    {
+      "text": "Disable voicemail and all call forwarding.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 2"
+        }
+      ]
+    },
+    {
+      "text": "Disable all convenience services, including callback requests by SMS and reminders by SMS.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 3"
+        }
+      ]
+    },
+    {
+      "text": "Enable roaming if it is not enabled by default.",
+      "expected": "The card can register on other networks, which the source requires for locating the vehicle abroad.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 4"
+        }
+      ]
+    },
+    {
+      "text": "Remove the SIM card from the mobile device.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.2, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "Insert the card into the holder on the Pro-finder circuit board and lock the holder.",
+      "expected": "The holder is closed and the card is secure.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.2, first paragraph and circuit-board photograph"
+        }
+      ]
+    }
+  ],
+  "expected_result": "The prepared Nano-SIM is locked into the Pro-finder module. After power is connected, the Status-LED briefly flashes red and then flashes yellow-green.",
+  "error_cases": [
+    {
+      "problem": "The Status-LED is continuously red.",
+      "correction": "The SIM card is missing or defective. Check that a working Nano-SIM is inserted correctly and that the holder is locked.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, continuously red state"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED flashes alternately red and green.",
+      "correction": "The SIM-card PIN has not been disabled and the module is not ready for use. Insert the card into a mobile phone again and disable the PIN request.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, red/green flashing state"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 1"
+        }
+      ]
+    },
+    {
+      "problem": "A prepaid card cannot be topped up or checked without removing it.",
+      "correction": "Choose a prepaid card that can be topped up from another mobile phone or, for example, at a cash machine without removing it from the device.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, red recommendation block"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s13-sim-halterung",
+      "alt": "Close-up of the Pro-finder circuit board with the SIM-card holder open and an ESD warning symbol.",
+      "long_description": "Colour photograph of the green circuit board. At the upper left is a white Nano-SIM whose cut-off corner indicates the insertion direction. Below it is the open metal card holder with visible contacts. Beside it is a yellow electrostatic-discharge warning symbol, and the radio module is visible on the right.",
+      "steps_text": [
+        "Open the holder.",
+        "Align the cut-off corner of the Nano-SIM with the holder and insert the card.",
+        "Close and lock the holder."
+      ],
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "13",
+        "region": "Section 2.2, circuit-board photograph"
+      }
+    }
+  ],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "13",
+      "region": "Sections 2.1 “SIM-Karte konfigurieren” and 2.2 “SIM-Karte ins Pro-finder-Modul einsetzen”",
+      "note": "Rendered and fully reviewed visually; the page has no usable text layer."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Chapter 3 “Betriebszustände (Status-LED)”, source for the LED troubleshooting states"
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted translation draft based exclusively on the reviewed German master. The conflicting provider recommendations in other language sections remain omitted (DSC-027). No PIN value or customer data is included. Technical and independent English-language reviews are pending."
+}

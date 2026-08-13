@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P010-S02-SYNTAX-UND-BEISPIELE-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "zielrufnummern",
+  "title": "Auslassung der Programmier-SMS und Beispielrufnummern",
+  "body_md": "Die Seite enthält konkrete Programmierzeichenfolgen, providerabhängige Guthabencodes und Beispielrufnummern. Sie lässt zugleich die sicherheitskritische Regel für autorisierte und nicht autorisierte Nummern unausgesprochen, widerspricht sich beim Smartphone-Merkmal und verliert in der Textebene ein funktionsrelevantes Zeichen. Deshalb wird keine der gezeigten Zeichenfolgen als Bedienweg übernommen. Sicher belegt sind nur drei formale Warnungen: In der SMS dürfen keine Leerzeichen stehen, bei Vertragskarten darf kein Guthaben-Abfragecode eingesetzt werden, und eine Smartphone-Kennzeichnung darf nur für ein Smartphone verwendet werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 10,
+  "source_page_end": 10,
+  "source_region": "Abschnitt 1.8, gesamte Syntaxgrafik, rote Hinweise, Beispieltabelle und Schlussabsatz",
+  "prev_context": "Das vorherige Segment beschreibt ausschließlich die visuelle Struktur ohne Bedienzeichen.",
+  "next_context": "PDF-Seite 11 beschreibt einen befehlsfreien physischen Löschweg.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:02db1667dc5bcdc3478f1b154e52fa64ec3743531c0f5e86f5ee8b31ce323bb1",
+  "change_reason": "Sperrvermerk zu BLK-005/006, DSC-056 und DSC-058. Keine reale oder beispielhafte Rufnummer und kein Steuerzeichen wird im übersetzbaren Inhalt reproduziert; die drei belegten Warnungen zu Leerzeichen, Vertragskarten und Smartphone-Kennzeichnung bleiben erhalten.",
+  "discrepancy_refs": ["DSC-056", "DSC-057", "DSC-058", "DSC-063"]
+}

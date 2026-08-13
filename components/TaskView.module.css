@@ -1,0 +1,70 @@
+.warning {
+  border: 2px solid var(--color-warning-border);
+  border-left-width: 8px;
+  background: var(--color-warning-bg);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  margin-block: var(--space-2);
+}
+
+/* Zusätzliche optische Auszeichnung – die Sicherheitsklasse steht daneben immer als
+   Wort im Text, damit sie nicht allein über die Darstellung transportiert wird. */
+.warningKritisch {
+  border-left-width: 12px;
+}
+
+.expected {
+  margin: var(--space-1) 0 0;
+  color: var(--color-text-muted);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin-block: var(--space-3);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table caption {
+  padding: var(--space-2);
+  text-align: left;
+  font-weight: 700;
+}
+
+.table th,
+.table td {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-2);
+  text-align: left;
+  vertical-align: top;
+}
+
+.figure {
+  margin: var(--space-3) 0;
+  padding: var(--space-3);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.figureStatus {
+  margin-top: 0;
+  padding: var(--space-2);
+  background: var(--color-warning-bg);
+}
+
+.figureSource {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.placeholderNote {
+  border-left: 6px solid var(--color-warning-border);
+  background: var(--color-warning-bg);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius);
+}

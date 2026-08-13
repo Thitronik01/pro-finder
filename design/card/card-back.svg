@@ -1,0 +1,81 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="85.6mm"
+  height="53.98mm"
+  viewBox="0 0 85.6 53.98"
+  data-card-status="draft"
+  data-min-font-size-mm="2.25"
+>
+  <title>THITRONIK Pro-finder Setup-Karte - Rückseite (Entwurf v0.2-draft)</title>
+  <desc>
+    Entwurf der Rückseite einer barrierefreien Setup-Karte im Format ISO/IEC 7810 ID-1.
+    Sichtbar sind eine taktil umrahmte NFC-Zone, klar als offen markierte Platzhalter für
+    Support-Telefon und Support-E-Mail, die noch nicht freigegebene Kurzadresse und eine
+    reservierte Braille-Fläche ohne erfundene Punktgeometrie. Die gekappte Ecke erscheint
+    auf der Rückseite oben links. Alle sichtbaren Texte sind mindestens 2,25 Millimeter
+    beziehungsweise rund 6,38 Punkt groß.
+  </desc>
+
+  <g font-family="Arial, Helvetica, 'DejaVu Sans', sans-serif" fill="#1a1a1a">
+    <!-- Kartenkontur: gekappte Ecke erscheint auf der Rückseite oben links. -->
+    <path
+      d="M 7.08 0.2 H 85.4 V 53.78 H 0.2 V 7.08 Z"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.4"
+    />
+
+    <text x="11" y="7.9" font-size="3.35" font-weight="700">THITRONIK Pro-finder</text>
+    <text x="81.2" y="7.9" font-size="2.25" font-weight="700" text-anchor="end">ENTWURF</text>
+
+    <!-- Durchgezogener Rahmen: vorgesehene taktile NFC-Zone. -->
+    <rect
+      x="4"
+      y="11"
+      width="28.5"
+      height="30"
+      rx="2"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.65"
+    />
+
+    <!-- Einfaches NFC-Symbol; Beschriftung vermittelt dieselbe Information in Textform. -->
+    <circle cx="12.2" cy="19" r="0.8" fill="#1a1a1a" />
+    <path d="M 14.2 16.4 Q 18.4 19 14.2 21.6" fill="none" stroke="#1a1a1a" stroke-width="0.55" />
+    <path d="M 16.3 14.2 Q 24.3 19 16.3 23.8" fill="none" stroke="#1a1a1a" stroke-width="0.55" />
+    <path d="M 18.5 12.4 Q 29.6 19 18.5 25.6" fill="none" stroke="#1a1a1a" stroke-width="0.55" />
+
+    <text x="18.25" y="29.8" font-size="4" font-weight="700" text-anchor="middle">NFC</text>
+    <text x="18.25" y="33.8" font-size="2.45" font-weight="700" text-anchor="middle">Karte ans Telefon</text>
+    <text x="18.25" y="37.25" font-size="2.45" font-weight="700" text-anchor="middle">halten</text>
+    <text x="18.25" y="40" font-size="2.25" text-anchor="middle">ZIEL OFFEN</text>
+
+    <!-- Supportdaten bleiben bewusst unverwechselbare Platzhalter. -->
+    <text x="36" y="14.1" font-size="3.35" font-weight="700">Support</text>
+    <text x="36" y="18.3" font-size="2.35" font-weight="700">[TELEFON OFFEN]</text>
+    <text x="36" y="22.2" font-size="2.35" font-weight="700">[E-MAIL OFFEN]</text>
+
+    <text x="36" y="27.4" font-size="2.5" font-weight="700">Anleitung in mehreren Sprachen</text>
+    <text x="36" y="31.1" font-size="2.25" font-weight="700">URL-ENTWURF:</text>
+    <text x="36" y="35.1" font-size="2.85" font-weight="700">thitronik.de/</text>
+    <text x="36" y="39.1" font-size="2.85" font-weight="700">pro-finder/start</text>
+
+    <!-- Reservierte Fläche, keine erfundene Braille-Punktgeometrie. -->
+    <rect
+      x="4"
+      y="45.3"
+      width="77.6"
+      height="5.6"
+      data-placeholder="braille"
+      fill="#ffffff"
+      stroke="#1a1a1a"
+      stroke-width="0.35"
+      stroke-dasharray="1.4 1.1"
+    />
+    <text x="42.8" y="49.05" font-size="2.25" font-weight="700" text-anchor="middle">
+      BRAILLE-FLÄCHE · PLATZHALTER
+    </text>
+  </g>
+</svg>

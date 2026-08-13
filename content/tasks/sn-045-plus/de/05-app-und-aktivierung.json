@@ -1,0 +1,362 @@
+{
+  "slug": "app-und-aktivierung",
+  "title": "THITRONIK App laden und Pro-finder aktivieren",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Die THITRONIK App auf dem eigenen Mobilgerät installieren, den Pro-finder in Betrieb nehmen und seine Rufnummer so im Adressbuch ablegen, dass Sie eine Alarmmeldung sofort zuordnen und das Gerät auch aus dem Ausland erreichen.",
+  "prerequisites": [
+    "Die vorbereitete Nano-SIM liegt in der Halterung auf der Platine des Pro-finder-Moduls, und die Halterung ist verriegelt (siehe Aufgabe „SIM-Karte vorbereiten und einlegen“).",
+    "Der Pro-finder ist verkabelt; die Spannungsversorgung lässt sich zuschalten.",
+    "Sie kennen die Rufnummer der SIM-Karte, die im Pro-finder steckt.",
+    "Sie haben ein mobiles Gerät, auf dem Sie Apps aus dem App Store oder von Google Play installieren können.",
+    "Sie können die Status-LED am Gerät sehen – oder eine zweite Person kann Ihnen ihr Blinkverhalten beschreiben."
+  ],
+  "warnings": [
+    {
+      "text": "Speichern Sie die Rufnummer des Pro-finder unbedingt mit der Ländervorwahl, zum Beispiel +49 für Deutschland. Die Quelle nennt als Zweck, auch aus dem Ausland Zugriff auf die Nummer zu haben; welche Folge eine fehlende Vorwahl hat, sagt sie nicht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Fortsetzung von Abschnitt 2.5, erster Absatz der Seite, oberhalb von Abschnitt 2.6 (aufgedruckt „Seite 13 von 23“)",
+          "note": "Wortlaut der Quelle: „Speichern Sie die Nummer unbedingt mit der Ländervorwahl (z. B. +49 für Deutschland), um auch aus dem Ausland Zugriff darauf zu haben.“"
+        }
+      ]
+    },
+    {
+      "text": "Ob die Inbetriebnahme gelingt, meldet der Pro-finder am Gerät selbst nur über die Status-LED. Alle drei Rückmeldungen, die Abschnitt 2.4 nennt, sind Blinkfolgen und unterscheiden sich ausschließlich in der Farbe: erst kurz rot, danach gelb-grün, und nach dem Speichern der Zielrufnummern grün. Auch Kapitel 3 unterscheidet seine neun Anzeigen nur über Farbe sowie über Blinken oder Dauerlicht; Blinkfrequenz und Rhythmus sind dort allein gezeichnet und nirgends als Zeitwert angegeben. Wer die LED nicht sehen oder Rot und Grün nicht sicher unterscheiden kann, erkennt den Fortschritt am Gerät nicht. Beim Weg ohne App gibt es zusätzlich eine Status-SMS als lesbare Rückmeldung.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4 „Pro-finder aktivieren“, erster und dritter Absatz (aufgedruckt „Seite 12 von 23“)",
+          "note": "Die Quelle nennt an dieser Stelle nur die Farben und kein zusätzliches Unterscheidungsmerkmal. Die Bedeutungen der Blinkfolgen stehen erst in Kapitel 3 auf PDF-Seite 18."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3 „Betriebszustände (Status-LED)“, neun gezeichnete Blinkfolgen mit Beschriftung (aufgedruckt „Seite 16 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Jede vom Pro-finder versendete SMS verursacht Kosten für Sie; die Höhe hängt von Ihrem Netzbetreiber ab. Wenn Sie die Anlage per SMS oder Anruf steuern, sendet der Pro-finder jedes Mal eine Status-SMS. Auch beim Weg ohne App verschickt das Gerät eine solche Status-SMS – das steht allerdings in Abschnitt 2.4; Abschnitt 2.6 zählt die Programmierung nicht ausdrücklich zu den Fällen, die Kosten auslösen.",
+      "safety_class": "normal",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.6 „Pro-finder per SMS oder Anruf steuern“, einziger Absatz (aufgedruckt „Seite 13 von 23“)",
+          "note": "Die Quelle hebt diesen Kostenhinweis nicht als Kasten hervor. Er steht erst nach Abschnitt 2.5 und dessen Fortsetzung, nicht unmittelbar beim Weg ohne App aus Abschnitt 2.4."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, dritter Absatz (Status-SMS an den Absender der Programmier-SMS)"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Prüfen Sie, dass die vorbereitete SIM-Karte in der Halterung auf der Platine liegt und die Halterung verriegelt ist.",
+      "expected": "Die Karte sitzt fest, die Halterung ist geschlossen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, erster Absatz („Wenn Sie die SIM-Karte wie oben dargestellt auf der Platine eingelegt und die Halterung verriegelt haben …“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.2 „SIM-Karte ins Pro-finder-Modul einsetzen“, erster Absatz und Platinenfoto (aufgedruckt „Seite 11 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Laden Sie die THITRONIK App für das jeweilige Betriebssystem Ihres mobilen Geräts herunter – im App Store oder bei Google Play.",
+      "expected": "Die THITRONIK App ist auf Ihrem Mobilgerät installiert.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.3 „THITRONIK® App herunterladen“, zweiter Absatz und die beiden QR-Codes darunter"
+        }
+      ]
+    },
+    {
+      "text": "Schließen Sie die Spannungsversorgung des Pro-finder an.",
+      "expected": "Die Status-LED blinkt kurz rot und danach gelb-grün. Welche der in Kapitel 3 aufgeführten Anzeigen mit „kurz rot“ gemeint ist, legt Abschnitt 2.4 nicht fest: Kapitel 3 führt „Blinkt rot“ (Netzsuche/kein GSM-Empfang) und „Blinkt rot/gelb“ (Netzsuche + keine Zielrufnummern vorhanden) als zwei verschiedene Anzeigen auf. Beide beschreiben eine Netzsuche und passen damit zu diesem Moment; welche von beiden gemeint ist, sagt die Quelle nicht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, erster Absatz"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeilen „Blinkt rot/gelb“ und „Blinkt rot“ (aufgedruckt „Seite 16 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Warten Sie, bis die Status-LED von der roten auf die gelb-grüne Blinkfolge gewechselt hat.",
+      "expected": "Die gelb-grüne Blinkfolge bedeutet nach Kapitel 3: Das Gerät ist im Mobilfunknetz eingebucht und hat Empfang, es sind aber noch keine Zielrufnummern gespeichert.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, erster Absatz"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3 „Betriebszustände (Status-LED)“, Zeile „Blinkt gelb/grün“ (aufgedruckt „Seite 16 von 23“)",
+          "note": "Abschnitt 2.4 schreibt „gelb-grün“, Kapitel 3 „Blinkt gelb/grün“. Die Gleichsetzung beider Schreibweisen ist eine Zuordnung dieser Anleitung, keine Aussage der Quelle."
+        }
+      ]
+    },
+    {
+      "text": "Aktivieren Sie den Pro-finder mit der THITRONIK App. Die Quelle empfiehlt diesen Weg: Die App führt Sie durch die einzelnen Schritte, und nach Abschnitt 2.4 entfallen dabei „die nachfolgenden Schritte in den Kapiteln 2.5 bis 2.8“ – also auch das Speichern der Rufnummer im Adressbuch, das Kapitel 2.5 verlangt. Diesen Widerspruch löst die Quelle nicht auf; siehe die Fehlerfälle unten.",
+      "expected": "Was die App dabei anzeigt, beschreibt die Quelle nicht. Am Gerät gilt: Sind Zielrufnummern gespeichert, blinkt die Status-LED grün (Kapitel 3).",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, zweiter Absatz"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeile „Blinkt grün“"
+        }
+      ]
+    },
+    {
+      "text": "Wenn Sie ohne App aktivieren wollen, senden Sie stattdessen die in Kapitel 2.8 „Zielrufnummern programmieren“ beschriebene Programmier-SMS an die Rufnummer des Pro-finder. Den genauen Aufbau dieser SMS gibt diese Anleitung noch nicht wieder, weil die Befehlssprache des Geräts ungeklärt ist.",
+      "expected": "Sobald die SMS empfangen und die Nummern gespeichert wurden, blinkt die Status-LED grün, und der Pro-finder versendet eine Status-SMS an den Absender der Programmier-SMS.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, dritter Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Speichern Sie die Rufnummer des Pro-finder im Adressbuch Ihres Mobiltelefons unter einem Namen, damit Sie eine Alarmmeldung sofort zuordnen können.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.5 „Nummer des Pro-finder speichern“, Fließtext",
+          "note": "Welche Bezeichnung die Quelle empfiehlt, ist widersprüchlich – siehe Fehlerfall in dieser Aufgabe."
+        }
+      ]
+    },
+    {
+      "text": "Ergänzen Sie beim Speichern die Ländervorwahl, zum Beispiel +49 für Deutschland.",
+      "expected": "Sie haben nach Angabe der Quelle auch aus dem Ausland Zugriff auf die Nummer.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Fortsetzung von Abschnitt 2.5, erster Absatz der Seite"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die THITRONIK App ist installiert, der Pro-finder ist mit Spannung versorgt und aktiviert – die Quelle nennt ihn dann „einsatzbereit“. Kapitel 3 nennt als Normalbetrieb nach abgeschlossener Installation und Programmierung eine grün blinkende Status-LED. Seine Rufnummer steht mit Ländervorwahl im Adressbuch Ihres Mobiltelefons.",
+  "error_cases": [
+    {
+      "problem": "Sie können die QR-Codes nicht scannen – etwa weil Sie die Anleitung ausgedruckt vor sich haben, keine Kamera nutzen können oder die Codes nicht sehen.",
+      "correction": "Sie brauchen die Codes nicht. Abschnitt 2.3 nennt beide Bezugsquellen auch im Fließtext: Die THITRONIK App steht im App Store und bei Google Play bereit. Suchen Sie dort direkt nach dem Namen. Eine ausgeschriebene Download-Adresse enthält Abschnitt 2.3 nicht; er schließt nur mit dem Satz „Ausführlichere Informationen finden Sie auf unserer Website.“ – ohne die Adresse zu nennen. Als lesbarer Fließtext stehen ausgeschriebene Webadressen im deutschen Teil erst auf der letzten Inhaltsseite: Abschnitt 6.3 nennt http://www.thitronik.de/support/downloads für die Konformitätserklärung, Abschnitt 6.4 nennt www.thitronik.de. Zur App führt keine der beiden unmittelbar. Auf der Seite „Lieferumfang“ erscheint www.thitronik.de zwar schon früher, aber nur winzig als Teil des Produktfotos auf dem dort abgebildeten Deckblatt der Kurzanleitung.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.3, zweiter Absatz und Schlusszeile „Ausführlichere Informationen finden Sie auf unserer Website.“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Seite „Lieferumfang“, Produktfoto, Fußzeile des abgebildeten Kurzanleitungs-Deckblatts (aufgedruckt „Seite 4 von 23“)",
+          "note": "Im Ausschnitt bei 1200 dpi lesbar; die dort ebenfalls abgebildete Postanschrift und E-Mail-Adresse sind hier nicht übernommen."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.3 „Konformität/Richtlinien“ und Abschnitt 6.4 „Technische Unterstützung“ (aufgedruckt „Seite 23 von 23“)",
+          "note": "Abschnitt 6.4 nennt zusätzlich eine Support-Rufnummer und eine E-Mail-Adresse. Beide sind hier nicht wiedergegeben, weil die Supportdaten zwischen den geprüften Sprachfassungen abweichen und bei THITRONIK noch offen sind (Rückfrage 3)."
+        }
+      ]
+    },
+    {
+      "problem": "Sie wissen nicht, unter welcher Bezeichnung Sie die Rufnummer im Adressbuch speichern sollen: Der Fließtext nennt eine andere als der Tipp-Kasten daneben.",
+      "correction": "Die Quelle widerspricht sich hier und löst es nicht auf. Der Fließtext von Abschnitt 2.5 sagt wörtlich: „speichern Sie diese idealerweise unter der Bezeichnung ALARM nennen, damit sie am Anfang Ihres Adressbuchs abgelegt wird“ (der Satzbau „speichern … nennen“ steht so im Original). Der Tipp-Kasten unmittelbar darunter sagt: „Wenn Sie die Nummer des Pro-finder unter der Bezeichnung AAlarm abspeichern, steht der Eintrag immer an erster Stelle.“ Beide Angaben verfolgen denselben Zweck – ein Eintrag ganz vorn im Adressbuch. Welche gilt, ist an THITRONIK zurückgemeldet und noch offen. Entscheidend für die Funktion ist nicht die Bezeichnung, sondern dass die Nummer überhaupt und mit Ländervorwahl gespeichert ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.5, Fließtext und Tipp-Kasten darunter (rote Schrift zwischen zwei blauen Linien, „AAlarm“ kursiv)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Fortsetzung von Abschnitt 2.5, erster Absatz der Seite"
+        }
+      ]
+    },
+    {
+      "problem": "Sie haben den Pro-finder mit der App aktiviert – müssen Sie seine Rufnummer trotzdem im Adressbuch speichern?",
+      "correction": "Die Quelle beantwortet das nicht eindeutig. Abschnitt 2.4 schreibt, bei Nutzung der App entfielen „die nachfolgenden Schritte in den Kapiteln 2.5 bis 2.8“ – dazu gehört auch Kapitel 2.5, das Speichern der Nummer. Abschnitt 2.5 begründet dieses Speichern aber damit, dass Sie die Nummer „im Falle einer Alarmmeldung schnell zuordnen“ können, und die Fortsetzung auf der Folgeseite verlangt die Ländervorwahl für den Zugriff aus dem Ausland. Beides betrifft das Adressbuch Ihres Telefons, nicht die Programmierung des Geräts. Der Widerspruch steht so in der Quelle und ist hier nicht aufgelöst.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, zweiter Absatz, und Abschnitt 2.5, Fließtext"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Fortsetzung von Abschnitt 2.5, erster Absatz der Seite"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED leuchtet nach dem Anschließen dauerhaft rot, statt zu blinken.",
+      "correction": "Dauerhaftes rotes Leuchten bedeutet nach Kapitel 3: Die SIM-Karte fehlt oder ist defekt. Prüfen Sie, ob eine funktionsfähige Nano-SIM eingelegt und die Halterung verriegelt ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeile „Leuchtet rot“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.1 „SIM-Karte konfigurieren“, erster Absatz (Format Nano-SIM), und Abschnitt 2.2 (Halterung verriegeln)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt abwechselnd rot und grün.",
+      "correction": "Das bedeutet nach Kapitel 3: Die SIM-PIN ist nicht deaktiviert. Legen Sie die Karte noch einmal in ein mobiles Endgerät und deaktivieren Sie die PIN-Abfrage – Abschnitt 2.1 nennt das als ersten von vier Schritten der SIM-Vorbereitung.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeile „Blinkt rot/grün“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.1 „SIM-Karte konfigurieren“, Schrittliste, Schritt 1 „Deaktivieren Sie die Pin-Abfrage.“ (Schreibweise „Pin-Abfrage“ so im Original)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt dauerhaft gelb-grün und wechselt nicht auf reines Grün.",
+      "correction": "Das Gerät ist eingebucht und hat Empfang, es sind aber noch keine Zielrufnummern gespeichert (Kapitel 3). Die Aktivierung ist damit noch nicht abgeschlossen: Führen Sie die Programmierung in der App zu Ende oder senden Sie die Programmier-SMS aus Kapitel 2.8.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeilen „Blinkt gelb/grün“ und „Blinkt grün“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, dritter Absatz"
+        }
+      ]
+    },
+    {
+      "problem": "Nach dem Weg ohne App bleibt die Status-SMS aus.",
+      "correction": "Nach Abschnitt 2.4 wird die Status-SMS erst versendet, wenn die Programmier-SMS empfangen und die Nummern gespeichert wurden; als Empfänger nennt die Quelle allein den Absender der Programmier-SMS. Prüfen Sie also zuerst das Gerät, von dem Sie die SMS abgeschickt haben. Blinkt die Status-LED gelb, ist das Gerät zwar eingebucht, die letzte SMS konnte aber nicht versendet werden (Kapitel 3).",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Abschnitt 2.4, dritter Absatz"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zeile „Blinkt gelb“"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s14-app-qr-codes",
+      "alt": "Zwei quadratische QR-Codes nebeneinander, darüber je ein schwarzes Store-Abzeichen: links „App Store“, rechts „Google play“.",
+      "long_description": "Zwei getrennte, unterschiedlich gemusterte QR-Codes stehen nebeneinander im linken und im mittleren Bereich der Seite. Über dem linken Code sitzt ein schwarzes Abzeichen mit weißem Apfel-Logo und der zweizeiligen englischen Beschriftung „Download on the / App Store“. Über dem rechten Code sitzt ein schwarzes Abzeichen mit einem mehrfarbigen Play-Dreieck – Blau, Grün und Rot sind unterscheidbar, weitere Farbanteile lassen sich wegen der groben Rasterung nicht bestimmen – und der Beschriftung „Google play“; die kleine Zeile darüber ist in der Quelle so grob gerastert, dass sie auch im Ausschnitt bei 2000 dpi nicht zu entziffern ist. Welcher Code zu welchem Store gehört, geht ausschließlich aus der Position unter dem jeweiligen Abzeichen hervor – die Codes selbst sind nicht beschriftet. Beide Abzeichen sind rein englisch, ohne deutsche Entsprechung. Unter den Codes steht als einziger weiterer Hinweis der Satz „Ausführlichere Informationen finden Sie auf unserer Website.“ – ohne Webadresse. Abschnitt 2.3 schreibt die Ziele der Codes nirgends als Adresse aus; ohne Kamera sind die Codes nicht nutzbar.",
+      "steps_text": [
+        "Der linke QR-Code steht unter dem Abzeichen „App Store“.",
+        "Der rechte QR-Code steht unter dem Abzeichen „Google play“.",
+        "Beide sollen laut Abschnitt 2.3 zum Herunterladen der THITRONIK App führen.",
+        "Wer die Codes nicht scannen kann, sucht im App Store beziehungsweise bei Google Play direkt nach „THITRONIK App“ – beide Stores nennt der Fließtext von Abschnitt 2.3 ebenfalls."
+      ],
+      "data_table_md": "| Position auf der Seite | Abzeichen darüber | Wofür der Code laut Abschnitt 2.3 steht |\n| --- | --- | --- |\n| linker QR-Code | „Download on the App Store“ (schwarz, weißes Apfel-Logo) | Download der THITRONIK App im App Store |\n| rechter QR-Code | „Google play“ (schwarz, mehrfarbiges Play-Dreieck) | Download der THITRONIK App bei Google Play |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "14",
+        "region": "Abschnitt 2.3 „THITRONIK® App herunterladen“, zwei QR-Codes mit Store-Abzeichen (aufgedruckt „Seite 12 von 23“)",
+        "note": "Der Inhalt der QR-Codes wurde nicht ausgelesen und wird hier deshalb nicht behauptet. Abschnitt 2.3 löst die Codes nirgends in Text auf, sondern verweist nur auf „unsere Website“ ohne Adresse. Als Fließtext stehen ausgeschriebene Webadressen im deutschen Teil erst auf PDF-Seite 25: Abschnitt 6.3 nennt http://www.thitronik.de/support/downloads, Abschnitt 6.4 nennt www.thitronik.de; auf PDF-Seite 6 erscheint www.thitronik.de zusätzlich als winzige Bildschrift im Produktfoto. Das Google-Play-Abzeichen ist deutlich niedriger aufgelöst als das App-Store-Abzeichen und entspricht einer älteren Gestaltung; seine kleine Kopfzeile bleibt auch im Ausschnitt bei 2000 dpi unleserlich."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Anzeige der Status-LED (Kapitel 3) | Bedeutung laut Kapitel 3 | Bezug zu dieser Aufgabe |\n| --- | --- | --- |\n| Blinkt rot/gelb | Netzsuche + keine Zielrufnummern vorhanden | Möglich direkt nach dem Anschließen der Spannungsversorgung; Abschnitt 2.4 sagt dort nur „kurz rot“ und benennt diese Anzeige nicht. |\n| Blinkt rot | Netzsuche/kein GSM-Empfang | Möglich direkt nach dem Anschließen der Spannungsversorgung; ebenfalls nicht ausdrücklich von Abschnitt 2.4 benannt. |\n| Leuchtet gelb (Dauerlicht) | Verbindungsaufbau mit Modem | Zwischenzustand beim Einbuchen; von Abschnitt 2.4 nicht erwähnt. |\n| Leuchtet rot (Dauerlicht) | SIM-Karte fehlt oder ist defekt | Abbruch: Die Inbetriebnahme kann so nicht weitergehen. |\n| Blinkt rot/grün | SIM-PIN nicht deaktiviert | Abbruch: Die SIM-Vorbereitung nach Abschnitt 2.1 ist unvollständig. |\n| Blinkt gelb | Eingebucht + letzte SMS konnte nicht versendet werden | Erklärt eine ausbleibende Status-SMS beim Weg ohne App. |\n| Leuchtet grün (Dauerlicht) | Pro-finder empfängt/versendet eine SMS | Kurzzeitig beim Empfang der Programmier-SMS und beim Versand der Status-SMS. |\n| Blinkt gelb/grün – Abschnitt 2.4 schreibt dafür „gelb-grün“ | Eingebucht (Empfang) + keine Zielrufnummern vorhanden | Zustand nach dem Anschließen, solange keine Zielrufnummern gespeichert sind. |\n| Blinkt grün | Eingebucht (Empfang) + Zielrufnummern vorhanden | Ziel dieser Aufgabe. |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "14",
+      "region": "Abschnitte 2.3 „THITRONIK® App herunterladen“, 2.4 „Pro-finder aktivieren“ und 2.5 „Nummer des Pro-finder speichern“ (aufgedruckt „Seite 12 von 23“)",
+      "note": "Seite vollständig visuell geprüft; sie hat keine nutzbare Textebene, der gesamte Text liegt als Bild vor. Die Zitate aus Abschnitt 2.5 und die beiden Store-Abzeichen wurden zusätzlich in Ausschnitten bei 500 bis 2000 dpi gegengelesen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "15",
+      "region": "Fortsetzung von Abschnitt 2.5 und Abschnitt 2.6 „Pro-finder per SMS oder Anruf steuern“ (aufgedruckt „Seite 13 von 23“)",
+      "note": "Seite vollständig visuell geprüft. Die Abschnitte 2.7 und 2.8 derselben Seite gehören zur Aufgabe „Zielrufnummern einrichten und löschen“ und sind hier bewusst nicht aufgenommen; das in Abschnitt 2.8 angekündigte SMS-Beispiel steht ohnehin erst auf PDF-Seite 16, die untere Hälfte von PDF-Seite 15 ist leer."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "13",
+      "region": "Abschnitte 2.1 „SIM-Karte konfigurieren“ und 2.2 „SIM-Karte ins Pro-finder-Modul einsetzen“ (aufgedruckt „Seite 11 von 23“)",
+      "note": "Quelle der Voraussetzung „SIM eingelegt und Halterung verriegelt“, des Formats Nano-SIM und der Anweisung, die PIN-Abfrage zu deaktivieren. Abschnitt 2.4 verweist mit „wie oben dargestellt“ darauf, obwohl die zugehörige Abbildung auf der vorangehenden Seite steht."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Kapitel 3 „Betriebszustände (Status-LED)“ (aufgedruckt „Seite 16 von 23“)",
+      "note": "Quelle der Bedeutungen aller neun Anzeigen und des roten Abschlusshinweises zum Normalbetrieb. Abschnitt 2.4 nennt selbst nur Farben, keine Bedeutung."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Abschnitte 6.3 „Konformität/Richtlinien“ und 6.4 „Technische Unterstützung“ (aufgedruckt „Seite 23 von 23“)",
+      "note": "Fundstelle der beiden ausgeschriebenen Webadressen des deutschen Teils; herangezogen als Ersatzweg für die nicht auflösbaren QR-Codes. Support-Rufnummer und E-Mail-Adresse derselben Seite sind bewusst nicht übernommen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "6",
+      "region": "Seite „Lieferumfang“, Produktfoto mit dem Deckblatt der Kurzanleitung (aufgedruckt „Seite 4 von 23“)",
+      "note": "Nur als Beleg dafür herangezogen, dass www.thitronik.de im deutschen Teil schon vor PDF-Seite 25 vorkommt – dort allerdings ausschließlich als winzige Bildschrift im Foto. Die übrigen Kontaktdaten des Fotos sind nicht übernommen."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus den geprüften deutschen Quellseiten PDF 13, 14, 15 sowie – für die Bedeutung der Blinkfolgen – PDF 18 und – für die Webadressen – PDF 25. Bewusst ausgelassen: (1) Der Aufbau der Programmier-SMS. Die Aktivierung ohne App ist als Weg beschrieben, der SMS-Text selbst fehlt, weil die Befehlssprache des Geräts ungeklärt ist (BLK-005, Rückfrage 1: vier geprüfte Sprachfassungen zeigen vier eigene Befehlssätze). Damit bleibt der App-freie Weg in dieser Aufgabe inhaltlich unvollständig; er wird erst mit der Aufgabe „Zielrufnummern einrichten“ vollständig, sobald THITRONIK geantwortet hat. (2) Der Werbesatz aus Abschnitt 2.3 („einfach und kompakt auf einen Blick“) ist nicht übernommen; die sachliche Aussage – die App bündelt die Funktionen von WiPro III (safe.lock) und Pro-finder – ist nicht als Handlungsschritt nötig. (3) Die Beispielrufnummern der Programmier-SMS auf PDF-Seite 16 und die Supportdaten aus Abschnitt 6.4 sind nicht übernommen. Nicht geglättet, sondern benannt: (a) Der Widerspruch ALARM (Fließtext) gegenüber AAlarm (Tipp-Kasten) in Abschnitt 2.5 steht als eigener Fehlerfall mit beiden wörtlichen Formulierungen; auch der fehlerhafte Satzbau „speichern … nennen“ des Originals ist als solcher gekennzeichnet (DSC-016, Rückfrage 7). (b) Abschnitt 2.4 erklärt bei Nutzung der App die Schritte der Kapitel 2.5 bis 2.8 für entbehrlich, obwohl Kapitel 2.5 und seine Fortsetzung auf PDF-Seite 15 einen Adressbucheintrag mit Ländervorwahl verlangen, den die App nicht ersetzt – als Fehlerfall benannt, nicht entschieden. (c) Abschnitt 2.4 schreibt „gelb-grün“, Kapitel 3 auf PDF-Seite 18 „Blinkt gelb/grün“ – die Tabelle nennt beide Schreibweisen. (d) Das „kurz rot“ aus Abschnitt 2.4 lässt sich nicht eindeutig einer Anzeige aus Kapitel 3 zuordnen, weil dort „Blinkt rot“ und „Blinkt rot/gelb“ getrennt geführt werden; die Offenheit ist benannt statt aufgelöst. Barrierefreiheit: Die QR-Codes sind nicht ausgelesen worden; ihre Zuordnung erfolgt in der Quelle allein über die Position unter dem jeweiligen Abzeichen, deshalb Abbildung mit Alternativtext, Langbeschreibung, Zuordnungstabelle und einem textlichen Ersatzweg. Alle neun Anzeigen der Status-LED sind mit Farbe, Muster (Blinken oder Dauerlicht) und Bedeutung als Tabelle wiedergegeben, weil die Quelle die Information dort nur über Farbe und gezeichnete Muster transportiert und keine Zeitwerte nennt. Technischer Review steht aus. Gegengeprüft gegen die Quellseiten am 2026-08-08 – dabei korrigiert: die falsche Behauptung, www.thitronik.de in Abschnitt 6.4 sei die einzige ausgeschriebene Webadresse des deutschen Teils (Abschnitt 6.3 auf derselben Seite nennt http://www.thitronik.de/support/downloads); die nicht belegbare Farbangabe „gelb“ im Google-Play-Abzeichen und die Behauptung, die Codes seien „an keiner Stelle des Dokuments“ ausgeschrieben; das erfundene erwartete Ergebnis „Die App meldet die Aktivierung“, das Abschnitt 2.4 nicht hergibt; die Umkehrung der Ländervorwahl-Aussage in eine Folge, die die Quelle nicht nennt; die Zuspitzung „an keine andere Nummer“ beim Empfänger der Status-SMS. Ergänzt: der bis dahin fehlende Kostenhinweis aus Abschnitt 2.6, der rote Abschlusshinweis von Kapitel 3 zum Normalbetrieb, die vier in der LED-Tabelle fehlenden Anzeigen einschließlich „Blinkt rot/gelb“, die fehlende Quelle auf PDF-Seite 13 für das Deaktivieren der PIN-Abfrage sowie die Präzisierung, dass der Tipp-Kasten auf PDF-Seite 14 rote Schrift zwischen blauen Linien ist und keinen roten Rahmen hat. Die beiden roten Kästen auf PDF-Seite 13 (Anbieterempfehlung t-mobile/Vodafone und die Achtung-Zeile zu iMessages beim iPhone) sind hier bewusst nicht wiederholt; sie gehören zur Aufgabe „SIM-Karte vorbereiten und einlegen“. Gegengeprüft gegen die Quellseiten am 2026-08-08 (zweiter Durchgang, PDF 13, 14, 15 sowie 6, 16, 18, 25) – dabei korrigiert: die zu absolute Behauptung, ausgeschriebene Webadressen stünden im deutschen Teil erst auf der letzten Inhaltsseite (auf PDF-Seite 6 steht www.thitronik.de bereits als winzige Bildschrift im Produktfoto, belegt durch einen Ausschnitt bei 1200 dpi); die Angabe, Abschnitt 2.4 nenne zwei LED-Rückmeldungen (es sind drei: kurz rot, gelb-grün, grün); der Kostenhinweis, der die Programmierung als Kostenfall auswies, obwohl Abschnitt 2.6 nur die Steuerung per SMS oder Anruf nennt – der Wortlaut folgt jetzt der Quelle, die Status-SMS nach der Programmier-SMS ist mit Abschnitt 2.4 gesondert belegt; die Begründung, „Blinkt rot“ und „Blinkt rot/gelb“ passten beide wegen fehlender Zielrufnummern (sie passen, weil beide eine Netzsuche beschreiben); die dpi-Angaben zur Lesbarkeit des Google-Play-Abzeichens auf die tatsächlich gerenderten Ausschnitte. Ergänzt: im App-Schritt der Satz aus Abschnitt 2.4, dass mit der App „die nachfolgenden Schritte in den Kapiteln 2.5 bis 2.8“ entfallen, samt Hinweis auf den dadurch entstehenden Widerspruch zu Kapitel 2.5; PDF-Seite 6 als eigene Quelle. Geprüft und unverändert übernommen: die wörtlichen Zitate aus Abschnitt 2.5 einschließlich des Satzbaus „speichern … nennen“ und des Widerspruchs ALARM/AAlarm, die Schreibweise „Pin-Abfrage“ aus Abschnitt 2.1, alle neun Bedeutungen der Status-LED aus Kapitel 3 samt rotem Abschlusshinweis sowie die Tatsache, dass kein SMS-Befehl in steps, warnings, error_cases, goal, expected_result oder tables_md steht."
+}

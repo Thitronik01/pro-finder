@@ -1,0 +1,33 @@
+# Abhängigkeiten und Build
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+
+# Umgebungsvariablen – niemals Secrets committen
+.env*
+!.env.example
+
+# Supabase lokal
+supabase/.temp/
+supabase/.branches/
+
+# Netlify lokal
+.netlify/
+
+# Gerenderte PDF-Seiten und sonstige Arbeitsartefakte der Seitenprüfung.
+# Originale liegen unveränderlich in sources/pdf/.
+tmp/
+
+# Agent-Arbeitsverzeichnisse: Vendor- und Referenzklone bleiben lokal.
+# Nur die Dokumentation (SKILLS_LOCK.json, SKILLS_USAGE.md, REFERENCE_SNAPSHOT.md) wird versioniert.
+.agent/vendor/
+.agent/reference/
+
+# Betriebssystem / Editor
+.DS_Store
+Thumbs.db
+*.swp

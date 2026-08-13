@@ -1,0 +1,439 @@
+{
+  "slug": "geofencing",
+  "title": "Geofencing nutzen",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Sie wissen, in welcher Betriebsart Sie den virtuellen Zaun um Ihr Fahrzeug über Pin 3 schalten, wann eine angeschlossene WiPro III (safe.lock) ihn ohne Ihr Zutun umschaltet und woran Sie eine Diebstahlmeldung erkennen.",
+  "prerequisites": [
+    "Der Pro-finder ist angeschlossen und betriebsbereit; eine SIM-Karte ist eingelegt und der Pro-finder ist über seine Rufnummer erreichbar.",
+    "Ihre Rufnummer ist im Pro-finder als berechtigte Nummer hinterlegt. Nur berechtigte Nummern können auf den Pro-finder zugreifen.",
+    "Sie wissen, welche Betriebsart am Betriebsartenschalter eingestellt ist. Die Betriebsart entscheidet darüber, ob Geofencing über Pin 3 schaltbar ist.",
+    "Für den Weg über Pin 3: Der Betriebsartenschalter steht auf 8 oder B, und an Pin 3 liegt eine Spannung, die Sie bewusst schalten können.",
+    "Für die automatische Kopplung: Eine WiPro III (safe.lock) ist mit dem Pro-finder verbunden.",
+    "Das Fahrzeug hat GPS-Empfang. In Hallen, anderen Gebäuden und unter Überdachungen kann es zu Reflektionen des GPS-Signals kommen."
+  ],
+  "warnings": [
+    {
+      "text": "Eine angeschlossene WiPro III (safe.lock) ändert den Geofencing-Zustand ohne Ihr Zutun. Ist die WiPro III scharfgeschaltet, ist Geofencing automatisch aktiviert; ist sie unscharfgeschaltet, ist Geofencing automatisch deaktiviert. Eine SMS ist in beiden Richtungen nicht nötig. Verlassen Sie sich deshalb nicht darauf, dass ein einmal eingestellter Geofencing-Zustand erhalten bleibt.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2 „Geofencing“, roter Hinweiskasten am Ende des Abschnitts (aufgedruckt „Seite 19 von 23“)",
+          "note": "Der Hinweis ist in der Quelle allein durch rote Schrift zwischen zwei blauen Linien hervorgehoben; er trägt keine Warnrolle und keine Beschriftung außer dem Wort „Hinweis:“. Der Kasten selbst schreibt nur „WiPro III“, ohne den Zusatz „(safe.lock)“, den dieselbe Seite in Abschnitt 5.1 verwendet."
+        }
+      ]
+    },
+    {
+      "text": "In Hallen, anderen Gebäuden und unter Überdachungen kann es zu Reflektionen des GPS-Signals kommen. Das kann die Genauigkeit der Positionsbestimmung stark beeinträchtigen, und es können Diebstahlmeldungen ausgelöst werden, obwohl das Fahrzeug nicht bewegt wurde. THITRONIK empfiehlt, Geofencing zu deaktivieren, wenn Sie das Fahrzeug in einem Gebäude oder unter einem Dach abstellen.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3 „Funktion der GPS-Antenne prüfen“, vorletzter Absatz (aufgedruckt „Seite 10 von 23“)",
+          "note": "Die Quelle schreibt „Reflektionen“; die Schreibweise ist hier bewusst übernommen und nicht in „Reflexionen“ geändert."
+        }
+      ]
+    },
+    {
+      "text": "Die Diebstahlmeldung ist ein stiller Alarm. Weder Blinker noch Sirene werden aktiviert. Achten Sie deshalb darauf, dass Sie SMS des Pro-finder empfangen und bemerken.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4 „Berichte, Meldungen und Warnungen“, Erläuterung „Diebstahlmeldung“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Machen Sie sich mit der Wirkung vertraut: Geofencing legt einen virtuellen Zaun um das Fahrzeug. Verlässt das Fahrzeug anschließend den Bereich um seinen ursprünglichen Standort, erhalten Sie eine Diebstahlmeldung. Abschnitt 5.2 nennt dafür „einen Bereich von 900 Metern“, die Beschreibung der Diebstahlmeldung „weiter als ca. 900 m“. Die Beschreibung der Diebstahlmeldung nennt zusätzlich eine Bedingung, die Abschnitt 5.2 nicht nennt: Sie soll „bei aktivierter WiPro III (safe.lock)“ gelten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2 „Geofencing“, erster Absatz (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Erläuterung „Diebstahlmeldung“, erster Satz (aufgedruckt „Seite 17 von 23“)",
+          "note": "Die beiden Stellen formulieren denselben Wert unterschiedlich: Abschnitt 5.2 ohne Einschränkung („900 Metern“), Abschnitt 4 mit „ca.“. Beide Formulierungen sind hier wörtlich wiedergegeben und nicht angeglichen. Auch die Bedingung „bei aktivierter WiPro III (safe.lock)“ steht nur in Abschnitt 4; sie ist nicht auf Abschnitt 5.2 übertragen worden."
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie am Betriebsartenschalter ab, welche Betriebsart eingestellt ist. Die Betriebsart entscheidet darüber, ob Sie Geofencing über Pin 3 schalten können oder nur per SMS.",
+      "expected": "Sie kennen die eingestellte Schalterstellung. Die Tabelle der Betriebsarten führt die Stellungen 0 bis 9 und A bis F.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3 „Betriebsart auswählen“, Einleitung (aufgedruckt „Seite 7 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spalte „Betriebsarten“ (aufgedruckt „Seite 8 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Vergleichen Sie die Schalterstellung mit der Tabelle unten. Nur die Zeilen 8 und B nennen in der Spalte „Geofencing über Pin 3 schaltbar“ Schaltschwellen. Die Zeilen 0 bis 7, 9 und A tragen dort einen Bindestrich, den die Quelle nirgends erklärt; die Zeilen C bis F haben in dieser Spalte gar keine eigene Zelle. Für alle anderen Stellungen nennt Abschnitt 5.2 als Weg die SMS.",
+      "expected": "Sie wissen, ob Sie Geofencing an Ihrem Fahrzeug über Pin 3 oder per SMS schalten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spalte „Geofencing über Pin 3 schaltbar“, Zeilen 0 bis F (aufgedruckt „Seite 8 von 23“)",
+          "note": "Der Bindestrich ist der einzige Bedeutungsträger für „nicht schaltbar“; eine Legende dazu gibt es auf der Seite nicht. In den Zeilen C bis F reicht eine verbundene Zelle über diese Spalte hinweg."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, zweiter Absatz: „Geofencing kann in Schalterstellung 8 und B über Pin 3 ein- und ausgeschaltet werden.“ (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Schalten Sie Geofencing in Schalterstellung 8 über die Spannung an Pin 3: Über 6 V schaltet Geofencing ein, unter 5 V schaltet es aus. Die Tabelle schreibt dafür „>6 V: ein“ und „<5 V: aus“. Die Spannung kann zum Beispiel vom Einschalten der Zündung oder vom Aktivieren der Innenraumbeleuchtung kommen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeile 8, Spalte „Geofencing über Pin 3 schaltbar“ (aufgedruckt „Seite 8 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Geofencing (schaltbar über Pin 3)“ (aufgedruckt „Seite 7 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Beachten Sie in Schalterstellung B die umgekehrte Logik: Dort schaltet über 6 V an Pin 3 Geofencing aus und unter 5 V schaltet es ein. Die Tabelle schreibt dafür „>6 V: aus“ und „<5 V: ein“.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeile B, Spalte „Geofencing über Pin 3 schaltbar“ (aufgedruckt „Seite 8 von 23“)",
+          "note": "Die Zeilen 8 und B nennen für dieselbe Spalte genau entgegengesetzte Schwellen. Die Quelle erklärt den Unterschied nicht."
+        }
+      ]
+    },
+    {
+      "text": "Rechnen Sie in allen übrigen Schalterstellungen damit, dass Sie Geofencing nur per SMS an die Rufnummer des Pro-finder ein- und ausschalten können. Die dafür nötigen Befehlswörter gibt diese Anleitung bewusst nicht wieder; siehe die Begründung am Ende dieser Aufgabe.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, zweiter und dritter Absatz (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie, ob eine WiPro III (safe.lock) mit dem Pro-finder verbunden ist. Ist sie scharfgeschaltet, also aktiviert, ist Geofencing automatisch mit aktiviert. Ist sie unscharfgeschaltet, also deaktiviert, ist Geofencing automatisch mit deaktiviert.",
+      "expected": "Sie wissen, ob der Geofencing-Zustand an Ihrem Fahrzeug dem Zustand der Alarmanlage folgt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, roter Hinweiskasten (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Merken Sie sich den Standort, an dem Sie Geofencing eingeschaltet haben. Der virtuelle Zaun gilt für genau diesen Standort und bleibt dafür aktiv, bis der Pro-finder die Ausschalt-SMS erhält.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, Absatz nach der eingerückten Befehlszeile (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Schalten Sie Geofencing am vorherigen Standort zuerst aus, bevor Sie es an einem neuen Standort nutzen. Erst danach lässt es sich am neuen Standort wieder einschalten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, Absatz nach der eingerückten Befehlszeile (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Schalten Sie Geofencing aus, bevor Sie das Fahrzeug in einer Halle, einem anderen Gebäude oder unter einer Überdachung abstellen.",
+      "expected": "Reflektionen des GPS-Signals lösen dann keine Diebstahlmeldung mehr aus, obwohl das Fahrzeug steht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, vorletzter und letzter Absatz (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Fordern Sie einen Statusbericht an, um den Geofencing-Zustand zu kontrollieren. In den Schalterstellungen 8 und B löst ein Anruf auf die Rufnummer der eingelegten SIM-Karte einen Statusbericht aus; der Pro-finder beendet den Anruf selbst und schickt den Bericht an die anrufende Nummer. Rufen Sie in den Betriebsarten 2 und 3 nicht an: Dort löst ein Anruf keinen Statusbericht aus, sondern schaltet die WiPro III (safe.lock) in den nächsten Zustand.",
+      "expected": "Sie erhalten den Statusbericht als SMS.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Anruf löst Statusbericht aus“ (aufgedruckt „Seite 7 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Spalten „Anruf löst Statusbericht aus“ und „Anruf aktiviert/deaktiviert WiPro“, Zeilen 2, 3, 8 und B (aufgedruckt „Seite 8 von 23“)",
+          "note": "Zeilen 8 und B: „ja“ in der ersten, „-“ in der zweiten Spalte. Zeilen 2 und 3 genau umgekehrt."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, erster Absatz (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Erläuterung „Statusbericht“: „Diese Meldung erhalten Sie nur auf Anforderung oder je nach gewählter Betriebsart in Intervallen.“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie im Statusbericht die Zeile für Geofencing. Im abgedruckten Beispiel lautet sie „Fence ON“, darüber steht „WiPro ON“ für die Alarmanlage. Wie der ausgeschaltete Zustand geschrieben wird, zeigt die Anleitung an dieser Stelle nicht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Beispiel-SMS „Statusbericht“, erste und zweite Zeile (aufgedruckt „Seite 17 von 23“)",
+          "note": "Die Zeile „Fence ON“ ist auf den fünf gelesenen Seiten die einzige textliche Rückmeldung zum Geofencing-Zustand. Ob das Gerät den Zustand zusätzlich anzeigt, ist von diesen Seiten aus nicht zu beantworten; Seite 12 verweist für weitere Betriebszustände der Status-LED auf Kapitel 3 „Betriebszustände“, das hier nicht gelesen wurde."
+        }
+      ]
+    },
+    {
+      "text": "Sorgen Sie dafür, dass Sie SMS des Pro-finder zuverlässig empfangen und bemerken. Nur so erfahren Sie von einer Diebstahlmeldung, denn sie ist ein stiller Alarm.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Erläuterung „Diebstahlmeldung“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Sie wissen, in welcher Schalterstellung Sie Geofencing über Pin 3 schalten, wann eine angeschlossene WiPro III (safe.lock) das von selbst übernimmt und wie Sie den Zustand im Statusbericht ablesen. Verlässt das Fahrzeug bei aktivem Geofencing den Bereich um seinen ursprünglichen Standort, erhalten Sie laut Anleitung eine SMS mit dem Anlass „Diebstahl (Geofencing)“, der Uhrzeit in koordinierter Weltzeit (UTC), der Position und der Geschwindigkeit – als stiller Alarm ohne Blinker und ohne Sirene. Die Position steht je nach mobilem Endgerät als Link zu einem Kartendienst oder als Koordinaten in der SMS. Ob diese Meldung auch ohne aktivierte WiPro III (safe.lock) ergeht, lässt die Anleitung offen.",
+  "error_cases": [
+    {
+      "problem": "Sie erhalten eine Diebstahlmeldung, obwohl das Fahrzeug nicht bewegt wurde.",
+      "correction": "Prüfen Sie, wo das Fahrzeug steht. In Hallen, anderen Gebäuden und unter Überdachungen kann es zu Reflektionen des GPS-Signals kommen; die Positionsbestimmung wird dadurch stark beeinträchtigt. THITRONIK empfiehlt, Geofencing zu deaktivieren, solange das Fahrzeug dort abgestellt ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, vorletzter Absatz (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Geofencing lässt sich an einem neuen Standort nicht einschalten.",
+      "correction": "Deaktivieren Sie Geofencing zuerst am vorherigen Standort. Erst danach lässt es sich am neuen Standort aktivieren.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, Absatz nach der eingerückten Befehlszeile (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Der Geofencing-Zustand hat sich geändert, ohne dass Sie etwas geschaltet haben.",
+      "correction": "Prüfen Sie den Zustand der WiPro III (safe.lock). Scharfgeschaltet aktiviert sie Geofencing automatisch mit, unscharfgeschaltet deaktiviert sie es automatisch mit. Offen bleibt, was gilt, wenn die Schalterstellung 8 oder B über Pin 3 das Gegenteil verlangt: Die Quelle regelt den Vorrang zwischen Pin 3 und der Kopplung an die WiPro III nicht. Verlassen Sie sich in diesem Fall nicht auf einen bestimmten Zustand, sondern lesen Sie ihn im Statusbericht nach.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, zweiter Absatz und roter Hinweiskasten (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen 8 und B (aufgedruckt „Seite 8 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie nutzen Geofencing ohne angeschlossene oder ohne scharfgeschaltete WiPro III (safe.lock) und wollen wissen, ob Sie im Ernstfall eine Meldung bekommen.",
+      "correction": "Die Anleitung beantwortet das nicht eindeutig. Abschnitt 5.2 beschreibt Geofencing ohne jede Bedingung: Zaun um den Standort, Diebstahlmeldung beim Verlassen des Bereichs. Die Erläuterung der Diebstahlmeldung knüpft dieselbe Meldung dagegen ausdrücklich an „bei aktivierter WiPro III (safe.lock)“. Ob eine Diebstahlmeldung auch ohne aktivierte WiPro III ergeht, steht an keiner der geprüften Stellen. Verlassen Sie sich deshalb nicht darauf; die Frage ist an THITRONIK zu klären.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, erster Absatz (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Erläuterung „Diebstahlmeldung“, erster Satz (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "An Pin 3 liegt in Schalterstellung 8 oder B eine Spannung zwischen 5 V und 6 V.",
+      "correction": "Die Tabelle nennt nur die Schwellen über 6 V und unter 5 V. Was zwischen 5 V und 6 V geschieht, steht nirgends in der Anleitung. Verwenden Sie deshalb ein Signal, das deutlich über 6 V oder deutlich unter 5 V liegt, und verlassen Sie sich nicht auf den Bereich dazwischen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen 8 und B, Spalte „Geofencing über Pin 3 schaltbar“ (aufgedruckt „Seite 8 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie haben die Schalterstellung C, D, E oder F eingestellt und wissen nicht, ob Geofencing dort funktioniert.",
+      "correction": "Die Tabelle macht für diese vier Zeilen keine Aussage zu Geofencing: Die Zellen sind mit den Nachbarspalten verbunden und tragen nur einen gemeinsamen Text. C und D nennen dort nur ein Intervall für die automatischen Statusberichte, E das Löschen der Zielrufnummern, F die GPS-Diagnose. Abschnitt 5.2 sagt dagegen pauschal, in allen anderen Schalterstellungen sei Geofencing per SMS schaltbar. Ob das auch für C bis F gilt, ist aus der Quelle nicht ableitbar; für den Verlass auf Geofencing ist diese Frage zu klären.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen C, D, E und F (aufgedruckt „Seite 8 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, zweiter Absatz (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie senden eine SMS an den Pro-finder, und es geschieht nichts.",
+      "correction": "Prüfen Sie, ob Sie von einer berechtigten Rufnummer aus senden. Der Hinweis zu Abschnitt 5.1 lautet: „Nur berechtigte Nummern können auf Pro-finder zugreifen.“ Welche Nummern das sind, sagt Abschnitt 5.1 nicht; Abschnitt 1.3 verweist dafür auf 2.7 „Unterschiedliche Zielrufnummern“. Welchen Text die SMS tragen muss, gibt diese Aufgabe bewusst nicht wieder – siehe die Begründung am Ende.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, roter Hinweiskasten unter den beiden Absätzen (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Absatz „Anruf löst Statusbericht aus“, Klammerzusatz „(nur berechtigte Nummern) (vgl. 2.7 Unterschiedliche Zielrufnummern)“ (aufgedruckt „Seite 7 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Bordspannung sinkt, während Sie sich auf Geofencing verlassen.",
+      "correction": "Sinkt die Versorgungsspannung dauerhaft unter 11,2 V, schaltet der Pro-finder zum Batterieschutz in den Standby-Modus; erst wenn die Spannung wieder über 12,5 V steigt, kehrt er in den Normalbetrieb zurück. Ob Geofencing im Standby-Modus noch meldet, sagt die Anleitung nicht. Beachten Sie zusätzlich: In Betriebsart B – einer der beiden Stellungen, in denen Geofencing über Pin 3 schaltbar ist – wird keine Spannungswarnung versendet. Dazu passt, dass der Statusbericht in den Stellungen 8 und B keine der Spannungen U1 bis U5 enthält.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Erläuterung „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen)“ (aufgedruckt „Seite 17 von 23“)",
+          "note": "Der Verweis auf 1.3 trägt nicht: Weder Abschnitt 1.3 auf Seite 9 noch die Tabelle auf Seite 10 erwähnt die Spannungswarnung oder die Ausnahme für Betriebsart B."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten“, Zeilen 8 und B, Spalten U1 bis U5 unter „Statusbericht enthält folgende Spannungen“ (aufgedruckt „Seite 8 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie erwarten bei einer Diebstahlmeldung Blinker oder Sirene.",
+      "correction": "Beides bleibt aus; die Diebstahlmeldung ist ein stiller Alarm. Die Quelle schreibt, beides lasse sich per SMS aktivieren, und verweist dafür auf Abschnitt 5.1 „Alarmanlage per SMS steuern“. Dieser Abschnitt beschreibt jedoch nur, wie sich die WiPro III (safe.lock) in den Betriebsarten 2 und 3 per Anruf in den nächsten Zustand schalten lässt; Blinker und Sirene kommen dort nicht vor. Der Verweis führt ins Leere und ist an THITRONIK zu klären.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Abschnitt 4, Erläuterung „Diebstahlmeldung“, letzter Satz (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, beide Absätze (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Ihnen ist unklar, an welche Rufnummer die SMS zum Schalten von Geofencing geht.",
+      "correction": "Die Anleitung benennt das Ziel an zwei Stellen unterschiedlich: Abschnitt 5.2 nennt „die Nummer des Pro-finder“, Abschnitt 1.5.3 „die Nummer des GSM-Moduls“. Ob damit dieselbe Rufnummer gemeint ist, sagt die Quelle nicht. Diese Aufgabe gibt zudem keine Befehlswörter an, weil die Befehlssprache ungeklärt ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2, dritter Absatz (aufgedruckt „Seite 19 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "12",
+          "region": "Abschnitt 1.5.3, letzter Absatz (aufgedruckt „Seite 10 von 23“)"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s19-diebstahlmeldung-sms",
+      "alt": "Beispiel einer Diebstahlmeldung als SMS, dargestellt als schwarze Sprechblase mit weißer Schrift.",
+      "long_description": "Schwarze Sprechblase mit abgerundeten Ecken und einer Spitze unten links, wie eine empfangene Nachricht in einem SMS-Verlauf. Sie enthält vier Angaben untereinander: zuerst „Diebstahl (Geofencing)“, darunter die Uhrzeit in koordinierter Weltzeit („UTC:“ mit Uhrzeit), darunter eine blau unterstrichene Webadresse zu einem Kartendienst, die die Koordinaten des Fahrzeugs enthält und über zwei Zeilen umbricht, und zuletzt die Geschwindigkeit in Kilometern pro Stunde. Alle vier Angaben sind in der Quelle Beispielwerte; die Adresse und die Koordinaten des Beispiels sind hier bewusst nicht wiedergegeben, weil Ortsdaten aus den Beispielmeldungen nicht in diese Anleitung gehören. Die Erläuterung zu dieser Meldung steht in der Quelle rechts neben der Sprechblase, nicht in der Abbildung selbst.",
+      "steps_text": [
+        "Die erste Angabe nennt den Anlass der Meldung: Diebstahl, ausgelöst durch Geofencing.",
+        "Die zweite Angabe nennt die Uhrzeit des Vorfalls in koordinierter Weltzeit (UTC).",
+        "Die dritte Angabe nennt die Position des Fahrzeugs; im Beispiel steht dort eine Webadresse zu einem Kartendienst. Die Anleitung nennt je nach mobilem Endgerät auch reine Koordinaten als mögliche Form.",
+        "Die vierte Angabe nennt die aktuelle Geschwindigkeit des Fahrzeugs."
+      ],
+      "data_table_md": "| Angabe | Wortlaut im Beispiel | Bedeutung |\n| --- | --- | --- |\n| 1 | Diebstahl (Geofencing) | Anlass der Meldung |\n| 2 | UTC: mit Uhrzeit | Uhrzeit des Vorfalls in koordinierter Weltzeit |\n| 3 | Webadresse eines Kartendienstes mit Koordinaten (hier nicht wiedergegeben) | Aktuelle Position des Fahrzeugs; laut Anleitung je nach mobilem Endgerät auch als reine Koordinaten |\n| 4 | Zahl mit der Einheit km/h | Aktuelle Geschwindigkeit des Fahrzeugs |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "19",
+        "region": "Abschnitt 4 „Berichte, Meldungen und Warnungen“, Beispiel-SMS „Diebstahlmeldung“ (aufgedruckt „Seite 17 von 23“)",
+        "note": "Die Kartenadresse leitet die Koordinaten mit dem Parameter „g=“ ein; das wurde bei 450 dpi nachgerendert und gegen das „g“ in „google“ derselben Zeile geprüft. Im PDF ist die Adresse nicht als Link hinterlegt und deshalb weder anklickbar noch mit der Tastatur erreichbar. Ob sie in dieser Form eine Karte öffnet, ist nicht geprüft. Die Adresse und die Koordinaten selbst sind nach Projektauftrag §14 nicht in den Content-Layer übernommen. Die Sprechblase trägt in der Quelle keinen Alternativtext; ihre Rolle als SMS ist dort nur an der Form erkennbar."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Betriebsart (Schalterstellung) | Geofencing über Pin 3 schaltbar |\n| --- | --- |\n| 0 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 1 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 2 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 3 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 4 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 5 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 6 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 7 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| 8 | über 6 V: ein; unter 5 V: aus (Quelle: „>6 V: ein“, „<5 V: aus“) |\n| 9 | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| A | nicht über Pin 3 schaltbar (Quelle: „-“) |\n| B | über 6 V: aus; unter 5 V: ein (Quelle: „>6 V: aus“, „<5 V: ein“) |\n| C | keine Angabe; die Zelle ist mit den Nachbarspalten verbunden und nennt nur das Intervall der Statusberichte (90 Sekunden) |\n| D | keine Angabe; die Zelle ist mit den Nachbarspalten verbunden und nennt nur das Intervall der Statusberichte (8 Minuten) |\n| E | keine Angabe; die Zeile nennt nur „Löschen der Zielrufnummern“ |\n| F | keine Angabe; die Zeile nennt nur „GPS-Diagnose“ |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "21",
+      "region": "Abschnitt 5.2 „Geofencing“ mit rotem Hinweiskasten; dazu Abschnitt 5.1 „Alarmanlage per SMS steuern“ mit eigenem Hinweiskasten (aufgedruckt „Seite 19 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft; Abschnitt 5.2 zusätzlich bei 400 dpi nachgerendert. Die Seite hat keine nutzbare Textebene."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "10",
+      "region": "„Tabelle der Betriebsarten“, Spalten „Anruf löst Statusbericht aus“, „Anruf aktiviert/deaktiviert WiPro“, „Statusbericht enthält folgende Spannungen“ (U1 bis U5) und „Geofencing über Pin 3 schaltbar“ (aufgedruckt „Seite 8 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft; die Zeilen 0 bis F bei 400 dpi in zwei Ausschnitten nachgerendert. Die Tabelle liegt vollständig als Bild vor."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Abschnitt 1.3 „Betriebsart auswählen“, Absätze „Anruf löst Statusbericht aus“ und „Geofencing (schaltbar über Pin 3)“ (aufgedruckt „Seite 7 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "12",
+      "region": "Abschnitt 1.5.3 „Funktion der GPS-Antenne prüfen“, vorletzter und letzter Absatz (aufgedruckt „Seite 10 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft. Die LED-Zustandstabelle derselben Seite gehört zur Aufgabe 07-status-led und ist hier nicht wiedergegeben."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Abschnitt 4 „Berichte, Meldungen und Warnungen“, Feldliste sowie Beispiel-SMS und Erläuterungen zu Statusbericht, Diebstahlmeldung und Spannungswarnung (aufgedruckt „Seite 17 von 23“)",
+      "note": "Seite gerendert und vollständig visuell geprüft; der Block „Diebstahlmeldung“ und die Kartenadresse bei 450 dpi nachgerendert."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus fünf geprüften deutschen Quellseiten (PDF-Seiten 9, 10, 12, 19 und 21); jede Seite wurde als Bild gelesen, Zahlen und Schwellen wurden nachgerendert und zweimal abgelesen. Die Aufgabe war zuvor ein Platzhalter.\n\nHochstufung der safety_class von „normal“ auf „sicherheitsrelevant“: Geofencing ändert seinen Zustand auf drei voneinander unabhängigen Wegen – über die Spannung an Pin 3 in den Schalterstellungen 8 und B, über die automatische Kopplung an den Scharf-/Unscharfzustand der WiPro III (safe.lock) und per SMS. Wer diese Kopplung falsch versteht, bekommt entweder Fehlalarme oder – schlimmer – keine Diebstahlmeldung, obwohl er sich auf eine verlässt. Die Meldung ist zudem ein stiller Alarm ohne Blinker und Sirene, also ohne jeden Rückkanal außer der SMS.\n\nBewusst ausgelassen: die SMS-Befehle zum Ein- und Ausschalten. Die Befehlssprache ist ungeklärt (Blocker BLK-005, Rückfrage 1 an THITRONIK); vier geprüfte Sprachfassungen nennen vier verschiedene Befehlssätze. Zur Begründung, und nur hier: Die deutsche Fassung nennt in Abschnitt 5.2 „fence an“ und „fence aus“, in Abschnitt 1.5.3 „fence aus“. Folge für diese Aufgabe: Sie bleibt inhaltlich unvollständig. Für alle Schalterstellungen außer 8 und B ist die SMS der einzige in der Quelle dokumentierte Schaltweg; Nutzende können Geofencing dort nach dieser Anleitung nicht selbst ein- oder ausschalten. Auch die empfohlene Deaktivierung vor dem Abstellen in einer Halle (Abschnitt 1.5.3) und der Wechsel des Standorts (Abschnitt 5.2) sind ohne den Befehl nicht ausführbar. Sobald THITRONIK die Befehlssprache bestätigt, sind die Schritte 6, 8, 9 und 10 sowie die ersten beiden Fehlerfälle zu ergänzen.\n\nNicht geglättete Widersprüche und Lücken der Quelle:\n1. Radius: Abschnitt 5.2 schreibt „einen Bereich von 900 Metern“ ohne Einschränkung, die Erläuterung der Diebstahlmeldung auf Seite 19 „weiter als ca. 900 m“. Beide Formulierungen stehen wörtlich in der Aufgabe; es wurde nicht auf einen Wert vereinheitlicht.\n2. Voraussetzung WiPro III: Seite 19 knüpft die Diebstahlmeldung ausdrücklich an „aktivierter WiPro III (safe.lock)“, Abschnitt 5.2 beschreibt Geofencing dagegen unabhängig davon (Pin 3 beziehungsweise SMS). Ob ohne angeschlossene oder ohne scharfgeschaltete WiPro III überhaupt eine Diebstahlmeldung ergeht, ist aus der Quelle nicht ableitbar. Diese Aufgabe behauptet deshalb keine der beiden Lesarten – der Unterschied steht jetzt im Schritt 1, im Ergebnis und als eigener Fehlerfall.\n3. Vorrang: Was gilt, wenn Pin 3 in Stellung 8 oder B und die Kopplung an die WiPro III entgegengesetzte Zustände verlangen, regelt die Quelle nicht (als Fehlerfall benannt).\n4. Schwellen: Die Tabelle definiert nur „>6 V“ und „<5 V“; der Bereich zwischen 5 V und 6 V bleibt in beiden Zeilen undefiniert. Die Zeilen 8 und B sind zueinander invertiert, ohne dass die Quelle das erklärt.\n5. Zeilen C bis F der Betriebsartentabelle machen zu Geofencing keine Aussage – die Zellen sind mit den Nachbarspalten verbunden –, während Abschnitt 5.2 pauschal von „allen anderen Schalterstellungen“ spricht.\n6. Der Hinweis auf Seite 12 empfiehlt die Deaktivierung nicht wegen der GPS-Diagnose, sondern wegen Reflektionen des GPS-Signals in Hallen, Gebäuden und unter Überdachungen; er steht am Ende von Abschnitt 1.5.3. Er ist hier als Warnung und als Fehlerfall geführt, mit genau dieser Begründung. Die Schreibweise „Reflektionen“ der Quelle wurde übernommen und nicht zu „Reflexionen“ korrigiert.\n7. Adressat der SMS: Abschnitt 5.2 nennt „die Nummer des Pro-finder“, Abschnitt 1.5.3 „die Nummer des GSM-Moduls“ – zwei Bezeichnungen für dasselbe Ziel, ohne Erklärung. Bisher in keinem Register.\n8. Seite 19 verweist für das Aktivieren von Blinker und Sirene auf Abschnitt 5.1; dieser Abschnitt beschreibt jedoch nur das Schalten der WiPro III per Anruf und nennt weder Blinker noch Sirene, obwohl seine Überschrift „Alarmanlage per SMS steuern“ lautet. Der Verweis führt ins Leere. Bisher in keinem Register.\n9. Die Betriebsartentabelle verweist in Zeile F auf „1.5.2 GPS-Antenne anschließen“; die GPS-Diagnose in Stellung F ist aber in 1.5.3 „Funktion der GPS-Antenne prüfen“ beschrieben. Zweiter falscher Querverweis im deutschen Original neben dem bekannten Verweis auf 5.4 statt 5.5, der auf Seite 9 im ersten Satz von Abschnitt 1.3 steht und hier ebenfalls nicht korrigiert wurde. Bisher in keinem Register.\n10. Dritter toter Querverweis, bei der Gegenprüfung gefunden: Die Überschrift der Spannungswarnung auf Seite 19 lautet „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen)“. Weder Abschnitt 1.3 auf Seite 9 noch die Tabelle auf Seite 10 erwähnt die Spannungswarnung oder diese Ausnahme; die Tabelle zeigt für die Zeilen 8 und B lediglich, dass der Statusbericht dort keine der Spannungen U1 bis U5 enthält. Das ist für diese Aufgabe unmittelbar erheblich, weil Betriebsart B eine der beiden Geofencing-Stellungen ist. Bisher in keinem Register.\n11. Der Hinweiskasten zu Abschnitt 5.2 schreibt nur „WiPro III“, ohne „(safe.lock)“; die Kopfzeile der Betriebsartentabelle schreibt nur „WiPro“. Die Aufgabe verwendet durchgehend die Sollschreibweise und vermerkt die Abweichung an der Quelle.\n\nBarrierefreiheit: Die Betriebsartentabelle liegt als Bild vor und codiert die Aussage „nicht schaltbar“ allein über einen Bindestrich, ohne Legende; sie ist deshalb als Markdown-Tabelle mit ausgeschriebenen Zellen wiedergegeben, und der Bindestrich ist im Schritt 3 sprachlich benannt. Der rote Hinweiskasten auf Seite 21 ist in der Quelle nur farblich hervorgehoben und trägt seine Aussage als Warnung in dieser Aufgabe. Die Beispiel-SMS ist als Abbildung mit Alternativtext, sichtbarer Langbeschreibung und Datentabelle erfasst.\n\nAbgrenzung: Der vollständige Statusbericht gehört zur Aufgabe 10-statusbericht, die LED-Zustandstabelle auf Seite 12 zur Aufgabe 07-status-led; hier ist nur aufgenommen, was zur Kontrolle des Geofencing-Zustands nötig ist – die Zeile „Fence ON“ und der Weg, den Bericht per Anruf anzufordern. Wie der ausgeschaltete Zustand geschrieben wird, zeigt keine der gelesenen Seiten. Technischer Review steht aus; review_status bleibt „entwurf“.\n\nGegengeprüft gegen die Quellseiten am 2026-08-08. Dabei korrigiert: die unbelegte Behauptung, das Gerät habe für den Geofencing-Zustand keine eigene Anzeige (Seite 12 verweist für weitere LED-Betriebszustände auf ein hier nicht gelesenes Kapitel 3); die Angabe „Position als Kartenadresse“, da Seite 19 „per Google-Maps Link oder per Koordinaten (abhängig vom mobilen Endgerät)“ schreibt; die Aussage, nur die Stellungen 8 und B trügen in der Geofencing-Spalte „einen Eintrag“, obwohl die Zeilen 0 bis 7, 9 und A dort einen Bindestrich tragen und die Zeilen C bis F gar keine eigene Zelle haben. Ergänzt: der bisher fehlende Hinweis „Nur berechtigte Nummern können auf Pro-finder zugreifen“ von derselben Seite 21; die fehlende Ausnahme der Spannungswarnung in Betriebsart B samt totem Querverweis und den Standby-Schwellen 11,2 V / 12,5 V; der Weg, einen Statusbericht ohne SMS-Befehl per Anruf anzufordern, mit der Warnung, dass ein Anruf in den Betriebsarten 2 und 3 stattdessen die WiPro III umschaltet; sowie die Bedingung „bei aktivierter WiPro III (safe.lock)“ als sichtbarer Widerspruch in Schritt 1, im Ergebnis und als eigener Fehlerfall, statt sie nur im change_reason zu vermerken."
+}

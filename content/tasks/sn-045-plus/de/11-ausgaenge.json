@@ -1,0 +1,289 @@
+{
+  "slug": "ausgaenge",
+  "title": "Ausgänge per SMS steuern",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Sie schalten einen an Ausgang A oder Ausgang B angeschlossenen Verbraucher aus der Ferne per SMS – dauerhaft, als Impuls von einer Sekunde oder für eine selbst gewählte Zeit – und kontrollieren den Schaltvorgang am Statusbericht, den der Pro-finder zurücksendet.",
+  "prerequisites": [
+    "Der Verbraucher ist bereits angeschlossen. Ausgang A liegt auf Pin 7 des achtpoligen Steckers, Ausgang B auf Pin 6. Die Verkabelung beschreibt die Aufgabe „Anschlüsse und Modul verkabeln“.",
+    "Verbraucher, die mehr als 500 mA benötigen, hängen über ein hochwertiges KFZ-Relais mit Freilaufdiode am Ausgang und nicht direkt an Pin 6 oder Pin 7.",
+    "Der Pro-finder ist betriebsbereit: Die Spannungsversorgung liegt an, eine Nano-SIM ist eingelegt.",
+    "Sie kennen die Rufnummer des Pro-finder, an die Sie die SMS senden."
+  ],
+  "warnings": [
+    {
+      "text": "Pin 6 und Pin 7 sind Transistorausgänge. Sie liefern 12 V und dürfen mit höchstens 500 mA belastet werden. Wollen Sie einen Verbraucher schalten, der mehr benötigt, müssen Sie ein Relais dazwischensetzen – ein hochwertiges KFZ-Relais mit Freilaufdiode. Bei Überlastung erlischt die Garantie.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4 „Modul anschließen“, dritter Absatz (aufgedruckt „Seite 9 von 23“)",
+          "note": "Wörtlich: „Pin 6 und Pin 7 sind Transistorausgänge, die 12 V liefern und mit 500 mA belastet werden können. Sollen Verbraucher geschaltet werden, die mehr als 500 mA benötigen, muss ein Relais verwendet werden. Verwenden Sie hochwertige KFZ-Relais mit Freilaufdiode. Bei Überlastung erlischt die Garantie.“"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.1 „Technische Daten“, Zeile mit der Beschriftung „Ausgänge“ und dem Wert „2 x 12 V/500 mA“ (aufgedruckt „Seite 23 von 23“)",
+          "note": "Die Beschriftung steht dort ohne Doppelpunkt, anders als die vier Zeilen darüber („Spannungsversorgung:“, „Stromaufnahme Netzsuche:“, „Stromaufnahme Normalbetrieb:“, „Sendefrequenz:“)."
+        }
+      ]
+    },
+    {
+      "text": "Ein dauerhaft eingeschalteter Ausgang bleibt eingeschaltet, bis Sie ihn mit einem zweiten Befehl wieder ausschalten. Ein selbsttätiges Abschalten beschreiben die geprüften Seiten nicht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitt 5.5.1 „Ausgänge dauerhaft einschalten“, erster und dritter Absatz (aufgedruckt „Seite 21 von 23“)",
+          "note": "Die Quelle formuliert das Einschalten als „bis auf Widerruf“ und nennt anschließend den eigenen Weg zum Ausschalten."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4, Aufzählung „Die Ausgänge können wie folgt gesteuert werden“, erster Punkt: „Ausgang eingeschaltet, bis der Befehl aufgehoben wird“ (aufgedruckt „Seite 9 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Sie schalten aus der Ferne, ohne das Fahrzeug zu sehen. Die einzige Rückmeldung ist der Statusbericht, den der Pro-finder als SMS zurücksendet. Eine Anzeige am Gerät, an der sich der Zustand der Ausgänge ablesen ließe, nennen die geprüften Seiten nicht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitte 5.5.1, 5.5.2 und 5.5.3, jeweils der Satz zur Reaktion des Pro-finder (aufgedruckt „Seite 21 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, letzter Absatz: „Weiterhin wird der Zustand beider Ausgänge angegeben“ (aufgedruckt „Seite 20 von 23“)"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Klären Sie, welcher Verbraucher an welchem Ausgang hängt. Der Pro-finder hat zwei Ausgänge, die sich getrennt voneinander steuern lassen: Ausgang A liegt auf Pin 7 des achtpoligen Steckers, Ausgang B auf Pin 6.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.5 „Ausgänge per SMS steuern“, erster Absatz: „Der Pro-finder verfügt über zwei getrennt voneinander steuerbare Ausgänge.“ (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Abschnitt 1.2 „Anschlüsse, Anzeigen und Bedienelemente“, Legendenzeilen „Pin 6: Ausgang B“ und „Pin 7: Ausgang A“ (aufgedruckt „Seite 6 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Zum Schalten der Ausgänge müssen Sie die Stellung des Betriebsartenschalters nicht ändern. Nach der Quelle lassen sich die Ausgänge in allen Betriebsarten steuern. Von der Betriebsart hängt aber ab, ob Sie den Statusbericht ersatzweise per Anruf anfordern können – dazu der zweite Fehlerfall unten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3 „Betriebsart auswählen“, erster Satz (aufgedruckt „Seite 7 von 23“)",
+          "note": "Wörtlich: „In allen Betriebsarten können die Ausgänge, wie unter 5.4 Position mit dem Smartphone abfragen beschrieben, gesteuert werden.“ Derselbe Satz verweist für die Ausgangssteuerung auf Kapitel 5.4; 5.4 ist aber die Positionsabfrage, die Ausgangssteuerung steht in 5.5. Der Fehler steht bereits im deutschen Original und wird hier nicht stillschweigend korrigiert (DISCREPANCIES.md, DSC-028, präzisiert in DSC-051)."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, Absatz „Rufen Sie die Nummer des Pro-finder an (außer in Betriebsart 2 und 3).“ (aufgedruckt „Seite 20 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Wählen Sie eine der drei Schaltarten: dauerhaft einschalten, gepulst für eine Sekunde einschalten oder für eine frei wählbare Zeit von 1 bis 120 Minuten einschalten. Beide Ausgänge kennen dieselben drei Schaltarten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4, Aufzählung „Die Ausgänge können wie folgt gesteuert werden“ mit den drei Punkten (aufgedruckt „Seite 9 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.5, zweiter Absatz: „Sie können die Ausgänge, dauerhaft, gepulst für einen Zeitraum von einer Sekunde oder für eine frei wählbare Zeit schalten“ (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitte 5.5.1, 5.5.2 und 5.5.3; die Zeitspanne „zwischen 1 und 120 Minuten“ steht im ersten Absatz von 5.5.3 (aufgedruckt „Seite 21 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Senden Sie den Steuerbefehl für die gewählte Schaltart als SMS an die Rufnummer des Pro-finder. Den genauen Befehlstext nennt diese Anleitung bewusst noch nicht: Welche Befehle das Gerät annimmt, ist ungeklärt und beim Hersteller angefragt.",
+      "expected": "Der Pro-finder schaltet den Ausgang wie gewählt und sendet einen Statusbericht als SMS zurück.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitte 5.5.1, 5.5.2 und 5.5.3, jeweils Anweisungssatz und Reaktionssatz (aufgedruckt „Seite 21 von 23“)",
+          "note": "Die Quelle druckt an dieser Stelle vier eingerückte Befehlszeilen in blauer Kursivschrift: je eine zum Einschalten, zum Ausschalten, für den Impuls und für die Zeitschaltung, letztere mit einem Minutenplatzhalter. Sie sind hier ausgelassen: Vier geprüfte Sprachfassungen des Dokuments zeigen vier vollständig eigene Befehlssätze (BLK-005, Rückfrage 1 an THITRONIK)."
+        }
+      ]
+    },
+    {
+      "text": "Schalten Sie einen dauerhaft eingeschalteten Ausgang selbst wieder aus – dafür senden Sie einen zweiten Befehl. Der Impuls endet nach einer Sekunde von allein, die frei gewählte Zeit nach Ablauf der eingestellten Minuten.",
+      "expected": "Auch auf das Ausschalten reagiert der Pro-finder mit einem Statusbericht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitt 5.5.1, dritter und vierter Absatz; Abschnitt 5.5.2, Reaktionssatz; Abschnitt 5.5.3, Reaktionssatz (aufgedruckt „Seite 21 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie den Statusbericht, den der Pro-finder nach dem Schaltvorgang sendet. Er nennt den Zustand beider Ausgänge.",
+      "expected": "Der Statusbericht zeigt den Ausgang in dem Zustand, den Sie geschaltet haben.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, letzter Absatz: „Weiterhin wird der Zustand beider Ausgänge angegeben, und die Umgebungstemperatur in unmittelbarer Nähe des Geräts wird angezeigt.“ (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitte 5.5.1 bis 5.5.3, jeweils Reaktionssatz (aufgedruckt „Seite 21 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Steuern Sie Ausgang B auf demselben Weg wie Ausgang A. Für ihn gelten dieselben drei Schaltarten. Worin sich sein Befehl von dem für Ausgang A unterscheidet, bleibt hier ausgespart: Das ist reine Befehlssyntax und damit Teil der ungeklärten Befehlssprache.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Rot gesetzter Hinweiskasten am Ende von Abschnitt 5.5, zwischen zwei blauen Trennlinien (aufgedruckt „Seite 21 von 23“)",
+          "note": "Der Kasten regelt ausschließlich, wie der Befehlstext für Ausgang B aus dem für Ausgang A gebildet wird. Die Regel selbst ist Befehlssyntax und deshalb hier nicht wiedergegeben."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.5, erster Absatz: zwei getrennt voneinander steuerbare Ausgänge (aufgedruckt „Seite 20 von 23“)"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Der gewählte Ausgang ist geschaltet, und der Pro-finder hat als Reaktion einen Statusbericht per SMS gesendet; darin steht der Zustand beider Ausgänge. Eine andere Rückmeldung über den Schaltvorgang nennen die geprüften Seiten nicht – bleibt der Statusbericht aus, ist der Schaltvorgang nicht bestätigt.",
+  "error_cases": [
+    {
+      "problem": "Der Verbraucher benötigt mehr als 500 mA.",
+      "correction": "Schließen Sie ihn nicht direkt an Pin 6 oder Pin 7 an. Setzen Sie ein hochwertiges KFZ-Relais mit Freilaufdiode dazwischen und schalten Sie den Verbraucher darüber. Bei Überlastung erlischt die Garantie.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4, dritter Absatz (aufgedruckt „Seite 9 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Nach dem Schaltbefehl kommt kein Statusbericht.",
+      "correction": "Werten Sie das als nicht bestätigten Schaltvorgang: Die Quelle beschreibt den Statusbericht als feste Reaktion auf jedes Schalten. Fordern Sie den Zustand beider Ausgänge an, bevor Sie den Befehl wiederholen. Dafür brauchen Sie keinen SMS-Befehl – rufen Sie die Nummer des Pro-finder an. Er beendet den Anruf nach wenigen Freizeichen von selbst und antwortet mit einem Statusbericht. Die Quelle nimmt davon die Betriebsarten 2 und 3 aus und schränkt an anderer Stelle ein, dass der durch einen Anruf ausgelöste Statusbericht nur an berechtigte Nummern geht. Was der Pro-finder tut, wenn er einen Befehl nicht erkennt, sagen die geprüften Seiten nicht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitte 5.5.1 bis 5.5.3, jeweils Reaktionssatz (aufgedruckt „Seite 21 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, vierter und fünfter Absatz: „Rufen Sie die Nummer des Pro-finder an (außer in Betriebsart 2 und 3). Der Pro-finder wird nach wenigen Freizeichen den Anruf beenden und mit einem Statusbericht reagieren.“ (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Funktionsbeschreibung „Anruf löst Statusbericht aus:“ – Statusbericht an den Anrufer „(nur berechtigte Nummern)“ (aufgedruckt „Seite 7 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Der Verbraucher soll länger laufen als die einstellbare Höchstzeit.",
+      "correction": "Die frei wählbare Zeit reicht laut Quelle von 1 bis 120 Minuten. Für längere Laufzeiten bietet die Quelle nur das dauerhafte Einschalten an – dann müssen Sie den Ausgang selbst wieder ausschalten. Was der Pro-finder tut, wenn Sie eine Minutenzahl außerhalb von 1 bis 120 senden, sagen die geprüften Seiten nicht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitt 5.5.3, erster Absatz („zwischen 1 und 120 Minuten“), und Abschnitt 5.5.1 (aufgedruckt „Seite 21 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Unklar, welcher der beiden Ausgänge angesteuert werden soll.",
+      "correction": "Gehen Sie nach der Pin-Nummer: Ausgang A ist Pin 7, Ausgang B ist Pin 6. Die Nummernkreise im Foto der Quelle sind zusätzlich farbig, die Legende benennt diese Farben aber nicht – die Farbe trägt deshalb keine verlässliche Information. Die Tabelle unten gibt die Zuordnung als Text wieder.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Abschnitt 1.2, Legendenzeilen Pin 6 und Pin 7 sowie das annotierte Foto (aufgedruckt „Seite 6 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Der Ausgang soll noch während der laufenden Zeitschaltung wieder aus.",
+      "correction": "Dazu sagen die geprüften Seiten nichts. Sie sagen nur, dass der Pro-finder den Ausgang „für die gewünschte Dauer“ einschaltet; ein Wort zum vorzeitigen Beenden steht dort nicht. Ob sich eine laufende Zeitschaltung abbrechen lässt, ist offen und beim Hersteller angefragt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "23",
+          "region": "Abschnitt 5.5.3, vollständig (aufgedruckt „Seite 21 von 23“)"
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "tables_md": [
+    "| Schaltart | Wie lange der Ausgang eingeschaltet bleibt |\n| --- | --- |\n| Dauerhaft einschalten | Bis Sie den Ausgang mit einem zweiten Befehl wieder ausschalten |\n| Gepulst einschalten | Eine Sekunde |\n| Für eine frei wählbare Zeit einschalten | Die von Ihnen gewählte Zeit, 1 bis 120 Minuten |",
+    "| Ausgang | Anschluss am achtpoligen Stecker | Belastbarkeit |\n| --- | --- | --- |\n| Ausgang A | Pin 7 | 12 V, höchstens 500 mA |\n| Ausgang B | Pin 6 | 12 V, höchstens 500 mA |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "23",
+      "region": "Abschnitte 5.5.1 „Ausgänge dauerhaft einschalten“, 5.5.2 „Ausgänge gepulst (für eine Sekunde) einschalten“ und 5.5.3 „Ausgänge für eine frei wählbare Zeit einschalten“ mit dem roten Hinweiskasten am Seitenende (aufgedruckt „Seite 21 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig gelesen; die Abschnitte 5.5.1/5.5.2 und 5.5.3 zusätzlich bei 400 dpi, die drei Unterüberschriften einzeln bei 900 dpi. Die Seite hat keine nutzbare Textebene. Das Leerzeichen zwischen Nummer und Titel fehlt nur in 5.5.2 und 5.5.3; in 5.5.1 ist es gesetzt."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "22",
+      "region": "Abschnitt 5.5 „Ausgänge per SMS steuern“, Einleitung, sowie Abschnitt 5.3 „Statusbericht anfordern“, vierter bis letzter Absatz (aufgedruckt „Seite 20 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig gelesen; beide zitierten Bereiche zusätzlich bei 400 dpi nachgeprüft. Keine nutzbare Textebene. Die Einleitung zu 5.5 verweist für den Anschluss der Ausgänge selbst auf „Kapitel 1.4 Modul anschließen“ – dieser Verweis ist korrekt und deckt sich mit der Voraussetzung oben."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "11",
+      "region": "Abschnitt 1.4 „Modul anschließen“, dritter Absatz und Aufzählung der drei Schaltarten, dazu der rote Hinweiskasten (aufgedruckt „Seite 9 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig gelesen; der Block mit den elektrischen Werten, der Aufzählung und dem Hinweiskasten zusätzlich bei 400 dpi. Der Hinweiskasten verweist hier korrekt auf „5.5 Ausgänge per SMS steuern“."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Abschnitt 1.3 „Betriebsart auswählen“, erster Satz und Funktionsbeschreibung „Anruf löst Statusbericht aus:“ (aufgedruckt „Seite 7 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig gelesen, der erste Satz zusätzlich bei 400 dpi. Belegt, dass die Ausgänge in allen Betriebsarten steuerbar sind; derselbe Satz enthält den falschen Kapitelverweis auf 5.4 (DSC-028)."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "8",
+      "region": "Abschnitt 1.2 „Anschlüsse, Anzeigen und Bedienelemente“, Legendenzeilen „Pin 6: Ausgang B“ und „Pin 7: Ausgang A“ (aufgedruckt „Seite 6 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und vollständig gelesen, die Legendenzeilen Pin 5 bis Pin 8 zusätzlich bei 500 dpi. Die Legende liegt nur als Bild vor; die Zuordnung Ausgang A = Pin 7 und Ausgang B = Pin 6 ist hier zusätzlich als Tabelle wiedergegeben."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Abschnitt 6.1 „Technische Daten“, Zeile mit der Beschriftung „Ausgänge“ und dem Wert „2 x 12 V/500 mA“ (aufgedruckt „Seite 23 von 23“)",
+      "note": "Seite am 2026-08-08 selbst gerendert und gelesen, die Datenliste am 2026-08-07 zusätzlich bei 400 dpi gegengeprüft. Nur als zweiter Beleg dafür herangezogen, dass 500 mA je Ausgang als Grenzwert und nicht als Nennwert zu lesen ist. Die Beschriftung „Ausgänge“ steht dort ohne Doppelpunkt, anders als die vier Zeilen darüber. Dieselbe Liste nennt als Spannungsversorgung 9–30 V, während Abschnitt 1.4 auf PDF-Seite 11 von 12 V DC spricht; dieser Unterschied gehört zur Verkabelungs- und zur Datenaufgabe und wird hier nur vermerkt."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus sechs selbst gerenderten und einzeln gelesenen deutschen Quellseiten (PDF-Seiten 8, 9, 11, 22, 23 und 25; aufgedruckt Seite 6, 7, 9, 20, 21 und 23 von 23). Kernquelle ist Abschnitt 5.5 mit 5.5.1 bis 5.5.3 auf PDF-Seite 23; die Einleitung zu 5.5 und der Statusbericht stammen von PDF-Seite 22, die elektrischen Werte aus Abschnitt 1.4 auf PDF-Seite 11, die Pinbelegung aus Abschnitt 1.2 auf PDF-Seite 8. GELTUNGSBEREICH: Diese Aufgabe beschreibt die Nutzung der Ausgänge. Die Verkabelung bleibt in „Anschlüsse und Modul verkabeln“ und wird hier nur als Voraussetzung genannt; aus Abschnitt 1.4 sind ausschließlich die Werte übernommen, die zum Verständnis der Nutzung nötig sind (12 V, höchstens 500 mA je Ausgang, Relais mit Freilaufdiode, Garantieverlust bei Überlastung). LESART DER BELASTUNGSGRENZE: Die Quelle schreibt auf PDF-Seite 11 „die 12 V liefern und mit 500 mA belastet werden können“ – das Wort „höchstens“ steht dort nicht. Die Lesart als Obergrenze ergibt sich aus dem unmittelbar folgenden Satz „Sollen Verbraucher geschaltet werden, die mehr als 500 mA benötigen, muss ein Relais verwendet werden“ und aus der Zeile „Ausgänge: 2 x 12 V/500 mA“ der technischen Daten auf PDF-Seite 25, die dafür als eigene Quelle geführt ist. GESPERRTE BEFEHLE: Die vier eingerückten Befehlszeilen auf PDF-Seite 23 (Einschalten, Ausschalten, Impuls, Zeitschaltung mit Minutenplatzhalter) und die Regel des roten Hinweiskastens, wie sich der Befehl für Ausgang B aus dem für Ausgang A bildet, sind bewusst ausgelassen: Die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1 an THITRONIK), vier geprüfte Sprachfassungen zeigen vier vollständig eigene Befehlssätze. Damit bleibt diese Aufgabe ausdrücklich unvollständig: Schaltart, Weg, Dauer und erwartetes Ergebnis stehen hier, der auszuführende Befehl fehlt, und ohne ihn lässt sich kein Ausgang schalten. Beschrieben ist stattdessen, dass beide Ausgänge dieselben drei Schaltarten kennen und getrennt voneinander steuerbar sind. HOCHSTUFUNG DER SICHERHEITSKLASSE von „sicherheitsrelevant“ (Platzhalter) auf „sicherheitskritisch“: Die Aufgabe führt zum ferngesteuerten Schalten eines Verbrauchers am Fahrzeug, ohne dass Nutzende das Fahrzeug sehen; sie enthält eine Belastungsgrenze, deren Überschreitung laut Quelle ein Relais zwingend macht und die Garantie kostet; und die einzige Rückmeldung über den Schaltzustand ist eine SMS. Damit steht sie auf derselben Stufe wie „Anschlüsse und Modul verkabeln“, die denselben 500-mA-Absatz trägt. KORREKTUR AM ARBEITSAUFTRAG: Der Auftrag zu dieser Datei nannte den roten Hinweiskasten auf PDF-Seite 11 als die Stelle mit dem falschen Kapitelverweis auf 5.4. Das trifft nach eigener Prüfung bei 400 dpi nicht zu – dieser Kasten verweist korrekt auf „5.5 Ausgänge per SMS steuern“. Der falsche Verweis steht im Fließtext von Abschnitt 1.3 auf PDF-Seite 9: „In allen Betriebsarten können die Ausgänge, wie unter 5.4 Position mit dem Smartphone abfragen beschrieben, gesteuert werden.“ Er ist hier nicht korrigiert, sondern an der Fundstelle benannt; geführt wird er in DISCREPANCIES.md als DSC-028. KEINE ABBILDUNG AUFGENOMMEN: Die Kernseite 23 enthält keine, und das annotierte Anschlussfoto von PDF-Seite 8 gehört zur Verkabelungsaufgabe. Die dort nur bildlich und zusätzlich farblich codierte Zuordnung Ausgang A = Pin 7 / Ausgang B = Pin 6 ist stattdessen als Tabelle wiedergegeben, ebenso die drei Schaltarten mit ihrer Dauer; die Farben der Nummernkreise werden in der Legende der Quelle nicht benannt und tragen deshalb keine Information. WEITERE BEOBACHTUNGEN AN DER QUELLE: (1) Der Seitenrecord zu PDF-Seite 23 in sources/pages/DOC-IBA-SN045.json führt als Abweichung, in allen drei Unterüberschriften fehle das Leerzeichen zwischen Nummer und Titel. Bei 900 dpi nachgeprüft trifft das nur auf 5.5.2 und 5.5.3 zu; in 5.5.1 ist das Leerzeichen gesetzt. Der Seitenrecord ist an dieser Stelle zu berichtigen. (2) Alle drei Unterüberschriften auf PDF-Seite 23 sprechen im Plural von „Ausgängen“, der Fließtext darunter behandelt aber durchweg nur Ausgang A; erst der rote Kasten am Seitenende holt Ausgang B nach. (3) Die Überschrift 5.5.1 „Ausgänge dauerhaft einschalten“ deckt den Abschnitt nur zur Hälfte ab; er beschreibt auch das Ausschalten. (4) Auf PDF-Seite 22 steht in 5.5 ein überzähliges Komma: „Sie können die Ausgänge, dauerhaft, gepulst …“. (5) Auf PDF-Seite 23 steht im Einschaltsatz von 5.5.1 ein Komma vor „sowie“ („mit dem Einschalten von Ausgang A, sowie mit einem Statusbericht“), im sonst gleichlautenden Ausschaltsatz drei Zeilen darunter fehlt es. (6) Dieselbe Sache wird zweimal verschieden benannt: PDF-Seite 11 sagt „bis der Befehl aufgehoben wird“, PDF-Seite 23 „bis auf Widerruf“. OFFEN UND AUF DEN GEPRÜFTEN SEITEN UNBEANTWORTET: an welche Rufnummer der Statusbericht nach einem Schaltbefehl geht und ob nur berechtigte Nummern schalten dürfen – PDF-Seite 9 sagt „nur berechtigte Nummern“ ausdrücklich nur für den durch einen Anruf ausgelösten Statusbericht, für das Schalten per SMS sagt es keine der geprüften Seiten; was geschieht, wenn eine Minutenzahl außerhalb von 1 bis 120 gesendet wird; ob eine laufende Zeitschaltung vorzeitig abgebrochen werden kann (als error_case aufgenommen und dort als offen gekennzeichnet); und in welchem Zustand die Ausgänge nach Spannungsausfall oder Neustart stehen. Technischer Review steht aus. Gegengeprüft gegen die Quellseiten am 2026-08-08: PDF-Seiten 8, 9, 11, 22, 23 und 25 erneut einzeln gerendert und gelesen, die Datenliste auf Seite 25 und die drei Unterüberschriften auf Seite 23 zusätzlich bei 400 dpi. Dabei korrigiert: die Zeile der technischen Daten auf PDF-Seite 25 war mit einem Doppelpunkt zitiert („Ausgänge: 2 x 12 V/500 mA“), den die Quelle dort nicht setzt – anders als die vier Zeilen darüber; die Formulierung „Der Pro-finder schaltet ihn nicht von selbst ab“ war eine Folgerung und ist auf das zurückgeführt, was die Seiten sagen; der Satz zum Betriebsartenschalter behauptete pauschal, seine Stellung sei gleichgültig, obwohl die Ersatzabfrage per Anruf laut PDF-Seite 22 in den Betriebsarten 2 und 3 entfällt; die Aussage, der Ausgang „schalte nach Ablauf der gewählten Minuten wieder ab“, ist auf den Wortlaut „für die gewünschte Dauer“ zurückgenommen. Zusätzlich aufgefallen und noch in keinem Register: Die falsche Angabe über die Unterüberschriften auf PDF-Seite 23 steht nicht nur im Seitenrecord, sondern auch in DISCREPANCIES.md („Seiten 23 und 47: In allen drei Unterüberschriften von 5.5 fehlt das Leerzeichen“) – in 5.5.1 ist das Leerzeichen gesetzt, es fehlt nur in 5.5.2 und 5.5.3; für die englische Seite 47 ist das hier nicht geprüft. Ebenfalls unregistriert: PDF-Seite 9 schreibt „Nano SIM-Karte“, PDF-Seite 25 „Nano-SIM“."
+}

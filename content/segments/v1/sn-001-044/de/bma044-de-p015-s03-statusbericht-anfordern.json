@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P015-S03-STATUSBERICHT-ANFORDERN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Statusbericht außerhalb der Betriebsarten 2 und 3 per Anruf anfordern",
+  "body_md": "Außerhalb der Betriebsarten 2 und 3 kann ein Statusbericht durch einen Anruf beim Pro-finder angefordert werden. Das Gerät beendet den Anruf nach wenigen Freizeichen und antwortet mit einem Statusbericht ohne Guthabenanzeige. Die Quelle nennt zusätzlich einen SMS-Weg; dessen Zeichenfolge bleibt gesperrt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.5, Einleitung sowie SMS- und Anrufweg bis zum Hinweis ohne Guthabenanzeige",
+  "prev_context": "Bei geschärfter WiPro ist Geofencing laut Quelle automatisch aktiv.",
+  "next_context": "Der Folgeabsatz beschreibt GPS-Status, Positionsersatz, Ausgänge und Temperatur im Bericht.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:fd791b9c6611b8dd1b61b93b1ddfe9d2579c9c9ec505e79533d30d55e6b555df",
+  "change_reason": "Der befehlsfreie Anrufweg wurde mit seiner Betriebsartenausnahme und der fehlenden Guthabenanzeige extrahiert. Der SMS-Befehl bleibt wegen BLK-005 gesperrt.",
+  "discrepancy_refs": ["DSC-054"]
+}

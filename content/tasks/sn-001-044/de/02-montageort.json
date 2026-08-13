@@ -1,0 +1,158 @@
+{
+  "slug": "montageort",
+  "title": "Montageort wählen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Einen Montageort für den Pro-finder bis SN-044 finden, der geschützt, servicezugänglich und für den GPS-Empfang geeignet ist.",
+  "prerequisites": [
+    "Die Gerätegeneration bis SN-044 ist bestätigt.",
+    "Der vorgesehene Einbauort im Fahrzeuginneren ist erreichbar."
+  ],
+  "warnings": [
+    {
+      "text": "Montieren Sie den Pro-finder im Fahrzeuginneren. Die Montage im Motorraum ist ausdrücklich ausgeschlossen.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3",
+          "region": "Abschnitt 1.2 „Montageort wählen“, zweiter Absatz"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 1 „Montageort wählen“, deutscher Absatz"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Wählen Sie eine Stelle, die gegen unbefugten Zugriff geschützt ist und für Servicearbeiten wie einen späteren Kartentausch erreichbar bleibt.",
+      "expected": "Das Modul ist verborgen, ohne für Wartung dauerhaft unzugänglich zu sein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3",
+          "region": "Abschnitt 1.2, erster Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Richten Sie das Modul mit der Geräteoberseite nach oben aus. Der integrierte GPS-Empfänger benötigt freie Sicht zu den Satelliten.",
+      "expected": "Die Oberseite zeigt nach oben; kein Metall schirmt sie zum Himmel hin ab.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3",
+          "region": "Abschnitt 1.2, zweiter Absatz"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 1, Text und Abbildungen für richtige und falsche Einbaulage"
+        }
+      ]
+    },
+    {
+      "text": "Berücksichtigen Sie, dass Kunststoff, Glas und Holz das GPS-Signal laut Handbuch durchlassen. Metall wird dort nicht als durchlässig genannt.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3",
+          "region": "Abschnitt 1.2, zweiter Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Wenn der Montageort des Moduls keinen GPS-Empfang erlaubt, planen Sie die optionale externe GPS-Antenne ein. Zwischen Modul und Antenne stehen zwei Meter Kabel zur Verfügung; auch die Antenne benötigt möglichst freie Sicht.",
+      "expected": "Der geplante Antennenort ist innerhalb der Kabellänge erreichbar.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3",
+          "region": "Abschnitt 1.2, dritter Absatz"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 1, deutscher Absatz und Wohnmobilskizze"
+        }
+      ]
+    },
+    {
+      "text": "Montieren Sie die optionale Antenne an einer sabotagegeschützten Stelle im Fahrzeuginneren. Die Empfangsseite mit dem Klebepad zeigt nach oben und liegt möglichst waagerecht; die Klebefläche muss trocken, sauber und fettfrei sein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6",
+          "region": "Abschnitt 1.6 „Montage der GPS Antenne (Option)“"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Der Pro-finder befindet sich geschützt und servicezugänglich im Fahrzeuginneren, die Oberseite zeigt nach oben, und der GPS-Empfang ist am Modul oder über die geplante externe Antenne möglich.",
+  "error_cases": [
+    {
+      "problem": "Der einzige gut zugängliche Ort liegt im Motorraum.",
+      "correction": "Verwenden Sie diesen Ort nicht. Suchen Sie eine zugängliche Stelle im Fahrzeuginneren.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3",
+          "region": "Abschnitt 1.2, ausdrückliches Motorraum-Verbot"
+        }
+      ]
+    },
+    {
+      "problem": "Am gewählten Ort kommt keine gültige GPS-Position zustande.",
+      "correction": "Prüfen Sie die Ausrichtung und wechseln Sie zu einem Ort mit freierer Sicht. Falls das nicht möglich ist, verwenden Sie die optionale externe GPS-Antenne und prüfen Sie sie mit der GPS-Diagnose.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3, 7",
+          "region": "Abschnitt 1.2 zur Standortwahl und Abschnitt 1.7 zur GPS-Diagnose"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "ka-sn044-s01-montageort",
+      "alt": "Richtige und falsche Einbaulage des Pro-finder sowie ein empfohlener Bereich im Fahrzeuginneren.",
+      "long_description": "Links ist das Modul mit der Oberseite nach oben in einem grünen Kreis gezeigt. Daneben liegt dasselbe Modul falsch herum in einem roten Verbotskreis. Eine Wohnmobilskizze markiert im vorderen Innenraum einen Bereich unter dem Armaturenbrett; ein Satellitensymbol weist auf den erforderlichen GPS-Empfang hin. Die Bedeutung der grünen und roten Kreise wird in der Quelle nur über Farbe und Symbolform vermittelt.",
+      "steps_text": [
+        "Richtig: Die Oberseite des Moduls zeigt nach oben.",
+        "Falsch: Das Modul liegt auf der Oberseite.",
+        "Der Montageort liegt im Fahrzeuginneren und bleibt für Service erreichbar."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-KA-SN044",
+        "pages": "1",
+        "region": "Abschnitt 1, drei Abbildungen unter den Sprachabsätzen",
+        "note": "Die Beschriftung des markierten Bereichs steht nur auf Englisch; die Erlaubnis und das Verbot werden zusätzlich allein über Grün und Rot vermittelt."
+      }
+    }
+  ],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "3, 6-7",
+      "region": "Abschnitte 1.2, 1.6 und 1.7",
+      "note": "Am 2026-08-09 bei 200 dpi neu gerendert, visuell gelesen und gegen die Aufgabe geprüft."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1",
+      "region": "Abschnitt 1 „Montageort wählen“",
+      "note": "Am 2026-08-09 bei 250 dpi neu gerendert und visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion ausschließlich für die Generation bis SN-044 aus DOC-BMA-SN044, Seiten 3, 6 und 7, sowie DOC-KA-SN044, Seite 1. Keine Montageaussage der neueren Generation übernommen. Das Motorraum-Verbot und die Einbaulage sind als sicherheitskritisch geführt. Die rein farbliche Richtig/Falsch-Codierung der Kurzanleitung ist als Langbeschreibung ersetzt. Gegengeprüft gegen die am 2026-08-09 gerenderten Seiten; technischer Review steht aus."
+}

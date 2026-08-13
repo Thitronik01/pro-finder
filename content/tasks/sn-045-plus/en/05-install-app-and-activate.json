@@ -1,0 +1,349 @@
+{
+  "slug": "install-app-and-activate",
+  "title": "Install the THITRONIK App and activate the Pro-finder",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Install the THITRONIK App on your mobile device, put the Pro-finder into operation and save its number so that you can identify an alarm message immediately and reach the device from abroad.",
+  "prerequisites": [
+    "The prepared Nano-SIM is in the holder on the Pro-finder circuit board and the holder is locked.",
+    "The Pro-finder is wired and its power supply can be switched on.",
+    "You know the number of the SIM card installed in the Pro-finder.",
+    "You have a mobile device that can install apps from the App Store or Google Play.",
+    "You can see the Status-LED, or another person can describe its flashing pattern."
+  ],
+  "warnings": [
+    {
+      "text": "Save the Pro-finder number with the country code, for example +49 for Germany. The source says this provides access to the number from abroad; it does not state what happens if the country code is omitted.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Continuation of section 2.5, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "The device itself reports activation progress only through the Status-LED. Section 2.4 lists three colour-only indications: briefly red, then yellow-green, and green after destination numbers have been saved. Chapter 3 also distinguishes nine states only by colour and by flashing or continuous light; no timing values are given in text. A person who cannot see the LED or distinguish red from green cannot identify progress at the device. Activation without the app additionally provides a readable status SMS.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4 “Pro-finder aktivieren”"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3 “Betriebszustände (Status-LED)”"
+        }
+      ]
+    },
+    {
+      "text": "Every SMS sent by the Pro-finder incurs a charge whose amount depends on your network provider. When the system is controlled by SMS or a phone call, the Pro-finder sends a status SMS each time. Activation without the app also sends a status SMS, although that statement appears in section 2.4 and is not explicitly included in the cost statement in section 2.6.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4, third paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Section 2.6 “Pro-finder per SMS oder Anruf steuern”"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Check that the prepared SIM card is in the circuit-board holder and that the holder is locked.",
+      "expected": "The card is secure and the holder is closed.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.2, first paragraph"
+        }
+      ]
+    },
+    {
+      "text": "Download the THITRONIK App for your mobile device from the App Store or Google Play.",
+      "expected": "The THITRONIK App is installed on your mobile device.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.3 “THITRONIK App herunterladen”"
+        }
+      ]
+    },
+    {
+      "text": "Connect the Pro-finder power supply.",
+      "expected": "The Status-LED briefly flashes red and then flashes yellow-green. Section 2.4 does not identify which red flashing state from chapter 3 it means: chapter 3 lists red flashing for network search with no GSM reception and red/yellow flashing for network search with no destination numbers. Both describe network search at this point, and the source does not choose between them.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4, first paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, red and red/yellow flashing states"
+        }
+      ]
+    },
+    {
+      "text": "Wait until the Status-LED changes from red to a yellow-green flashing pattern.",
+      "expected": "According to chapter 3, yellow-green flashing means the device is registered on the mobile network and has reception, but no destination numbers have been saved.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4, first paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, yellow/green flashing state"
+        }
+      ]
+    },
+    {
+      "text": "Activate the Pro-finder with the THITRONIK App. The source recommends this route and says the app guides you through the individual steps. It also says that the following steps in chapters 2.5 to 2.8 are then omitted, including saving the number in the phone address book as required by chapter 2.5. The source does not resolve this contradiction; see troubleshooting below.",
+      "expected": "The source does not describe the app display. At the device, chapter 3 states that the Status-LED flashes green once destination numbers have been saved.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4, second paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, green flashing state"
+        }
+      ]
+    },
+    {
+      "text": "If you want to activate without the app, use the programming SMS described in chapter 2.8 “Zielrufnummern programmieren”. This draft does not reproduce the SMS syntax because the device command language has not been confirmed.",
+      "expected": "After the programming SMS has been received and the numbers have been saved, the Status-LED flashes green and the Pro-finder sends a status SMS to the sender of the programming SMS.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4, third paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Section 2.8 heading and introduction"
+        }
+      ]
+    },
+    {
+      "text": "Save the Pro-finder number in your mobile phone address book under a name that lets you identify an alarm message immediately.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.5, main text and adjacent tip box"
+        }
+      ]
+    },
+    {
+      "text": "Include the country code when saving the number, for example +49 for Germany.",
+      "expected": "According to the source, you can then access the number from abroad.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Continuation of section 2.5, first paragraph"
+        }
+      ]
+    }
+  ],
+  "expected_result": "The THITRONIK App is installed, the Pro-finder is powered and activated, and the source describes it as ready for use. Chapter 3 identifies a green flashing Status-LED as normal operation after installation and programming. The device number is stored in the mobile phone address book with its country code.",
+  "error_cases": [
+    {
+      "problem": "You cannot scan the QR codes, for example because you have a printed manual, cannot use a camera or cannot see the codes.",
+      "correction": "You do not need the codes. Section 2.3 also names the App Store and Google Play in text; search there for the THITRONIK App. It gives no written download address and only refers to the website without stating an address. Elsewhere, section 6.3 gives http://www.thitronik.de/support/downloads for the declaration of conformity and section 6.4 gives www.thitronik.de; neither is identified as a direct app download. The product photograph on the “Lieferumfang” page also contains www.thitronik.de in very small image text.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.3 and the two store QR codes"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Sections 6.3 and 6.4"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Section “Lieferumfang”, product photograph"
+        }
+      ]
+    },
+    {
+      "problem": "The main text and the adjacent tip box give different names for the address-book entry.",
+      "correction": "The source contradicts itself and does not resolve the difference. The main text in section 2.5 gives “ALARM”, while the adjacent tip box gives “AAlarm”. Both aim to put the entry at the beginning of the address book. THITRONIK has been asked which wording applies. The functional point established by the source is that the number is saved with its country code, not which of these two names is used.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.5, main text and adjacent tip box"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Continuation of section 2.5"
+        }
+      ]
+    },
+    {
+      "problem": "After activation with the app, do you still need to save the Pro-finder number in the address book?",
+      "correction": "The source is ambiguous. Section 2.4 says the following steps in chapters 2.5 to 2.8 are omitted when the app is used, which includes saving the number. Section 2.5 says saving it lets you identify an alarm message quickly and requires a country code for access from abroad. Those points concern the phone address book, not device programming. This draft preserves the contradiction rather than deciding it.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Sections 2.4 and 2.5"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Continuation of section 2.5"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED is continuously red after power is connected instead of flashing.",
+      "correction": "According to chapter 3, continuous red means that the SIM card is missing or defective. Check that a working Nano-SIM is inserted and the holder is locked.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, continuously red state"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Sections 2.1 and 2.2"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED flashes alternately red and green.",
+      "correction": "According to chapter 3, the SIM-card PIN has not been disabled. Insert the card into a mobile device again and disable the PIN request as the first SIM-preparation step.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, red/green flashing state"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Section 2.1, step 1"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED continues to flash yellow-green and does not change to green.",
+      "correction": "The device is registered and has reception, but no destination numbers have been saved. Activation is not complete; finish programming in the app or use the programming SMS route described in chapter 2.8. The command syntax remains omitted from this draft.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, yellow/green and green flashing states"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4"
+        }
+      ]
+    },
+    {
+      "problem": "No status SMS arrives after activation without the app.",
+      "correction": "Section 2.4 says the status SMS is sent only after the programming SMS has been received and the numbers saved, and identifies only the sender of that programming SMS as the recipient. First check the device used to send it. A yellow flashing Status-LED means the device is registered but the last SMS could not be sent.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "14",
+          "region": "Section 2.4, third paragraph"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Chapter 3, yellow flashing state"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s14-app-qr-codes",
+      "alt": "Two square QR codes side by side, each with a black store badge above it: App Store on the left and Google Play on the right.",
+      "long_description": "Two differently patterned QR codes are placed side by side. Above the left code is a black badge with a white Apple logo and “Download on the App Store”. Above the right code is a black badge with a multicoloured Play symbol and “Google play”; its small upper line remains illegible even in the high-resolution crop. The position beneath each badge is the only visual association between a code and a store. The codes themselves have no text labels, and the section does not provide their destinations as written addresses.",
+      "steps_text": [
+        "The left QR code is beneath the App Store badge.",
+        "The right QR code is beneath the Google Play badge.",
+        "Section 2.3 presents both codes as ways to obtain the THITRONIK App.",
+        "If scanning is not possible, search the App Store or Google Play for THITRONIK App."
+      ],
+      "data_table_md": "| Position | Badge above the code | Purpose stated by section 2.3 |\n| --- | --- | --- |\n| left QR code | Download on the App Store | Obtain the THITRONIK App from the App Store |\n| right QR code | Google play | Obtain the THITRONIK App from Google Play |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "14",
+        "region": "Section 2.3, two QR codes with store badges"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Status-LED indication in chapter 3 | Meaning stated in chapter 3 | Relevance to this task |\n| --- | --- | --- |\n| Flashes red/yellow | Network search and no destination numbers | Possible immediately after power is connected; section 2.4 says only “briefly red”. |\n| Flashes red | Network search or no GSM reception | Also possible immediately after power is connected and not expressly identified by section 2.4. |\n| Continuously yellow | Establishing a modem connection | Intermediate registration state not mentioned in section 2.4. |\n| Continuously red | SIM card missing or defective | Stop: activation cannot continue. |\n| Flashes red/green | SIM-card PIN not disabled | Stop: SIM preparation is incomplete. |\n| Flashes yellow | Registered, but the last SMS could not be sent | Explains a missing status SMS on the route without the app. |\n| Continuously green | Pro-finder is receiving or sending an SMS | Temporary state while receiving the programming SMS or sending the status SMS. |\n| Flashes yellow/green | Registered with reception, but no destination numbers | State after power is connected and before destination numbers are saved. |\n| Flashes green | Registered with reception and destination numbers present | Target state for this task. |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "13",
+      "region": "Sections 2.1 and 2.2, SIM preparation and insertion"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "14",
+      "region": "Sections 2.3, 2.4 and 2.5, app download, activation and saving the number",
+      "note": "Rendered and fully reviewed visually; the page has no usable text layer."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "15",
+      "region": "Continuation of section 2.5 and section 2.6"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Chapter 3 “Betriebszustände (Status-LED)”"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Sections 6.3 and 6.4, written website addresses"
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "6",
+      "region": "Section “Lieferumfang”, product photograph"
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted translation draft based exclusively on the reviewed German master. No SMS command string, example destination number, customer data or unconfirmed support contact was imported. The unresolved command-language block BLK-005, the ALARM/AAlarm contradiction and the ambiguity about address-book storage after app activation remain explicit. Protected names, URLs and technical values are preserved for automated comparison. Technical and independent English-language reviews are pending."
+}

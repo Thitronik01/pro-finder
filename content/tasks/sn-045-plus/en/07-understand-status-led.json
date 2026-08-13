@@ -1,0 +1,98 @@
+{
+  "slug": "understand-status-led",
+  "title": "Understand the Status-LED",
+  "generation": "sn-045-plus",
+  "language": "en",
+  "goal": "Interpret the Pro-finder Status-LED correctly and identify the device operating state.",
+  "prerequisites": [
+    "The Pro-finder is installed and connected to its power supply.",
+    "You can see the Status-LED or have another person describe its colour and flashing pattern."
+  ],
+  "warnings": [],
+  "steps": [
+    {
+      "text": "Observe the Status-LED for several seconds: is it continuously lit or flashing, and which colour or colour combination does it show?",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Section 5 “Anzeigen der Betriebszustände (Status LED)”"
+        }
+      ]
+    },
+    {
+      "text": "Use the following overview to match the observed pattern to one of the nine operating states.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Section 5, states 1–9"
+        }
+      ]
+    }
+  ],
+  "expected_result": "After installation and programming are complete, the Status-LED flashes green during normal operation (state 9: registered, reception available and destination numbers saved).",
+  "error_cases": [
+    {
+      "problem": "The Status-LED is continuously red.",
+      "correction": "The SIM card is missing or defective (state 4). Check that a working Nano-SIM is inserted correctly; see the task “Prepare and insert the SIM card”.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Section 5, state 4"
+        }
+      ]
+    },
+    {
+      "problem": "The Status-LED flashes alternately red and green.",
+      "correction": "The SIM-card PIN has not been disabled (state 5). Disable the SIM PIN request; the quick-start guide states that this is mandatory.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Section 5, state 5"
+        },
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "2",
+          "region": "Section 2 “SIM-Karte vorbereiten”, step 1"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "ka45-p1-led-blinkmuster",
+      "alt": "Nine Status-LED pattern bars, one for each state, using red, yellow, green or colour combinations.",
+      "long_description": "For each of the nine operating states, the quick-start guide shows a horizontal bar representing the LED pattern in colour, for example alternating red and yellow segments for red/yellow flashing. The bars encode information only through colour and rhythm. The table in this task gives the complete meaning of every state as text.",
+      "steps_text": [
+        "Each bar represents one numbered state from 1 to 9.",
+        "The bar colour or colours correspond to the LED colour; the segmentation represents the flashing pattern.",
+        "The overview table in this task states the full meaning in text."
+      ],
+      "asset_version": "v1-entwurf",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-KA-SN045",
+        "pages": "1",
+        "region": "Section 5, flashing-pattern bars"
+      }
+    }
+  ],
+  "tables_md": [
+    "| No. | Status-LED pattern | Meaning |\n| --- | --- | --- |\n| 1 | Flashes red/yellow | Searching for a network and no destination numbers saved |\n| 2 | Flashes red | Searching for a network or no GSM reception |\n| 3 | Continuously yellow | Establishing a connection to the modem |\n| 4 | Continuously red | SIM card missing or defective |\n| 5 | Flashes red/green | SIM-card PIN not disabled |\n| 6 | Flashes yellow | Registered, but the last SMS could not be sent |\n| 7 | Continuously green | Pro-finder is receiving or sending an SMS |\n| 8 | Flashes green/yellow | Registered with reception, but no destination numbers saved |\n| 9 | Flashes green | Registered with reception and destination numbers saved |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-KA-SN045",
+      "pages": "1",
+      "region": "Section 5 “Anzeigen der Betriebszustände (Status LED)”, states 1–9 including note box",
+      "note": "German source text was extracted and checked visually against the rendered page in audit batch 1 on 2026-08-06. The German master records two documented orthographic normalisations."
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "AI-assisted English translation draft based exclusively on the reviewed German master. Protected product names and technical states are preserved. Independent English-language review is pending."
+}

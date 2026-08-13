@@ -1,0 +1,227 @@
+{
+  "slug": "fehlerbehebung",
+  "title": "Störungen systematisch eingrenzen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Störungen beim Pro-finder bis SN-044 anhand von Versorgung, Betriebsart, Status-LED, GPS-Diagnose und Meldungsinhalt schrittweise eingrenzen, ohne unbestätigte Befehle oder Meldungsstichwörter zu verwenden.",
+  "prerequisites": [
+    "Die eingestellte Betriebsart ist bekannt.",
+    "Die Status-LED kann ohne Veränderung der Verkabelung beobachtet werden.",
+    "Für Messungen am Bordnetz steht fachkundige Hilfe zur Verfügung."
+  ],
+  "warnings": [
+    {
+      "text": "Die Status-LED codiert mehrere Zustände nur über Rot, Gelb und Grün sowie Dauerlicht oder Blinken. Nutzen Sie deshalb immer Farbe und Blinkmuster zusammen; bei unsicherer Farbwahrnehmung ist eine zweite Person oder fachliche Hilfe erforderlich.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, neunteilige LED-Zustandstabelle"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt 6, neunteilige LED-Zustandstabelle"
+        }
+      ]
+    },
+    {
+      "text": "In der GPS-Diagnose gelten andere LED-Bedeutungen als im Normalbetrieb. Verwechseln Sie die Anzeige in Schalterstellung F nicht mit der normalen Statusanzeige.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7, 11",
+          "region": "Abschnitt 1.6.2 und Abschnitt 1.10"
+        }
+      ]
+    },
+    {
+      "text": "Bei dauerhaft weniger als 11,2 V Versorgungsspannung schaltet das Gerät zum Batterieschutz in den Standby-Modus. Erst oberhalb von 12,5 V kehrt es laut Quelle in den Normalbetrieb zurück; in Betriebsart B wird keine Spannungswarnung versendet.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12",
+          "region": "Abschnitt 2.1, Erläuterung zur Spannungswarnung"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Notieren Sie zuerst Schalterstellung, LED-Farbe, Blinkmuster und den Zeitpunkt des Fehlers. Die Betriebsart bestimmt unter anderem Anrufverhalten, Berichtsinhalte, automatische Intervalle und die Geofencing-Schaltung.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-5, 11",
+          "region": "Abschnitt 1.3, Betriebsartentabelle und LED-Zustände"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie die Versorgung fachgerecht. Die technischen Daten nennen 9 bis 30 V Gleichspannung; der Anschlussabschnitt beschreibt den Betrieb am 12-V-Bordnetz und verlangt eine Absicherung in der Plusleitung.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.4.1 und technische Daten zur Spannungsversorgung"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "Anschlussplan und technische Daten"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie die LED im Normalbetrieb anhand der Tabelle ein. Rotes Dauerlicht weist dort auf eine nicht eingelegte oder nicht erkannte SIM-Karte hin; gelbes Dauerlicht auf ein Problem mit dem GSM-Modem.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, Zeilen „SIM-Karte fehlt/defekt“ und „GSM-Modem arbeitet nicht“"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie bei rotem Blinken das Mobilfunknetz. Bei gleichzeitigem roten und gelben Blinken nennt die Quelle zusätzlich fehlende Zielrufnummern; bei gleichzeitigem grünem und gelbem Blinken nennt sie fehlende Zielrufnummern bei vorhandener Netzverbindung.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, drei Blinkzustände zu GSM-Netz und Zielrufnummern"
+        }
+      ]
+    },
+    {
+      "text": "Nutzen Sie für die GPS-Prüfung die Betriebsart F. Dort bedeutet rotes Dauerlicht, dass keine GPS-Antenne angeschlossen oder die Verbindung unterbrochen ist; gelbes Blinken bedeutet, dass keine gültige Position vorliegt; grünes Dauerlicht bedeutet eine gültige Position.",
+      "expected": "Antenne, Einbauort und Positionsstatus sind voneinander unterscheidbar.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "7",
+          "region": "Abschnitt 1.6.2, drei LED-Zustände der GPS-Diagnose"
+        }
+      ]
+    },
+    {
+      "text": "Bleibt die GPS-Diagnose länger als fünf Minuten gelb blinkend, beurteilt die Quelle den Einbauort als ungeeignet. Prüfen Sie freie Sicht nach oben und den Abstand zu Metallteilen und elektrischen Verbrauchern.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "3, 7",
+          "region": "Abschnitt 1.1 zum Montageort und Abschnitt 1.6.2 zur Fünf-Minuten-Prüfung"
+        }
+      ]
+    },
+    {
+      "text": "Wenn eine Positionsmeldung unplausibel ist, prüfen Sie UTC und GPS-Zustand. Ohne aktuelle Position wartet das Gerät laut Quelle bis zu zehn Minuten und sendet danach die zuletzt empfangene Position.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15, 17",
+          "region": "Abschnitt 2.5 und Schluss von Abschnitt 2.8"
+        }
+      ]
+    },
+    {
+      "text": "Bleibt die Ursache offen, halten Sie Schalterstellung, LED-Muster, Versorgungsspannung und Zeitpunkt fest und wenden Sie sich an Fachhändler oder Support. Raten Sie weder eine Befehlszeichenfolge noch einen SIM-Code.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11, 18",
+          "region": "SIM-Voraussetzungen, LED-Tabelle und Servicehinweis"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die Störung ist anhand eines dokumentierten Zustands eingegrenzt oder mit den erforderlichen Beobachtungen an Fachhändler beziehungsweise Support übergeben; GPS-Diagnose, Normalbetrieb und veraltete Positionen werden nicht verwechselt.",
+  "error_cases": [
+    {
+      "problem": "Die LED leuchtet im Normalbetrieb dauerhaft rot.",
+      "correction": "Prüfen Sie, ob eine geeignete Micro-SIM-Karte spannungsfrei eingesetzt und erkannt wurde. Die Quelle ordnet rotes Dauerlicht im Normalbetrieb einer fehlenden oder defekten SIM-Karte zu.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11",
+          "region": "Abschnitt 1.7 und LED-Tabelle in Abschnitt 1.10"
+        }
+      ]
+    },
+    {
+      "problem": "Die LED blinkt dauerhaft rot.",
+      "correction": "Die Quelle ordnet dies einer nicht hergestellten GSM-Netzverbindung zu. Prüfen Sie Netzverfügbarkeit, SIM-Voraussetzungen und die deaktivierten Mailbox-, Rufumleitungs- und Komfortfunktionen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 11",
+          "region": "SIM-Voraussetzungen und LED-Tabelle"
+        }
+      ]
+    },
+    {
+      "problem": "In der GPS-Diagnose leuchtet die LED dauerhaft rot.",
+      "correction": "Prüfen Sie Anschluss und Kabel der GPS-Antenne. In Stellung F bedeutet rotes Dauerlicht eine fehlende Antenne oder eine unterbrochene Verbindung.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6-7",
+          "region": "Abschnitte 1.6.1 und 1.6.2"
+        }
+      ]
+    },
+    {
+      "problem": "Die LED blinkt gelb, obwohl keine Zielrufnummer gespeichert ist.",
+      "correction": "Gelbes Blinken allein steht laut Quelle für den Empfang einer Meldung. Fehlende Zielrufnummern werden durch kombinierte Farben angezeigt; beobachten Sie das gesamte Muster und nicht nur eine Farbe.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, Zeilen zu gelbem Blinken und kombinierten Blinkzuständen"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s07-gps-diagnose",
+      "alt": "Drei Zustände der Status-LED in der GPS-Diagnose: rot, gelb blinkend und grün.",
+      "long_description": "In Betriebsart F zeigt rotes Dauerlicht eine fehlende oder unterbrochene GPS-Antenne. Gelbes Blinken bedeutet, dass keine gültige Position vorliegt. Grünes Dauerlicht kennzeichnet eine gültige Position. Diese Bedeutungen gehören zur GPS-Diagnose und dürfen nicht mit der normalen LED-Tabelle verwechselt werden.",
+      "steps_text": [
+        "Betriebsart F bestätigen.",
+        "Farbe und Blinkmuster gemeinsam erfassen.",
+        "Antenne, Position oder Einbauort passend zum Zustand prüfen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "7",
+        "region": "Abschnitt 1.6.2, LED-Symbole und zugehörige Erläuterungen"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Beobachtung | Einordnung laut Quelle | Nächster Prüfpunkt |\n| --- | --- | --- |\n| Normalbetrieb: Rot dauerhaft | SIM-Karte fehlt oder ist defekt | SIM-Typ und spannungsfreies Einsetzen prüfen |\n| Normalbetrieb: Rot blinkend | keine GSM-Netzverbindung | Netz und SIM-Voraussetzungen prüfen |\n| Normalbetrieb: Rot und Gelb blinkend | kein Netz und keine Zielrufnummer | beide Ursachen getrennt prüfen |\n| Normalbetrieb: Grün und Gelb blinkend | Netz vorhanden, keine Zielrufnummer | Zielrufnummern prüfen |\n| Normalbetrieb: Gelb dauerhaft | GSM-Modem arbeitet nicht | Fachhändler oder Support einschalten |\n| GPS-Diagnose: Rot dauerhaft | GPS-Antenne fehlt oder Verbindung unterbrochen | Antennenanschluss und Kabel prüfen |\n| GPS-Diagnose: Gelb blinkend | keine gültige Position | bis zu fünf Minuten warten, dann Einbauort prüfen |\n| GPS-Diagnose: Grün dauerhaft | gültige Position | Diagnose erfolgreich |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "2-8, 11-12, 15, 17-18",
+      "region": "Sicherheit, Montage, Versorgung, GPS-Diagnose, SIM, LED-Tabelle, Spannungswarnung, Status und Service",
+      "note": "Alle verwendeten Seiten innerhalb des deutschen Hauptkorpus wurden am 2026-08-09 bei 200 dpi neu gerendert und vollständig visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "Anschlussplan, LED-Tabelle und technische Daten",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 250 dpi neu gerendert und vollständig visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion einer befehlsfreien Fehlersuche für die Generation bis SN-044. Die LED-Tabelle aus DOC-BMA-SN044, Seite 11, die GPS-Diagnose auf Seite 7, die Spannungswarnung auf Seite 12 und die Positionshinweise auf den Seiten 15 und 17 wurden zusammengeführt, ohne Generationen zu vermischen. Die abweichende Aussage zum grünen Dauerlicht zwischen BMA und Kurzanleitung wird in Aufgabe 07 und DSC-059 behandelt; hier wird sie nicht als Fehlerursache geglättet. Der feste SIM-Code ist wegen Rückfrage 15 nicht veröffentlicht. Keine SMS-Befehlszeichenfolge, kein lokalisiertes Meldungs-Stichwort, keine Beispielkoordinate, kein Kartenlink und keine Beispielrufnummer wurde übernommen. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

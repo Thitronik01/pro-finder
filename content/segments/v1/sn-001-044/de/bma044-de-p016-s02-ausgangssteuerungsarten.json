@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P016-S02-AUSGANGSSTEUERUNGSARTEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "ausgaenge",
+  "title": "Steuerungsarten der Ausgänge",
+  "body_md": "| Steuerungsart | Belegtes Verhalten |\n|---|---|\n| Dauerhaft | Ein Ausgang wird bis auf Widerruf eingeschaltet oder wieder ausgeschaltet. |\n| Gepulst | Ein Ausgang wird für eine Sekunde eingeschaltet. |\n| Zeitlich begrenzt | Ein Ausgang wird für eine gewählte Dauer zwischen 1 und 120 Minuten eingeschaltet. |\n\nNach jedem beschriebenen Schaltvorgang sendet der Pro-finder zusätzlich einen Statusbericht. Das Verhalten bei einer Dauer außerhalb des Bereichs, bei erneutem Auslösen oder bei einem Spannungsausfall während der Laufzeit beschreibt die Quelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Abschnitt 2.7, drei unterstrichene Steuerungsarten und jeweilige Ergebnisabsätze",
+  "prev_context": "Die Einleitung nennt zwei getrennt steuerbare Ausgänge und verweist für den Anschluss auf Abschnitt 1.5.",
+  "next_context": "Der rote Schlussabsatz erklärt die Übertragung der Beispiele auf den zweiten Ausgang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:da76b40cac6339c8c8dfe649731f8b34cd95b925f86f96728076357e1c15cd55",
+  "change_reason": "Dauerbetrieb, Ein-Sekunden-Impuls und der belegte Zeitbereich wurden ohne die vier gesperrten SMS-Zeichenfolgen als zugängliche Tabelle strukturiert. Offene Randfälle bleiben sichtbar.",
+  "discrepancy_refs": ["DSC-052"]
+}

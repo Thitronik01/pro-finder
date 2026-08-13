@@ -1,0 +1,508 @@
+{
+  "slug": "meldungen",
+  "title": "Meldungen verstehen",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Eine eingehende SMS des Pro-finder einer Meldungsart zuordnen, die einzelnen Angaben darin lesen und wissen, was danach am Gerät und am Telefon geschieht.",
+  "prerequisites": [
+    "Der Pro-finder ist eingebaut, angeschlossen und betriebsbereit.",
+    "Am Betriebsartenschalter ist eine Betriebsart eingestellt; sie bestimmt mit, welche Angaben eine Meldung enthält.",
+    "Ihre Rufnummer ist als Zielrufnummer im Pro-finder gespeichert. Zielrufnummern sind die Telefonnummern, die im Alarmfall benachrichtigt werden sollen."
+  ],
+  "warnings": [
+    {
+      "text": "Die Diebstahlmeldung ist ein stiller Alarm. Weder Blinker noch Sirene werden dabei aktiviert. Rechnen Sie im Diebstahlfall nicht mit einem hör- oder sichtbaren Signal am Fahrzeug.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, Abschnitt „Diebstahlmeldung:“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Eine Diebstahlmeldung setzt nach Kapitel 4 zwei Bedingungen voraus: Die WiPro III (safe.lock) muss aktiviert sein, und das Fahrzeug muss sich weiter als ca. 900 m vom ursprünglichen Standort entfernt haben. Abschnitt 5.2 „Geofencing“ nennt eine weitere Bedingung, die Kapitel 4 verschweigt: Das Geofencing selbst muss eingeschaltet sein.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Diebstahlmeldung:“, erster Satz (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2 „Geofencing“, erster und zweiter Absatz sowie der rot gesetzte Hinweiskasten (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Sinkt die Versorgungsspannung dauerhaft unter 11,2 V, schaltet der Pro-finder in den Standby-Modus, um die Batterie zu schonen, und versendet eine SMS mit einem entsprechenden Hinweis. Erst wenn die Spannung wieder über 12,5 V steigt, wechselt er zurück in den Normalbetrieb.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen):“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "In Betriebsart B gibt der Pro-finder keine Spannungswarnung aus. Verlassen Sie sich in dieser Betriebsart nicht darauf, über eine sinkende Versorgungsspannung informiert zu werden. „B“ ist dabei keine Kategorie, sondern eine Stellung des Betriebsartenschalters; die Tabelle der Betriebsarten führt die Stellungen 0 bis 9 und A bis F auf.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Überschrift „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen):“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten:“ zu Abschnitt 1.3, Spalte „Betriebsarten“ mit den Zeilen 0 bis 9 und A bis F (aufgedruckt „Seite 8 von 23“)",
+          "note": "Nur als Beleg dafür herangezogen, dass „B“ eine Schalterstellung ist; Kapitel 4 erklärt das nicht."
+        }
+      ]
+    },
+    {
+      "text": "Bei einer Einbruchmeldung, einem Gasalarm und einem manuellen Alarm ruft der Pro-finder nach dem Versenden der SMS zusätzlich die Masternummer an. Der Anruf gehört zur Alarmierung. Die Masternummer ist die Telefonnummer, die beim Speichern der Zielrufnummern an erster Stelle steht.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, rot hervorgehobene Sätze in den Abschnitten „Einbruchmeldung:“, „Gasalarm:“ und „Manueller Alarm:“ (aufgedruckt „Seite 18 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, Tabellenzeile „Masternummer:“ (aufgedruckt „Seite 13 von 23“)",
+          "note": "Nur für die Worterklärung „Masternummer“ herangezogen; Kapitel 4 selbst erklärt den Begriff nicht."
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Lesen Sie die SMS von oben nach unten. Sieben der neun abgedruckten Beispiel-SMS beginnen mit einer Zeile, die den Anlass nennt: einen Diebstahl über Geofencing, einen Einbruch über den Funk-Magnetkontakt, einen Gasalarm, einen manuellen Alarm, das Auslösen der Funk-Kabelschleife, eine zu niedrige Spannung oder den Hinweis auf einen ungültigen Befehl. Der Statusbericht beginnt dagegen mit zwei Zustandszeilen („WiPro“ und „Fence“, jeweils mit dem Wert „ON“), die Positions-SMS mit der Uhrzeit.",
+      "expected": "Sie wissen, welche Meldungsart Sie vor sich haben.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, drei Beispiel-SMS in Sprechblasen (aufgedruckt „Seite 17 von 23“)",
+          "note": "Die Zeilen „WiPro ON“ und „Fence ON“ erklärt Kapitel 4 nicht."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, sechs Beispiel-SMS in Sprechblasen (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie die Uhrzeit hinter der Angabe „UTC“. Kapitel 4 nennt sie den Zeitpunkt des Vorfalls in koordinierter Weltzeit, nicht in Ihrer Ortszeit. Abschnitt 5.7 schränkt das ein: Die Uhrzeit entspricht immer der Zeit der zuletzt empfangenen Position, die bei fehlendem GPS-Empfang älter sein kann als der Vorfall.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung, Feld „UTC:“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, letzter Absatz (aufgedruckt „Seite 22 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Öffnen Sie die Positionsangabe, um zu sehen, wo das Fahrzeug steht. Je nach mobilem Endgerät überträgt der Pro-finder die aktuelle Position als Google-Maps-Link oder als Koordinaten.",
+      "expected": "Nach Anklicken des Links wird eine Kartenansicht der aktuellen Fahrzeugposition angezeigt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung, Feld „Pos:“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Abschnitt „Positions-SMS für Smartphones:“, zweiter Absatz (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie die Geschwindigkeitsangabe unter der Position. Sie nennt die aktuelle Geschwindigkeit des Fahrzeugs. Nicht jede Meldung enthält sie: Die abgedruckte Beispiel-SMS zum Diebstahl von Zubehör hat als einzige der neun keine Geschwindigkeitszeile.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung, Feld „Geschwindigkeit:“ (aufgedruckt „Seite 17 von 23“)",
+          "note": "Die Einleitung nennt keine Einheit; in den Beispiel-SMS auf den Seiten 19 und 20 steht der Wert mit der Einheit km/h."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Beispiel-SMS zum Abschnitt „Diebstahl Zubehör:“ (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Steht in der Meldung das Feld „GPS“ mit dem Wert „Standby“, ist die GPS-Antenne im Standby-Modus. Sie müssen nichts tun: Bei einem Ereignis wird sie automatisch reaktiviert.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung, Feld „GPS:“ (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Werten Sie einen Statusbericht anhand seiner zusätzlichen Zeilen aus. Er enthält neben Position, Geschwindigkeit und den Zuständen der Ausgänge je nach Betriebsart zusätzlich die Spannungen der Messeingänge U2 bis U5 sowie die Temperatur in unmittelbarer Nähe des Geräts. In der abgedruckten Beispiel-SMS stehen die beiden Ausgänge als Zeilen „A“ und „B“.",
+      "expected": "Sie erkennen, welche Messwerte Ihre Betriebsart überträgt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Statusbericht:“ (aufgedruckt „Seite 17 von 23“)",
+          "note": "Der Erläuterungstext nennt die Ausgänge ohne Buchstaben; die Bezeichnungen „A“ und „B“ stehen nur in der Beispiel-SMS daneben."
+        }
+      ]
+    },
+    {
+      "text": "Deuten Sie die Zeile „U1“ des Statusberichts als Betriebsspannung. Kapitel 4 erwähnt diese Zeile nicht; erklärt wird sie erst in Abschnitt 1.3, der für den Statusbericht die Betriebsspannung (U1) und die Spannungen der Messeingänge U2 bis U5 nennt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3 „Betriebsart auswählen“, Unterabschnitt „Statusbericht enthält U1, U2, U3, U4, U5:“ (aufgedruckt „Seite 7 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Statusbericht:“ und zugehörige Beispiel-SMS mit der Zeile U1 (aufgedruckt „Seite 17 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Fordern Sie einen Statusbericht an, indem Sie die Nummer des Pro-finder anrufen. Der Pro-finder beendet den Anruf nach wenigen Freizeichen und antwortet mit einem Statusbericht. In den Betriebsarten 2 und 3 funktioniert dieser Weg laut Abschnitt 5.3 nicht.",
+      "expected": "Sie erhalten einen Statusbericht, ohne einen SMS-Befehl zu kennen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, Absätze „Alternativ können Sie …“ und „Rufen Sie die Nummer des Pro-finder an …“ (aufgedruckt „Seite 20 von 23“)",
+          "note": "Derselbe Abschnitt nennt zusätzlich einen SMS-Befehl; er ist hier bewusst nicht wiedergegeben."
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie die eingestellte Betriebsart, wenn Sie wissen wollen, wann ein Statusbericht von selbst eintrifft. Sie erhalten ihn nur auf Anforderung oder – je nach gewählter Betriebsart – in Intervallen; die Intervalle stehen in der Tabelle der Betriebsarten zu Abschnitt 1.3.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Statusbericht:“, erster Satz (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten:“ zu Abschnitt 1.3, Spalte „Intervall der automatischen Statusberichte“ (aufgedruckt „Seite 8 von 23“)",
+          "note": "Nur als Fundstelle genannt; die Intervallwerte gehören zur Aufgabe über die Betriebsarten und sind hier nicht wiederholt."
+        }
+      ]
+    },
+    {
+      "text": "Klären Sie, ob Ihre Nummer einen Statusbericht anfordern darf. Laut Abschnitt 2.7 haben die autorisierten Nummern diese Berechtigung; nicht autorisierte Nummern haben keinen Zugriff auf die Funktionen der Anlage und erhalten lediglich Statusmeldungen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "15",
+          "region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, Tabellenzeilen „Autorisierte Nummern:“ und „Nicht autorisierte Nummern:“ (aufgedruckt „Seite 13 von 23“)",
+          "note": "Ob die Masternummer Statusberichte anfordern kann, sagt die Tabelle nicht – ihre Zeile nennt nur das Programmieren neuer Zielrufnummern."
+        }
+      ]
+    },
+    {
+      "text": "Erwarten Sie bei einer Diebstahlmeldung kein Signal am Fahrzeug. Kapitel 4 verweist für das nachträgliche Einschalten von Blinker und Sirene per SMS auf Abschnitt 5.1 „Alarmanlage per SMS steuern“; dieser Abschnitt beschreibt jedoch nur das Umschalten der WiPro III (safe.lock) per Anruf und nennt weder Blinker noch Sirene noch einen SMS-Befehl. Der Verweis führt damit nicht zu der angekündigten Beschreibung.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Diebstahlmeldung:“, letzter Satz (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“, beide Absätze und der rot gesetzte Hinweis (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Rechnen Sie nach einer Einbruchmeldung, einem Gasalarm und einem manuellen Alarm mit einem eingehenden Anruf auf der Masternummer. Der Pro-finder ruft sie nach dem Versenden der SMS zusätzlich an.",
+      "expected": "Der Anruf trifft nach der SMS ein und gehört zur Alarmierung.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, rot hervorgehobene Sätze in „Einbruchmeldung:“, „Gasalarm:“ und „Manueller Alarm:“ (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Behandeln Sie eine Meldung über den Diebstahl von Zubehör wie einen Alarm der Funk-Kabelschleife: Sie kommt, wenn die Schleife auslöst, zum Beispiel beim Diebstahl von damit gesichertem Campingzubehör.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Abschnitt „Diebstahl Zubehör:“ (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Erkennen Sie eine SMS mit Eingabehilfen daran, dass sie einen ungültigen Befehl meldet und mögliche korrekte Befehle aufzählt. Der Pro-finder versendet sie, wenn er von einer Zielrufnummer eine SMS mit ungültigem Inhalt empfängt. Die gültige Schreibweise der Befehle druckt diese Anleitung nicht ab; schlagen Sie sie in der Herstelleranleitung nach.",
+      "expected": "Sie wissen, dass Ihre vorherige SMS nicht als Befehl erkannt wurde.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Abschnitt „SMS mit Eingabehilfen:“ (aufgedruckt „Seite 18 von 23“)"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Sie ordnen jede eingehende SMS des Pro-finder einer Meldungsart zu, lesen Zeitpunkt, Position und Geschwindigkeit darin ab und wissen, in welchen Fällen zusätzlich die Masternummer angerufen wird und wann kein Signal am Fahrzeug zu erwarten ist.",
+  "error_cases": [
+    {
+      "problem": "Sie haben eine SMS an den Pro-finder geschickt und erhalten als Antwort eine Meldung über einen ungültigen Befehl.",
+      "correction": "Der Pro-finder hat den Inhalt Ihrer SMS nicht als gültigen Befehl erkannt und antwortet deshalb mit einer Aufzählung möglicher Befehle und einem Verweis auf das Handbuch. Diese Anleitung gibt die Befehle nicht wieder: Die Befehlssprache ist beim Hersteller offen (Rückfrage 1). Hinzu kommt, dass die Geräteantwort selbst nicht zur übrigen Anleitung passt: Sie schreibt die Befehle durchgehend groß, die Abschnitte 5.3 und 5.4 derselben Anleitung schreiben sie klein; für die Positionsabfrage nennt die Geräteantwort außerdem ein anderes Wort als Abschnitt 5.4, also nicht bloß eine andere Schreibweise. Für die beiden aufgezählten Befehle zum Aktivieren und Deaktivieren der Alarmanlage enthält der deutsche Teil dieser Anleitung überhaupt keine Beschreibung: Abschnitt 5.1 nennt dafür nur den Anruf.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, Abschnitt „SMS mit Eingabehilfen:“ und zugehörige Beispiel-SMS (aufgedruckt „Seite 18 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitte 5.3 „Statusbericht anfordern“ und 5.4 „Position mit dem Smartphone abfragen“, jeweils die eingerückte blaue Kursivzeile (aufgedruckt „Seite 20 von 23“)",
+          "note": "Nur als Beleg für Schreibweise und Wortwahl herangezogen; die Befehle selbst sind hier nicht wiedergegeben."
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.1 „Alarmanlage per SMS steuern“ (aufgedruckt „Seite 19 von 23“)",
+          "note": "Der Abschnitt beschreibt trotz seines Titels nur die Steuerung per Anruf und enthält keinen SMS-Befehl."
+        }
+      ]
+    },
+    {
+      "problem": "Die Versorgungsspannung ist niedrig, aber Sie erhalten keine Spannungswarnung.",
+      "correction": "Prüfen Sie die eingestellte Betriebsart. In Betriebsart B gibt der Pro-finder keine Spannungswarnung aus; die Quelle verweist dafür auf Abschnitt 1.3 „Betriebsart auswählen“. „B“ ist eine Stellung des Betriebsartenschalters, keine Kategorie.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Überschrift „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen):“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "10",
+          "region": "„Tabelle der Betriebsarten:“ zu Abschnitt 1.3, Zeile „B“ (aufgedruckt „Seite 8 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Das Fahrzeug wurde bewegt, eine Diebstahlmeldung ist aber nicht eingegangen.",
+      "correction": "Kapitel 4 nennt zwei Bedingungen: Die WiPro III (safe.lock) muss aktiviert sein, und das Fahrzeug muss sich weiter als ca. 900 m vom ursprünglichen Standort entfernt haben. Eine Toleranz für kürzere Strecken nennt Kapitel 4 nicht. Abschnitt 5.2 „Geofencing“ ergänzt eine dritte Bedingung, die Kapitel 4 nicht erwähnt: Das Geofencing selbst muss eingeschaltet sein. Laut Hinweiskasten dort ist es bei scharfgeschalteter WiPro III automatisch aktiviert; in den Schalterstellungen 8 und B wird es dagegen über Pin 3 ein- und ausgeschaltet. Diese Stellen widersprechen einander teilweise und sind an THITRONIK zu klären.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Diebstahlmeldung:“, erster Satz (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "21",
+          "region": "Abschnitt 5.2 „Geofencing“, erster und zweiter Absatz sowie rot gesetzter Hinweiskasten (aufgedruckt „Seite 19 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Statt eines anklickbaren Kartenlinks enthält die SMS nur eine Zahlenfolge.",
+      "correction": "Der Pro-finder überträgt die Position je nach mobilem Endgerät als Google-Maps-Link oder als Koordinaten. Kapitel 4 erklärt nicht, wovon die Übertragungsart im Einzelnen abhängt oder wie sie sich ändern lässt; diese Aufgabe kann die Frage deshalb nicht beantworten. Abschnitt 5.7 nennt als Ausweg, die Positionsangabe in ein beliebiges Kartenprogramm oder Navigationsgerät einzugeben.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung, Feld „Pos:“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, erster Absatz (aufgedruckt „Seite 22 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Die Uhrzeit in der Meldung passt nicht zu dem Zeitpunkt, an dem der Vorfall Ihrer Einschätzung nach stattgefunden hat.",
+      "correction": "Die Quelle beschreibt dasselbe Feld an zwei Stellen unterschiedlich. Kapitel 4 nennt „UTC“ die Uhrzeit des Vorfalls. Abschnitt 5.7 sagt dagegen, die Uhrzeit entspreche immer der Zeit der zuletzt empfangenen Position; steht das Fahrzeug ohne GPS-Empfang, wartet der Pro-finder bis zu zehn Minuten auf eine gültige Position und sendet danach die zuletzt empfangene. Die Uhrzeit kann deshalb älter sein als der Vorfall. Der Widerspruch ist an THITRONIK zu klären und wird hier nicht aufgelöst.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung, Feld „UTC:“ (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "24",
+          "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, vierter und fünfter Absatz (aufgedruckt „Seite 22 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Der Statusbericht enthält keine Temperaturangabe, obwohl der Text sie nennt.",
+      "correction": "Die Quelle ist an dieser Stelle widersprüchlich: Kapitel 4 nennt für den Statusbericht ausdrücklich die Temperatur in unmittelbarer Nähe des Geräts, und Abschnitt 5.3 bestätigt das ein zweites Mal. Die abgedruckte Beispiel-SMS enthält jedoch keine Temperaturzeile. Der Widerspruch ist an THITRONIK zu klären und wird hier nicht aufgelöst. Die zusätzlich abgedruckte Zeile U1 ist dagegen kein Widerspruch, sondern eine Lücke von Kapitel 4: Abschnitt 1.3 nennt U1 die Betriebsspannung.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Abschnitt „Statusbericht:“ gegenüber der zugehörigen Beispiel-SMS (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, letzter Absatz (aufgedruckt „Seite 20 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "9",
+          "region": "Abschnitt 1.3, Unterabschnitt „Statusbericht enthält U1, U2, U3, U4, U5:“ (aufgedruckt „Seite 7 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Sie suchen in einer Meldung nach dem Feld „GPS“ oder nach der Bezeichnung „Pos“ und finden beides nicht.",
+      "correction": "Die Einleitung von Kapitel 4 beschreibt beide Felder, keine der neun abgedruckten Beispiel-SMS enthält jedoch eine GPS-Zeile, und die Position steht dort ohne die Bezeichnung „Pos“ – nur als Adresse eines Kartendienstes beziehungsweise als Koordinaten. Welche Felder tatsächlich gesendet werden, hängt laut Einleitung von der Art des Vorfalls und der Einstellung des Betriebsartenschalters ab. Abschnitt 5.3 nennt für den Fall ohne gültige Position eine eigene Anzeige im Statusbericht.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "19",
+          "region": "Kapitel 4, Einleitung und drei Beispiel-SMS (aufgedruckt „Seite 17 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "20",
+          "region": "Kapitel 4, sechs Beispiel-SMS (aufgedruckt „Seite 18 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "22",
+          "region": "Abschnitt 5.3 „Statusbericht anfordern“, letzter Absatz (aufgedruckt „Seite 20 von 23“)",
+          "note": "Dort steht, dass bei fehlender gültiger Position „GPS kein Empfang“ gemeldet und die letzte gültige Position gesendet wird."
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s19-beispiel-sms",
+      "alt": "Drei schwarze SMS-Sprechblasen als Beispiele für Statusbericht, Diebstahlmeldung und Spannungswarnung, jeweils mit einer Erläuterung daneben.",
+      "long_description": "Die linke Spalte zeigt drei schwarze Sprechblasen mit weißem Text; jede steht für eine Beispiel-SMS. Rechts daneben steht zu jeder Sprechblase eine fett gesetzte Überschrift und ein Erläuterungstext. Sprechblase und Erläuterung sind einander nur durch ihre Höhe auf der Seite und durch dünne waagerechte Trennlinien zugeordnet. Erste Sprechblase, Statusbericht, zwölf Zeilen: „WiPro“ mit dem Wert „ON“; „Fence“ mit dem Wert „ON“; „UTC“ mit einer Uhrzeit; eine blau unterstrichene Google-Maps-Adresse mit angehängten Koordinaten; eine Geschwindigkeit, im Beispiel 0 km/h; „U1“ mit einem Spannungswert (im Beispiel 13,53 V, mit Komma geschrieben); „U2“, „U3“, „U4“ und „U5“ mit je einem Spannungswert (im Beispiel jeweils 0 V); „A“ mit dem Wert „OFF“; „B“ mit dem Wert „OFF“. Die beiden ersten Zeilen zu WiPro und Fence erklärt Kapitel 4 nicht; die Zeile U1 erwähnt der Erläuterungstext ebenfalls nicht – Abschnitt 1.3 auf PDF-Seite 9 nennt U1 die Betriebsspannung. Zweite Sprechblase, Diebstahlmeldung, vier Zeilen: der Anlass „Diebstahl (Geofencing)“; „UTC“ mit einer Uhrzeit; die Google-Maps-Adresse; eine Geschwindigkeit, im Beispiel 37 km/h. Dritte Sprechblase, Spannungswarnung, fünf Zeilen: der Hinweis „Spannung unter 11.2 V“, hier mit Punkt als Dezimaltrennzeichen; „WiPro“ mit dem Wert „ON“; „UTC“ mit einer Uhrzeit; die Google-Maps-Adresse; eine Geschwindigkeit, im Beispiel 0 km/h. Die konkreten Koordinaten und vollständigen Adressen der Quelle sind hier bewusst nicht wiedergegeben.",
+      "steps_text": [
+        "Links stehen die Beispiel-SMS, rechts die zugehörige Erläuterung.",
+        "Die Zuordnung ist in der Quelle nur räumlich; die Tabelle unten gibt sie als Text wieder.",
+        "Der Statusbericht ist die längste der drei Beispiel-SMS und enthält als einzige Messwerte und Ausgangszustände.",
+        "Die Positionsangabe erscheint in allen drei Beispielen als blau unterstrichene Google-Maps-Adresse."
+      ],
+      "data_table_md": "| Beispiel-SMS | Zeilen im Beispiel |\n| --- | --- |\n| Statusbericht | WiPro ON; Fence ON; UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit; U1 mit Spannungswert; U2 bis U5 mit je einem Spannungswert; A: OFF; B: OFF |\n| Diebstahlmeldung | Diebstahl (Geofencing); UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit |\n| Spannungswarnung | Spannung unter 11.2 V; WiPro ON; UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "19",
+        "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, drei Sprechblasen mit Erläuterungen (aufgedruckt „Seite 17 von 23“)",
+        "note": "Die Sprechblasen tragen keinen Alternativtext, und die Zuordnung zur Erläuterung entsteht allein durch Position und Trennlinien. Die Dezimaltrennzeichen im Gerätetext sind uneinheitlich: „Spannung unter 11.2 V“ mit Punkt, „U1:13,53 V“ mit Komma; außerdem steht bei U1 kein Leerzeichen hinter dem Doppelpunkt, bei U2 bis U5 dagegen schon. Die sichtbaren Adressen verwenden den Parameter „g=“ statt des üblichen „q=“ und sind auf dieser Seite nicht als anklickbare Links hinterlegt; beides ist im Seitenrecord zu Seite 19 festgehalten und hier nicht aufgelöst. Konkrete Koordinaten und vollständige Adressen sind bewusst nicht übernommen."
+      }
+    },
+    {
+      "asset_key": "iba-sn045-s20-beispiel-sms",
+      "alt": "Sechs schwarze SMS-Sprechblasen als Beispiele für Positions-SMS, Eingabehilfe, Einbruchmeldung, Gasalarm, manuellen Alarm und Diebstahl von Zubehör.",
+      "long_description": "Die linke Spalte zeigt sechs schwarze Sprechblasen mit weißem Text, die rechte Spalte zu jeder eine fett gesetzte Überschrift und einen Erläuterungstext. Waagerechte Linien trennen die sechs Blöcke; die Zuordnung erfolgt nur über die Höhe auf der Seite. Erste Sprechblase, Positions-SMS für Smartphones: „UTC“ mit einer Uhrzeit; eine blau unterstrichene Google-Maps-Adresse; eine Geschwindigkeit, im Beispiel 0 km/h. Zweite Sprechblase, SMS mit Eingabehilfen: ein Hinweis, dass der Befehl ungültig war, gefolgt von vier großgeschriebenen Befehlswörtern und dem Satz, dass weitere Befehle im Handbuch stehen. Die Befehlswörter selbst sind hier nicht wiedergegeben. Dritte Sprechblase, Einbruchmeldung: der Anlass „Einbruch Tuer/Fenster (Funk-Magnetkontakt“ – die Klammer wird in der Quelle nicht geschlossen –, „UTC“ mit einer Uhrzeit, die Google-Maps-Adresse und eine Geschwindigkeit von 0 km/h. Vierte Sprechblase, Gasalarm: „Alarm durch Gasmelder“, „UTC“ mit einer Uhrzeit, die Google-Maps-Adresse und eine Geschwindigkeit von 0 km/h. Fünfte Sprechblase, manueller Alarm: „Manueller Alarm (Panikalarm)“, „UTC“ mit einer Uhrzeit, die Google-Maps-Adresse und eine Geschwindigkeit von 0 km/h. Sechste Sprechblase, Diebstahl Zubehör: „Diebstahl Zubehoer (Funk-Kabelschleife“ – auch hier ohne schließende Klammer –, „UTC“ mit einer Uhrzeit und die Google-Maps-Adresse; eine Geschwindigkeitszeile fehlt als einziger der sechs Beispiele. Der Gerätetext ist durchgehend ohne Umlaute gesetzt („Tuer“, „Zubehoer“, „Ungueltiger“, „Moeglich“), während der umgebende Fließtext Umlaute verwendet. In den Erläuterungen zu Einbruchmeldung, Gasalarm und manuellem Alarm steht jeweils ein rot und fett gesetzter Satz: Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen. Diese Information trägt in der Quelle allein die rote Farbe; sie ist deshalb hier zusätzlich als Warnung und in der Tabelle ausgeschrieben. Konkrete Koordinaten und Kartenadressen sind bewusst nicht übernommen.",
+      "steps_text": [
+        "Links stehen sechs Beispiel-SMS, rechts die zugehörigen Erläuterungen.",
+        "Drei der sechs Erläuterungen enthalten einen rot hervorgehobenen Satz zum zusätzlichen Anruf auf der Masternummer: Einbruchmeldung, Gasalarm und manueller Alarm.",
+        "Die Beispiel-SMS zum Diebstahl von Zubehör enthält als einzige keine Geschwindigkeitsangabe.",
+        "Die Beispiel-SMS mit Eingabehilfen enthält keinen Ortsbezug, sondern nur Text."
+      ],
+      "data_table_md": "| Beispiel-SMS | Zeilen im Beispiel |\n| --- | --- |\n| Positions-SMS für Smartphones | UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit |\n| SMS mit Eingabehilfen | Hinweis auf einen ungültigen Befehl; vier großgeschriebene Befehlswörter; Verweis auf das Handbuch |\n| Einbruchmeldung | Einbruch Tuer/Fenster (Funk-Magnetkontakt; UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit |\n| Gasalarm | Alarm durch Gasmelder; UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit |\n| Manueller Alarm | Manueller Alarm (Panikalarm); UTC mit Uhrzeit; Google-Maps-Adresse; Geschwindigkeit |\n| Diebstahl Zubehör | Diebstahl Zubehoer (Funk-Kabelschleife; UTC mit Uhrzeit; Google-Maps-Adresse; keine Geschwindigkeitszeile |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "20",
+        "region": "Kapitel 4, sechs Sprechblasen mit Erläuterungen (aufgedruckt „Seite 18 von 23“)",
+        "note": "Die Sprechblase zur Eingabehilfe lautet in der Quelle wörtlich „Ungueltiger Befehl! Moeglich: SCHARF, UNSCHARF, STATUS, POS. Weitere Befehle siehe Handbuch.“ Sie ist hier nur zur Begründung der Auslassung zitiert: Die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1), deshalb steht im Inhalt kein Befehl. Auffällig dabei: „POS“ ist ein anderes Wort als das in Abschnitt 5.4 abgedruckte „position“, und für „SCHARF“/„UNSCHARF“ gibt es im deutschen Teil dieser Anleitung keinen Abschnitt – Abschnitt 5.1 beschreibt nur den Anruf. Zwei Beispiel-SMS enthalten eine öffnende Klammer ohne schließende. Der Hinweis auf den zusätzlichen Anruf ist in der Quelle nur durch rote Schrift hervorgehoben."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Feld in der SMS | Bedeutung |\n| --- | --- |\n| GPS | Steht dort „Standby“, ist die GPS-Antenne im Standby-Modus. Bei einem Ereignis wird sie automatisch reaktiviert. |\n| UTC | Uhrzeit des Vorfalls, angegeben in koordinierter Weltzeit. Abschnitt 5.7 schränkt ein: Die Uhrzeit entspricht immer der Zeit der zuletzt empfangenen Position. |\n| Pos | Aktuelle Position des Fahrzeugs, je nach mobilem Endgerät als Google-Maps-Link oder als Koordinaten. |\n| Geschwindigkeit | Aktuelle Geschwindigkeit des Fahrzeugs. Nicht jede Meldung enthält sie. |\n| U1 | Von Kapitel 4 nicht erklärt; Abschnitt 1.3 nennt U1 die Betriebsspannung. |",
+    "| Meldung | Wann Sie sie erhalten | Was zusätzlich geschieht |\n| --- | --- | --- |\n| Statusbericht | Nur auf Anforderung oder – je nach gewählter Betriebsart – in Intervallen; die Intervalle stehen in der Tabelle der Betriebsarten zu Abschnitt 1.3. Anfordern lässt er sich ohne SMS auch per Anruf, laut Abschnitt 5.3 außer in den Betriebsarten 2 und 3. | Enthält neben Position, Geschwindigkeit und den Zuständen der Ausgänge je nach Betriebsart zusätzlich die Spannungen der Messeingänge U2 bis U5 sowie die Temperatur in unmittelbarer Nähe des Geräts. Die Quelle nennt keinen zusätzlichen Anruf. |\n| Diebstahlmeldung (Geofencing) | Wenn sich das Fahrzeug bei aktivierter WiPro III (safe.lock) weiter als ca. 900 m vom ursprünglichen Standort entfernt. Abschnitt 5.2 nennt zusätzlich, dass das Geofencing eingeschaltet sein muss. | Stiller Alarm: weder Blinker noch Sirene werden aktiviert. Kapitel 4 verweist für das nachträgliche Einschalten auf Abschnitt 5.1, der das jedoch nicht beschreibt. Die Quelle nennt keinen zusätzlichen Anruf. |\n| Spannungswarnung | Wenn die Versorgungsspannung dauerhaft unter 11,2 V sinkt. In Betriebsart B – einer Stellung des Betriebsartenschalters – wird sie nicht ausgegeben. | Der Pro-finder schaltet in den Standby-Modus, um die Batterie zu schonen. Erst über 12,5 V kehrt er in den Normalbetrieb zurück. Die Quelle nennt keinen zusätzlichen Anruf. |\n| Positions-SMS für Smartphones | Als Antwort auf eine Positionsabfrage, wie in Abschnitt 5.4 „Position mit dem Smartphone abfragen“ beschrieben. | Nach Anklicken des Links wird eine Kartenansicht der aktuellen Fahrzeugposition angezeigt. Die Quelle nennt keinen zusätzlichen Anruf. |\n| SMS mit Eingabehilfen | Wenn von einer Zielrufnummer eine SMS mit ungültigem Inhalt empfangen wird. | Der Pro-finder antwortet mit den möglichen korrekten Befehlen und verweist auf das Handbuch. Die Befehle sind in dieser Anleitung bewusst nicht abgedruckt. |\n| Einbruchmeldung | Immer, wenn die WiPro III (safe.lock) einen Alarm meldet. | Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen. |\n| Gasalarm | Wenn die WiPro III (safe.lock) über einen Gasalarm benachrichtigt. | Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen. |\n| Manueller Alarm | Wenn die WiPro III (safe.lock) durch Auslösen eines Panikalarms aktiviert wird. | Nach dem Versenden der SMS wird die Masternummer zusätzlich angerufen. |\n| Diebstahl Zubehör | Wenn die Funk-Kabelschleife auslöst, zum Beispiel beim Diebstahl von damit gesichertem Campingzubehör. | Die Quelle nennt keinen zusätzlichen Anruf. |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "19",
+      "region": "Kapitel 4 „Berichte, Meldungen und Warnungen“, Einleitung mit den Feldern GPS, UTC, Pos und Geschwindigkeit sowie die Abschnitte „Statusbericht:“, „Diebstahlmeldung:“ und „Spannungswarnung (nicht in Betriebsart B, siehe 1.3 Betriebsart auswählen):“ (aufgedruckt „Seite 17 von 23“)",
+      "note": "Seite am 2026-08-08 bei 150 dpi gerendert, vollständig visuell geprüft und für die Feldliste, die Spannungswerte und den Diebstahlabsatz zusätzlich bei 400 dpi nachvergrößert. Die Seite hat keine nutzbare Textebene; alle Angaben sind vom Bild abgelesen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "20",
+      "region": "Kapitel 4, Fortsetzung mit den Abschnitten „Positions-SMS für Smartphones:“, „SMS mit Eingabehilfen:“, „Einbruchmeldung:“, „Gasalarm:“, „Manueller Alarm:“ und „Diebstahl Zubehör:“ (aufgedruckt „Seite 18 von 23“)",
+      "note": "Seite am 2026-08-08 bei 150 dpi gerendert, vollständig visuell geprüft und in vier Ausschnitten bei 400 dpi nachvergrößert. Keine nutzbare Textebene."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "9",
+      "region": "Abschnitt 1.3 „Betriebsart auswählen“, Unterabschnitte „Automatische Statusberichte:“ und „Statusbericht enthält U1, U2, U3, U4, U5:“ (aufgedruckt „Seite 7 von 23“)",
+      "note": "In der zweiten Gegenprüfung herangezogen, weil Kapitel 4 die Zeile U1 der Beispiel-SMS nicht erklärt. Der erste Satz dieses Abschnitts enthält den bereits registrierten Fehlverweis (Ausgänge „wie unter 5.4 Position mit dem Smartphone abfragen“; richtig wäre 5.5); er betrifft Kapitel 4 nicht und ist hier nicht übernommen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "10",
+      "region": "„Tabelle der Betriebsarten:“ zu Abschnitt 1.3, Spalten „Intervall der automatischen Statusberichte“ und „Betriebsarten“ (aufgedruckt „Seite 8 von 23“)",
+      "note": "Nur als Beleg dafür herangezogen, dass „B“ eine Schalterstellung ist und dass die Statusbericht-Intervalle dort stehen. Die Intervallwerte selbst gehören zur Aufgabe über die Betriebsarten und sind hier nicht wiederholt."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "15",
+      "region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, Tabelle mit den Zeilen „Masternummer:“, „Autorisierte Nummern:“ und „Nicht autorisierte Nummern:“ (aufgedruckt „Seite 13 von 23“)",
+      "note": "Nur als Beleg für die Worterklärungen „Zielrufnummer“ und „Masternummer“ sowie für das Berechtigungsmodell herangezogen, weil Kapitel 4 diese Begriffe verwendet, aber nicht erklärt."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "21",
+      "region": "Abschnitte 5.1 „Alarmanlage per SMS steuern“ und 5.2 „Geofencing“ (aufgedruckt „Seite 19 von 23“)",
+      "note": "In der zweiten Gegenprüfung herangezogen, um zwei Punkte zu belegen: dass der Querverweis aus Kapitel 4 auf 5.1 nicht zu einer Beschreibung von Blinker und Sirene führt, und dass 5.2 für die Diebstahlmeldung eine dritte Bedingung nennt. Kein Befehl aus dieser Seite ist übernommen."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "22",
+      "region": "Abschnitte 5.3 „Statusbericht anfordern“, 5.4 „Position mit dem Smartphone abfragen“ und Beginn von 5.5 „Ausgänge per SMS steuern“ (aufgedruckt „Seite 20 von 23“)",
+      "note": "Herangezogen für den befehlsfreien Weg zum Statusbericht (Anruf, außer in den Betriebsarten 2 und 3), für die zweite Nennung der Temperatur, für die Anzeige bei fehlendem GPS-Empfang und als Beleg für Schreibweise und Wortwahl der Befehle. Kein Befehl aus dieser Seite ist übernommen. Der Titel von 5.4 belegt außerdem, dass der Verweis auf Seite 20 richtig ist; der bekannte Fehlverweis 5.4 statt 5.5 steht in Abschnitt 1.3."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "24",
+      "region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, erster sowie vierter und fünfter Absatz (aufgedruckt „Seite 22 von 23“)",
+      "note": "In der zweiten Gegenprüfung herangezogen, weil dieser Abschnitt die Bedeutung des Feldes „UTC“ anders bestimmt als Kapitel 4 und die GPS-Wartezeit von bis zu zehn Minuten nennt."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus den geprüften deutschen Quellseiten 19 und 20 (Kapitel 4 „Berichte, Meldungen und Warnungen“), ergänzt um Seite 15 (Abschnitt 2.7) ausschließlich für die Worterklärungen „Zielrufnummer“ und „Masternummer“, die Kapitel 4 voraussetzt, ohne sie zu erklären. Alle Werte sind vom Seitenbild abgelesen, nicht aus einer Zusammenfassung übernommen; die Seiten haben keine nutzbare Textebene. Die Werte 11,2 V, 12,5 V und ca. 900 m stimmen mit den erwarteten Werten dieser Generation überein. HOCHSTUFUNG DER SICHERHEITSKLASSE: Der Platzhalter trug „sicherheitsrelevant“. Diese Aufgabe trägt jetzt vier Aussagen, deren Fehldeutung unmittelbar auf den Personen- und Sachschutz durchschlägt – den stillen Diebstahlalarm ohne Blinker und Sirene, die zusätzliche Alarmierung per Anruf auf der Masternummer bei Einbruch, Gas und manuellem Alarm, die Spannungsschwellen 11,2 V und 12,5 V mit dem Wechsel in den Standby-Modus und die Tatsache, dass in Betriebsart B überhaupt keine Spannungswarnung ausgegeben wird. Deshalb „sicherheitskritisch“. AUSGELASSEN – SMS-BEFEHLE: In steps, warnings, error_cases und Tabellen steht kein einziger SMS-Befehl. Die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1 an THITRONIK; vier geprüfte Sprachfassungen zeigen vier eigene Befehlssätze). Betroffen ist hier vor allem die Meldung „SMS mit Eingabehilfen“: Sie ist die Antwort des Geräts auf einen ungültigen Befehl und lautet in der Quelle wörtlich „Ungueltiger Befehl! Moeglich: SCHARF, UNSCHARF, STATUS, POS. Weitere Befehle siehe Handbuch.“ – hier nur zur Begründung der Auslassung zitiert. Folge, ausdrücklich benannt: Wer diese Meldung erhält, findet in dieser Aufgabe nicht, wie der Befehl richtig geschrieben wird; die Aufgabe bleibt an dieser Stelle unvollständig. Ebenso ist beim stillen Diebstahlalarm nur der Weg genannt (Abschnitt 5.1 der Herstelleranleitung), nicht der Befehl, mit dem sich Blinker und Sirene einschalten lassen. AUSGELASSEN – ORTS- UND KONTAKTDATEN: Die neun Beispiel-SMS der Quelle enthalten konkrete Koordinaten und Kartenadressen. Weder Koordinaten noch Links noch Rufnummern sind übernommen; beschrieben ist ausschließlich der Aufbau der Meldungen. WIDERSPRÜCHE UND FUNDE, NICHT GEGLÄTTET: (1) Der Erläuterungstext zum Statusbericht nennt die Temperatur in unmittelbarer Nähe des Geräts und die Messeingänge U2 bis U5; die abgedruckte Beispiel-SMS enthält keine Temperaturzeile, dafür eine in Kapitel 4 nicht erwähnte Zeile U1 mit 13,53 V – als error_case benannt. (2) Die Einleitung definiert ein Feld „GPS“ und ein Feld „Pos“; in keiner der neun Beispiel-SMS erscheint eine GPS-Zeile, und die Position steht überall ohne den Bezeichner „Pos“ – als error_case benannt. (3) Die Zeilen „WiPro ON“ und „Fence ON“ im Statusbericht werden von Kapitel 4 nicht erklärt; hier nur beschrieben, nicht gedeutet. (4) Zwei Beispiel-SMS öffnen eine Klammer, ohne sie zu schließen: „Einbruch Tuer/Fenster (Funk-Magnetkontakt“ und „Diebstahl Zubehoer (Funk-Kabelschleife“. (5) Die Beispiel-SMS „Diebstahl Zubehoer“ enthält als einzige keine Geschwindigkeitszeile. (6) Die Dezimaltrennzeichen im Gerätetext sind uneinheitlich: „Spannung unter 11.2 V“ mit Punkt gegenüber „U1:13,53 V“ mit Komma; der Fließtext daneben schreibt durchgehend 11,2 V und 12,5 V. (7) Der Gerätetext ist durchgehend ohne Umlaute gesetzt („Tuer“, „Zubehoer“, „Ungueltiger“, „Moeglich“) – dieselbe Beobachtung, die für die Befehle bereits registriert ist. (8) Die Einbruchmeldung ist im Text weiter gefasst als ihre Überschrift: „immer, wenn die WiPro III (safe.lock) einen Alarm meldet“, während das Beispiel nur den Funk-Magnetkontakt an Tür und Fenster zeigt; die Formulierung ist unverändert übernommen. Der bekannte Fehlverweis auf Kapitel 5.4 statt 5.5 betrifft diese Seiten nicht: Seite 20 verweist auf „5.4 Position mit dem Smartphone abfragen“, und das ist die Positionsabfrage. BARRIEREFREIHEIT: Der Hinweis auf den zusätzlichen Anruf der Masternummer trägt in der Quelle allein die rote Schriftfarbe; er steht hier zusätzlich als Warnung, als Schritt und in der Meldungstabelle. Die Zuordnung von Sprechblase und Erläuterung entsteht in der Quelle nur über die Position auf der Seite; beide Abbildungen sind deshalb mit Alternativtext, sichtbarer Langbeschreibung und einer Tabelle als Textentsprechung versehen. Technischer Review steht aus; review_status bleibt „entwurf“. Gegengeprüft gegen die Quellseiten am 2026-08-08. Dabei korrigiert: Der von der Quelle ausdrücklich genannte Google-Maps-Link war zu „Link auf einen Kartendienst“ verallgemeinert – die Quelle schreibt „per Google-Maps Link oder per Koordinaten (abhängig vom mobilen Endgerät)“, und der Dienstname steht jetzt wieder in Schritt, Feldtabelle, Fehlerfall und beiden Bildbeschreibungen. Die Behauptung, einen Statusbericht könnten „nur“ autorisierte Nummern anfordern, war eine Verschärfung: Abschnitt 2.7 nennt die Berechtigung der autorisierten Nummern und den fehlenden Zugriff der nicht autorisierten, sagt zur Masternummer aber nichts – der Schritt gibt jetzt beide Zeilen wieder und benennt die Lücke. Ebenso gestrichen ist das eingefügte Wort „automatisch“ bei den Intervall-Statusberichten; die Quelle sagt nur „je nach gewählter Betriebsart in Intervallen“. Die Einheit km/h und die Ausgangsbezeichnungen „A“ und „B“ standen als Aussagen des Erläuterungstextes da, stehen aber nur in den Beispiel-SMS – beides ist jetzt als Beobachtung an der Beispiel-SMS gekennzeichnet. Die Aussage zur Groß- gegenüber Kleinschreibung der Befehle hatte keine Seitenangabe und ist jetzt mit PDF-Seite 22 (Abschnitte 5.3 und 5.4) belegt, ohne einen Befehl wiederzugeben. Ergänzt: die Beispielgeschwindigkeiten (37 km/h in der Diebstahlmeldung, sonst 0 km/h) in den Langbeschreibungen sowie der Hinweis, dass die sichtbaren Adressen den Parameter „g=“ statt „q=“ tragen und auf Seite 19 nicht als Links hinterlegt sind. Nachgeprüft und unverändert bestätigt: 11,2 V, 12,5 V, ca. 900 m, „U1:13,53 V“ mit Komma gegenüber „Spannung unter 11.2 V“ mit Punkt, U2 bis U5 mit je 0 V, A und B mit „OFF“, die fehlende Geschwindigkeitszeile in der Zubehör-SMS, die beiden nicht geschlossenen Klammern, die drei rot gesetzten Sätze zum Anruf auf der Masternummer und die Tatsache, dass keine der neun Beispiel-SMS eine GPS-Zeile oder den Bezeichner „Pos“ enthält. Der Querverweis auf 5.4 auf Seite 20 ist korrekt: Auf PDF-Seite 22 trägt 5.4 den Titel „Position mit dem Smartphone abfragen“, 5.5 heißt „Ausgänge per SMS steuern“; der bekannte Fehlverweis der deutschen Fassung betrifft Abschnitt 1.3, nicht Kapitel 4 – hier war also nichts geglättet. ZWEITE, UNABHÄNGIGE GEGENPRÜFUNG gegen die Quellseiten am 2026-08-07: PDF-Seiten 19 und 20 vollständig neu gelesen und in sechs Ausschnitten bei 400 dpi nachvergrößert; zusätzlich PDF-Seiten 9, 10, 15, 21, 22, 23 und 24 zur Kontrolle der Querverweise geöffnet. Kein Wert der Seiten 19 und 20 musste korrigiert werden. Korrigiert wurden fünf Stellen, an denen die Datei mehr oder weniger sagte als die Quelle: (a) Der Verweis von Kapitel 4 auf Abschnitt 5.1 wurde als Fundstelle für das Einschalten von Blinker und Sirene ausgegeben; Abschnitt 5.1 auf PDF-Seite 21 beschreibt jedoch nur das Umschalten der WiPro III (safe.lock) per Anruf, nennt weder Blinker noch Sirene noch einen SMS-Befehl – der Verweis läuft ins Leere und ist jetzt als solcher benannt. (b) Die Zeile U1 galt als unaufgelöster Widerspruch; Abschnitt 1.3 auf PDF-Seite 9 nennt U1 ausdrücklich die Betriebsspannung – das ist keine Widersprüchlichkeit, sondern eine Lücke von Kapitel 4, und der Fehlerfall unterscheidet das jetzt. Die Temperatur bleibt ein echter Widerspruch, weil Abschnitt 5.3 sie ein zweites Mal nennt und die Beispiel-SMS sie trotzdem nicht enthält. (c) Der Schritt zum UTC-Feld gab nur Kapitel 4 wieder („Uhrzeit des Vorfalls“); Abschnitt 5.7 auf PDF-Seite 24 sagt, die Uhrzeit entspreche immer der Zeit der zuletzt empfangenen Position, und nennt eine GPS-Wartezeit von bis zu zehn Minuten – beide Fassungen stehen jetzt nebeneinander, dazu ein eigener Fehlerfall. (d) Die Diebstahlmeldung war auf zwei Bedingungen festgelegt; Abschnitt 5.2 auf PDF-Seite 21 nennt als dritte, dass das Geofencing eingeschaltet sein muss, und widerspricht sich dabei teilweise selbst (Hinweiskasten: bei scharfgeschalteter WiPro III automatisch aktiv; Fließtext: in den Schalterstellungen 8 und B über Pin 3 geschaltet) – beides ist jetzt benannt und nicht aufgelöst. (e) Der Fehlerfall zur Eingabehilfe reduzierte den Unterschied zwischen Geräteantwort und Kapiteltext auf die Groß- und Kleinschreibung; tatsächlich nennt die Geräteantwort für die Positionsabfrage mit „POS“ ein anderes Wort als das in Abschnitt 5.4 abgedruckte „position“, und für „SCHARF“ und „UNSCHARF“ gibt es im deutschen Teil überhaupt keinen Abschnitt – beides jetzt benannt, die Wörter selbst nur hier und in figures[].source.note zitiert. Ergänzt wurde außerdem der einzige befehlsfreie Weg zum Statusbericht, den die Quelle selbst anbietet: der Anruf bei der Nummer des Pro-finder, laut Abschnitt 5.3 außer in den Betriebsarten 2 und 3 – damit ist die Aufgabe an dieser Stelle trotz der Befehlssperre benutzbar. Kleinere Angleichungen: Der erste Schritt behauptete, nur Alarm- und Diebstahlmeldungen begännen mit einer Anlasszeile; tatsächlich tun das sieben der neun Beispiele, nur Statusbericht und Positions-SMS nicht. Der Geschwindigkeitsschritt sagt jetzt, dass nicht jede Meldung eine Geschwindigkeitszeile enthält. „Betriebsart B“ ist als Stellung des Betriebsartenschalters erklärt (Tabelle der Betriebsarten, PDF-Seite 10). Die Definition der Zielrufnummer folgt jetzt dem Wortlaut von Abschnitt 2.7 („benachrichtigt werden sollen“)."
+}

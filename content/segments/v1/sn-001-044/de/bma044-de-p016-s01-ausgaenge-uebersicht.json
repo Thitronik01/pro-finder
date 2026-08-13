@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P016-S01-AUSGAENGE-UEBERSICHT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "ausgaenge",
+  "title": "Zwei getrennt steuerbare Ausgänge",
+  "body_md": "Der Pro-finder besitzt zwei getrennt voneinander steuerbare Ausgänge. Deren elektrischer Anschluss ist in Abschnitt 1.5 der Quelle beschrieben; die vorliegende Seite behandelt ausschließlich die Steuerungsarten.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Abschnitt 2.7, Einleitungsabsatz oberhalb der drei Steuerungsarten",
+  "prev_context": "PDF-Seite 15 endet mit der Smartphone-Positionsmeldung und ihrem Kartenlink.",
+  "next_context": "Darunter unterscheidet die Quelle dauerhafte, gepulste und zeitlich begrenzte Ausgangssteuerung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:64e020ce63985e6ce440baee4f56819f160df49a3a349773b52618a68038c565",
+  "change_reason": "Die Anzahl und Unabhängigkeit der Ausgänge wurden von der bereits extrahierten Anschlussbelegung getrennt. Es wird kein SMS-Befehl vorweggenommen.",
+  "discrepancy_refs": []
+}

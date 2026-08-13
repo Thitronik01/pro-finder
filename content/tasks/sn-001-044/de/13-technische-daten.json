@@ -1,0 +1,239 @@
+{
+  "slug": "technische-daten",
+  "title": "Technische Daten nachschlagen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die technischen Daten des Pro-finder bis SN-044 quellengetreu nachschlagen und Abweichungen zwischen Bedienungsanleitung und Kurzanleitung sichtbar halten.",
+  "prerequisites": [
+    "Die Gerätegeneration bis SN-044 ist bereits anhand der separaten Generationsaufgabe eingegrenzt.",
+    "Die technischen Daten werden für Planung oder Prüfung verwendet, nicht als Ersatz für eine elektrische Fachplanung."
+  ],
+  "warnings": [
+    {
+      "text": "Die Bedienungsanleitung und die Kurzanleitung nennen für die Stromaufnahme im normalen GSM-Betrieb unterschiedliche Werte. Der Pilot wählt keinen davon als allein richtig aus.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Tabelle „Technische Daten“, Stromaufnahme normaler GSM-Betrieb"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Tabelle „Technische Daten“, Stromaufnahme normaler GSM-Betrieb",
+          "note": "Die Abweichung ist in DSC-069 und Rückfrage 2 zu ergänzen."
+        }
+      ]
+    },
+    {
+      "text": "Die beiden Dokumente derselben Generation nennen unterschiedliche europäische Rechtsgrundlagen für die Konformitätserklärung. Diese Aufgabe gibt beide Quellenstände getrennt wieder.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 4 „Konformitätserklärung“"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt 9 „Konformitätserklärung“"
+        }
+      ]
+    },
+    {
+      "text": "Der Anschlussabschnitt beschreibt eine geeignete 12-V-Gleichspannungsquelle, während die technische Tabelle einen Versorgungsspannungsbereich von 9 bis 30 V Gleichspannung nennt. Ohne weitere Herstellerbestätigung ist der erste Wert als Anschlusskontext und der zweite als Tabellenangabe zu behandeln.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.4.1 und technische Daten zur Spannungsversorgung"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Verwenden Sie für die Versorgung die Tabellenangabe 9 bis 30 V Gleichspannung und beachten Sie zugleich, dass der konkrete Anschlussabschnitt den Einbau am 12-V-Bordnetz mit Sicherung in der Plusleitung beschreibt.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.4.1 und Tabelle „Technische Daten“"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "Anschlussplan und technische Daten"
+        }
+      ]
+    },
+    {
+      "text": "Dimensionieren Sie die Ausgänge mit 12 V und maximal 500 mA je Ausgang. Für leistungsstärkere Verbraucher verlangt die Bedienungsanleitung ein geeignetes Relais.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.4.4 und technische Daten"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Technische Daten, Zeile „Ausgänge“"
+        }
+      ]
+    },
+    {
+      "text": "Planen Sie für das Mobilfunkmodul die in beiden Tabellen genannten Frequenzbereiche 900, 1800, 850 und 1900 MHz ein. Beide Dokumente nennen als Kartentyp Micro-SIM.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8, 18",
+          "region": "Abschnitt 1.7 und technische Daten"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "SIM-Schritte und technische Daten"
+        }
+      ]
+    },
+    {
+      "text": "Berücksichtigen Sie die Umgebungstemperatur von minus 10 bis plus 80 Grad Celsius und die maximale Zahl von zehn Zielrufnummern. Als Schnittstelle nennen beide Tabellen NMEA mit dem Zusatz GPS-Eingang; eine NMEA-Version geben sie nicht an.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Tabelle „Technische Daten“"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Tabelle „Technische Daten“"
+        }
+      ]
+    },
+    {
+      "text": "Für die Stromaufnahme im normalen GSM-Betrieb dokumentieren Sie beide Werte statt einer stillen Korrektur: Die Bedienungsanleitung nennt ungefähr 21 mA, die Kurzanleitung ungefähr 16 bis 21 mA.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Technische Daten, Zeile zum normalen GSM-Betrieb"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Technische Daten, entsprechende Zeile"
+        }
+      ]
+    },
+    {
+      "text": "Für rechtliche oder regulatorische Aussagen zitieren Sie das konkrete Dokument mit Revisionsstand. Die Bedienungsanleitung verweist auf die Richtlinie 1999/5/EG, die Kurzanleitung auf die Richtlinie 2014/53/EU.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "1, 18",
+          "region": "Titelseite mit Revision 2.6 und Abschnitt 4"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt 9"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die technischen Eckdaten sind mit ihrem jeweiligen Dokument belegt. Abweichende Stromaufnahme, unterschiedliche Konformitätsgrundlagen und der Unterschied zwischen 12-V-Anschlusskontext und 9-bis-30-V-Tabellenbereich bleiben sichtbar.",
+  "error_cases": [
+    {
+      "problem": "Ein einzelner Wert für die normale Stromaufnahme wird als gesichert benötigt.",
+      "correction": "Die Quellen liefern keinen einheitlichen Einzelwert. Verwenden Sie für eine belastbare Auslegung die konservative Quellenbandbreite und lassen Sie den Sollwert von THITRONIK bestätigen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Technische Daten"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Technische Daten"
+        }
+      ]
+    },
+    {
+      "problem": "Die 12-V-Angabe im Anschlussabschnitt wird als alleinige zulässige Versorgung interpretiert.",
+      "correction": "Die technische Tabelle nennt 9 bis 30 V Gleichspannung. Die Quelle erklärt das Verhältnis zur 12-V-Anschlussanweisung nicht; lassen Sie einen abweichenden Einbau fachlich prüfen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "6, 18",
+          "region": "Abschnitt 1.4.1 und technische Daten"
+        }
+      ]
+    },
+    {
+      "problem": "Eine der beiden Konformitätsangaben soll ohne Dokumentbezug veröffentlicht werden.",
+      "correction": "Nennen Sie immer Dokument und Revisionsstand oder holen Sie eine aktuelle Herstellerbestätigung ein. Die beiden vorliegenden SN-044-Dokumente verweisen auf unterschiedliche Richtlinien.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "1, 18",
+          "region": "Revision und Konformitätserklärung"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Konformitätserklärung"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-ka-sn044-technische-daten-vergleich",
+      "alt": "Quellenvergleich der technischen Daten aus Bedienungsanleitung und Kurzanleitung.",
+      "long_description": "Die beiden technischen Tabellen stimmen bei Versorgungsspannungsbereich, Stromaufnahme während Netzverbindung, Mobilfunkfrequenzen, Zahl der Zielrufnummern, GPS-Standard, Ausgängen, Temperaturbereich und SIM-Typ weitgehend überein. Abweichend nennt die Bedienungsanleitung für den normalen GSM-Betrieb ungefähr 21 Milliampere, die Kurzanleitung ungefähr 16 bis 21 Milliampere. Die Konformitätsabschnitte verweisen auf unterschiedliche Richtlinien.",
+      "steps_text": [
+        "Technischen Wert in beiden Dokumenten suchen.",
+        "Abweichungen mit Dokument und Seite erhalten.",
+        "Keinen widersprüchlichen Wert still auswählen."
+      ],
+      "data_table_md": "| Merkmal | Bedienungsanleitung | Kurzanleitung |\n| --- | --- | --- |\n| Normaler GSM-Betrieb | ungefähr 21 mA | ungefähr 16 bis 21 mA |\n| Konformitätsbezug | 1999/5/EG | 2014/53/EU |",
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "18",
+        "region": "Technische Daten und Konformitätserklärung",
+        "note": "Die Vergleichsspalte der Kurzanleitung ist zusätzlich durch DOC-KA-SN044, PDF-Seite 2, Regionen „Technical specifications“ und Konformitätserklärung belegt."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Merkmal | Wert laut beiden technischen Tabellen |\n| --- | --- |\n| Versorgungsspannung | 9 bis 30 V Gleichspannung |\n| Stromaufnahme während Netzverbindung | ungefähr 37 mA |\n| GSM-Frequenzen | 900, 1800, 850 und 1900 MHz |\n| Zielrufnummern | maximal 10 |\n| Schnittstelle | NMEA, GPS-Eingang; keine Versionsangabe |\n| Ausgänge | zweimal 12 V, 500 mA |\n| Umgebungstemperatur | minus 10 bis plus 80 Grad Celsius |\n| SIM-Karte | Micro-SIM |",
+    "| Abweichendes Merkmal | DOC-BMA-SN044, PDF-Seite 18 | DOC-KA-SN044, PDF-Seite 2 |\n| --- | --- | --- |\n| Stromaufnahme im normalen GSM-Betrieb | ungefähr 21 mA | ungefähr 16 bis 21 mA |\n| Konformitätsbezug | Richtlinie 1999/5/EG | Richtlinie 2014/53/EU |",
+    "| Versorgungskontext in DOC-BMA-SN044 | Quellenangabe |\n| --- | --- |\n| Anschlussabschnitt, PDF-Seite 6 | geeignete 12-V-Gleichspannungsquelle und Sicherung in der Plusleitung |\n| Technische Tabelle, PDF-Seite 18 | Versorgungsspannung 9 bis 30 V Gleichspannung |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "1, 6, 8, 18",
+      "region": "Revision, Versorgung, SIM-Anforderungen, technische Daten und Konformitätserklärung",
+      "note": "Alle verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und vollständig visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "Anschlussplan, SIM-Anforderungen, technische Daten und Konformitätserklärung",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 250 dpi neu gerendert und vollständig visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion und dokumenteninterner Vergleich für die Generation bis SN-044. Die technischen Tabellen aus DOC-BMA-SN044, PDF-Seite 18, und DOC-KA-SN044, PDF-Seite 2, wurden nicht zusammengeglättet. Neu transparent dokumentiert: BMA nennt für den normalen GSM-Betrieb ungefähr 21 mA, KA ungefähr 16 bis 21 mA; BMA verweist auf 1999/5/EG, KA auf 2014/53/EU; BMA beschreibt auf Seite 6 einen 12-V-Anschlusskontext, nennt auf Seite 18 aber 9 bis 30 V als technischen Bereich. Diese Punkte werden in DSC-069 und Rückfrage 2 ergänzt. Keine technische Aussage der Generation ab SN-045 wurde übernommen. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "sim-karte",
+  "title": "SIM-Karte vorbereiten und einlegen",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Eine Nano-SIM so vorbereiten, dass der Pro-finder sich ins Mobilfunknetz einbuchen kann, und sie anschließend ins Modul einsetzen.",
+  "prerequisites": [
+    "Sie haben eine vom Mobilfunkanbieter freigeschaltete SIM-Karte im Format Nano-SIM.",
+    "Sie haben ein Mobiltelefon, in dem Sie die Einstellungen der SIM-Karte ändern können.",
+    "Der Pro-finder ist spannungsfrei und die Platine zugänglich."
+  ],
+  "warnings": [
+    {
+      "text": "Die PIN-Abfrage der SIM-Karte muss deaktiviert sein. Ohne diesen Schritt bucht sich das Modul nicht ein; die Status-LED blinkt dann abwechselnd rot und grün.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.1, Schritt 1 (aufgedruckt „Seite 11 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3 „Betriebszustände (Status-LED)“, Zustand „blinkt rot/grün“"
+        }
+      ]
+    },
+    {
+      "text": "Wird ein iPhone verwendet, muss für die Schritte 1 bis 4 die Funktion iMessages deaktiviert sein.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.1, roter Achtung-Block unterhalb der Schrittliste"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Legen Sie die SIM-Karte in ein mobiles Endgerät ein.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.1, Einleitung der Schrittliste"
+        }
+      ]
+    },
+    {
+      "text": "Deaktivieren Sie die PIN-Abfrage.",
+      "expected": "Die Karte lässt sich ohne PIN-Eingabe nutzen.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "13", "region": "Abschnitt 2.1, Schritt 1" }]
+    },
+    {
+      "text": "Deaktivieren Sie die Mailbox und alle Rufumleitungen.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "13", "region": "Abschnitt 2.1, Schritt 2" }]
+    },
+    {
+      "text": "Deaktivieren Sie jegliche Komfortfunktionen, unter anderem Rückrufbitte per SMS und Erinnerungen per SMS.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "13", "region": "Abschnitt 2.1, Schritt 3" }]
+    },
+    {
+      "text": "Aktivieren Sie Roaming, falls es nicht voreingestellt ist.",
+      "expected": "Die Karte kann sich auch in fremden Netzen einbuchen – nötig für die Ortung im Ausland.",
+      "sources": [{ "doc": "DOC-IBA-SN045", "pages": "13", "region": "Abschnitt 2.1, Schritt 4" }]
+    },
+    {
+      "text": "Nehmen Sie die SIM-Karte wieder aus dem mobilen Gerät heraus.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "13", "region": "Abschnitt 2.2, erster Absatz" }
+      ]
+    },
+    {
+      "text": "Legen Sie die Karte in die Halterung auf der Platine des Pro-finder-Moduls ein und verriegeln Sie die Halterung.",
+      "expected": "Die Halterung ist geschlossen und die Karte sitzt fest.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.2, erster Absatz und Platinenfoto"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die vorbereitete Nano-SIM sitzt verriegelt im Pro-finder-Modul. Nach dem Anschluss der Spannungsversorgung blinkt die Status-LED kurz rot und danach gelb-grün.",
+  "error_cases": [
+    {
+      "problem": "Die Status-LED leuchtet dauerhaft rot.",
+      "correction": "Die SIM-Karte fehlt oder ist defekt. Prüfen Sie, ob eine funktionsfähige Nano-SIM korrekt eingelegt und die Halterung verriegelt ist.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zustand „leuchtet rot“"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt abwechselnd rot und grün.",
+      "correction": "Die SIM-PIN ist nicht deaktiviert; das Modul ist nicht betriebsbereit. Legen Sie die Karte erneut in ein Mobiltelefon und deaktivieren Sie die PIN-Abfrage.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "18",
+          "region": "Kapitel 3, Zustand „blinkt rot/grün“"
+        },
+        { "doc": "DOC-IBA-SN045", "pages": "13", "region": "Abschnitt 2.1, Schritt 1" }
+      ]
+    },
+    {
+      "problem": "Das Restguthaben einer Prepaid-Karte lässt sich nicht prüfen oder aufladen, ohne die Karte auszubauen.",
+      "correction": "Wählen Sie eine Prepaid-Karte, die sich von einem anderen Mobiltelefon oder zum Beispiel an einem EC-Automaten aufladen lässt, ohne dass die Karte aus dem Gerät entfernt werden muss.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "13",
+          "region": "Abschnitt 2.1, roter Empfehlungsblock"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s13-sim-halterung",
+      "alt": "Nahaufnahme der Pro-finder-Platine mit geöffneter SIM-Halterung und einem ESD-Warnsymbol.",
+      "long_description": "Farbfoto der grünen Platine. Links oben liegt eine weiße Nano-SIM, deren abgeschrägte Ecke die Einschubrichtung anzeigt; darunter die geöffnete metallene Kartenhalterung mit sichtbaren Kontaktfedern. Rechts daneben ein gelbes Warnschild mit schwarzem Dreieck und einer Hand – das Symbol für elektrostatisch gefährdete Bauteile. Rechts im Bild das Funkmodul mit aufgeklebtem Etikett.",
+      "steps_text": [
+        "Halterung öffnen.",
+        "Nano-SIM mit der abgeschrägten Ecke passend zur Halterung einlegen.",
+        "Halterung schließen und verriegeln."
+      ],
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "13",
+        "region": "Abschnitt 2.2, Platinenfoto",
+        "note": "Die Quelle vermittelt Einbauort, Einschubrichtung und Verriegelung ausschließlich über das Foto und nennt das ESD-Symbol an keiner Stelle im Text. Beides ist hier als Text ergänzt."
+      }
+    }
+  ],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "13",
+      "region": "Abschnitte 2.1 „SIM-Karte konfigurieren“ und 2.2 „SIM-Karte ins Pro-finder-Modul einsetzen“ (aufgedruckt „Seite 11 von 23“)",
+      "note": "Seite am 2026-08-07 gerendert und vollständig visuell geprüft; die Seite hat keine nutzbare Textebene."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "18",
+      "region": "Kapitel 3 „Betriebszustände (Status-LED)“ – Quelle der beiden LED-Fehlerfälle"
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus der geprüften deutschen Quellseite. Die Anbieterempfehlung der Quelle (t-mobile oder Vodafone) ist bewusst NICHT übernommen: Englisch und Tschechisch nennen an derselben Stelle allgemein eine M2M-Karte, Französisch namentlich die Firma DOMOTEC. Welche Empfehlung gilt, ist offen (DSC-027, Rückfrage 5). Technischer Review steht aus."
+}

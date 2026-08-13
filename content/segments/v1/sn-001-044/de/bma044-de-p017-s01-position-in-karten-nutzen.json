@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P017-S01-POSITION-IN-KARTEN-NUTZEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "meldungen",
+  "title": "Positionsangaben in einer Karte verwenden",
+  "body_md": "Übertragen Sie die Positionsangabe aus einer Meldung genau so, wie sie auf dem Mobiltelefon erscheint, in die Suchzeile eines Kartenprogramms oder Navigationsgeräts. Je nach Kartenmaterial kann der Standort laut Quelle bis auf Hausnummernebene dargestellt werden. Eine für Smartphones aufbereitete Positionsmeldung kann stattdessen einen anklickbaren Kartenlink enthalten. Nach einer Diebstahlmeldung lassen sich weitere Statusberichte anfordern; die auslösenden SMS-Zeichenfolgen bleiben gesperrt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.8, erste drei Absätze oberhalb der Kartenabbildungen und Absatz zu weiteren Statusberichten unterhalb der Desktop-Abbildung",
+  "prev_context": "PDF-Seite 16 beschreibt die Steuerung der beiden Ausgänge.",
+  "next_context": "Der folgende Absatz erklärt das Verhalten an Orten ohne GPS-Empfang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1635387870651db464b910e0cea3404ef2b6ba40b1024a7c1959ce5b83fd9e77",
+  "change_reason": "Der Kartenweg und die Möglichkeit weiterer Statusberichte wurden ohne Beispielkoordinate, Beispieladresse, Kartenanbieter-URL, Bildschirmfoto oder SMS-Befehl extrahiert. Der fehlerhafte Kapitelverweis aus DSC-055 wird nicht wiederholt. Bei der Validierung wurde die Seitenregion um den tatsächlich verwendeten Absatz unterhalb der Desktop-Abbildung ergänzt; der übersetzbare Inhalt blieb unverändert.",
+  "discrepancy_refs": ["DSC-055", "DSC-060"]
+}

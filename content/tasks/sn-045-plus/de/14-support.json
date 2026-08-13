@@ -1,0 +1,69 @@
+{
+  "slug": "support",
+  "title": "Hilfe und Support",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Wissen, an wen Sie sich wenden können, wenn sich ein Problem mit dieser Anleitung nicht lösen lässt – und was Sie dafür bereithalten sollten.",
+  "prerequisites": [],
+  "warnings": [],
+  "steps": [
+    {
+      "text": "Wenden Sie sich bei Fragen zur Installation oder zum Betrieb zunächst an Ihren Fachhändler.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, erster Absatz (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Lässt sich die Schwierigkeit damit nicht beheben, finden Sie weitere Informationen auf der Website des Herstellers unter www.thitronik.de.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "25", "region": "Abschnitt 6.4, erster Absatz" }
+      ]
+    },
+    {
+      "text": "Sie erreichen den technischen Support telefonisch unter +49 4351 76744-112 oder per E-Mail an kontakt@thitronik.de.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "25", "region": "Abschnitt 6.4, erster Absatz" }
+      ]
+    },
+    {
+      "text": "Halten Sie für den Anruf die Seriennummer Ihres Pro-finder und die Softwareversion bereit. Beide finden Sie laut Anleitung entweder auf dem Gerät selbst oder in der THITRONIK App.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "25", "region": "Abschnitt 6.4, zweiter Absatz" }
+      ]
+    }
+  ],
+  "expected_result": "Sie haben einen Ansprechpartner und die Angaben zur Hand, die für eine gezielte Auskunft nötig sind.",
+  "error_cases": [
+    {
+      "problem": "Sie finden die Seriennummer am Gerät nicht.",
+      "correction": "Die Anleitung nennt keine genaue Position am Gerät und keine Leseregel; sie verweist nur allgemein auf das Gerät oder die THITRONIK App. Fragen Sie im Zweifel beim Support nach. Diese Lücke ist dokumentiert und an den Hersteller gemeldet.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4, zweiter Absatz – die Angabe bleibt unbestimmt"
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "tables_md": [
+    "| Weg | Angabe |\n| --- | --- |\n| Fachhändler | erste Anlaufstelle |\n| Website | www.thitronik.de |\n| Telefon | +49 4351 76744-112 |\n| E-Mail | kontakt@thitronik.de |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Abschnitt 6.4 „Technische Unterstützung“ (aufgedruckt „Seite 23 von 23“)",
+      "note": "Seite am 2026-08-07 gerendert und vollständig visuell geprüft; die Seite hat keine nutzbare Textebene. Die Kontaktdaten sind dort reiner Bildinhalt und weder kopierbar noch vorlesbar noch anklickbar – genau das löst diese HTML-Fassung auf."
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus der geprüften deutschen Quellseite. Die Rufnummer stimmt in der deutschen, englischen und tschechischen Fassung überein; die französische nennt eine offensichtlich beschädigte Nummer (DSC-032, Rückfrage 3). Übernommen ist die übereinstimmende Nummer. Für die Setup-Karte muss THITRONIK den Supportkanal noch bestätigen (BLK-004)."
+}

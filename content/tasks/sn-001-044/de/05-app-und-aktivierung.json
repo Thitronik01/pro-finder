@@ -1,0 +1,171 @@
+{
+  "slug": "app-und-aktivierung",
+  "title": "THITRONIK App laden und Pro-finder aktivieren",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die THITRONIK App installieren, den Pro-finder bis SN-044 einschalten und die erste Programmierung ohne Veröffentlichung ungeklärter SMS-Befehle beginnen.",
+  "prerequisites": [
+    "Montage und Verkabelung sind abgeschlossen.",
+    "Die Micro-SIM ist nach bestätigter PIN-Vorgabe vorbereitet und im spannungsfreien Modul eingesetzt.",
+    "Ein kompatibles Mobilgerät mit Zugang zum App Store oder zu Google Play ist vorhanden."
+  ],
+  "warnings": [
+    {
+      "text": "Die Aktivierungsrückmeldung am Gerät erfolgt nur über Farbe und Leuchtart der Status-LED. Wer Rot, Gelb und Grün nicht sicher unterscheiden kann, benötigt dafür Unterstützung; ein farbunabhängiges Merkmal nennt die Quelle nicht.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9, 11",
+          "region": "Aktivierungsfolge in Abschnitt 1.8 und neun Zustände in Abschnitt 1.10"
+        }
+      ]
+    },
+    {
+      "text": "Jede vom Pro-finder versendete SMS verursacht Kosten, deren Höhe vom Mobilfunkanbieter abhängt. Auch eine Steuerung per SMS oder Anruf hat laut Handbuch eine Status-SMS zur Folge.",
+      "safety_class": "normal",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8",
+          "region": "Abschnitt 1.8, Absatz „Steuern per SMS oder Anruf“"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Laden Sie die THITRONIK App aus dem App Store oder von Google Play. Die Kurzanleitung zeigt dafür beide Store-Abzeichen und einen QR-Code.",
+      "expected": "Die THITRONIK App ist installiert.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt 6 „App laden + programmieren“, Store-Abzeichen und QR-Code"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie vor dem Einschalten, dass der SIM-Kartenhalter und das Gehäuse geschlossen sind und der Betriebsartenschalter auf der für Ihren Einbau vorgesehenen Ausgangsstellung steht.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1",
+          "region": "Abschnitt 2, Bildfolge bis zum geschlossenen Gerät"
+        },
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-5, 9",
+          "region": "Abschnitt 1.3 zur Auswahl der Betriebsart und Abschnitt 1.8 zum Einschalten nach verriegeltem SIM-Halter"
+        }
+      ]
+    },
+    {
+      "text": "Schließen Sie die Spannungsversorgung an. Das Handbuch beschreibt zunächst kurzes rotes Blinken und danach abwechselnd gelbes und grünes Blinken.",
+      "expected": "Der Pro-finder beginnt die Netzsuche und erreicht anschließend einen eingebuchten Zustand ohne gespeicherte Zielrufnummern.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9, 11",
+          "region": "Abschnitt 1.8, erster Absatz, und Bedeutungen der Blinkmuster in Abschnitt 1.10"
+        }
+      ]
+    },
+    {
+      "text": "Öffnen Sie die THITRONIK App und folgen Sie dort der Programmierung. Die Kurzanleitung verlangt die Programmierung vor dem ersten Gebrauch und verweist für die ausführliche Bedienung auf die App.",
+      "expected": "Die App führt durch die gerätebezogene Programmierung; der Pilot gibt dafür keine SMS-Zeichenfolge aus.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "Abschnitt 2, Schritt 10, und Abschnitt 6, deutscher Absatz"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie nach dem Speichern der Zielrufnummern die Status-LED. Das Handbuch nennt grünes Blinken als Normalbetrieb nach abgeschlossener Installation und Programmierung.",
+      "expected": "Die Status-LED blinkt grün; das Gerät ist eingebucht und Zielrufnummern sind vorhanden.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, Zustand „Blinkt grün“ und fett gesetzter Abschlusssatz"
+        }
+      ]
+    },
+    {
+      "text": "Speichern Sie die Rufnummer der im Pro-finder eingesetzten SIM-Karte mit Ländervorwahl und einem eindeutig erkennbaren Namen im Adressbuch Ihres Mobiltelefons.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "8",
+          "region": "Abschnitt 1.8, Absatz „Speichern der Nummer des Pro-finders“"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die THITRONIK App ist installiert, der Pro-finder ist eingeschaltet und programmiert, die Modulnummer ist im Adressbuch zuordenbar, und die Status-LED blinkt im dokumentierten Normalzustand grün.",
+  "error_cases": [
+    {
+      "problem": "Die LED erreicht kein grünes Blinken.",
+      "correction": "Vergleichen Sie Leuchtart und Farbe mit der Aufgabe „Status-LED verstehen“. Dauerhaftes Rot, rot-grünes Blinken und gelbes oder gelb-grünes Blinken haben unterschiedliche Ursachen; raten Sie nicht anhand der Farbe allein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, vollständige Zustandsliste"
+        }
+      ]
+    },
+    {
+      "problem": "Die App ist nicht nutzbar oder die Programmierung bleibt unklar.",
+      "correction": "Nutzen Sie keine selbst rekonstruierte SMS-Zeichenfolge. Wenden Sie sich an den Fachhändler oder technischen Support, weil die Befehlsdokumentation widersprüchlich ist.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 3.4 „Technische Unterstützung“"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "ka-sn044-s02-app-uebersicht",
+      "alt": "Darstellung der THITRONIK App mit Funktionssymbolen und Hinweisen zum Herunterladen.",
+      "long_description": "Die Kurzanleitung zeigt mittig ein Smartphone mit geöffneter THITRONIK App. Linien führen von Symbolen der App zu mehrsprachigen Funktionsbeschreibungen. Darunter stehen die Abzeichen des App Store und von Google Play sowie ein QR-Code. Die Seite sagt, dass der Pro-finder vor dem ersten Gebrauch programmiert werden muss und die ausführliche Bedienungsanleitung in der App zu finden ist.",
+      "steps_text": [
+        "THITRONIK App aus einem der beiden genannten Stores laden.",
+        "App öffnen und der gerätebezogenen Programmierung folgen.",
+        "Den Abschluss am grünen Blinken der Status-LED prüfen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-KA-SN044",
+        "pages": "2",
+        "region": "Abschnitt 6, App-Screenshot, Store-Abzeichen und QR-Code",
+        "note": "Die mehrsprachigen Funktionshinweise enthalten lokalisierte Bedienwörter. Sie werden hier nicht als SMS-Befehle verstanden oder wiedergegeben."
+      }
+    }
+  ],
+  "tables_md": [],
+  "sources": [
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "SIM-Vorbereitung und Abschnitt 6 „App laden + programmieren“",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 250 dpi neu gerendert und visuell gelesen."
+    },
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "8-9, 11, 18",
+      "region": "Adressbucheintrag, Inbetriebnahmefolge, LED-Normalzustand und Support",
+      "note": "Die verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion für die Generation bis SN-044 aus der Kurzanleitung, die die THITRONIK App ausdrücklich als Programmierweg nennt, ergänzt um die Inbetriebnahme- und LED-Rückmeldungen des Handbuchs. Der direkte SMS-Weg ist bewusst unvollständig: Keine Befehlszeichenfolge steht in nutzerseitigen Feldern (BLK-005). Die geräteseitige Hilfe-SMS und der deutsche Fließtext widersprechen sich; die betroffenen Zeichenfolgen bleiben ausschließlich im Register. Die Quell-Empfehlung „AAlarm“ für den Adressbucheintrag wurde nicht als Soll-Schreibweise veröffentlicht, weil andere Sprachfassungen das funktionsbezogene doppelte A verlieren (DSC-076). Gegenprüfung gegen alle genannten Renderings am 2026-08-09 abgeschlossen."
+}

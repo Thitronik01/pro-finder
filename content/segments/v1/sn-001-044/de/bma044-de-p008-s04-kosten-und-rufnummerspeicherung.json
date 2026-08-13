@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P008-S04-KOSTEN-UND-RUFNUMMERSPEICHERUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "zielrufnummern",
+  "title": "Gerätenummer speichern und SMS-Kosten beachten",
+  "body_md": "Speichern Sie die Rufnummer des Pro-finder mit Landesvorwahl und einem eindeutig erkennbaren Namen im Adressbuch des Mobiltelefons. Jede vom Gerät versendete SMS kann Kosten verursachen. Laut Quelle folgt auch auf eine Steuerung per SMS oder Anruf stets eine Status-SMS.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 8,
+  "source_page_end": 8,
+  "source_region": "Abschnitt 1.8, Absätze „Speichern der Nummer des Pro-finders“ und „Steuern per SMS oder Anruf“",
+  "prev_context": "Der vorherige Absatz behandelt Anbieterwahl, Prepaid-Guthaben und Roaming.",
+  "next_context": "PDF-Seite 9 beschreibt die Inbetriebnahme und die Rollen der Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3e8bca49223057ca1df8feb64618dd88c67fe38c0293e8bddab3f6d8ff53cd56",
+  "change_reason": "Die Adressbuch- und Kostenhinweise wurden ohne Beispielrufnummer oder SMS-Zeichenfolge extrahiert. Die sprachabhängige Empfehlung zum Adressbuchnamen wird wegen DSC-076 nicht als verbindlicher Wert übernommen.",
+  "discrepancy_refs": ["DSC-076"]
+}

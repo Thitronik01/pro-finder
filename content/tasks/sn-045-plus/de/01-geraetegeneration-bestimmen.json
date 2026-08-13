@@ -1,0 +1,245 @@
+{
+  "slug": "geraetegeneration-bestimmen",
+  "title": "Gerätegeneration bestimmen",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Sie wissen, ob für Ihren Pro-finder die Angaben „ab SN-045“ gelten, und arbeiten mit der Fassung der Anleitung weiter, die zu Ihrem Gerät gehört.",
+  "prerequisites": [
+    "Sie kommen an Ihr Pro-finder-Modul heran oder haben die THITRONIK App zur Hand.",
+    "Die mitgelieferte Kurzanleitung liegt bereit, falls die Seriennummer dort eingetragen wurde."
+  ],
+  "warnings": [
+    {
+      "text": "Das Deckblatt des deutschen Anleitungsteils grenzt den Geltungsbereich mit dem Zusatz „(ab Seriennr. -045)“ ein – so aufgedruckt, mit einem Bindestrich vor der Zahl. Ist Ihr Gerät älter, gelten die hier genannten Anschlusswerte, Betriebsarten und Meldungen nicht für Ihr Gerät.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Deckblatt des deutschen Sprachteils, Titelblock „Pro-finder (ab Seriennr. -045)“ (Deckblatt ohne aufgedruckte Seitenzahl)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "3",
+          "region": "Inhaltsverzeichnis „Inhalt“, Einträge 1.3 „Betriebsart auswählen“, 1.4 „Modul anschließen“ und 4 „Berichte, Meldungen und Warnungen“ (aufgedruckt „Seite 1 von 23“)",
+          "note": "Beleg dafür, dass genau diese Angaben – Anschluss, Betriebsart, Meldungen – den Inhalt dieser generationsgebundenen Anleitung ausmachen."
+        }
+      ]
+    },
+    {
+      "text": "Die Anleitung sagt nicht, an welcher Stelle des Geräts die Seriennummer steht und wie sie zu lesen ist. Sie nennt nur zwei Fundorte: das Gerät selbst und die THITRONIK App. Raten Sie deshalb nicht, sondern fragen Sie nach, wenn die Zuordnung unklar bleibt.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, zweiter Absatz (aufgedruckt „Seite 23 von 23“)",
+          "note": "Wörtlich: „Diese finden Sie entweder auf dem Gerät selbst oder in der THITRONIK® App.“ Eine Position am Gerät oder eine Leseregel steht dort nicht. Dass auch keine andere Stelle des Dokuments eine Position oder Leseregel nennt, stützt sich auf die seitenweise Prüfung des Projekts (DSC-023, Rückfrage 4 an THITRONIK), nicht auf diese Seite allein."
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Legen Sie die Seriennummer Ihres Pro-finder bereit. Abschnitt 6.4 der Anleitung nennt dafür zwei Fundorte: das Gerät selbst und die THITRONIK App.",
+      "expected": "Sie haben eine Seriennummer vor sich.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, zweiter Absatz (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Sehen Sie zusätzlich auf der Vorderseite der mitgelieferten Kurzanleitung nach. Dort ist ein Feld mit der englischen Aufschrift „Serial number:“ vorgesehen, in das die Nummer eingetragen werden kann.",
+      "expected": "Wenn die Nummer dort eingetragen wurde, können Sie sie ablesen. Die Kurzanleitung fordert selbst dazu auf, die Nummer dort einzutragen; gedruckt ist das Feld leer.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Abschnitt „Lieferumfang“, Produktfoto oben; Position 7 der Teileliste ist die Kurzanleitung (aufgedruckt „Seite 4 von 23“)",
+          "note": "Auf dem abgebildeten Umschlag sind der Titel „Pro-finder SN 0699 - 045 +“ und das leere Feld „Serial number:“ lesbar. Der abgebildete Umschlag trägt den Revisionsstand „Rev. 1.0“, die im Projekt vorliegende Kurzanleitung ab SN-045 dagegen „Rev. 1.3.2“; Titel und Seriennummernfeld stimmen in beiden überein."
+        },
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Außenseite des Faltblatts: Titelpanel „Pro-finder SN 0699 - 045 +“ mit Feld „Serial number:“ und englischer Abschnitt „Technical support“ (ohne aufgedruckte Seitenzahl)",
+          "note": "Der englische Supporttext bittet darum, die Seriennummer auf der Vorderseite der Kurzanleitung einzutragen. Diese Aufforderung steht nur auf Englisch, auch im deutschen Lieferumfang."
+        }
+      ]
+    },
+    {
+      "text": "Vergleichen Sie Ihre Seriennummer mit der Grenze 045. Das Deckblatt des deutschen Anleitungsteils nennt den Geltungsbereich „Pro-finder (ab Seriennr. -045)“; die Kurzanleitung im Lieferumfang schreibt denselben Bereich als „Pro-finder SN 0699 - 045 +“.",
+      "expected": "Sie können sagen, ob Ihr Gerät in diesen Bereich fällt – oder feststellen, dass Sie es nicht sicher sagen können.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Deckblatt des deutschen Sprachteils, Titelblock (ohne aufgedruckte Seitenzahl)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Abschnitt „Lieferumfang“, Produktfoto oben (aufgedruckt „Seite 4 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Wählen Sie die Fassung „ab SN-045“, wenn Ihr Gerät in diesen Bereich fällt. Fällt es nicht hinein, wechseln Sie zur Fassung „bis SN-044“ – die Angaben dieser Anleitung gelten dann nicht für Ihr Gerät.",
+      "expected": "Sie arbeiten in der Fassung weiter, die zum Geltungsbereich Ihres Geräts passt.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Deckblatt des deutschen Sprachteils, Titelblock (ohne aufgedruckte Seitenzahl)",
+          "note": "Der Titel begrenzt den Geltungsbereich dieser Anleitung; über Geräte unterhalb der Grenze sagt sie nichts aus."
+        }
+      ]
+    },
+    {
+      "text": "Klären Sie die Generation, bevor Sie weiterarbeiten, wenn Sie die Nummer nicht finden oder die Zuordnung unsicher bleibt. Fragen Sie zuerst Ihren Fachhändler; hilft er nicht weiter, wenden Sie sich an den technischen Support von THITRONIK.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, erster und zweiter Absatz (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Sie wissen, ob Ihr Pro-finder in den Bereich ab Seriennummer 045 fällt, und arbeiten mit der passenden Fassung der Anleitung weiter. Bleibt die Zuordnung offen, haben Sie sie über den Fachhändler oder den technischen Support geklärt, bevor Sie weitergehen.",
+  "error_cases": [
+    {
+      "problem": "Ich finde die Seriennummer nicht.",
+      "correction": "Die Anleitung nennt keine Stelle am Gerät und keine Leseregel. Sie sagt nur, dass Seriennummer und Softwareversion entweder auf dem Gerät selbst oder in der THITRONIK App zu finden sind. Fragen Sie zuerst Ihren Fachhändler. Hilft er nicht weiter, wenden Sie sich an den technischen Support von THITRONIK; die Kontaktdaten stehen in der Aufgabe zum technischen Support. Die Anleitung bittet, für einen Anruf Seriennummer und Softwareversion bereitzuhalten.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, erster und zweiter Absatz (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Ich habe eine Nummer, kann sie aber nicht sicher der Grenze 045 zuordnen.",
+      "correction": "Ordnen Sie nicht nach Vermutung zu. Die Quelle schreibt denselben Bereich in drei Formen – „(ab Seriennr. -045)“ auf dem deutschen Deckblatt, „(as of serial no. -045)“ auf dem englischen Deckblatt und „SN 0699 - 045 +“ auf der Kurzanleitung im Lieferumfang – und erklärt an keiner Stelle, welcher Teil einer Seriennummer zu vergleichen ist. Lassen Sie sich die Zuordnung vom Fachhändler oder vom technischen Support bestätigen.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Deckblatt des deutschen Sprachteils, Titelblock (ohne aufgedruckte Seitenzahl)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "26",
+          "region": "Deckblatt des englischen Sprachteils, Titelblock „Pro-finder (as of serial no. -045)“ (ohne aufgedruckte Seitenzahl)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "6",
+          "region": "Abschnitt „Lieferumfang“, Produktfoto oben (aufgedruckt „Seite 4 von 23“)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“ (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    },
+    {
+      "problem": "Auf dem Deckblatt, das ich vor mir habe, steht nichts über die Seriennummer.",
+      "correction": "Prüfen Sie, welches Deckblatt Sie ansehen. Das mehrsprachige Deckblatt des Gesamtdokuments trägt den Produktnamen – dort abweichend „Pro-Finder“ mit großem F geschrieben –, zehn Titelzeilen, den Adressblock des Herstellers und den Revisionsvermerk „Rev.: 1.3/Stand: 06/2025“, aber keinen Seriennummernbereich. Zu welcher Sprache eine Titelzeile gehört, zeigt dort allein eine Flagge; die Sprachnamen sind nicht ausgeschrieben. Die Bereichsangabe steht erst auf dem Deckblatt des jeweiligen Sprachteils – im deutschen Teil auf der folgenden Seite. Aus einem Deckblatt ohne Bereichsangabe folgt nichts über Ihr Gerät; entscheidend bleibt die Nummer am Gerät oder in der THITRONIK App.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "1",
+          "region": "Mehrsprachiges Gesamtdeckblatt, Titelblock, Sprachenliste und Revisionsvermerk „Rev.: 1.3/Stand: 06/2025“ (ohne aufgedruckte Seitenzahl)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "2",
+          "region": "Deckblatt des deutschen Sprachteils, Titelblock (ohne aufgedruckte Seitenzahl)"
+        },
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "25",
+          "region": "Abschnitt 6.4 „Technische Unterstützung“, zweiter Absatz (aufgedruckt „Seite 23 von 23“)"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s02-deckblatt-deutsch",
+      "alt": "Deckblatt des deutschen Anleitungsteils; der Titel nennt den Geltungsbereich ab Seriennummer 045.",
+      "long_description": "Hochformatige Seite, dunkelblau gefüllt, mit dem THITRONIK-Logo oben links auf weißem, geschwungenem Kopfbereich. In der oberen Seitenhälfte steht mittig zweizeilig der Titel: erste Zeile „Pro-finder“, zweite Zeile „(ab Seriennr. -045)“. Darunter folgt eine Zeile mit einer kleinen schwarz-rot-goldenen Flagge und dem kursiven Text „Installations- und Bedienungsanleitung“; die Sprache des folgenden Dokumentteils wird allein durch diese Flagge gekennzeichnet, im Text selbst wird sie nicht genannt. Im unteren Drittel links steht der Adressblock des Herstellers: der Firmenname, dort „Thitronik GmbH“ geschrieben, während das Logo darüber „THITRONIK“ zeigt; darunter Straße, Postleitzahl, Ort und als Land „Germany“ – englisch, mitten im deutschen Anleitungsteil. Es folgen drei Zeilen mit den Beschriftungen „Web:“, „E-Mail:“ und „Tel.:“ und den zugehörigen Kontaktangaben; diese Angaben sind in der Aufgabe zum technischen Support wiedergegeben. Der Hintergrund zeigt ein dekoratives Leiterbahnmuster ohne Informationsgehalt. Die gesamte Seite liegt als Bild vor: Vorlesesoftware findet hier keinen Text.",
+      "steps_text": [
+        "Die erste Titelzeile nennt das Produkt: Pro-finder.",
+        "Die zweite Titelzeile nennt den Geltungsbereich: ab Seriennr. -045.",
+        "Die Flagge unter dem Titel steht für die Sprache des folgenden Dokumentteils, hier Deutsch.",
+        "Der Text neben der Flagge nennt die Art des Dokuments: Installations- und Bedienungsanleitung."
+      ],
+      "data_table_md": "| Element auf dem Deckblatt | Aufgedruckter Text |\n| --- | --- |\n| Titel, Zeile 1 | Pro-finder |\n| Titel, Zeile 2 | (ab Seriennr. -045) |\n| Zeile neben der Flagge | Installations- und Bedienungsanleitung |\n| Sprache | nur durch die schwarz-rot-goldene Flagge angezeigt, nicht ausgeschrieben |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "2",
+        "region": "Deckblatt des deutschen Sprachteils (ohne aufgedruckte Seitenzahl)",
+        "note": "Die Schreibweise „(ab Seriennr. -045)“ mit vorangestelltem Bindestrich weicht von der im Projekt verwendeten Bezeichnung „ab SN-045“ ab; sie ist hier wörtlich wiedergegeben, nicht angeglichen. Die Seite hat praktisch keine Textebene."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Fundstelle | Aufgedruckte Schreibweise des Bereichs |\n| --- | --- |\n| Deckblatt des deutschen Anleitungsteils (PDF-Seite 2) | Pro-finder (ab Seriennr. -045) |\n| Deckblatt des englischen Anleitungsteils (PDF-Seite 26) | Pro-finder (as of serial no. -045) |\n| Kurzanleitung aus dem Lieferumfang, abgebildet auf PDF-Seite 6 | Pro-finder SN 0699 - 045 + |\n| Mehrsprachiges Deckblatt des Gesamtdokuments (PDF-Seite 1) | keine Angabe zur Seriennummer |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "1",
+      "region": "Mehrsprachiges Gesamtdeckblatt, Titelblock, Sprachenliste, Adressblock und Revisionsvermerk (ohne aufgedruckte Seitenzahl)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft, Fußbereich zusätzlich bei 300 dpi; am 2026-08-07 gegengeprüft, Sprachenliste dabei bei 500 und 1400 dpi nachgelesen. Die Seite nennt keinen Seriennummernbereich; der Titel ist hier „Pro-Finder“ mit großem F geschrieben. Als einzige der geprüften Seiten hat sie eine echte Textebene (545 Zeichen). Die zehn Titelzeilen sind einer Sprache nur durch eine Flagge zugeordnet; die fünfte Marke, vor der dänischen Titelzeile, ist bei 1400 dpi ein diagonal geteiltes Symbol: links die norwegische Flagge, rechts ein rot-weiß-rotes Feld, das der rechten Hälfte der dänischen Flagge entspricht. Als Sprachkennzeichen ist sie damit nicht eindeutig."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "2",
+      "region": "Deckblatt des deutschen Sprachteils, Titelblock „Pro-finder (ab Seriennr. -045)“ (ohne aufgedruckte Seitenzahl)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft, Titelblock zusätzlich bei 400 dpi gegengelesen. Die Seite hat praktisch keine Textebene; der Titel liegt als Bild vor."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "3",
+      "region": "Inhaltsverzeichnis „Inhalt“, Kapitel 1 bis 5.7 (aufgedruckt „Seite 1 von 23“)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft. Belegt Aufbau und interne Zählung des deutschen Teils (PDF-Seite = aufgedruckte Seite + 2) sowie die Kapitel, deren Angaben von der Generation abhängen. Ein Seriennummernbereich wird hier nicht genannt."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "6",
+      "region": "Abschnitt „Lieferumfang“, Produktfoto und nummerierte Teileliste (aufgedruckt „Seite 4 von 23“)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft; der Umschlag der abgebildeten Kurzanleitung zusätzlich bei 900 dpi gelesen: „Pro-finder SN 0699 - 045 +“ und leeres Feld „Serial number:“."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "25",
+      "region": "Abschnitt 6.4 „Technische Unterstützung“ (aufgedruckt „Seite 23 von 23“)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft, Abschnitt 6.4 zusätzlich bei 400 dpi gegengelesen. Keine nutzbare Textebene."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "26",
+      "region": "Deckblatt des englischen Sprachteils, Titelblock „Pro-finder (as of serial no. -045)“ (ohne aufgedruckte Seitenzahl)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft, Titelblock zusätzlich bei 400 dpi gegengelesen. Belegt, dass die Bereichsangabe je Sprachteil auf dem jeweiligen Deckblatt wiederholt wird."
+    },
+    {
+      "doc": "DOC-KA-SN045",
+      "pages": "1",
+      "region": "Außenseite des Faltblatts: Titelpanel „Pro-finder SN 0699 - 045 +“, Feld „Serial number:“ und englischer Abschnitt „Technical support“ (ohne aufgedruckte Seitenzahl)",
+      "note": "Am 2026-08-08 gerendert und visuell geprüft, Titelpanel, Supportabsatz und Seriennummernfeld zusätzlich bei 500 dpi gelesen."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus den selbst gerenderten und gelesenen deutschen Quellseiten 1, 2, 3, 6, 25 und 26 von DOC-IBA-SN045 sowie dem Titelpanel der Kurzanleitung ab SN-045 (DOC-KA-SN045, Seite 1). Bewusst weggelassen: jede Aussage darüber, wo die Seriennummer am Gerät steht und wie sie zu lesen ist. Belegt ist ausschließlich der Satz aus Abschnitt 6.4, dass Seriennummer und Softwareversion „entweder auf dem Gerät selbst oder in der THITRONIK® App“ zu finden sind; eine Position am Gerät oder eine Ziffernregel nennt keine der geprüften Seiten. Das ist der offene Punkt DSC-023 beziehungsweise Rückfrage 4 an THITRONIK; deshalb endet der Weg bei Unsicherheit belegt beim Fachhändler und beim technischen Support (Abschnitt 6.4) statt bei einer geratenen Stelle am Gerät. Die Aufgabe bleibt dadurch inhaltlich unvollständig: Nutzende, die die Nummer nicht finden, können die Generation aus der Anleitung allein nicht bestimmen. Nicht geglättet wurde, dass die Quelle denselben Bereich in drei Schreibweisen führt – „(ab Seriennr. -045)“ (Seite 2), „(as of serial no. -045)“ (Seite 26) und „SN 0699 - 045 +“ (Kurzanleitung, abgebildet auf Seite 6); der Widerspruch steht als Tabelle und als Fehlerfall im Text. SMS-Befehle kommen in dieser Aufgabe nicht vor; die Sperre aus BLK-005 wird daher nicht berührt. Kein Wert und keine Aussage aus der Generation bis SN-044: die Dokumente der alten Generation wurden zwar zur Kontrolle angesehen, aber bewusst nicht als Quelle herangezogen. safety_class „sicherheitsrelevant“, weil diese Entscheidung allen weiteren Aufgaben vorgeschaltet ist – eine falsche Wahl führt zu Anschlusswerten, Betriebsarten und Meldungstexten, die für das vorliegende Gerät nicht gelten (Inhaltsverzeichnis, Seite 3); die Aufgabe selbst enthält aber keinen Eingriff an der Elektrik und ist deshalb nicht sicherheitskritisch. Neu aufgefallen und noch in keinem Register: das Gesamtdeckblatt auf Seite 1 schreibt den Produktnamen „Pro-Finder“ mit großem F und nennt keinen Seriennummernbereich, während die Deckblätter der Sprachteile „Pro-finder“ schreiben; das Feld „Serial number:“ auf der Kurzanleitung ist auch im deutschen Lieferumfang englisch beschriftet. Technischer Review steht aus. Gegengeprüft gegen die Quellseiten am 2026-08-08. Dabei korrigiert: die Behauptung, das Seriennummernfeld der Kurzanleitung werde „ab Werk leer geliefert“, war durch keine Seite gedeckt und ist durch das ersetzt, was die Kurzanleitung selbst sagt – sie fordert zum Eintragen auf, gedruckt ist das Feld leer; die Beschreibung des Gesamtdeckblatts behauptete, es „nenne die zehn Sprachen“, obwohl die Sprachen dort nirgends ausgeschrieben stehen und nur durch Flaggen angezeigt werden (die fünfte Marke ist ein aus norwegischer und dänischer Flagge zusammengesetztes Symbol), und sie unterschlug den Adressblock sowie die abweichende Schreibweise „Pro-Finder“, die vorher nur in einer Quellennotiz stand; der erste Warnhinweis gab den Geltungsbereich als „ab Seriennummer 045“ wieder und glättete damit die aufgedruckte Form „(ab Seriennr. -045)“, die jetzt wörtlich im Warntext steht; die Langbeschreibung des Deckblatts nennt jetzt zusätzlich die Schreibweisen „Thitronik GmbH“ gegenüber dem Logo „THITRONIK“ und das englische Land „Germany“ im deutschen Teil; ergänzt sind außerdem der Hinweis, dass die Negativaussage zur Seriennummernposition auf der seitenweisen Prüfung (DSC-023) beruht und nicht auf Seite 25 allein, und der Befund, dass die auf Seite 6 abgebildete Kurzanleitung „Rev. 1.0“ trägt, die vorliegende Kurzanleitung ab SN-045 dagegen „Rev. 1.3.2“."
+}

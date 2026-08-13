@@ -1,0 +1,189 @@
+{
+  "slug": "meldungen",
+  "title": "Empfangene Meldungen verstehen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die Felder und Folgen empfangener Pro-finder-Meldungen bis SN-044 verstehen, ohne unbestätigte lokalisierte Stichwörter, Beispielkoordinaten oder SMS-Befehle zu veröffentlichen.",
+  "prerequisites": [
+    "Mindestens eine Zielrufnummer ist eingerichtet.",
+    "Die Rufnummer des Pro-finder ist im Adressbuch eindeutig zugeordnet."
+  ],
+  "warnings": [
+    {
+      "text": "Die nichtdeutschen Sprachteile zeigen dieselben deutschen Beispiel-SMS. Ob ein Gerät dieser Generation seine Meldungen lokalisiert, ist ungeklärt. Verlassen Sie sich deshalb nicht auf ein bestimmtes Erkennungsstichwort.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12-13",
+          "region": "Deutsche Beispiel-SMS und Erläuterungen",
+          "note": "Die sprachübergreifende Bildwiederholung ist als DSC-072 und Rückfrage 17 dokumentiert."
+        }
+      ]
+    },
+    {
+      "text": "Bei mehreren Alarmarten wird nach der SMS die Masternummer zusätzlich angerufen. Die Quelle hebt diese Folge nur durch rote Schrift hervor.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12-13",
+          "region": "Rote Hinweise unter Diebstahl-, Notruf-, Einbruch-, Gas- und manuellem Alarmereignis"
+        }
+      ]
+    },
+    {
+      "text": "Bei dauerhaft niedriger Versorgungsspannung schaltet der Pro-finder unter 11,2 V in den Standby-Modus; erst über 12,5 V kehrt er in den Normalbetrieb zurück. In Betriebsart B wird diese Warnung laut Quelle nicht ausgegeben.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12",
+          "region": "Abschnitt 2.1, Absatz zur Spannungswarnung"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Prüfen Sie den Absender im Adressbuch und lesen Sie die gesamte Meldung. Je nach Ereignis und Betriebsart können Zeit, Position, Geschwindigkeit, Guthaben, Spannungen, Ausgangszustände und eine Temperaturangabe enthalten sein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12-13",
+          "region": "Abschnitt 2.1, Feldliste, Meldungsbeschreibungen und Beispiel-SMS"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie die UTC-Angabe nicht automatisch als Empfangszeit der SMS. Beim Wiederfinden des Fahrzeugs sagt die Quelle, dass sie der Zeit der zuletzt empfangenen Position entspricht.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12, 17",
+          "region": "Definition von UTC und letzter Absatz von Abschnitt 2.8"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie, ob die Position aktuell sein kann. Ohne GPS-Empfang wartet das Gerät laut Handbuch bis zu zehn Minuten und sendet danach die zuletzt empfangene Position.",
+      "expected": "Sie behandeln eine möglicherweise alte Position nicht als sicheren aktuellen Standort.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15, 17",
+          "region": "Abschnitt 2.5 bei fehlendem GPS-Empfang und Abschnitt 2.8 zur Wartezeit"
+        }
+      ]
+    },
+    {
+      "text": "Beachten Sie bei einem Geofencing-Ereignis, dass die Quelle es als stillen Alarm beschreibt: Blinker und Sirene werden nicht automatisch aktiviert.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12",
+          "region": "Abschnitt 2.1, Absatz zur Diebstahlmeldung"
+        }
+      ]
+    },
+    {
+      "text": "Bei einem Ereignis der angeschlossenen WiPro kann die Meldung einen Einbruch, Gasalarm oder manuellen Alarm betreffen. Nach diesen SMS wird die Masternummer laut Seite 13 zusätzlich angerufen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "13",
+          "region": "Abschnitt 2.1, letzte drei Meldungsbeschreibungen und rote Folgehinweise"
+        }
+      ]
+    },
+    {
+      "text": "Wenn das Gerät auf einen ungültigen SMS-Inhalt mit einer Eingabehilfe antwortet, übernehmen Sie daraus im Pilot keine Befehlszeichenfolge. Die Hilfe-Liste widerspricht dem Handbuch.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "13-16",
+          "region": "Abgebildete Hilfe-SMS und die zugehörigen Kapitel zu Alarmanlage, Geofencing, Status, Position und Ausgängen"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die Meldung ist nach Absender, Feldern, Ursache und Folge eingeordnet. Möglicherweise alte Positionen, stille Alarme und zusätzliche Anrufe werden nicht übersehen; unbestätigte Stichwörter und Befehle bleiben unveröffentlicht.",
+  "error_cases": [
+    {
+      "problem": "Die Meldung enthält kein Guthaben.",
+      "correction": "Die Nachrichtenlänge ist laut Quelle auf 160 Zeichen begrenzt. Deshalb wird das Guthaben bei Prepaid-Karten je nach Inhalt nicht immer angezeigt.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12",
+          "region": "Feld „Kontostand“ und roter Zusatz"
+        }
+      ]
+    },
+    {
+      "problem": "Die Position passt nicht zum erwarteten aktuellen Standort.",
+      "correction": "Prüfen Sie den GPS-Hinweis und die UTC-Zeit. Ohne aktuelle GPS-Position kann die zuletzt gültige Position mit deren Zeit übermittelt werden.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15, 17",
+          "region": "Abschnitt 2.5 und Schluss von Abschnitt 2.8"
+        }
+      ]
+    },
+    {
+      "problem": "Ich erkenne den Meldungstyp nur an einem deutschen Wort im Beispiel.",
+      "correction": "Behandeln Sie dieses Wort nicht als gesicherte Geräteausgabe. Die Sprache der Meldungen ist offen; ordnen Sie die Meldung anhand ihrer Felder und des Ereigniskontexts ein und fragen Sie bei Unsicherheit nach.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12-13",
+          "region": "Neun deutsche Beispiel-SMS"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s12-13-beispielmeldungen",
+      "alt": "Neun grafisch dargestellte Beispiel-SMS mit unterschiedlichen Feldern und Ereignisfolgen.",
+      "long_description": "Auf zwei Seiten stehen graue SMS-Sprechblasen links neben den jeweiligen Erläuterungen. Die Beispiele kombinieren je nach Ereignis Zeitangabe, Positionsangabe, Geschwindigkeit, Guthaben, Spannungen und Ausgangszustände. Mehrere rote Textzeilen weisen auf einen zusätzlichen Anruf der Masternummer hin. Konkrete Koordinaten, Kartenadressen, Guthabenbeträge und lokalisierte Erkennungswörter sind in dieser Textentsprechung bewusst nicht wiedergegeben.",
+      "steps_text": [
+        "Absender und vollständigen Text lesen.",
+        "Zeit, Position und GPS-Aktualität gemeinsam bewerten.",
+        "Auf eine zusätzliche Anruf-Folge achten.",
+        "Keine Befehlsliste aus dem Beispiel übernehmen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "12-13",
+        "region": "Alle neun SMS-Abbildungen und die zugehörigen Erläuterungen",
+        "note": "Die Hilfe-SMS bildet die Zeichenfolgen STATUS, SCHARF, UNSCHARF, ALARM AUS, A ON, A OFF, B ON, B OFF, A PULSE, B PULSE, FENCE ON, FENCE OFF, GPS OFF und GPS ON ab. Dieses Quellenzitat steht ausschließlich hier zur Begründung der Auslassung nach BLK-005; es ist keine Bedienanweisung."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Feld | Bedeutung laut Quelle |\n| --- | --- |\n| GPS | Standby oder Empfangszustand; bei einem Ereignis wird die Antenne reaktiviert |\n| UTC | Zeitangabe; beim Wiederfinden laut Abschnitt 2.8 die Zeit der zuletzt empfangenen Position |\n| Position | Fahrzeugposition; kann aktuell oder bei fehlendem Empfang die letzte gültige Position sein |\n| Geschwindigkeit | aktuelle Geschwindigkeit laut Feldbeschreibung |\n| Kontostand | Guthaben einer Prepaid-Karte; kann wegen der Nachrichtenlänge fehlen |\n| U1 bis U5 | Betriebsspannung und Messeingangsspannungen, abhängig von der Betriebsart |\n| Ausgänge | Zustand der beiden Ausgänge |\n| Temperatur | Temperatur in unmittelbarer Nähe des Geräts |",
+    "| Ereignisart als Beschreibung, nicht als gesichertes SMS-Stichwort | Dokumentierte Folge |\n| --- | --- |\n| Angeforderter oder automatischer Statusbericht | Position, Geschwindigkeit, Ausgangszustände und je nach Betriebsart weitere Messwerte |\n| Geofencing-Ereignis | stiller Alarm; Masternummer wird zusätzlich angerufen |\n| Niedrige Versorgungsspannung | Standby unter 11,2 V, Rückkehr über 12,5 V; nicht in Betriebsart B |\n| Spannung an Pin 3 in Betriebsart A | Hilfeereignis und zusätzlicher Anruf der Masternummer |\n| Einbruch-, Gas- oder manuelles WiPro-Ereignis | SMS und zusätzlicher Anruf der Masternummer |\n| Ungültiger SMS-Inhalt einer Zielrufnummer | Eingabehilfe; Befehlsliste im Pilot nicht veröffentlicht |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "4-5, 12-13, 15, 17",
+      "region": "Betriebsarten, Abschnitt 2.1, Statusbericht und Wiederfinden",
+      "note": "Alle verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und visuell gelesen. Die neun SMS-Abbildungen sind nicht Teil der Textebene."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "2",
+      "region": "Abschnitt 7 „Empfangene Meldungen“",
+      "note": "Am 2026-08-09 bei 250 dpi neu gerendert und visuell gelesen. Konkrete Kartenlinks und Koordinaten aus den Beispielen wurden nicht übernommen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion der Meldungsstruktur aus DOC-BMA-SN044, Seiten 12–13, ergänzt um die Seiten 4–5, 15 und 17 sowie DOC-KA-SN044, Seite 2. Keine Koordinate, Kartenadresse, Beispielrufnummer oder Guthabenzahl wurde übernommen. Die lokalisierten Meldungs-Stichwörter bleiben wegen Rückfrage 17 unveröffentlicht; Tabellen beschreiben Ereignisarten ausdrücklich nur semantisch. BLK-005 ist eingehalten: Die geräteseitige Befehlsliste wird nur in figures[].source.note als Grund der Auslassung zitiert. Der Geofencing-Radius bleibt wegen Rückfrage 14 vollständig ungenannt. Nicht geglättet: UTC wird auf Seite 12 als Uhrzeit des Vorfalls, auf Seite 17 als Zeit der zuletzt empfangenen Position erklärt; beide Aussagen stehen nebeneinander. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

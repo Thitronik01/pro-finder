@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P015-S04-STATUSBERICHT-GPS-UND-AUSGAENGE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "GPS- und Ausgangsangaben im Statusbericht",
+  "body_md": "Der Statusbericht überträgt zusätzlich den GPS-Status. Bei gültigem Empfang wird laut Quelle nur die Position angezeigt. Liegt keine gültige Position vor, weist der Bericht auf den fehlenden GPS-Empfang hin und sendet die letzte gültige Position. Außerdem enthält er den Zustand beider Ausgänge und die Umgebungstemperatur in unmittelbarer Nähe des Geräts.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.5, letzter Absatz zum Inhalt des Statusberichts",
+  "prev_context": "Der Anrufweg liefert außerhalb der Betriebsarten 2 und 3 einen Statusbericht ohne Guthabenanzeige.",
+  "next_context": "Abschnitt 2.6 beschreibt eine speziell für Smartphones aufbereitete Positionsmeldung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ba864ca7fa9cc6460530d91304cd29f76513441c65c1dd31303bfbb74e5588f4",
+  "change_reason": "Das Verhalten bei gültiger und fehlender GPS-Position einschließlich der einschränkenden Nur-Aussage sowie die zusätzlichen Felder wurden ohne wörtliches Geräte-Stichwort oder Beispielposition extrahiert.",
+  "discrepancy_refs": []
+}

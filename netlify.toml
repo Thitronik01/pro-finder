@@ -1,0 +1,39 @@
+# Interner THITRONIK-Pilot. Secrets und Zugangsschutz werden ausschließlich
+# in der Netlify-Oberfläche bzw. Secret-Verwaltung gesetzt, nie in dieser Datei.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "24"
+  NPM_FLAGS = "--no-audit --no-fund"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[context.deploy-preview.environment]
+  APP_ENV = "preview"
+  DATA_MODE = "fixtures"
+
+[context.branch-deploy.environment]
+  APP_ENV = "preview"
+  DATA_MODE = "fixtures"
+
+# Die Netlify-"production"-Bezeichnung ist technisch vorgegeben; fachlich ist
+# dieser geschützte Hauptbranch-Deploy ausschließlich internes Staging.
+[context.production.environment]
+  APP_ENV = "staging"
+  DATA_MODE = "supabase"
+
+[context.staging.environment]
+  APP_ENV = "staging"
+  DATA_MODE = "supabase"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P012-S01-MELDUNGSANGABEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "meldungen",
+  "title": "Mögliche Angaben in empfangenen Meldungen",
+  "body_md": "Je nach Vorfall und Stellung des Betriebsartenschalters kann eine Meldung folgende Angaben enthalten:\n\n| Angabe | Bedeutung |\n|---|---|\n| GPS-Bereitschaft | Die GPS-Antenne befindet sich im Bereitschaftsbetrieb und wird bei einem Ereignis automatisch reaktiviert. |\n| UTC | Zeitpunkt des Vorfalls in koordinierter Weltzeit. |\n| Position | Aktuelle Fahrzeugposition. |\n| Geschwindigkeit | Aktuelle Fahrzeuggeschwindigkeit. |\n| Kontostand | Aktuelles Guthaben der SIM-Karte bei Prepaid-Karten. |\n\nDie Nachrichtenlänge ist auf 160 Zeichen begrenzt. Deshalb erscheint das Guthaben abhängig vom übrigen Inhalt nicht in jeder Meldung; bei einer Positionsabfrage wird es laut Quelle sicher angezeigt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 2.1, Begriffsliste in der oberen Seitenhälfte einschließlich rotem 160-Zeichen-Hinweis",
+  "prev_context": "PDF-Seite 11 schließt die Installation mit den Zuständen der Status-LED ab.",
+  "next_context": "Der folgende Absatz erklärt Inhalt und Versandzeitpunkt eines Statusberichts.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ae4976d1974b632527d6e900b7dd63872384bcd5b97f35975b6f71cb390e1b6c",
+  "change_reason": "Die fünf im Fließtext erklärten Meldungsfelder wurden als zugängliche Tabelle strukturiert. Koordinaten, Guthabenwerte und genaue Gerätetexte aus den Beispielbildern wurden nicht übernommen.",
+  "discrepancy_refs": ["DSC-060", "DSC-063"]
+}

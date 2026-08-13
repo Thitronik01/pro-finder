@@ -1,0 +1,195 @@
+{
+  "slug": "statusbericht",
+  "title": "Statusbericht anfordern und lesen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Einen Statusbericht beim Pro-finder bis SN-044 auf einem dokumentierten befehlsfreien Weg anfordern und seine Felder, Zeitangaben und Betriebsart-Abhängigkeiten richtig einordnen.",
+  "prerequisites": [
+    "Der Pro-finder ist betriebsbereit und über seine Mobilfunkverbindung erreichbar.",
+    "Die anrufende Rufnummer ist als Zielrufnummer eingerichtet.",
+    "Die eingestellte Betriebsart ist bekannt."
+  ],
+  "warnings": [
+    {
+      "text": "In den Betriebsarten 2 und 3 löst ein Anruf keinen Statusbericht aus, sondern schaltet die angeschlossene WiPro in den jeweils nächsten Zustand.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-5, 14-15",
+          "region": "Betriebsartentabelle sowie Abschnitte 2.2 und 2.5"
+        }
+      ]
+    },
+    {
+      "text": "Die UTC-Angabe ist nicht in jedem Fall die Empfangszeit der SMS. Beim Wiederfinden des Fahrzeugs beschreibt die Quelle sie als Zeit der zuletzt empfangenen Position.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12, 17",
+          "region": "Feldbeschreibung UTC und letzter Absatz von Abschnitt 2.8"
+        }
+      ]
+    },
+    {
+      "text": "Das automatische Intervall der Betriebsart D wird nicht veröffentlicht. Der Wert ist wegen eines dokumentierten Widerspruchs zwischen den Sprachfassungen Gegenstand von Rückfrage 16.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Zeile D",
+          "note": "Der Zahlenwert bleibt wegen DSC-066 und Rückfrage 16 bewusst ungenannt."
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Prüfen Sie zuerst die Betriebsart. Verwenden Sie den Anrufweg nicht in den Stellungen 2 oder 3, weil der Anruf dort die WiPro schaltet.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-5, 14-15",
+          "region": "Abschnitt 1.3, Betriebsartentabelle und Beschreibung der Anrufsteuerung"
+        }
+      ]
+    },
+    {
+      "text": "Rufen Sie außerhalb der Betriebsarten 2 und 3 die Rufnummer des Pro-finder von einer eingerichteten Zielrufnummer aus an. Der Pro-finder nimmt den Anruf laut Quelle nicht an, sendet danach aber einen Statusbericht.",
+      "expected": "Nach dem Anruf trifft eine Statusmeldung ein, ohne dass eine Gesprächsverbindung aufgebaut wird.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15",
+          "region": "Abschnitt 2.5 „Statusbericht per Anruf anfordern“"
+        }
+      ]
+    },
+    {
+      "text": "Lesen Sie die enthaltenen Felder einzeln. Der Bericht kann den GPS-Zustand, UTC, Position, Geschwindigkeit, Guthaben, Spannungen U1 bis U5, die Zustände der Ausgänge und die Temperatur enthalten.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12-13",
+          "region": "Abschnitt 2.1, Feldliste und Beispiel eines Statusberichts"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt 7 „Empfangene Meldungen“, Beispiel eines Statusberichts"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie die Spannungsfelder anhand der Betriebsartentabelle ein. Je nach Schalterstellung enthält der Bericht unterschiedliche Kombinationen von U1 bis U5; in den Stellungen 8 und B sind in der Tabelle keine dieser Spannungen markiert.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Spalten U1 bis U5"
+        }
+      ]
+    },
+    {
+      "text": "Bewerten Sie Position und UTC gemeinsam. Wenn keine aktuelle GPS-Position verfügbar ist, wartet der Pro-finder laut Quelle bis zu zehn Minuten und sendet anschließend die zuletzt empfangene Position mit deren Zeitangabe.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15, 17",
+          "region": "Abschnitt 2.5 zur fehlenden Position und Abschnitt 2.8 zur letzten Position"
+        }
+      ]
+    },
+    {
+      "text": "Berücksichtigen Sie bei automatischen Berichten nur die eindeutig dokumentierten Intervalle: Betriebsart 4 alle 15 Minuten, 5 alle 60 Minuten, 6 alle 6 Stunden, 7 alle 24 Stunden und C alle 90 Sekunden.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5",
+          "region": "Tabelle der Betriebsarten, Zeilen 4 bis 7 und C"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Ein Statusbericht wurde ohne SMS-Befehl angefordert und nach GPS-Aktualität, UTC, Betriebsart, Spannungsfeldern und Ausgangszuständen eingeordnet; das gesperrte Intervall der Betriebsart D bleibt unveröffentlicht.",
+  "error_cases": [
+    {
+      "problem": "Der Anruf schaltet die WiPro statt einen Statusbericht auszulösen.",
+      "correction": "Das ist in den Betriebsarten 2 und 3 die dokumentierte Funktion. Stellen Sie die Betriebsart fest und verwenden Sie den Anrufweg dort nicht zur Statusabfrage.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-5, 14-15",
+          "region": "Betriebsartentabelle und Abschnitte 2.2 bis 2.5"
+        }
+      ]
+    },
+    {
+      "problem": "Die Position im Bericht passt nicht zum aktuellen Standort.",
+      "correction": "Prüfen Sie GPS-Zustand und UTC. Bei fehlendem Empfang kann nach einer Wartezeit die letzte gültige Position mit deren Zeit gesendet werden.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "15, 17",
+          "region": "Abschnitt 2.5 und Schluss von Abschnitt 2.8"
+        }
+      ]
+    },
+    {
+      "problem": "Ein erwartetes Spannungsfeld fehlt.",
+      "correction": "Vergleichen Sie die Betriebsart mit den Spalten U1 bis U5 der Tabelle. Der Inhalt ist von der Schalterstellung abhängig; nicht jede Spannung erscheint in jeder Betriebsart.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5, 12",
+          "region": "Betriebsartentabelle und Feldbeschreibung des Statusberichts"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s12-statusbericht",
+      "alt": "Grafisch dargestellter Statusbericht mit mehreren technischen Feldern.",
+      "long_description": "Die SMS-Sprechblase zeigt untereinander Angaben zu GPS-Zustand, UTC, Position, Geschwindigkeit, Guthaben, Spannungen und Ausgängen. Konkrete Koordinaten, Kartenadressen und Beispielwerte sind in dieser Textentsprechung bewusst nicht wiedergegeben.",
+      "steps_text": [
+        "GPS-Zustand und UTC gemeinsam lesen.",
+        "Position auf Aktualität prüfen.",
+        "Spannungsfelder mit der Betriebsart vergleichen.",
+        "Zustände der Ausgänge ablesen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "12",
+        "region": "Abschnitt 2.1, erste Beispiel-SMS und Feldliste",
+        "note": "Die Zeichenfolge „STATUS“ wird in den Abschnitten 2.1 und 2.5 gezeigt. Sie steht nur hier zur Begründung der Auslassung nach BLK-005 und ist keine Bedienanweisung. Beispielkoordinaten, Kartenadresse und Rufnummer wurden nicht übernommen."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Feld | Bedeutung laut Quelle |\n| --- | --- |\n| GPS | Standby oder Empfangszustand |\n| UTC | koordinierte Weltzeit; bei der letzten Position deren Zeitangabe |\n| Position | aktuelle oder bei fehlendem Empfang zuletzt gültige Position |\n| Geschwindigkeit | Geschwindigkeit laut Meldungsfeld |\n| Kontostand | Guthaben einer Prepaid-Karte; kann wegen der SMS-Länge fehlen |\n| U1 bis U5 | Spannungen, deren Auswahl von der Betriebsart abhängt |\n| Ausgänge | Zustand von Ausgang A und B |\n| Temperatur | Temperatur in unmittelbarer Nähe des Geräts |",
+    "| Betriebsart | Eindeutig dokumentiertes automatisches Intervall |\n| --- | --- |\n| 4 | 15 Minuten |\n| 5 | 60 Minuten |\n| 6 | 6 Stunden |\n| 7 | 24 Stunden |\n| C | 90 Sekunden |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "4-5, 12-13, 14-15, 17",
+      "region": "Betriebsarten, Meldungsfelder, Anrufsteuerung, Statusabfrage und letzte Position",
+      "note": "Alle verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und vollständig visuell gelesen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "2",
+      "region": "Abschnitt 7 „Empfangene Meldungen“",
+      "note": "Am 2026-08-09 bei 250 dpi neu gerendert und vollständig visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion für die Generation bis SN-044 aus DOC-BMA-SN044, Seiten 4–5, 12–15 und 17, ergänzt um DOC-KA-SN044, Seite 2. Der SMS-Befehl „STATUS“ ist wegen BLK-005 ausschließlich in figures[].source.note als Begründung der Auslassung zitiert; der veröffentlichte Bedienweg ist der dokumentierte Anruf außerhalb der Betriebsarten 2 und 3. Das Intervall der Betriebsart D bleibt wegen DSC-066 und Rückfrage 16 in allen sichtbaren Feldern ungenannt. Beispielkoordinaten, Kartenlinks und Rufnummern wurden nicht übernommen. Nicht geglättet ist die unterschiedliche Einordnung der UTC-Angabe auf Seite 12 und Seite 17. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

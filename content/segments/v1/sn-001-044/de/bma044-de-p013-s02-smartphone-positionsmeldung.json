@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P013-S02-SMARTPHONE-POSITIONSMELDUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "meldungen",
+  "title": "Positionsmeldung für Smartphones",
+  "body_md": "Als Antwort auf eine Positionsabfrage kann der Pro-finder eine für Smartphones aufbereitete Meldung senden. Ein anklickbarer Kartenlink führt zur aktuellen Fahrzeugposition. Bei entsprechend eingerichteten Prepaid-Karten wird in dieser Meldungsart laut Quelle immer das Restguthaben angezeigt. Der Abschnittsverweis der Quelle zur Positionsabfrage ist falsch und wird nicht als Bedienweg übernommen.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, Absatz Positions-SMS für Smartphones und nebenstehendes Kartenlink-Beispiel",
+  "prev_context": "Die Notrufmeldung wird in Betriebsart A durch Spannung an Pin 3 ausgelöst.",
+  "next_context": "Danach beschreibt die Quelle die automatische Hilfe-SMS bei ungültigem Inhalt.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:dd1b44f575227f5b032804051d439cc53f7394663993f5e37ac3b3c74033c8ea",
+  "change_reason": "Das Verhalten der Positionsmeldung wurde einschließlich der belegten Immer-Aussage zum Restguthaben, aber ohne Karten-URL, Koordinaten oder Beispielguthaben übernommen. Der falsche Querverweis bleibt über DSC-055 sichtbar.",
+  "discrepancy_refs": ["DSC-055", "DSC-060"]
+}

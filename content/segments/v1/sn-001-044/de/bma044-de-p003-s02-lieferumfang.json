@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P003-S02-LIEFERUMFANG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "anschluesse",
+  "title": "Lieferumfang bis SN-044",
+  "body_md": "Zum abgebildeten Lieferumfang gehören: Pro-finder, Antenne, Kabelbaum, Sicherungshalter, Flachsicherung 3 A, Befestigungsschrauben und Anschlusskabel für WiPro III beziehungsweise WiPro „all in one“.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 3,
+  "source_page_end": 3,
+  "source_region": "Abschnitt 1.1, Produktfoto mit Bildmarken 1 bis 7 und Legende darunter",
+  "prev_context": "Vor dem Lieferumfang steht der Hinweis, die Anweisungen zur Vermeidung von Fehlbedienungen zu lesen.",
+  "next_context": "Anschließend beginnt Abschnitt 1.2 zur Wahl des Montageorts.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f5642f043489f21d5ecf7372daefc011c34601cff2eb6aac034b10416500e674",
+  "change_reason": "Die ausschließlich räumlich zugeordnete Bildlegende wurde als linear lesbare Aufzählung extrahiert. Vorreformierte Schreibweisen wurden redaktionell normalisiert; Bestandteile und technische Werte wurden nicht verändert.",
+  "discrepancy_refs": ["DSC-065"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P016-S03-AUSGANGSBEFEHLE-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "ausgaenge",
+  "title": "SMS-Befehle für die Ausgänge bleiben gesperrt",
+  "body_md": "Die Seite druckt konkrete SMS-Zeichenfolgen für Dauerbetrieb, Ausschalten, Ein-Sekunden-Impuls und eine frei gewählte Einschaltdauer. Außerdem soll die Kennzeichnung des ersten Ausgangs für den zweiten Ausgang ersetzt werden. Die Befehle widersprechen jedoch der Geräte-Hilfe auf PDF-Seite 13; dort fehlt zusätzlich die zeitgesteuerte Variante. Deshalb werden weder Zeichenfolgen noch Platzhalter- oder Ersetzungsregel als Bedienweg übernommen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Abschnitt 2.7, sämtliche SMS-Beispiele und roter Schlussabsatz zum zweiten Ausgang",
+  "prev_context": "Die Steuerungsarten sind ohne Befehlszeichenfolgen und mit ihren belegten Zeitgrenzen beschrieben.",
+  "next_context": "PDF-Seite 17 erklärt das Wiederfinden des Fahrzeugs anhand von Positionsangaben.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d333f4826c9ee4cfb1231f51832b61cfb0c915bdf1bc1810873947b028f6375b",
+  "change_reason": "Expliziter Sperrvermerk zu BLK-005 und DSC-054. Keine Ausgangskennung, Befehlszeichenfolge oder Minutenplatzhalter wird als ausführbare Anweisung reproduziert.",
+  "discrepancy_refs": ["DSC-054", "DSC-063"]
+}

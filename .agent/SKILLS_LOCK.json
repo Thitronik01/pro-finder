@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-08-06",
+  "policy": {
+    "vendor_repositories_are_gitignored": true,
+    "installation_is_not_usage": true,
+    "proprietary_content_copied_into_product": false
+  },
+  "sources": [
+    {
+      "name": "openai-primary-runtime-pdf",
+      "source_uri": "bundled://openai-primary-runtime/pdf/26.805.11740",
+      "version": "26.805.11740",
+      "repository": null,
+      "commit": null,
+      "retrieved_at": "2026-08-11",
+      "license": {
+        "spdx": null,
+        "status": "bundled-runtime-metadata-not-exposed",
+        "note": "Lokaler Codex-Bestandteil; kein öffentlicher Repository-URL, Commit-SHA oder separater Lizenztext in der Laufzeitmetadaten-Ausgabe verfügbar. Es wurden keine Skill-Inhalte in Produktcode kopiert."
+      }
+    },
+    {
+      "name": "openai-github-plugin",
+      "source_uri": "plugin://openai-curated-remote/github/0.1.8-2841cf9749ae",
+      "version": "0.1.8-2841cf9749ae",
+      "repository": "https://github.com/openai/plugins",
+      "commit": null,
+      "retrieved_at": "2026-08-11",
+      "license": {
+        "spdx": "MIT",
+        "status": "declared-in-plugin-manifest",
+        "note": "Die lokale Plugin-Metadatei nennt Repository und MIT-Lizenz; ein vollständiger Commit-SHA wird im gebündelten Cache nicht ausgewiesen. Verwendet wurden nur die GitHub-App-Aufrufe für PR- und CI-Status, keine Skill-Inhalte im Produktcode."
+      }
+    },
+    {
+      "name": "anthropic-skills",
+      "repository": "https://github.com/anthropics/skills.git",
+      "commit": "b29e7cf65e5cb78a5ac33d582270551bc74a14eb",
+      "license": {
+        "spdx": null,
+        "status": "no-root-license-detected",
+        "note": "Keine Root-Lizenz festgestellt; der verwendete PDF-Skill verweist auf separate Anthropic-Nutzungsbedingungen."
+      }
+    },
+    {
+      "name": "karpathy-llm-wiki",
+      "repository": "https://gist.github.com/442a6bf555914893e9891c11519de94f.git",
+      "commit": "ac46de1ad27f92b28ac95459c782c07f6b8c964a",
+      "license": {
+        "spdx": null,
+        "status": "no-license-detected",
+        "note": "Keine Lizenz festgestellt."
+      }
+    },
+    {
+      "name": "netlify-context-and-tools",
+      "repository": "https://github.com/netlify/context-and-tools.git",
+      "commit": "4f19ca23b9ef2ff5c167890036d38140bb42e1d8",
+      "license": {
+        "spdx": "MIT",
+        "status": "detected"
+      }
+    },
+    {
+      "name": "supabase-agent-skills",
+      "repository": "https://github.com/supabase/agent-skills.git",
+      "commit": "1207767388a0ffb55f21fb4e6988fee96942431d",
+      "license": {
+        "spdx": "MIT",
+        "status": "detected"
+      }
+    },
+    {
+      "name": "taste-skill",
+      "repository": "https://github.com/leonxlnx/taste-skill.git",
+      "commit": "e988add20dab0fa97d7a76781c48961c8184288e",
+      "license": {
+        "spdx": "MIT",
+        "status": "detected"
+      }
+    },
+    {
+      "name": "ui-ux-pro-max-skill",
+      "repository": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "commit": "abb7f2fd5a083fa1ff55c326a963ff0d95c33f99",
+      "license": {
+        "spdx": "MIT",
+        "status": "detected"
+      }
+    },
+    {
+      "name": "vercel-agent-skills",
+      "repository": "https://github.com/vercel-labs/agent-skills.git",
+      "commit": "7c180d9044c9ae2b442b567aad4e42a28dd5ed62",
+      "license": {
+        "spdx": null,
+        "status": "no-root-license-detected",
+        "note": "Keine Root-Lizenz festgestellt."
+      }
+    }
+  ]
+}

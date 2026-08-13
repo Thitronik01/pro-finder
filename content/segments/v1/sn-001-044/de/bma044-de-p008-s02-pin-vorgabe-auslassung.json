@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P008-S02-PIN-VORGABE-AUSLASSUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "sim-karte",
+  "title": "Auslassung der festen SIM-PIN-Vorgabe",
+  "body_md": "Die Quelle verlangt vor dem Einsetzen eine konkrete feste SIM-PIN und zugleich eine aktivierte PIN-Abfrage. Der Zahlenwert bleibt aus dem übersetzbaren Segmentbestand ausgeschlossen, weil seine aktuelle technische Gültigkeit und sicherheitliche Tragweite in Rückfrage 15 ungeklärt sind. Die Konfiguration muss vor der Inbetriebnahme durch Fachhändler oder Support bestätigt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 8,
+  "source_page_end": 8,
+  "source_region": "Abschnitt 1.8, erste zwei Anforderungen im rosa Warnkasten",
+  "prev_context": "Das vorherige Segment nennt die übrigen Voraussetzungen für die Micro-SIM.",
+  "next_context": "Danach beschreibt die Quelle Kartenauswahl, Guthaben und Roaming.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a5873dbb61ca96373887b5284d8668a0c84b3c45744006fbe72576aef0cc9829",
+  "change_reason": "Sperrvermerk zu Rückfrage 15. Der feste Quellenwert wird nicht in title oder body_md wiedergegeben; die Seite bleibt trotzdem vollständig und nachvollziehbar extrahiert.",
+  "discrepancy_refs": ["DSC-063"]
+}

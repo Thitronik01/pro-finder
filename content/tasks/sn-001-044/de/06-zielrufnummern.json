@@ -1,0 +1,161 @@
+{
+  "slug": "zielrufnummern",
+  "title": "Zielrufnummern einrichten und löschen",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Die Rollen der Zielrufnummern bis SN-044 verstehen, bis zu zehn Nummern über den belegten App-Weg einrichten und den Speicher bei Bedarf am Gerät löschen.",
+  "prerequisites": [
+    "Die THITRONIK App ist installiert.",
+    "Der Pro-finder ist eingebucht.",
+    "Die vorgesehenen Empfänger und ihre benötigten Berechtigungen sind abgestimmt."
+  ],
+  "warnings": [
+    {
+      "text": "Die Quelle erklärt die Rollen autorisierter und nicht autorisierter Nummern, aber nicht die Regel, mit der eine Nummer diese Berechtigung erhält. Die Zeichen sind nur aus Beispielen zu erschließen und werden wegen BLK-006 nicht veröffentlicht. Verwenden Sie dafür die THITRONIK App oder lassen Sie die Konfiguration bestätigen.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9-10",
+          "region": "Rollenbeschreibungen in Abschnitt 1.8 und Beispieltabelle der Programmier-SMS",
+          "note": "Die Berechtigungsregel ist nicht als Satz dokumentiert; siehe DSC-056 und BLK-006."
+        }
+      ]
+    },
+    {
+      "text": "Der physische Löschvorgang endet bei einem gelb-grünen Blinkmuster. Die Quelle nennt kein farbunabhängiges Erkennungsmerkmal; ohne sichere Farbwahrnehmung ist der Abbruchzeitpunkt nicht selbstständig bestimmbar.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.9, dritter und vierter Handlungsschritt"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Planen Sie höchstens zehn Zielrufnummern. Die erste Nummer ist die Masternummer; sie kann später ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9",
+          "region": "Abschnitt 1.8, Einleitung und Definition „Masternummer“"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie die weiteren Nummern nach ihrem Zweck: Autorisierte Nummern dürfen die Ausgänge steuern und Statusberichte anfordern; nicht autorisierte Nummern erhalten nur Statusmeldungen. Smartphone-Nummern können Positionsangaben als anklickbaren Link erhalten.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9",
+          "region": "Abschnitt 1.8, Definitionen der drei Nummernarten"
+        }
+      ]
+    },
+    {
+      "text": "Richten Sie die Nummern mit der THITRONIK App ein. Die Kurzanleitung verlangt die Programmierung vor dem ersten Gebrauch und nennt die App als Werkzeug dafür.",
+      "expected": "Die App hat die vorgesehenen Empfänger und Rollen gespeichert.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "Abschnitt 2, Schritt 10, und Abschnitt 6 „App laden + programmieren“"
+        }
+      ]
+    },
+    {
+      "text": "Prüfen Sie den Abschluss am grünen Blinken der Status-LED. Dieses Muster bedeutet im Normalbetrieb: eingebucht und Zielrufnummern vorhanden.",
+      "expected": "Die Status-LED blinkt grün.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9, 11",
+          "region": "Erfolgsrückmeldung in Abschnitt 1.8 und Zustand „Blinkt grün“ in Abschnitt 1.10"
+        }
+      ]
+    },
+    {
+      "text": "Wenn der gesamte Zielrufnummernspeicher physisch gelöscht werden muss, lassen Sie die SIM-Karte im Gerät, trennen Sie den Hauptkabelbaum und stellen Sie den Betriebsartenschalter auf Position E.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5, 11",
+          "region": "Betriebsartentabelle, Zeile E, und Abschnitt 1.9, Bedingung sowie erste zwei Schritte"
+        }
+      ]
+    },
+    {
+      "text": "Stecken Sie den Hauptkabelbaum wieder ein. Warten Sie, bis die Status-LED abwechselnd gelb und grün blinkt, und stellen Sie den Schalter anschließend in seine vorherige Ausgangsposition zurück.",
+      "expected": "Der Zielrufnummernspeicher ist leer.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.9, dritter und vierter Schritt sowie Ergebnisabsatz"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Die Zielrufnummern und ihre Rollen sind über die THITRONIK App eingerichtet und durch grünes Blinken bestätigt; bei Bedarf ist der gesamte Speicher über Schalterstellung E gelöscht.",
+  "error_cases": [
+    {
+      "problem": "Ich muss autorisierte und nicht autorisierte Nummern unterscheiden, finde aber keine erklärte Zeichenregel.",
+      "correction": "Das ist eine belegte Lücke der Quelle. Leiten Sie die Regel nicht aus den Beispielnummern ab. Verwenden Sie die App oder lassen Sie die Berechtigung vom Fachhändler beziehungsweise Support bestätigen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "9-10",
+          "region": "Rollenbeschreibung und Beispiele ohne ausdrückliche Regelerklärung"
+        }
+      ]
+    },
+    {
+      "problem": "Die LED blinkt gelb oder gelb-grün statt grün.",
+      "correction": "Gelbes Blinken bedeutet einen leeren Zielrufnummernspeicher; gelb-grünes Blinken bedeutet eingebucht, aber ohne Zielrufnummern. Richten Sie die Nummern über die App ein.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "11",
+          "region": "Abschnitt 1.10, Zustände „Blinkt gelb“ und „Blinkt gelb/grün“"
+        }
+      ]
+    },
+    {
+      "problem": "Die Ausgangsposition des Betriebsartenschalters ist nicht dokumentiert.",
+      "correction": "Die Quelle bezeichnet sie nur als Ausgangsposition und nennt keine allgemeine Ziffer. Notieren Sie vor dem Löschen die vorhandene Stellung und lassen Sie die richtige Betriebsart für Ihren Einbau bestätigen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "5, 11",
+          "region": "Betriebsartentabelle und Rückkehranweisung in Abschnitt 1.9"
+        }
+      ]
+    }
+  ],
+  "figures": [],
+  "tables_md": [
+    "| Rolle | Bedeutung laut Handbuch |\n| --- | --- |\n| Masternummer | Erste gespeicherte Zielrufnummer; kann neue Zielrufnummern programmieren |\n| Autorisierte Nummer | Darf Ausgänge steuern und Statusberichte anfordern |\n| Nicht autorisierte Nummer | Erhält Statusmeldungen, hat aber keinen Zugriff auf Funktionen |\n| Smartphone-Nummer | Kann die Fahrzeugposition als anklickbaren Link erhalten |",
+    "| Anzeige nach der Programmierung | Bedeutung |\n| --- | --- |\n| Blinkt grün | eingebucht und Zielrufnummern vorhanden |\n| Blinkt gelb | Zielrufnummernspeicher leer |\n| Blinkt gelb/grün | eingebucht, aber keine Zielrufnummern vorhanden |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "5, 9-11",
+      "region": "Betriebsartentabelle und Abschnitte 1.8 bis 1.10",
+      "note": "Die Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und visuell gelesen. Die Beispiele enthalten Rufnummern und ungeklärte Syntax; beides ist nicht in nutzerseitige Felder übernommen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "Programmierhinweis und Abschnitt 6 zur THITRONIK App",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 250 dpi neu gerendert und visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus DOC-BMA-SN044, Seiten 5 und 9–11, sowie DOC-KA-SN044, Seiten 1–2. BLK-005 ist strikt eingehalten: Die Programmier-SMS und ihre Beispielrufnummern erscheinen in keinem nutzerseitigen Feld. BLK-006 ist ebenfalls eingehalten: Die nur aus den Beispielen ableitbare Plus-/Minus-Regel wird nicht veröffentlicht; sie ist als DSC-056 beziehungsweise Rückfrage 10 offen. Auch der Smartphone-Marker „s“/„S“ bleibt wegen der widersprüchlichen Großschreibung ungenannt. Vollständig übernommen ist der befehlsfreie Löschweg über Position E; seine farbabhängige Abbruchbedingung und die undefinierte Ausgangsposition sind transparent benannt. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

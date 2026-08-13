@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P007-S02-GPS-REFLEXIONEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "GPS-Reflexionen können Diebstahlmeldungen auslösen",
+  "body_md": "In Hallen, Gebäuden und unter Überdachungen können Reflexionen des GPS-Signals die Positionsbestimmung stark beeinträchtigen. Dadurch können Diebstahlmeldungen ausgelöst werden, obwohl das Fahrzeug nicht bewegt wurde. Die Quelle empfiehlt, Geofencing beim Abstellen in einem Gebäude oder unter einem Dach zu deaktivieren. Sie erklärt an dieser Stelle weder die Auswirkung auf die Diebstahlerkennung noch den Vorrang gegenüber der automatischen WiPro-Kopplung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.7, Absatz unter den drei LED-Zuständen",
+  "prev_context": "Die GPS-Diagnose endet mit der Rückkehr des Betriebsartenschalters in die Ausgangsposition.",
+  "next_context": "Der letzte Satz der Seite nennt eine SMS-Anweisung; deren Zeichenfolge wird separat als Auslassung dokumentiert.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f3126cc45c9bfa229b460736e3a94b674a4b1a0e6a4dec43cc4a7f11895bc5be",
+  "change_reason": "Der Tippfehler der Quelle wurde redaktionell zu Reflexionen normalisiert. Der sachliche Konflikt mit der später dokumentierten automatischen WiPro-Aktivierung bleibt über DSC-062 sichtbar; kein Geofencing-Radius wurde ergänzt.",
+  "discrepancy_refs": ["DSC-062", "DSC-064"]
+}

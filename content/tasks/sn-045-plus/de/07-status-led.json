@@ -1,0 +1,98 @@
+{
+  "slug": "status-led",
+  "title": "Status-LED verstehen",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Die Anzeigen der Status-LED des Pro-finder richtig deuten und den Betriebszustand des Geräts erkennen.",
+  "prerequisites": [
+    "Der Pro-finder ist montiert und mit Spannung versorgt.",
+    "Sie können die Status-LED am Gerät sehen oder sich ihr Blinkverhalten beschreiben lassen."
+  ],
+  "warnings": [],
+  "steps": [
+    {
+      "text": "Beobachten Sie die Status-LED einige Sekunden lang: Leuchtet sie dauerhaft oder blinkt sie, und in welcher Farbe bzw. Farbkombination?",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Abschnitt 5 „Anzeigen der Betriebszustände (Status LED)“"
+        }
+      ]
+    },
+    {
+      "text": "Ordnen Sie das beobachtete Verhalten mit der folgenden Übersicht einem der neun Betriebszustände zu.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Abschnitt 5, Zustände 1–9"
+        }
+      ]
+    }
+  ],
+  "expected_result": "Nach abgeschlossener Installation und Programmierung blinkt die Status-LED im Normalbetrieb grün (Zustand 9: eingebucht, Empfang, Zielrufnummern vorhanden).",
+  "error_cases": [
+    {
+      "problem": "Die Status-LED leuchtet dauerhaft rot.",
+      "correction": "Die SIM-Karte fehlt oder ist defekt (Zustand 4). Prüfen Sie, ob eine funktionsfähige Nano-SIM korrekt eingelegt ist – siehe Aufgabe „SIM-Karte einlegen“.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Abschnitt 5, Zustand 4"
+        }
+      ]
+    },
+    {
+      "problem": "Die Status-LED blinkt abwechselnd rot/grün.",
+      "correction": "Die SIM-PIN ist nicht deaktiviert (Zustand 5). Deaktivieren Sie die PIN-Abfrage der SIM-Karte; das Deaktivieren der PIN-Abfrage ist laut Kurzanleitung zwingend erforderlich.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "1",
+          "region": "Abschnitt 5, Zustand 5"
+        },
+        {
+          "doc": "DOC-KA-SN045",
+          "pages": "2",
+          "region": "Abschnitt 2 „SIM-Karte vorbereiten“, Schritt 1"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "ka45-p1-led-blinkmuster",
+      "alt": "Neun Blinkmuster-Balken der Status-LED, je Zustand in Rot, Gelb, Grün oder Farbkombinationen.",
+      "long_description": "Die Kurzanleitung zeigt zu jedem der neun Betriebszustände einen horizontalen Balken, der das Blinkmuster der LED farblich darstellt (z. B. abwechselnd rote und gelbe Segmente für „blinkt rot/gelb“). Die Balken codieren die Information ausschließlich über Farbe und Rhythmus; die vollständige Bedeutung jedes Zustands steht in der Tabelle dieser Aufgabe als Text.",
+      "steps_text": [
+        "Jeder Balken steht für einen nummerierten Zustand 1–9.",
+        "Die Farbe(n) des Balkens entsprechen der LED-Farbe, die Unterteilung dem Blinkrhythmus.",
+        "Die Bedeutung ist in der Übersichtstabelle dieser Aufgabe vollständig als Text wiedergegeben."
+      ],
+      "asset_version": "v1-entwurf",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-KA-SN045",
+        "pages": "1",
+        "region": "Abschnitt 5, Blinkmuster-Balken"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Nr. | LED-Verhalten | Bedeutung |\n| --- | --- | --- |\n| 1 | Blinkt rot/gelb | Netzsuche + keine Zielrufnummern vorhanden |\n| 2 | Blinkt rot | Netzsuche/kein GSM-Empfang |\n| 3 | Leuchtet gelb | Verbindungsaufbau mit Modem |\n| 4 | Leuchtet rot | SIM-Karte fehlt bzw. ist defekt |\n| 5 | Blinkt rot/grün | SIM-PIN nicht deaktiviert |\n| 6 | Blinkt gelb | Eingebucht + letzte SMS konnte nicht versendet werden |\n| 7 | Leuchtet grün | Pro-finder empfängt/versendet eine SMS |\n| 8 | Blinkt grün/gelb | Eingebucht (Empfang) + keine Zielrufnummern vorhanden |\n| 9 | Blinkt grün | Eingebucht (Empfang) + Zielrufnummern vorhanden |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-KA-SN045",
+      "pages": "1",
+      "region": "Abschnitt 5 „Anzeigen der Betriebszustände (Status LED)“, Zustände 1–9 inkl. Hinweiskasten",
+      "note": "Deutsche Originaltexte per Textextraktion entnommen und visuell gegen die gerenderte Seite geprüft (Batch 1, 2026-08-06). Schreibweise „GSM-Empfang“ gegenüber dem Original („GSM Empfang“) sowie „blinkt grün“ (Original bei Zustand 9: „Blinkt Grün“) orthographisch normalisiert – im Widerspruchsregister dokumentiert."
+    }
+  ],
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstbefüllung aus PDF-Audit Batch 1 (Seitenprüfung DOC-KA-SN045 Seite 1); fachlicher Review steht aus."
+}

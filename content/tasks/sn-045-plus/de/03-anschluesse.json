@@ -1,0 +1,148 @@
+{
+  "slug": "anschluesse",
+  "title": "Anschlüsse und Modul verkabeln",
+  "generation": "sn-045-plus",
+  "language": "de",
+  "goal": "Die Anschlüsse des Pro-finder erkennen und das Modul polungsrichtig und abgesichert mit der Bordspannung, optional mit der WiPro III (safe.lock), verbinden.",
+  "prerequisites": [
+    "Der Montageort ist gewählt.",
+    "Die Spannungsversorgung ist während der Arbeiten abgeklemmt.",
+    "Die beiliegende Sicherung und der Kabelbaum liegen bereit."
+  ],
+  "warnings": [
+    {
+      "text": "Sichern Sie die Plus-Leitung mit der beiliegenden Sicherung ab.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4 „Modul anschließen“, erster Absatz (aufgedruckt „Seite 9 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Pin 6 und Pin 7 liefern 12 V und sind mit höchstens 500 mA belastbar. Verbraucher mit höherem Strom müssen über ein hochwertiges KFZ-Relais mit Freilaufdiode geschaltet werden. Bei Überlastung erlischt die Garantie.",
+      "safety_class": "sicherheitskritisch",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "11",
+          "region": "Abschnitt 1.4, dritter Absatz"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Machen Sie sich anhand der Anschlussseite mit den vier Bedienelementen und dem achtpoligen Stecker vertraut: Betriebsartenschalter (A), Anschluss WiPro III (B), Anschluss für die externe GPS-Antenne (C) und Status-LED (D).",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Abschnitt 1.2 „Anschlüsse, Anzeigen und Bedienelemente“ (aufgedruckt „Seite 6 von 23“)"
+        }
+      ]
+    },
+    {
+      "text": "Schließen Sie Pin 1 (Masse) und Pin 8 (Dauerplus 12 V) polungsrichtig an eine geeignete Spannungsversorgung mit 12 V DC an.",
+      "expected": "Die Versorgung liegt an; Plus und Masse sind nicht vertauscht.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "11", "region": "Abschnitt 1.4, erster Absatz" },
+        { "doc": "DOC-IBA-SN045", "pages": "8", "region": "Abschnitt 1.2, Legende Pin 1 und Pin 8" }
+      ]
+    },
+    {
+      "text": "Sichern Sie die Plus-Leitung mit der beiliegenden Sicherung ab.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "11", "region": "Abschnitt 1.4, erster Absatz" }
+      ]
+    },
+    {
+      "text": "Schließen Sie bei Bedarf Verbraucher an die Ausgänge an: Pin 7 ist Ausgang A, Pin 6 ist Ausgang B. Beachten Sie die Grenze von 500 mA je Ausgang.",
+      "sources": [
+        {
+          "doc": "DOC-IBA-SN045",
+          "pages": "8",
+          "region": "Abschnitt 1.2, Legende Pin 6 und Pin 7"
+        },
+        { "doc": "DOC-IBA-SN045", "pages": "11", "region": "Abschnitt 1.4, dritter Absatz" }
+      ]
+    },
+    {
+      "text": "Nutzen Sie bei Bedarf die Pins 2 bis 5 als Messeingänge (U2 bis U5). Über sie lassen sich Spannungen von 0 bis 30 V kontrollieren; je nach Betriebsart ist über Pin 3 zusätzlich Geofencing aktivierbar.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "11", "region": "Abschnitt 1.4, erster Absatz" },
+        { "doc": "DOC-IBA-SN045", "pages": "8", "region": "Abschnitt 1.2, Legende Pin 2 bis Pin 5" }
+      ]
+    },
+    {
+      "text": "Verbinden Sie gegebenenfalls die WiPro III (safe.lock) und den Pro-finder mit dem beiliegenden Verbindungskabel WiPro III über Anschluss B.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "11", "region": "Abschnitt 1.4, zweiter Absatz" },
+        { "doc": "DOC-IBA-SN045", "pages": "8", "region": "Abschnitt 1.2, Legende B" }
+      ]
+    }
+  ],
+  "expected_result": "Der Pro-finder ist polungsrichtig und abgesichert mit der Bordspannung verbunden; angeschlossene Verbraucher liegen innerhalb der Belastungsgrenze, und eine vorhandene WiPro III (safe.lock) ist über Anschluss B verbunden.",
+  "error_cases": [
+    {
+      "problem": "Ein Verbraucher benötigt mehr als 500 mA.",
+      "correction": "Schalten Sie ihn über ein hochwertiges KFZ-Relais mit Freilaufdiode. Ein direkter Anschluss überlastet den Ausgang; bei Überlastung erlischt die Garantie.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "11", "region": "Abschnitt 1.4, dritter Absatz" }
+      ]
+    },
+    {
+      "problem": "Die Zuordnung der Pins am Stecker ist unklar.",
+      "correction": "Die Legende in Abschnitt 1.2 nennt sie vollständig: Pin 1 Masse (GND), Pin 2 bis 5 Messeingänge U2 bis U5, Pin 6 Ausgang B, Pin 7 Ausgang A, Pin 8 Dauerplus 12 V. Die Tabelle unten gibt sie als Text wieder.",
+      "sources": [
+        { "doc": "DOC-IBA-SN045", "pages": "8", "region": "Abschnitt 1.2, vollständige Legende" }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "iba-sn045-s08-anschlussseite",
+      "alt": "Annotiertes Foto der Anschlussseite des Pro-finder mit den Marken A bis D und den nummerierten Pins 1 bis 8.",
+      "long_description": "Foto der schmalen Geräteseite. Von links nach rechts: ein weißer Drehschalter mit den Rastungen 0 bis 9 und A bis F, markiert mit A; eine schwarze RJ-Buchse, markiert mit B; ein rotes X über einem weiteren Anschluss; eine quadratische Buchse, gelb umrandet und markiert mit C; der achtpolige Steckplatz mit zwei Reihen farbiger Nummernkreise – oben 5, 6, 7, 8, unten 4, 3, 2, 1; ganz rechts ein kleiner grüner Leuchtpunkt, über eine gepunktete Linie markiert mit D. Oberhalb des Geräts zeigen zwei weitere Fotos die WiPro III, per gelber Linie mit Anschluss B verbunden, und die optionale GPS-Antenne mit dem Etikett GPS-pro, per gelber Linie mit Anschluss C verbunden.",
+      "steps_text": [
+        "A ist der Betriebsartenschalter.",
+        "B ist der Anschluss für die WiPro III.",
+        "C ist der Anschluss für die externe GPS-Antenne.",
+        "D ist die Status-LED.",
+        "Der achtpolige Stecker trägt die Pins 1 bis 8; ihre Belegung steht in der Tabelle."
+      ],
+      "data_table_md": "| Marke | Bedeutung |\n| --- | --- |\n| A | Betriebsartenschalter |\n| B | Anschluss WiPro III |\n| C | Externe GPS-Antenne (optional) |\n| D | Status-LED |",
+      "asset_version": "quelle-original-2026-08-07",
+      "generation": "sn-045-plus",
+      "source": {
+        "doc": "DOC-IBA-SN045",
+        "pages": "8",
+        "region": "Abschnitt 1.2, annotiertes Foto mit Legende",
+        "note": "Die Pin-Kreise sind in der Quelle zusätzlich farbig codiert, ohne dass die Farben in der Legende benannt werden. Ein rotes X markiert einen Anschluss zwischen B und C, ohne Legendeneintrag – die Bedeutung ist in allen vier geprüften Sprachfassungen unerklärt und an THITRONIK gemeldet."
+      }
+    }
+  ],
+  "tables_md": [
+    "| Pin | Belegung |\n| --- | --- |\n| 1 | Masse (GND) |\n| 2 | Messeingang (U2) |\n| 3 | Messeingang (U3) |\n| 4 | Messeingang (U4) |\n| 5 | Messeingang (U5) |\n| 6 | Ausgang B |\n| 7 | Ausgang A |\n| 8 | Dauerplus 12 V |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "8",
+      "region": "Abschnitt 1.2 „Anschlüsse, Anzeigen und Bedienelemente“ (aufgedruckt „Seite 6 von 23“)",
+      "note": "Seite am 2026-08-07 gerendert und vollständig visuell geprüft; die Seite hat keine nutzbare Textebene. Die Legende ist dort reiner Bildinhalt."
+    },
+    {
+      "doc": "DOC-IBA-SN045",
+      "pages": "11",
+      "region": "Abschnitt 1.4 „Modul anschließen“ (aufgedruckt „Seite 9 von 23“)",
+      "note": "Seite am 2026-08-07 gerendert und vollständig visuell geprüft."
+    }
+  ],
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion aus zwei geprüften deutschen Quellseiten. Die Pinbelegung liegt in der Quelle nur als Bildlegende vor und ist hier zusätzlich als Tabelle wiedergegeben. Die drei Schaltarten der Ausgänge sind bewusst NICHT als SMS-Befehle ausgeführt: die Befehlssprache ist ungeklärt (BLK-005, Rückfrage 1). Am 2026-08-11 wurde die unbelegte Ergänzung „an Pin 1“ aus der Sicherungswarnung entfernt: Abschnitt 1.4 verlangt nur, die Plus-Leitung abzusichern; Abschnitt 1.2 weist Pin 1 eindeutig Masse (GND) und Pin 8 Dauerplus 12 V zu. Technischer Review steht aus."
+}

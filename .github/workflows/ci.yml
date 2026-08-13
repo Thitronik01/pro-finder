@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, 'bootstrap/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: '24'
+  NEXT_TELEMETRY_DISABLED: '1'
+
+jobs:
+  quality-and-build:
+    name: Code, content, security and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          package-manager-cache: true
+      # Installationsfehler zusaetzlich in die Job-Zusammenfassung schreiben. Die
+      # Rohlogs sind nur fuer angemeldete Personen lesbar, die Zusammenfassung
+      # dagegen erscheint in der Check-Run-Ausgabe und ist damit auch ohne
+      # Anmeldung auswertbar.
+      - name: Install dependencies
+        run: |
+          set -o pipefail
+          if ! npm ci 2>&1 | tee /tmp/npm-ci.log; then
+            {
+              echo '### npm ci fehlgeschlagen'
+              echo ''
+              echo '```'
+              tail -n 60 /tmp/npm-ci.log
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+      - run: npm run check
+      - run: npm run build
+
+  browser-accessibility:
+    name: Playwright and axe
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          package-manager-cache: true
+      - run: npm ci
+      - name: Install Chromium and operating-system dependencies
+        run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+        env:
+          APP_ENV: preview
+          DATA_MODE: fixtures
+
+  supabase:
+    name: Supabase reset and RLS tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          package-manager-cache: true
+      - run: npm ci
+      - name: Start local Supabase
+        run: >-
+          npx supabase start
+          --exclude studio,imgproxy,mailpit,edge-runtime,logflare,vector,supavisor,realtime
+          --yes
+      - name: Recreate schema and fixtures
+        run: npx supabase db reset --local
+      - name: Lint database functions and schema
+        run: npx supabase db lint --local --level warning --fail-on error
+      - name: Run pgTAP RLS suite
+        run: npx supabase test db --local
+      - name: Stop local Supabase
+        if: always()
+        run: npx supabase stop --no-backup

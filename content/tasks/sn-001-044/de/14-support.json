@@ -1,0 +1,213 @@
+{
+  "slug": "support",
+  "title": "Support vorbereitet kontaktieren",
+  "generation": "sn-001-044",
+  "language": "de",
+  "goal": "Eine technisch verwertbare Supportanfrage zum Pro-finder bis SN-044 vorbereiten und dabei nur die dokumentierten, als Quellenstand gekennzeichneten Kontaktwege verwenden.",
+  "prerequisites": [
+    "Das Problem lässt sich mit der Anleitung und der systematischen Fehlerbehebung nicht sicher lösen.",
+    "Schalterstellung, LED-Muster und Zeitpunkt des Problems sind notiert.",
+    "Die Seriennummer wird nur verwendet, wenn sie am eigenen Gerät sicher erkannt wurde."
+  ],
+  "warnings": [
+    {
+      "text": "Die älteren Dokumente nennen keinen Seriennummernbereich und erklären weder den genauen Fundort der Seriennummer am Gerät noch eine Leseregel. Raten Sie nicht, welcher Nummernteil die Generation bezeichnet.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "1, 18",
+          "region": "Titelseite ohne Seriennummernbereich und leeres Feld „SN“ im Supportabschnitt"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "1-2",
+          "region": "Gesamte Kurzanleitung und leeres Feld „Serial number“ auf der Rückseite",
+          "note": "Die offene Leseregel ist in DSC-023 und Rückfrage 6 dokumentiert."
+        }
+      ]
+    },
+    {
+      "text": "Die hier genannten Kontaktwege sind ein dokumentierter Quellenstand, keine Bestätigung ihrer heutigen Erreichbarkeit. Supportdaten dürfen deshalb noch nicht ungeprüft auf die physische Setup-Karte übernommen werden.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 3.4 „Technische Unterstützung“"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Fußzeile mit Firmenwebsite und E-Mail-Adresse"
+        }
+      ]
+    },
+    {
+      "text": "Veröffentlichen oder versenden Sie keine Beispielkoordinaten, Kartenlinks oder Beispielrufnummern aus den abgebildeten SMS. Für die Fehleranalyse genügen Ereigniszeit, beobachteter Zustand und eine Beschreibung der Abweichung.",
+      "safety_class": "sicherheitsrelevant",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "10, 12-13, 17",
+          "region": "Abgebildete Programmier-, Meldungs- und Positions-SMS"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Mehrsprachige Beispiel-Alarm-SMS"
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "text": "Wenden Sie sich bei Problemen zuerst an Ihren Fachhändler. Die Bedienungsanleitung nennt diesen Weg ausdrücklich vor dem technischen Support.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 3.4, erster Absatz"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt „Technical support“"
+        }
+      ]
+    },
+    {
+      "text": "Bereiten Sie eine kurze Fehlerbeschreibung mit Gerätegeneration, Schalterstellung, Versorgungsspannung, LED-Farbe und Blinkmuster, Zeitpunkt und bereits ausgeführten Prüfungen vor.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "4-7, 11, 18",
+          "region": "Betriebsarten, Versorgung, GPS-Diagnose, Status-LED und Supportabschnitt"
+        }
+      ]
+    },
+    {
+      "text": "Halten Sie die Seriennummer bereit, wenn Sie sie sicher ablesen können. Die Bedienungsanleitung fordert dies für einen Supportanruf, zeigt auf der Seite aber nur ein leeres Eintragsfeld.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 3.4, letzter Absatz und Feld „SN“"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Leeres Feld „Serial number“ neben der Produktabbildung"
+        }
+      ]
+    },
+    {
+      "text": "Nutzen Sie als dokumentierten Kontaktstand der Kurzanleitung die Website www.thitronik.de oder die E-Mail-Adresse kontakt@thitronik.de. Prüfen Sie vor einer dauerhaften Veröffentlichung, ob diese Angaben noch aktuell sind.",
+      "sources": [
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Unterste blaue Fußzeile mit Website und E-Mail-Adresse"
+        }
+      ]
+    },
+    {
+      "text": "Kennzeichnen Sie in der Anfrage, wenn die genaue Generationszuordnung, der Fundort der Seriennummer, eine SMS-Befehlssprache, der Geofencing-Radius, ein Betriebsart-Intervall oder die Sprache von Gerätemeldungen betroffen ist. Diese Punkte sind im Pilot nicht als geklärt zu behandeln.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "1, 5, 12-16, 18",
+          "region": "Titelseite, Betriebsartentabelle, Meldungsbeispiele, Bedienkapitel und Supportfeld",
+          "note": "Die offenen Punkte sind als DSC-023, DSC-058, DSC-061, DSC-066 und DSC-072 sowie in den Rückfragen 1, 6, 14, 16 und 17 erfasst."
+        }
+      ]
+    }
+  ],
+  "expected_result": "Fachhändler oder Support erhalten eine nachvollziehbare, datensparsame Fehlerbeschreibung mit sicher ermittelter Seriennummer oder einem ausdrücklichen Hinweis, dass sie nicht sicher auffindbar ist. Kontaktangaben bleiben als Quellenstand gekennzeichnet.",
+  "error_cases": [
+    {
+      "problem": "Die Seriennummer ist am Gerät nicht sicher auffindbar oder ihr Aufbau ist unklar.",
+      "correction": "Keinen Nummernteil erraten. Senden Sie ein Foto der vorhandenen Kennzeichnung nur über einen geeigneten Supportkanal oder lassen Sie die Zuordnung durch den Fachhändler vornehmen.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Leeres Feld „SN“ ohne Fundort- oder Lesehinweis"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Leeres Feld „Serial number“ ohne weitere Erläuterung"
+        }
+      ]
+    },
+    {
+      "problem": "Die Website oder E-Mail-Adresse aus der Kurzanleitung ist nicht erreichbar.",
+      "correction": "Verwenden Sie den Fachhändler als dokumentierten ersten Weg und übernehmen Sie keine alternative Rufnummer aus Beispiel-SMS oder einer anderen Sprachfassung.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "18",
+          "region": "Abschnitt 3.4, Verweis auf den Fachhändler"
+        },
+        {
+          "doc": "DOC-KA-SN044",
+          "pages": "2",
+          "region": "Abschnitt „Technical support“ und Kontaktfußzeile"
+        }
+      ]
+    },
+    {
+      "problem": "Für die Anfrage soll eine komplette empfangene Beispiel-SMS kopiert werden.",
+      "correction": "Entfernen Sie Beispielkoordinaten, Kartenlinks und Rufnummern. Beschreiben Sie stattdessen den Meldungstyp nur semantisch und nennen Sie den beobachteten Zeitpunkt und Zustand.",
+      "sources": [
+        {
+          "doc": "DOC-BMA-SN044",
+          "pages": "12-13, 17",
+          "region": "Beispielmeldungen und Positionsbeispiel"
+        }
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "asset_key": "bma-sn044-s18-support-sn-feld",
+      "alt": "Supportabschnitt mit einem leeren Feld für die Seriennummer.",
+      "long_description": "Unter dem Abschnitt zur technischen Unterstützung fordert die Anleitung dazu auf, die Seriennummer für den Support bereitzuhalten. Darunter steht nur die Abkürzung SN mit einer freien Fläche. Ein Gerätebild, Pfeil oder Text zum Fundort und eine Erklärung des Nummernaufbaus fehlen.",
+      "steps_text": [
+        "Seriennummer nur dann notieren, wenn die Gerätekennzeichnung eindeutig ist.",
+        "Bei fehlendem Fundort nicht aus anderen Nummern ableiten.",
+        "Unsicherheit in der Supportanfrage ausdrücklich nennen."
+      ],
+      "asset_version": "quelle-original-2026-08-09",
+      "generation": "sn-001-044",
+      "source": {
+        "doc": "DOC-BMA-SN044",
+        "pages": "18",
+        "region": "Abschnitt 3.4, letzter Absatz und Feld „SN“"
+      }
+    }
+  ],
+  "tables_md": [
+    "| Für die Anfrage vorbereiten | Quelle |\n| --- | --- |\n| Problem und Zeitpunkt | DOC-BMA-SN044, PDF-Seite 18: technische Unterstützung |\n| Schalterstellung | DOC-BMA-SN044, PDF-Seiten 4 bis 5: Betriebsarten |\n| LED-Farbe und Blinkmuster | DOC-BMA-SN044, PDF-Seite 11: Status-LED |\n| Ergebnis der GPS-Diagnose, falls betroffen | DOC-BMA-SN044, PDF-Seite 7: GPS-Diagnose |\n| Seriennummer, nur wenn sicher erkannt | DOC-BMA-SN044, PDF-Seite 18, und DOC-KA-SN044, PDF-Seite 2: leere Seriennummernfelder |",
+    "| Dokumentierter Kontaktweg | Fundstelle | Geltung im Pilot |\n| --- | --- | --- |\n| Fachhändler | DOC-BMA-SN044, PDF-Seite 18; DOC-KA-SN044, PDF-Seite 2 | erster Anlaufpunkt |\n| www.thitronik.de | DOC-KA-SN044, PDF-Seite 2 | Quellenstand, vor dauerhafter Veröffentlichung aktualisieren |\n| kontakt@thitronik.de | DOC-KA-SN044, PDF-Seite 2 | Quellenstand, vor dauerhafter Veröffentlichung aktualisieren |"
+  ],
+  "sources": [
+    {
+      "doc": "DOC-BMA-SN044",
+      "pages": "1, 4-7, 10-18",
+      "region": "Titelseite, Diagnosegrundlagen, Beispiel-SMS, Bedienkapitel und technische Unterstützung",
+      "note": "Alle verwendeten Seiten wurden am 2026-08-09 bei 200 dpi neu gerendert und vollständig visuell gelesen. Die historische Telefonnummer und die historischen Öffnungszeiten auf Seite 18 wurden nicht in die Aufgabe übernommen."
+    },
+    {
+      "doc": "DOC-KA-SN044",
+      "pages": "1-2",
+      "region": "Gesamte Kurzanleitung, Supporttext, Seriennummernfeld und Kontaktfußzeile",
+      "note": "Beide Seiten wurden am 2026-08-09 bei 250 dpi neu gerendert und vollständig visuell gelesen."
+    }
+  ],
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "placeholder": false,
+  "change_reason": "Erstextraktion des Supportwegs für die Generation bis SN-044 aus DOC-BMA-SN044, insbesondere PDF-Seite 18, und DOC-KA-SN044, Seite 2. Die Bedienungsanleitung nennt zuerst den Fachhändler, eine historische Website, historische Öffnungszeiten und eine Telefonnummer; die Kurzanleitung nennt www.thitronik.de und kontakt@thitronik.de. Der Pilot veröffentlicht keine Telefonnummer, weil der aktuelle Supportkontakt unbestätigt ist und Rückfrage 3 beziehungsweise DSC-032 bereits eine beschädigte Nummer in einer anderen Fassung belegen. Die historischen BMA-Kontaktdaten werden nicht still als aktuell behandelt. Die beiden älteren Dokumente zeigen nur leere Seriennummernfelder und keine Fundort- oder Leseregel; DSC-023 bleibt deshalb wirksam. Keine Koordinate, Kartenadresse, Beispielrufnummer oder SMS-Befehlszeichenfolge wurde übernommen. Gegenprüfung gegen die Renderings am 2026-08-09 abgeschlossen."
+}

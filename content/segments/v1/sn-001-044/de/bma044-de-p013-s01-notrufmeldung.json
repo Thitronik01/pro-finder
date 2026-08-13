@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P013-S01-NOTRUFMELDUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Notrufmeldung in Betriebsart A",
+  "body_md": "Wird der Pro-finder in Betriebsart A verwendet und liegt an Pin 3 eine Spannung an, sendet das Gerät eine Notrufmeldung. Nach dem Versand wird die Masternummer zusätzlich angerufen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, erster Absatz Notruf-SMS einschließlich rotem Anrufhinweis",
+  "prev_context": "PDF-Seite 12 endet mit der Spannungswarnung und ihren Umschaltschwellen.",
+  "next_context": "Der folgende Absatz beschreibt eine für Smartphones aufbereitete Positionsmeldung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c085a22dd460143813cf5ce9d987f0a1850912b38a4f2768150a86f1266034c4",
+  "change_reason": "Auslösebedingung und zusätzlicher Anruf wurden ohne Koordinaten oder Gerätetext aus der Beispiel-SMS extrahiert.",
+  "discrepancy_refs": ["DSC-060", "DSC-063"]
+}

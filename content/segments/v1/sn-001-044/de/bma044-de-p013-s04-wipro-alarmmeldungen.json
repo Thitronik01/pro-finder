@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P013-S04-WIPRO-ALARMMELDUNGEN",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "meldungen",
+  "title": "Von der WiPro ausgelöste Alarmmeldungen",
+  "body_md": "| Meldungsart | Auslöser |\n|---|---|\n| Einbruchmeldung | Die WiPro meldet einen Einbruchalarm. |\n| Gasalarm | Die WiPro meldet einen Gasalarm. |\n| Manueller Alarm | Die WiPro wird durch das Auslösen eines Panikalarms aktiviert. |\n\nNach dem Versand jeder dieser Meldungen wird die Masternummer zusätzlich angerufen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, Absätze Einbruchmeldung, Gasalarm und Manueller Alarm einschließlich roter Anrufhinweise",
+  "prev_context": "Die Hilfe-SMS wird wegen ihrer widersprüchlichen Befehlsliste nur als Auslassung dokumentiert.",
+  "next_context": "PDF-Seite 14 wechselt von empfangenen Meldungen zur Steuerung der Alarmanlage.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:507fe24fbc96fb6cc640fe487b8581ff9cb3c587252caba5dd8d6bf05bd4975c",
+  "change_reason": "Die drei im Fließtext belegten WiPro-Ereignisse wurden quellennah und zugänglich zusammengeführt. Koordinaten, Guthabenwerte und abweichende Gerätetexte aus den Beispielbildern bleiben ausgelassen.",
+  "discrepancy_refs": ["DSC-060", "DSC-063"]
+}
