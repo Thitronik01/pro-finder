@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S05-UTC-UND-ALARMPOSITION",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "meldungen",
+  "title": "Die UTC-Zeit gehört zur Position, nicht zum Versand",
+  "body_md": "Weil die Position bei einem Alarm und aktiver Lichtmaschine fortlaufend abgefragt wird, stammt die zuletzt empfangene Position aus dem Moment unmittelbar vor Abbruch des GPS-Empfangs. Die in der Meldung enthaltene Uhrzeit in koordinierter Weltzeit entspricht immer der Zeit dieser zuletzt empfangenen Position, nicht dem Zeitpunkt des Versands.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.7, letzter Absatz",
+  "prev_context": "Zuvor steht der Absatz zur Wartezeit ohne GPS-Empfang.",
+  "next_context": "PDF-Seite 25 beginnt Kapitel 6 mit den technischen Daten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:906ed71bc85415f8ed164d31a14cd1e6573f80ce41b2ed96266ce66d82fd487c",
+  "change_reason": "Quellennahe Erstextraktion. Die Unterscheidung zwischen Positionszeit und Versandzeit ist der einzige Anhaltspunkt, an dem sich das Alter einer Position ablesen lässt - sie steht aber erst am Ende des Kapitels und nicht bei der Meldung selbst. Was aktive Lichtmaschine bedeutet, ob es einen Messpunkt oder eine Schwelle gibt und was ohne dieses Signal geschieht, sagt die Quelle nicht; die Uhrzeit wird zudem ohne Zeitzonenhinweis für Leserinnen und Leser in anderer Ortszeit angegeben.",
+  "discrepancy_refs": ["DSC-052"]
+}

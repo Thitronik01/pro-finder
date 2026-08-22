@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S01-WIPRO-PER-ANRUF",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "meldungen",
+  "title": "WiPro III in den Betriebsarten 2 und 3 per Anruf schalten",
+  "body_md": "In den Betriebsarten 2 und 3 lässt sich die WiPro III (safe.lock) per Anruf in den jeweils nächsten Zustand schalten, also von unscharf nach scharf und umgekehrt. Rufen Sie dazu die Rufnummer des Pro-finder an. Das Gerät beendet den Anruf automatisch, bevor eine kostenpflichtige Verbindung zustande kommt, und versendet nach erfolgreichem Schaltvorgang einen Statusbericht an den Anrufer.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.1, erste beide Absätze",
+  "prev_context": "PDF-Seite 20 endet mit der Meldung über den Diebstahl von Zubehör.",
+  "next_context": "Danach folgt der rote Hinweis zu den berechtigten Nummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ee85edc86e8e26f1f69ddb8afb2d1ff7e6af1fd95e7a925997ecfa7445f6203b",
+  "change_reason": "Quellennahe Erstextraktion. Die Überschrift der Quelle kündigt eine Steuerung per SMS an, der Abschnitt beschreibt jedoch ausschließlich einen Anruf - der Titel wurde deshalb nicht übernommen (DSC-041). Damit läuft auch der Verweis von PDF-Seite 19 ins Leere, der für Blinker und Sirene auf diesen Abschnitt zeigt. Weil der Anruf immer in den nächsten Zustand schaltet und die Quelle keine vorherige Zustandsanzeige nennt, ist ein Schaltvorgang ohne Kenntnis des Ausgangszustands blind; der Statusbericht kommt erst danach.",
+  "discrepancy_refs": ["DSC-041"]
+}

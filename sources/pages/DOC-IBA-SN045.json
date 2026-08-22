@@ -909,8 +909,8 @@
     },
     {
       "page": 15,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -927,7 +927,7 @@
       "discrepancies": [
         "Seitenzahl-Diskrepanz: PDF-Seite 15 traegt den Aufdruck 'Seite 13 von 23'"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "2.6 Pro-finder per SMS oder Anruf steuern",
         "2.7 Unterschiedliche Zielrufnummern",
@@ -971,12 +971,13 @@
       "terminology_findings": [
         "'Pro-finder' durchgehend korrekt gemaess Soll-Terminologie; 'Betriebsartenschalter' als Geraetebegriff verwendet"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 16,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -994,7 +995,7 @@
         "Seitenzahl-Diskrepanz: PDF-Seite 16 traegt den Aufdruck 'Seite 14 von 23'",
         "Inkonsistente Nummernformatierung innerhalb desselben Beispiels: 1. Nummer als '+ S 49 15122436169' (Vorwahl vom '+' getrennt, 'S' eingeschoben), 2. Nummer als '+49 17123456789' (Vorwahl zusammen), 3. Nummer als '+49 151 33546798' (zusaetzliches Leerzeichen in der Rufnummer) - obwohl laut Vorseite 'in der SMS duerfen keine Leerzeichen verwendet werden'; die Darstellungs-Leerzeichen sind laut Vorseite beabsichtigt, der erklaerende Hinweis steht jedoch nicht auf dieser Seite beim Beispiel"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "2 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [],
       "figures": [
         {
@@ -1032,12 +1033,13 @@
       "terminology_findings": [
         "Keine Produktnamen auf der Seite sichtbar (weder Pro-finder noch SN-Angaben); Kopfzeile zeigt 'THITRONIK'-Logo"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 17,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 10,
@@ -1054,7 +1056,7 @@
       "discrepancies": [
         "Die fuer das Loeschen benoetigte Stellung E ist nur im Fliesstext genannt; die sicherheitskritische Wirkung 'gesamter Zielrufnummernspeicher' wird nicht bereits am Schalterhinweis als irreversible Aktion gekennzeichnet."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["Beispiele fuer verschiedene Programmier-SMS:", "2.9 Zielrufnummern loeschen"],
       "figures": [
         {
@@ -1090,12 +1092,13 @@
       "terminology_findings": [
         "'Pro-finder', 'Nano-SIM-Karte' und 'Status-LED' entsprechen der verbindlichen Schreibweise."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 18,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1110,7 +1113,7 @@
         "Paginierungs-Diskrepanz: PDF-Seite 18 ist intern 'Seite 16 von 23'."
       ],
       "discrepancies": [],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "2 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["3 Betriebszustaende (Status-LED)"],
       "figures": [
         {
@@ -1145,12 +1148,13 @@
       "terminology_findings": [
         "'Status-LED' und 'Pro-finder' entsprechen der Soll-Terminologie; 'SIM-PIN' ist eindeutig geschrieben."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 19,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1167,7 +1171,7 @@
       "discrepancies": [
         "Die sichtbaren Kartenadressen verwenden den URI-Parameter 'g=' (z. B. http://maps.google.com/maps?g=054.49041,0009.8024); ihre Funktionsfaehigkeit ist im PDF nicht pruefbar, da auf dieser Seite keine Link-Annotation hinterlegt ist."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "5 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "4 Berichte, Meldungen und Warnungen",
         "Statusbericht:",
@@ -1212,12 +1216,13 @@
       "terminology_findings": [
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Geofencing' entsprechen der Soll-Schreibweise."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 20,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1235,7 +1240,7 @@
         "Beim sichtbaren Link der manuellen Alarmmeldung lautet die Koordinate http://maps.google.com/maps?g=054.49009,0009.80281; das hinterlegte /URI-Ziel ist dagegen auf http://maps.google.com/maps?g=054.49009,0009.802 verkuerzt. Sichtbarer Text und Klickziel stimmen nicht ueberein.",
         "Alle fuenf Kartenlinks sind im PDF doppelt annotiert, obwohl je SMS nur ein Link sichtbar ist."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "Positions-SMS fuer Smartphones:",
         "SMS mit Eingabehilfen:",
@@ -1276,12 +1281,13 @@
       "terminology_findings": [
         "'WiPro III (safe.lock)' und 'Pro-finder' entsprechen der Soll-Terminologie; der Beispiel-SMS-Text verwendet absichtlich ASCII-Umschriften ('Ungueltiger', 'Moeglich')."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 21,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1296,7 +1302,7 @@
         "Paginierungs-Diskrepanz: PDF-Seite 21 ist intern 'Seite 19 von 23'."
       ],
       "discrepancies": [],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "6 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["5 Funktionen", "5.1 Alarmanlage per SMS steuern", "5.2 Geofencing"],
       "figures": [],
       "tables": [],
@@ -1330,12 +1336,13 @@
       "terminology_findings": [
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Geofencing' entsprechen der Soll-Schreibweise."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 6 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 22,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1350,7 +1357,7 @@
         "Paginierungs-Diskrepanz: PDF-Seite 22 ist intern 'Seite 20 von 23'."
       ],
       "discrepancies": [],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "5.3 Statusbericht anfordern",
         "5.4 Position mit dem Smartphone abfragen",
@@ -1386,12 +1393,13 @@
       "terminology_findings": [
         "'Pro-finder', 'Statusbericht' und 'GPS-Status' sind konsistent; die Befehle 'status' und 'position' sind vor Uebersetzung zu schuetzen."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 23,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1408,7 +1416,7 @@
       "discrepancies": [
         "In allen drei sichtbaren Unterueberschriften fehlt typografisch ein Leerzeichen zwischen Abschnittsnummer und Titel ('5.5.1Ausgaenge', '5.5.2Ausgaenge', '5.5.3Ausgaenge')."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "2 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "5.5.1 Ausgaenge dauerhaft einschalten",
         "5.5.2 Ausgaenge gepulst (fuer eine Sekunde) einschalten",
@@ -1444,12 +1452,13 @@
       "terminology_findings": [
         "'Pro-finder' ist korrekt; die Kleinbuchstaben und Leerzeichen in den SMS-Befehlen sind als exakte, nicht zu uebersetzende Syntax zu behandeln."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 24,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1464,7 +1473,7 @@
         "Paginierungs-Diskrepanz: PDF-Seite 24 ist intern 'Seite 22 von 23'."
       ],
       "discrepancies": [],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "5 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["5.6 Anlernmodus starten", "5.7 Fahrzeug wiederfinden"],
       "figures": [],
       "tables": [],
@@ -1492,12 +1501,13 @@
       "terminology_findings": [
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Anlernmodus' sind konsistent; SMS-Befehle sind vor Uebersetzung zu schuetzen."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 25,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1514,7 +1524,7 @@
       "discrepancies": [
         "Firmenname im Konformitaetstext und Kontaktteil als 'Thitronik GmbH', waehrend die visuelle Marke im Logo 'THITRONIK' lautet; die unterschiedliche Funktion als juristischer Name/Marke wird nicht erklaert."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "6 Sonstiges",
         "6.1 Technische Daten",
@@ -1570,7 +1580,8 @@
       "terminology_findings": [
         "'Pro-finder', 'THITRONIK App' und 'Nano-SIM' entsprechen der Soll-Schreibweise; im juristischen Firmenname steht 'Thitronik GmbH'."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 26,

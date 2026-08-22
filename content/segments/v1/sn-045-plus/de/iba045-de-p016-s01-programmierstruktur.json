@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P016-S01-PROGRAMMIERSTRUKTUR",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "zielrufnummern",
+  "title": "Aufbau der Programmier-SMS als beschriftete Abbildung",
+  "body_md": "Die Seite besteht aus einer einzigen beschrifteten Abbildung. Sie zeigt eine Beispielnachricht in einer Zeile, unter der geschweifte Verbindungslinien die einzelnen Bestandteile benennen: die Ländervorwahl am Anfang, ein Kennzeichen für Smartphone-Zielrufnummern, dann die erste Zielrufnummer als Masternummer, gefolgt von der zweiten und dritten Zielrufnummer. Ein rot gesetzter Hinweis erklärt das Smartphone-Kennzeichen und weist darauf hin, es nur zu verwenden, wenn das Endgerät wirklich ein Smartphone ist.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Ganze Seite: Beispielzeile mit Unterstreichungen und geschweiften Verbindungslinien",
+  "prev_context": "PDF-Seite 15 endet mit der Formregel der Programmier-SMS.",
+  "next_context": "PDF-Seite 17 zeigt Beispiele für verschiedene Programmier-SMS.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:52e46744d21a101820cff771b8b83e9db227168afffa59d8c5a587446d96bd37",
+  "change_reason": "Die Abbildung ist der einzige Ort, an dem der Aufbau der Programmier-SMS dokumentiert ist, und besitzt keine Textalternative. Beschrieben werden Anordnung und Bedeutungsträger. Weder die Beispielrufnummern noch das Smartphone-Kennzeichen selbst sind übernommen. Bemerkenswert und sicherheitsrelevant: Die Abbildung erklärt das führende Zeichen ausdrücklich als Ländervorwahl-Präfix - nicht als Berechtigungskennzeichen. Genau dieselbe Stelle trägt laut den Beispielen auf PDF-Seite 17 aber auch die Berechtigung. Diese Doppelbelegung erklärt, warum die Regel niemandem auffällt; sie ist am 2026-08-22 in DSC-044 nachgetragen worden. Die uneinheitliche Unterstreichung der ersten gegenüber der zweiten und dritten Zielrufnummer ist unter DSC-051 vermerkt.",
+  "discrepancy_refs": ["DSC-044", "DSC-051"]
+}

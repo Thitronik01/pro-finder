@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S01-STATUSBERICHT-ANFORDERN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Statusbericht anfordern",
+  "body_md": "Der Statusbericht lässt sich jederzeit abrufen. Die Quelle nennt zwei Wege: eine Nachricht an die Rufnummer des Pro-finder oder einen Anruf. Der Anruf funktioniert außer in den Betriebsarten 2 und 3; der Pro-finder beendet ihn nach wenigen Freizeichen und antwortet mit einem Statusbericht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.3, erste vier Absätze",
+  "prev_context": "PDF-Seite 21 endet mit der Kopplung des Geofencings an die WiPro III.",
+  "next_context": "Danach folgen die Angaben zum GPS-Status im Statusbericht.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f7ee1fcddabe8287b349c42ca706b4015b33b642eddd72ea6d0075591645a64a",
+  "change_reason": "Quellennahe Erstextraktion; die Befehlszeichenfolge bleibt wegen BLK-005 ausgelassen. Die Ausnahme für die Betriebsarten 2 und 3 ist übernommen, weil dort derselbe Anruf die WiPro III schaltet - wer in diesen Stellungen einen Statusbericht per Anruf erwartet, schärft oder entschärft stattdessen die Alarmanlage. Diese Doppelbelegung des Anrufs ist der praktisch folgenreichste Punkt des Abschnitts.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S04-SPANNUNGSWARNUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Spannungswarnung und Standby-Modus",
+  "body_md": "Sinkt die Versorgungsspannung dauerhaft unter 11,2 V, schaltet der Pro-finder in den Standby-Modus, um die Batterie zu schonen, und versendet eine entsprechende Nachricht. Erst wenn die Spannung wieder über 12,5 V steigt, wechselt das Gerät zurück in den Normalbetrieb. In der Betriebsart B entfällt diese Warnung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Abschnitt „Spannungswarnung“ neben dem Beispielbild",
+  "prev_context": "Zuvor steht der Abschnitt zur Diebstahlmeldung.",
+  "next_context": "PDF-Seite 20 zeigt sechs weitere Meldungsarten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:adc8246466f9cc7c5347ab06f36d5b1dcd2bebc8349f1715d081edc520c7b381",
+  "change_reason": "Quellennahe Erstextraktion. Die Schwellen 11,2 V und 12,5 V sind erfasst und fachlich unbestätigt. Was der Standby-Modus für Ortung und Meldungen bedeutet, sagt die Quelle nicht - ob das Gerät dort noch meldet, bleibt offen. Ebenso wenig sagt sie, ob in der Betriebsart B nur die Warnung entfällt oder auch der Wechsel in den Standby (DSC-052). Die Gerätemeldung schreibt den Schwellenwert mit Punkt, der Fließtext daneben mit Komma (DSC-046).",
+  "discrepancy_refs": ["DSC-046", "DSC-052"]
+}

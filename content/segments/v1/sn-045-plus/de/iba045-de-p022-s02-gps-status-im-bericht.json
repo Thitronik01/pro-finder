@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S02-GPS-STATUS-IM-BERICHT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "GPS-Status und letzte gültige Position im Statusbericht",
+  "body_md": "Der Statusbericht überträgt zusätzlich den GPS-Status. Empfängt der Pro-finder eine gültige Position, wird nur die Position angezeigt. Wird keine gültige Position empfangen, weist der Statusbericht darauf hin und sendet dennoch die zuletzt gültige Position. Außerdem enthält er den Zustand beider Ausgänge und die Umgebungstemperatur in unmittelbarer Nähe des Geräts.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.3, Absatz unter der Anrufvariante",
+  "prev_context": "Zuvor stehen die beiden Wege, einen Statusbericht anzufordern.",
+  "next_context": "Danach folgt Abschnitt 5.4 zur Positionsabfrage mit dem Smartphone.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3c7b418d02d10da43d414a1805f77021fc8e17bd73b2bc96e8b18e346b6c79fc",
+  "change_reason": "Quellennahe Erstextraktion. Sicherheitskritisch ist die Aussage über die zuletzt gültige Position: Die Quelle nennt weder ihr Höchstalter noch eine Genauigkeit noch eine verpflichtende Kennzeichnung als nicht aktuell. Wer den Bericht liest, kann eine historische Position für den aktuellen Standort halten. Der Wortlaut der Statusmeldung selbst wird nicht wiedergegeben, weil er zum ungeklärten Gerätetext gehört. Die hier angekündigte Temperaturangabe fehlt im Beispielbild auf PDF-Seite 19 (DSC-045).",
+  "discrepancy_refs": ["DSC-045"]
+}

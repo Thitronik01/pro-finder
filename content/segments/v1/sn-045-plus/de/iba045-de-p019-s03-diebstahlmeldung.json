@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S03-DIEBSTAHLMELDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Die Diebstahlmeldung ist ein stiller Alarm",
+  "body_md": "Diese Meldung erhalten Sie, wenn sich das Fahrzeug bei aktivierter WiPro III (safe.lock) weiter als etwa 900 Meter vom ursprünglichen Standort entfernt. Bei einer Diebstahlmeldung handelt es sich um einen stillen Alarm: Weder Blinker noch Sirene werden aktiviert. Beides lässt sich laut Quelle nachträglich per SMS auslösen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Abschnitt „Diebstahlmeldung“ neben dem Beispielbild",
+  "prev_context": "Zuvor steht der Abschnitt zum Statusbericht.",
+  "next_context": "Danach folgt der Abschnitt zur Spannungswarnung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f52aede5a5646760e7c6121518867875404ebf399d2d4393bddb218015c5caac",
+  "change_reason": "Quellennahe Erstextraktion. Der Radius von etwa 900 Metern gilt ausschließlich für diese Generation; bis SN-044 nennen die Quellen andere Werte, und der französische Teil dort einen dritten (DSC-061, DSC-078). Es wird kein Wert übertragen. Die Bindung an eine aktivierte WiPro III steht hier ausdrücklich - sie ist der Kern von BLK-007. Der Verweis der Quelle auf Abschnitt 5.1 wurde nicht übernommen: Jener Abschnitt beschreibt ausschließlich einen Anruf und nennt weder Blinker noch Sirene (DSC-041). Wie sich Blinker und Sirene tatsächlich auslösen lassen, bleibt damit unbelegt.",
+  "discrepancy_refs": ["DSC-042", "DSC-041", "DSC-061"]
+}

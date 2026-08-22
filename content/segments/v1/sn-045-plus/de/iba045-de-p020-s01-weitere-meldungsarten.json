@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S01-WEITERE-MELDUNGSARTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "meldungen",
+  "title": "Sechs weitere Meldungsarten",
+  "body_md": "| Meldung | Auslöser laut Quelle |\n| --- | --- |\n| Positionsmeldung für Smartphones | Antwort auf eine Positionsabfrage. Der enthaltene Link öffnet eine Kartenansicht der aktuellen Fahrzeugposition. |\n| Eingabehilfe | Antwort auf eine Nachricht mit ungültigem Inhalt von einer Zielrufnummer. Die Antwort nennt mögliche korrekte Befehle. |\n| Einbruchmeldung | Wird immer gesendet, wenn die WiPro III (safe.lock) einen Alarm meldet. |\n| Gasalarm | Die WiPro III (safe.lock) meldet einen Gasalarm. |\n| Manueller Alarm | Die WiPro III (safe.lock) wird durch Auslösen eines Panikalarms aktiviert. |\n| Diebstahl von Zubehör | Die Funk-Kabelschleife der WiPro III (safe.lock) löst aus, etwa beim Diebstahl von damit gesichertem Campingzubehör. |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Fortsetzung mit sechs Meldungsabschnitten",
+  "prev_context": "PDF-Seite 19 zeigt Statusbericht, Diebstahl- und Spannungsmeldung.",
+  "next_context": "PDF-Seite 21 beginnt Kapitel 5 mit den Funktionen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e07801eee9ff8cf1b7a726cae0bd5898b338e9552f99ae80acd5d3432a8966e3",
+  "change_reason": "Die sechs Abschnitte wurden in eine Tabelle überführt. Vier der sechs Meldungen stammen nicht vom Pro-finder selbst, sondern von der WiPro III - ohne diese Komponente entfallen sie ersatzlos, was die Quelle nicht ausspricht. Die Gerätetexte der Beispielbilder sind nicht übernommen; sie ersetzen Umlaute durch Vokal und e, was auf eine Zeichensatzgrenze des Geräts hindeutet (DSC-054), und zwei von ihnen öffnen eine Klammer ohne Schließung (DSC-051).",
+  "discrepancy_refs": ["DSC-051", "DSC-054"]
+}

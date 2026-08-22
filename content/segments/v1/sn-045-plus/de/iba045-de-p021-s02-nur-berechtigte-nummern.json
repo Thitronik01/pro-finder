@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S02-NUR-BERECHTIGTE-NUMMERN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Nur berechtigte Nummern erhalten Zugriff",
+  "body_md": "Auf die Funktionen des Pro-finder können laut Quelle nur berechtigte Nummern zugreifen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.1, roter Hinweiskasten",
+  "prev_context": "Zuvor steht die Beschreibung der Alarmanlagensteuerung per Anruf.",
+  "next_context": "Danach beginnt Abschnitt 5.2 mit dem Geofencing.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b5758edf68a543def190dd6e68abcd00fde9f18a3a26de524adfc1d564166678",
+  "change_reason": "Quellennahe Erstextraktion. Der Hinweis ist die einzige Stelle in Kapitel 5, die die Zugriffsbeschränkung überhaupt erwähnt - woran das Gerät eine berechtigte Nummer erkennt, sagt auch sie nicht. Die Regel bleibt wegen BLK-006 unveröffentlicht (DSC-044). Das Segment gibt die Bedingung wieder, ohne sie erklärbar zu machen, weil ihr Wegfall den falschen Eindruck erzeugen würde, jede Nummer könne steuern.",
+  "discrepancy_refs": ["DSC-044"]
+}

@@ -12,8 +12,9 @@ Entscheidungszuordnung bleibt, und wechselt erst nach dieser Gegenprüfung auf
 
 ## Zweck und Geltungsbereich
 
-Das Paket bündelt die sechs P0-Segmente zu SIM-Karte, Inbetriebnahme und den
-anrufgesteuerten Funktionen aus DOC-IBA-SN045, deutschen PDF-Seiten 9, 13 und 14.
+Das Paket bündelt die zehn P0-Segmente zu SIM-Karte, Inbetriebnahme, Statusbericht und
+den anrufgesteuerten Funktionen aus DOC-IBA-SN045, deutschen PDF-Seiten 9, 13, 14, 17,
+21 und 22.
 Montage und elektrischer Anschluss stehen in P0-06; Betriebsarten, Geofencing und
 GPS-Diagnose in P0-07.
 
@@ -28,14 +29,18 @@ wegen BLK-006.
 
 ## Zugeordnete Segmente
 
-| Segment                                        | Thema                                      | Quelle               |
-| ---------------------------------------------- | ------------------------------------------ | -------------------- |
-| `IBA045-DE-P009-S02-ANRUF-LOEST-STATUSBERICHT` | Anruf als Auslöser, Berechtigungsvorbehalt | DOC-IBA-SN045, S. 9  |
-| `IBA045-DE-P009-S06-ANRUF-SCHALTET-WIPRO`      | WiPro III per Anruf scharf/unscharf        | DOC-IBA-SN045, S. 9  |
-| `IBA045-DE-P013-S01-SIM-FORMAT`                | freigeschaltete Nano-SIM                   | DOC-IBA-SN045, S. 13 |
-| `IBA045-DE-P013-S03-SIM-VORBEREITEN`           | vier Schritte am Mobilgerät                | DOC-IBA-SN045, S. 13 |
-| `IBA045-DE-P013-S04-SIM-EINSETZEN`             | Halterung auf der Platine, ESD-Symbol      | DOC-IBA-SN045, S. 13 |
-| `IBA045-DE-P014-S02-AKTIVIEREN`                | Inbetriebnahme, LED-Folge, Status-SMS      | DOC-IBA-SN045, S. 14 |
+| Segment                                         | Thema                                      | Quelle               |
+| ----------------------------------------------- | ------------------------------------------ | -------------------- |
+| `IBA045-DE-P009-S02-ANRUF-LOEST-STATUSBERICHT`  | Anruf als Auslöser, Berechtigungsvorbehalt | DOC-IBA-SN045, S. 9  |
+| `IBA045-DE-P009-S06-ANRUF-SCHALTET-WIPRO`       | WiPro III per Anruf scharf/unscharf        | DOC-IBA-SN045, S. 9  |
+| `IBA045-DE-P013-S01-SIM-FORMAT`                 | freigeschaltete Nano-SIM                   | DOC-IBA-SN045, S. 13 |
+| `IBA045-DE-P013-S03-SIM-VORBEREITEN`            | vier Schritte am Mobilgerät                | DOC-IBA-SN045, S. 13 |
+| `IBA045-DE-P013-S04-SIM-EINSETZEN`              | Halterung auf der Platine, ESD-Symbol      | DOC-IBA-SN045, S. 13 |
+| `IBA045-DE-P014-S02-AKTIVIEREN`                 | Inbetriebnahme, LED-Folge, Status-SMS      | DOC-IBA-SN045, S. 14 |
+| `IBA045-DE-P017-S02-SIM-VORAUSSETZUNG-LOESCHEN` | SIM-Karte für den Löschvorgang             | DOC-IBA-SN045, S. 17 |
+| `IBA045-DE-P021-S01-WIPRO-PER-ANRUF`            | WiPro III per Anruf, Betriebsarten 2 und 3 | DOC-IBA-SN045, S. 21 |
+| `IBA045-DE-P022-S01-STATUSBERICHT-ANFORDERN`    | zwei Wege, Ausnahme in 2 und 3             | DOC-IBA-SN045, S. 22 |
+| `IBA045-DE-P022-S02-GPS-STATUS-IM-BERICHT`      | GPS-Status, letzte gültige Position        | DOC-IBA-SN045, S. 22 |
 
 Als P1-Gegenbelege stehen daneben `IBA045-DE-P013-S02-SIM-AUSWAHL` (Prepaid-Aufladeweg)
 und `IBA045-DE-P014-S03-NUMMER-SPEICHERN` (Adressbucheintrag).
@@ -68,6 +73,15 @@ und `IBA045-DE-P014-S03-NUMMER-SPEICHERN` (Adressbucheintrag).
 | P0-08-C3 | Mit der App entfallen laut Quelle die Schritte der Kapitel 2.5 bis 2.8.      | DOC-IBA-SN045, S. 14, Abschnitt 2.4 | Trifft nicht zu: Kapitel 2.5 verlangt einen Adressbucheintrag am Telefon samt Ländervorwahl, den keine App übernimmt. Die Erreichbarkeit des Geräts hängt daran. | DSC-043, Rückfrage 13 | Klären, welche Schritte die App tatsächlich ersetzt, und den Satz korrigieren lassen. |
 | P0-08-C4 | Nach dem Speichern blinkt die LED grün und das Gerät sendet eine Status-SMS. | DOC-IBA-SN045, S. 14, Abschnitt 2.4 | Was geschieht, wenn die Nachricht nicht ankommt oder nur teilweise verarbeitet wird, sagt die Quelle nicht. Ein Fehlerzustand ist nicht dokumentiert.            | DSC-045               | Fehlerfall, Wiederholweg und erkennbaren Endzustand der Inbetriebnahme festlegen.     |
 
+## D. Der Anruf als doppelt belegter Bedienweg
+
+| ID       | Zu prüfende Aussage                                                                                                                                           | Genaue Quelle ab SN-045             | Gegenquelle oder offene Lücke                                                                                                                                         | DSC / Rückfrage  | Benötigte THITRONIK-Entscheidung                                                     |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------ |
+| P0-08-D1 | **Derselbe Anruf tut je nach Schalterstellung Verschiedenes.** In den Betriebsarten 2 und 3 schaltet er die WiPro III, sonst löst er einen Statusbericht aus. | DOC-IBA-SN045, S. 21 und 22         | Wer in den Stellungen 2 oder 3 einen Statusbericht per Anruf erwartet, schärft oder entschärft stattdessen die Alarmanlage. Die Quelle stellt beides nicht gegenüber. | DSC-052          | Die Doppelbelegung des Anrufs bewerten und eine erkennbare Rückmeldung festlegen.    |
+| P0-08-D2 | Das Gerät beendet den Anruf, bevor eine kostenpflichtige Verbindung zustande kommt.                                                                           | DOC-IBA-SN045, S. 21, Abschnitt 5.1 | Kein Timeout, keine Angabe zur Anzahl der Freizeichen, keine Aussage über Roaming oder ausländische Netze.                                                            | keine eigene DSC | Zeitverhalten und Kostenfreiheit je Netz bestätigen.                                 |
+| P0-08-D3 | Abschnitt 5.1 heißt „per SMS", beschreibt aber ausschließlich einen Anruf.                                                                                    | DOC-IBA-SN045, S. 21, Überschrift   | Damit läuft auch der Verweis von S. 19 ins Leere, der für Blinker und Sirene auf diesen Abschnitt zeigt.                                                              | DSC-041          | Überschrift korrigieren lassen und den fehlenden SMS-Weg nachliefern oder streichen. |
+| P0-08-D4 | Der Statusbericht enthält den GPS-Status und die zuletzt gültige Position.                                                                                    | DOC-IBA-SN045, S. 22, Abschnitt 5.3 | Ohne Altersangabe und ohne Genauigkeit; siehe P0-07-D5.                                                                                                               | DSC-045          | Kennzeichnung der Aktualität festlegen (gemeinsam mit P0-07-D5 entscheiden).         |
+
 ## Reviewprotokoll
 
 | ID-Gruppe       | Entscheidung je ID | Spezifikation | Geltungsbereich / Revision | Beleg   | Reviewer, Rolle, Datum |
@@ -75,13 +89,14 @@ und `IBA045-DE-P014-S03-NUMMER-SPEICHERN` (Adressbucheintrag).
 | P0-08-A1 bis A4 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 | P0-08-B1 bis B5 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 | P0-08-C1 bis C4 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
+| P0-08-D1 bis D4 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 
 ## Exit-Kriterien
 
-- Die PDF-Seiten 9, 13 und 14 stehen auf `validated`; alle sechs Segmente haben eine
+- Die PDF-Seiten 9, 13, 14, 17, 21 und 22 stehen auf `validated`; alle zehn Segmente haben eine
   unabhängige Gegenprüfung. **Erst dann** wechselt dieses Paket auf
   „bereit für Fachreview".
-- Jede der 13 Einzelentscheidungen besitzt Firmware-/Technikbeleg, Geltungsbereich und
+- Jede der 17 Einzelentscheidungen besitzt Firmware-/Technikbeleg, Geltungsbereich und
   verantwortliche Rolle.
 - Die Berechtigungsregel (A2) ist entschieden; bis dahin nennt die HTML-Anleitung weder
   ein Berechtigungszeichen noch eine daraus abgeleitete Regel (BLK-006).

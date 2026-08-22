@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S03-KONFORMITAET",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "technische-daten",
+  "title": "Die Konformitätsangabe bleibt Quellenstand",
+  "body_md": "Die Quelle nennt eine Konformitätserklärung des Herstellers zu einer namentlich genannten europäischen Richtlinie und verweist für die ausführliche Fassung auf einen Download auf der Herstellerwebsite. Weder die Erklärung noch die Adresse werden hier als aktueller Stand wiedergegeben.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.3 mit CE-Zeichen und Downloadverweis",
+  "prev_context": "Zuvor stehen die Entsorgungshinweise.",
+  "next_context": "Danach folgt Abschnitt 6.4 zur technischen Unterstützung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1cac6f9786833479b26a93ca49f1fae0bc17820a24c8a524a08cfb955d7e00f1",
+  "change_reason": "Eine Konformitätsangabe ist eine Rechtsaussage mit Datum. Die Generation bis SN-044 nennt an derselben Stelle eine ältere, inzwischen abgelöste Richtlinie, und drei nichtdeutsche Fassungen jener Generation nennen sogar eine Richtlinie, die es nie gab (DSC-071). Der Pilot gibt deshalb keine Konformitätsaussage als gültig wieder und übernimmt auch die Downloadadresse nicht, weil sie unter BLK-004 zu den zu bestätigenden Kontaktdaten gehört.",
+  "discrepancy_refs": ["DSC-071", "DSC-069"]
+}

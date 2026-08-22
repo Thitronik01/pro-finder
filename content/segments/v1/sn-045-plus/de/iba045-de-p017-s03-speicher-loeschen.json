@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S03-SPEICHER-LOESCHEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Zielrufnummernspeicher am Gerät löschen",
+  "body_md": "Um den gesamten Zielrufnummernspeicher zu löschen, gehen Sie wie folgt vor:\n\n1. Ziehen Sie den Hauptkabelbaum ab.\n2. Stellen Sie den Betriebsartenschalter auf die Position E.\n3. Stecken Sie den Hauptkabelbaum wieder ein und warten Sie, bis die Status-LED gelb und grün blinkt.\n4. Stellen Sie den Betriebsartenschalter zurück auf die Ausgangsposition.\n\nDer Speicher ist danach leer und kann mit einer neuen Programmiernachricht neu belegt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.9, Aufzählung und Abschlussabsatz",
+  "prev_context": "Zuvor steht der Hinweis, dass die SIM-Karte eingelegt sein muss.",
+  "next_context": "Danach folgt der Hinweis auf das Überschreiben durch die Masternummer.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:413a2386ba571ba548e1f79caeddacff4fe0367c1e2afb43ea8f00115a2a1046",
+  "change_reason": "Die Aufzählung der Quelle verwendet Aufzählungspunkte, obwohl die Reihenfolge zwingend ist; sie wurde deshalb zu einer nummerierten Liste. Der Begriff Hauptkabelbaum bleibt stehen, obwohl die Quelle ihn nirgends erklärt und keiner Marke der Anschlussabbildung zuordnet (DSC-050) - er ist der einzige Anhaltspunkt, den die Quelle gibt. Die LED-Angabe der Quelle lautet an dieser Stelle gelb/grün, an anderer gelb-grün und in der Kurzanleitung grün/gelb (DSC-050).",
+  "discrepancy_refs": ["DSC-050"]
+}

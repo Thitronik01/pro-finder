@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S06-GEOFENCING-BEFEHLE-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "geofencing",
+  "title": "Die Geofencing-Befehle bleiben gesperrt",
+  "body_md": "Die Quelle nennt in diesem Abschnitt zwei Nachrichtentexte zum Ein- und Ausschalten des Geofencings sowie die Rufnummer des Pro-finder als Ziel. Die Zeichenfolgen werden hier nicht wiedergegeben.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.2, dritter und vierter Absatz",
+  "prev_context": "Die Steuerwege stehen im vorangehenden Segment.",
+  "next_context": "Danach folgt der rote Hinweis zur Kopplung an die WiPro III.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3580c31324c59a78f7204744b079409eeecdbba620203d8b8f4e400e8c889d36",
+  "change_reason": "Ausgelassen wegen BLK-005. Zehn geprüfte Sprachfassungen ergeben zehn Befehlsprofile, und dieselben Zeichenfolgen widersprechen sich in der schwedischen Fassung sogar innerhalb eines Kapitels (DSC-085). Ein abgelehnter Befehl erzeugt keine Fehlermeldung, sondern nur die Eingabehilfe - das Geofencing bliebe unbemerkt im falschen Zustand. Die Quelle nennt das Ziel hier als Nummer des Pro-finder, an anderer Stelle als Nummer des GSM-Moduls (DSC-050).",
+  "discrepancy_refs": ["DSC-033", "DSC-085", "DSC-050"]
+}

@@ -324,9 +324,18 @@ Wortdopplung „via SMS via SMS", beide ebenfalls sprachübergreifend.
 
 ## 9. Meldet der Pro-finder einen Diebstahl auch ohne WiPro III? (blockierend für Geofencing)
 
-Die Quelle sagt an zwei Stellen Unterschiedliches. Seite 19 knüpft die Diebstahlmeldung an
-eine „aktivierte WiPro III (safe.lock)". Seite 21 beschreibt Geofencing dagegen ohne jeden
-Bezug darauf – geschaltet über Pin 3 oder per SMS.
+> **Korrektur 2026-08-22.** Diese Frage war bisher zu weit gestellt. Sie behauptete, Seite
+> 21 beschreibe Geofencing „ohne jeden Bezug" auf die WiPro III und die ältere Anleitung
+> beantworte deshalb etwas, das die neuere offen lasse. Die vollständige Extraktion der
+> Seite 21 zeigt: **Beide Regeln stehen auch dort** – der Steuerweg nach Schalterstellung
+> im Fließtext und die Kopplung an den Schärfzustand in einem roten Hinweiskasten. Die
+> Teilfragen 2 und 3 unten sind damit weitgehend erledigt; es bleibt eine engere, dafür
+> umso wichtigere Frage. Siehe DSC-042 und DSC-062.
+
+Seite 19 knüpft die Diebstahlmeldung an eine „aktivierte WiPro III (safe.lock)". Seite 21
+regelt Geofencing über Pin 3 in den Schalterstellungen 8 und B, in allen anderen per SMS,
+und hält in einem roten Kasten fest, dass Geofencing bei scharfer WiPro III automatisch
+aktiv und bei unscharfer automatisch inaktiv ist.
 
 **Die Fragen:**
 
@@ -351,9 +360,18 @@ Handbuchs bis SN-044 regelt genau das, was die neuere Fassung offen lässt:
 > „Ist WiPro geschärft, ist Geofencing automatisch aktiviert und muss nicht per SMS
 > eingeschaltet werden."
 
-**Die zusätzliche Frage:** Gilt diese Regel ab SN-045 unverändert fort? Wir übertragen sie
-**nicht** von selbst – der Projektauftrag verbietet, die Generationen zu vermischen. Eine
-Bestätigung würde Frage 2 unmittelbar schließen und BLK-007 auflösen.
+**Die zusätzliche Frage entfällt.** Sie lautete: Gilt diese Regel ab SN-045 unverändert
+fort? Die Antwort steht seit dem 2026-08-22 fest – **sie steht dort im eigenen Recht**, in
+DOC-IBA-SN045 auf Seite 21. Es muss nichts übertragen werden.
+
+**Was jetzt noch zählt – zwei Punkte statt vier:**
+
+1. **Meldet ein Pro-finder ohne WiPro III einen Diebstahl?** Das ist unverändert offen und
+   der eigentliche Grund für BLK-007. Keine Stelle der Quelle beantwortet es.
+2. **Was gewinnt: Kopplung oder Schaltweg?** Wenn eine unscharfe WiPro III das Geofencing
+   automatisch deaktiviert, was bewirkt dann das Einschalten per SMS in den übrigen
+   Schalterstellungen? Beide Sätze stehen unmittelbar untereinander auf Seite 21, ohne
+   dass die Quelle ihr Verhältnis benennt.
 
 Ungeklärt bleibt sie auch bis SN-044 in einem Punkt: Seite 7 empfiehlt, Geofencing beim
 Abstellen in Gebäuden abzuschalten, ohne zu erwähnen, dass damit die Diebstahlmeldung
@@ -563,7 +581,16 @@ Frage: Gilt die ältere Vorgabe für Altgeräte fort, oder ist sie überholt? Un
 PIN-Abfrage ab SN-045 deaktiviert wird – welcher Schutz tritt an ihre Stelle, wenn die
 Karte aus dem Gerät entnommen wird?
 
-_Beleg: Seitenrecords DOC-BMA-SN044, S. 8, 11 und 26; DOC-IBA-SN045, S. 13_
+**Zweiter Nachtrag 2026-08-22 – das Gerät selbst zeigt die Umkehrung an.** Die
+LED-Übersicht auf Seite 18 von DOC-IBA-SN045 führt den Zustand „blinkt rot/grün" mit der
+Bedeutung **„SIM-PIN nicht deaktiviert"**. Dieselbe Blinkfolge bedeutet bis SN-044 **„PIN
+ist nicht 0000"**. Ein und dieselbe Anzeige verlangt in der einen Generation eine gesetzte
+PIN und in der anderen eine abgeschaltete PIN-Abfrage. Wer ein Gerät nach der Anleitung
+der falschen Generation einrichtet, deutet die Anzeige exakt verkehrt herum und hält den
+Fehlerzustand für den Sollzustand.
+
+_Beleg: Seitenrecords DOC-BMA-SN044, S. 8, 11 und 26; DOC-IBA-SN045, S. 13 und 18;
+DSC-047_
 
 ---
 
@@ -704,6 +731,14 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Abschnitt 2.5 empfiehlt zwei verschiedene Adressbuchnamen auf einer Seite (ALARM im Fließtext, AAlarm im Tipp-Kasten)                                                                                        | DSC-050, S. 14                  |
 | Zeile D der Betriebsartentabelle wiederholt den Produktnamen doppelt; beide Klammerzusätze sind ohne Konjunktion gesetzt – die englische Fassung ist hier fehlerfrei                                         | DSC-051, S. 10 und 34           |
 | Auch ab SN-045 nennt das Anschlusskapitel 12 V DC, die technische Tabelle einen Bereich – derselbe Widerspruch wie bis SN-044                                                                                | DSC-069, S. 11 und 25           |
+| **Korrektur:** Die Kopplung an den WiPro-Schärfzustand und der Steuerweg nach Schalterstellung stehen auch ab SN-045 – Rückfrage 9 verengt sich auf zwei Punkte                                              | DSC-042, DSC-062, S. 21         |
+| **Korrektur:** Auch die neuere Fassung nennt eine Sendeangabe (2G/3G/4G mit Bandlisten) – die Behauptung, nur die ältere tue das, war falsch                                                                 | DSC-069, S. 25                  |
+| Dieselbe Zeichenstelle trägt Ländervorwahl **und** Berechtigung – das erklärt, warum die Regel seit zwei Generationen unausgesprochen bleibt                                                                 | DSC-044, S. 16 und 17           |
+| „Blinkt rot/grün" bedeutet ab SN-045 „SIM-PIN nicht deaktiviert", bis SN-044 „PIN ist nicht 0000" – gegenläufige Erwartung bei gleicher Anzeige                                                              | DSC-047, Rückfrage 15, S. 18    |
+| Neun LED-Zustände ab SN-045, alle nur über Farbe unterscheidbar – derselbe Befund wie DSC-059 bis SN-044                                                                                                     | DSC-047, S. 18                  |
+| Der manuelle Alarm hat zwei verschiedene Auslöser: Pin 3 am Pro-finder (Kapitel 1) gegen Panikalarm der WiPro III (Kapitel 4)                                                                                | DSC-052, S. 9 und 20            |
+| Der Anlernmodus der Alarmanlage lässt sich per SMS aus der Ferne starten – ohne Zeitbegrenzung und ohne Rückmeldung                                                                                          | DSC-052, S. 24                  |
+| Drei von neun Meldungen rufen zusätzlich die Masternummer an – ausgerechnet die Diebstahlmeldung nicht                                                                                                       | DSC-052, S. 20                  |
 
 Die PDF-Seitenprüfung ist abgeschlossen. Neue Funde entstehen jetzt aus der
 Aufgabenextraktion, den noch offenen Synthese-Auswertungen und den fachlichen Reviews;

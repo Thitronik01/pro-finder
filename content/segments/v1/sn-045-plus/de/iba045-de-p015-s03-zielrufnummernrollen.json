@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S03-ZIELRUFNUMMERNROLLEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "zielrufnummern",
+  "title": "Drei Arten von Zielrufnummern",
+  "body_md": "Zielrufnummern sind die Telefonnummern, die im Alarmfall benachrichtigt werden sollen. Es lassen sich bis zu zehn Nummern speichern. Die Quelle unterscheidet drei Arten:\n\n| Art | Berechtigung laut Quelle |\n| --- | --- |\n| Masternummer | Die Telefonnummer, die beim Speichern der Zielrufnummern an erster Stelle steht. Über diese Nummer lassen sich jederzeit und ohne Zugriff auf den Betriebsartenschalter neue Zielrufnummern programmieren. |\n| Autorisierte Nummern | Dürfen die Ausgänge des Pro-finder per SMS steuern und Statusberichte anfordern. |\n| Nicht autorisierte Nummern | Haben keinen Zugriff auf die Funktionen des Geräts und erhalten lediglich Statusmeldungen. |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.7, dreizeilige Definitionstabelle",
+  "prev_context": "Zuvor steht der Hinweis auf die Kosten jeder Meldung.",
+  "next_context": "Danach beginnt Abschnitt 2.8 mit dem Aufbau der Programmier-SMS.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:31c328eeff18ad619d52a1a1e7d466d5d3f1a9c0b7bc91a672e34e7035792b76",
+  "change_reason": "Die Definitionsliste der Quelle wurde in eine Markdown-Tabelle überführt; kein Inhalt wurde verändert. Entscheidend und in der Quelle nicht ausgesprochen: Wie eine Nummer in eine dieser drei Stufen gelangt, sagt der Abschnitt nicht. Die Regel ist ausschließlich aus den Beispielzeilen auf PDF-Seite 17 erschließbar und bleibt deshalb unter BLK-006 unveröffentlicht (DSC-044). Die Quelle bezeichnet den Pro-finder hier als Anlage - dieselbe Unschärfe wie im Haftungsausschluss (DSC-050).",
+  "discrepancy_refs": ["DSC-044", "DSC-050"]
+}

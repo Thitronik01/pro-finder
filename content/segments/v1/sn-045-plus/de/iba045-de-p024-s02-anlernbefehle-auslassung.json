@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S02-ANLERNBEFEHLE-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "meldungen",
+  "title": "Die Befehle für den Anlernmodus bleiben gesperrt",
+  "body_md": "Die Quelle nennt zwei Nachrichtentexte zum Aktivieren und Deaktivieren des Anlernmodus. Beide werden hier nicht wiedergegeben.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.6, kursive Befehlszeilen",
+  "prev_context": "Die Wirkung des Anlernmodus steht im vorangehenden Segment.",
+  "next_context": "Danach folgt Abschnitt 5.7 zum Wiederfinden des Fahrzeugs.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d2652c4217854fa385e21320d030ad1228881e76133eafed38b8ecea7b5e6bc6",
+  "change_reason": "Ausgelassen wegen BLK-005. Der Anlernbefehl ist zugleich die Zeichenfolge mit der größten Streuung zwischen den Sprachfassungen - jede der zehn geprüften Fassungen schreibt ihn anders (DSC-033). Weil er eine Sicherheitsfunktion öffnet, wiegt eine falsche Wiedergabe hier schwerer als bei anderen Befehlen.",
+  "discrepancy_refs": ["DSC-033"]
+}

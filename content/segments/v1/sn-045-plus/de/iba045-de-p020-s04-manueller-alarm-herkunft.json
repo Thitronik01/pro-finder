@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S04-MANUELLER-ALARM-HERKUNFT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Der manuelle Alarm hat in der Quelle zwei verschiedene Auslöser",
+  "body_md": "Die Quelle beschreibt den manuellen Alarm an zwei Stellen unterschiedlich. In Kapitel 1 entsteht er im Pro-finder selbst, wenn in einer bestimmten Betriebsart Spannung an einem Eingang anliegt, etwa über einen Taster. In Kapitel 4 entsteht dieselbe Meldung dagegen, wenn die WiPro III (safe.lock) durch Auslösen eines Panikalarms aktiviert wird. Welcher der beiden Wege gilt oder ob beide zur selben Meldung führen, sagt die Quelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Abschnitt „Manueller Alarm“ gegen PDF-Seite 9, Funktionsgruppe „Manueller Alarm bei Spannung an Pin 3“",
+  "prev_context": "Zuvor steht der Abschnitt zum Gasalarm.",
+  "next_context": "Danach folgt der Abschnitt zum Diebstahl von Zubehör.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:537794fa606c617599817689f25d8336c8b474c14e87467d7b59599c1209f1ed",
+  "change_reason": "Am 2026-08-22 bei der Extraktion dieser Seite gefunden und in DSC-052 aufgenommen. Der Unterschied ist praktisch bedeutsam: Im ersten Fall genügt ein Taster am Pro-finder, im zweiten wird eine WiPro III mit Panikalarmfunktion vorausgesetzt. Wer sich auf den Tasterweg verlässt, aber keine WiPro III besitzt, kann nach der Lesart von Kapitel 4 keinen manuellen Alarm auslösen. Das Segment nennt keinen der beiden Wege als gesichert.",
+  "discrepancy_refs": ["DSC-052"]
+}

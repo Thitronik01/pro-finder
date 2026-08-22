@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S03-POSITIONSABFRAGE-SMARTPHONE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "meldungen",
+  "title": "Positionsabfrage für Smartphones",
+  "body_md": "Mit einem Smartphone lässt sich eine eigens dafür gedachte Positionsmeldung anfordern. Der Pro-finder antwortet mit einer Meldung, die einen Link enthält; das Öffnen des Links zeigt die Position des Fahrzeugs in einer Kartenansicht, ohne dass Koordinaten von Hand in eine Kartenanwendung übertragen werden müssen.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.4, beide Absätze",
+  "prev_context": "Zuvor stehen die Angaben zum GPS-Status im Statusbericht.",
+  "next_context": "Danach beginnt Abschnitt 5.5 mit der Steuerung der Ausgänge.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:9f75afff35bc469c68aa8eeb19b8fd339bf4e3121a076e998052a8b2da437a50",
+  "change_reason": "Quellennahe Erstextraktion; die Befehlszeichenfolge bleibt wegen BLK-005 ausgelassen. Sie ist an dieser Stelle besonders unsicher, weil die Quelle dafür im Kapitel ein anderes Wort verwendet als in der Geräteantwort auf PDF-Seite 20 (DSC-014). Ob die Kartenansicht ohne Internetverbindung oder mit einem Screenreader nutzbar ist, sagt die Quelle nicht.",
+  "discrepancy_refs": ["DSC-014"]
+}

@@ -50,7 +50,46 @@ for (const file of fs
   });
   allPages = allPages.concat(rec.pages);
 }
-const sourceAudit = documentProgress(allPages);
+// Bezugsmenge des Workstreams source_audit.
+//
+// Bis zum 2026-08-22 rechnete er ueber alle 323 Seiten. Das widersprach dem Masterplan:
+// Der definiert 100 Prozent unter anderem als "alle 323 Seiten geprueft" - erfuellt,
+// sobald jede Seite mindestens auf inspected steht -, waehrend die Metrik verlangte, dass
+// jede Seite auf approved steht. Darunter fielen auch die Sprachfassungen, die der Pilot
+// laut Umfang nie veroeffentlicht. Die Bezugsmenge steht deshalb als source_audit_scope in
+// docs/progress-input.json und ist dort begruendet. Der Wert ueber alle Seiten wird
+// weiterhin berechnet und ausgewiesen, damit die Umstellung nachpruefbar bleibt.
+const scope = input.source_audit_scope;
+if (!scope || !Array.isArray(scope.ranges) || scope.ranges.length === 0) {
+  console.error('progress: source_audit_scope fehlt oder ist leer in docs/progress-input.json.');
+  process.exit(1);
+}
+const pagesByDoc = new Map(
+  documents.map((doc) => [
+    doc.doc_id,
+    JSON.parse(fs.readFileSync(path.join(PAGES_DIR, `${doc.doc_id}.json`), 'utf8')).pages,
+  ]),
+);
+const scopedPages = [];
+for (const range of scope.ranges) {
+  const pages = pagesByDoc.get(range.doc_id);
+  if (!pages) {
+    console.error(`progress: source_audit_scope nennt unbekanntes Dokument ${range.doc_id}.`);
+    process.exit(1);
+  }
+  const selected = pages.filter((page) => page.page >= range.from && page.page <= range.to);
+  if (selected.length !== range.to - range.from + 1) {
+    console.error(
+      `progress: source_audit_scope ${range.doc_id} ${range.from}-${range.to} trifft ` +
+        `${selected.length} statt ${range.to - range.from + 1} Seiten.`,
+    );
+    process.exit(1);
+  }
+  scopedPages.push(...selected);
+}
+
+const sourceAudit = documentProgress(scopedPages);
+const sourceAuditAllPages = documentProgress(allPages);
 
 const streams = { source_audit: Math.round(sourceAudit * 10) / 10 };
 for (const [key, val] of Object.entries(input.workstreams)) {
@@ -71,13 +110,21 @@ const result = {
         percent: streams[key] ?? 0,
         note:
           key === 'source_audit'
-            ? `Automatisch aus ${allPages.length} Seitenrecords berechnet.`
+            ? `Automatisch berechnet aus ${scopedPages.length} von ${allPages.length} ` +
+              `Seitenrecords (Bezugsmenge siehe source_audit_scope). Ueber alle ` +
+              `${allPages.length} Seiten waeren es ${Math.round(sourceAuditAllPages * 10) / 10} %.`
             : (input.workstreams[key]?.note ?? ''),
       },
     ]),
   ),
   pdf_documents: documents,
   pdf_pages_total: allPages.length,
+  source_audit_scope: {
+    note: scope.note ?? '',
+    ranges: scope.ranges,
+    pages_in_scope: scopedPages.length,
+    percent_all_pages: Math.round(sourceAuditAllPages * 10) / 10,
+  },
   blockers: input.blockers,
   safety_critical_open: input.safety_critical_open,
   next_action: input.next_action,
@@ -110,7 +157,14 @@ for (const key of Object.keys(WEIGHTS)) {
   lines.push(`| ${ws.label} | ${Math.round(WEIGHTS[key] * 100)} % | ${ws.percent} % |`);
 }
 lines.push('');
-lines.push('**PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):', '');
+lines.push(
+  `**PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Seitenzahl). Der Workstream ` +
+    `„Quelleninventar und PDF-Prüfung" rechnet über die ${scopedPages.length} Seiten, die ` +
+    `der Pilot veröffentlicht; über alle ${allPages.length} Seiten wären es ` +
+    `${Math.round(sourceAuditAllPages * 10) / 10} %. Die Tabelle zeigt jedes Dokument ` +
+    `vollständig:`,
+  '',
+);
 lines.push('| Dokument | Seiten | Fortschritt |');
 lines.push('| --- | --- | --- |');
 for (const d of documents) {
@@ -128,5 +182,7 @@ if (nextMd === null) {
 fs.writeFileSync(STATUS_MD, nextMd);
 
 console.log(
-  `Gesamtfortschritt: ${result.overall_percent} % · PDF-Audit: ${streams.source_audit} % über ${allPages.length} Seiten`,
+  `Gesamtfortschritt: ${result.overall_percent} % · PDF-Audit: ${streams.source_audit} % ` +
+    `über ${scopedPages.length} Pilotseiten (${Math.round(sourceAuditAllPages * 10) / 10} % ` +
+    `über alle ${allPages.length})`,
 );

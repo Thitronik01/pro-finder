@@ -1,6 +1,6 @@
 # Masterplan: THITRONIK Pro-finder Barrierefreiheits-Pilot
 
-Stand: 2026-08-06. Dieser Plan ist die operative Kurzfassung des finalen Projektauftrags.
+Stand: 2026-08-22. Dieser Plan ist die operative Kurzfassung des finalen Projektauftrags.
 Er ersetzt weder Quellenprüfung noch technische, sprachliche oder rechtliche Freigaben.
 
 ## 1. Ziel und Nicht-Ziele
@@ -73,6 +73,18 @@ Widersprüche und nächste Aktion festgehalten. Statuswerte: `not_started` 0 %, 
 erreichten Wert. Arbeit erfolgt in Batches von 10–20 Seiten; danach werden Status und
 Wiedereinstieg aktualisiert.
 
+**Bezugsmenge des Fortschritts (Präzisierung 2026-08-22).** Alle 323 Seiten werden
+gesichtet, inventarisiert und auf Widersprüche geprüft – daran ändert sich nichts. Der
+Workstream „Quelleninventar und PDF-Prüfung" rechnet seinen Prozentwert aber über die
+Seiten, die der Pilot tatsächlich veröffentlicht: die deutschen Masterquellen beider
+Generationen, den englischen Teil ab SN-045 als Gegenquelle des Übersetzungspiloten und
+beide Kurzanleitungen. Grund: Die frühere Rechnung über alle 323 Seiten verlangte, dass
+auch die acht Sprachfassungen den Status `approved` erreichen, die der Pilot laut Abschnitt 1
+gar nicht zum Umfang zählt – nach dieser Metrik wäre der Pilot nie fertig, obwohl er sein
+Ziel erreicht hätte. Die Bezugsmenge steht mitsamt Begründung als `source_audit_scope` in
+`progress-input.json`; der Wert über alle 323 Seiten wird weiterhin ausgewiesen, damit die
+Umstellung nachprüfbar bleibt.
+
 ## 6. Content- und Übersetzungsworkflow
 
 Der kanonische Task-Layer liegt in `content/tasks/<generation>/<language>/` und wird mit
@@ -103,10 +115,15 @@ explizite Data-API-Privilegien, projektgebundene Mitgliedschaft und positive wie
 Operationstests. Reviewentscheidungen sind append-only; Autor-, Reviewer- und
 Prüfsummenfelder dürfen nicht durch freie Client-Updates umgangen werden.
 
-Die initiale Migration ist **noch nicht freigegeben**: der Security-Audit hat umgehbare
-Freigabepolicies gefunden. Der aktuelle Blocker und die erforderliche Härtung stehen in
-`PROJECT_STATUS.md` und `HANDOFF.md`. Ein erfolgreicher statischer SQL-Check ersetzt
-keinen `db reset`, pgTAP-Lauf und Exploit-Negativtest.
+**Stand 2026-08-22:** Der frühere Befund des Security-Audits – zwei umgehbare
+Freigabepolicies, die das Vier-Augen-Prinzip aushebelten – ist behoben und **in CI gegen
+eine echte Datenbank bewiesen**. Der Job `Supabase reset and RLS tests` ist grün und
+umfasst `supabase start`, `db reset` mit Schema, Migrationen und Fixtures,
+`db lint --fail-on error` sowie den pgTAP-Lauf mit den Exploit-Negativtests aus
+`security_behavior_test.sql`. Der Grundsatz bleibt: Ein erfolgreicher statischer SQL-Check
+ersetzt weder `db reset` noch pgTAP-Lauf noch Negativtest. Offen ist nicht mehr die
+Härtung, sondern das lokale Ausführen: Der Docker-Daemon läuft in der Arbeitsumgebung
+nicht (BLK-001), weshalb der Stack ausschließlich in CI geprüft wird.
 
 ## 9. Umgebungen
 
@@ -138,9 +155,17 @@ bleiben offen.
 5. Englischer Pilot mit unabhängigem Review.
 6. Supabase-Reviewworkflow, geschütztes Staging, manuelle AT-Abnahme und Handoff.
 
-100 % ist erst erreicht, wenn alle 323 Seiten geprüft, alle relevanten Assets verknüpft
-oder formal ausgenommen, alle kritischen Widersprüche gelöst und keine kritischen
-Blocker offen sind.
+100 % ist erst erreicht, wenn alle 323 Seiten geprüft, die Seiten der Bezugsmenge aus
+Abschnitt 5 freigegeben, alle relevanten Assets verknüpft oder formal ausgenommen, alle
+kritischen Widersprüche gelöst und keine kritischen Blocker offen sind.
+
+**Was das praktisch bedeutet.** Ein großer Teil dieser Punkte liegt außerhalb des Piloten:
+Ohne technische Freigaben durch THITRONIK bleiben Seiten höchstens `validated` statt
+`approved`, Übersetzungen laut Abschnitt 6 höchstens `technically_validated`, und Karte,
+Staging sowie die manuelle AT-Abnahme brauchen Assets, Konten und Testpersonen. Die
+erreichbare Obergrenze ohne diese Zuarbeit liegt bei etwa 80 Prozent. Das ist kein Mangel
+der Umsetzung, sondern Folge der Leitplanken 6 und 7: Niemand gibt die eigene
+sicherheitskritische Aussage allein frei.
 
 ## Sitzungsstart
 

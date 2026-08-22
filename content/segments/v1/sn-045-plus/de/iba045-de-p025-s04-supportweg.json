@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S04-SUPPORTWEG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "support",
+  "title": "Supportanfrage vorbereiten",
+  "body_md": "Die Quelle nennt als ersten Weg den Fachhändler. Lassen sich Schwierigkeiten mit der Anleitung nicht beheben, verweist sie auf die Website des Herstellers sowie auf einen telefonischen und einen schriftlichen Supportkanal. Halten Sie für eine Anfrage die Seriennummer Ihres Pro-finder und die Softwareversion bereit; die Quelle nennt als Fundorte das Gerät selbst oder die Hersteller-App.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.4, beide Absätze",
+  "prev_context": "Zuvor steht der Konformitätsabschnitt.",
+  "next_context": "PDF-Seite 25 ist die letzte Seite des deutschen Teils.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3ea64e150fda50d689bbeec5cae6c7b62527432530f832a9a8151eaf1e8aa1c6",
+  "change_reason": "Quellennahe Erstextraktion ohne Kontaktdaten. Rufnummer, E-Mail-Adresse und Website bleiben wegen BLK-004 ausgelassen: Die französische Fassung derselben Anleitung nennt eine offensichtlich beschädigte Rufnummer (DSC-032), und die Daten sollen auf die gedruckte Setup-Karte - ein unbrauchbarer Kanal wäre dort besonders folgenreich. Die Angabe, die Seriennummer stehe auf dem Gerät, bleibt unbestimmt: Wo genau, sagt die Quelle an keiner Stelle (DSC-023).",
+  "discrepancy_refs": ["DSC-032", "DSC-023"]
+}

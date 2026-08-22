@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S03-POSITION-IN-KARTEN-NUTZEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "meldungen",
+  "title": "Positionsangaben in Kartenprogrammen verwenden",
+  "body_md": "Die in den Meldungen enthaltenen Positionsangaben lassen sich in Kartenprogramme und Navigationsgeräte eingeben und zeigen dort je nach Kartenart den Standort des Fahrzeugs. Nach Erhalt einer Diebstahlmeldung können Sie jederzeit weitere Statusberichte anfordern, um neue Positionsangaben zu erhalten.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.7, erste drei Absätze",
+  "prev_context": "Zuvor steht der Abschnitt zum Anlernmodus.",
+  "next_context": "Danach folgt der Absatz zum fehlenden GPS-Empfang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:799bf812f2d9beed6c0317aedde7a1bb7238b3f1bb31bfb426cd58a0b83822dd",
+  "change_reason": "Quellennahe Erstextraktion. Die Genauigkeitsaussage der Quelle, die Position sei oftmals bis auf die Hausnummer genau, wurde nicht übernommen: Sie ist weder quantifiziert noch an eine Bedingung geknüpft und würde im Ernstfall eine Erwartung wecken, die der folgende Absatz derselben Seite selbst einschränkt.",
+  "discrepancy_refs": []
+}

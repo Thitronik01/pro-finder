@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S04-GEOFENCING-STEUERWEGE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "geofencing",
+  "title": "Der Steuerweg hängt von der Schalterstellung ab",
+  "body_md": "In den Schalterstellungen 8 und B wird das Geofencing über Pin 3 ein- und ausgeschaltet. In allen anderen Schalterstellungen lässt es sich per SMS ein- und ausschalten. Bevor Sie Geofencing an einem neuen Standort nutzen können, müssen Sie es am vorherigen Standort zuerst deaktivieren.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.2, zweiter und vierter Absatz",
+  "prev_context": "Zuvor steht die Definition des Geofencings mit dem Radius.",
+  "next_context": "Danach folgt der rote Hinweis zur automatischen Kopplung an die WiPro III.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d9690c9e35224432f1d16cbe0ca14a50800727302fb42dbc182ed077b0fab90b",
+  "change_reason": "Quellennahe Erstextraktion; die Befehlszeichenfolgen bleiben wegen BLK-005 ausgelassen. Wichtig für das Register: Diese Regel steht damit ausdrücklich **auch** in der Generation ab SN-045 und nicht nur bis SN-044. Die frühere Annahme, sie sei der älteren Fassung vorbehalten und dürfe nicht übertragen werden, ist am 2026-08-22 in DSC-042 und DSC-062 berichtigt worden. Die Reihenfolgeregel beim Standortwechsel ist übernommen, weil ihre Missachtung dazu führt, dass am neuen Standort kein Zaun entsteht.",
+  "discrepancy_refs": ["DSC-042", "DSC-062"]
+}

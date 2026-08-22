@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S01-LAENDERVORWAHL",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Rufnummer mit Ländervorwahl speichern",
+  "body_md": "Speichern Sie die Rufnummer unbedingt mit der Ländervorwahl, damit Sie auch aus dem Ausland Zugriff darauf haben.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.5, Fortsetzung von PDF-Seite 14, erster Absatz",
+  "prev_context": "PDF-Seite 14 beginnt Abschnitt 2.5 mit dem Adressbucheintrag.",
+  "next_context": "Danach folgt Abschnitt 2.6 zu den Kosten der Steuerung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6be925a13e6baa12c2e85c3f7487cb340ee50373e9f55a6007049273942730ed",
+  "change_reason": "Quellennahe Erstextraktion. Als Warnsegment geführt, weil die Erreichbarkeit des Geräts aus dem Ausland daran hängt und die Quelle selbst das Wort unbedingt setzt. Das Beispiel der Quelle für eine konkrete Ländervorwahl wurde nicht übernommen. Dieser Schritt ist zugleich der Beleg dafür, dass die Aussage auf PDF-Seite 14, mit der App entfielen die Kapitel 2.5 bis 2.8, nicht zutreffen kann: Ein Adressbucheintrag am Telefon ist keine Handlung, die eine App übernimmt (DSC-043).",
+  "discrepancy_refs": ["DSC-043"]
+}

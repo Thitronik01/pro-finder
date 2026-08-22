@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P018-S01-BETRIEBSZUSTAENDE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "status-led",
+  "title": "Betriebszustände der Status-LED",
+  "body_md": "| Anzeige | Bedeutung laut Quelle |\n| --- | --- |\n| blinkt rot und gelb | Netzsuche und keine Zielrufnummern vorhanden |\n| blinkt rot | Netzsuche oder kein GSM-Empfang |\n| leuchtet gelb | Verbindungsaufbau mit dem Modem |\n| leuchtet rot | SIM-Karte fehlt oder ist defekt |\n| blinkt rot und grün | SIM-PIN nicht deaktiviert |\n| blinkt gelb | Eingebucht, aber die letzte Nachricht konnte nicht versendet werden |\n| leuchtet grün | Der Pro-finder empfängt oder versendet gerade eine Nachricht |\n| blinkt gelb und grün | Eingebucht mit Empfang, keine Zielrufnummern vorhanden |\n| blinkt grün | Eingebucht mit Empfang, Zielrufnummern vorhanden |\n\nNach abgeschlossener Installation und Programmierung blinkt die Status-LED im Normalbetrieb grün.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Kapitel 3, neun Blinkfolgen mit Farbstreifen und Beschriftung",
+  "prev_context": "PDF-Seite 17 endet mit dem Überschreiben des Speichers durch die Masternummer.",
+  "next_context": "PDF-Seite 19 beginnt Kapitel 4 mit den Meldungsarten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:340c5a7753920700d8efd1a7288fa554e843a3f7b261b2595b45c228a231474f",
+  "change_reason": "Die Quelle stellt jeden Zustand als farbigen Blinkstreifen mit danebenstehender Beschriftung dar; die Streifen selbst tragen keine Textalternative. Für die lineare Ausgabe wurde eine Tabelle mit Kopfzeile angelegt. Die Schrägstriche der Quelle sind als und beziehungsweise oder ausgeschrieben, weil sie in der Quelle beides bedeuten: bei rot/gelb zwei abwechselnde Farben, bei Netzsuche/kein GSM-Empfang zwei Ursachen. Der Zustand blinkt rot und grün bedeutet ab SN-045, dass die SIM-PIN nicht deaktiviert ist; bis SN-044 bedeutet dieselbe Anzeige, dass die PIN nicht dem fest vorgegebenen Wert entspricht. Der Unterschied ist am 2026-08-22 in Rückfrage 15 nachgetragen worden.",
+  "discrepancy_refs": ["DSC-050"]
+}

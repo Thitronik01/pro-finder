@@ -19,8 +19,8 @@ Vorlage.
 ## Zweck und Geltungsbereich
 
 Das Paket ist das **erste von drei technischen Prüfpaketen der Generation ab SN-045**. Es
-bündelt die elf P0-Segmente zu Montage, elektrischem Anschluss und Haftungsaussagen aus
-DOC-IBA-SN045, deutschen PDF-Seiten 5, 7, 8, 11 und 12. Betriebsarten, Geofencing und
+bündelt die fünfzehn P0-Segmente zu Montage, elektrischem Anschluss, Ausgängen und
+Haftungsaussagen aus DOC-IBA-SN045, deutschen PDF-Seiten 5, 7, 8, 11, 12, 22, 23 und 25. Betriebsarten, Geofencing und
 GPS-Diagnose stehen in P0-07; SIM, Aktivierung und anrufgesteuerte Funktionen in P0-08.
 Das Dokument besitzt keine Textebene; alle Aussagen stammen aus 300-dpi-Renderings,
 sicherheitskritische Werte zusätzlich aus 500- bis 600-dpi-Ausschnitten.
@@ -85,6 +85,16 @@ Als P1-Gegenbelege stehen daneben `IBA045-DE-P006-S01-LIEFERUMFANG` (Sicherungsw
 | P0-06-C2 | „Die Alarmanlage" ist an die Starterbatterie angeschlossen.       | DOC-IBA-SN045, S. 5, Haftungsausschluss, Abs. 2 | Derselbe Abschnitt führt den Pro-finder als **Ortungssystem** und die WiPro III als **Alarmanlage** ein. Welches Gerät die Tiefentladung verursacht, ist offen. | DSC-050          | Verbindlich klären, welches Gerät gemeint ist, und den Absatz entsprechend korrigieren lassen. |
 | P0-06-C3 | Bei leerer Batterie lässt sich das Fahrzeug nicht entriegeln.     | DOC-IBA-SN045, S. 5, Haftungsausschluss, Abs. 2 | Keine Ruhestromangabe an dieser Stelle, keine Standzeitabschätzung und kein Hinweis auf einen Notentriegelungsweg.                                              | DSC-052          | Ruhestrom, realistische Standzeit und dokumentierten Notentriegelungsweg bereitstellen.        |
 
+## D. Ausgangssteuerung und technische Daten
+
+| ID       | Zu prüfende Aussage                                                                  | Genaue Quelle ab SN-045                    | Gegenquelle oder offene Lücke                                                                                                                         | DSC / Rückfrage  | Benötigte THITRONIK-Entscheidung                                                    |
+| -------- | ------------------------------------------------------------------------------------ | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------- |
+| P0-06-D1 | Ein Ausgang schaltet dauerhaft, gepulst für eine Sekunde oder für 1 bis 120 Minuten. | DOC-IBA-SN045, S. 22 und 23, Abschnitt 5.5 | Verhalten außerhalb des Bereichs, bei erneutem Befehl, nach Spannungsausfall und beim Abbrechen einer laufenden Zeitschaltung ist nicht dokumentiert. | DSC-052          | Wertebereich, Validierung, Abbruchweg und Ruhestellung nach Neustart spezifizieren. |
+| P0-06-D2 | Auf jeden Schaltvorgang antwortet das Gerät mit einem Statusbericht.                 | DOC-IBA-SN045, S. 23                       | Welches Feld den tatsächlichen Ausgangszustand belegt und ob der Bericht den Schalterfolg garantiert, sagt die Quelle nicht.                          | DSC-045          | Erfolgskriterium und Statusfeld je Ausgang festlegen.                               |
+| P0-06-D3 | Befehle und Ersetzungsregel für den zweiten Ausgang bleiben gesperrt.                | DOC-IBA-SN045, S. 23, rote Hinweiszeile    | Die Ausgänge schalten reale Verbraucher im Fahrzeug; ein falsch verstandener Befehl schaltet den falschen Ausgang.                                    | BLK-005, DSC-033 | Firmwarebestätigte Schnittstelle je Ausgang samt Fehlerantwort liefern.             |
+| P0-06-D4 | Die technische Tabelle nennt die Spannungsversorgung als **Bereich**.                | DOC-IBA-SN045, S. 25, Abschnitt 6.1        | Das Anschlusskapitel auf S. 11 nennt stattdessen einen Nennwert. Derselbe Widerspruch besteht bis SN-044 zwischen S. 6 und S. 18.                     | DSC-069          | Nennwert und zulässigen Bereich gegeneinander abgrenzen (siehe auch B1).            |
+| P0-06-D5 | Die Sendeangabe lautet 2G/3G/4G mit Bandlisten.                                      | DOC-IBA-SN045, S. 25, Abschnitt 6.1        | Bis SN-044 steht dort eine Frequenzangabe in Megahertz. Beide Fassungen benennen die Funkschnittstelle in **unvergleichbaren Einheiten**.             | DSC-069          | Verbindliche Funkspezifikation je Generation in einer vergleichbaren Form liefern.  |
+
 ## Reviewprotokoll
 
 | ID-Gruppe       | Entscheidung je ID | Spezifikation | Geltungsbereich / Revision | Beleg   | Reviewer, Rolle, Datum |
@@ -92,13 +102,14 @@ Als P1-Gegenbelege stehen daneben `IBA045-DE-P006-S01-LIEFERUMFANG` (Sicherungsw
 | P0-06-A1 bis A8 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 | P0-06-B1 bis B8 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 | P0-06-C1 bis C3 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
+| P0-06-D1 bis D5 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 
 ## Exit-Kriterien
 
 - Die PDF-Seiten 5 bis 14 stehen auf `validated`; alle zehn Segmente haben eine
   unabhängige Gegenprüfung. **Erst dann** wechselt dieses Paket auf
   „bereit für Fachreview".
-- Jede der 19 Einzelentscheidungen besitzt Firmware-/Technikbeleg, Geltungsbereich und
+- Jede der 24 Einzelentscheidungen besitzt Firmware-/Technikbeleg, Geltungsbereich und
   verantwortliche Rolle.
 - Nennspannung und zulässiger Bereich (B1) sowie der Sicherungswert (B2) sind
   entschieden; bis dahin nennt die HTML-Anleitung beide Angaben nebeneinander.

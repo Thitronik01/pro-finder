@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P016-S02-KENNZEICHEN-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "zielrufnummern",
+  "title": "Smartphone-Kennzeichen und Beispielrufnummern bleiben ausgelassen",
+  "body_md": "Die Abbildung nennt ein Kennzeichen, das eine Zielrufnummer als Smartphone-Nummer markiert und dadurch die Positionsübertragung von Koordinaten auf einen anklickbaren Kartenlink umstellt. Das Zeichen selbst wird hier nicht wiedergegeben, ebenso wenig die drei Beispielrufnummern der Abbildung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Roter Hinweis unter der Beispielzeile",
+  "prev_context": "Die Abbildung darüber zeigt den Aufbau der Programmier-SMS.",
+  "next_context": "PDF-Seite 17 setzt mit Beispielen und dem Löschvorgang fort.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:629ab12e067f9da3e8867dc0e9f2cae1fcb786fbbac464373846e025d78cdb76",
+  "change_reason": "Das Kennzeichen sitzt in derselben Zeichenkette wie das ungeklärte Berechtigungskennzeichen und lässt sich davon nicht getrennt veröffentlichen, ohne die Syntax der Programmier-SMS preiszugeben (BLK-006). Beispielrufnummern werden grundsätzlich nicht übernommen. Die Quelle sagt außerdem nicht, was geschieht, wenn das Kennzeichen bei einem Nicht-Smartphone gesetzt wird - sie warnt nur davor.",
+  "discrepancy_refs": ["DSC-044"]
+}

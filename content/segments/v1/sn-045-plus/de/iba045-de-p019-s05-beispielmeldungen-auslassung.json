@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S05-BEISPIELMELDUNGEN-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "meldungen",
+  "title": "Die abgebildeten Beispielmeldungen bleiben ausgelassen",
+  "body_md": "Neben jedem Abschnitt dieses Kapitels steht ein Bild einer echten Gerätemeldung. Die Bilder enthalten vollständige Koordinaten, anklickbare Kartenadressen, Uhrzeiten und Messwerte eines realen Fahrzeugs. Sie werden hier weder wiedergegeben noch nachgebildet.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, drei schwarze Sprechblasen mit Gerätemeldungen",
+  "prev_context": "Die Fließtexte daneben erklären Statusbericht, Diebstahl- und Spannungsmeldung.",
+  "next_context": "PDF-Seite 20 setzt die Beispielreihe mit sechs weiteren Meldungen fort.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ba8b0292a170c6896da5f52215e04ab34c64f2f6ce2ddda0897d01c509c4c9a5",
+  "change_reason": "Koordinaten, Kartenadressen und Beispielmesswerte werden im gesamten Pilot nicht übernommen - sie sind Ortsdaten eines realen Fahrzeugs. Damit fehlt der Webanleitung allerdings der einzige Beleg dafür, wie eine Meldung tatsächlich aussieht: Die Felder sind ausschließlich im Bild dokumentiert, und das Kapitel erklärt nicht alle davon (DSC-045). Ein freigegebenes, anonymisiertes Meldungsbeispiel ist für den Fachreview vermerkt.",
+  "discrepancy_refs": ["DSC-045", "DSC-082"]
+}

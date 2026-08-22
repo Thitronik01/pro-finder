@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S01-ANLERNMODUS",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Der Anlernmodus lässt sich aus der Ferne starten",
+  "body_md": "Mit dem Pro-finder lässt sich der Anlernmodus der WiPro III (safe.lock) per Nachricht aktivieren. Solange der Anlernmodus aktiv ist, können neue Funk-Komponenten an das Alarmsystem angelernt werden. Nach dem Anlernen lässt er sich wieder deaktivieren.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.6, beide Absätze",
+  "prev_context": "PDF-Seite 23 endet mit den drei Schaltarten der Ausgänge.",
+  "next_context": "Danach folgt Abschnitt 5.7 zum Wiederfinden des Fahrzeugs.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f1bf1f545f63ed63bdfd59cc1c45fc5e4fd0d84f35f650b3b97cf8b641253bb6",
+  "change_reason": "Als Warnsegment geführt, weil hier eine Sicherheitsfunktion aus der Ferne geöffnet wird: Wer den Anlernmodus starten kann, kann fremde Funk-Komponenten in die Alarmanlage aufnehmen. Die Quelle nennt weder eine Zeitbegrenzung noch eine Rückmeldung, an der sich ein unbeabsichtigt offener Anlernmodus erkennen ließe, und auch keine Einschränkung darauf, welche Zielrufnummer ihn starten darf. Der Punkt ist am 2026-08-22 in DSC-052 aufgenommen worden.",
+  "discrepancy_refs": ["DSC-052", "DSC-044"]
+}

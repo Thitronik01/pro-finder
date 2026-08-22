@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S02-SIM-VORAUSSETZUNG-LOESCHEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "sim-karte",
+  "title": "Vor dem Löschen muss die SIM-Karte eingelegt sein",
+  "body_md": "Für den Löschvorgang muss die SIM-Karte im Gerät eingelegt sein.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Roter Hinweiskasten unter der Überschrift 2.9",
+  "prev_context": "Zuvor stehen die Beispiele für Programmier-SMS.",
+  "next_context": "Danach folgt die Schrittfolge zum Löschen des Speichers.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f5664c71afda1f998054091440eab6ee7a13b74bb5d387dca1c123f860f1ce43",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle nennt hier das Kartenformat mit; das Segment lässt es weg, weil es an dieser Stelle keine Rolle spielt und das Format bereits unter DSC-069 geführt wird. Warum die Karte für einen rein am Gerät ausgeführten Löschvorgang eingelegt sein muss, erklärt die Quelle nicht.",
+  "discrepancy_refs": ["DSC-069"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S04-KEIN-GPS-EMPFANG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "fehlerbehebung",
+  "title": "Ohne GPS-Empfang enthält der Bericht eine ältere Position",
+  "body_md": "Befindet sich das Fahrzeug in einem Gebäude oder an einem anderen Ort ohne GPS-Empfang, wartet der Pro-finder bis zu zehn Minuten auf eine gültige Position. Wird auch dann keine empfangen, versendet er den Statusbericht mit der zuletzt empfangenen Position.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.7, vorletzter Absatz",
+  "prev_context": "Zuvor steht die Verwendung der Positionsangaben in Kartenprogrammen.",
+  "next_context": "Danach folgt der Absatz zur UTC-Zeit.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c5ba52f929657b2872ca00379b7700347a1f6c382093784125688c9e0f20fd8c",
+  "change_reason": "Quellennahe Erstextraktion. Als Warnsegment geführt, weil die Meldung in diesem Fall aussieht wie jede andere: Die Quelle nennt keine Kennzeichnung, kein Höchstalter und keine Genauigkeit für die zuletzt empfangene Position. Wer im Ernstfall danach sucht, sucht möglicherweise dort, wo das Fahrzeug zuletzt Empfang hatte - nicht dort, wo es steht. Wann die zehn Minuten zu laufen beginnen, sagt die Quelle nicht (DSC-052).",
+  "discrepancy_refs": ["DSC-052"]
+}

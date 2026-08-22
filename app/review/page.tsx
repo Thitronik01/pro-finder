@@ -230,27 +230,44 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               aus.
             </li>
             <li>
-              <strong>P0-06 (in Vorbereitung, ab SN-045):</strong> elf Segmente zu Montage,
-              Pinbelegung, Versorgung, Ausgängen und den Haftungsaussagen. Dossier:{' '}
+              <strong>P0-06 (in Vorbereitung, ab SN-045):</strong> fünfzehn Segmente zu Montage,
+              Pinbelegung, Versorgung, Ausgängen und technischen Daten. Dossier:{' '}
               <code>docs/review-packets/P0-06-MONTAGE-ANSCHLUSS-BETRIEBSARTEN-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-06">
                 P0-06 in der Warteschlange öffnen
               </Link>
             </li>
             <li>
-              <strong>P0-07 (in Vorbereitung, ab SN-045):</strong> neun Segmente zu Betriebsarten,
-              den gegenläufigen Pin-3-Schaltschwellen, Geofencing und GPS-Diagnose. Dossier:{' '}
+              <strong>P0-07 (in Vorbereitung, ab SN-045):</strong> fünfzehn Segmente zu
+              Betriebsarten, den gegenläufigen Pin-3-Schaltschwellen, Geofencing, GPS-Diagnose und
+              der Bewertung gespeicherter Positionen. Dossier:{' '}
               <code>docs/review-packets/P0-07-BETRIEBSARTEN-GEOFENCING-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-07">
                 P0-07 in der Warteschlange öffnen
               </Link>
             </li>
             <li>
-              <strong>P0-08 (in Vorbereitung, ab SN-045):</strong> sechs Segmente zu SIM-Karte,
-              Inbetriebnahme und den anrufgesteuerten Funktionen. Dossier:{' '}
+              <strong>P0-08 (in Vorbereitung, ab SN-045):</strong> zehn Segmente zu SIM-Karte,
+              Inbetriebnahme, Statusbericht und dem doppelt belegten Anruf. Dossier:{' '}
               <code>docs/review-packets/P0-08-SIM-AKTIVIERUNG-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-08">
                 P0-08 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-09 (in Vorbereitung, ab SN-045):</strong> neun Segmente zu Zielrufnummern,
+              Programmier-SMS und der ungeklärten Berechtigungsregel. Dossier:{' '}
+              <code>docs/review-packets/P0-09-ZIELRUFNUMMERN-BERECHTIGUNG-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-09">
+                P0-09 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-10 (in Vorbereitung, ab SN-045):</strong> elf Segmente zu Meldungsarten,
+              Alarmwegen, Anlernmodus und den neun Zuständen der Status-LED. Dossier:{' '}
+              <code>docs/review-packets/P0-10-MELDUNGEN-ALARMWEGE-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-10">
+                P0-10 in der Warteschlange öffnen
               </Link>
             </li>
           </ul>

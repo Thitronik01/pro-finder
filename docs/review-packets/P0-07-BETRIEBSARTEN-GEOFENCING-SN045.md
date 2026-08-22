@@ -12,8 +12,8 @@ Entscheidungszuordnung bleibt, und wechselt erst nach dieser Gegenprüfung auf
 
 ## Zweck und Geltungsbereich
 
-Das Paket bündelt die neun P0-Segmente zu Betriebsarten, Geofencing und GPS-Diagnose aus
-DOC-IBA-SN045, deutschen PDF-Seiten 9, 10 und 12. Montage und elektrischer Anschluss
+Das Paket bündelt die fünfzehn P0-Segmente zu Betriebsarten, Geofencing, GPS-Diagnose und
+Positionsbewertung aus DOC-IBA-SN045, deutschen PDF-Seiten 9, 10, 12, 21 und 24. Montage und elektrischer Anschluss
 stehen in P0-06; SIM, Aktivierung und anrufgesteuerte Funktionen in P0-08.
 
 Es ist das Paket mit dem **höchsten Anteil an Werten, die eine Fehlfunktion unbemerkt
@@ -37,6 +37,12 @@ Gegenquelle. SMS-Zeichenfolgen bleiben wegen BLK-005 vollständig ausgelassen.
 | `IBA045-DE-P012-S04-ROT-NACH-ZURUECKSCHALTEN`        | Doppelbedeutung der roten Anzeige      | DOC-IBA-SN045, S. 12 |
 | `IBA045-DE-P012-S05-GPS-REFLEXIONEN`                 | Fehlalarm durch Signalreflexionen      | DOC-IBA-SN045, S. 12 |
 | `IBA045-DE-P012-S06-DEAKTIVIERUNGSBEFEHL-AUSLASSUNG` | gesperrte Abschaltzeichenfolge         | DOC-IBA-SN045, S. 12 |
+| `IBA045-DE-P021-S03-GEOFENCING-DEFINITION`           | virtueller Zaun, 900 Meter             | DOC-IBA-SN045, S. 21 |
+| `IBA045-DE-P021-S04-GEOFENCING-STEUERWEGE`           | Pin 3 in 8 und B, sonst SMS            | DOC-IBA-SN045, S. 21 |
+| `IBA045-DE-P021-S05-GEOFENCING-WIPRO-KOPPLUNG`       | automatische Kopplung an WiPro III     | DOC-IBA-SN045, S. 21 |
+| `IBA045-DE-P021-S06-GEOFENCING-BEFEHLE-AUSLASSUNG`   | Geofencing-Befehle gesperrt            | DOC-IBA-SN045, S. 21 |
+| `IBA045-DE-P024-S04-KEIN-GPS-EMPFANG`                | zehn Minuten, dann letzte Position     | DOC-IBA-SN045, S. 24 |
+| `IBA045-DE-P024-S05-UTC-UND-ALARMPOSITION`           | UTC gehört zur Position                | DOC-IBA-SN045, S. 24 |
 
 Als P1-Gegenbeleg steht daneben `IBA045-DE-P009-S04-STATUSBERICHT-SPANNUNGEN` (U1 bis U5).
 
@@ -72,6 +78,17 @@ Als P1-Gegenbeleg steht daneben `IBA045-DE-P009-S04-STATUSBERICHT-SPANNUNGEN` (U
 | P0-07-C5 | Die Quelle empfiehlt, Geofencing beim Abstellen im Gebäude per SMS zu deaktivieren.          | DOC-IBA-SN045, S. 12, letzter Absatz           | Die Zeichenfolge bleibt wegen BLK-005 ausgelassen: Zehn Sprachfassungen ergeben zehn Befehlsprofile, und ein abgelehnter Befehl erzeugt keine Fehlermeldung.  | DSC-033, BLK-005      | Firmwarebestätigte Zeichenfolge je Revision und Sprache samt Fehlerantwort liefern.                 |
 | P0-07-C6 | Ziel der Abschalt-SMS ist die „Nummer des GSM-Moduls".                                       | DOC-IBA-SN045, S. 12, letzter Absatz           | Dieselbe Rufnummer heißt in Abschnitt 5.2 „Nummer des Pro-finder". Zwei Benennungen für dasselbe SMS-Ziel.                                                    | DSC-050               | Eine verbindliche Benennung für das SMS-Ziel festlegen.                                             |
 
+## D. Kapitel 5.2 und die Bewertung gespeicherter Positionen
+
+| ID       | Zu prüfende Aussage                                                                        | Genaue Quelle ab SN-045              | Gegenquelle oder offene Lücke                                                                                                                              | DSC / Rückfrage  | Benötigte THITRONIK-Entscheidung                                                  |
+| -------- | ------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | --------------------------------------------------------------------------------- |
+| P0-07-D1 | Der Zaun umfasst 900 Meter um den ursprünglichen Standort.                                 | DOC-IBA-SN045, S. 21, Abschnitt 5.2  | Worauf sich der ursprüngliche Standort bezieht – Ort der Aktivierung oder letzte gültige Position – und welche Toleranz gilt, sagt die Quelle nicht.       | DSC-061          | Bezugspunkt, Radius und Toleranz bestätigen; Werte je Generation getrennt halten. |
+| P0-07-D2 | **Kopplung gegen Schaltweg:** Bei unscharfer WiPro III ist Geofencing automatisch inaktiv. | DOC-IBA-SN045, S. 21, roter Kasten   | Unmittelbar darüber steht, dass es sich in allen anderen Schalterstellungen per SMS einschalten lässt. Welche Aussage gewinnt, sagt die Quelle nicht.      | DSC-042, BLK-007 | Vorrang zwischen automatischer Kopplung und ausdrücklichem Schaltweg festlegen.   |
+| P0-07-D3 | Vor der Nutzung an einem neuen Standort muss am alten deaktiviert werden.                  | DOC-IBA-SN045, S. 21, Abschnitt 5.2  | Was geschieht, wenn dieser Schritt entfällt – bleibt der alte Zaun bestehen, oder entsteht gar keiner? Die Quelle sagt es nicht.                           | DSC-052          | Verhalten bei ausgelassener Deaktivierung spezifizieren.                          |
+| P0-07-D4 | Ohne GPS-Empfang wartet das Gerät bis zu zehn Minuten auf eine gültige Position.           | DOC-IBA-SN045, S. 24, Abschnitt 5.7  | Startpunkt, Toleranz und Abbruchbedingung der Frist fehlen. Derselbe Wert steht bis SN-044 (P0-05-B1).                                                     | DSC-052          | Timerstart, Toleranz und Status während der Wartezeit bestätigen.                 |
+| P0-07-D5 | **Danach enthält der Bericht die zuletzt empfangene Position – ohne Kennzeichnung.**       | DOC-IBA-SN045, S. 22 und 24          | Kein Höchstalter, keine Genauigkeit, keine verpflichtende Markierung als nicht aktuell. Wer danach sucht, sucht möglicherweise am letzten Ort mit Empfang. | DSC-045          | Alter, Genauigkeit und eine maschinenlesbare Aktualitätskennzeichnung festlegen.  |
+| P0-07-D6 | Die UTC-Zeit gehört zur Position, nicht zum Versandzeitpunkt.                              | DOC-IBA-SN045, S. 24, letzter Absatz | Steht erst am Kapitelende, nicht bei der Meldung. Was aktive Lichtmaschine bedeutet und was ohne dieses Signal geschieht, ist nicht dokumentiert.          | DSC-052          | Zeitquelle, Positionsbezug und Erkennung der Lichtmaschine spezifizieren.         |
+
 ## Reviewprotokoll
 
 | ID-Gruppe       | Entscheidung je ID | Spezifikation | Geltungsbereich / Revision | Beleg   | Reviewer, Rolle, Datum |
@@ -79,13 +96,14 @@ Als P1-Gegenbeleg steht daneben `IBA045-DE-P009-S04-STATUSBERICHT-SPANNUNGEN` (U
 | P0-07-A1 bis A6 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 | P0-07-B1 bis B5 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 | P0-07-C1 bis C6 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
+| P0-07-D1 bis D6 | _offen_            | _offen_       | _offen_                    | _offen_ | _offen_                |
 
 ## Exit-Kriterien
 
-- Die PDF-Seiten 9, 10 und 12 stehen auf `validated`; alle neun Segmente haben eine
+- Die PDF-Seiten 9, 10, 12, 21 und 24 stehen auf `validated`; alle fünfzehn Segmente haben eine
   unabhängige Gegenprüfung. **Erst dann** wechselt dieses Paket auf
   „bereit für Fachreview".
-- Jede der 17 Einzelentscheidungen besitzt Firmware-/Technikbeleg, Geltungsbereich und
+- Jede der 23 Einzelentscheidungen besitzt Firmware-/Technikbeleg, Geltungsbereich und
   verantwortliche Rolle.
 - Die gegenläufigen Schaltschwellen (A1, A2) sind samt Zwischenbereich und
   Zustandsrückmeldung spezifiziert; bis dahin nennt die HTML-Anleitung keine der beiden

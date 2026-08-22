@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P023-S01-AUSGANGSSCHALTARTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "ausgaenge",
+  "title": "Die drei Schaltarten im Einzelnen",
+  "body_md": "| Schaltart | Wirkung laut Quelle |\n| --- | --- |\n| dauerhaft | Der Ausgang bleibt eingeschaltet, bis er ausdrücklich wieder ausgeschaltet wird. |\n| gepulst | Der Ausgang schaltet für die Dauer einer Sekunde ein. |\n| zeitgesteuert | Der Ausgang schaltet für eine wählbare Dauer zwischen 1 und 120 Minuten ein. |\n\nAuf jeden dieser Schaltvorgänge antwortet der Pro-finder mit einem Statusbericht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 23,
+  "source_page_end": 23,
+  "source_region": "Abschnitte 5.5.1 bis 5.5.3, jeweils Wirkungsabsatz",
+  "prev_context": "PDF-Seite 22 endet mit der Übersicht über die beiden Ausgänge.",
+  "next_context": "PDF-Seite 24 beginnt mit dem Anlernmodus.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f7e77b2d521d2d092d09927920124369672e1b6bd5afcd4b5d374de6a24929e1",
+  "change_reason": "Die drei Unterabschnitte wurden zu einer Tabelle zusammengefasst, weil sie sich nur in Schaltart und Dauer unterscheiden. Die Befehlszeichenfolgen bleiben wegen BLK-005 ausgelassen. Der Wertebereich 1 bis 120 Minuten ist übernommen, weil er eine reine Grenzangabe ohne Bedienwert ist. Die Quelle sagt nicht, was außerhalb dieses Bereichs geschieht, ob sich eine laufende Zeitschaltung abbrechen lässt und in welchem Zustand die Ausgänge nach einem Spannungsausfall stehen (DSC-052). Die Überschriften der Quelle stehen im Plural, behandeln aber jeweils nur einen Ausgang (DSC-051).",
+  "discrepancy_refs": ["DSC-052", "DSC-051"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P018-S02-FARBABHAENGIGE-ZUSTANDSANZEIGE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "status-led",
+  "title": "Alle neun Zustände unterscheiden sich nur über die Farbe",
+  "body_md": "Die neun Betriebszustände des Geräts sind ausschließlich über Farbe und Blinkrhythmus der Status-LED unterscheidbar. Ein farbunabhängiges Merkmal ist nicht dokumentiert. Drei Zustandspaare unterscheiden sich zudem nur dadurch, ob eine zweite Farbe hinzukommt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Kapitel 3, alle neun Blinkfolgen zusammen",
+  "prev_context": "Die Tabelle darüber führt die neun Zustände einzeln auf.",
+  "next_context": "PDF-Seite 19 beginnt Kapitel 4 mit den Meldungsarten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3d940ee372c2810d52e2d6bca2eac56cb2e247d8d3c762a56232cf2881f7b42b",
+  "change_reason": "Eigenes Warnsegment, weil hier eine Barriere am Gerät selbst liegt, die weder die Webanleitung noch ein Screenreader auflösen kann: Wer Rot und Grün nicht unterscheiden kann, kann eine fehlende SIM-Karte nicht von einer nicht deaktivierten SIM-PIN und den Normalbetrieb nicht von einer Netzsuche trennen. Die Quelle beschreibt die Blinkrhythmen nur grafisch, nicht in Takt oder Dauer. Derselbe Befund ist für die Generation bis SN-044 unter DSC-059 belegt und am 2026-08-22 für diese Generation in DSC-047 nachgetragen worden.",
+  "discrepancy_refs": ["DSC-047"]
+}

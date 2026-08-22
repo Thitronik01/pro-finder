@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S03-EINGABEHILFE-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "fehlerbehebung",
+  "title": "Die Antwort auf einen ungültigen Befehl bleibt gesperrt",
+  "body_md": "Empfängt der Pro-finder von einer Zielrufnummer eine Nachricht mit ungültigem Inhalt, antwortet er mit einer Meldung, die mögliche korrekte Befehle aufzählt. Der Wortlaut dieser Antwort und die darin genannten Befehle werden hier nicht wiedergegeben.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Abschnitt „SMS mit Eingabehilfen“ samt Beispielbild",
+  "prev_context": "Zuvor steht die Positionsmeldung für Smartphones.",
+  "next_context": "Danach folgen Einbruchmeldung, Gasalarm und weitere Meldungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8c3ae24be09cb3f406b0eda86fce86ad04bee930ed8a2619d53c92b1cb104bdf",
+  "change_reason": "Die abgebildete Geräteantwort ist der wichtigste Einzelbeleg für BLK-005: Sie nennt vier Befehle, von denen mindestens einer in anderer Schreibweise steht als das zugehörige Kapitel derselben Anleitung (DSC-014). Genau diese Antwort erhält auch, wer einen falschen Befehl sendet - eine Fehlermeldung im eigentlichen Sinn gibt es nicht. Solange die gültige Befehlssprache offen ist, würde die Wiedergabe dieser Liste eine Bestätigung vortäuschen. Die Quelle sagt zudem nicht, was bei Nachrichten von anderen Absendern geschieht (DSC-052).",
+  "discrepancy_refs": ["DSC-014", "DSC-033", "DSC-052"]
+}

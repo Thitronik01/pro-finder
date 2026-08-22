@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S01-TECHNISCHE-DATEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "technische-daten",
+  "title": "Technische Daten ab Seriennummer 045",
+  "body_md": "| Angabe | Wert laut Quelle |\n| --- | --- |\n| Spannungsversorgung | 9–30 V |\n| Stromaufnahme bei Netzsuche | ca. 37 mA |\n| Stromaufnahme im Normalbetrieb | ca. 16–21 mA |\n| Sendetechnik | 2G, 3G und 4G (LTE) |\n| 2G-Bänder | Quad |\n| 3G-Bänder | 1, 2, 5, 8 |\n| 4G-Bänder | 1, 2, 3, 4, 5, 7, 8, 18, 19, 20, 26, 28 |\n| Anzahl Zielrufnummern | 10 |\n| Schnittstellen | GPS/QZSS |\n| Ausgänge | 2 × 12 V / 500 mA |\n| Temperaturbereich | −10 bis +80 °C |\n| SIM-Format | Nano-SIM |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.1, zweispaltige Datenliste",
+  "prev_context": "PDF-Seite 24 endet mit dem Absatz zur UTC-Zeit.",
+  "next_context": "Danach folgen Entsorgungshinweise, Konformität und Support.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:337b65e7345138c8cc4a5441055ae5bde6d7389a4226f7e0b177eaabd5efbc4d",
+  "change_reason": "Die Datenliste wurde zeilengetreu in eine Tabelle überführt; kein Wert wurde verändert. Diese Werte gelten ausschließlich ab SN-045 und werden nicht mit der Generation bis SN-044 verrechnet (DSC-069). Zwei Punkte sind für den Fachreview hervorzuheben: Die Spannungsversorgung steht hier als Bereich, während das Anschlusskapitel auf PDF-Seite 11 einen Nennwert nennt - derselbe Widerspruch wie in der älteren Generation. Und die Angabe zur Sendetechnik ist am 2026-08-22 als Korrektur in DSC-069 eingeflossen: Der Registereintrag hatte behauptet, nur die ältere Fassung nenne eine Sendefrequenz; tatsächlich nennt diese Fassung Mobilfunkgenerationen und Bandnummern statt Frequenzen in Megahertz.",
+  "discrepancy_refs": ["DSC-069"]
+}

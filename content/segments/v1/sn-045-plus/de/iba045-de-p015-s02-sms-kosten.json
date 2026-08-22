@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S02-SMS-KOSTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "meldungen",
+  "title": "Jede Meldung und jede Steuerung kostet",
+  "body_md": "Jede vom Pro-finder versendete SMS verursacht Kosten, deren Höhe vom Netzbetreiber abhängt. Wenn Sie das Gerät per SMS oder Anruf steuern, sendet der Pro-finder jedes Mal eine Status-SMS.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.6, einziger Absatz",
+  "prev_context": "Zuvor steht der Hinweis zur Ländervorwahl.",
+  "next_context": "Danach folgt Abschnitt 2.7 mit den Arten von Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6f94b53e953ec9376f5168637155e90ef8094efa806b47f4b0df6692c3bf9592",
+  "change_reason": "Quellennahe Erstextraktion. Der Zusammenhang ist für die Betriebskosten wesentlich: Die Betriebsarten 4 bis 7 senden automatisch in Intervallen, C und D im Minutentakt, und jede Steuerung erzeugt zusätzlich eine Antwort. Die Quelle nennt keinen Betrag und keine Abschätzung; es wird keiner ergänzt.",
+  "discrepancy_refs": []
+}

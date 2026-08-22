@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S04-PROGRAMMIER-SMS-FORM",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Formregel der Programmier-SMS",
+  "body_md": "Die Zielrufnummern werden gemeinsam in einer einzigen Nachricht an den Pro-finder programmiert; bis zu zehn Nummern sind möglich. In der Nachricht dürfen keine Leerzeichen verwendet werden. Leerzeichen in der Abbildung der Quelle dienen nur der Darstellung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.8, einleitender Absatz",
+  "prev_context": "Zuvor stehen die drei Arten von Zielrufnummern.",
+  "next_context": "PDF-Seite 16 zeigt den Aufbau als beschriftete Abbildung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:58a2711f86e788699bc3ee8c978018beca6b7d74ede622ff9b16b1aeb9d64c00",
+  "change_reason": "Quellennahe Erstextraktion der Formregel. Der Beispielaufbau selbst bleibt wegen BLK-005 und BLK-006 ausgelassen. Die Leerzeichenregel ist übernommen, weil sie eine reine Formvorschrift ohne Bedienwert ist und ihre Missachtung die Programmierung scheitern lässt.",
+  "discrepancy_refs": ["DSC-044"]
+}

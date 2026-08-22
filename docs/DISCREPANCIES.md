@@ -753,6 +753,20 @@ belegt, nicht aus einer Zusammenfassung.
 - **Schwedische Bestätigung:** Seiten 238/239 zeigen denselben Unterschied ausschließlich
   im dritten Beispiel. Die Berechtigungsregel bleibt damit in allen zehn vollständig
   geprüften Fassungen implizit.
+- **Nachtrag 2026-08-22 – warum die Regel niemandem auffällt.** Die Extraktion der Seiten
+  16 und 17 zeigt den Mechanismus vollständig. Die Abbildung auf Seite 16 erklärt das
+  führende Zeichen ausdrücklich als **Ländervorwahl-Präfix**. Die Beispieltabelle auf
+  Seite 17 zeigt in ihrer dritten Zeile, dass an genau derselben Stelle ein anderes
+  Zeichen steht, wenn eine Nummer nicht berechtigt sein soll. **Dieselbe Zeichenposition
+  trägt also zwei voneinander unabhängige Bedeutungen: Rufnummernformat und Berechtigung.**
+  Wer die Abbildung liest, hält das Zeichen für einen Bestandteil der Rufnummer – das
+  erklärt, warum der Fließtext die Berechtigungsregel nie erwähnt und warum sie über zwei
+  Gerätegenerationen hinweg unausgesprochen geblieben ist.
+- **Nachtrag 2026-08-22 – ein zweites, ebenfalls unerklärtes Kennzeichen.** Dieselbe
+  Zeichenkette trägt zusätzlich ein Kennzeichen, das eine Zielrufnummer als
+  Smartphone-Nummer markiert und dadurch die Positionsübertragung von Koordinaten auf einen
+  Kartenlink umstellt. Die Quelle warnt davor, es bei einem Nicht-Smartphone zu setzen,
+  sagt aber nicht, was dann geschieht.
 - **Schwere:** hoch (sicherheitskritisch: eine nicht autorisierte Nummer könnte
   Steuerrechte erhalten) · **Status:** offen – gehört in den technischen Review
 
@@ -818,6 +832,18 @@ belegt, nicht aus einer Zusammenfassung.
 - **Schwedische Bestätigung:** Seite 235 verwendet dieselben drei Diagnosefarben; die
   Normalbetriebstabelle auf Seite 240 belegt Rot, Gelb und Grün erneut mit anderen
   Bedeutungen. Der geräteseitige Farbkonflikt besteht auch in der zehnten Fassung.
+- **Nachtrag 2026-08-22 – der Befund ist nicht auf Stellung F begrenzt.** Kapitel 3 auf
+  Seite 18 führt **neun** Betriebszustände auf, die sich ausschließlich über Farbe und
+  Blinkrhythmus der Status-LED unterscheiden. Ein farbunabhängiges Merkmal ist für keinen
+  davon dokumentiert; die Rhythmen zeigt die Quelle nur als Farbstreifen, ohne Takt oder
+  Dauer zu benennen. Drei Paare trennen sich allein dadurch, ob eine zweite Farbe
+  hinzukommt – rot gegen rot/gelb, grün gegen gelb/grün, rot gegen rot/grün. Damit ist der
+  bereits für die Generation bis SN-044 belegte Befund (DSC-059) auch ab SN-045 belegt.
+- **Sicherheitsrelevanter Einzelfall:** Der Zustand „blinkt rot/grün" bedeutet ab SN-045
+  „SIM-PIN nicht deaktiviert", bis SN-044 dagegen „PIN ist nicht 0000" – **dieselbe
+  Blinkfolge, gegenläufige Erwartung an die PIN**. Wer ein Gerät der einen Generation nach
+  der Anleitung der anderen einrichtet, deutet die Anzeige genau falsch herum. Siehe
+  Rückfrage 15.
 - **Schwere:** hoch · **Status:** offen – an THITRONIK zu melden
 
 ### DSC-048 – Seriennummer: drei Schreibweisen, kein belegter Fundort (ab SN-045)
@@ -949,7 +975,7 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-052 – Lücken der Quelle, die keine Widersprüche sind (ab SN-045)
 
-- **Dokument:** DOC-IBA-SN045, Seiten 7, 9, 10, 12, 13, 19, 20, 23
+- **Dokument:** DOC-IBA-SN045, Seiten 7, 9, 10, 12, 13, 17, 19, 20, 21, 23, 24
 - **Befund:** Fragen, die sich beim Schreiben der Aufgaben gestellt haben und die die
   Quelle **gar nicht** beantwortet. Sie sind keine Fehler, aber sie begrenzen, was die
   HTML-Anleitung sagen darf.
@@ -959,6 +985,30 @@ belegt, nicht aus einer Zusammenfassung.
     maximal zulässige Gesamtlänge gemeint ist, sagt die Quelle nicht. Dieselbe offene
     Frage besteht seit der 400-dpi-Gegenprüfung vom 2026-08-10 in der Generation bis
     SN-044 (DSC-073); die Werte werden **nicht** zwischen den Generationen übertragen.
+  - **Nachtrag 2026-08-22 – der manuelle Alarm hat zwei Auslöser (Seiten 9 und 20):**
+    Kapitel 1 beschreibt ihn als Funktion des Pro-finder selbst – Spannung an Pin 3 in
+    Betriebsart A, ausgelöst etwa über einen Taster. Kapitel 4 beschreibt dieselbe Meldung
+    dagegen als Folge davon, dass die **WiPro III** durch einen Panikalarm aktiviert wird.
+    Welcher Weg gilt, ob beide zur selben Meldung führen und ob der Tasterweg ohne
+    WiPro III funktioniert, sagt die Quelle nicht. Wer sich auf den Taster verlässt, aber
+    keine WiPro III besitzt, kann nach der Lesart von Kapitel 4 keinen manuellen Alarm
+    auslösen.
+  - **Nachtrag 2026-08-22 – Anlernmodus aus der Ferne (Seite 24):** Abschnitt 5.6 erlaubt,
+    den Anlernmodus der WiPro III per Nachricht zu starten. Solange er läuft, lassen sich
+    neue Funk-Komponenten an die Alarmanlage anlernen. Die Quelle nennt weder eine
+    Zeitbegrenzung noch eine Rückmeldung, an der sich ein offen gebliebener Anlernmodus
+    erkennen ließe, und schränkt auch nicht ein, welche Zielrufnummer ihn starten darf.
+  - **Nachtrag 2026-08-22 – Anruf an die Masternummer (Seite 20):** Drei der neun
+    Meldungsarten lösen zusätzlich einen Anruf an die Masternummer aus. Wie oft angerufen
+    wird, was bei Nichterreichbarkeit geschieht und ob eine andere Zielrufnummer nachrückt,
+    sagt die Quelle nicht. Ausgerechnet die Diebstahlmeldung löst keinen Anruf aus.
+  - **Nachtrag 2026-08-22 – Standby nach Spannungswarnung (Seite 19):** Ob das Gerät im
+    Standby-Modus weiterhin ortet und meldet, sagt die Quelle nicht – nur, dass es dorthin
+    wechselt, um die Batterie zu schonen.
+  - **Nachtrag 2026-08-22 – Löschvorgang (Seite 17):** Warum die SIM-Karte für einen rein
+    am Gerät ausgeführten Löschvorgang eingelegt sein muss, erklärt die Quelle nicht. Sie
+    sagt auch nicht, ob die bisherigen Zielrufnummern davon erfahren, wenn die
+    Masternummer den Speicher aus der Ferne überschreibt.
   - **Nachtrag 2026-08-22 – Schaltschwellen an Pin 3 (Seite 10):** Die Betriebsartentabelle
     ordnet Pin 3 in **Stellung 8** „über 6 V: ein / unter 5 V: aus" zu und in **Stellung B**
     genau umgekehrt „über 6 V: aus / unter 5 V: ein". Beide Zeilen sind bei 600 dpi

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S01-MELDUNGSANGABEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "meldungen",
+  "title": "Mögliche Angaben in einer Meldung",
+  "body_md": "Je nach Art des Vorfalls und Stellung des Betriebsartenschalters kann eine Meldung folgende Angaben enthalten:\n\n| Angabe | Bedeutung laut Quelle |\n| --- | --- |\n| GPS | Steht die GPS-Antenne im Standby, wird sie bei einem Ereignis automatisch reaktiviert. |\n| UTC | Uhrzeit des Vorfalls in koordinierter Weltzeit. |\n| Pos | Aktuelle Position des Fahrzeugs, je nach mobilem Endgerät als Kartenlink oder als Koordinaten. |\n| Geschwindigkeit | Aktuelle Geschwindigkeit des Fahrzeugs. |",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Definitionsliste über den Meldungsbeispielen",
+  "prev_context": "PDF-Seite 18 endet mit den Betriebszuständen der Status-LED.",
+  "next_context": "Darunter folgen die Beispiele für Statusbericht, Diebstahl- und Spannungsmeldung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:cdc153401ae06d49db5d0337428c2881d2112fe8d292dd24c8b19678fc99d9fc",
+  "change_reason": "Die Definitionsliste wurde in eine Tabelle überführt. Die Feldnamen sind die Kurzformen der Quelle und stehen so auch in den Gerätemeldungen; sie sind keine Bedienbefehle und fallen deshalb nicht unter BLK-005. Der von der Quelle genannte Kartendienst wurde durch den neutralen Begriff Kartenlink ersetzt. Die Quelle erklärt nicht, welche Angabe in welcher Betriebsart erscheint.",
+  "discrepancy_refs": ["DSC-045"]
+}

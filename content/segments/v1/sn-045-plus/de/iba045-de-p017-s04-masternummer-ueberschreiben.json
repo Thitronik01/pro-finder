@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S04-MASTERNUMMER-UEBERSCHREIBEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Die Masternummer kann den Speicher aus der Ferne überschreiben",
+  "body_md": "Mit der Masternummer lässt sich der Zielrufnummernspeicher auch ohne Betätigung des Betriebsartenschalters überschreiben. Dazu muss von der Masternummer aus eine Programmiernachricht an den Pro-finder gesendet werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.9, letzter Absatz",
+  "prev_context": "Zuvor steht die Schrittfolge zum Löschen am Gerät.",
+  "next_context": "PDF-Seite 18 beginnt Kapitel 3 mit den Betriebszuständen der Status-LED.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:2eb1e8fc5991497a5e71d3433e9a378241a7193ced48bb76a52cc949585c17a7",
+  "change_reason": "Als Warnsegment geführt: Wer die Masternummer kennt, kann den gesamten Empfängerkreis aus der Ferne austauschen - ohne physischen Zugang zum Fahrzeug und ohne den Betriebsartenschalter. Die Quelle stellt das als Komfortfunktion dar und nennt weder eine Bestätigung noch eine Benachrichtigung der bisherigen Nummern. Ob die bisherigen Zielrufnummern über den Wechsel informiert werden, sagt sie nicht.",
+  "discrepancy_refs": ["DSC-044"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S02-STATUSBERICHT-INHALT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "Inhalt des Statusberichts",
+  "body_md": "Den Statusbericht erhalten Sie nur auf Anforderung oder, je nach gewählter Betriebsart, in Intervallen. Er enthält neben Position, Geschwindigkeit und den Zuständen der Ausgänge je nach Betriebsart zusätzlich Angaben über die Spannungen der Messeingänge U2 bis U5 sowie die Temperatur in unmittelbarer Nähe des Geräts.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Abschnitt „Statusbericht“ neben dem Beispielbild",
+  "prev_context": "Zuvor stehen die möglichen Angaben einer Meldung.",
+  "next_context": "Danach folgt der Abschnitt zur Diebstahlmeldung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:0fb4b9546efe6cf166b5b14663b997ee7794e0c9bbe94545656cda7490117ce5",
+  "change_reason": "Quellennahe Erstextraktion. Der Text und das danebenstehende Beispielbild stimmen nicht überein: Der Text kündigt eine Temperaturangabe an, die das Beispiel nicht zeigt, und das Beispiel enthält zwei Zustandsfelder, die das Kapitel nicht erklärt. Beides ist unter DSC-045 belegt. Das Segment folgt dem Fließtext und behauptet keine Feldliste; die Betriebsspannung U1 wird hier nicht genannt, obwohl PDF-Seite 9 sie dem Statusbericht zurechnet.",
+  "discrepancy_refs": ["DSC-045"]
+}

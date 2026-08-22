@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S01-BEISPIELE-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "zielrufnummern",
+  "title": "Die Berechtigungsregel bleibt gesperrt",
+  "body_md": "Die Quelle zeigt hier drei Beispielnachrichten: eine mit nur einem Empfänger, eine mit Masternummer und einer weiteren berechtigten Nummer und eine, in der die Masternummer als Smartphone-Nummer gesetzt ist und eine zweite Nummer ausdrücklich nicht berechtigt sein soll. Aus dem Vergleich dieser drei Zeilen ist ableitbar, welches Zeichen eine Nummer berechtigt und welches sie ausschließt. Diese Regel wird hier nicht wiedergegeben, weil die Quelle sie an keiner Stelle ausspricht und ein falsches Zeichen entscheidet, wer das Fahrzeug fernsteuern darf.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Tabelle „Beispiele für verschiedene Programmier-SMS“ mit drei Zeilen",
+  "prev_context": "PDF-Seite 16 zeigt den Aufbau der Programmier-SMS als Abbildung.",
+  "next_context": "Danach folgt Abschnitt 2.9 zum Löschen der Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:30b4b2855d2e2c219ab0f18655a1350dbb5c11ef75c26f46a3437f9873963170",
+  "change_reason": "Die drei Beispielzeilen sind der einzige Beleg für die Berechtigungsregel im gesamten geprüften deutschen Teil - der Fließtext benennt sie nirgends. Damit ist der bereits für die Generation bis SN-044 dokumentierte Mangel auch ab SN-045 belegt: Dieselbe Zeichenstelle trägt Ländervorwahl-Präfix und Berechtigung zugleich (DSC-044, DSC-056). Die Zeichenfolgen und die Beispielrufnummern bleiben wegen BLK-006 vollständig ausgelassen. Die Spaltenüberschrift der Quelle enthält zusätzlich einen Präpositionsfehler (DSC-051).",
+  "discrepancy_refs": ["DSC-044", "DSC-056", "DSC-051"]
+}

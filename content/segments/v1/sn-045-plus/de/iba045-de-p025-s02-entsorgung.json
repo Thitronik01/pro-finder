@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S02-ENTSORGUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "technische-daten",
+  "title": "Gerät und Verpackung entsorgen",
+  "body_md": "Geben Sie das Gerät bei Außerbetriebnahme nicht in den Hausmüll. Die kommunalen Sammelstellen halten geeignete Entsorgungsbehälter für elektronische Geräte bereit. Die Verpackungsmaterialien führen Sie bitte dem Wertstoffrecycling zu.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.2 mit dem Symbol der durchgestrichenen Abfalltonne",
+  "prev_context": "Zuvor stehen die technischen Daten.",
+  "next_context": "Danach folgt der Konformitätsabschnitt.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:14782337c7df33ec5d9ea85f70de7889322320e42f03de764c39a40b06fa26ed",
+  "change_reason": "Quellennahe Erstextraktion. Das Symbol der durchgestrichenen Abfalltonne trägt die Aussage in der Quelle mit, besitzt aber keine Textalternative; der Text daneben ist vollständig genug, dass daraus kein Informationsverlust entsteht.",
+  "discrepancy_refs": []
+}

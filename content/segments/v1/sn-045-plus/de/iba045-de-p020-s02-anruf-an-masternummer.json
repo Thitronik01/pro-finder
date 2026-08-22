@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S02-ANRUF-AN-MASTERNUMMER",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Drei Meldungen lösen zusätzlich einen Anruf aus",
+  "body_md": "Bei der Einbruchmeldung, beim Gasalarm und beim manuellen Alarm wird nach dem Versenden der Nachricht zusätzlich die Masternummer angerufen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, drei rot gesetzte Zusätze unter den Abschnitten Einbruchmeldung, Gasalarm und Manueller Alarm",
+  "prev_context": "Die Tabelle darüber führt die sechs Meldungsarten auf.",
+  "next_context": "PDF-Seite 21 beginnt Kapitel 5 mit den Funktionen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:95a4e85b57180685da5be2affe82d44027f9ef64045fc9c99cc556d1ff49f19d",
+  "change_reason": "Eigenes Warnsegment, weil dieses Verhalten an keiner anderen Stelle der Quelle auftaucht und die Erreichbarkeit der Masternummer damit zur Sicherheitsfunktion wird. Die Quelle sagt nicht, wie oft angerufen wird, was bei Nichterreichbarkeit geschieht und ob eine andere Zielrufnummer nachrückt. Auffällig ist außerdem die Auswahl: Die Diebstahlmeldung, also der Kern des Produkts, löst keinen Anruf aus - ausgerechnet die drei Meldungen der gekoppelten Alarmanlage tun es.",
+  "discrepancy_refs": ["DSC-052"]
+}

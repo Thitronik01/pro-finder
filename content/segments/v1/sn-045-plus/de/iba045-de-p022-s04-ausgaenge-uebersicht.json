@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S04-AUSGAENGE-UEBERSICHT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "ausgaenge",
+  "title": "Zwei getrennt steuerbare Ausgänge",
+  "body_md": "Der Pro-finder verfügt über zwei getrennt voneinander steuerbare Ausgänge. Sie lassen sich dauerhaft schalten, für einen Zeitraum von einer Sekunde pulsen oder für eine frei wählbare Zeit einschalten. Wie die Ausgänge anzuschließen sind, steht im Anschlusskapitel.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.5, einleitende Absätze",
+  "prev_context": "Zuvor steht die Positionsabfrage für Smartphones.",
+  "next_context": "PDF-Seite 23 beschreibt die drei Schaltarten einzeln.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3687d9f52fee7cdfec6dd97cb92fdfde99a048a10586f4a669c50fd455b9afa6",
+  "change_reason": "Quellennahe Erstextraktion. Der Verweis der Quelle auf das Anschlusskapitel wurde sinngemäß übernommen, die Kapitelnummer nicht, weil die Webanleitung eigene Aufgabenwege führt. Die Quelle setzt in diesem Satz ein überzähliges Komma (DSC-051). Welche Pin-Nummer welchem Ausgangsbuchstaben entspricht, steht nur in der Legende auf PDF-Seite 8 und wird hier nicht wiederholt.",
+  "discrepancy_refs": ["DSC-051"]
+}

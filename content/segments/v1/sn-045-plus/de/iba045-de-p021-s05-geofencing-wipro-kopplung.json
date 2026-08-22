@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S05-GEOFENCING-WIPRO-KOPPLUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Bei geschalteter WiPro III folgt Geofencing automatisch",
+  "body_md": "Bei scharfgeschalteter WiPro III (safe.lock) ist das Geofencing automatisch aktiviert und muss nicht zusätzlich eingeschaltet werden. Entsprechend ist es bei unscharfgeschalteter WiPro III automatisch deaktiviert und muss nicht zusätzlich ausgeschaltet werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.2, roter Hinweiskasten am Seitenende",
+  "prev_context": "Zuvor stehen die beiden Steuerwege des Geofencings.",
+  "next_context": "PDF-Seite 22 setzt Kapitel 5 mit dem Statusbericht fort.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:9f4d4fe423eb587e215c231a60b05b72bf5d401285d249294f56c5a3cb63fc6f",
+  "change_reason": "Quellennahe Erstextraktion. Dieser Hinweis ist der bislang übersehene Kern von BLK-007: Er beantwortet die Frage nach dem Verhältnis zwischen Schaltweg und WiPro-Zustand für diese Generation, wirft aber zwei neue auf. Erstens: Wenn eine unscharfe WiPro III das Geofencing automatisch deaktiviert, was bewirkt dann das Einschalten in den übrigen Schalterstellungen? Zweitens: PDF-Seite 19 knüpft die Diebstahlmeldung an eine aktivierte WiPro III - ob ein Pro-finder ganz ohne WiPro III meldet, sagt weder diese noch jene Stelle. Beide Punkte sind am 2026-08-22 in DSC-042 nachgetragen worden.",
+  "discrepancy_refs": ["DSC-042"]
+}
