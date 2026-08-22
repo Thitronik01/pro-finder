@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P009-S03-AUTOMATISCHE-STATUSBERICHTE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "Automatische Statusberichte in festen Intervallen",
+  "body_md": "Der Pro-finder sendet in Intervallen automatisch Statusberichte an die gespeicherten Zielrufnummern. Welches Intervall gilt, hängt von der Betriebsart ab und steht in der Betriebsartentabelle auf der folgenden Seite.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.3, Funktionsgruppe „Automatische Statusberichte“",
+  "prev_context": "Zuvor steht die Funktionsgruppe zum anrufausgelösten Statusbericht.",
+  "next_context": "Danach folgt die Funktionsgruppe zu den Spannungsangaben U1 bis U5.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:853df3389684e3d175df785180fdec0a5791bc6307d12454c8d69e86a126fc42",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle verweist mit „in den unten aufgeführten Intervallen“ auf eine Tabelle, die erst auf PDF-Seite 10 folgt; der Bezug wird ausgeschrieben, damit das Segment allein verständlich bleibt. Es wird kein Zahlenwert genannt, weil die Intervalltabelle in diesem Batch noch nicht extrahiert ist.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P006-S01-LIEFERUMFANG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "anschluesse",
+  "title": "Lieferumfang ab SN-045",
+  "body_md": "Die Seite zeigt ein Produktfoto des Lieferumfangs und darunter eine nummerierte Liste:\n\n1. Pro-finder\n2. Antenne\n3. Gelverbinder\n4. Befestigungsschrauben\n5. Sicherungshalter\n6. Flachsicherung (3 A)\n7. Kurzanleitung\n8. Verbindungskabel WiPro III\n9. Anschlusskabel\n\nDas Foto trägt keine Nummernmarken. Welches abgebildete Teil zu welcher Listennummer gehört, geht aus der Quelle nicht hervor.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Überschrift „Lieferumfang“, Produktfoto im oberen Seitendrittel und nummerierte Liste darunter",
+  "prev_context": "PDF-Seite 5 endet mit dem Abschnitt „Bestimmungsgemäßer Gebrauch“.",
+  "next_context": "PDF-Seite 7 beginnt mit Kapitel 1 „Montage und Anschluss“.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1b8730831de49f43d0f15ecf9523b58bb392239acecfb34c2c96f06dbe469462",
+  "change_reason": "Quellennahe Erstextraktion der neun Listenpositionen im Wortlaut der Quelle. Die fehlende Zuordnung zwischen Foto und Liste wird ausdrücklich benannt, statt sie durch eine erfundene Positionsangabe zu schließen. Die auf dem abgebildeten Kurzanleitungs-Umschlag sichtbare Herstelleradresse, die Seriennummernnotation und der Revisionsstand wurden nicht übernommen: Sie sind reiner Bildinhalt, und die Kontaktdaten stehen unter BLK-004.",
+  "discrepancy_refs": []
+}

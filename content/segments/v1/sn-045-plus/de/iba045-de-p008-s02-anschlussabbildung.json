@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P008-S02-ANSCHLUSSABBILDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "anschluesse",
+  "title": "Beschriftetes Gerätefoto mit unerklärtem rotem X",
+  "body_md": "Über der Legende steht ein beschriftetes Foto der Geräteschmalseite. Gelbe Buchstabenmarken weisen auf den Betriebsartenschalter, die Buchse für die WiPro III, den Anschluss der externen GPS-Antenne und die Status-LED; farbige Nummernkreise markieren die acht Pins des Anschlusssteckers. Darüber sind die WiPro III und die optionale GPS-Antenne abgebildet, jeweils über eine Linie mit ihrem Anschluss verbunden. Zwischen den Marken B und C markiert ein rotes X einen weiteren Anschluss. Dieses Zeichen erklärt die Legende nicht. Die Beschriftung am Antennenfoto lautet „GPS-Antenne (Optional)“; das Etikett der abgebildeten Antenne trägt zusätzlich die Bezeichnung „GPS-pro“, die Legende nennt sie „Externe GPS-Antenne (Optional)“.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 8,
+  "source_page_end": 8,
+  "source_region": "Abschnitt 1.2, beschriftetes Foto der Geräteschmalseite mit den Marken A bis D und den Nummernkreisen 1 bis 8",
+  "prev_context": "PDF-Seite 7 endet mit der Abbildung zur Geräteausrichtung.",
+  "next_context": "Unter dem Foto steht die Legendentabelle der Marken und Pins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f23828921c096e062abb9ceecda35616365fc6aceb36f8fc8a077e2a0a913959",
+  "change_reason": "Das Foto ist der einzige Ort, an dem die Lage der Anschlüsse dokumentiert ist; es besitzt keine Textalternative. Beschrieben werden Anordnung und Bedeutungsträger. Das rote X wird als unerklärt benannt und nicht gedeutet – eine Lesart als „nicht verwendet“ wäre eine Annahme, und ein falsch belegter Anschluss ist ein Verdrahtungsrisiko. Die drei Bezeichnungen derselben Antenne bleiben nebeneinander stehen (DSC-022).",
+  "discrepancy_refs": ["DSC-022"]
+}

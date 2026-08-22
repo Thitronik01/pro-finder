@@ -2,7 +2,7 @@ export const REVIEW_PRIORITIES = ['P0', 'P1', 'P2'] as const;
 
 export type ReviewPriority = (typeof REVIEW_PRIORITIES)[number];
 
-export const REVIEW_PACKET_IDS = ['P0-01', 'P0-02', 'P0-03', 'P0-04', 'P0-05'] as const;
+export const REVIEW_PACKET_IDS = ['P0-01', 'P0-02', 'P0-03', 'P0-04', 'P0-05', 'P0-06'] as const;
 
 export type ReviewPacketId = (typeof REVIEW_PACKET_IDS)[number];
 
@@ -48,6 +48,18 @@ const REVIEW_PACKET_BY_SEGMENT_KEY: Record<string, ReviewPacketId> = {
   'BMA044-DE-P016-S03-AUSGANGSBEFEHLE-AUSLASSUNG': 'P0-05',
   'BMA044-DE-P017-S02-KEIN-GPS-EMPFANG': 'P0-05',
   'BMA044-DE-P017-S03-POSITION-UND-UTC-ZEIT': 'P0-05',
+  // P0-06 ist das erste technische Paket ab SN-045 und noch in Vorbereitung:
+  // Die Segmente stehen auf entwurf, ihre PDF-Seiten auf extracted.
+  'IBA045-DE-P005-S01-MELDEN-STATT-VERHINDERN': 'P0-06',
+  'IBA045-DE-P005-S02-STARTERBATTERIE': 'P0-06',
+  'IBA045-DE-P007-S01-MONTAGEORT': 'P0-06',
+  'IBA045-DE-P007-S04-ABBILDUNG-AUSRICHTUNG': 'P0-06',
+  'IBA045-DE-P008-S01-ANSCHLUSSLEGENDE': 'P0-06',
+  'IBA045-DE-P008-S02-ANSCHLUSSABBILDUNG': 'P0-06',
+  'IBA045-DE-P009-S02-ANRUF-LOEST-STATUSBERICHT': 'P0-06',
+  'IBA045-DE-P009-S05-GEOFENCING-PIN3': 'P0-06',
+  'IBA045-DE-P009-S06-ANRUF-SCHALTET-WIPRO': 'P0-06',
+  'IBA045-DE-P009-S07-MANUELLER-ALARM-PIN3': 'P0-06',
 };
 
 const PRIORITY_BY_SAFETY_CLASS: Record<string, ReviewPriority> = {

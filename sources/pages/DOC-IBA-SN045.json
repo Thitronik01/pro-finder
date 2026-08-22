@@ -258,8 +258,8 @@
     },
     {
       "page": 5,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -274,7 +274,7 @@
       "discrepancies": [
         "Aufgedruckte Seitenzahl \"Seite 3 von 23\" weicht von der physischen PDF-Seite 5 ab (deutscher Abschnitt beginnt offenbar auf PDF-Seite 3)."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "3 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["Haftungsausschluss", "Bestimmungsgemaesser Gebrauch"],
       "figures": [],
       "tables": [],
@@ -302,12 +302,13 @@
         "\"Pro-finder\" (konform, mehrfach)",
         "\"WiPro III (safe.lock)\" (Produktnennung mit Zusatz safe.lock)"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 3 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 6,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -324,7 +325,7 @@
         "Notation \"SN 0699 - 045 +\" auf dem abgebildeten Cover vs. Dateiname/Soll-Schreibweise \"ab SN-045\" - uneinheitliche Seriennummern-Schreibweise.",
         "Nummerierte Teileliste (1-9) ohne korrespondierende Nummernmarken im Produktfoto."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "1 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["Lieferumfang"],
       "figures": [
         {
@@ -365,12 +366,13 @@
         "\"Thitronik GmbH\" (im Foto, Adresszeile)",
         "\"Verbindungskabel WiPro III\" (konforme Produktnennung WiPro III)"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 1 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 7,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 1,
@@ -384,7 +386,7 @@
         "Paginierungs-Diskrepanz: aufgedruckt 'Seite 5 von 23', tatsaechlich PDF-Seite 7."
       ],
       "discrepancies": [],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["1 Montage und Anschluss", "1.1 Montageort waehlen"],
       "figures": [
         {
@@ -420,12 +422,13 @@
         "\"Pro-finder\" (konform, zweimal)",
         "\"GSM-Modul\" und \"GPS-Empfaenger\"/\"GPS-Antenne\" (konsistent verwendet)"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 8,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -443,7 +446,7 @@
         "Im Foto markiert ein rotes X einen Anschluss zwischen B und C, die Legende umfasst aber nur A-D und Pin 1-8 - das Symbol bleibt unerklaert.",
         "Uneinheitliche Benennung der optionalen Antenne auf derselben Seite: \"GPS-pro\" (Etikett), \"GPS-Antenne (Optional)\" (Foto-Beschriftung), \"Externe GPS-Antenne (Optional)\" (Legende C)."
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "2 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["1.2 Anschluesse, Anzeigen und Bedienelemente"],
       "figures": [
         {
@@ -488,12 +491,13 @@
         "\"WiPro III\" (konform, Foto-Beschriftung und Legende)",
         "\"GPS-pro\" (Produktname auf dem Antennenetikett) neben der Bezeichnung \"GPS-Antenne (Optional)\" bzw. \"Externe GPS-Antenne (Optional)\" - drei Bezeichnungsvarianten fuer dasselbe Teil auf einer Seite"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 9,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -510,7 +514,7 @@
         "Inkonsistente Artikelverwendung auf derselben Seite: erst 'beendet der Pro-finder den Anruf', spaeter 'beendet Pro-finder den Anruf' (ohne Artikel)",
         "Inkonsistente SIM-Bezeichnung auf derselben Seite: 'Nano SIM-Karte' (Abschnitt 'Anruf löst Statusbericht aus') vs. nur 'SIM-Karte' (Abschnitt 'Anruf aktiviert/deaktiviert WiPro')"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "7 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "1.3 Betriebsart auswählen",
         "Anruf löst Statusbericht aus:",
@@ -549,7 +553,8 @@
         "'Pro-finder' durchgehend korrekt geschrieben; einmal ohne Artikel: 'beendet Pro-finder den Anruf'",
         "'Nano SIM-Karte' (ohne Bindestrich zwischen Nano und SIM) statt einheitlicher Schreibweise wie 'Nano-SIM-Karte'"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 7 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 10,

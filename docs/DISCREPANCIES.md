@@ -851,9 +851,26 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-050 – Unerklärte und uneinheitliche Benennungen im deutschen Teil (ab SN-045)
 
-- **Dokument:** DOC-IBA-SN045, Seiten 12, 15, 16, 18, 21, 22, 23
+- **Dokument:** DOC-IBA-SN045, Seiten 5, 8, 9, 12, 15, 16, 18, 21, 22, 23
 - **Befund:** Sammelposition für Benennungen, die denselben Gegenstand unterschiedlich
   bezeichnen oder gar nicht erklärt werden.
+  - **Nachtrag 2026-08-22 (Seite 5):** Der Haftungsausschluss schreibt „Die Alarmanlage
+    ist an die Starterbatterie angeschlossen", obwohl derselbe Abschnitt den Pro-finder
+    eine Seite später als **Ortungssystem** einführt und die **WiPro III (safe.lock)** als
+    „Alarmanlage" bezeichnet. Welches Gerät die Tiefentladung der Starterbatterie
+    verursacht – der Pro-finder, die WiPro III oder beide zusammen –, ist damit nicht
+    bestimmbar. Der Absatz liest sich insgesamt wie aus einer Alarmanlagen-Anleitung
+    übernommen („keine Wertgegenstände offen im Fahrzeug lassen", „das Fahrzeug immer
+    abschließen"). Das ist keine reine Terminologiefrage: Von der Zuordnung hängt ab,
+    welches Gerät nach längerer Standzeit die Batterie leert.
+  - **Nachtrag 2026-08-22 (Seite 8):** Dieselbe optionale Antenne trägt auf einer Seite
+    drei Bezeichnungen – „GPS-pro" auf dem Etikett des abgebildeten Teils,
+    „GPS-Antenne (Optional)" als eingebettete Bildbeschriftung und „Externe GPS-Antenne
+    (Optional)" in der Legende (siehe auch DSC-022).
+  - **Nachtrag 2026-08-22 (Seite 9):** Pin 3 trägt in Abschnitt 1.3 zwei verschiedene
+    Funktionen – „Geofencing (schaltbar über Pin 3)" und „Manueller Alarm bei Spannung an
+    Pin 3" in Betriebsart A. Das Verhältnis der beiden Belegungen zueinander erklärt die
+    Quelle nicht; siehe auch DSC-042 und BLK-007.
   - „Ländervorwahl" (Seite 15) gegenüber „Landesvorwahl" (Seite 16, Diagramm).
   - „Nummer des Pro-finder" (Abschnitt 5.2) gegenüber „Nummer des GSM-Moduls"
     (Abschnitt 1.5.3) für dasselbe SMS-Ziel.
@@ -898,10 +915,23 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-052 – Lücken der Quelle, die keine Widersprüche sind (ab SN-045)
 
-- **Dokument:** DOC-IBA-SN045, Seiten 12, 19, 20, 23
+- **Dokument:** DOC-IBA-SN045, Seiten 7, 9, 12, 19, 20, 23
 - **Befund:** Fragen, die sich beim Schreiben der Aufgaben gestellt haben und die die
   Quelle **gar nicht** beantwortet. Sie sind keine Fehler, aber sie begrenzen, was die
   HTML-Anleitung sagen darf.
+  - **Nachtrag 2026-08-22 – GPS-Antennenkabel (Seite 7):** „die Kabellänge zwischen
+    GSM-Modul und GPS-Antenne zwei Meter beträgt" ist bei 500 dpi als feste Angabe
+    bestätigt, nicht als Obergrenze. Ob damit die mitgelieferte Kabellänge oder eine
+    maximal zulässige Gesamtlänge gemeint ist, sagt die Quelle nicht. Dieselbe offene
+    Frage besteht seit der 400-dpi-Gegenprüfung vom 2026-08-10 in der Generation bis
+    SN-044 (DSC-073); die Werte werden **nicht** zwischen den Generationen übertragen.
+  - **Nachtrag 2026-08-22 – Betriebsarten (Seite 9):** Abschnitt 1.3 zählt sechs
+    Funktionsgruppen auf, ohne einer einzigen eine Schalterstellung zuzuordnen. Welche
+    Betriebsart welche Funktion aktiviert, geht erst aus der Tabelle auf Seite 10 hervor;
+    die Ausnahme „in Betriebsart A" beim manuellen Alarm ist die einzige Stellungsangabe
+    im Fließtext. Ebenfalls unbeantwortet: welche Spannung an Pin 3 den Panikalarm
+    auslöst, an wen er geht, und welche Schalterstellung welche der Spannungen U1 bis U5
+    im Statusbericht anzeigt.
   - Ausgänge (Seite 23): Wer erhält den Statusbericht nach einem Schaltbefehl, und darf
     jede berechtigte Nummer schalten? Was geschieht bei einer Minutenzahl außerhalb
     1 bis 120? Lässt sich eine laufende Zeitschaltung vorzeitig abbrechen? In welchem

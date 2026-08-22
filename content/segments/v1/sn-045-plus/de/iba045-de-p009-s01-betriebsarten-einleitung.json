@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P009-S01-BETRIEBSARTEN-EINLEITUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "ausgaenge",
+  "title": "Ausgänge sind in allen Betriebsarten steuerbar",
+  "body_md": "In allen Betriebsarten lassen sich die Ausgänge steuern. Über den Betriebsartenschalter am Gerät werden darüber hinaus die auf dieser Seite beschriebenen Funktionen aktiviert.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.3, einleitender Absatz vor den sechs Funktionsgruppen",
+  "prev_context": "PDF-Seite 8 zeigt Anschlüsse, Anzeigen und Bedienelemente.",
+  "next_context": "Danach folgen die sechs Funktionsgruppen der Betriebsarten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c563b2f1c241a96a6493b01b0c42a861f9c5abfb8d2ef186767e4cc73e30eed4",
+  "change_reason": "Quellennahe Erstextraktion. Der Verweis der Quelle auf „5.4 Position mit dem Smartphone abfragen“ wurde nicht übernommen: Abschnitt 5.4 behandelt die Positionsabfrage, die Ausgangssteuerung steht in 5.5. Der Fehler steht bereits im deutschen Original und in allen zehn Sprachfassungen (DSC-028, DSC-040). Statt den falschen Verweis mitzuführen oder ihn stillschweigend zu korrigieren, nennt das Segment nur die belegte Aussage. Der Quellenverweis „siehe oben“ auf den Betriebsartenschalter wurde durch die Ortsangabe „am Gerät“ ersetzt, weil er in der Quelle auf eine Abbildung der vorherigen Seite zeigt.",
+  "discrepancy_refs": ["DSC-028", "DSC-040"]
+}

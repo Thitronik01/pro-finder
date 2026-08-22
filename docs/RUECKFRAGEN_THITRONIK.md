@@ -675,6 +675,9 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Niederländisch: `Pro-Zoeker`, unvollständiges `positi`, drei Wörter für Hauptnummer und zwei für Hauptkabelbaum                                                                                              | DSC-083, S. 186/187/189/195/198 |
 | Polnisch: LED-Normalzustand falsch dupliziert; `stuku 3`/`styku 3` und `wuczeniu`/`uczenia` widersprechen sich                                                                                               | DSC-084, S. 206/217/223         |
 | Schwedisch: Abschaltanweisung nennt `fence pa`, das Kapitel definiert denselben Text als Einschaltbefehl                                                                                                     | DSC-085, S. 235/243             |
+| Der Haftungsausschluss nennt „die Alarmanlage" als das an die Starterbatterie angeschlossene Gerät – welches Gerät die Tiefentladung verursacht, ist damit offen                                             | DSC-050, S. 5                   |
+| Ist die GPS-Antennen-Kabellänge von zwei Metern die Lieferlänge oder eine zulässige Obergrenze? Bei 500 dpi als feste Angabe bestätigt                                                                       | DSC-052, S. 7                   |
+| Pin 3 trägt in Abschnitt 1.3 zwei Funktionen (Geofencing schalten, Panikalarm in Betriebsart A); ihr Verhältnis erklärt die Quelle nicht                                                                     | DSC-050, DSC-042, S. 9          |
 
 Die PDF-Seitenprüfung ist abgeschlossen. Neue Funde entstehen jetzt aus der
 Aufgabenextraktion, den noch offenen Synthese-Auswertungen und den fachlichen Reviews;

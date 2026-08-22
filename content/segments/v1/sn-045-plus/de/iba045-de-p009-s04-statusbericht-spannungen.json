@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P009-S04-STATUSBERICHT-SPANNUNGEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "Statusbericht enthält die Spannungen U1 bis U5",
+  "body_md": "Der Statusbericht enthält zusätzlich Angaben über die Betriebsspannung U1 und über die Spannungen an den Messeingängen U2 bis U5. Je nach Schalterstellung werden verschiedene Spannungen angezeigt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.3, Funktionsgruppe „Statusbericht enthält U1, U2, U3, U4, U5“",
+  "prev_context": "Zuvor steht die Funktionsgruppe zu den automatischen Statusberichten.",
+  "next_context": "Danach folgt die Funktionsgruppe zum Geofencing über Pin 3.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a0eb559fdbf616d8636f315d22732fdbe3b5ddfe1e2fcd710bd71bfa5bcc7df1",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle sagt nicht, welche Schalterstellung welche Spannungen anzeigt; die Einschränkung „je nach Schalterstellung“ bleibt deshalb unaufgelöst stehen. U1 wird hier als Betriebsspannung eingeführt, obwohl die Pinlegende auf PDF-Seite 8 nur die Messeingänge U2 bis U5 benennt und Pin 8 „Dauerplus 12 V“ nennt.",
+  "discrepancy_refs": []
+}

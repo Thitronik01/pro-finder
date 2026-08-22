@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S03-EXTERNE-GPS-ANTENNE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "montageort",
+  "title": "Kabellänge und Montage der externen GPS-Antenne",
+  "body_md": "Ermöglicht der Montageort des Gerätes keinen GPS-Empfang, kann eine externe GPS-Antenne angeschlossen werden. Die Kabellänge zwischen GSM-Modul und GPS-Antenne beträgt laut Quelle zwei Meter. Auch die externe GPS-Antenne benötigt möglichst „freie Sicht“ zu den Satelliten. Sie kann unter Kunststoffverkleidungen des Armaturenbretts montiert werden, zum Beispiel unter der Abdeckung des Kombiinstrumentes.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1, vierter und fünfter Absatz",
+  "prev_context": "Zuvor steht die Anforderung „freie Sicht“ zum Satelliten.",
+  "next_context": "Darunter folgt die dreiteilige Abbildung zur Geräteausrichtung und Montagezone.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d9ed7bb2afaf57cfbe94c70e6d6f41ec7deae84199efb0e0c72f8298315c80c6",
+  "change_reason": "Quellennahe Erstextraktion. Der deutsche Text ab SN-045 formuliert die zwei Meter als feste Angabe, nicht als Obergrenze; die Formulierung „laut Quelle“ hält offen, ob damit die gelieferte Kabellänge oder eine zulässige Gesamtlänge gemeint ist. Diese Frage ist am 2026-08-22 in DSC-052 aufgenommen worden. Der Wert wird nicht mit der Generation bis SN-044 verrechnet.",
+  "discrepancy_refs": ["DSC-052"]
+}

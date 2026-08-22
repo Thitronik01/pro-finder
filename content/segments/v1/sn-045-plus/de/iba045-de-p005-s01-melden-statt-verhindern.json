@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P005-S01-MELDEN-STATT-VERHINDERN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Der Pro-finder meldet einen Diebstahl, verhindert ihn aber nicht",
+  "body_md": "Der Pro-finder kann wie jedes Ortungssystem einen erfolgten oder versuchten Diebstahl lediglich melden, jedoch nicht verhindern. Verhalten Sie sich deshalb entsprechend umsichtig: Lassen Sie keine Wertgegenstände offen oder leicht zugänglich im Fahrzeug und schließen Sie das Fahrzeug beim Verlassen immer ab. Die Quelle schließt eine Haftung für entwendete Wertgegenstände, für den Diebstahl des Fahrzeugs und für Schäden durch Einbruch am Fahrzeug ausdrücklich aus.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt „Haftungsausschluss“, erster Absatz",
+  "prev_context": "PDF-Seite 4 schließt das deutsche Inhaltsverzeichnis mit Kapitel 6 ab.",
+  "next_context": "Danach folgt der zweite Absatz des Haftungsausschlusses zur Starterbatterie.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1eef221263f3c0277458aff9d780428ba935b1efb160ad5d8ca5cf362b36a11c",
+  "change_reason": "Quellennahe Erstextraktion. Die Kernaussage „melden, nicht verhindern“ wird als eigenes Warnsegment geführt, weil die Quelle sie nur durch eine Überschrift und Fließtext markiert und kein Signalwort setzt. Die Haftungsformulierung wird als Aussage der Quelle wiedergegeben und nicht rechtlich bewertet.",
+  "discrepancy_refs": []
+}

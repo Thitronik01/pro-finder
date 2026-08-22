@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S02-FREIE-SICHT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "montageort",
+  "title": "Freie Sicht zum Satelliten und durchlässige Materialien",
+  "body_md": "Es muss „freie Sicht“ zum Satelliten gewährleistet sein. Kunststoffe, Glas und Holz werden vom GPS-Signal durchdrungen und beeinträchtigen die „freie Sicht“ zum Satelliten nicht.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1, dritter Absatz",
+  "prev_context": "Zuvor stehen die Anforderungen an den Montageort des Hauptgeräts.",
+  "next_context": "Danach folgt der Hinweis auf die optionale externe GPS-Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d4c0ba14ee087d0f1a5865419518214e5274b894c8f453f9430d21f271affc8b",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle nennt genau drei durchlässige Materialien; die Aufzählung wurde weder ergänzt noch verallgemeinert. Die Anführungszeichen um „freie Sicht“ stammen aus der Quelle und werden beibehalten, weil der Begriff dort nicht definiert wird.",
+  "discrepancy_refs": []
+}

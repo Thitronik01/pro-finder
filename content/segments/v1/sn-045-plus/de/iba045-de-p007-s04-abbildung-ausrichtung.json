@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S04-ABBILDUNG-AUSRICHTUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "montageort",
+  "title": "Abbildung zur Geräteausrichtung und Montagezone",
+  "body_md": "Unter dem Text steht eine dreiteilige Abbildung ohne Bildunterschrift. Sie zeigt links den Pro-finder mit der Geräteoberseite nach oben in einem grünen Kreis, in der Mitte denselben Pro-finder mit der Oberseite nach unten in einem roten Verbotszeichen mit Diagonalbalken und rechts die Strichzeichnung eines Reisemobils, bei dem ein Satellitensymbol über eine gestrichelte Linie auf einen markierten Bereich am Armaturenbrett zeigt. Welche der drei Darstellungen richtig und welche falsch ist, benennt die Quelle nur über Farbe und Verbotszeichen, nicht in Text.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Untere Seitenhälfte, dreiteilige Abbildung unter Abschnitt 1.1",
+  "prev_context": "Zuvor steht der Absatz zur externen GPS-Antenne.",
+  "next_context": "PDF-Seite 8 zeigt Anschlüsse, Anzeigen und Bedienelemente.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c005625866783443a59da2522ba24913f320415f98770d3b95ed689ea02753f0",
+  "change_reason": "Die Abbildung ist ohne Textalternative und trägt ihre Aussage überwiegend über die Farben Grün und Rot; nur das Verbotszeichen besitzt mit dem Diagonalbalken ein farbunabhängiges Merkmal, die grün markierte Montagezone dagegen nicht. Die Beschreibung benennt Anordnung und Bedeutungsträger, ohne eine Bildunterschrift zu erfinden. Die Richtig-Aussage selbst steht bereits belegt im Textsegment zur Geräteoberseite.",
+  "discrepancy_refs": []
+}

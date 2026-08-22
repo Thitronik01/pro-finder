@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P005-S02-STARTERBATTERIE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "anschluesse",
+  "title": "Anschluss an die Starterbatterie kann zur Tiefentladung führen",
+  "body_md": "Laut Quelle ist die Alarmanlage an die Starterbatterie angeschlossen. Für Schäden durch Tiefentladung der Starterbatterie übernimmt der Hersteller keine Haftung. Beachten Sie außerdem, dass sich das Fahrzeug nicht entriegeln lässt, wenn die Batterie leer ist. Die Verantwortung für die bestimmungsgemäße Nutzung trägt der Anwender; er muss sicherstellen, dass durch Nichteinhaltung der beschriebenen Anweisungen keine materiellen Schäden, Verletzungen oder Unfälle eintreten können.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt „Haftungsausschluss“, zweiter Absatz",
+  "prev_context": "Zuvor steht der Absatz, dass der Pro-finder einen Diebstahl nur melden kann.",
+  "next_context": "Danach folgt der Abschnitt „Bestimmungsgemäßer Gebrauch“.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:fb94f3972ff790d8071d1af6a04b7e12404c7e6365d0d585f9a9e0b2a6f5bd7a",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle schreibt an dieser Stelle wörtlich, die Alarmanlage sei an die Starterbatterie angeschlossen, obwohl das Dokument den Pro-finder sonst als Ortungssystem und die WiPro III als Alarmanlage bezeichnet. Welches Gerät die Tiefentladung verursacht, bleibt damit offen; die Formulierung „laut Quelle“ hält diese Unschärfe sichtbar, statt sie stillschweigend auf den Pro-finder zu beziehen. Der Befund ist am 2026-08-22 in DSC-050 aufgenommen worden.",
+  "discrepancy_refs": ["DSC-050"]
+}

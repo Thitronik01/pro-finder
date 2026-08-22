@@ -1,6 +1,6 @@
 # Projektstatus
 
-Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-22. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
@@ -10,7 +10,7 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 27.9 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 68 %        |
@@ -23,22 +23,22 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 36.1 %      |
-| DOC-IBA-SN045 | 247    | 25 %        |
+| DOC-IBA-SN045 | 247    | 25.5 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
+Offene Blocker: 6 · Nächste Aktion: Den SN-045-Segmentbestand fortsetzen: die deutschen Seiten 10 bis 14 von DOC-IBA-SN045 extrahieren (Betriebsartentabelle, Modul anschliessen, GPS-Antenne, Kapitel 2 und THITRONIK App) und anschliessend die Seiten 5 bis 9 unabhaengig gegenlesen, damit sie von extracted auf validated steigen. Parallel die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 307 stehen auf
-  `inspected` und die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
-  unabhängigen Segment-Gegenprüfungen auf `validated`; keine Seite steht mehr auf
-  `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
-  Kurzanleitungen sind je 2/2 geprüft.
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 302 stehen auf
+  `inspected`, die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
+  unabhängigen Segment-Gegenprüfungen auf `validated` und seit dem 2026-08-22 die fünf
+  deutschen Seiten 5–9 von DOC-IBA-SN045 auf `extracted`. DOC-IBA-SN045 ist 247/247,
+  DOC-BMA-SN044 72/72 und beide Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
   vollständig geprüft.
@@ -172,6 +172,37 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   die ungeklärte Berechtigungsregel, der feste PIN-Wert, der widersprüchliche Radius sowie
   Koordinaten, Kartenlinks und Beispielbeträge erscheinen nur als begründete Auslassungen
   ohne gesperrten Bedienwert oder Befehlszeichenfolge;
+- **der Segmentbestand der Generation ab SN-045 ist eröffnet:** Seit dem 2026-08-22 liegen
+  17 Segmente aus `content/segments/v1/sn-045-plus/de/` vor, extrahiert aus den deutschen
+  Seiten 5–9 von DOC-IBA-SN045. Sie decken Haftungsausschluss und bestimmungsgemäßen
+  Gebrauch, den neunteiligen Lieferumfang, Montageort, freie Sicht, die externe
+  GPS-Antenne, die Legende der Anschlüsse mit Marken A–D und Pin 1–8 sowie alle sechs
+  Funktionsgruppen der Betriebsarten ab. Der Segmentbestand umfasst damit 73 Dateien; alle
+  bleiben `entwurf`. Weil DOC-IBA-SN045 keine Textebene besitzt, wurde jede Seite bei
+  300 dpi gerendert und gelesen; Lieferumfangsliste, Pinlegende, Kabellänge sowie die
+  Geofencing- und Panikalarm-Absätze wurden zusätzlich bei 500 dpi im Ausschnitt
+  gegengelesen und dabei ohne Abweichung bestätigt. Die fünf Seiten stehen deshalb auf
+  `extracted` und ausdrücklich **nicht** auf `validated`: Die unabhängige zweite
+  Durchsicht aller 17 Segmente steht aus. Drei Befunde sind neu ins Register gegangen –
+  der Haftungsausschluss nennt „die Alarmanlage" als das an die Starterbatterie
+  angeschlossene Gerät, obwohl der Pro-finder eine Seite später als Ortungssystem
+  eingeführt wird (DSC-050); die zwei Meter Antennenkabel sind bei 500 dpi als feste
+  Angabe bestätigt, ohne dass die Quelle Lieferlänge und Obergrenze unterscheidet
+  (DSC-052); und Pin 3 trägt in Abschnitt 1.3 zwei Funktionen, deren Verhältnis die Quelle
+  nicht erklärt (DSC-050 mit DSC-042). Der falsche Querverweis auf 5.4 statt 5.5 wurde
+  nicht mitgeführt und auch nicht stillschweigend korrigiert, sondern durch die belegte
+  Aussage ersetzt (DSC-028, DSC-040). Kein SMS-Befehl, kein Berechtigungszeichen und kein
+  Wert der Generation bis SN-044 ist in den Bestand gelangt;
+- **das erste technische Prüfpaket der Generation ab SN-045 existiert:** `P0-06` bündelt
+  die zehn sicherheitskritischen Segmente der Seiten 5–9 in 18 Einzelentscheidungen zu
+  Montage und Ausrichtung, Pinbelegung, der Doppelbelegung von Pin 3 und den
+  Haftungsaussagen. Anders als P0-01 bis P0-05 steht es auf **„in Vorbereitung"** und
+  nicht auf „bereit für Fachreview": Es existiert, damit kein sicherheitskritisches
+  Segment ohne Entscheidungszuordnung bleibt, bündelt aber Erstextraktionen. Der
+  Unit-Test, der genau das absichert, hat die Lücke aufgedeckt; die Zusicherung wurde
+  nicht aufgeweicht, sondern um die Generationsaufteilung 41 + 10 erweitert. `/review`
+  zeigt jetzt 51 von 51 P0-Segmenten in Prüfpaketen und filtert P0-06 mit zehn Treffern;
+  der vollständige E2E-Lauf bleibt bei 64 von 64 bestandenen Tests;
 - **Schema- und Referenzprüfung sichern die Segmente in CI ab:**
   `scripts/check-segments.mjs` prüft Schema v1, Pfad/Schlüssel, Dokumentinventar,
   Seitenstatus, Aufgabenzuordnung, DSC-Verweise, Prüfsummen, BLK-005 und die

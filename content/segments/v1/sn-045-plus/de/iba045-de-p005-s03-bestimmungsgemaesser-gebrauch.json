@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P005-S03-BESTIMMUNGSGEMAESSER-GEBRAUCH",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "meldungen",
+  "title": "Bestimmungsgemäßer Gebrauch des Pro-finder",
+  "body_md": "Der Pro-finder ist ein speziell für Freizeitfahrzeuge entwickeltes Ortungssystem zur präzisen Standortbestimmung und -überwachung von Fahrzeugen. Die Fahrzeugposition ermittelt er über GPS- und GSM-Technologien. Die Standortbenachrichtigung erfolgt ausschließlich per SMS und enthält je nach mobilem Endgerät einen Kartenlink oder Koordinaten. Zum Aufzeichnen von Routen oder für Live-Tracking ist das Gerät nicht bestimmt. In Kombination mit anderen Komponenten bietet der Pro-finder zusätzliche Sicherheitsfunktionen, zum Beispiel Benachrichtigungen per SMS bei Alarmauslösung in Verbindung mit einer Alarmanlage WiPro III (safe.lock) oder Gasalarme bei angelernten Gaswarngeräten der Marke THITRONIK. Der Pro-finder darf ausschließlich gemäß den Angaben dieser Anleitung genutzt werden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt „Bestimmungsgemäßer Gebrauch“, alle drei Absätze",
+  "prev_context": "Zuvor steht der Haftungsausschluss mit dem Hinweis zur Starterbatterie.",
+  "next_context": "PDF-Seite 6 zeigt den Lieferumfang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8d540ef728d2f95be4da70657d09b44c417424e16ed2c59427ca06d7ce4e0f2b",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle nennt als Kartendienst „Google Maps-Links“; im übersetzbaren Text steht stattdessen der neutrale Begriff Kartenlink, weil der Dienstname keine technische Aussage trägt und in der Webanleitung nicht als Zusicherung erscheinen soll. Der Markenzusatz ® der Quelle wurde nicht übernommen, der Produktname THITRONIK folgt der verbindlichen Schreibweise.",
+  "discrepancy_refs": []
+}

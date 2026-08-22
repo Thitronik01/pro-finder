@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P009-S07-MANUELLER-ALARM-PIN3",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Manueller Alarm bei Spannung an Pin 3 in Betriebsart A",
+  "body_md": "Liegt in der Betriebsart A eine Spannung an Pin 3 an, versendet der Pro-finder einen manuellen Alarm (Panikalarm). Das kann zum Beispiel über einen Taster erfolgen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.3, Funktionsgruppe „Manueller Alarm bei Spannung an Pin 3“",
+  "prev_context": "Zuvor steht die Funktionsgruppe zum Schalten der WiPro III per Anruf.",
+  "next_context": "PDF-Seite 10 enthält die ganzseitige Betriebsartentabelle.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:5c90a0c17ead4c2ffdffa5472dee122e6ce264ee89e2b3ab5bbc8ec60d8fd60b",
+  "change_reason": "Quellennahe Erstextraktion. Derselbe Pin 3 trägt auf dieser Seite zwei verschiedene Funktionen: Geofencing schalten und – in Betriebsart A – einen Panikalarm auslösen. Beide Aussagen bleiben getrennt stehen, weil die Quelle das Verhältnis nicht erklärt. Die Wortstellung folgt hier nicht der Quelle („Liegt in Betriebsart A an Pin 3 eine Spannung an“), weil diese Reihenfolge die Zeichenfolge einer gesperrten Ausgangssteuerung enthält; die Aussage bleibt unverändert. Welche Spannung den Alarm auslöst und an wen er geht, sagt der Absatz nicht; es wird kein Wert ergänzt.",
+  "discrepancy_refs": []
+}

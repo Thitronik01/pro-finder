@@ -224,6 +224,16 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                 P0-05 in der Warteschlange öffnen
               </Link>
             </li>
+            <li>
+              <strong>P0-06 (in Vorbereitung, ab SN-045):</strong> zehn Segmente zu Montage,
+              Pinbelegung, der Doppelbelegung von Pin 3 und den Haftungsaussagen. Die zugehörigen
+              PDF-Seiten stehen auf <code>extracted</code>; die unabhängige Gegenprüfung steht aus,
+              deshalb ist das Dossier noch nicht zum Fachreview freigegeben. Dossier:{' '}
+              <code>docs/review-packets/P0-06-MONTAGE-ANSCHLUSS-BETRIEBSARTEN-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-06">
+                P0-06 in der Warteschlange öffnen
+              </Link>
+            </li>
           </ul>
         </aside>
 

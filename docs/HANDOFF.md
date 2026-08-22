@@ -1,9 +1,70 @@
 # Handoff
 
-Stand: 2026-08-13 (vierundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
+Stand: 2026-08-22 (fünfundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## In dieser Fortsetzung abgeschlossen
+
+### Erster Segmentbatch der Generation ab SN-045 (DOC-IBA-SN045, Seiten 5–9)
+
+- Der Segmentbestand ab SN-045 war leer: 247 geprüfte Seiten, aber keine einzige
+  Extraktion. Damit war „Quelleninventar und PDF-Prüfung" mit 20 Prozent Gewicht und
+  27,5 Prozent Fortschritt der schwächste Workstream. Dieser Batch eröffnet den Bestand
+  mit **17 Segmenten** in `content/segments/v1/sn-045-plus/de/`; der Gesamtbestand steigt
+  von 56 auf 73 Segmente.
+- Abgedeckt sind die deutschen Inhaltsseiten 5 bis 9: Haftungsausschluss (drei Segmente),
+  Lieferumfang (eins), Abschnitt 1.1 Montageort (vier), Abschnitt 1.2 Anschlüsse (zwei)
+  und Abschnitt 1.3 Betriebsart auswählen (sieben). Jedes Segment nennt Dokument,
+  PDF-Seite, Seitenregion, Kontext, Sicherheitsklasse, SHA-256-Prüfsumme und
+  Änderungsgrund; alle stehen auf `entwurf`.
+- **Methodik:** DOC-IBA-SN045 hat keine Textebene – PyMuPDF liefert für diese Seiten null
+  lesbare Zeichen. Jede Seite wurde deshalb bei 300 dpi gerendert und gelesen. Danach
+  wurden Lieferumfangsliste, Pinlegende A–D/1–8, der Absatz zur Kabellänge und die
+  Absätze zu Geofencing und Panikalarm bei 500 dpi als Ausschnitt gegengelesen. Die
+  Gegenprüfung bestätigte alle Werte ohne Abweichung.
+- **Status bewusst `extracted`, nicht `validated`:** Die fünf Seiten steigen von 25 auf
+  50 Prozent. Der Sprung auf `validated` bleibt der unabhängigen zweiten Durchsicht
+  vorbehalten, wie sie für die SN-044-Batches in jeweils eigenen Durchgängen erfolgt ist.
+  Die 500-dpi-Gegenprobe deckt die sicherheitskritischen Werte ab, ersetzt aber keine
+  unabhängige Neuableitung aller 17 Segmente.
+- **Register ergänzt, ohne neue DSC-Nummer:** Drei Befunde sind in die vorhandenen
+  Sammelpositionen eingeflossen. Der Haftungsausschluss auf Seite 5 nennt „die
+  Alarmanlage" als das an die Starterbatterie angeschlossene Gerät, obwohl derselbe
+  Abschnitt den Pro-finder als Ortungssystem und die WiPro III als Alarmanlage einführt –
+  welches Gerät die Tiefentladung verursacht, ist damit nicht bestimmbar (DSC-050). Die
+  zwei Meter Antennenkabel auf Seite 7 sind bei 500 dpi als feste Angabe bestätigt; ob
+  Lieferlänge oder zulässige Obergrenze gemeint ist, sagt die Quelle nicht (DSC-052).
+  Pin 3 trägt in Abschnitt 1.3 zwei Funktionen – Geofencing schalten und in Betriebsart A
+  einen Panikalarm auslösen –, deren Verhältnis die Quelle nicht erklärt (DSC-050 mit
+  DSC-042). Alle drei stehen zusätzlich unter „Laufend ergänzt" in
+  `RUECKFRAGEN_THITRONIK.md`. Höchster Registereintrag bleibt DSC-085, es bleiben
+  siebzehn Rückfragen und sechs aktive Blocker.
+- **Sperren eingehalten:** In `title` und `body_md` steht keine SMS-Befehlszeichenfolge
+  (BLK-005). Der `segments:check` hat das einmal aktiv verhindert: Die Quellwortstellung
+  „Liegt in Betriebsart A an Pin 3 eine Spannung an" enthält die Zeichenfolge einer
+  gesperrten Ausgangssteuerung; das Segment formuliert deshalb „Liegt in der Betriebsart A
+  eine Spannung an Pin 3 an" und dokumentiert die Umstellung im `change_reason`. Die
+  Berechtigungsregel für Zielrufnummern bleibt unter BLK-006 unveröffentlicht und wird nur
+  als Bedingung der Quelle zitiert. Die offene Geofencing-Abhängigkeit von der WiPro III
+  bleibt unter BLK-007 sichtbar. Herstelleradresse und Revisionsstand vom abgebildeten
+  Kurzanleitungs-Umschlag wurden wegen BLK-004 nicht übernommen.
+- **Falscher Querverweis nicht mitgeführt:** Die Quelle verweist für die Ausgangssteuerung
+  auf „5.4 Position mit dem Smartphone abfragen"; zuständig ist 5.5 (DSC-028, DSC-040).
+  Das Segment übernimmt weder den falschen Verweis noch korrigiert es ihn stillschweigend,
+  sondern nennt nur die belegte Aussage und begründet die Auslassung.
+- **Erstes technisches Prüfpaket ab SN-045:** Die zehn sicherheitskritischen Segmente
+  sind in `docs/review-packets/P0-06-MONTAGE-ANSCHLUSS-BETRIEBSARTEN-SN045.md` gebündelt –
+  18 Einzelentscheidungen zu Montage und Ausrichtung, Pinbelegung, der Doppelbelegung von
+  Pin 3 und den Haftungsaussagen. Das Paket steht auf **„in Vorbereitung"**: Es existiert,
+  damit kein sicherheitskritisches Segment ohne Entscheidungszuordnung bleibt, bündelt
+  aber Erstextraktionen und wird erst nach der unabhängigen Gegenprüfung auf „bereit für
+  Fachreview" gesetzt. `/review` zeigt es als eigene Paket-ID mit zehn Treffern.
+- **Generationstrennung:** Kein Wert aus DOC-BMA-SN044 ist in den Bestand ab SN-045
+  gelangt. Pin 8 heißt hier „Dauerplus 12 V", bis SN-044 dagegen „Betriebsspannung U1,
+  +12 V"; beide Formulierungen bleiben in ihrer jeweiligen Generation stehen. Die
+  Quelle schreibt auf Seite 9 einmal „Nano SIM-Karte" und wenige Zeilen später nur
+  „SIM-Karte"; das Segment nennt neutral die eingelegte SIM-Karte, das Kartenformat bleibt
+  bei DSC-069.
 
 ### Kleiner QA-Schritt: Reduced Motion technisch abgesichert
 
@@ -379,8 +440,12 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Was weiterhin offen ist
 
-- Alle 56 deutschen Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
-  eine technische oder rechtliche Freigabe.
+- Alle 56 deutschen SN-044-Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines
+  besitzt eine technische oder rechtliche Freigabe.
+- Der Segmentbestand ab SN-045 deckt erst 5 der 21 deutschen Inhaltsseiten ab. Die
+  17 Segmente stehen auf `entwurf`, ihre fünf Seiten auf `extracted`; die unabhängige
+  Gegenprüfung steht aus. Die Seiten 10 bis 25 sind unverändert `inspected`, ohne
+  Extraktion. Für die neun nichtdeutschen Sprachteile ab SN-045 existiert kein Segment.
 - P0-01 bis P0-05 sind intern reviewbereit und decken alle 41 P0-Segmente ab, warten aber
   auf den realen THITRONIK-Fachreview. Keine der 121 vorbereiteten Einzelentscheidungen
   ist beantwortet und kein Segmentstatus wurde geändert.
@@ -410,68 +475,103 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Abschlussprotokoll
 
-- **Bearbeitete PDF-Seiten:** keine neuen Renderings oder Statusänderungen. Die drei
-  Synthesen verwenden ausschließlich bereits dokumentierte Seitenbelege. Seiten 3–18 von
-  DOC-BMA-SN044 samt allen 56 deutschen Segmenten bleiben quellenvalidiert; Seite 19
-  enthält nur ein leeres Notizfeld.
-- **Gesamtstand Quellen:** 307 von 323 Seiten `inspected`, 16 von 323 `validated`, keine
-  Seite `extracted`; DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 247
-  `inspected` und beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne
-  Segmentdatei hochgestuft.
-- **Segmente:** Schema v1 und 56 deutsche SN-044-Segmente; alle `entwurf`, alle mit
-  aktueller Prüfsumme und durch Dokument, Seite, Region und Kontext belegt. Alle fünf
-  Batches besitzen eine unabhängige Gegenprüfung; Korrekturen stehen im jeweiligen
-  `change_reason`.
+- **Bearbeitete PDF-Seiten:** DOC-IBA-SN045, deutsche Seiten 5 bis 9, bei 300 dpi neu
+  gerendert und gelesen; Lieferumfangsliste, Pinlegende, Kabellängenabsatz sowie die
+  Geofencing- und Panikalarm-Absätze zusätzlich bei 500 dpi als Ausschnitt gegengelesen.
+  Alle fünf Seiten von `inspected` auf `extracted` gehoben. Seiten 3–18 von
+  DOC-BMA-SN044 bleiben unverändert quellenvalidiert.
+- **Gesamtstand Quellen:** 302 von 323 Seiten `inspected`, 5 von 323 `extracted`, 16 von
+  323 `validated`; DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 242
+  `inspected`/5 `extracted` und beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde
+  ohne Segmentdatei hochgestuft; der PDF-Audit steigt von 27,5 auf 27,9 Prozent.
+- **Segmente:** Schema v1 und jetzt 73 deutsche Segmente – 56 aus DOC-BMA-SN044 (Seiten
+  3–18, unabhängig gegengeprüft) und 17 neue aus DOC-IBA-SN045 (Seiten 5–9). Alle
+  `entwurf`, alle mit aktueller Prüfsumme und durch Dokument, Seite, Region und Kontext
+  belegt. Für den neuen Batch steht die unabhängige Gegenprüfung aus; deshalb `extracted`
+  statt `validated`.
 - **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
   gefüllt, alle `entwurf`, kein Platzhalter. Englisch ab SN-045 besitzt zusätzlich alle
-  vierzehn belegten Aufgabenentwürfe, ebenfalls ohne Platzhalter.
-- **Prüfpakete:** P0-01 bis P0-05 enthalten 6/11/11/8/5 P0-Segmente und zusammen 121
-  einzeln referenzierbare Entscheidungen. Damit sind 41 von 41 P0-Segmenten genau einem
-  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Die Review-UI zeigt
-  41/41 und macht alle fünf Paket-IDs über einen eigenen Select und Direktlinks filterbar.
-- **Register:** Nach der vorhandenen SMS-Befehlssynthese bündeln zwei neue Auswertungen
-  technische Werte sowie die Zugänglichkeitsgrenzen zwischen PDF, HTML und Gerät. Keine
-  neue DSC-Nummer und keine neue Rückfrage waren erforderlich. Höchster Eintrag bleibt
-  DSC-085; siebzehn Fragen und sechs aktive Blocker.
-- **Geänderte Bereiche:** `DISCREPANCIES.md`, `RUECKFRAGEN_THITRONIK.md`,
-  `PROJECT_STATUS.md`, `HANDOFF.md`, `HANDOVER_PROMPT.md`, `progress-input.json` und die
-  daraus generierte `progress.json`. Aufgaben, Segmente, Seitenstatus, Anwendung,
-  Setup-Karte, Content-Schema und Supabase-Migrationen blieben unverändert.
-- **Karten-Nachtrag:** sieben unveränderte Nutzerentwürfe samt Integritätsmanifest, zwei
-  deutsche SVG-Beispiele, zwei gerenderte Vorschauen, erweiterter Karten-Preflight sowie
-  aktualisierte Anforderungen, Druckspezifikation und Inhalts-Quellen-Zuordnung. Keine
-  technische Kartenfunktion und kein Produktionswert wurde freigegeben.
-- **Genutzte Skills:** keine. Die Synthesen wurden aus den versionierten
-  Seitenbefunden, DSC-Einträgen und Reviewfragen erstellt; es wurde kein Skill-Inhalt in
-  Produktcode oder Dokumentation übernommen.
-- **Abschlussläufe:** der neue Reduced-Motion-Test bestand gezielt 2 von 2 Läufen und im
-  vollständigen E2E-Lauf 64 von 64 Playwright-/axe-Tests. Die abschließende Reihenfolge
-  `npm run progress` → `npm run format` → `npm run check` ist ebenfalls grün; darin 38
-  Unit-Tests sowie Segment-, Content-, Referenz-, Secret-, Token-, Lockfile- und
-  Fortschrittsprüfung.
+  vierzehn belegten Aufgabenentwürfe, ebenfalls ohne Platzhalter. Kein Aufgabenstatus
+  wurde in dieser Fortsetzung verändert.
+- **Prüfpakete:** P0-01 bis P0-05 enthalten unverändert 6/11/11/8/5 P0-Segmente und
+  zusammen 121 einzeln referenzierbare Entscheidungen für die Generation bis SN-044. Neu
+  ist **P0-06**, das erste technische Paket ab SN-045: zehn P0-Segmente zu Montage,
+  Pinbelegung, der Doppelbelegung von Pin 3 und den Haftungsaussagen, mit 18
+  Einzelentscheidungen. Es steht ausdrücklich auf **„in Vorbereitung"** und nicht auf
+  „bereit für Fachreview", weil seine Segmente Erstextraktionen sind und ihre Seiten auf
+  `extracted` stehen. Die Review-UI zeigt jetzt 51/51 P0-Segmente in Prüfpaketen und
+  filtert P0-06 mit zehn Treffern.
+- **Warum P0-06 überhaupt entstanden ist:** Der Unit-Test
+  `deckt alle sicherheitskritischen Segmente mit genau einem Prüfpaket ab` ist beim
+  Abschlusslauf fehlgeschlagen – 51 statt 41 P0-Segmente, zehn davon ohne Zuordnung. Das
+  ist genau der Fall, den dieser Test verhindern soll: ein sicherheitskritisches Segment
+  ohne Entscheidungsdossier. Statt die Zusicherung aufzuweichen, wurde das Paket angelegt
+  und der Test um die Generationsaufteilung 41 + 10 erweitert.
+- **Register:** Drei neue Befunde sind in die vorhandenen Sammelpositionen DSC-050 und
+  DSC-052 eingeflossen und stehen zusätzlich unter „Laufend ergänzt" in
+  `RUECKFRAGEN_THITRONIK.md`. Keine neue DSC-Nummer und keine achtzehnte Rückfrage waren
+  erforderlich. Höchster Eintrag bleibt DSC-085; siebzehn Fragen und sechs aktive Blocker.
+  Die Liste der offenen sicherheitskritischen Punkte ist um die Doppelbelegung von Pin 3
+  ergänzt.
+- **Geänderte Bereiche:** `content/segments/v1/sn-045-plus/de/` (17 neue Dateien),
+  `sources/pages/DOC-IBA-SN045.json`, `docs/review-packets/` (neues P0-06 und README),
+  `lib/review-priority.ts`, `app/review/page.tsx`, `tests/unit/review-priority.test.ts`,
+  `tests/e2e/accessibility.spec.ts`, `DISCREPANCIES.md`, `RUECKFRAGEN_THITRONIK.md`,
+  `PROJECT_STATUS.md`, `HANDOFF.md`, `progress-input.json` und die daraus generierte
+  `progress.json`. Aufgaben, Setup-Karte, Content-Schema, Anleitungsrouten und
+  Supabase-Migrationen blieben unverändert.
+- **Genutzte Skills:** keine. Die Extraktion beruht ausschließlich auf den gerenderten
+  Seitenbildern der Original-PDFs, den vorhandenen Seitenrecords und dem Registerstand;
+  es wurde kein Skill-Inhalt in Produktcode oder Dokumentation übernommen.
+- **Werkzeuge:** `scripts/render-pdf-pages.py` (300 dpi, Seiten 5–9) und
+  `scripts/crop-pdf-region.py` (500 dpi, vier Ausschnitte). PyMuPDF musste in dieser
+  Umgebung erst nachinstalliert werden; die Original-PDFs wurden ausschließlich gelesen.
+- **Abschlussläufe:** `npm run progress` → `npm run format` → `npm run check` in dieser
+  Reihenfolge grün; darin 39 Unit-Tests sowie Segment-, Content-, Referenz-, Secret-,
+  Token-, Lockfile- und Fortschrittsprüfung. Zusätzlich `npm run build` (51 Seiten) und
+  der vollständige E2E-Lauf mit 64 von 64 Playwright-/axe-Tests, weil P0-06 die
+  Review-Oberfläche verändert. Zwei automatische Prüfungen haben dabei echte Funde
+  produziert: `segments:check` hat die Quellwortstellung des Panikalarm-Absatzes als
+  gesperrte Ausgangssteuerungs-Zeichenfolge erkannt (umgestellt, im `change_reason`
+  dokumentiert), und der Prüfpaket-Unit-Test hat die zehn nicht zugeordneten
+  P0-Segmente aufgedeckt (P0-06 angelegt).
+- **Umgebungsnotiz:** In dieser Sandbox fehlt der von `@playwright/test` erwartete
+  Chromium-Build; vorhanden ist 1194 statt 1234. Der E2E-Lauf erfolgte deshalb über eine
+  temporäre, nicht versionierte Konfiguration unter `tmp/` mit gesetztem
+  `executablePath`. `playwright.config.ts` blieb unverändert, CI nutzt weiterhin sie.
 - **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
   erwartungsgemäß nichts zu prüfen.
-- **GitHub-Abschluss:** Arbeit erfolgt auf `bootstrap/accessibility-pilot`; kein direkter
-  Commit auf `main`. Draft-PR #1 bleibt der menschlich abzunehmende Integrationsweg.
+- **GitHub-Abschluss:** Arbeit erfolgt auf `claude/projekt-uebersicht-fortschritt-wkejbi`,
+  abgezweigt vom Stand von `bootstrap/accessibility-pilot`; kein direkter Commit auf
+  `main`. Draft-PR #1 bleibt der menschlich abzunehmende Integrationsweg.
 
 ```text
 Resume from:
-Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die
-Zugaenglichkeitsgrenzen zwischen PDF, HTML und Geraet. Alle vierzehn englischen Aufgaben
-ab SN-045 bleiben belegte KI-Uebersetzungsentwuerfe; EN-01 bis EN-03 sind fuer
-unabhaengige Sprachreviews vorbereitet, aber unbeantwortet. Kein technischer, sprachlicher
-oder physischer Inhalt ist freigegeben; BLK-005/006/007 und sechs aktive Blocker bleiben
-offen. Reduced Motion ist ueber sieben Kernrouten technisch automatisiert abgesichert;
-die manuelle Betriebssystem-/Browserpruefung bleibt offen.
+Dokument DOC-IBA-SN045, PDF-Seiten 5 bis 9 (deutsch), 17 Segmente in
+content/segments/v1/sn-045-plus/de/, Sprache Deutsch. Die fuenf Seiten stehen auf
+extracted, alle Segmente auf entwurf. Der Segmentbestand ab SN-045 deckt damit 5 von 21
+deutschen Inhaltsseiten ab; die Seiten 10 bis 25 sind unveraendert inspected. Kein
+technischer, sprachlicher oder physischer Inhalt ist freigegeben; BLK-004/005/006/007 und
+sechs aktive Blocker bleiben offen.
 
 First action:
-Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen
-und keine Aufgabe vorher hoeherstufen. Parallel den ersten dokumentierten manuellen
-QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion
-vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die
-Karte weiterhin freigegebene Assets und Entscheidungen zu URL, Supportdaten und
-Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine
-Supportkontakte einsetzen.
+Den naechsten Extraktionsbatch aus DOC-IBA-SN045, deutschen Seiten 10 bis 14, anlegen
+(ganzseitige Betriebsartentabelle, 1.4 Modul anschliessen, 1.5 GPS-Antenne, Beginn von
+Kapitel 2 und THITRONIK App). Danach die Seiten 5 bis 9 unabhaengig gegen das Seitenbild
+neu ableiten und erst dann von extracted auf validated heben. Bei der
+Betriebsartentabelle gilt besondere Vorsicht: Sie enthaelt die Spannungswerte fuer Pin 3
+und die Intervalle der automatischen Statusberichte - beide sind sicherheitskritisch und
+bleiben ohne technischen Review Entwurf. Keine SMS-Befehlszeichenfolge in title oder
+body_md (BLK-005), keine aus Beispielen abgeleitete Berechtigungsregel (BLK-006), keine
+Geofencing-Aussage ueber die Quelle hinaus (BLK-007) und kein Wert aus DOC-BMA-SN044.
+
+Parallel unveraendert offen: die unabhaengigen englischen Sprachreviews fuer EN-01 bis
+EN-03 organisatorisch einholen und keine Aufgabe vorher hoeherstufen; den ersten
+dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced
+Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als
+bestanden markieren; fuer die Karte freigegebene Assets und Entscheidungen zu URL,
+Supportdaten und Kerbengeometrie anfordern, bis dahin keinen echten QR-Code, keine
+Braillepunkte und keine Supportkontakte einsetzen.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten
