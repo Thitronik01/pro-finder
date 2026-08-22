@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S03-NUMMER-SPEICHERN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Rufnummer des Pro-finder im Adressbuch speichern",
+  "body_md": "Damit sich die Rufnummer des Pro-finder im Fall einer Alarmmeldung schnell zuordnen lässt, sollten Sie ihr wie jedem anderen Adressbucheintrag Ihres Mobiltelefons einen Namen geben. Weil Sie auf die Nummer gegebenenfalls schnell zugreifen müssen, empfiehlt die Quelle einen Namen, der den Eintrag an den Anfang des Adressbuchs stellt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.5, Fließtext und roter Tipp-Kasten darunter",
+  "prev_context": "Zuvor steht Abschnitt 2.4 zur Aktivierung des Pro-finder.",
+  "next_context": "PDF-Seite 15 setzt Abschnitt 2.5 mit der Ländervorwahl fort.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c71788ec9c41502b532dace98786488de5880b1a5ac8908a4f2937934a73de87",
+  "change_reason": "Quellennahe Erstextraktion. Der empfohlene Name selbst wurde nicht übernommen, weil die Quelle auf derselben Seite zwei verschiedene nennt: Der Fließtext empfiehlt eine Schreibweise, der rote Tipp-Kasten eine andere mit doppeltem Anfangsbuchstaben, und nur die zweite erreicht den angekündigten ersten Platz im Adressbuch zuverlässig. Der Befund ist am 2026-08-22 in DSC-050 aufgenommen worden. Der Satzbau der Quelle an dieser Stelle ist gebrochen - speichern Sie diese unter der Bezeichnung X nennen -, was den Befund zusätzlich stützt; die Formulierung wurde geglättet. Die Fortsetzung des Abschnitts auf PDF-Seite 15 verlangt zusätzlich die Ländervorwahl und ist in diesem Batch nicht extrahiert.",
+  "discrepancy_refs": ["DSC-050", "DSC-043"]
+}

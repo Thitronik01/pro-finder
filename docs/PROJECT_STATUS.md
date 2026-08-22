@@ -5,12 +5,12 @@ Stand: 2026-08-22. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 62.4 %**
+**Gesamtfortschritt: 62.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 27.9 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 28.3 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 68 %        |
@@ -23,21 +23,21 @@ Stand: 2026-08-22. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 36.1 %      |
-| DOC-IBA-SN045 | 247    | 25.5 %      |
+| DOC-IBA-SN045 | 247    | 26 %        |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Den SN-045-Segmentbestand fortsetzen: die deutschen Seiten 10 bis 14 von DOC-IBA-SN045 extrahieren (Betriebsartentabelle, Modul anschliessen, GPS-Antenne, Kapitel 2 und THITRONIK App) und anschliessend die Seiten 5 bis 9 unabhaengig gegenlesen, damit sie von extracted auf validated steigen. Parallel die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
+Offene Blocker: 6 · Nächste Aktion: Die Seiten 5 bis 14 von DOC-IBA-SN045 unabhaengig gegenlesen, damit die 38 Segmente und ihre Seiten von extracted auf validated steigen und P0-06 bis P0-08 von in Vorbereitung auf bereit fuer Fachreview wechseln koennen. Danach den naechsten Extraktionsbatch aus den deutschen Seiten 15 bis 19 anlegen (Zielrufnummern programmieren, Meldungen, Statusbericht). Parallel die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
 
 <!-- PROGRESS:END -->
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 302 stehen auf
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 297 stehen auf
   `inspected`, die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
-  unabhängigen Segment-Gegenprüfungen auf `validated` und seit dem 2026-08-22 die fünf
-  deutschen Seiten 5–9 von DOC-IBA-SN045 auf `extracted`. DOC-IBA-SN045 ist 247/247,
+  unabhängigen Segment-Gegenprüfungen auf `validated` und seit dem 2026-08-22 die zehn
+  deutschen Seiten 5–14 von DOC-IBA-SN045 auf `extracted`. DOC-IBA-SN045 ist 247/247,
   DOC-BMA-SN044 72/72 und beide Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
@@ -173,36 +173,52 @@ Offene Blocker: 6 · Nächste Aktion: Den SN-045-Segmentbestand fortsetzen: die 
   Koordinaten, Kartenlinks und Beispielbeträge erscheinen nur als begründete Auslassungen
   ohne gesperrten Bedienwert oder Befehlszeichenfolge;
 - **der Segmentbestand der Generation ab SN-045 ist eröffnet:** Seit dem 2026-08-22 liegen
-  17 Segmente aus `content/segments/v1/sn-045-plus/de/` vor, extrahiert aus den deutschen
-  Seiten 5–9 von DOC-IBA-SN045. Sie decken Haftungsausschluss und bestimmungsgemäßen
-  Gebrauch, den neunteiligen Lieferumfang, Montageort, freie Sicht, die externe
-  GPS-Antenne, die Legende der Anschlüsse mit Marken A–D und Pin 1–8 sowie alle sechs
-  Funktionsgruppen der Betriebsarten ab. Der Segmentbestand umfasst damit 73 Dateien; alle
-  bleiben `entwurf`. Weil DOC-IBA-SN045 keine Textebene besitzt, wurde jede Seite bei
-  300 dpi gerendert und gelesen; Lieferumfangsliste, Pinlegende, Kabellänge sowie die
-  Geofencing- und Panikalarm-Absätze wurden zusätzlich bei 500 dpi im Ausschnitt
-  gegengelesen und dabei ohne Abweichung bestätigt. Die fünf Seiten stehen deshalb auf
-  `extracted` und ausdrücklich **nicht** auf `validated`: Die unabhängige zweite
-  Durchsicht aller 17 Segmente steht aus. Drei Befunde sind neu ins Register gegangen –
-  der Haftungsausschluss nennt „die Alarmanlage" als das an die Starterbatterie
-  angeschlossene Gerät, obwohl der Pro-finder eine Seite später als Ortungssystem
-  eingeführt wird (DSC-050); die zwei Meter Antennenkabel sind bei 500 dpi als feste
-  Angabe bestätigt, ohne dass die Quelle Lieferlänge und Obergrenze unterscheidet
-  (DSC-052); und Pin 3 trägt in Abschnitt 1.3 zwei Funktionen, deren Verhältnis die Quelle
-  nicht erklärt (DSC-050 mit DSC-042). Der falsche Querverweis auf 5.4 statt 5.5 wurde
-  nicht mitgeführt und auch nicht stillschweigend korrigiert, sondern durch die belegte
-  Aussage ersetzt (DSC-028, DSC-040). Kein SMS-Befehl, kein Berechtigungszeichen und kein
-  Wert der Generation bis SN-044 ist in den Bestand gelangt;
-- **das erste technische Prüfpaket der Generation ab SN-045 existiert:** `P0-06` bündelt
-  die zehn sicherheitskritischen Segmente der Seiten 5–9 in 18 Einzelentscheidungen zu
-  Montage und Ausrichtung, Pinbelegung, der Doppelbelegung von Pin 3 und den
-  Haftungsaussagen. Anders als P0-01 bis P0-05 steht es auf **„in Vorbereitung"** und
-  nicht auf „bereit für Fachreview": Es existiert, damit kein sicherheitskritisches
-  Segment ohne Entscheidungszuordnung bleibt, bündelt aber Erstextraktionen. Der
-  Unit-Test, der genau das absichert, hat die Lücke aufgedeckt; die Zusicherung wurde
-  nicht aufgeweicht, sondern um die Generationsaufteilung 41 + 10 erweitert. `/review`
-  zeigt jetzt 51 von 51 P0-Segmenten in Prüfpaketen und filtert P0-06 mit zehn Treffern;
-  der vollständige E2E-Lauf bleibt bei 64 von 64 bestandenen Tests;
+  38 Segmente in `content/segments/v1/sn-045-plus/de/` vor, extrahiert aus den deutschen
+  Seiten 5–14 von DOC-IBA-SN045 in zwei Batches. Sie decken Haftungsausschluss und
+  bestimmungsgemäßen Gebrauch, den neunteiligen Lieferumfang, Montageort und freie Sicht,
+  die externe GPS-Antenne, die Legende der Anschlüsse mit Marken A–D und Pin 1–8, alle
+  sechs Funktionsgruppen der Betriebsarten, die **ganzseitige Betriebsartentabelle 0 bis
+  F**, Modulanschluss und Ausgangsbelastbarkeit, Montage, Anschluss und Diagnose der
+  GPS-Antenne, die SIM-Konfiguration sowie die Inbetriebnahme ab. Der Gesamtbestand
+  umfasst damit 94 Dateien; alle bleiben `entwurf`. Weil DOC-IBA-SN045 keine Textebene
+  besitzt, wurde jede Seite bei 300 dpi gerendert und gelesen; alle sicherheitskritischen
+  Werte wurden zusätzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die zehn Seiten
+  stehen deshalb auf `extracted` und ausdrücklich **nicht** auf `validated`: Die
+  unabhängige zweite Durchsicht steht aus. Kein SMS-Befehl, kein Berechtigungszeichen,
+  keine Store-Adresse und kein Wert der Generation bis SN-044 ist in den Bestand gelangt;
+- **die englische Fassung diente erstmals als unabhängige Gegenquelle:** Für die
+  Betriebsartentabelle wurde die englische Seite 34 bei 400 dpi gegengelesen. Ergebnis:
+  Intervalle, Spannungsschwellen und Sonderfunktionen stimmen zeichengenau überein –
+  **einschließlich „8 minutes" für Stellung D**. Der Faktor-60-Widerspruch aus DSC-066 und
+  Rückfrage 16 (8 Minuten gegen 8 seconds) betrifft damit **ausschließlich die Generation
+  bis SN-044**. Das ist die erste Entlastung einer offenen Rückfrage aus der Quellenarbeit
+  selbst; sie ersetzt keine technische Freigabe, weil zwei übereinstimmende
+  Sprachfassungen laut Synthese-Auswertung 2 keine Bestätigung sind;
+- **neun weitere Befunde sind ins Register eingeflossen, zwei davon als Korrektur eigener
+  Angaben:** Die Schaltschwellen an Pin 3 sind **gegenläufig** – Stellung 8 schaltet über
+  6 V ein, Stellung B über 6 V aus –, ohne dass die Quelle sagt, wofür welche gedacht ist
+  (DSC-052). Ab SN-045 ist die PIN-Abfrage zu **deaktivieren**, das Gegenteil der Vorgabe
+  bis SN-044 (Rückfrage 15). Das Anschlusskapitel nennt 12 V DC, die technische Tabelle
+  einen Bereich – derselbe Widerspruch wie bis SN-044 (DSC-069). Abschnitt 2.5 empfiehlt
+  zwei verschiedene Adressbuchnamen auf einer Seite, Zeile D der Betriebsartentabelle
+  wiederholt den Produktnamen doppelt, und beide Klammerzusätze sind ohne Konjunktion
+  gesetzt, während die englische Fassung an dieser Stelle fehlerfrei ist (DSC-050,
+  DSC-051). Korrigiert wurde die eigene Angabe, „Hauptkabelbaum" komme nur in Abschnitt
+  2.9 vor – der unerklärte Begriff steht auch in 1.5.2 und hängt damit an zwei Vorgängen;
+  Pin 3 trägt nicht zwei, sondern **drei** dokumentierte Rollen, weil die Legende ihn
+  zusätzlich als Messeingang U3 führt (DSC-050);
+- **die Generation ab SN-045 hat drei eigene technische Prüfpakete:** `P0-06` bündelt
+  Montage, Pinbelegung, Versorgung und Ausgänge (11 Segmente, 19 Entscheidungen), `P0-07`
+  Betriebsarten, Pin-3-Schaltschwellen, Geofencing und GPS-Diagnose (9 Segmente, 17
+  Entscheidungen) und `P0-08` SIM-Karte, Inbetriebnahme und die anrufgesteuerten
+  Funktionen (6 Segmente, 13 Entscheidungen). Alle drei stehen auf **„in Vorbereitung"**
+  und nicht auf „bereit für Fachreview": Sie existieren, damit kein sicherheitskritisches
+  Segment ohne Entscheidungszuordnung bleibt, bündeln aber Erstextraktionen. Der
+  Unit-Test, der genau das absichert, hat die Lücke in beiden Batches aufgedeckt; die
+  Zusicherung wurde nicht aufgeweicht, sondern um die Generationsaufteilung 41 + 26
+  erweitert. `/review` zeigt 67 von 67 P0-Segmenten in Prüfpaketen, filtert die drei neuen
+  Pakete mit 11, 9 und 6 Treffern und kennzeichnet sie sichtbar als noch nicht
+  reviewbereit; der vollständige E2E-Lauf bleibt bei 64 von 64 bestandenen Tests;
 - **Schema- und Referenzprüfung sichern die Segmente in CI ab:**
   `scripts/check-segments.mjs` prüft Schema v1, Pfad/Schlüssel, Dokumentinventar,
   Seitenstatus, Aufgabenzuordnung, DSC-Verweise, Prüfsummen, BLK-005 und die

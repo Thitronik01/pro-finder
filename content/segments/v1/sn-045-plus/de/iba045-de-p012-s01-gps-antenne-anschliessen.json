@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S01-GPS-ANTENNE-ANSCHLIESSEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "GPS-Antenne spannungsfrei anschließen",
+  "body_md": "Zum Anschließen der optionalen GPS-Antenne muss der Pro-finder spannungsfrei sein. Ziehen Sie dazu den Hauptkabelbaum ab. Stecken Sie dann den GPS-Stecker in den vierpoligen Anschluss für die GPS-Antenne. Anschließend kann der Hauptkabelbaum wieder eingesteckt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.2, erster Absatz",
+  "prev_context": "PDF-Seite 11 endet mit der Montage der optionalen GPS-Antenne.",
+  "next_context": "Danach folgt die Anforderung an die Betriebsspannung nach der Installation.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6f1f0610b4a6cfff86bc92525245a54deebdaba51927b2b1ad8b59e9c2319a54",
+  "change_reason": "Quellennahe Erstextraktion. Die Reihenfolge abziehen, stecken, wieder einstecken ist die einzige dokumentierte Sicherheitsmaßnahme dieses Schritts und bleibt unverändert. Der Begriff Hauptkabelbaum wird von der Quelle nirgends erklärt und keiner Marke der Anschlussabbildung auf PDF-Seite 8 zugeordnet. Die frühere Angabe in DSC-050, er komme nur in Abschnitt 2.9 vor, ist am 2026-08-22 berichtigt worden: Er steht auch hier in 1.5.2.",
+  "discrepancy_refs": ["DSC-050"]
+}

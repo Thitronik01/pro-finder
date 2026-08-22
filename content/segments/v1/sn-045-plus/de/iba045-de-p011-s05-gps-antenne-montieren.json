@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S05-GPS-ANTENNE-MONTIEREN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "montageort",
+  "title": "Optionale GPS-Antenne montieren",
+  "body_md": "Die optionale GPS-Antenne wird mit dem bereits angebrachten Klebepad an einer sabotagegeschützten Stelle im Fahrzeuginnenraum montiert. Die Seite, auf der sich das Klebepad befindet, muss nach oben zeigen; das ist die Empfangsseite. Die Montagefläche muss trocken, sauber und fettfrei sein. Bei Temperaturen unter 15 °C sollte die Klebefläche erwärmt werden. Die Empfangsseite muss möglichst waagerecht ausgerichtet sein.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.5.1 mit dem Produktfoto der GPS-Antenne rechts daneben",
+  "prev_context": "Zuvor endet Abschnitt 1.4 mit dem Hinweis auf die SMS-Steuerung der Ausgänge.",
+  "next_context": "PDF-Seite 12 erklärt in Abschnitt 1.5.2 den Anschluss der GPS-Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:685018873395bef52b777a36445123875135cf5afeed8c78433bf550f4c67b4a",
+  "change_reason": "Quellennahe Erstextraktion. Die Temperaturgrenze 15 °C und die Anforderung an die Klebefläche bleiben unverändert. Was eine sabotagegeschützte Stelle ausmacht, definiert die Quelle nicht. Das Foto daneben zeigt die Antenne mit Kabel und Stecker, ohne die Empfangsseite zu beschriften; die Unterscheidung Klebepad- gegen Gegenseite ist am Bild allein nicht sicher zu treffen.",
+  "discrepancy_refs": []
+}

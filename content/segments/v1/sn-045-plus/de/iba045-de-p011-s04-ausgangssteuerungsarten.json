@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S04-AUSGANGSSTEUERUNGSARTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "ausgaenge",
+  "title": "Drei Steuerungsarten der Ausgänge",
+  "body_md": "Die Quelle nennt drei Arten, einen Ausgang zu steuern:\n\n- eingeschaltet, bis der Befehl aufgehoben wird;\n- Impuls, also für eine Sekunde eingeschaltet;\n- für eine frei wählbare Zeit eingeschaltet.\n\nWie die Ausgänge per SMS gesteuert werden, behandelt ein eigenes Kapitel der Quelle.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.4, Aufzählung und roter Hinweiskasten darunter",
+  "prev_context": "Zuvor stehen Belastbarkeit und Relais-Anforderung der Ausgänge.",
+  "next_context": "Danach beginnt Abschnitt 1.5 mit der optionalen GPS-Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:81198f4e6cad48153dbc54f90ff093006976609350fe7f1f9ff505470868577e",
+  "change_reason": "Quellennahe Erstextraktion der drei Steuerungsarten. Die Befehlszeichenfolgen selbst bleiben wegen BLK-005 vollständig ausgelassen; die Aufzählung nennt nur die Wirkung. Der Wertebereich der frei wählbaren Zeit steht nicht auf dieser Seite. Der rote Hinweiskasten verweist hier korrekt auf Abschnitt 5.5 - im Gegensatz zum Fließtext auf PDF-Seite 9, der für dieselbe Sache auf 5.4 verweist (DSC-028, DSC-040). Die Kapitelnummer wurde nicht übernommen, weil die Webanleitung eigene Aufgabenwege führt.",
+  "discrepancy_refs": ["DSC-028", "DSC-040"]
+}

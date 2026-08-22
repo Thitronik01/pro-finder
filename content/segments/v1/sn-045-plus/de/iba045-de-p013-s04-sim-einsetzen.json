@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S04-SIM-EINSETZEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "SIM-Karte in das Pro-finder-Modul einsetzen",
+  "body_md": "Nehmen Sie die vorbereitete SIM-Karte aus dem mobilen Gerät heraus, legen Sie sie in die Halterung auf der Platine des Pro-finder-Moduls ein und verriegeln Sie die Halterung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.2 mit dem Nahfoto der Platine und des SIM-Halters",
+  "prev_context": "Zuvor stehen die vier Schritte zur Vorbereitung der Karte im Mobilgerät.",
+  "next_context": "PDF-Seite 14 beschreibt in Abschnitt 2.3 das Herunterladen der App.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e36f156cffe5af1dfb6f0fcaa1406d813ec2f49bf773bd722a04e388c6fa0a7d",
+  "change_reason": "Quellennahe Erstextraktion. Das Foto trägt ein gelbes Symbol für elektrostatisch gefährdete Bauteile, aber keinen Begleittext und kein Signalwort; die Quelle nennt an dieser Stelle keine Schutzmaßnahme. Das Segment erfindet keine, benennt die Lücke aber im Prüfpaket. Die Lage der Halterung auf der Platine ist ausschließlich über das Foto erkennbar; eine Textalternative fehlt.",
+  "discrepancy_refs": []
+}

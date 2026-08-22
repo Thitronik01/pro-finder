@@ -558,8 +558,8 @@
     },
     {
       "page": 10,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -578,7 +578,7 @@
         "Betriebsart 8 und B haben exakt invertierte Geofencing-Schwellenlogik (>6 V: ein/<5 V: aus vs. >6 V: aus/<5 V: ein) ohne erlaeuternden Hinweis; Spannungsbereich 5-6 V bleibt in beiden Faellen undefiniert",
         "Betriebsart 9 (Statusbericht mit U1-U5, aber ohne Intervall) unterscheidet sich von Betriebsart 1 nur durch U3-U5; der Zweck von 9 gegenueber 4-7 (kein Intervall) wird nicht erklaert"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "3 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["Tabelle der Betriebsarten:"],
       "figures": [],
       "tables": [
@@ -626,12 +626,13 @@
         "'Pro-finder Pro-finder' (Dopplung, Zeile D)",
         "'WiPro' in Spaltenkopf ohne Zusatz 'III' bzw. '(safe.lock)', waehrend Seite 9 und 11 'WiPro III (safe.lock)' schreiben"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 3 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 11,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -648,7 +649,7 @@
       "discrepancies": [
         "Polungsangabe unvollstaendig: 'Schließen Sie Pin 1 und Pin 8 polungsrichtig ... an' - welcher Pin Plus und welcher Minus ist, wird auf dieser Seite nicht gesagt (Verweis nur auf '1.3 Betriebsart auswählen', wo keine Pinbelegung steht)"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "5 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "1.4 Modul anschließen",
         "Die Ausgänge können wie folgt gesteuert werden:",
@@ -698,12 +699,13 @@
       "terminology_findings": [
         "'Pro-finder' korrekt; 'WiPro III (safe.lock)' korrekt; 'Verbindungskabel WiPro III' kursiv als Produktname"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 12,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -721,7 +723,7 @@
         "Widerspruechliche LED-Rot-Bedeutung ohne Kontextabgrenzung: In Stellung F bedeutet 'LED leuchtet rot: GPS nicht angeschlossen', direkt darunter heisst es 'Wenn die LED nun rot leuchtet, ist noch keine SIM-Karte eingesetzt' (nach Zuruecksschalten) - die Doppelbedeutung von Rot wird nicht explizit gegenuebergestellt",
         "'Reflektionen' (zweimal implizit, einmal woertlich: 'kann es zu Reflektionen des GPS-Signals kommen') - orthografisch nicht standardsprachlich (korrekt: 'Reflexionen')"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "6 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": ["1.5.2 GPS-Antenne anschließen", "1.5.3 Funktion der GPS-Antenne prüfen"],
       "figures": [],
       "tables": [
@@ -762,12 +764,13 @@
         "'Status LED' ohne Bindestrich ('Blinkt die Status LED auch nach fünf Minuten noch') im Widerspruch zur Soll-Schreibweise 'Status-LED', die zwei Zeilen darueber korrekt verwendet wird ('Die Status-LED zeigt nun den Betriebszustand des GPS an:')",
         "'Pro-finder' korrekt geschrieben"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 6 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 13,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -786,7 +789,7 @@
         "'die Funktion iMessages' - die Apple-Funktion heisst korrekt 'iMessage'",
         "'t-mobile' kleingeschrieben statt Markenschreibweise 'T-Mobile'"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "4 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "2 Programmieren und Konfigurieren",
         "2.1 SIM-Karte konfigurieren",
@@ -831,12 +834,13 @@
         "'Pin-Abfrage' (Schritt 1) - abweichend von der ueblichen Schreibweise 'PIN-Abfrage'",
         "'Pro-finder', 'Pro-finder-Modul' und Logo 'THITRONIK' entsprechen der Soll-Terminologie"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 14,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "extracted",
+      "progress_percent": 50,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -855,7 +859,7 @@
         "Widerspruch ALARM vs. AAlarm: Fliesstext empfiehlt 'unter der Bezeichnung ALARM nennen, damit sie am Anfang Ihres Adressbuchs abgelegt wird', der Tipp-Kasten dagegen 'unter der Bezeichnung AAlarm abspeichern, steht der Eintrag immer an erster Stelle' - zwei unterschiedliche Empfehlungen fuer denselben Zweck",
         "Grammatikfehler im Fliesstext 2.5: 'speichern Sie diese idealerweise unter der Bezeichnung ALARM nennen' (Satzbau 'speichern ... nennen')"
       ],
-      "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
+      "next_action": "3 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
       "headings": [
         "2.3 THITRONIK® App herunterladen",
         "2.4 Pro-finder aktivieren",
@@ -900,7 +904,8 @@
         "'WiPro III (safe.lock)' als weiteres Produkt erwaehnt",
         "'Status-LED' entspricht der Soll-Terminologie"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 3 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
     },
     {
       "page": 15,

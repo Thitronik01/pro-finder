@@ -554,7 +554,16 @@ function must be activated"). Ein einzelner deutscher Satz- oder Übersetzungsfe
 damit ausgeschlossen – das Paar ist Vorlage. Die Frage, ob es technisch so gemeint ist,
 bleibt unverändert offen.
 
-_Beleg: Seitenrecords DOC-BMA-SN044, S. 8, 11 und 26_
+**Nachtrag 2026-08-22 – die neuere Generation verlangt das Gegenteil:** DOC-IBA-SN045,
+Seite 13, Abschnitt 2.1, Schritt 1 lautet „Deaktivieren Sie die Pin-Abfrage". Ab SN-045
+wird die PIN-Abfrage also **abgeschaltet**, während sie bis SN-044 zusammen mit einer fest
+vorgegebenen PIN **aktiviert bleiben** muss. Beide Vorgaben stehen unverändert in ihrer
+jeweiligen Generation; keine wird auf die andere übertragen. Damit erweitert sich die
+Frage: Gilt die ältere Vorgabe für Altgeräte fort, oder ist sie überholt? Und wenn die
+PIN-Abfrage ab SN-045 deaktiviert wird – welcher Schutz tritt an ihre Stelle, wenn die
+Karte aus dem Gerät entnommen wird?
+
+_Beleg: Seitenrecords DOC-BMA-SN044, S. 8, 11 und 26; DOC-IBA-SN045, S. 13_
 
 ---
 
@@ -578,7 +587,17 @@ die schwedische (Seite 57) **8 minuter**. Endstand **drei zu eins** gegen die en
 Fassung – dasselbe Muster wie bei der Stromaufnahme (Frage 2), wo ebenfalls die englische
 Fassung allein abweicht. Vermutlich ist „8 Minuten" richtig; bestätigen können nur Sie.
 
-_Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5, 23 und 40_
+**Nachtrag 2026-08-22 – die neuere Generation ist an dieser Stelle widerspruchsfrei:** In
+DOC-IBA-SN045 nennen die deutsche Betriebsartentabelle (Seite 10, bei 600 dpi gesichert)
+und die englische (Seite 34, bei 400 dpi gesichert) übereinstimmend **8 Minuten**
+beziehungsweise **8 minutes**; auch die Zeile C stimmt mit 90 Sekunden überein. Der
+Faktor-60-Widerspruch betrifft damit **ausschließlich die Generation bis SN-044**. Die
+Frage bleibt trotzdem offen, weil zwei übereinstimmende Sprachfassungen keine technische
+Freigabe sind und die übrigen acht Sprachfassungen ab SN-045 an dieser Stelle noch nicht
+verglichen sind. Für die neuere Generation verengt sich die Frage auf: Ist „8 Minuten" der
+richtige Wert, und gilt er auch für Altgeräte?
+
+_Beleg: DSC-066; Seitenrecords DOC-BMA-SN044, S. 5, 23 und 40; DOC-IBA-SN045, S. 10 und 34_
 
 Die Fragen 2, 4, 14, 15 und 16 sind zusätzlich in
 [Synthese-Auswertung 2](DISCREPANCIES.md#synthese-technische-werte) gemeinsam eingeordnet.
@@ -678,6 +697,13 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Der Haftungsausschluss nennt „die Alarmanlage" als das an die Starterbatterie angeschlossene Gerät – welches Gerät die Tiefentladung verursacht, ist damit offen                                             | DSC-050, S. 5                   |
 | Ist die GPS-Antennen-Kabellänge von zwei Metern die Lieferlänge oder eine zulässige Obergrenze? Bei 500 dpi als feste Angabe bestätigt                                                                       | DSC-052, S. 7                   |
 | Pin 3 trägt in Abschnitt 1.3 zwei Funktionen (Geofencing schalten, Panikalarm in Betriebsart A); ihr Verhältnis erklärt die Quelle nicht                                                                     | DSC-050, DSC-042, S. 9          |
+| Die Pin-3-Schaltschwellen sind gegenläufig: Stellung 8 schaltet über 6 V ein, Stellung B über 6 V aus – wofür welche gedacht ist, sagt die Quelle nicht                                                      | DSC-052, S. 10                  |
+| **Entlastung:** ab SN-045 nennen Deutsch und Englisch für Stellung D übereinstimmend 8 Minuten – der Faktor-60-Widerspruch betrifft nur bis SN-044                                                           | DSC-066, S. 10 und 34           |
+| Ab SN-045 ist die PIN-Abfrage zu **deaktivieren** – das Gegenteil der Vorgabe bis SN-044 (feste PIN bei aktivierter Abfrage)                                                                                 | Rückfrage 15, S. 13             |
+| **Korrektur:** „Hauptkabelbaum" steht nicht nur in Abschnitt 2.9, sondern auch in 1.5.2 – der unerklärte Begriff hängt an zwei Vorgängen                                                                     | DSC-050, S. 12 und 17           |
+| Abschnitt 2.5 empfiehlt zwei verschiedene Adressbuchnamen auf einer Seite (ALARM im Fließtext, AAlarm im Tipp-Kasten)                                                                                        | DSC-050, S. 14                  |
+| Zeile D der Betriebsartentabelle wiederholt den Produktnamen doppelt; beide Klammerzusätze sind ohne Konjunktion gesetzt – die englische Fassung ist hier fehlerfrei                                         | DSC-051, S. 10 und 34           |
+| Auch ab SN-045 nennt das Anschlusskapitel 12 V DC, die technische Tabelle einen Bereich – derselbe Widerspruch wie bis SN-044                                                                                | DSC-069, S. 11 und 25           |
 
 Die PDF-Seitenprüfung ist abgeschlossen. Neue Funde entstehen jetzt aus der
 Aufgabenextraktion, den noch offenen Synthese-Auswertungen und den fachlichen Reviews;

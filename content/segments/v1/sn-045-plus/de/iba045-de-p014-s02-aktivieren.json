@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S02-AKTIVIEREN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Pro-finder in Betrieb nehmen",
+  "body_md": "Wenn die SIM-Karte auf der Platine eingelegt und die Halterung verriegelt ist, schließen Sie die Spannungsversorgung an. Daraufhin blinkt die Status-LED kurz rot und danach gelb-grün. Die Quelle empfiehlt, die Aktivierung mit der App durchzuführen. Ohne App wird der Pro-finder über eine Programmier-SMS an seine eigene Rufnummer aktiviert. Sobald die Nachricht empfangen und die Nummern gespeichert sind, blinkt die Status-LED grün, und das Gerät sendet eine Status-SMS an den Absender. Danach ist der Pro-finder einsatzbereit.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.4, alle vier Absätze",
+  "prev_context": "Zuvor steht der Abschnitt zum Herunterladen der App.",
+  "next_context": "Danach folgt Abschnitt 2.5 zum Speichern der Gerätenummer im Adressbuch.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:05e24f76da2e3b7f3114525bdbbb7bb380bf7b938707782b97663b2dd0b2db3a",
+  "change_reason": "Quellennahe Erstextraktion. Der Aufbau und Inhalt der Programmier-SMS bleibt wegen BLK-005 und BLK-006 vollständig ausgelassen; er steht in einem späteren Kapitel der Quelle, das in diesem Batch nicht extrahiert ist. Die LED-Folge kurz rot, dann gelb-grün ist übernommen; dieselbe Anzeige heißt an anderer Stelle blinkt gelb/grün und in der Kurzanleitung blinkt grün/gelb (DSC-050). Die Aussage der Quelle, mit der App entfielen die Kapitel 2.5 bis 2.8, wurde nicht übernommen - sie trifft laut DSC-043 nicht zu, weil 2.5 eine Handlung am Telefon verlangt, die keine App übernimmt.",
+  "discrepancy_refs": ["DSC-043", "DSC-050"]
+}

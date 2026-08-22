@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S03-GPS-DIAGNOSE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "fehlerbehebung",
+  "title": "GPS-Diagnose in Schalterstellung F",
+  "body_md": "Um zu prüfen, ob GPS-Daten empfangen werden, schalten Sie den Betriebsartenschalter in die Stellung F. Die Status-LED zeigt dann den Betriebszustand des GPS an:\n\n| Anzeige der Status-LED | Bedeutung laut Quelle |\n| --- | --- |\n| leuchtet rot | GPS nicht angeschlossen |\n| blinkt gelb | GPS-Daten werden empfangen, jedoch ohne gültige Position. Blinkt die Status-LED auch nach fünf Minuten noch, ist die Antenne an einer Stelle montiert, die den GPS-Empfang unmöglich macht, oder das Fahrzeug steht zum Beispiel unter einem Dach. |\n| leuchtet grün | Die Einbauposition der GPS-Antenne ist in Ordnung. |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.3, dreizeilige Zustandstabelle unter dem Einleitungssatz",
+  "prev_context": "Zuvor steht die Anforderung an die Betriebsspannung beim Speichern der Satellitendaten.",
+  "next_context": "Danach folgt der Hinweis zum Zurückschalten des Betriebsartenschalters.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ab5b81d30494822096bc9f469c78e8985c7bf715e833c633f30dbf5267a1c556",
+  "change_reason": "Die Tabelle der Quelle besitzt keine Kopfzeile; die Zuordnung Zustand zu Bedeutung ergibt sich dort allein aus der Spaltenposition. Für die lineare Ausgabe wurde eine Kopfzeile ergänzt, ohne einen Inhalt zu verändern. Alle drei Zustände unterscheiden sich in der Quelle ausschließlich über die Farbe der Status-LED; ein farbunabhängiges Merkmal ist nicht dokumentiert. Das ist eine Barriere am Gerät selbst und durch die Webanleitung nicht behebbar (DSC-047).",
+  "discrepancy_refs": ["DSC-047"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S01-SIM-FORMAT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "sim-karte",
+  "title": "Benötigt wird eine freigeschaltete Nano-SIM",
+  "body_md": "Um den Pro-finder nutzen zu können, benötigen Sie eine vom Mobilfunkanbieter freigeschaltete SIM-Karte im Format Nano-SIM.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, erster Absatz",
+  "prev_context": "PDF-Seite 12 endet mit dem Hinweis zum Abschalten des Geofencings.",
+  "next_context": "Danach folgt der rote Kasten mit der Anbieterempfehlung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:acd0e65417977b97d455b4d7d3d2648ad8e8b62f8653552aef11ef4881d5c0e2",
+  "change_reason": "Quellennahe Erstextraktion. Das Format Nano-SIM gilt ausschließlich für diese Generation; bis SN-044 nennt die Quelle eine Micro-SIM (DSC-069). Die Schreibweise schwankt innerhalb des Dokuments zwischen Nano-SIM hier und Nano SIM-Karte auf PDF-Seite 9; das Segment folgt der Schreibweise dieses Abschnitts, weil sie den Formatnamen sauber trennt.",
+  "discrepancy_refs": ["DSC-069"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P010-S02-GEOFENCING-SCHALTSCHWELLEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "geofencing",
+  "title": "Die Schaltschwellen an Pin 3 sind in den Stellungen 8 und B gegenläufig",
+  "body_md": "Zwei Betriebsarten schalten das Geofencing über die Spannung an Pin 3, und zwar mit entgegengesetzter Wirkung:\n\n| Stellung | über 6 V an Pin 3 | unter 5 V an Pin 3 |\n| --- | --- | --- |\n| 8 | Geofencing ein | Geofencing aus |\n| B | Geofencing aus | Geofencing ein |\n\nWelche der beiden Stellungen für welchen Anwendungsfall vorgesehen ist, geht aus der Quelle nicht hervor. Ebenso wenig ist beschrieben, was zwischen 5 V und 6 V geschieht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 10,
+  "source_page_end": 10,
+  "source_region": "Tabelle der Betriebsarten, Spalte „Geofencing über Pin 3 schaltbar“, Zeilen 8 und B",
+  "prev_context": "Die übrigen Zeilen derselben Tabelle beschreiben Statusberichte und Spannungsangaben.",
+  "next_context": "PDF-Seite 11 nennt in Abschnitt 1.4 Pin 3 erneut als Geofencing-Eingang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e2f0a92e30ca94e461358e442e14c59a6e3ea80761e15171efce6ea3182b8dea",
+  "change_reason": "Aus der Tabelle herausgelöst, weil die Gegenläufigkeit der beiden Stellungen die sicherheitskritischste Einzelaussage der Seite ist: Dieselbe Verdrahtung schaltet in Stellung 8 und Stellung B genau entgegengesetzt, und ein falsch gewählter Schalterwert lässt das Geofencing unbemerkt im Gegenteil des gewünschten Zustands. Die Werte sind bei 600 dpi zeichengenau gesichert und in der englischen Tabelle auf PDF-Seite 34 identisch bestätigt. Der Bereich zwischen 5 V und 6 V und die Frage, welche Stellung wofür gedacht ist, sind am 2026-08-22 in DSC-052 aufgenommen worden. Die Abhängigkeit des Geofencings von der WiPro III bleibt unter BLK-007 offen.",
+  "discrepancy_refs": ["DSC-052", "DSC-042"]
+}

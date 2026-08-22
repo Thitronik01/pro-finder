@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P010-S03-GPS-SUCHMODI",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "statusbericht",
+  "title": "Die Stellungen C und D senden während der GPS-Suche",
+  "body_md": "Zwei Betriebsarten senden Statusberichte in kurzem Abstand, sobald Spannung anliegt und das Gerät nach dem Hochfahren das GPS-Signal sucht: Stellung C alle 90 Sekunden, Stellung D alle 8 Minuten. Ob und wann diese Berichte enden, sagt die Quelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 10,
+  "source_page_end": 10,
+  "source_region": "Tabelle der Betriebsarten, Zeilen C und D, Spalte des Intervalls",
+  "prev_context": "Darüber stehen die Stellungen 4 bis 7 mit Intervallen von 15 Minuten bis 24 Stunden.",
+  "next_context": "Darunter schließen die Zeilen E und F die Tabelle mit Sonderfunktionen ab.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a4cc1023f2e90859eb3abaa2af01832c52ba680f61352792b4c52b3f8880f068",
+  "change_reason": "Eigenes Segment, weil C und D die dichtesten Meldeintervalle der Tabelle sind und damit unmittelbar auf SMS-Kosten und Batterieverbrauch durchschlagen. Die Werte sind bei 600 dpi gesichert und in der englischen Fassung auf PDF-Seite 34 mit 90 seconds und 8 minutes identisch bestätigt. Damit ist belegt, dass der Faktor-60-Widerspruch der Generation bis SN-044 (DSC-066, Rückfrage 16) in dieser Generation nicht auftritt; der Wert bleibt trotzdem entwurf, weil zwei übereinstimmende Sprachfassungen keine technische Freigabe sind. Das Ende der Berichtsfolge ist als Quellenlücke in DSC-052 aufgenommen.",
+  "discrepancy_refs": ["DSC-066", "DSC-052"]
+}

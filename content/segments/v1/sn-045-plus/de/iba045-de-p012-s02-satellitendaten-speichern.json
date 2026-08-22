@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S02-SATELLITENDATEN-SPEICHERN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "anschluesse",
+  "title": "Satellitendaten nach der Installation speichern",
+  "body_md": "Damit die GPS-Antenne die aktuellen Satellitendaten empfangen und speichern kann, muss die Betriebsspannung nach der Installation mindestens fünf Minuten lang über 13,5 V betragen. Starten Sie dazu das Fahrzeug. Der Speichervorgang muss abgeschlossen werden, um eine genaue Positionsbestimmung sicherzustellen. Dabei muss GPS-Empfang gewährleistet sein: Das Fahrzeug sollte nicht in einer Halle oder unter einer Überdachung stehen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.2, zweiter und dritter Absatz",
+  "prev_context": "Zuvor steht der spannungsfreie Anschluss der GPS-Antenne.",
+  "next_context": "Danach beginnt Abschnitt 1.5.3 mit der GPS-Diagnose.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e4ecf2fbf993755c5acdaf5a531bdd799796735adb2a5671f08dd3cead85150d",
+  "change_reason": "Quellennahe Erstextraktion. Der Wert 13,5 V über mindestens fünf Minuten ist erfasst und fachlich unbestätigt; er steht bereits als offener Punkt in DSC-052. Was geschieht, wenn der Speichervorgang abgebrochen wird, und woran ein Abschluss erkennbar ist, sagt die Quelle nicht.",
+  "discrepancy_refs": ["DSC-052"]
+}

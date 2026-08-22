@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 62.4,
+  "overall_percent": 62.5,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,13 +19,13 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 27.9,
+      "percent": 28.3,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
       "percent": 90,
-      "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Region; alle Aufgaben bleiben entwurf. 56 versionierte Segmente aus DOC-BMA-SN044 Seiten 3-18 sind quellenvalidiert. Seit 2026-08-22 beginnt mit 17 Segmenten aus DOC-IBA-SN045, deutschen Seiten 5 bis 9, auch der Segmentbestand der Generation ab SN-045; er umfasst Haftungsausschluss, bestimmungsgemaessen Gebrauch, Lieferumfang, Montageort, Anschlusslegende und die sechs Funktionsgruppen der Betriebsarten. Diese fuenf Seiten stehen auf extracted, nicht auf validated: Die unabhaengige zweite Durchsicht steht aus. Alle 41 sicherheitskritischen SN-044-Segmente sind in den fuenf entscheidungsreifen Pruefpaketen P0-01 bis P0-05 gebuendelt. BLK-004/005/006/007 und Rueckfragen 2, 3, 6, 14, 15, 16 und 17 bleiben eingehalten: keine SMS-Zeichenfolgen, Koordinaten, Kartenlinks, Beispielwerte, ungeklaerten Berechtigungszeichen, feste PIN, historischen Kontaktdaten oder widerspruechlichen Werte werden als freigegebener Bedienweg veroeffentlicht. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review und Freigaben fehlen und der SN-045-Segmentbestand erst bei 5 von 21 deutschen Inhaltsseiten steht."
+      "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. 56 versionierte Segmente aus DOC-BMA-SN044 Seiten 3-18 sind quellenvalidiert. Seit 2026-08-22 umfasst der Segmentbestand der Generation ab SN-045 38 Segmente aus DOC-IBA-SN045, deutschen Seiten 5 bis 14 - Haftungsausschluss, Lieferumfang, Montageort, Anschlusslegende, Betriebsartentabelle, Modulanschluss, GPS-Antenne und -Diagnose, SIM-Konfiguration und Inbetriebnahme. Der Gesamtbestand steht bei 94 Segmenten; alle bleiben entwurf. Die zehn Seiten stehen auf extracted, nicht auf validated: Die unabhaengige zweite Durchsicht steht aus. Alle 67 sicherheitskritischen Segmente sind acht entscheidungsreifen Pruefpaketen zugeordnet - P0-01 bis P0-05 fuer bis SN-044, P0-06 bis P0-08 fuer ab SN-045. BLK-004/005/006/007 und die Rueckfragen bleiben eingehalten: keine SMS-Zeichenfolgen, Koordinaten, Kartenlinks, Berechtigungszeichen, feste PIN, historischen Kontaktdaten oder Store-Adressen werden als freigegebener Bedienweg veroeffentlicht. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review fehlt und der SN-045-Segmentbestand erst 10 von 21 deutschen Inhaltsseiten abdeckt."
     },
     "card": {
       "label": "Setup-Karte",
@@ -35,7 +35,7 @@
     "application": {
       "label": "Webanleitung und Review-UI",
       "percent": 68,
-      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt jetzt alle 14 belegten Aufgaben ab SN-045 als klar markierte Entwuerfe mit englischen Warnungen, Tabellen und Quellen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt 41/41 und filtert 6/11/11/8/5 Treffer. Seit 2026-08-22 zeigt die Warteschlange zusaetzlich die 17 Segmente ab SN-045 und das sechste Pruefpaket P0-06; die Abdeckungsanzeige steht bei 51 von 51 P0-Segmenten und P0-06 filtert zehn Treffer. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
+      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt jetzt alle 14 belegten Aufgaben ab SN-045 als klar markierte Entwuerfe mit englischen Warnungen, Tabellen und Quellen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt 41/41 und filtert 6/11/11/8/5 Treffer. Seit 2026-08-22 zeigt die Warteschlange zusaetzlich die 38 Segmente ab SN-045 und die drei neuen Pruefpakete P0-06 bis P0-08; die Abdeckungsanzeige steht bei 67 von 67 P0-Segmenten, die drei neuen Pakete filtern 11, 9 und 6 Treffer und sind in der UI ausdruecklich als noch nicht reviewbereit gekennzeichnet. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
     },
     "translation": {
       "label": "Übersetzungspilot",
@@ -50,7 +50,7 @@
     "handoff": {
       "label": "Staging und Übergabe",
       "percent": 79,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente bis SN-044 Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. Das neue P0-06 tut dasselbe fuer die zehn sicherheitskritischen Segmente ab SN-045 mit 18 Einzelentscheidungen, steht aber auf in Vorbereitung, weil seine Segmente Erstextraktionen sind. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet, ohne einen Sollwert oder Reviewstatus abzuleiten. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. Das Karten-Konzept-README dokumentiert Herkunft, Einordnung und bewusste Nichtuebernahmen. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen."
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente bis SN-044 Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. P0-06 bis P0-08 tun dasselbe fuer die 26 sicherheitskritischen Segmente ab SN-045 mit 49 Einzelentscheidungen, stehen aber auf in Vorbereitung, weil ihre Segmente Erstextraktionen sind. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet, ohne einen Sollwert oder Reviewstatus abzuleiten. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. Das Karten-Konzept-README dokumentiert Herkunft, Einordnung und bewusste Nichtuebernahmen. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen."
     }
   },
   "pdf_documents": [
@@ -66,10 +66,10 @@
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 25.5,
+      "percent": 26,
       "status_counts": {
-        "inspected": 242,
-        "extracted": 5
+        "inspected": 237,
+        "extracted": 10
       }
     },
     {
@@ -156,7 +156,9 @@
     "Der franzoesische Teil bis SN-044 nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius; Deutsch, Englisch und Schwedisch nennen 1000 m/1 km, die neuere Generation 900 m. Franzoesisch steht damit innerhalb desselben Handbuchs allein und 50 Prozent ueber den drei Parallelfassungen (DSC-078, Rueckfrage 14). Kein Radius wird bis zur Klaerung genannt.",
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht.",
-    "Ab SN-045 traegt Pin 3 laut DOC-IBA-SN045 Seite 9 zwei Funktionen: Geofencing schalten und in Betriebsart A einen manuellen Alarm (Panikalarm) ausloesen. Welche Spannung welche Funktion ausloest und wie sich beide zueinander verhalten, sagt die Quelle nicht (DSC-050, DSC-042, BLK-007)."
+    "Ab SN-045 traegt Pin 3 laut DOC-IBA-SN045 Seite 9 zwei Funktionen: Geofencing schalten und in Betriebsart A einen manuellen Alarm (Panikalarm) ausloesen. Welche Spannung welche Funktion ausloest und wie sich beide zueinander verhalten, sagt die Quelle nicht (DSC-050, DSC-042, BLK-007).",
+    "Ab SN-045 sind die Geofencing-Schaltschwellen an Pin 3 gegenlaeufig: In Schalterstellung 8 schaltet ueber 6 V ein und unter 5 V aus, in Stellung B genau umgekehrt. Wofuer welche Stellung gedacht ist und was zwischen 5 V und 6 V geschieht, sagt die Quelle nicht. Eine falsch gewaehlte Stellung kehrt die Wirkung um, ohne dass eine Rueckmeldung darauf hinweist (DSC-052, DOC-IBA-SN045 Seite 10).",
+    "Ab SN-045 verlangt die Quelle, die SIM-PIN-Abfrage zu deaktivieren - das Gegenteil der Vorgabe bis SN-044, die eine feste PIN bei aktivierter Abfrage fordert. Welcher Schutz ab SN-045 an die Stelle der PIN tritt, ist offen (Rueckfrage 15, DOC-IBA-SN045 Seite 13)."
   ],
-  "next_action": "Den SN-045-Segmentbestand fortsetzen: die deutschen Seiten 10 bis 14 von DOC-IBA-SN045 extrahieren (Betriebsartentabelle, Modul anschliessen, GPS-Antenne, Kapitel 2 und THITRONIK App) und anschliessend die Seiten 5 bis 9 unabhaengig gegenlesen, damit sie von extracted auf validated steigen. Parallel die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen."
+  "next_action": "Die Seiten 5 bis 14 von DOC-IBA-SN045 unabhaengig gegenlesen, damit die 38 Segmente und ihre Seiten von extracted auf validated steigen und P0-06 bis P0-08 von in Vorbereitung auf bereit fuer Fachreview wechseln koennen. Danach den naechsten Extraktionsbatch aus den deutschen Seiten 15 bis 19 anlegen (Zielrufnummern programmieren, Meldungen, Statusbericht). Parallel die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen."
 }

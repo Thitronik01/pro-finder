@@ -870,13 +870,33 @@ belegt, nicht aus einer Zusammenfassung.
   - **Nachtrag 2026-08-22 (Seite 9):** Pin 3 trägt in Abschnitt 1.3 zwei verschiedene
     Funktionen – „Geofencing (schaltbar über Pin 3)" und „Manueller Alarm bei Spannung an
     Pin 3" in Betriebsart A. Das Verhältnis der beiden Belegungen zueinander erklärt die
-    Quelle nicht; siehe auch DSC-042 und BLK-007.
+    Quelle nicht; siehe auch DSC-042 und BLK-007. **Dritte Rolle:** Die Legende auf
+    Seite 8 führt denselben Pin 3 als „Messeingang (U3)". Ein Pin, drei dokumentierte
+    Rollen, keine Gegenüberstellung.
+  - **Nachtrag 2026-08-22 (Seite 12):** Das Ziel derselben SMS heißt in Abschnitt 1.5.3
+    „Nummer des GSM-Moduls" und in Abschnitt 5.2 „Nummer des Pro-finder". Damit ist die
+    bereits notierte Doppelbenennung im deutschen Teil ab SN-045 auch für diese Seite
+    belegt.
+  - **Nachtrag 2026-08-22 (Seite 14):** Abschnitt 2.5 empfiehlt für denselben
+    Adressbucheintrag **zwei verschiedene Namen**: Der Fließtext nennt „ALARM", der rote
+    Tipp-Kasten unmittelbar darunter „AAlarm". Nur die zweite Schreibweise erreicht den
+    im selben Satz angekündigten ersten Platz im Adressbuch zuverlässig. Dieselbe
+    Adressbuchempfehlung ist bis SN-044 in der englischen Fassung um das doppelte A
+    verkürzt (DSC-076) – der Fehler existiert also in beiden Generationen, nur an
+    unterschiedlicher Stelle.
+  - **Nachtrag 2026-08-22 (Seite 14):** Die LED-Folge nach dem Anschließen heißt hier
+    „gelb-grün", in Kapitel 3 „Blinkt gelb/grün" und in DOC-KA-SN045 „Blinkt grün/gelb" –
+    drei Schreibweisen für denselben Zustand, jetzt mit dem dritten Beleg.
   - „Ländervorwahl" (Seite 15) gegenüber „Landesvorwahl" (Seite 16, Diagramm).
   - „Nummer des Pro-finder" (Abschnitt 5.2) gegenüber „Nummer des GSM-Moduls"
     (Abschnitt 1.5.3) für dasselbe SMS-Ziel.
-  - „Hauptkabelbaum" kommt im gesamten geprüften deutschen Teil nur in Abschnitt 2.9 vor,
-    wird nirgends erklärt und keiner Marke der Anschlussabbildung zugeordnet – obwohl der
-    gesamte Löschvorgang der Zielrufnummern daran hängt.
+  - **Korrektur 2026-08-22:** „Hauptkabelbaum" kommt **nicht nur** in Abschnitt 2.9 vor.
+    Die Extraktion der Seite 12 hat den Begriff auch in **Abschnitt 1.5.2** gefunden:
+    „Ziehen Sie hierzu den Hauptkabelbaum ab". Die frühere Angabe „nur in Abschnitt 2.9"
+    war falsch. Der Befund selbst bleibt bestehen und wiegt schwerer als bisher notiert:
+    Der Begriff wird nirgends erklärt und keiner Marke der Anschlussabbildung auf Seite 8
+    zugeordnet, hängt aber an zwei verschiedenen Vorgängen – am Löschen der
+    Zielrufnummern und am spannungsfreien Anschluss der GPS-Antenne.
   - Drei Schreibweisen für denselben LED-Zustand: „gelb-grün" (Abschnitt 2.4), „Blinkt
     gelb/grün" (Kapitel 3, Seite 18), „Blinkt grün/gelb" (DOC-KA-SN045). Ebenso „fehlt
     oder ist defekt" gegenüber „fehlt bzw. ist defekt".
@@ -887,7 +907,21 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-051 – Redaktionelle Befunde im deutschen Teil (ab SN-045)
 
-- **Dokument:** DOC-IBA-SN045, Seiten 14, 16, 17, 19, 20, 22, 23
+- **Dokument:** DOC-IBA-SN045, Seiten 10, 14, 16, 17, 19, 20, 22, 23
+- **Nachtrag 2026-08-22 – Seite 10, Betriebsartentabelle:** Die Zeile D wiederholt den
+  Produktnamen doppelt – „sobald Spannung anliegt und Pro-finder **Pro-finder**
+  hochgefahren ist nach dem GPS-Signal sucht". Beide Klammerzusätze der Zeilen C und D
+  sind zudem ohne Konjunktion gesetzt („hochgefahren ist nach dem GPS-Signal sucht");
+  grammatisch korrekt wäre „hochgefahren ist **und** nach dem GPS-Signal sucht". Die
+  englische Fassung auf Seite 34 ist an beiden Stellen **fehlerfrei** („and Pro-finder has
+  started up and is searching for the GPS signal") – hier ist ausnahmsweise die
+  Übersetzung sauberer als das deutsche Original. Bei 600 dpi zeichengenau gesichert.
+  Ebenfalls auf Seite 10: Die Spaltenüberschriften sind im Satz mitten im Wort umbrochen
+  („Status-bericht aus", „deaktiviert WiPro"); im Englischen trennt derselbe Umbruch
+  „deactivate s WiPro".
+- **Nachtrag 2026-08-22 – Seite 14, Abschnitt 2.5:** Gebrochener Satzbau durch Vermischung
+  zweier Konstruktionen – „speichern Sie diese idealerweise unter der Bezeichnung ALARM
+  **nennen**". Bei 500 dpi gesichert.
 - Seite 22, Abschnitt 5.5: überzähliges Komma – „Sie können die Ausgänge, dauerhaft,
   gepulst …".
 - Seite 17: Spaltenüberschrift „Inhalt der Programmier-SMS **in** Pro-finder" statt „an".
@@ -915,7 +949,7 @@ belegt, nicht aus einer Zusammenfassung.
 
 ### DSC-052 – Lücken der Quelle, die keine Widersprüche sind (ab SN-045)
 
-- **Dokument:** DOC-IBA-SN045, Seiten 7, 9, 12, 19, 20, 23
+- **Dokument:** DOC-IBA-SN045, Seiten 7, 9, 10, 12, 13, 19, 20, 23
 - **Befund:** Fragen, die sich beim Schreiben der Aufgaben gestellt haben und die die
   Quelle **gar nicht** beantwortet. Sie sind keine Fehler, aber sie begrenzen, was die
   HTML-Anleitung sagen darf.
@@ -925,6 +959,20 @@ belegt, nicht aus einer Zusammenfassung.
     maximal zulässige Gesamtlänge gemeint ist, sagt die Quelle nicht. Dieselbe offene
     Frage besteht seit der 400-dpi-Gegenprüfung vom 2026-08-10 in der Generation bis
     SN-044 (DSC-073); die Werte werden **nicht** zwischen den Generationen übertragen.
+  - **Nachtrag 2026-08-22 – Schaltschwellen an Pin 3 (Seite 10):** Die Betriebsartentabelle
+    ordnet Pin 3 in **Stellung 8** „über 6 V: ein / unter 5 V: aus" zu und in **Stellung B**
+    genau umgekehrt „über 6 V: aus / unter 5 V: ein". Beide Zeilen sind bei 600 dpi
+    gesichert und in der englischen Tabelle auf Seite 34 identisch. Die Quelle sagt an
+    keiner Stelle, für welchen Anwendungsfall welche der beiden Stellungen gedacht ist,
+    und auch nicht, was im Bereich zwischen 5 V und 6 V geschieht. Eine falsch gewählte
+    Stellung kehrt die Geofencing-Wirkung um, ohne dass eine Rückmeldung darauf hinweist.
+  - **Nachtrag 2026-08-22 – Meldeintervalle (Seite 10):** Für die Stellungen C und D sagt
+    die Quelle nicht, wann die dichte Berichtsfolge endet. Für die Stellungen 4 bis 7
+    bleibt offen, ob das Intervall ab dem Einschalten oder ab der letzten Meldung zählt.
+  - **Nachtrag 2026-08-22 – SIM-Vorbereitung (Seite 13):** Warum Mailbox, Rufumleitungen
+    und Komfortfunktionen deaktiviert werden müssen, erklärt die Quelle nicht; ebenso
+    wenig, ob iMessages nach den vier Schritten wieder aktiviert werden darf. Ohne
+    Begründung ist nicht erkennbar, welcher Schritt zwingend ist.
   - **Nachtrag 2026-08-22 – Betriebsarten (Seite 9):** Abschnitt 1.3 zählt sechs
     Funktionsgruppen auf, ohne einer einzigen eine Schalterstellung zuzuordnen. Welche
     Betriebsart welche Funktion aktiviert, geht erst aus der Tabelle auf Seite 10 hervor;
@@ -1406,6 +1454,17 @@ belegt, nicht aus einer Zusammenfassung.
 - **Schwere:** hoch (sicherheitsrelevanter technischer Wert) · **Status:** offen –
   Rückfrage 16 an THITRONIK
 
+- **Abgrenzung 2026-08-22 (ab SN-045):** Die Betriebsartentabelle der **neueren**
+  Generation nennt für Stellung D in **beiden bisher verglichenen Sprachfassungen 8
+  Minuten**: DOC-IBA-SN045, deutsche Seite 10, und englische Seite 34 („8 minutes"). Beide
+  Zellen sind hochauflösend gesichert – Deutsch bei 600 dpi, Englisch bei 400 dpi. Die
+  Nachbarzeile C stimmt ebenfalls überein (90 Sekunden / 90 seconds). Der
+  Faktor-60-Widerspruch ist damit **auf die Generation bis SN-044 begrenzt** und wird
+  nicht auf die neuere Fassung übertragen. Das stützt die Vermutung aus Rückfrage 16, dass
+  „8 Minuten" der gemeinte Wert ist, ersetzt aber keine technische Bestätigung: Zwei
+  übereinstimmende Sprachfassungen sind laut Synthese-Auswertung 2 keine Freigabe. Die
+  acht übrigen Sprachfassungen ab SN-045 sind an dieser Stelle noch nicht verglichen.
+
 ### DSC-067 – Der englische Teil nennt den schwedischen Geofencing-Befehl „fence av" (bis SN-044)
 
 - **Dokument:** DOC-BMA-SN044, englische Seite 25 (intern „Page 5"), Abschnitt 1.7
@@ -1525,6 +1584,15 @@ belegt, nicht aus einer Zusammenfassung.
   ältere Dokument, für den Pilot aber als Beleg, dass die Konformitätsangaben **nicht
   zwischen Generationen übertragbar** sind.
 
+- **Nachtrag 2026-08-22 (ab SN-045):** Der Widerspruch zwischen Anschlusskapitel und
+  technischer Tabelle besteht **auch in der neueren Generation**. DOC-IBA-SN045, Seite 11,
+  Abschnitt 1.4, verlangt eine „geeignete Spannungsversorgung (12 V DC)", während die
+  technische Tabelle desselben Dokuments auf Seite 25 einen Bereich nennt. Damit ist das
+  Muster – Nennwert im Anschlusskapitel, Bereich in der Tabelle, ohne dass die Quelle die
+  Beziehung erklärt – in beiden Generationen belegt und kein Einzelfall des älteren
+  Dokuments. Ebenfalls auf Seite 11: Die Messeingänge an den Pins 2 bis 5 sind für
+  Spannungen von 0 bis 30 V angegeben; Eingangswiderstand, Genauigkeit und Verhalten
+  oberhalb von 30 V nennt die Quelle nicht.
 - **Warum das zählt:** Das SIM-Format ist die unmittelbar nutzerrelevante Abweichung –
   wer nach der falschen Generationsanleitung eine SIM beschafft, hält die falsche
   Kartengröße in der Hand. Zusammen mit dem Geofencing-Radius (DSC-061) und den

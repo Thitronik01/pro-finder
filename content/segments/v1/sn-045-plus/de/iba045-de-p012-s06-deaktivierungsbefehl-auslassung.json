@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S06-DEAKTIVIERUNGSBEFEHL-AUSLASSUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "geofencing",
+  "title": "Die Zeichenfolge zum Abschalten des Geofencings bleibt gesperrt",
+  "body_md": "Die Quelle nennt an dieser Stelle eine SMS, mit der sich das Geofencing abschalten lässt, und als Ziel die Rufnummer des GSM-Moduls. Der genaue Nachrichtentext wird hier nicht wiedergegeben. Bis die Befehlssprache technisch bestätigt ist, führt die Anleitung keine Zeichenfolge auf, deren Ablehnung durch das Gerät unbemerkt bliebe.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.3, letzter Absatz",
+  "prev_context": "Zuvor steht die Warnung vor reflexionsbedingten Diebstahlmeldungen.",
+  "next_context": "PDF-Seite 13 beginnt mit Kapitel 2 Programmieren und Konfigurieren.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:04848d4f82597e038f06b2d8141cca6cfaf137d087dfd5126323d9c57fb53e26",
+  "change_reason": "Die Zeichenfolge selbst ist wegen BLK-005 ausgelassen. Zehn geprüfte Sprachfassungen ergeben zehn unterschiedliche Befehlsprofile, und ein nicht akzeptierter Befehl erzeugt keine Fehlermeldung - das Geofencing bliebe unbemerkt aktiv. Die Quelle bezeichnet das Ziel hier als Nummer des GSM-Moduls, an anderer Stelle als Nummer des Pro-finder; beide Benennungen stehen unter DSC-050.",
+  "discrepancy_refs": ["DSC-033", "DSC-050"]
+}

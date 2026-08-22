@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S02-SIM-AUSWAHL",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "Hinweise der Quelle zur Auswahl der SIM-Karte",
+  "body_md": "Die Quelle empfiehlt eine Karte bestimmter Anbieter, hält Karten anderer Anbieter aber grundsätzlich für geeignet. Bei einer Prepaid-Karte ist darauf zu achten, dass sie zum Aufladen des Guthabens nicht aus dem Gerät entfernt werden muss, sondern auch von einem anderen Mobiltelefon oder zum Beispiel an einem Automaten geladen werden kann.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, roter Hinweiskasten unter dem ersten Absatz",
+  "prev_context": "Zuvor steht die Anforderung an Format und Freischaltung der SIM-Karte.",
+  "next_context": "Danach folgen die vier Schritte, die am Mobilgerät auszuführen sind.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:50d431c62b1b188058aba77c7ec0339d91e0c84623a832cc336b52f0f4763c8f",
+  "change_reason": "Die beiden namentlich genannten Anbieter wurden nicht übernommen. Drei geprüfte Sprachfassungen nennen drei verschiedene Empfehlungen (DSC-027); eine Anbieterempfehlung in einer öffentlichen Anleitung braucht außerdem eine aktuelle Bestätigung, weil Marken und Tarife sich ändern. Die technisch tragende Aussage - Aufladen ohne Entnahme der Karte - bleibt vollständig erhalten, weil sie die Betriebsbereitschaft des Geräts betrifft.",
+  "discrepancy_refs": ["DSC-027"]
+}

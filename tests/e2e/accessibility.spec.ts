@@ -126,8 +126,8 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
   await expect(page.locator('h1')).toHaveText('Reviewoberfläche');
   await expect(page.getByText('Git-Fixtures', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Freigaben bleiben gesperrt' })).toBeVisible();
-  // 41 P0-Segmente bis SN-044 in P0-01 bis P0-05 und 10 ab SN-045 in P0-06.
-  await expect(page.getByText('51 / 51', { exact: true })).toBeVisible();
+  // 41 P0-Segmente bis SN-044 in P0-01 bis P0-05 und 26 ab SN-045 in P0-06 bis P0-08.
+  await expect(page.getByText('67 / 67', { exact: true })).toBeVisible();
 
   // exact: true, weil getByLabel per Teilzeichenkette sucht und die
   // Tabellen-Caption der Warteschlange den Begriff ebenfalls enthaelt.
@@ -165,8 +165,18 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
 
   await page.getByRole('link', { name: 'P0-06 in der Warteschlange öffnen' }).click();
   await expect(page).toHaveURL(/packet=P0-06/);
-  await expect(page.getByText('10 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByText('11 Treffer', { exact: true })).toBeVisible();
   await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-06');
+
+  await page.getByRole('link', { name: 'P0-07 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/packet=P0-07/);
+  await expect(page.getByText('9 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-07');
+
+  await page.getByRole('link', { name: 'P0-08 in der Warteschlange öffnen' }).click();
+  await expect(page).toHaveURL(/packet=P0-08/);
+  await expect(page.getByText('6 Treffer', { exact: true })).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-08');
 
   await page.getByLabel('Prüfpaket', { exact: true }).selectOption('P0-01');
   await page.getByRole('button', { name: 'Filter anwenden' }).click();

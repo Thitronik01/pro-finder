@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S02-WIPRO-VERBINDEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "WiPro III mit dem Pro-finder verbinden",
+  "body_md": "Verbinden Sie die WiPro III (safe.lock) und den Pro-finder bei Bedarf mit dem beiliegenden Verbindungskabel WiPro III aus dem Lieferumfang.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.4, zweiter Absatz",
+  "prev_context": "Zuvor steht der Absatz zu Versorgung, Absicherung und Messeingängen.",
+  "next_context": "Danach folgen die Angaben zu den beiden Transistorausgängen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:eb927f9741fb91ddb0beb4c6bbe5a8b7aa3e76eb5af5f6f2c065657ad7b81f28",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle formuliert die Verbindung als optional (ggf.); das bleibt erhalten. Welche Funktionen ohne diese Verbindung entfallen, sagt der Absatz nicht - die Abhängigkeit des Geofencings von der WiPro III bleibt unter BLK-007 offen (DSC-042).",
+  "discrepancy_refs": ["DSC-042"]
+}

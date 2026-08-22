@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S01-APP-HERUNTERLADEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "THITRONIK App herunterladen",
+  "body_md": "Die THITRONIK App zeigt die Funktionen der WiPro III (safe.lock) und des Pro-finder gemeinsam an. Laden Sie die App für das Betriebssystem Ihres mobilen Geräts im jeweiligen App-Store herunter. Die Quelle verweist für ausführlichere Informationen auf die Website des Herstellers, nennt dort aber keine Adresse.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.3 mit den beiden Store-Abzeichen und den zugehörigen QR-Codes",
+  "prev_context": "PDF-Seite 13 endet mit dem Einsetzen der SIM-Karte in das Modul.",
+  "next_context": "Danach folgt Abschnitt 2.4 zur Aktivierung des Pro-finder.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3be401549ceac08dcc70ea9d0a72a6fe12f5022bafc17c44fa58e98cf212fb4c",
+  "change_reason": "Quellennahe Erstextraktion. Die beiden QR-Codes wurden nicht ausgelesen und ihre Ziele nicht übernommen: Store-Adressen sind Produktionsdaten, die bestätigt werden müssen, und ein aus dem Bild abgeleiteter Link wäre ein ungeprüfter Verweis. Aus demselben Grund bleibt die nur angedeutete Website ohne Adresse (BLK-004). Das Google-Play-Abzeichen ist in der Quelle so grob gerastert, dass seine Kopfzeile auch bei hoher Auflösung unlesbar bleibt (DSC-051).",
+  "discrepancy_refs": ["DSC-051"]
+}

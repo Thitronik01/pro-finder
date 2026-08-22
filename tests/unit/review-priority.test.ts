@@ -66,11 +66,16 @@ describe('Reviewpriorität', () => {
     expect(reviewPacketId('BMA044-DE-P017-S01-POSITION-IN-KARTEN-NUTZEN')).toBeNull();
   });
 
-  it('ordnet die zehn sicherheitskritischen Segmente ab SN-045 P0-06 zu', () => {
+  it('teilt die sicherheitskritischen Segmente ab SN-045 auf P0-06 bis P0-08 auf', () => {
     expect(reviewPacketId('IBA045-DE-P008-S01-ANSCHLUSSLEGENDE')).toBe('P0-06');
-    expect(reviewPacketId('IBA045-DE-P009-S05-GEOFENCING-PIN3')).toBe('P0-06');
-    expect(reviewPacketId('IBA045-DE-P009-S07-MANUELLER-ALARM-PIN3')).toBe('P0-06');
+    expect(reviewPacketId('IBA045-DE-P011-S03-AUSGAENGE-BELASTBARKEIT')).toBe('P0-06');
+    expect(reviewPacketId('IBA045-DE-P010-S02-GEOFENCING-SCHALTSCHWELLEN')).toBe('P0-07');
+    expect(reviewPacketId('IBA045-DE-P009-S07-MANUELLER-ALARM-PIN3')).toBe('P0-07');
+    expect(reviewPacketId('IBA045-DE-P013-S01-SIM-FORMAT')).toBe('P0-08');
+    expect(reviewPacketId('IBA045-DE-P014-S02-AKTIVIEREN')).toBe('P0-08');
+    // P1-Gegenbelege bleiben bewusst ohne Paket.
     expect(reviewPacketId('IBA045-DE-P007-S03-EXTERNE-GPS-ANTENNE')).toBeNull();
+    expect(reviewPacketId('IBA045-DE-P011-S05-GPS-ANTENNE-MONTIEREN')).toBeNull();
   });
 
   it('deckt alle sicherheitskritischen Segmente mit genau einem Prüfpaket ab', () => {
@@ -78,13 +83,13 @@ describe('Reviewpriorität', () => {
       ({ segment }) => reviewPriority(segment.safety_class) === 'P0',
     );
 
-    // 41 aus DOC-BMA-SN044 (P0-01 bis P0-05) und 10 aus DOC-IBA-SN045 (P0-06).
-    expect(p0Segments).toHaveLength(51);
+    // 41 aus DOC-BMA-SN044 (P0-01 bis P0-05) und 26 aus DOC-IBA-SN045 (P0-06 bis P0-08).
+    expect(p0Segments).toHaveLength(67);
     expect(p0Segments.filter(({ segment }) => segment.serial_range === 'sn-001-044')).toHaveLength(
       41,
     );
     expect(p0Segments.filter(({ segment }) => segment.serial_range === 'sn-045-plus')).toHaveLength(
-      10,
+      26,
     );
 
     for (const { file, segment } of p0Segments) {

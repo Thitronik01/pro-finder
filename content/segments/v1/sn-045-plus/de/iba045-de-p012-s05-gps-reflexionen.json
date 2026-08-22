@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S05-GPS-REFLEXIONEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Reflexionen können Diebstahlmeldungen ohne Bewegung auslösen",
+  "body_md": "In Hallen, anderen Gebäuden und unter Überdachungen kann es zu Reflexionen des GPS-Signals kommen. Das kann die Genauigkeit der Positionsbestimmung stark beeinträchtigen, und es können Diebstahlmeldungen ausgelöst werden, obwohl das Fahrzeug nicht bewegt wurde. Die Quelle empfiehlt deshalb, das Geofencing zu deaktivieren, wenn das Fahrzeug in einem Gebäude oder unter einem Dach abgestellt wird.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.3, vorletzter Absatz",
+  "prev_context": "Zuvor steht der Hinweis zur roten Anzeige nach dem Zurückschalten.",
+  "next_context": "Danach nennt die Quelle den Sendeweg zum Deaktivieren des Geofencings.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ecb19cf60fd091402530276fe0d123f42c1281ad9e9aa5e9934c8c1922418def",
+  "change_reason": "Quellennahe Erstextraktion. Die Quelle schreibt Reflektionen; die Schreibweise wurde zur standardsprachlichen Form berichtigt, ohne die Aussage zu verändern. Der Hinweis ist als Warnung geführt, weil er einen Fehlalarm beschreibt, der ohne diese Vorkehrung eintritt.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S04-ROT-NACH-ZURUECKSCHALTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "status-led",
+  "title": "Rot bedeutet nach dem Zurückschalten etwas anderes",
+  "body_md": "Schalten Sie den Betriebsartenschalter nach der Diagnose zurück in die Ausgangsposition. Leuchtet die Status-LED nun rot, ist noch keine SIM-Karte eingesetzt. Dieselbe rote Anzeige bedeutet in der Schalterstellung F dagegen, dass die GPS-Antenne nicht angeschlossen ist.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.3, Absatz unter der Zustandstabelle",
+  "prev_context": "Zuvor steht die dreizeilige Zustandstabelle der GPS-Diagnose.",
+  "next_context": "Danach folgt der Hinweis zu GPS-Reflexionen in Gebäuden.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:0505e3028c105518424eb054a23fe6667120e214078423d06eae08c0a953ea65",
+  "change_reason": "Die Doppelbedeutung der roten Anzeige steht in der Quelle unmittelbar untereinander, wird dort aber nicht gegenübergestellt. Das Segment stellt beide Bedeutungen ausdrücklich nebeneinander, weil die Verwechslung zu einer falschen Fehlersuche führt: Wer die SIM-Karte prüft, obwohl die Antenne fehlt, findet den Fehler nicht (DSC-047). Der Verweis der Quelle auf das Kapitel Betriebszustände wurde nicht übernommen.",
+  "discrepancy_refs": ["DSC-047"]
+}

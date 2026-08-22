@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S03-SIM-VORBEREITEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "SIM-Karte im Mobilgerät vorbereiten",
+  "body_md": "Legen Sie die SIM-Karte zunächst in ein mobiles Endgerät ein und führen Sie dort vier Schritte aus:\n\n1. Deaktivieren Sie die PIN-Abfrage.\n2. Deaktivieren Sie die Mailbox und alle Rufumleitungen.\n3. Deaktivieren Sie jegliche Komfortfunktionen, unter anderem Rückrufbitte und Erinnerungen per SMS.\n4. Aktivieren Sie das Roaming, falls es nicht voreingestellt ist.\n\nWird ein iPhone verwendet, muss für diese vier Schritte die Funktion iMessages deaktiviert sein.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, nummerierte Schrittliste und roter Achtung-Kasten darunter",
+  "prev_context": "Zuvor steht der rote Kasten mit den Hinweisen zur Kartenauswahl.",
+  "next_context": "Danach folgt Abschnitt 2.2 zum Einsetzen der Karte in das Modul.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e7b4ee40b75ccd48c85d4178367c65ad80380b47394c8f06c2c621b7e45c96ae",
+  "change_reason": "Quellennahe Erstextraktion der vier Schritte im Wortlaut der Quelle. Schritt 1 verlangt hier ausdrücklich, die PIN-Abfrage zu deaktivieren. Das ist das Gegenteil der Vorgabe bis SN-044, wo die Quelle eine feste PIN und eine aktivierte Abfrage zugleich verlangt (Rückfrage 15). Beide Angaben bleiben strikt in ihrer Generation; der Befund ist am 2026-08-22 in Rückfrage 15 nachgetragen worden. Warum Mailbox, Rufumleitungen und Komfortfunktionen stören, erklärt die Quelle nicht.",
+  "discrepancy_refs": ["DSC-052"]
+}
