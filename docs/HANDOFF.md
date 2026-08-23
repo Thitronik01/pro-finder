@@ -640,51 +640,49 @@ abgeleitet ist.
 - kein muttersprachlicher Review für Französisch, Tschechisch, Schwedisch, Dänisch,
   Spanisch, Italienisch, Niederländisch und Polnisch.
 
-## Abschlussprotokoll
+## Abschlussprotokoll (Stand 2026-08-23)
 
-- **Bearbeitete PDF-Seiten:** keine neuen Renderings oder Statusänderungen. Die drei
-  Synthesen verwenden ausschließlich bereits dokumentierte Seitenbelege. Seiten 3–18 von
-  DOC-BMA-SN044 samt allen 56 deutschen Segmenten bleiben quellenvalidiert; Seite 19
-  enthält nur ein leeres Notizfeld.
-- **Gesamtstand Quellen:** 307 von 323 Seiten `inspected`, 16 von 323 `validated`, keine
-  Seite `extracted`; DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 247
-  `inspected` und beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne
-  Segmentdatei hochgestuft.
-- **Segmente:** Schema v1 und 56 deutsche SN-044-Segmente; alle `entwurf`, alle mit
-  aktueller Prüfsumme und durch Dokument, Seite, Region und Kontext belegt. Alle fünf
-  Batches besitzen eine unabhängige Gegenprüfung; Korrekturen stehen im jeweiligen
-  `change_reason`.
-- **Aufgaben:** SN-001-044 Deutsch 14/14 und SN-045-plus Deutsch 14/14, insgesamt 28/28
-  gefüllt, alle `entwurf`, kein Platzhalter. Englisch ab SN-045 besitzt zusätzlich alle
-  vierzehn belegten Aufgabenentwürfe, ebenfalls ohne Platzhalter.
-- **Prüfpakete:** P0-01 bis P0-05 enthalten 6/11/11/8/5 P0-Segmente und zusammen 121
-  einzeln referenzierbare Entscheidungen. Damit sind 41 von 41 P0-Segmenten genau einem
-  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Die Review-UI zeigt
-  41/41 und macht alle fünf Paket-IDs über einen eigenen Select und Direktlinks filterbar.
-- **Register:** Nach der vorhandenen SMS-Befehlssynthese bündeln zwei neue Auswertungen
-  technische Werte sowie die Zugänglichkeitsgrenzen zwischen PDF, HTML und Gerät. Keine
-  neue DSC-Nummer und keine neue Rückfrage waren erforderlich. Höchster Eintrag bleibt
-  DSC-085; siebzehn Fragen und sechs aktive Blocker.
-- **Geänderte Bereiche:** `DISCREPANCIES.md`, `RUECKFRAGEN_THITRONIK.md`,
-  `PROJECT_STATUS.md`, `HANDOFF.md`, `HANDOVER_PROMPT.md`, `progress-input.json` und die
-  daraus generierte `progress.json`. Aufgaben, Segmente, Seitenstatus, Anwendung,
-  Setup-Karte, Content-Schema und Supabase-Migrationen blieben unverändert.
-- **Karten-Nachtrag:** sieben unveränderte Nutzerentwürfe samt Integritätsmanifest, zwei
-  deutsche SVG-Beispiele, zwei gerenderte Vorschauen, erweiterter Karten-Preflight sowie
-  aktualisierte Anforderungen, Druckspezifikation und Inhalts-Quellen-Zuordnung. Keine
-  technische Kartenfunktion und kein Produktionswert wurde freigegeben.
-- **Genutzte Skills:** keine. Die Synthesen wurden aus den versionierten
-  Seitenbefunden, DSC-Einträgen und Reviewfragen erstellt; es wurde kein Skill-Inhalt in
-  Produktcode oder Dokumentation übernommen.
-- **Abschlussläufe:** der neue Reduced-Motion-Test bestand gezielt 2 von 2 Läufen und im
-  vollständigen E2E-Lauf 64 von 64 Playwright-/axe-Tests. Die abschließende Reihenfolge
-  `npm run progress` → `npm run format` → `npm run check` ist ebenfalls grün; darin 38
-  Unit-Tests sowie Segment-, Content-, Referenz-, Secret-, Token-, Lockfile- und
-  Fortschrittsprüfung.
-- **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat deshalb
-  erwartungsgemäß nichts zu prüfen.
-- **GitHub-Abschluss:** Arbeit erfolgt auf `bootstrap/accessibility-pilot`; kein direkter
-  Commit auf `main`. Draft-PR #1 bleibt der menschlich abzunehmende Integrationsweg.
+Dieser Abschnitt beschrieb bis zum 2026-08-23 noch den Stand der Vorsitzung und
+widersprach dem Repository. Er ist jetzt nachgezogen.
+
+- **Bearbeitete PDF-Seiten:** 49 Seiten neu gerendert und gelesen – DOC-IBA-SN045 deutsch
+  5–25 und englisch 29–49, DOC-BMA-SN044 deutsch 1, 2, 19 und englisch 20–36 sowie beide
+  Kurzanleitungen. Strittige Einzelwerte zusätzlich bei 400 bis 500 dpi nachgerendert. Die
+  Original-PDFs wurden ausschließlich gelesen.
+- **Gesamtstand Quellen:** 258 von 323 Seiten `inspected`, **65 von 323 `validated`**, keine
+  Seite `extracted`. Je Dokument: DOC-BMA-SN044 53/19, DOC-IBA-SN045 205/42, DOC-KA-SN044
+  0/2, DOC-KA-SN045 0/2. Damit ist **jede deutschsprachige Quellseite des Projekts**
+  validiert, dazu der englische Teil ab SN-045.
+- **Segmente:** **245** versionierte Segmente, alle `entwurf`, alle mit Prüfsumme und durch
+  Dokument, Seite, Region und Kontext belegt. Verteilung: DOC-BMA-SN044 deutsch 61,
+  DOC-IBA-SN045 deutsch 83 und englisch 83, DOC-KA-SN044 deutsch 8, DOC-KA-SN045 deutsch 10.
+  Sicherheitsklassen: 181 sicherheitskritisch, 48 sicherheitsrelevant, 16 normal.
+- **Aufgaben:** unverändert 42 Dateien in drei Zweigen – SN-001-044 Deutsch 14, SN-045-plus
+  Deutsch 14, SN-045-plus Englisch 14. Ein englischer SN-044-Zweig wurde bewusst **nicht**
+  halbfertig angelegt.
+- **Prüfpakete:** **P0-01 bis P0-13** decken alle 181 sicherheitskritischen Segmente ab
+  (6/11/11/8/5/6/14/28/20/22/22/14/14). P0-06 bis P0-12 führen deutsche und englische
+  Segmente derselben Fundstelle im selben Paket; P0-13 bündelt die Widersprüche zwischen
+  Kurzanleitung und Handbuch.
+- **Register:** **97 DSC-Einträge** (zwölf neu: DSC-086 bis DSC-097), 17 Rückfragen
+  unverändert, davon Rückfrage 2, 5, 11, 12, 15 und 17 durch neue Belege erweitert.
+- **Geänderte Bereiche:** Segmentbestand, Seitenrecords, `DISCREPANCIES.md`,
+  `RUECKFRAGEN_THITRONIK.md`, `ACCESSIBILITY_TEST_MATRIX.md`, `PROJECT_STATUS.md`,
+  `HANDOFF.md`, neu `CROSSCHECK_SN045_DE_EN.md` und acht Dossiers, dazu `lib/review-*`,
+  `app/review/**` mit zwei neuen Routen, Unit- und Browsertests. Karte, Content-Schema und
+  Supabase-Migrationen blieben unverändert.
+- **Karte:** unverändert. Kein Produktionswert und keine Freigabe hinzugekommen.
+- **Genutzte Skills:** keine.
+- **Abschlussläufe:** `npm run progress` → `npm run format` → `npm run check` grün, darin
+  **51 Unit-Tests** sowie Segment-, Content-, Referenz-, Secret-, Token-, Lockfile- und
+  Fortschrittsprüfung. Produktions-Build mit 51 Seiten. **86 von 86 Playwright-/axe-Tests**
+  über Desktop- und Mobilprofil. `segments:check` hat währenddessen einen realen
+  BLK-005-Verstoß abgefangen, der daraufhin umformuliert wurde; der Dark-Mode-axe-Lauf einen
+  realen Kontrastfehler einer neuen Fläche.
+- **Referenz-Repository:** nicht lokal vorhanden; `reference:check` hat erwartungsgemäß
+  nichts zu prüfen.
+- **GitHub-Abschluss:** Arbeit auf `claude/sn045-english-verification-n78ghl`, sieben
+  Commits, kein direkter Commit auf `main`.
 
 ```text
 Resume from:
