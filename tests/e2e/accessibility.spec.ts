@@ -32,6 +32,7 @@ const PAGES = [
   '/pro-finder/wechsel?von=sn-045-plus&nach=sn-001-044&sprache=de',
   '/dashboard',
   '/review',
+  '/review/segment/IBA045-DE-P010-S01-BETRIEBSARTENTABELLE',
 ];
 
 for (const path of PAGES) {
@@ -121,6 +122,54 @@ test('englischer Pilot zeigt vierzehn belegte Entwurfsaufgaben ohne Platzhalter'
   await expect(page.locator('a[href^="tel:"], a[href^="mailto:"]')).toHaveCount(0);
 });
 
+test('Segmentdetail zeigt Beleg, Gegenprüfung und Gegenstück der anderen Sprachfassung', async ({
+  page,
+}) => {
+  await page.goto('/review/segment/IBA045-DE-P025-S02-STROMAUFNAHME-LUECKE');
+  await expect(page.locator('h1')).toHaveCount(1);
+
+  // Der Aenderungsgrund ist der eigentliche Beleg der Gegenpruefung.
+  await expect(
+    page.getByRole('heading', { name: 'Änderungsgrund und Ergebnis der Gegenprüfung' }),
+  ).toBeVisible();
+  await expect(page.getByText(/bei 400 dpi zeichengenau gesichert/)).toBeVisible();
+
+  // Der Seitenvermerk aus dem Seitenrecord muss sichtbar sein, nicht nur in der Datei stehen.
+  await expect(
+    page.getByRole('heading', { name: 'Was an dieser Quellseite geprüft wurde' }),
+  ).toBeVisible();
+
+  // Registerbezug ist verlinkt und filtert die Warteschlange.
+  await page.getByRole('link', { name: 'DSC-088' }).click();
+  await expect(page).toHaveURL(/dsc=DSC-088/);
+  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText(
+    'DSC-088',
+  );
+
+  // Das englische Gegenstueck ist erreichbar und als eigenstaendige Extraktion markiert.
+  await page.goto('/review/segment/IBA045-DE-P025-S02-STROMAUFNAHME-LUECKE');
+  await expect(page.getByText(/keine Übersetzungen voneinander/)).toBeVisible();
+  await page.getByRole('link', { name: 'Dieses Segment öffnen' }).click();
+  await expect(page).toHaveURL(/IBA045-EN-P049-/);
+  await expect(page.locator('h1')).toHaveCount(1);
+});
+
+test('Quellseiten-Filter trennt gegengeprüfte von nur gesichteten Segmenten', async ({ page }) => {
+  await page.goto('/review?pageStatus=validated&language=de&generation=sn-045-plus');
+  // Auf die Tabelle einschraenken: das Filterformular enthaelt dieselben Begriffe
+  // als Auswahloptionen und wuerde eine Negativpruefung auf der Sektion verfaelschen.
+  const rows = page.locator('table').first().locator('tbody tr');
+  await expect(rows.first()).toBeVisible();
+  await expect(rows.filter({ hasText: 'unabhängig gegengeprüft' })).toHaveCount(await rows.count());
+});
+
+test('Sprachfilter trennt deutsche und englische Segmente', async ({ page }) => {
+  await page.goto('/review?language=en&priority=P0');
+  const queue = page.getByRole('region', { name: 'Content-Warteschlange' });
+  await expect(queue).toContainText('IBA045-EN-');
+  await expect(queue).not.toContainText('IBA045-DE-');
+});
+
 test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ page }) => {
   await page.goto('/review');
   await expect(page.locator('h1')).toHaveText('Reviewoberfläche');
@@ -172,7 +221,12 @@ test('Kernseiten verursachen bei 320 CSS-Pixeln keinen Seiten-Horizontalscroll',
   page,
 }) => {
   await page.setViewportSize({ width: 320, height: 900 });
-  for (const path of ['/pro-finder/start', '/pro-finder/sn-045-plus/de/status-led', '/review']) {
+  for (const path of [
+    '/pro-finder/start',
+    '/pro-finder/sn-045-plus/de/status-led',
+    '/review',
+    '/review/segment/IBA045-DE-P010-S01-BETRIEBSARTENTABELLE',
+  ]) {
     await page.goto(path);
     const dimensions = await page.evaluate(() => ({
       clientWidth: document.documentElement.clientWidth,
@@ -188,7 +242,11 @@ test('Start- und Reviewseite bleiben in Dark Mode und Reduced Motion axe-sauber'
   page,
 }) => {
   await page.emulateMedia({ colorScheme: 'dark', reducedMotion: 'reduce' });
-  for (const path of ['/pro-finder/start', '/review']) {
+  for (const path of [
+    '/pro-finder/start',
+    '/review',
+    '/review/segment/IBA045-DE-P010-S01-BETRIEBSARTENTABELLE',
+  ]) {
     await page.goto(path);
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag22aa'])

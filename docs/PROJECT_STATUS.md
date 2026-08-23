@@ -5,7 +5,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 66.2 %**
+**Gesamtfortschritt: 69.1 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
@@ -13,10 +13,10 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Quelleninventar und PDF-Prüfung          | 20 %    | 34 %        |
 | Content-Modell und deutscher Master      | 20 %    | 93 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
-| Webanleitung und Review-UI               | 20 %    | 68 %        |
+| Webanleitung und Review-UI               | 20 %    | 80 %        |
 | Übersetzungspilot                        | 10 %    | 85 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 58 %        |
-| Staging und Übergabe                     | 5 %     | 84 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 62 %        |
+| Staging und Übergabe                     | 5 %     | 86 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -27,7 +27,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Der deutsche und der englische Sprachteil von DOC-IBA-SN045 sind beide abgeschlossen und wechselseitig gegengelesen (42 von 247 Seiten validated). Naechster Extraktionsbereich: DOC-BMA-SN044 ausserhalb der Seiten 3-18 - der englische Teil (Seiten 20-36) dient dabei als Gegenquelle zum bereits validierten deutschen Teil. Dieselbe Methode nach docs/CROSSCHECK_SN045_DE_EN.md: Seitenpaar ueber die Kapitelueberschrift bilden, nie ueber einen festen Versatz; beide Seiten rendern; jede Zahl, Tabellenzeile und Aufzaehlung vergleichen; Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als Sprachunterschied ins Register nehmen; eine Seite steigt erst nach vollstaendigem Gegenlesen auf validated, mit crosscheck_note. Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus - das ist die harte Obergrenze der Quellenpruefung ohne Zuarbeit. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
+Offene Blocker: 6 · Nächste Aktion: Die Review-UI zeigt jetzt je Segment den vollstaendigen Beleg samt Gegenstueck der anderen Sprachfassung. Naechste sinnvolle Schritte ohne Zuarbeit von THITRONIK: (1) DOC-BMA-SN044 ausserhalb der Seiten 3-18 extrahieren, mit dem englischen Teil (Seiten 20-36) als Gegenquelle; (2) eine Paketansicht /review/packet/<id>, die ein Dossier mit allen Segmenten beider Fassungen und ihren Belegen an einem Ort zeigt. HARTE GRENZE: Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7); 205 der 247 Seiten sind ohne Zuarbeit nicht hoeherstufbar. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden - sie waere eine Attrappe und wuerde Freigaben vortaeuschen. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
 
 <!-- PROGRESS:END -->
 

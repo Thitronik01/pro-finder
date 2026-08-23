@@ -305,3 +305,21 @@
       background-color 180ms ease;
   }
 }
+
+/* Quelltextblock der Segmentdetailansicht: bewahrt Zeilenumbrueche der Quelle,
+   bricht aber lange Zeilen um, damit bei 320 CSS-Pixeln kein Seiten-Scroll entsteht. */
+.sourceText {
+  margin: 0.75rem 0 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius, 0.5rem);
+  /* Bewusst dieselben Tokens wie die uebrigen Flaechen: eigene Hexwerte wuerden in
+     Dark Mode den Kontrast brechen - genau das hat der axe-Lauf abgefangen. */
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}

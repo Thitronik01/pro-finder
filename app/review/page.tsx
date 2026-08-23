@@ -1,7 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { loadFixtureReviewData, loadSupabaseReviewData, type ReviewItem } from '@/lib/review-data';
+import {
+  loadFixtureReviewData,
+  loadReferencedDiscrepancyIds,
+  loadSupabaseReviewData,
+  type ReviewItem,
+} from '@/lib/review-data';
 import { createServerSupabaseClient, getSupabasePublicConfig } from '@/lib/supabase/server';
 import { REVIEW_PACKET_IDS, reviewPriorityLabel, type ReviewPriority } from '@/lib/review-priority';
 import { signOut } from './actions';
@@ -22,23 +27,31 @@ function first(value: string | string[] | undefined): string {
   return selected?.trim() ?? '';
 }
 
-function filterItems(
-  items: ReviewItem[],
-  generation: string,
-  status: string,
-  priority: string,
-  packet: string,
-  query: string,
-): ReviewItem[] {
-  const normalizedQuery = query.toLocaleLowerCase('de');
+type QueueFilters = {
+  generation: string;
+  status: string;
+  priority: string;
+  packet: string;
+  language: string;
+  dsc: string;
+  pageStatus: string;
+  query: string;
+};
+
+function filterItems(items: ReviewItem[], filters: QueueFilters): ReviewItem[] {
+  const normalizedQuery = filters.query.toLocaleLowerCase('de');
+  const normalizedDsc = filters.dsc.toUpperCase();
   return items.filter(
     (item) =>
-      (!generation || item.generation === generation) &&
-      (!status || item.status === status) &&
-      (!priority || item.priority === priority) &&
-      (!packet || item.packetId === packet) &&
+      (!filters.generation || item.generation === filters.generation) &&
+      (!filters.status || item.status === filters.status) &&
+      (!filters.priority || item.priority === filters.priority) &&
+      (!filters.packet || item.packetId === filters.packet) &&
+      (!filters.language || item.language === filters.language) &&
+      (!normalizedDsc || item.discrepancyRefs.includes(normalizedDsc)) &&
+      (!filters.pageStatus || item.sourcePageStatus === filters.pageStatus) &&
       (!normalizedQuery ||
-        `${item.title} ${item.key} ${item.sourceLabel} ${item.packetId ?? ''}`
+        `${item.title} ${item.key} ${item.sourceLabel} ${item.packetId ?? ''} ${item.discrepancyRefs.join(' ')}`
           .toLocaleLowerCase('de')
           .includes(normalizedQuery)),
   );
@@ -88,8 +101,22 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
   const status = first(params.status);
   const priority = first(params.priority);
   const packet = first(params.packet);
+  const language = first(params.language);
+  const dsc = first(params.dsc);
+  const pageStatus = first(params.pageStatus);
   const query = first(params.q);
-  const filteredItems = filterItems(data.items, generation, status, priority, packet, query);
+  const filteredItems = filterItems(data.items, {
+    generation,
+    status,
+    priority,
+    packet,
+    language,
+    dsc,
+    pageStatus,
+    query,
+  });
+  const languages = [...new Set(data.items.map((item) => item.language))].sort();
+  const discrepancyIds = data.mode === 'fixtures' ? loadReferencedDiscrepancyIds() : [];
   const drafts = data.items.filter((item) => item.placeholder).length;
   const safetyOpen = data.items.filter(
     (item) => item.safetyClass !== 'normal' && item.status !== 'freigegeben',
@@ -330,6 +357,38 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               ))}
             </select>
           </div>
+          <div>
+            <label htmlFor="filter-language">Sprache</label>
+            <select id="filter-language" name="language" defaultValue={language}>
+              <option value="">Alle</option>
+              {languages.map((code) => (
+                <option key={code} value={code}>
+                  {code}
+                </option>
+              ))}
+            </select>
+          </div>
+          {discrepancyIds.length ? (
+            <div>
+              <label htmlFor="filter-dsc">Registerbezug</label>
+              <select id="filter-dsc" name="dsc" defaultValue={dsc}>
+                <option value="">Alle</option>
+                {discrepancyIds.map((id) => (
+                  <option key={id} value={id}>
+                    {id}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+          <div>
+            <label htmlFor="filter-page-status">Quellseite</label>
+            <select id="filter-page-status" name="pageStatus" defaultValue={pageStatus}>
+              <option value="">Alle</option>
+              <option value="validated">unabhängig gegengeprüft</option>
+              <option value="inspected">nur gesichtet</option>
+            </select>
+          </div>
           <button type="submit">Filter anwenden</button>
           <Link href="/review" className={styles.resetLink}>
             Filter zurücksetzen
@@ -346,7 +405,7 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
             <table className={styles.table}>
               <caption id="queue-caption" className={styles.caption}>
                 Segmente der Warteschlange mit Prüfpaket, Priorität, Gerätegeneration, Sprache,
-                Reviewstatus, Sicherheitsklasse und Quelle
+                Reviewstatus, Sicherheitsklasse, Quelle, Prüfstand der Quellseite und Registerbezug
               </caption>
               <thead>
                 <tr>
@@ -357,13 +416,15 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                   <th scope="col">Status</th>
                   <th scope="col">Sicherheit</th>
                   <th scope="col">Quelle</th>
+                  <th scope="col">Quellseite geprüft</th>
+                  <th scope="col">Registerbezug</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredItems.map((item) => (
                   <tr key={item.key}>
                     <th scope="row">
-                      {item.href ? <Link href={item.href}>{item.title}</Link> : item.title}
+                      <Link href={`/review/segment/${item.key}`}>{item.title}</Link>
                       <span className={styles.itemKey}>{item.key}</span>
                     </th>
                     <td>{item.packetId ?? '—'}</td>
@@ -374,6 +435,12 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                     <td>{item.status}</td>
                     <td>{item.safetyClass}</td>
                     <td>{item.sourceLabel}</td>
+                    <td>
+                      {item.sourcePageStatus === 'validated'
+                        ? 'unabhängig gegengeprüft'
+                        : (item.sourcePageStatus ?? 'unbekannt')}
+                    </td>
+                    <td>{item.discrepancyRefs.length ? item.discrepancyRefs.join(', ') : '—'}</td>
                   </tr>
                 ))}
               </tbody>

@@ -24,6 +24,56 @@ export type ReviewItem = {
   placeholder: boolean;
   href: string | null;
   sourceLabel: string;
+  /** DSC-Nummern des Widerspruchsregisters, auf die sich dieses Segment beruft. */
+  discrepancyRefs: string[];
+  /**
+   * Status der Quellseite. `validated` heisst: die Seite wurde unabhaengig
+   * gegengeprueft. Das macht im Review sichtbar, welche Segmente auf einer
+   * zweiten Quelle ruhen und welche nur auf der Extraktion selbst.
+   */
+  sourcePageStatus: string | null;
+};
+
+/**
+ * Vollansicht eines Segments fuer den Fachreview. Sie zeigt zusaetzlich den
+ * `change_reason` - dort steht, wogegen gegengelesen wurde und was dabei
+ * herauskam - sowie den `crosscheck_note` der zugehoerigen Quellseite.
+ */
+export type SegmentDetail = {
+  key: string;
+  title: string;
+  bodyMd: string;
+  segmentType: string;
+  taskSlug: string;
+  generation: string;
+  language: string;
+  status: string;
+  safetyClass: string;
+  priority: ReviewPriority;
+  packetId: ReviewPacketId | null;
+  sourceDocKey: string;
+  sourcePageStart: number;
+  sourcePageEnd: number;
+  sourceRegion: string;
+  prevContext: string | null;
+  nextContext: string | null;
+  changeReason: string;
+  discrepancyRefs: string[];
+  checksum: string;
+  taskHref: string | null;
+  /** Freitext aus dem Seitenrecord: was an dieser Quellseite gegengeprueft wurde. */
+  pageCrosscheckNote: string | null;
+  pageStatus: string | null;
+  /** Gegenstueck derselben Fundstelle in der anderen Sprachfassung, falls vorhanden. */
+  counterpart: SegmentCounterpart | null;
+};
+
+export type SegmentCounterpart = {
+  key: string;
+  title: string;
+  language: string;
+  bodyMd: string;
+  sourceLabel: string;
 };
 
 export type PageDocumentSummary = {
@@ -55,6 +105,7 @@ type PageRecord = {
   page: number;
   status: string;
   discrepancies?: string[];
+  crosscheck_note?: string;
 };
 
 type PageFile = {
@@ -75,6 +126,12 @@ function loadPageFiles(): PageFile[] {
 }
 
 export function loadFixtureReviewData(): ReviewData {
+  const pageStatusIndex = new Map(
+    loadPageFiles().flatMap((file) =>
+      file.pages.map((page) => [`${file.doc_id}:${page.page}`, page.status] as const),
+    ),
+  );
+
   const items = loadAllContentSegments()
     .map(({ segment }) => ({
       key: segment.segment_key,
@@ -90,6 +147,9 @@ export function loadFixtureReviewData(): ReviewData {
         ? `/pro-finder/${segment.serial_range}/${segment.language}/${segment.task_slug}`
         : null,
       sourceLabel: `${segment.source_doc_key}, S. ${segment.source_page_start}${segment.source_page_end !== segment.source_page_start ? `-${segment.source_page_end}` : ''}`,
+      discrepancyRefs: segment.discrepancy_refs ?? [],
+      sourcePageStatus:
+        pageStatusIndex.get(`${segment.source_doc_key}:${segment.source_page_start}`) ?? null,
     }))
     .sort(compareReviewPriority);
 
@@ -205,6 +265,8 @@ export async function loadSupabaseReviewData(supabase: SupabaseClient): Promise<
             ? `/pro-finder/${generation}/${language}/${slug}`
             : null,
         sourceLabel: `${document ? textValue(document, 'doc_key') : 'Quelle nicht verknüpft'}${pages ? `, S. ${pages}` : ''}`,
+        discrepancyRefs: [],
+        sourcePageStatus: null,
       };
     })
     .sort(compareReviewPriority);
@@ -233,4 +295,128 @@ export async function loadSupabaseReviewData(supabase: SupabaseClient): Promise<
       ? 'Reviewdaten konnten nicht vollständig geladen werden. RLS, Projektmitgliedschaft und Migrationen prüfen.'
       : null,
   };
+}
+
+/**
+ * Seitenpaarung des Dokuments DOC-IBA-SN045 zwischen deutschem und englischem
+ * Sprachteil. Der Versatz ist nicht konstant: Er betraegt 24 und faellt zwischen
+ * Abschnitt 2.8 und Kapitel 5 auf 23, weil der deutsche Teil die Syntaxgrafik auf
+ * eine eigene Seite setzt und die englische Fassung das in Kapitel 4 ausgleicht.
+ * Belegt und je Seite begruendet in docs/CROSSCHECK_SN045_DE_EN.md (DSC-021).
+ */
+const IBA045_PAGE_PAIRS: ReadonlyArray<readonly [number, number]> = [
+  [5, 29],
+  [6, 30],
+  [7, 31],
+  [8, 32],
+  [9, 33],
+  [10, 34],
+  [11, 35],
+  [12, 36],
+  [13, 37],
+  [14, 38],
+  [15, 39],
+  [16, 39],
+  [17, 40],
+  [18, 41],
+  [19, 42],
+  [20, 43],
+  [21, 45],
+  [22, 46],
+  [23, 47],
+  [24, 48],
+  [25, 49],
+];
+
+/** Liefert die Seite der jeweils anderen Sprachfassung, sofern eine Paarung belegt ist. */
+export function counterpartPage(
+  docKey: string,
+  language: string,
+  page: number,
+): { language: string; page: number } | null {
+  if (docKey !== 'DOC-IBA-SN045') return null;
+  if (language === 'de') {
+    const pair = IBA045_PAGE_PAIRS.find(([de]) => de === page);
+    return pair ? { language: 'en', page: pair[1] } : null;
+  }
+  if (language === 'en') {
+    const pair = IBA045_PAGE_PAIRS.find(([, en]) => en === page);
+    return pair ? { language: 'de', page: pair[0] } : null;
+  }
+  return null;
+}
+
+function pageRecordFor(docKey: string, page: number): PageRecord | null {
+  const file = loadPageFiles().find((entry) => entry.doc_id === docKey);
+  return file?.pages.find((entry) => entry.page === page) ?? null;
+}
+
+export function loadFixtureSegmentDetail(segmentKey: string): SegmentDetail | null {
+  const all = loadAllContentSegments();
+  const match = all.find(({ segment }) => segment.segment_key === segmentKey);
+  if (!match) return null;
+  const segment = match.segment;
+
+  const pair = counterpartPage(segment.source_doc_key, segment.language, segment.source_page_start);
+  const counterpartMatches = pair
+    ? all.filter(
+        ({ segment: other }) =>
+          other.language === pair.language &&
+          other.source_doc_key === segment.source_doc_key &&
+          other.source_page_start === pair.page,
+      )
+    : [];
+  // Bei mehreren Segmenten je Seite wird das thematisch naechste ueber den
+  // Aufgabenbezug und die Position auf der Seite gewaehlt; dieselbe Aufgabe zaehlt
+  // staerker als die reine Reihenfolge.
+  const sameTask = counterpartMatches.find(
+    ({ segment: other }) => other.segment_type === segment.segment_type,
+  );
+  const counterpartSegment = (sameTask ?? counterpartMatches[0])?.segment ?? null;
+
+  const pageRecord = pageRecordFor(segment.source_doc_key, segment.source_page_start);
+
+  return {
+    key: segment.segment_key,
+    title: segment.title,
+    bodyMd: segment.body_md,
+    segmentType: segment.segment_type,
+    taskSlug: segment.task_slug,
+    generation: segment.serial_range,
+    language: segment.language,
+    status: segment.review_status,
+    safetyClass: segment.safety_class,
+    priority: reviewPriority(segment.safety_class),
+    packetId: reviewPacketId(segment.segment_key),
+    sourceDocKey: segment.source_doc_key,
+    sourcePageStart: segment.source_page_start,
+    sourcePageEnd: segment.source_page_end,
+    sourceRegion: segment.source_region,
+    prevContext: segment.prev_context,
+    nextContext: segment.next_context,
+    changeReason: segment.change_reason,
+    discrepancyRefs: segment.discrepancy_refs ?? [],
+    checksum: segment.checksum,
+    taskHref: ['sn-001-044', 'sn-045-plus'].includes(segment.serial_range)
+      ? `/pro-finder/${segment.serial_range}/${segment.language}/${segment.task_slug}`
+      : null,
+    pageCrosscheckNote: pageRecord?.crosscheck_note ?? null,
+    pageStatus: pageRecord?.status ?? null,
+    counterpart: counterpartSegment
+      ? {
+          key: counterpartSegment.segment_key,
+          title: counterpartSegment.title,
+          language: counterpartSegment.language,
+          bodyMd: counterpartSegment.body_md,
+          sourceLabel: `${counterpartSegment.source_doc_key}, S. ${counterpartSegment.source_page_start}`,
+        }
+      : null,
+  };
+}
+
+/** Alle DSC-Nummern, auf die sich mindestens ein Segment beruft - fuer den Filter. */
+export function loadReferencedDiscrepancyIds(): string[] {
+  return [
+    ...new Set(loadAllContentSegments().flatMap(({ segment }) => segment.discrepancy_refs ?? [])),
+  ].sort();
 }
