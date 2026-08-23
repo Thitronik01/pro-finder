@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S02-SMS-KOSTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Jede versendete Nachricht verursacht Kosten",
+  "body_md": "Jede vom Pro-finder versendete Kurznachricht verursacht Kosten, deren Höhe vom Mobilfunkanbieter abhängt. Wird die Anlage per Kurznachricht oder Anruf gesteuert, sendet der Pro-finder jedes Mal eine Statusnachricht zurück.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.6 „Pro-finder per SMS oder Anruf steuern“",
+  "prev_context": "Davor steht der Hinweis zur Ländervorwahl.",
+  "next_context": "Danach folgt Abschnitt 2.7 mit den Arten von Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:668595d09619172237323bf642825db5a7debb4dd9998bef174aad1a33eb40cd",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 39, „Controlling Pro-finder via SMS or call“): wörtlich sachgleich, einschließlich der Rückmeldung durch eine Statusnachricht bei jeder Steuerung.",
+  "discrepancy_refs": []
+}

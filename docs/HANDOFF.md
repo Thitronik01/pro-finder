@@ -3,6 +3,79 @@
 Stand: 2026-08-13 (vierundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
+## Sitzung 2026-08-23 – Gegenprüfung Deutsch gegen Englisch (DOC-IBA-SN045)
+
+### Vorbemerkung zum Ausgangsstand
+
+Der Sitzungsauftrag beschrieb einen Stand, den das Repository nicht enthält: 136 Segmente,
+den deutschen Teil ab SN-045 vollständig extrahiert, zehn Prüfpakete P0-01 bis P0-10 und
+einen Registerstand über DSC-085 hinaus. Tatsächlich vorgefunden wurden 56 Segmente
+(ausschließlich DOC-BMA-SN044), fünf Prüfpakete, DSC-085 als höchster Eintrag und alle 247
+Seiten von DOC-IBA-SN045 auf `inspected`. Die beauftragte erste Aktion – die Gegenprüfung
+auf 18 bereits extrahierte Seiten ausweiten – war damit nicht ausführbar, weil es keine
+SN-045-Segmente gab.
+
+Statt zu warten wurde die **Methode** des Auftrags auf den tatsächlichen Stand angewandt:
+Die deutschen Seiten wurden im Gegenlesen gegen die englische Fassung überhaupt erst
+extrahiert. Das ist derselbe Arbeitsschritt, nur eine Stufe früher.
+
+### Was geprüft wurde
+
+- **Fünf deutsche Seiten vollständig gegengelesen:** DOC-IBA-SN045, deutsche Seiten 13–17
+  (interne Seiten 11–15, Kapitel 2 vollständig) gegen die englischen Seiten 37–40. Beide
+  Seiten jedes Paars wurden bei 200 dpi gerendert und Satz für Satz, Tabellenzeile für
+  Tabellenzeile verglichen.
+- **22 Segmente** in `content/segments/v1/sn-045-plus/de/` erzeugt, alle `entwurf`, alle mit
+  Dokument, Seite, Region, Kontext und Prüfsumme. Jedes `change_reason` nennt, wogegen
+  gegengelesen wurde und was dabei herauskam. Segmentbestand gesamt: 78.
+- **Fünf Seiten auf `validated`** hochgestuft, je mit `crosscheck_note`. Die englischen
+  Seiten 37–40 bleiben auf `inspected` – sie sind Gegenquelle, nicht Extraktionsgrundlage –
+  und tragen ebenfalls eine `crosscheck_note`.
+- **Fußzeilen der englischen Seiten 33–40** hoch aufgelöst gerendert und abgelesen.
+
+### Befunde
+
+- **DSC-021 für Deutsch/Englisch geklärt, Hypothese widerlegt.** Die englische Fassung
+  überspringt keine interne Seitenzahl; die Fußzeilen 33–40 laufen lückenlos „Page 7 of 23"
+  bis „Page 14 of 23", beide Teile haben 21 Inhaltsseiten und zählen 3 bis 23. Der Versatz
+  entsteht bei Abschnitt 2.8 (Deutsch setzt die Syntaxgrafik allein auf eine eigene interne
+  Seite, Englisch zusammen mit der Einleitung) und wird in Kapitel 4 wieder ausgeglichen
+  (englisch drei statt zwei interne Seiten). Es fehlt kein Inhalt.
+- **DSC-086 neu:** Der englische Abschnitt 2.1 verbietet die Multi-Operator-SIM-Karte und
+  nennt technische Mindestanforderungen; der deutsche Master schweigt dazu. Nicht von
+  DSC-027 abgedeckt, das nur die abweichende Anbieterempfehlung führt. Gehört zu Rückfrage 5.
+- **Bestätigt, nicht neu:** DSC-016 (Adressbuchname widersprüchlich, in beiden Fassungen),
+  DSC-017 (Berechtigungszeichen nur aus dem Beispiel ableitbar, in beiden Fassungen),
+  DSC-019 (abweichendes Länderbeispiel), DSC-027 (Anbieterempfehlung).
+- **Kein eigener Lesefehler.** Keine Abweichung ging auf eine Fehllesung dieser Extraktion
+  zurück; keine wurde stillschweigend angeglichen.
+
+### Sperren eingehalten
+
+Keine SMS-Befehlszeichenfolge in `title` oder `body_md` (BLK-005, durch
+`npm run segments:check` bestätigt). Keine aus einem Beispiel abgeleitete
+Berechtigungsregel und keine Beispielrufnummer (BLK-006) – die Beispieltabelle und die
+Beispielwerte der Syntaxgrafik sind als `omission_note` benannt statt wiedergegeben. Keine
+Store- oder Downloadadresse und kein QR-Code (BLK-004). Keine Geofencing-Aussage, keine
+Koordinate, keine Kartenadresse. Kein Wert aus DOC-BMA-SN044 wurde in einen
+SN-045-Bestand übernommen.
+
+### Prüfpakete
+
+Die zehn neuen sicherheitskritischen Segmente sind zwei neuen Dossiers zugeordnet:
+**P0-06** (SIM-Vorbereitung und Aktivierung, 3 Segmente) und **P0-07** (Zielrufnummern,
+Programmiernachricht und Speicherlöschung, 7 Segmente). Beide stehen auf „bereit für
+Fachreview", weil ihre Seiten vollständig gegengelesen und auf `validated` gestuft sind.
+Die Review-UI zeigt damit 51/51 und filtert 6/11/11/8/5/3/7 Treffer; Unit- und
+Browsertest sind entsprechend nachgezogen.
+
+### Neu angelegt
+
+`docs/CROSSCHECK_SN045_DE_EN.md` – belegte Seitenpaarung aller 21 deutschen Inhaltsseiten
+gegen die englischen, mit einer Spalte, die je Zeile sagt, ob das Paar vollständig
+gegengelesen, nur über die Fußzeile bestätigt oder bislang nur aus den Seitenrecords
+abgeleitet ist.
+
 ## In dieser Fortsetzung abgeschlossen
 
 ### Kleiner QA-Schritt: Reduced Motion technisch abgesichert
@@ -379,11 +452,15 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ## Was weiterhin offen ist
 
-- Alle 56 deutschen Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
-  eine technische oder rechtliche Freigabe.
-- P0-01 bis P0-05 sind intern reviewbereit und decken alle 41 P0-Segmente ab, warten aber
-  auf den realen THITRONIK-Fachreview. Keine der 121 vorbereiteten Einzelentscheidungen
-  ist beantwortet und kein Segmentstatus wurde geändert.
+- Alle 78 deutschen Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
+  eine technische oder rechtliche Freigabe. Die 22 Segmente ab SN-045 besitzen zusätzlich
+  eine unabhängige Gegenprüfung gegen die englische Fassung – das ersetzt keinen
+  technischen Review.
+- P0-01 bis P0-07 sind intern reviewbereit und decken alle 51 P0-Segmente ab, warten aber
+  auf den realen THITRONIK-Fachreview. Keine der vorbereiteten Einzelentscheidungen ist
+  beantwortet und kein Segmentstatus wurde geändert.
+- Von den 21 deutschen Inhaltsseiten ab SN-045 sind 5 gegengelesen und `validated`;
+  16 stehen weiter auf `inspected` und sind noch nicht extrahiert.
 - Die unabhängigen englischen Sprachreviews von EN-01 bis EN-03 sind organisatorisch
   offen. Keine der vierzehn Aufgaben darf vorher höhergestuft werden.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
@@ -456,22 +533,28 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 
 ```text
 Resume from:
-Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die
-Zugaenglichkeitsgrenzen zwischen PDF, HTML und Geraet. Alle vierzehn englischen Aufgaben
-ab SN-045 bleiben belegte KI-Uebersetzungsentwuerfe; EN-01 bis EN-03 sind fuer
-unabhaengige Sprachreviews vorbereitet, aber unbeantwortet. Kein technischer, sprachlicher
-oder physischer Inhalt ist freigegeben; BLK-005/006/007 und sechs aktive Blocker bleiben
-offen. Reduced Motion ist ueber sieben Kernrouten technisch automatisiert abgesichert;
-die manuelle Betriebssystem-/Browserpruefung bleibt offen.
+Der deutsche Master ab SN-045 hat erstmals eine unabhaengige Gegenquelle. Die deutschen
+Seiten 13-17 von DOC-IBA-SN045 (Kapitel 2 vollstaendig) wurden gegen die englischen Seiten
+37-40 gegengelesen und dabei in 22 Segmente extrahiert; die fuenf Seiten stehen auf
+validated, der Segmentbestand auf 78, alle entwurf. DSC-021 ist fuer Deutsch/Englisch
+geklaert: Die englische Fassung ueberspringt KEINE interne Seitenzahl - die Fusszeilen der
+englischen Seiten 33-40 laufen lueckenlos. Verschoben ist der Inhalt, ab Abschnitt 2.8, und
+Kapitel 4 gleicht es wieder aus. Neu im Register: DSC-086, weil die englische Fassung in
+2.1 die Multi-Operator-SIM-Karte verbietet und der deutsche Master dazu schweigt.
+Achtung fuer die naechste Sitzung: Der vorige Auftrag beschrieb 136 Segmente und zehn
+Pruefpakete; im Repository lagen 56 Segmente und fuenf Pakete. Vor dem Start immer den
+tatsaechlichen Stand pruefen, nicht die Kurzfassung im Prompt.
 
 First action:
-Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen
-und keine Aufgabe vorher hoeherstufen. Parallel den ersten dokumentierten manuellen
-QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion
-vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die
-Karte weiterhin freigegebene Assets und Entscheidungen zu URL, Supportdaten und
-Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine
-Supportkontakte einsetzen.
+Die Gegenpruefung auf die restlichen 16 deutschen Inhaltsseiten ausweiten, in der
+Reihenfolge aus docs/CROSSCHECK_SN045_DE_EN.md: zuerst Kapitel 1 (deutsch 9-12 gegen
+englisch 33-36, Fusszeilenpaarung bereits belegt), dann Kapitel 3 und 4 (deutsch 18-20
+gegen englisch 41-44, dort faellt der Versatz von 24 auf 23), zuletzt Kapitel 5 und 6
+(deutsch 21-25 gegen englisch 45-49). Seitenpaar immer ueber die Kapitelueberschrift
+bilden, nie ueber einen festen Versatz. Eine Seite steigt erst auf validated, wenn sie
+vollstaendig gegengelesen ist; was geprueft wurde und was nicht, gehoert in
+crosscheck_note. Abweichungen nicht angleichen: entweder eigenen Lesefehler korrigieren
+oder Sprachunterschied ins Register nehmen.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

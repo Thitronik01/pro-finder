@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S03-AKTIVIERUNG-LED",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Pro-finder mit Spannung versorgen und aktivieren",
+  "body_md": "Ist die Karte eingelegt und die Halterung verriegelt, schließen Sie die Spannungsversorgung an. Die Status-LED blinkt daraufhin kurz rot und anschließend gelb-grün. Die Quelle empfiehlt, die Aktivierung mit der App durchzuführen; sie führt durch die einzelnen Schritte.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.4 „Pro-finder aktivieren“, erste beide Absätze",
+  "prev_context": "Davor steht der nicht übernommene Bezugsweg der App.",
+  "next_context": "Danach beschreibt die Quelle die Aktivierung ohne App.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ea4cebd12eaa139cae2cd44d1db2aa05c484c5b92f064eb0cea792646beb6941",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 38, „Activating Pro-finder“): Die Farbfolge kurz rot, danach gelb-grün stimmt überein („flashes red briefly and then yellow-green“). Die in der Quelle zusätzlich enthaltene Aussage, dass die App die Abschnitte 2.5 bis 2.8 entbehrlich mache, wird wegen DSC-043 und Rückfrage 13 nicht als Bedienweg übernommen.",
+  "discrepancy_refs": ["DSC-043"]
+}

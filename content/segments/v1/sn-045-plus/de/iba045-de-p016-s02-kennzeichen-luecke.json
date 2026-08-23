@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P016-S02-KENNZEICHEN-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "zielrufnummern",
+  "title": "Kennzeichnung autorisierter und nicht autorisierter Nummern ist nicht erklärt",
+  "body_md": "Die Quelle erklärt in der Syntaxgrafik nur die Ländervorwahl und das Kennzeichen für Smartphones. Wie eine Zielrufnummer als autorisiert oder nicht autorisiert gekennzeichnet wird, geht ausschließlich aus einem Beispiel hervor und wird nirgends als Regel ausgeschrieben. Diese Anleitung leitet aus dem Beispiel keine Regel ab. Die Kennzeichnung ist eine offene, sicherheitskritische Angabe.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Abschnitt 2.8, Erläuterungen der Syntaxgrafik",
+  "prev_context": "Davor steht die Beschreibung der Syntaxgrafik.",
+  "next_context": "Danach folgt auf der nächsten Seite die Beispieltabelle und Abschnitt 2.9.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:96be6d7f99a5f80674fe6f2f3b75df164a9870074ed36bcf05bfcdd22fc2bf6d",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 39): Die englische Grafik erläutert genau dieselben zwei Zeichen und ebenfalls nicht die Kennzeichnung der Berechtigung. Die Lücke ist damit unabhängig bestätigt und kein Lesefehler dieser Extraktion. BLK-006 und Rückfrage 10 bleiben maßgeblich.",
+  "discrepancy_refs": ["DSC-017"]
+}

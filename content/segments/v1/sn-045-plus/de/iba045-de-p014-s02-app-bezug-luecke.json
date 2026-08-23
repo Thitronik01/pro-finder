@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S02-APP-BEZUG-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "app-und-aktivierung",
+  "title": "Bezugsweg der App wird hier nicht wiedergegeben",
+  "body_md": "Die Quelle nennt an dieser Stelle die beiden App-Plattformen und bildet je einen QR-Code ab. Bezugsadressen, Ladenamen und maschinenlesbare Codes werden in dieser Anleitung nicht übernommen, weil sie ungeprüft veralten können. Der Bezugsweg ist eine offene Angabe und muss von THITRONIK bestätigt werden.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.3, Absatz mit den beiden Plattform-Logos und QR-Codes",
+  "prev_context": "Davor steht der Zweck der App.",
+  "next_context": "Danach beginnt Abschnitt 2.4 mit der Aktivierung des Pro-finder.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b26c889d60fd5c84e82b3416afc54701948c7b98fbbeed5baea3116d997666a1",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 38): Beide Fassungen zeigen dieselben zwei Logos und dieselben zwei QR-Codes und verweisen anschließend auf die Website. Die Auslassung folgt BLK-004 und ist kein Quellenunterschied.",
+  "discrepancy_refs": []
+}

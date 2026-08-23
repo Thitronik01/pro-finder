@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S03-ZIELRUFNUMMERNARTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "zielrufnummern",
+  "title": "Drei Arten von Zielrufnummern",
+  "body_md": "Zielrufnummern sind die Rufnummern, die im Alarmfall benachrichtigt werden. Es lassen sich bis zu zehn Nummern speichern. Die Quelle unterscheidet drei Arten:\n\n| Art | Bedeutung laut Quelle |\n| --- | --- |\n| Masternummer | Die Rufnummer, die beim Speichern an erster Stelle steht. Über sie lassen sich jederzeit neue Zielrufnummern programmieren, ohne den Betriebsartenschalter zu betätigen. |\n| Autorisierte Nummern | Dürfen die Ausgänge des Pro-finder per Kurznachricht steuern und Statusberichte anfordern. |\n| Nicht autorisierte Nummern | Haben keinen Zugriff auf die Funktionen der Anlage und erhalten ausschließlich Statusmeldungen. |\n\nWoran das Gerät eine Nummer einer dieser Arten zuordnet, sagt die Quelle an dieser Stelle nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.7 „Unterschiedliche Zielrufnummern“, dreizeilige Tabelle ohne Kopfzeile",
+  "prev_context": "Davor steht der Kostenhinweis aus Abschnitt 2.6.",
+  "next_context": "Danach beginnt Abschnitt 2.8 zum Programmieren der Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c8b33c0fd81357ddfb027a6b9df84a56a1a3a5becda57ec6892aafd76d4a0e55",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 39, „Different destination numbers“): Alle drei Zeilen und die Obergrenze von zehn Nummern stimmen überein. Die Kopfzeile wurde ergänzt, weil die Quelltabelle keine besitzt. Die Zuordnungsregel bleibt bewusst als Lücke benannt, solange DSC-017 und Rückfrage 10 offen sind.",
+  "discrepancy_refs": ["DSC-017"]
+}

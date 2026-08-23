@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S02-SIM-EMPFEHLUNG-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "sim-karte",
+  "title": "Kartenempfehlung ist quellenseitig ungeklärt",
+  "body_md": "Die Quelle empfiehlt an dieser Stelle bestimmte Karten, die Empfehlung ist jedoch zwischen den Sprachfassungen derselben Auflage nicht deckungsgleich: Der deutsche Master nennt zwei Mobilfunkanbieter namentlich, die englische Fassung nennt stattdessen technische Kartenanforderungen und verweist auf die Produkt-FAQ, die französische Fassung nennt einen dritten, nur dort vorkommenden Anbieter. Diese Anleitung gibt deshalb keine Anbieterempfehlung wieder. Verbindlich ist allein eine Freigabe durch THITRONIK.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, rot gesetzter Empfehlungskasten zwischen Einleitungssatz und Schrittliste",
+  "prev_context": "Davor steht die Voraussetzung einer freigeschalteten Nano-SIM-Karte.",
+  "next_context": "Danach folgt die vierschrittige Vorbereitung der Karte im Mobiltelefon.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:478ae325cc0dee91ce20e5e29c305f4363ed49d831677c071dad99ba0cf00dfe",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37): Der Kasten steht an derselben Stelle, hat aber einen anderen Inhalt. Die Abweichung ist damit ein belegter Sprachunterschied der Quelle und kein Lesefehler dieser Extraktion. Anbieternamen werden nicht übernommen, solange DSC-027 und Rückfrage 5 offen sind.",
+  "discrepancy_refs": ["DSC-027", "DSC-086"]
+}

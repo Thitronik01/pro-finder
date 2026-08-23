@@ -126,7 +126,7 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
   await expect(page.locator('h1')).toHaveText('Reviewoberfläche');
   await expect(page.getByText('Git-Fixtures', { exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Freigaben bleiben gesperrt' })).toBeVisible();
-  await expect(page.getByText('41 / 41', { exact: true })).toBeVisible();
+  await expect(page.getByText('51 / 51', { exact: true })).toBeVisible();
 
   // exact: true, weil getByLabel per Teilzeichenkette sucht und die
   // Tabellen-Caption der Warteschlange den Begriff ebenfalls enthaelt.

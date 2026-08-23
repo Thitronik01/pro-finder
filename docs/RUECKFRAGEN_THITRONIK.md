@@ -261,9 +261,19 @@ englisch beschriftet.
 Drei Varianten in vier Fassungen; nur die französische nennt einen konkreten Drittanbieter.
 Zusätzlich weicht die Liste der abzuschaltenden Zusatzfunktionen ab.
 
-**Die Frage:** Welche Empfehlung ist verbindlich? Ist die Nennung von DOMOTEC beabsichtigt?
+**Nachtrag 2026-08-23 – es geht nicht nur um eine Empfehlung.** Die Gegenprüfung der
+deutschen Seite 13 gegen die englische Seite 37 (dieselbe Auflage, dieselbe interne Seite 11) hat ergeben, dass die englische Fassung an dieser Stelle drei Aussagen führt, die im
+deutschen Master vollständig fehlen: eine Mindestanforderung an die unterstützten
+Netzstandards und Dienste, den Hinweis, dass sich das Restguthaben über 4G nicht abfragen
+lässt, und ein ausdrückliches **Verbot** der Multi-Operator-SIM-Karte („The use of a
+multi-operator SIM card is not allowed"). Wer nur den deutschen Teil liest, kann damit eine
+Karte wählen, die dieselbe Auflage englisch ausschließt.
 
-_Beleg: DSC-027_
+**Die Frage:** Welche Empfehlung ist verbindlich? Ist die Nennung von DOMOTEC beabsichtigt?
+Und gelten das Verbot der Multi-Operator-Karte sowie die technischen Kartenanforderungen
+generell – fehlen sie also im deutschen Master –, oder gelten sie nur für bestimmte Märkte?
+
+_Beleg: DSC-027, DSC-086_
 
 ---
 
@@ -658,6 +668,8 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** SIM-Format Micro-SIM gegen Nano-SIM ab SN-045; Konformität 1999/5/EG gegen 2014/53/EU – Werte nicht übertragbar                                                                              | DSC-069, S. 18                  |
 | **bis SN-044:** aufgedruckte Seitenzählung beginnt im englischen Teil neu bei „Page1"; „Seite 15" und „Page 15" im selben PDF                                                                                | DSC-068, S. 20–26               |
 | **bis SN-044:** alle vier falschen Querverweise des deutschen Teils sind wörtlich in den englischen übernommen – Vorlagenfehler                                                                              | DSC-055, S. 28, 30, 31, 33      |
+| **ab SN-045:** die englische Fassung verbietet in 2.1 die Multi-Operator-SIM-Karte und nennt technische Kartenanforderungen; der deutsche Master schweigt dazu                                               | DSC-086, S. 13 und 37           |
+| **ab SN-045:** die deutsch-englische Seitenverschiebung ist geklärt – keine übersprungene Fußzeilennummer, sondern ein Umbruch bei 2.8, den Kapitel 4 wieder ausgleicht                                      | DSC-021, S. 15–20 und 39–44     |
 | **bis SN-044:** die englische Konformitätserklärung nennt eine nicht existierende „directive 1995/5/EG" (deutsch: 1999/5/EG)                                                                                 | DSC-071, S. 36                  |
 | **bis SN-044:** der Verweis „(see 2.1, Fig. 1)" nummeriert eine Abbildung, die es nicht gibt – keine der neun trägt eine Nummer                                                                              | DSC-068, S. 22, 30, 31          |
 | **bis SN-044:** der französische Teil enthält sinnverändernde Übersetzungsfehler; die früher hier zugeordnete feste Kabellänge ist nach 400-dpi-Gegenprüfung dagegen ein Sprachwiderspruch DE/FR/SV gegen EN | DSC-073, S. 3/21/38/42/44/55    |

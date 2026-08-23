@@ -1,16 +1,16 @@
 # Projektstatus
 
-Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 62.4 %**
+**Gesamtfortschritt: 62.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 28.3 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 68 %        |
@@ -23,21 +23,51 @@ Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 36.1 %      |
-| DOC-IBA-SN045 | 247    | 25 %        |
+| DOC-IBA-SN045 | 247    | 26 %        |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
+Offene Blocker: 6 · Nächste Aktion: Die Gegenpruefung gegen die englische Fassung auf die restlichen 16 deutschen Inhaltsseiten von DOC-IBA-SN045 ausweiten und daraus Segmente erzeugen. Reihenfolge nach docs/CROSSCHECK_SN045_DE_EN.md: zuerst die vier Seiten aus Kapitel 1 mit bereits belegter Fusszeilenpaarung (deutsch 9-12 gegen englisch 33-36), danach Kapitel 3 und 4 (deutsch 18-20 gegen englisch 41-44, wo der Seitenversatz von 24 auf 23 faellt), zuletzt Kapitel 5 und 6 (deutsch 21-25 gegen englisch 45-49). Seitenpaar immer ueber die Kapitelueberschrift bilden, nie ueber einen festen Versatz. Eine Seite steigt erst auf validated, wenn sie vollstaendig gegengelesen ist; was geprueft wurde und was nicht, gehoert in crosscheck_note. Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als Sprachunterschied ins Register nehmen. Unveraendert offen bleiben die unabhaengigen englischen Sprachreviews EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und die freigegebenen Assets und Entscheidungen fuer die Setup-Karte.
 
 <!-- PROGRESS:END -->
+
+## Neu in dieser Sitzung (2026-08-23)
+
+- **Der deutsche Master ab SN-045 hat eine unabhängige Gegenquelle.** Die deutschen Seiten
+  13–17 von DOC-IBA-SN045 (Kapitel 2 vollständig) wurden Satz für Satz, Zeile für Zeile
+  gegen die englischen Seiten 37–40 derselben Auflage gelesen und dabei in 22 Segmente
+  extrahiert. Die Prüfung hängt damit nicht davon ab, dass derselbe Bearbeiter seine eigene
+  Arbeit nachliest. Methode, belegte Seitenpaarung und Prüfstand je Seite stehen in
+  [CROSSCHECK_SN045_DE_EN.md](CROSSCHECK_SN045_DE_EN.md).
+- **DSC-021 ist für das Paar Deutsch/Englisch geklärt – und die bisherige Vermutung war
+  falsch.** Die englische Fassung überspringt **keine** interne Seitenzahl: Die Fußzeilen
+  der englischen Seiten 33–40 laufen lückenlos „Page 7 of 23" bis „Page 14 of 23", und
+  beide Teile umfassen 21 Inhaltsseiten. Verschoben ist der Inhalt. Der Versatz entsteht
+  bei Abschnitt 2.8 – Deutsch setzt die Syntaxgrafik allein auf eine eigene interne Seite,
+  Englisch setzt sie zusammen mit der Einleitung – und wird in Kapitel 4 wieder
+  ausgeglichen, das englisch drei statt zwei interne Seiten belegt. Es fehlt kein Inhalt.
+- **Neuer sicherheitsrelevanter Befund DSC-086.** Der englische Abschnitt 2.1 verbietet die
+  Multi-Operator-SIM-Karte („not allowed") und nennt technische Mindestanforderungen an die
+  Karte; der deutsche Master schweigt an derselben Stelle dazu. Das ist kein Widerspruch
+  zweier Werte, sondern eine Aussage, die nur eine Fassung führt – wer nur den deutschen
+  Teil liest, kann eine Karte wählen, die dieselbe Auflage englisch ausschließt. Gehört zu
+  Rückfrage 5.
+- **Kein eigener Lesefehler.** Bei den fünf gegengelesenen Seiten musste kein Segment wegen
+  einer eigenen Fehllesung korrigiert werden. Alle gefundenen Abweichungen sind belegte
+  Sprachunterschiede der Quelle (DSC-016, DSC-017, DSC-019, DSC-027, DSC-086) und wurden
+  nicht angeglichen.
+- **Was das nicht bedeutet:** Die 22 Segmente stehen wie alle übrigen auf `entwurf`. Die
+  fünf Seiten stehen auf `validated`, nicht auf `approved` – das setzt einen realen
+  THITRONIK-Fachreview voraus, den es weiterhin nicht gibt.
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 307 stehen auf
-  `inspected` und die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
-  unabhängigen Segment-Gegenprüfungen auf `validated`; keine Seite steht mehr auf
-  `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 302 stehen auf
+  `inspected` und 21 auf `validated` – die sechzehn deutschen Inhaltsseiten 3–18 von
+  DOC-BMA-SN044 nach fünf unabhängigen Segment-Gegenprüfungen sowie die fünf deutschen
+  Seiten 13–17 von DOC-IBA-SN045 nach vollständigem Gegenlesen gegen die englische Fassung
+  derselben Auflage; keine Seite steht auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
   Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
@@ -215,11 +245,14 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   UTC-Zeit in 13 Einzelentscheidungen. DOC-BMA-SN044, Seiten 3–7 und 12–17, wurden dafür
   am 2026-08-11 erneut bei 300 beziehungsweise 400 dpi gerendert und vollständig gelesen.
   SMS-Befehle, Radius, Berechtigungszeichen, Koordinaten, Kartenadressen und
-  Beispielkontakte bleiben ausgelassen. Damit sind **41 von 41 P0-Segmenten** genau einem
-  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet;
-- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 41/41,
-  ein Paket-Select filtert P0-01 bis P0-05 unabhängig von der Freitextsuche, und die fünf
-  Direktlinks liefern exakt 6/11/11/8/5 Treffer. Ein Unit-Test bricht ab, sobald ein
+  Beispielkontakte bleiben ausgelassen. Am 2026-08-23 kamen mit P0-06 und P0-07 die ersten
+  beiden Pakete der Generation ab SN-045 hinzu (3 und 7 Segmente aus DOC-IBA-SN045,
+  Kapitel 2, jeweils gegen die englische Fassung gegengelesen). Damit sind **51 von 51
+  P0-Segmenten** genau einem entscheidungsreifen, aber vollständig offenen Dossier
+  zugeordnet;
+- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 51/51,
+  ein Paket-Select filtert P0-01 bis P0-07 unabhängig von der Freitextsuche, und die
+  sieben Direktlinks liefern exakt 6/11/11/8/5/3/7 Treffer. Ein Unit-Test bricht ab, sobald ein
   sicherheitskritisches Segment kein Paket besitzt; der Browsertest prüft Kennzahl,
   Direktlinks und Select. Kein Segmentstatus wurde dadurch geändert;
 - **eine eigene Fehlklassifikation zur GPS-Kabellänge ist transparent korrigiert:** Die

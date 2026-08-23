@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S01-SIM-VORAUSSETZUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "Freigeschaltete Nano-SIM-Karte bereitlegen",
+  "body_md": "Für den Betrieb des Pro-finder wird eine vom Mobilfunkanbieter freigeschaltete SIM-Karte im Format Nano-SIM benötigt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1 „SIM-Karte konfigurieren“, Einleitungssatz unter der Kapitelüberschrift",
+  "prev_context": null,
+  "next_context": "Danach folgt der rot gesetzte Empfehlungskasten zur Kartenwahl.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:92515c0ac9b26935085d63f8bfdf94f656ffd57f0500f92e38f1b4bb59e6822e",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37, „Configuring the SIM card“): Kartenformat Nano-SIM und die Freischaltung durch den Mobilfunkanbieter stimmen wörtlich überein. Keine Abweichung.",
+  "discrepancy_refs": []
+}

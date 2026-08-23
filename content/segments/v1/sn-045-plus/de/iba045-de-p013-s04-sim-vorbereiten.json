@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S04-SIM-VORBEREITEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "SIM-Karte im Mobiltelefon vorbereiten",
+  "body_md": "Legen Sie die SIM-Karte zunächst in ein mobiles Endgerät ein und nehmen Sie dort vier Einstellungen vor:\n\n1. Deaktivieren Sie die PIN-Abfrage.\n2. Deaktivieren Sie die Mailbox und alle Rufumleitungen.\n3. Deaktivieren Sie sämtliche Komfortfunktionen, unter anderem Rückrufbitten und Erinnerungen per Kurznachricht.\n4. Aktivieren Sie das Roaming, falls es nicht voreingestellt ist.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, nummerierte Schrittliste unter dem Empfehlungskasten",
+  "prev_context": "Davor steht die Bedingung zur Prepaid-Aufladung.",
+  "next_context": "Danach folgt der rot gesetzte Achtung-Kasten zu iPhone und iMessages.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a51249ffb37ae0de2ba444b14ee0792114897bae6ae2da8a1c4034dfcc49781a",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37): Alle vier Schritte stimmen in Reihenfolge und Inhalt überein („Deactivate the pin request“, „mailbox and all call diversions“, „all convenience functions“, „Activate Roaming (if not preset)“). Die Liste der abzuschaltenden Komfortfunktionen ist in anderen Sprachfassungen länger (DSC-027); übernommen wird nur, was deutsch und englisch übereinstimmend nennen.",
+  "discrepancy_refs": ["DSC-027"]
+}

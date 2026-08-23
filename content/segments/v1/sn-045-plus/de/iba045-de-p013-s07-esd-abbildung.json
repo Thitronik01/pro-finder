@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S07-ESD-ABBILDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "sim-karte",
+  "title": "Abbildung der Kartenhalterung auf der Platine",
+  "body_md": "Die Abbildung zeigt einen Ausschnitt der Platine mit der geöffneten Halterung für die Nano-SIM-Karte und der daneben liegenden Karte. Im Bild ist ein gelbes Warnzeichen für elektrostatisch gefährdete Bauteile eingeblendet; die Platine darf deshalb nur an den Rändern und nicht an den Bauteilen berührt werden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.2, Fotoabbildung im unteren Seitendrittel",
+  "prev_context": "Davor steht die Anweisung zum Einsetzen und Verriegeln der Karte.",
+  "next_context": "Danach folgt auf der nächsten Seite Abschnitt 2.3 zur THITRONIK App.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:cd7a5b2ad405d2147b42865a6d2bac67d2dd0f482fca08c327207cc13ee39f4b",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37): Es ist dieselbe, unveränderte Abbildung ohne eigene Bildunterschrift in beiden Fassungen. Das eingeblendete Zeichen wird hier in Worten wiedergegeben, weil die Quelle die Bedeutung nirgends ausschreibt; die abgeleitete Handhabungsregel ist als solche kenntlich und braucht technische Bestätigung.",
+  "discrepancy_refs": []
+}

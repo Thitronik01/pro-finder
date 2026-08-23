@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S04-PROGRAMMIERUNG-EINLEITUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Grundregeln der Programmiernachricht",
+  "body_md": "Die Zielrufnummern werden dem Pro-finder mit einer einzigen Programmiernachricht übergeben. Es sind bis zu zehn Zielrufnummern möglich. Leerzeichen dienen in der Quelle nur der Darstellung und dürfen in der Nachricht selbst nicht verwendet werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Abschnitt 2.8 „Zielrufnummern programmieren“, Einleitungsabsatz über der Syntaxgrafik",
+  "prev_context": "Davor steht die Tabelle mit den drei Arten von Zielrufnummern.",
+  "next_context": "Danach folgt in der Quelle die Syntaxgrafik der Programmiernachricht.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:078ccf56503c7dfc01ce942e34da32865893300a34bc3ccb30fee92e6dda0d91",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 39, „Programming destination numbers“): sachgleich, einschließlich des Verbots von Leerzeichen und der Obergrenze von zehn Nummern. Der Beispielaufbau selbst wird nicht zitiert (BLK-005, BLK-006).",
+  "discrepancy_refs": []
+}

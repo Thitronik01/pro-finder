@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S04-AKTIVIERUNG-OHNE-APP",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Aktivierung ohne App",
+  "body_md": "Ohne App wird der Pro-finder aktiviert, indem eine Programmiernachricht an seine Rufnummer gesendet wird; ihren Aufbau beschreibt der Abschnitt zum Programmieren der Zielrufnummern. Sobald die Nachricht empfangen und die Nummern gespeichert sind, blinkt die Status-LED grün und es geht eine Statusnachricht an den Absender zurück. Der Pro-finder ist damit einsatzbereit.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.4, dritter und vierter Absatz",
+  "prev_context": "Davor steht das Anschließen der Spannungsversorgung mit der Farbfolge der Status-LED.",
+  "next_context": "Danach beginnt Abschnitt 2.5 zum Speichern der Rufnummer des Pro-finder.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c53781c8dc5fa3bfe0da4eed63198bf6ce2ffea457186854bdbe449e65f0ecbb",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 38): sachgleich, einschließlich der Rückmeldung durch grünes Blinken und eine Statusnachricht. Der Inhalt der Programmiernachricht wird hier nicht zitiert (BLK-005); der Verweis ersetzt die Kapitelnummer, weil die Webfassung keine PDF-Nummerierung führt.",
+  "discrepancy_refs": []
+}

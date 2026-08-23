@@ -1,7 +1,7 @@
 {
   "doc_id": "DOC-IBA-SN045",
   "page_count": 247,
-  "status_note": "Seitenstatus: not_started(0) -> inspected(25) -> extracted(50) -> validated(75) -> approved(100); blocked behaelt letzten Wert in progress_percent.",
+  "status_note": "Seitenstatus: not_started(0) -> inspected(25) -> extracted(50) -> validated(75) -> approved(100); blocked behaelt letzten Wert in progress_percent. Das Feld crosscheck_note nennt je Seite, was unabhaengig gegengeprueft wurde; Methode und Seitenpaarung stehen in docs/CROSSCHECK_SN045_DE_EN.md.",
   "pages": [
     {
       "page": 1,
@@ -761,8 +761,8 @@
     },
     {
       "page": 13,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -826,12 +826,13 @@
         "'Pin-Abfrage' (Schritt 1) - abweichend von der ueblichen Schreibweise 'PIN-Abfrage'",
         "'Pro-finder', 'Pro-finder-Modul' und Logo 'THITRONIK' entsprechen der Soll-Terminologie"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Vollstaendig gegen die englische Seite 37 (interne Seite 11) gelesen: 2.1 und 2.2, beide Warnkaesten, alle vier Vorbereitungsschritte und die Fotoabbildung. Ergebnis: Schritte, iPhone-Hinweis, Einsetzen und Verriegeln sowie die Abbildung sind sachgleich; der rote Empfehlungskasten weicht inhaltlich ab (DSC-027, neu DSC-086). Kein eigener Lesefehler gefunden. 7 Segmente."
     },
     {
       "page": 14,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -895,12 +896,13 @@
         "'WiPro III (safe.lock)' als weiteres Produkt erwaehnt",
         "'Status-LED' entspricht der Soll-Terminologie"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Vollstaendig gegen die englische Seite 38 (interne Seite 12) gelesen: 2.3, 2.4 und 2.5 einschliesslich Tipp. Ergebnis: sachgleich, einschliesslich der LED-Farbfolge kurz rot / gelb-gruen und der Rueckmeldung durch gruenes Blinken. Der Satz zur Laendervorwahl steht englisch noch am Fuss dieser Seite, deutsch erst am Kopf der Folgeseite (reiner Umbruchunterschied). DSC-016 in beiden Fassungen belegt. 5 Segmente."
     },
     {
       "page": 15,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -961,12 +963,13 @@
       "terminology_findings": [
         "'Pro-finder' durchgehend korrekt gemaess Soll-Terminologie; 'Betriebsartenschalter' als Geraetebegriff verwendet"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Vollstaendig gegen die englische Seite 39 (interne Seite 13) gelesen: 2.6, die dreizeilige Tabelle aus 2.7 und die Einleitung zu 2.8. Ergebnis: sachgleich, einschliesslich der Obergrenze von zehn Zielrufnummern und des Leerzeichenverbots. Die englische Seite traegt zusaetzlich die Syntaxgrafik, die deutsch auf der Folgeseite steht (DSC-021). Kein eigener Lesefehler gefunden. 4 Segmente."
     },
     {
       "page": 16,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1022,12 +1025,13 @@
       "terminology_findings": [
         "Keine Produktnamen auf der Seite sichtbar (weder Pro-finder noch SN-Angaben); Kopfzeile zeigt 'THITRONIK'-Logo"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Vollstaendig gegen das untere Drittel der englischen Seite 39 gelesen: identische Grafik mit identischen Beispielwerten und Zuordnungslinien, nur Beschriftungen uebersetzt und Beispielland abweichend (DSC-019). Beide Fassungen erklaeren die Kennzeichnung der Berechtigung nicht (DSC-017). Diese Seite ist die Ursache der deutsch-englischen Seitenverschiebung nach DSC-021. Beispielwerte nach BLK-006 nicht uebernommen. 2 Segmente."
     },
     {
       "page": 17,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 10,
@@ -1080,7 +1084,8 @@
       "terminology_findings": [
         "'Pro-finder', 'Nano-SIM-Karte' und 'Status-LED' entsprechen der verbindlichen Schreibweise."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Vollstaendig gegen die englische Seite 40 (interne Seite 14) gelesen: Beispieltabelle, Hinweiskasten und 2.9. Ergebnis: sachgleich, einschliesslich der Schalterstellung E, der Reihenfolge der vier Loeschschritte, des gelb-gruenen Blinkens und des zweiten Weges ueber die Masternummer. Die Beispieltabelle wird nach BLK-005 und BLK-006 nicht wiedergegeben. Kein eigener Lesefehler gefunden. 4 Segmente."
     },
     {
       "page": 18,
@@ -2000,7 +2005,8 @@
       "terminology_findings": [
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Geofencing' sind konsistent; 'Nano SIM card' weicht von 'Nano-SIM' ab."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Interne Seitenzahl am gerenderten Fusszeilenausschnitt abgelesen (2026-08-23): lueckenlose Folge Page 7 of 23 bis Page 14 of 23. Inhalt noch nicht gegengelesen."
     },
     {
       "page": 34,
@@ -2065,7 +2071,8 @@
       "terminology_findings": [
         "Spaltenkopf verwendet nur 'WiPro' statt 'WiPro III (safe.lock)'; 'Pro-finder' ist korrekt."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Interne Seitenzahl am gerenderten Fusszeilenausschnitt abgelesen (2026-08-23): lueckenlose Folge Page 7 of 23 bis Page 14 of 23. Inhalt noch nicht gegengelesen."
     },
     {
       "page": 35,
@@ -2134,7 +2141,8 @@
       "terminology_findings": [
         "'Pro-finder' und 'WiPro III (safe.lock)' sind korrekt; Kapitelname 'Controlling the alarm system via SMS' ist fuer die Ausgangssteuerung terminologisch falsch."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Interne Seitenzahl am gerenderten Fusszeilenausschnitt abgelesen (2026-08-23): lueckenlose Folge Page 7 of 23 bis Page 14 of 23. Inhalt noch nicht gegengelesen."
     },
     {
       "page": 36,
@@ -2202,7 +2210,8 @@
       "terminology_findings": [
         "'Status LED' erscheint ohne Bindestrich; 'Pro-finder' und 'Geofencing' sind konsistent. Der Befehl 'fence off' ist vor Uebersetzung zu schuetzen, muss aber gegen die Firmware geprueft werden."
       ],
-      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Interne Seitenzahl am gerenderten Fusszeilenausschnitt abgelesen (2026-08-23): lueckenlose Folge Page 7 of 23 bis Page 14 of 23. Inhalt noch nicht gegengelesen."
     },
     {
       "page": 37,
@@ -2261,7 +2270,8 @@
       "terminology_findings": [
         "'Pro-finder' und 'THITRONIK' sind korrekt geschrieben; 'nano SIM' erscheint auf dieser Seite klein, auf PDF-Seite 40 dagegen als 'nano SIM card' im Warnhinweis."
       ],
-      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 13 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
     },
     {
       "page": 38,
@@ -2320,7 +2330,8 @@
       "terminology_findings": [
         "'THITRONIK app' hier klein geschrieben; das Projektglossar fuehrt 'THITRONIK App'."
       ],
-      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 14 vollstaendig gelesen (2026-08-23). Status bleibt inspected."
     },
     {
       "page": 39,
@@ -2397,7 +2408,8 @@
       "terminology_findings": [
         "Britisches Englisch ('Authorised', 'programme') konsistent verwendet."
       ],
-      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutschen Seiten 15 und 16 vollstaendig gelesen (2026-08-23). Traegt Einleitung und Syntaxgrafik zu 2.8 auf einer Seite. Status bleibt inspected."
     },
     {
       "page": 40,
@@ -2467,7 +2479,8 @@
         }
       ],
       "terminology_findings": [],
-      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected."
+      "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
+      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 17 vollstaendig gelesen (2026-08-23). Status bleibt inspected."
     },
     {
       "page": 41,

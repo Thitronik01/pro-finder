@@ -224,6 +224,21 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                 P0-05 in der Warteschlange öffnen
               </Link>
             </li>
+            <li>
+              <strong>P0-06:</strong> drei Segmente zu SIM-Vorbereitung und Aktivierung ab SN-045.
+              Dossier: <code>docs/review-packets/P0-06-SIM-AKTIVIERUNG-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-06">
+                P0-06 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-07:</strong> sieben Segmente zu Zielrufnummern, Programmiernachricht und
+              Speicherlöschung ab SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-07-ZIELRUFNUMMERN-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-07">
+                P0-07 in der Warteschlange öffnen
+              </Link>
+            </li>
           </ul>
         </aside>
 

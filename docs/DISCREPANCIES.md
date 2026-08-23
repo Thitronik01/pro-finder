@@ -344,6 +344,23 @@ zusätzlich als DSC-085 geführt.
   Satzfragment „Programowanie numerów miejsc docelowych."; dadurch beginnen Kapitel 3 bis
   6 eine Seite später als im Inhaltsverzeichnis. Die Schlussseite 224 trägt folgerichtig
   „Strona 25 z 24".
+- **Deutsch-englische Klärung 2026-08-23** (Gegenprüfung an gerenderten Seiten): Die
+  englische Fassung überspringt **keine** interne Seitenzahl. Die Fußzeilen der englischen
+  PDF-Seiten 33 bis 40 laufen lückenlos „Page 7 of 23" bis „Page 14 of 23"; deutscher und
+  englischer Teil umfassen beide 21 Inhaltsseiten und zählen beide 3 bis 23. Verschoben ist
+  nicht die Zählung, sondern der Inhalt, und zwar an genau zwei Stellen:
+  1. **Ursache der Verschiebung – Abschnitt 2.8.** Der deutsche Teil setzt die Syntaxgrafik
+     der Programmiernachricht allein auf die interne Seite 14 (PDF-Seite 16); die
+     Einleitung zu 2.8 steht auf der internen Seite 13 (PDF-Seite 15). Die englische
+     Fassung setzt Einleitung **und** Grafik gemeinsam auf die interne Seite 13
+     (PDF-Seite 39). Ab hier liegt derselbe Inhalt englisch eine interne Seite früher.
+  2. **Ausgleich – Kapitel 4.** Der deutsche Teil setzt Kapitel 4 auf zwei interne Seiten
+     (17 und 18, PDF-Seiten 19 und 20), die englische Fassung auf drei (16 bis 18,
+     PDF-Seiten 42 bis 44). Ab Kapitel 5 stimmen beide wieder überein (interne Seite 19,
+     PDF-Seiten 21 und 45).
+     Damit ist die im Befund genannte Reihe DE/EN 16/15, 17/16, 19/19 vollständig erklärt.
+     Sie ist rein typografisch; es fehlt kein Inhalt. Die belegte Seitenpaarung steht in
+     [CROSSCHECK_SN045_DE_EN.md](CROSSCHECK_SN045_DE_EN.md).
 - **Folge:** Segment-Mapping darf nicht über die interne Seitenzahl erfolgen, sondern nur
   über Kapitelnummer und PDF-Seite. **Status:** offen
 
@@ -1968,6 +1985,28 @@ belegt, nicht aus einer Zusammenfassung.
 - **Schwere:** hoch · **Status:** offen – technischer und schwedischer Sprachreview
 
 <a id="synthese-befehle"></a>
+
+### DSC-086 – Die englische Fassung verbietet in 2.1 eine Kartenart, die der deutsche Master nicht erwähnt (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 2.1 – deutsche Seite 13, englische Seite 37
+  (beide interne Seite 11)
+- **Beleg:** Der englische Empfehlungskasten nennt drei Angaben, die im deutschen
+  Empfehlungskasten an derselben Stelle vollständig fehlen: „We recommend using a nano SIM
+  card that is only compatible with 2G/3G/4G and supports SMS, telephony and mobile data
+  (4G/LTE)", „The use of a multi-operator SIM card is **not allowed**" und „it is not
+  possible to use 4G to check the remaining credit".
+- **Befund:** Anders als DSC-027, das die abweichende **Anbieterempfehlung** führt, geht es
+  hier um eine **Verbotsaussage und eine technische Mindestanforderung**. Der deutsche
+  Master enthält an dieser Stelle weder das Verbot der Multi-Operator-Karte noch eine
+  Anforderung an unterstützte Netzstandards oder Dienste. Eine Nutzerin, die nur den
+  deutschen Teil liest, kann daher eine Karte wählen, die die englische Fassung derselben
+  Auflage ausdrücklich ausschließt.
+- **Prüfweg:** Beide Seiten unabhängig gerendert und Satz für Satz gegeneinander gelesen,
+  2026-08-23. Die übrigen Bestandteile des Kastens (Prepaid-Bedingung) sind sachgleich.
+- **Schwere:** hoch (die Kartenwahl entscheidet über die Funktion des Geräts; die Fassungen
+  widersprechen sich nicht, sondern die eine schweigt) · **Status:** offen – gehört zu
+  Rückfrage 5; THITRONIK muss klären, ob das Verbot und die Anforderungen generell gelten
+  und im deutschen Master fehlen
 
 ## Synthese-Auswertung 1: SMS-Befehle im Sprach- und Generationenvergleich
 
