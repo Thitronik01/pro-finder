@@ -5,7 +5,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 71.5 %**
+**Gesamtfortschritt: 71.7 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
@@ -16,7 +16,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Webanleitung und Review-UI               | 20 %    | 84 %        |
 | Übersetzungspilot                        | 10 %    | 85 %        |
 | Accessibility-, Security- und Content-QA | 10 %    | 71 %        |
-| Staging und Übergabe                     | 5 %     | 88 %        |
+| Staging und Übergabe                     | 5 %     | 91 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
@@ -32,6 +32,18 @@ Offene Blocker: 6 · Nächste Aktion: Alle deutschsprachigen Quellseiten sind ex
 <!-- PROGRESS:END -->
 
 ## Neu in dieser Sitzung (2026-08-23)
+
+**Erstes abgabefertiges Ergebnis: der Mängelbericht an THITRONIK**
+([MAENGELBERICHT_THITRONIK.md](MAENGELBERICHT_THITRONIK.md)). Er fasst die 41 Befunde der
+Schwere „hoch" zusammen und ordnet sie danach, was sich damit tun lässt. Er unterscheidet
+sich in einem Punkt von allem anderen im Projekt: **Er braucht keine Freigabe.** Jede Aussage
+über das Gerät wartet auf den technischen Review; Aussagen über die Dokumente sind belegte
+eigene Beobachtungen und sofort verwertbar.
+
+Der Bericht trennt ausdrücklich, was THITRONIK **allein** korrigieren kann – zwei einzeilige
+Sicherheitskorrekturen, drei Satzfehler der Kurzanleitung, fehlende Signalwörter,
+nicht lokalisierte Abbildungen – von dem, was eine technische oder eine Produktentscheidung
+braucht.
 
 **Vier Zeilen der Zugänglichkeitsmatrix sind aus dem Status `offen` heraus.** Forced Colors,
 200-Prozent-Zoom, 400-Prozent-Zoom/Reflow und „Bilder deaktiviert" sind jetzt über zehn

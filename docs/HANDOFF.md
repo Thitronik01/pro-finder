@@ -85,6 +85,27 @@ Store- oder Downloadadresse und kein QR-Code (BLK-004). Keine Geofencing-Aussage
 Koordinate, keine Kartenadresse. Kein Wert aus DOC-BMA-SN044 wurde in einen
 SN-045-Bestand übernommen.
 
+### Erstes abgabefertiges Ergebnis: der Mängelbericht
+
+`docs/MAENGELBERICHT_THITRONIK.md` fasst die 41 Befunde der Schwere „hoch" für THITRONIK
+zusammen. Er ist bewusst nach **Handlungsfähigkeit** geordnet, nicht nach DSC-Nummer:
+
+- **Teil A** – acht Befunde, bei denen eine Nutzerin, die der Anleitung folgt, etwas anderes
+  tut als beabsichtigt.
+- **Teil B** – acht Stellen, an denen Dokumente einander widersprechen, oft in derselben
+  Sprache und Generation.
+- **Teil C** – sechs Befunde, die Barrierefreiheit schon an der Quelle verhindern.
+- **Teil D** – was THITRONIK sofort ohne uns tun kann, und die vier dringlichsten Fragen.
+
+**Warum das das erste fertige Ergebnis ist:** Alles andere im Projekt wartet auf eine
+Freigabe. Dieser Bericht nicht. Er behauptet nichts über das Gerät, sondern nur, was in den
+Dokumenten steht und wo sie sich widersprechen – belegte eigene Beobachtungen, sofort
+prüfbar und korrigierbar.
+
+Er nennt ausdrücklich auch seine Grenzen: 65 von 323 Seiten vollständig extrahiert, acht
+Sprachfassungen ohne muttersprachlichen Review nicht abschließend beurteilbar, kein
+Konformitätsgutachten.
+
 ### Vier Matrixzeilen sind jetzt automatisiert
 
 Von der Zugänglichkeitsmatrix ließen sich vier bisher offene Zeilen automatisieren:

@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 71.5,
+  "overall_percent": 71.7,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -49,8 +49,8 @@
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 88,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-12 stellen fuer alle 167 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen; P0-06 bis P0-12 decken die Generation ab SN-045 vollstaendig ab. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. docs/CROSSCHECK_SN045_DE_EN.md haelt die belegte Seitenpaarung aller 21 Seitenpaare, den Pruefstand je Zeile, die sieben daraus entstandenen Registerfunde und ausdruecklich auch die widerlegte eigene Fehlvermutung fest. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen. Die Segmentdetailansicht macht die Belege der Gegenpruefung erstmals in der Oberflaeche sichtbar statt nur in den JSON-Dateien; ein Fachreview kann ein Segment damit ohne Dateizugriff beurteilen. P0-13 buendelt die Widersprueche zwischen Kurzanleitung und Handbuch und ist bewusst nicht nach Thema, sondern nach Befund geschnitten; es nennt neben den fuenf Abweichungen ausdruecklich auch die vier doppelt belegten Uebereinstimmungen und drei Angaben, die der Kurzanleitung ganz fehlen."
+      "percent": 91,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-12 stellen fuer alle 167 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen; P0-06 bis P0-12 decken die Generation ab SN-045 vollstaendig ab. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. docs/CROSSCHECK_SN045_DE_EN.md haelt die belegte Seitenpaarung aller 21 Seitenpaare, den Pruefstand je Zeile, die sieben daraus entstandenen Registerfunde und ausdruecklich auch die widerlegte eigene Fehlvermutung fest. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen. Die Segmentdetailansicht macht die Belege der Gegenpruefung erstmals in der Oberflaeche sichtbar statt nur in den JSON-Dateien; ein Fachreview kann ein Segment damit ohne Dateizugriff beurteilen. P0-13 buendelt die Widersprueche zwischen Kurzanleitung und Handbuch und ist bewusst nicht nach Thema, sondern nach Befund geschnitten; es nennt neben den fuenf Abweichungen ausdruecklich auch die vier doppelt belegten Uebereinstimmungen und drei Angaben, die der Kurzanleitung ganz fehlen. Am 2026-08-23 kam das erste abgabefertige Ergebnis hinzu: docs/MAENGELBERICHT_THITRONIK.md fasst die 41 Befunde der Schwere hoch nach Handlungsfaehigkeit geordnet zusammen und trennt, was THITRONIK allein korrigieren kann, von dem, was eine technische oder eine Produktentscheidung braucht. Er ist das einzige Projektergebnis, das keine Freigabe benoetigt, weil er nichts ueber das Geraet behauptet, sondern nur ueber die Dokumente."
     }
   },
   "pdf_documents": [
