@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S05-MANUELLER-ALARM-MELDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Manueller Alarm",
+  "body_md": "Wird die gekoppelte Alarmanlage durch Auslösen eines Panikalarms aktiviert, versendet der Pro-finder eine entsprechende Meldung und ruft danach zusätzlich die Masternummer an.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Manueller Alarm“ samt rotem Zusatz",
+  "prev_context": "Davor steht der Gasalarm.",
+  "next_context": "Danach folgt die Meldung über den Diebstahl von Zubehör.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:bb2706085af3bb6b6fb6a1cf684afd6daabeb2496717fcbde555680d7f9459a8",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 43, „Manual alarm“): sachgleich.",
+  "discrepancy_refs": []
+}

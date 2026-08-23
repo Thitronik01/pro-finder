@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S02-STATUSBERICHT-INHALT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Wann ein Statusbericht kommt und was er enthält",
+  "body_md": "Einen Statusbericht erhalten Sie nur auf Anforderung oder – je nach gewählter Betriebsart – in festen Abständen. Er enthält neben Position, Geschwindigkeit und dem Zustand der Ausgänge je nach Betriebsart zusätzlich die Spannungen der Messeingänge sowie die Temperatur in unmittelbarer Nähe des Geräts.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Statusbericht“",
+  "prev_context": "Davor steht die Feldliste.",
+  "next_context": "Danach folgt die Diebstahlmeldung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6e27af41a32712e064bc8d5c2d33db53616201a494a4f7f4c6077aa6f2c39e95",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 42, „Status report“): sachgleich. Die englische Beispielblase führt U2 und U3 jedoch in einer Zeile zusammen und zeigt dadurch vier statt fünf Spannungszeilen (DSC-089); maßgeblich ist der Fließtext, der in beiden Fassungen U2 bis U5 nennt.",
+  "discrepancy_refs": ["DSC-089"]
+}

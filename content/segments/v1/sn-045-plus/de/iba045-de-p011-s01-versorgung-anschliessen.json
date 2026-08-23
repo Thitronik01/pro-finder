@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S01-VERSORGUNG-ANSCHLIESSEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Spannungsversorgung anschließen und absichern",
+  "body_md": "Schließen Sie Pin 1 und Pin 8 polungsrichtig an eine geeignete Spannungsversorgung mit 12 V Gleichspannung an. Sichern Sie die Plusleitung mit der beiliegenden Sicherung ab. Die Pins 2 bis 5 sind Messeingänge für Spannungen von 0 bis 30 V. Über Pin 3 lässt sich je nach Betriebsart zusätzlich das Geofencing aktivieren.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.4 „Modul anschließen“, erster Absatz",
+  "prev_context": "Davor endet auf der vorigen Seite die Tabelle der Betriebsarten.",
+  "next_context": "Danach folgt der Anschluss der Alarmanlage.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8c229bdbdafa671c602cd5ad8a2a33c8f9febaf0115180e0deab8da7656be75d",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 35, „Connecting the module“): sachgleich, einschließlich 12 V Gleichspannung und des Messbereichs 0 bis 30 V. Beide Fassungen nennen die Sicherung ohne Wert; der Wert 3 A steht nur im Lieferumfang. Die Angabe „geeignete Spannungsversorgung“ bleibt in beiden Fassungen unbestimmt und steht neben dem Bereich 9 bis 30 V der technischen Daten (DSC-069).",
+  "discrepancy_refs": ["DSC-069"]
+}

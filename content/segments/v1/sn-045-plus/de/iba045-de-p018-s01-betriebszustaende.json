@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P018-S01-BETRIEBSZUSTAENDE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "status-led",
+  "title": "Betriebszustände der Status-LED",
+  "body_md": "Die Quelle unterscheidet neun Zustände. Jeder wird durch eine Blinkfolge und eine Farbe dargestellt:\n\n| Anzeige | Bedeutung |\n| --- | --- |\n| blinkt rot und gelb im Wechsel | Netzsuche, keine Zielrufnummern vorhanden |\n| blinkt rot | Netzsuche oder kein Mobilfunkempfang |\n| leuchtet gelb dauerhaft | Verbindungsaufbau mit dem Modem |\n| leuchtet rot dauerhaft | SIM-Karte fehlt oder ist defekt |\n| blinkt rot und grün im Wechsel | SIM-PIN nicht deaktiviert |\n| blinkt gelb | eingebucht, letzte Kurznachricht konnte nicht versendet werden |\n| leuchtet grün dauerhaft | Pro-finder empfängt oder versendet eine Kurznachricht |\n| blinkt gelb und grün im Wechsel | eingebucht, keine Zielrufnummern vorhanden |\n| blinkt grün | eingebucht, Zielrufnummern vorhanden |\n\nNach abgeschlossener Installation und Programmierung blinkt die Anzeige im Normalbetrieb grün.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 18,
+  "source_page_end": 18,
+  "source_region": "Kapitel 3 „Betriebszustände (Status-LED)“, neun Zeilen mit Blinkgrafik und roter Schlusskasten",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 2.9.",
+  "next_context": "Danach beginnt auf der nächsten Seite Kapitel 4.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1cb486d3c5ba600a54b8170a226b269f7d37d794f104a0776ea89065a00ef2eb",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 41, „Operating states (status LED)“): Alle neun Zustände stimmen in Reihenfolge, Farbfolge und Bedeutung überein, ebenso der Schlusskasten. Die englische Fassung enthält dabei zwei Satzfehler (fehlendes Leerzeichen, nicht geschlossene Klammer), die die Bedeutung nicht ändern (DSC-018). Entscheidend: Die neun Zustände werden in beiden Fassungen **allein** über Farbe und Blinkrhythmus unterschieden – ohne Textalternative im Bild. Deshalb steht die Bedeutung hier ausgeschrieben.",
+  "discrepancy_refs": ["DSC-018"]
+}

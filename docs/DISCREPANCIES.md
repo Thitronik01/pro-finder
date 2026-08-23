@@ -424,6 +424,12 @@ zusätzlich als DSC-085 geführt.
 
 ### DSC-015 – Überschrift 5.5 ist in Englisch und Dänisch wortgleich mit 5.1 (ab SN-045)
 
+- **Zusätzliche Fundstelle 2026-08-23:** Der Fehler wirkt sich auch auf einen Querverweis
+  aus: Der rote Hinweiskasten auf der englischen Seite 35 (Abschnitt 1.4) verweist auf
+  „chapter _5.5 Controlling the alarm system_ via SMS" – also mit dem Titel von 5.1, während
+  die deutsche Entsprechung auf Seite 11 korrekt „_5.5 Ausgänge per SMS steuern_" nennt.
+  Bestätigt beim vollständigen Gegenlesen der deutschen Seite 11 gegen die englische Seite 35.
+
 - **Dokument:** DOC-IBA-SN045, englische Seite 46 sowie dänische Seiten 102, 110 und 120
 - **Beleg:** Abschnitt 5.5 trägt den Titel „Controlling the alarm system via SMS" – identisch
   mit 5.1 –, behandelt inhaltlich aber die beiden Ausgänge („Pro-finder has two separately
@@ -2007,6 +2013,94 @@ belegt, nicht aus einer Zusammenfassung.
   widersprechen sich nicht, sondern die eine schweigt) · **Status:** offen – gehört zu
   Rückfrage 5; THITRONIK muss klären, ob das Verbot und die Anforderungen generell gelten
   und im deutschen Master fehlen
+
+### DSC-087 – Betriebsart D: doppelter Produktname und fehlender Bindesatz im deutschen Master (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Betriebsartentabelle – deutsche Seite 10 (intern „Seite 8"),
+  Zeile D; Gegenquelle englische Seite 34 (intern „Page 8")
+- **Beleg (DE, bei 500 dpi gesichert):** „8 Minuten (sobald Spannung anliegt und Pro-finder
+  **Pro-finder** hochgefahren ist nach dem GPS-Signal sucht)". Der Produktname steht doppelt
+  und zwischen „hochgefahren ist" und „nach dem GPS-Signal sucht" fehlt die Konjunktion.
+- **Beleg (EN):** „8 minutes (as soon as voltage is applied, and Pro-finder has started up
+  **and** is searching for the GPS signal)" – vollständig und grammatisch korrekt.
+- **Befund:** Der Fehler steht im **deutschen Master**, nicht in der Übersetzung. Die
+  englische Fassung ist an dieser Stelle die bessere Quelle. Die benachbarte Zeile C zeigt
+  denselben fehlenden Bindesatz („90 Sekunden (sobald Spannung anliegt und Pro-finder
+  hochgefahren ist nach dem GPS-Signal sucht)"), aber ohne doppelten Produktnamen.
+- **Wichtig für DSC-066 und Rückfrage 16, ohne Wertübernahme:** In dieser Generation nennen
+  **beide** Fassungen 8 Minuten beziehungsweise 8 minutes. Der Faktor-60-Widerspruch der
+  Generation bis SN-044 wiederholt sich hier also nicht. Das ist ein Hinweis für die
+  THITRONIK-Klärung, **kein** Wert, der auf die ältere Generation übertragen wird.
+- **Prüfweg:** Beide Tabellen vollständig Zelle für Zelle verglichen; alle 16 Zeilen und alle
+  elf Spalten stimmen sonst überein. Zeile D zusätzlich bei 500 dpi nachgerendert, 2026-08-23.
+- **Schwere:** mittel (redaktionell; der Zahlenwert selbst ist unstrittig) · **Status:** offen
+
+### DSC-088 – Stromaufnahme im Normalbetrieb: Bereich gegen Einzelwert innerhalb derselben Auflage (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 6.1 Technische Daten – deutsche Seite 25 (intern
+  „Seite 23"), englische Seite 49 (intern „Page 23")
+- **Beleg (bei 400 dpi gesichert):** DE „Stromaufnahme Normalbetrieb: **ca. 16–21 mA**"
+  gegen EN „Power consumption in normal operation: **approx. 21mA**".
+- **Befund:** Dieselbe Auflage desselben Dokuments nennt für dieselbe Größe einmal einen
+  Bereich und einmal einen Einzelwert. Die englische Fassung nennt allein die Obergrenze;
+  wer nach ihr ein Energiebudget auslegt, rechnet mit bis zu 31 Prozent mehr Ruhestrom als
+  nach der deutschen Untergrenze. Die Zeile darüber (Netzsuche, ca. 37 mA) stimmt dagegen
+  in beiden Fassungen überein, ebenso Spannungsversorgung, Bänder, Ausgänge,
+  Temperaturbereich und SIM-Format.
+- **Bezug:** Dasselbe Werteproblem ist für die Generation bis SN-044 als DSC-069 erfasst
+  (DOC-BMA-SN044 ca. 21 mA gegen DOC-KA-SN044 ca. 16–21 mA). Es tritt damit in **beiden**
+  Generationen auf, dort zwischen zwei Dokumenten, hier zwischen zwei Sprachfassungen
+  desselben Dokuments. Kein Wert wird zwischen den Generationen übertragen.
+- **Schwere:** hoch (technischer Auslegungswert) · **Status:** offen – gehört zu Rückfrage 2
+
+### DSC-089 – Zwei Satzfehler der englischen Fassung in Kapitel 4 (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, englische Seite 42 (intern „Page 16"); Gegenquelle deutsche
+  Seite 19 (intern „Seite 17")
+- **Beleg 1 – Beispiel des Statusberichts:** Die englische Sprechblase setzt „U2: 0 V**U3:**
+  0 V" in einer Zeile; die deutsche Sprechblase führt U2, U3, U4 und U5 auf vier getrennten
+  Zeilen. Das englische Beispiel zeigt dadurch vier statt fünf Zeilen für die Spannungen.
+- **Beleg 2 – Querverweis der Diebstahlmeldung:** „Both can be activated via SMS as described
+  under _5.1 Controlling the alarm system_ **via SMS** _via SMS_." Die Wendung steht doppelt,
+  einmal in stark vergrößerter Schrift. Die deutsche Entsprechung nennt sie einmal.
+- **Befund:** Beides sind Satzfehler der englischen Fassung, nicht der Quelle insgesamt. Der
+  erste betrifft ein technisches Beispiel und kann als vier statt fünf Messeingänge
+  missverstanden werden.
+- **Bezug:** Der Querverweis erbt zusätzlich den Titelfehler nach DSC-015; der Verweis auf
+  5.1 führt nach DSC-041 ohnehin ins Leere.
+- **Schwere:** mittel · **Status:** offen (redaktionell; Beleg 1 gehört in den fachlichen Review)
+
+### DSC-090 – Gerätemeldung bei fehlender Position ist je Sprachfassung anders benannt (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 5.3 – deutsche Seite 22 (intern „Seite 20"),
+  englische Seite 46 (intern „Page 20")
+- **Beleg:** DE „steht im Statusbericht **„GPS kein Empfang"**"; EN „the status report shows
+  **\"No position\"**". Beide Fassungen zitieren eine Zeichenfolge, die das Gerät selbst
+  ausgibt.
+- **Befund:** Die beiden Zitate sind keine Übersetzungen desselben Wortlauts – sie benennen
+  verschiedene Sachverhalte („kein GPS-Empfang" gegen „keine Position"). Gibt das Gerät nur
+  eine feste Zeichenfolge aus, ist mindestens eines der beiden Zitate im Feld nicht
+  auffindbar. Eine Nutzerin, die im Statusbericht nach dem im Handbuch genannten Wortlaut
+  sucht, findet ihn dann nicht.
+- **Bezug:** Verstärkt Rückfrage 17 (in welcher Sprache das Gerät meldet) und DSC-072. Keine
+  der beiden Zeichenfolgen wird als Erkennungsmerkmal veröffentlicht.
+- **Schwere:** hoch (Erkennbarkeit einer sicherheitsrelevanten Gerätemeldung) · **Status:**
+  offen – technische Klärung
+
+### DSC-091 – Englische Fassung benennt den Anlernmodus auf einer Seite zweifach (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 5.6 – englische Seite 48 (intern „Page 22");
+  Gegenquelle deutsche Seite 24 (intern „Seite 22")
+- **Beleg:** Überschrift und Fließtext nennen den Modus „interconnection mode" („Starting the
+  interconnection mode", „If the interconnection mode is activated"), der auf derselben Seite
+  genannte Befehl lautet dagegen „teach mode". Der deutsche Master verwendet durchgängig
+  einen Begriff („Anlernmodus").
+- **Befund:** Wer nach der Überschrift sucht, findet den Befehl nicht, und umgekehrt. Der
+  Fehler ist auf die englische Fassung begrenzt.
+- **Bezug:** Gleiche Fehlerklasse wie DSC-037 (vier tschechische Benennungen) und DSC-083
+  (niederländische Kernbegriffe).
+- **Schwere:** mittel (Terminologie; der Befehl steuert eine sicherheitsrelevante Funktion) ·
+  **Status:** offen – gehört in den englischen Sprachreview EN-03
 
 ## Synthese-Auswertung 1: SMS-Befehle im Sprach- und Generationenvergleich
 

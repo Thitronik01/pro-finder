@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P023-S02-AUSGANG-IMPULS",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "ausgaenge",
+  "title": "Ausgang für eine Sekunde einschalten",
+  "body_md": "Ein Ausgang lässt sich per Kurznachricht für die Dauer einer Sekunde einschalten. Der Pro-finder schaltet ihn entsprechend und sendet einen Statusbericht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 23,
+  "source_page_end": 23,
+  "source_region": "Abschnitt 5.5.2 „Ausgänge gepulst (für eine Sekunde) einschalten“",
+  "prev_context": "Davor steht das dauerhafte Schalten.",
+  "next_context": "Danach folgt das Schalten für eine frei wählbare Zeit.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c8be6c407a86b8d68cd5b7bb5c47d5d5091d87f6d944bb14560a72a04788a511",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 47, „Pulsed activation of outputs“): sachgleich, einschließlich der einen Sekunde. Weder Toleranz noch Wiederholsperre nennt eine der beiden Fassungen.",
+  "discrepancy_refs": []
+}

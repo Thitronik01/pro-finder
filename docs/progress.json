@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 62.5,
+  "overall_percent": 64.2,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,13 +19,13 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 28.3,
+      "percent": 30.7,
       "note": "Automatisch aus 323 Seitenrecords berechnet."
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
-      "percent": 90,
-      "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Region; alle Aufgaben bleiben entwurf. 56 versionierte Segmente aus DOC-BMA-SN044 Seiten 3-18 sind quellenvalidiert; keine Seite steht mehr auf extracted. Seit 2026-08-11 sind zudem alle 41 sicherheitskritischen Segmente in den fuenf entscheidungsreifen Pruefpaketen P0-01 bis P0-05 gebuendelt. Jedes Paket nennt Quelle, Gegenquelle oder Luecke, DSC-/Rueckfragenbezug und benoetigte THITRONIK-Entscheidung. BLK-004/005/006 und Rueckfragen 2, 3, 6, 14, 15, 16 und 17 bleiben eingehalten: keine SMS-Zeichenfolgen, Koordinaten, Kartenlinks, Beispielwerte, ungeklaerten Berechtigungszeichen, feste PIN, historischen Kontaktdaten oder widerspruechlichen Werte werden als freigegebener Bedienweg veroeffentlicht. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review und Freigaben fehlen. Am 2026-08-23 kamen die ersten 22 Segmente des Zweigs ab SN-045 hinzu (DOC-IBA-SN045, deutsche Seiten 13-17, Kapitel 2 vollstaendig). Sie entstanden nicht in einer Selbstdurchsicht, sondern im Gegenlesen gegen die englische Fassung derselben Auflage (Seiten 37-40); Methode, belegte Seitenpaarung und Pruefstand je Seite stehen in docs/CROSSCHECK_SN045_DE_EN.md. Diese fuenf Seiten stehen damit als erste SN-045-Seiten auf validated. Der Bestand betraegt 78 Segmente, alle entwurf. Die zehn neuen sicherheitskritischen Segmente sind den beiden ersten SN-045-Pruefpaketen P0-06 und P0-07 zugeordnet; damit sind 51 von 51 P0-Segmenten genau einem Dossier zugeordnet."
+      "percent": 93,
+      "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. Jede Aussage nennt Dokument, PDF-Seite und Region; alle Aufgaben bleiben entwurf. Der Segmentbestand umfasst 139 versionierte Segmente: 56 aus DOC-BMA-SN044 Seiten 3-18 und 83 aus DOC-IBA-SN045 Seiten 5-25. Damit ist der deutsche Sprachteil ab SN-045 mit 21 von 21 Inhaltsseiten abgeschlossen. Die SN-045-Segmente entstanden nicht in einer Selbstdurchsicht, sondern im vollstaendigen Gegenlesen gegen die englische Fassung derselben Auflage (Seiten 29-49); Methode, belegte Seitenpaarung und Pruefstand je Seite stehen in docs/CROSSCHECK_SN045_DE_EN.md. Alle 104 sicherheitskritischen Segmente sind den zwoelf Pruefpaketen P0-01 bis P0-12 zugeordnet; jedes Paket nennt Quelle, Gegenquelle oder Luecke, DSC-/Rueckfragenbezug und benoetigte THITRONIK-Entscheidung. BLK-004/005/006/007 bleiben eingehalten: keine SMS-Zeichenfolgen, Koordinaten, Kartenlinks, Beispielrufnummern, aus Beispielen abgeleiteten Berechtigungsregeln, Geofencing-Radien, festen PINs oder Kontaktdaten werden als freigegebener Bedienweg veroeffentlicht; segments:check hat einen Verstoss abgefangen, der daraufhin umformuliert wurde. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review und Freigaben fehlen."
     },
     "card": {
       "label": "Setup-Karte",
@@ -35,7 +35,7 @@
     "application": {
       "label": "Webanleitung und Review-UI",
       "percent": 68,
-      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt jetzt alle 14 belegten Aufgaben ab SN-045 als klar markierte Entwuerfe mit englischen Warnungen, Tabellen und Quellen. Die lokale Review-Warteschlange zeigt 56 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 41 P0-Segmente sind genau einem der fuenf technischen Pakete P0-01 bis P0-05 zugeordnet; die UI zeigt 41/41 und filtert 6/11/11/8/5 Treffer. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen. Seit 2026-08-23 zeigt die Kennzahl 51/51 ueber sieben Pakete P0-01 bis P0-07 und filtert 6/11/11/8/5/3/7 Treffer; Unit- und Browsertest pruefen den neuen Stand."
+      "note": "Startseite, Versionsrouten, Wechselbestaetigung, Aufgabenseiten, Dashboard und read-only Review-UI stehen als Fixture-basierte Erstfassung; Supabase-Anbindung fuer Staging ist vorbereitet, aber nicht abgenommen. Der englische Pilot zeigt alle 14 belegten Aufgaben ab SN-045 als klar markierte Entwuerfe. Die lokale Review-Warteschlange zeigt 139 kanonische Segmente mit sichtbarer Prioritaet P0/P1/P2. Alle 104 P0-Segmente sind genau einem der zwoelf Pakete P0-01 bis P0-12 zugeordnet; die UI zeigt 104/104 und filtert 6/11/11/8/5/3/7/14/10/11/11/7 Treffer. Unit- und Browsertest pruefen Kennzahl, Direktlinks und Select. Die Statuswechsel-UI, echte Supabase-Arbeitsdaten und die Staging-Abnahme bleiben offen."
     },
     "translation": {
       "label": "Übersetzungspilot",
@@ -44,13 +44,13 @@
     },
     "qa": {
       "label": "Accessibility-, Security- und Content-QA",
-      "percent": 51,
-      "note": "npm run check und der Produktions-Build mit 51 Seiten sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht 14 DE/EN-Aufgabenpaare; ein Unit-Test prueft deren task-level Dokument-/Seitenparitaet. Browser- und axe-Abdeckung umfasst alle 14 englischen Taskrouten in Desktop- und Mobilprofil sowie den fehlenden tel-/mailto-Link der bewusst gesperrten Supportangaben. Ein eigener Reduced-Motion-Pfad prueft sieben Kernrouten auf laufende Animationen, Autoplay und nicht reduzierte Animations- oder Uebergangsdauern. Der Karten-Preflight prueft vier SVGs und sieben Konzeptbilder. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen. Neu ist eine unabhaengige Gegenquelle fuer den deutschen Master ab SN-045: fuenf Seiten wurden Satz fuer Satz gegen die englische Fassung gelesen. Die Pruefung haengt damit nicht mehr davon ab, dass derselbe Bearbeiter seine eigene Extraktion nachliest."
+      "percent": 56,
+      "note": "npm run check und der Produktions-Build sind gruen. Inhaltspruefungen sichern Tabellen, ausgeschlossene Orts-/Kontaktdaten, Quellen, DSC-Verweise, Segmentpruefsummen und BLK-005. tokens:check vergleicht 14 DE/EN-Aufgabenpaare. Browser- und axe-Abdeckung umfasst alle 14 englischen Taskrouten in Desktop- und Mobilprofil sowie einen eigenen Reduced-Motion-Pfad ueber sieben Kernrouten. Der Karten-Preflight prueft vier SVGs und sieben Konzeptbilder. Neu seit 2026-08-23: Der gesamte deutsche Master ab SN-045 besitzt eine unabhaengige Gegenquelle - alle 21 Inhaltsseiten wurden Satz fuer Satz gegen die englische Fassung gelesen, strittige Einzelwerte bei 400 bis 500 dpi nachgerendert. Die inhaltliche Pruefung haengt damit nicht mehr davon ab, dass derselbe Bearbeiter seine eigene Extraktion nachliest. Die vollstaendige manuelle AT-, Zoom-, Reflow-, Forced-Colors- und Reduced-Motion-Matrix sowie alle physischen Kartentests bleiben offen."
     },
     "handoff": {
       "label": "Staging und Übergabe",
-      "percent": 79,
-      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-05 stellen fuer alle 41 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet, ohne einen Sollwert oder Reviewstatus abzuleiten. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. Das Karten-Konzept-README dokumentiert Herkunft, Einordnung und bewusste Nichtuebernahmen. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen. P0-06 und P0-07 sind die ersten Dossiers der Generation ab SN-045; ihre Segmente wurden gegen die englische Fassung derselben Auflage gegengelesen. docs/CROSSCHECK_SN045_DE_EN.md haelt die belegte Seitenpaarung und den Pruefstand je Seite fest."
+      "percent": 82,
+      "note": "MASTERPLAN, PROJECT_STATUS, HANDOFF, RUECKFRAGEN_THITRONIK.md und HANDOVER_PROMPT.md stehen. P0-01 bis P0-12 stellen fuer alle 104 sicherheitskritischen Segmente Quelle, Gegenquelle oder Luecke und die benoetigte THITRONIK-Entscheidung zusammen; P0-06 bis P0-12 decken die Generation ab SN-045 vollstaendig ab. Drei Synthese-Auswertungen buendeln SMS-Befehle, technische Werte sowie die Zugangsgrenzen zwischen PDF, HTML und Geraet. EN-01 bis EN-03 dokumentieren fuer alle 14 englischen Aufgaben Quelldateien, Reviewgrenzen, geschuetzte Werte und offene Entscheidungen. docs/CROSSCHECK_SN045_DE_EN.md haelt die belegte Seitenpaarung aller 21 Seitenpaare, den Pruefstand je Zeile, die sieben daraus entstandenen Registerfunde und ausdruecklich auch die widerlegte eigene Fehlvermutung fest. Staging-Abnahme, realer Fachreview, alle drei unabhaengigen englischen Sprachreviews, die manuelle QA-Matrix und alle Produktionsentscheidungen der Karte bleiben offen."
     }
   },
   "pdf_documents": [
@@ -66,10 +66,10 @@
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 26,
+      "percent": 29.3,
       "status_counts": {
-        "inspected": 242,
-        "validated": 5
+        "inspected": 226,
+        "validated": 21
       }
     },
     {
@@ -156,7 +156,9 @@
     "Der franzoesische Teil bis SN-044 nennt 1500 m/1,5 km als Diebstahlmeldungs-Radius; Deutsch, Englisch und Schwedisch nennen 1000 m/1 km, die neuere Generation 900 m. Franzoesisch steht damit innerhalb desselben Handbuchs allein und 50 Prozent ueber den drei Parallelfassungen (DSC-078, Rueckfrage 14). Kein Radius wird bis zur Klaerung genannt.",
     "Der franzoesische Statusbefehl lautet Statut - ein Buchstabe Abstand zum Status/STATUS der uebrigen Fassungen (DSC-067). Auch deshalb darf kein Befehl ohne technische Bestaetigung veroeffentlicht werden.",
     "Die schwedische Abschaltanweisung ab SN-045 nennt fence pa, obwohl Abschnitt 5.2 dieselbe Zeichenfolge als Einschaltbefehl und fence av als Ausschaltbefehl definiert (DSC-085). Wer der Anweisung folgt, kann genau die Fehlalarme ausloesen, die sie verhindern soll; keine Zeichenfolge wird veroeffentlicht.",
-    "Die englische Fassung ab SN-045 verbietet in Abschnitt 2.1 die Multi-Operator-SIM-Karte und nennt technische Mindestanforderungen an die Karte; der deutsche Master schweigt an derselben Stelle dazu (DSC-086, Rueckfrage 5). Wer nur den deutschen Teil liest, kann eine Karte waehlen, die dieselbe Auflage englisch ausschliesst. Bis zur Klaerung gibt die Anleitung keine Kartenempfehlung wieder."
+    "Die englische Fassung ab SN-045 verbietet in Abschnitt 2.1 die Multi-Operator-SIM-Karte und nennt technische Mindestanforderungen an die Karte; der deutsche Master schweigt an derselben Stelle dazu (DSC-086, Rueckfrage 5). Wer nur den deutschen Teil liest, kann eine Karte waehlen, die dieselbe Auflage englisch ausschliesst. Bis zur Klaerung gibt die Anleitung keine Kartenempfehlung wieder.",
+    "Ab SN-045 nennt der deutsche Teil fuer die Stromaufnahme im Normalbetrieb einen Bereich, der englische Teil derselben Auflage nur die Obergrenze (DSC-088, Rueckfrage 2). Wer nach der englischen Fassung ein Energiebudget auslegt, rechnet mit deutlich mehr Ruhestrom als nach der deutschen Untergrenze. Bis zur Klaerung wird kein Wert veroeffentlicht.",
+    "Ab SN-045 lautet die Geraetemeldung bei fehlender Position deutsch und englisch verschieden (DSC-090, Rueckfrage 17). Gibt das Geraet nur eine feste Zeichenfolge aus, ist mindestens eine der beiden im Feld nicht auffindbar. Keine der beiden wird als Erkennungsmerkmal veroeffentlicht."
   ],
-  "next_action": "Die Gegenpruefung gegen die englische Fassung auf die restlichen 16 deutschen Inhaltsseiten von DOC-IBA-SN045 ausweiten und daraus Segmente erzeugen. Reihenfolge nach docs/CROSSCHECK_SN045_DE_EN.md: zuerst die vier Seiten aus Kapitel 1 mit bereits belegter Fusszeilenpaarung (deutsch 9-12 gegen englisch 33-36), danach Kapitel 3 und 4 (deutsch 18-20 gegen englisch 41-44, wo der Seitenversatz von 24 auf 23 faellt), zuletzt Kapitel 5 und 6 (deutsch 21-25 gegen englisch 45-49). Seitenpaar immer ueber die Kapitelueberschrift bilden, nie ueber einen festen Versatz. Eine Seite steigt erst auf validated, wenn sie vollstaendig gegengelesen ist; was geprueft wurde und was nicht, gehoert in crosscheck_note. Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als Sprachunterschied ins Register nehmen. Unveraendert offen bleiben die unabhaengigen englischen Sprachreviews EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und die freigegebenen Assets und Entscheidungen fuer die Setup-Karte."
+  "next_action": "Der deutsche Sprachteil ab SN-045 ist abgeschlossen. Naechster Extraktionsbereich nach docs/CROSSCHECK_SN045_DE_EN.md: entweder DOC-BMA-SN044 ausserhalb der Seiten 3-18 mit dem englischen Teil (Seiten 20-36) als Gegenquelle, oder der englische Teil ab SN-045 gegen den jetzt validierten deutschen Master. Dieselbe Methode beibehalten: Seitenpaar ueber die Kapitelueberschrift bilden, nie ueber einen festen Versatz; beide Seiten rendern; jede Zahl, Tabellenzeile und Aufzaehlung vergleichen; Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als Sprachunterschied ins Register nehmen; eine Seite steigt erst nach vollstaendigem Gegenlesen auf validated, mit crosscheck_note. Unveraendert offen und ohne THITRONIK nicht loesbar: die unabhaengigen englischen Sprachreviews EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte."
 }

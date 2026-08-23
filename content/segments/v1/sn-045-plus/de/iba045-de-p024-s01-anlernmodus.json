@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S01-ANLERNMODUS",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Anlernmodus der Alarmanlage starten",
+  "body_md": "Über den Pro-finder lässt sich der Anlernmodus der gekoppelten Alarmanlage per Kurznachricht aktivieren. Solange er aktiv ist, können neue Funk-Komponenten an das Alarmsystem angelernt werden. Sind alle Komponenten angelernt, lässt sich der Modus mit einer weiteren Nachricht wieder deaktivieren.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.6 „Anlernmodus starten“",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 5.5.3.",
+  "next_context": "Danach beginnt Abschnitt 5.7 zum Wiederfinden des Fahrzeugs.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b6a8342bd84ad63c426df3455cbec19a86fe1a7df0aed2fef57f0d6649ec1168",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 48): Der Sachverhalt stimmt überein. Die englische Fassung benennt den Modus auf derselben Seite jedoch zweifach – in Überschrift und Fließtext anders als im Befehl (DSC-091). Die Quelle sagt in keiner Fassung, was geschieht, wenn der Modus aktiv bleibt; eine Zeitbegrenzung wird nicht genannt. Die Befehlszeichenfolgen werden nach BLK-005 nicht wiedergegeben.",
+  "discrepancy_refs": ["DSC-091"]
+}

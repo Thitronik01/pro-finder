@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S04-SCHALTARTEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "ausgaenge",
+  "title": "Drei Arten, einen Ausgang zu schalten",
+  "body_md": "Die Quelle nennt drei Schaltarten:\n\n- dauerhaft eingeschaltet, bis der Befehl aufgehoben wird,\n- als Impuls für eine Sekunde,\n- für eine frei wählbare Zeit.\n\nWie die Ausgänge per Kurznachricht gesteuert werden, beschreibt die Quelle in einem eigenen Abschnitt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.4, Aufzählung und roter Hinweiskasten",
+  "prev_context": "Davor stehen die Belastungsgrenzen der Ausgänge.",
+  "next_context": "Danach beginnt Abschnitt 1.5 zur optionalen GPS-Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a80bb0920cd81e9dc6e3f6add886c774fd6c1b4add30dfede6cbb4f8eea505c3",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 35): Die drei Schaltarten stimmen überein. Der rote Hinweiskasten verweist in beiden Fassungen auf denselben Abschnitt, die englische nennt dabei jedoch den Titel eines anderen Abschnitts (DSC-015); der Titel wird deshalb hier nicht zitiert.",
+  "discrepancy_refs": ["DSC-015"]
+}

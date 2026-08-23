@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S02-POSITION-NUTZEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Positionsangabe zum Wiederfinden nutzen",
+  "body_md": "Die in den Meldungen enthaltenen Positionsangaben lassen sich in Kartenprogramme und Navigationsgeräte übertragen. Je nach Kartenart zeigen sie den Standort des Fahrzeugs laut Quelle oftmals bis auf die Hausnummer genau. Mit einem Smartphone lässt sich stattdessen eine Positionsabfrage mit einem anklickbaren Verweis durchführen. Nach einer Diebstahlmeldung lassen sich jederzeit weitere Statusberichte anfordern.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.7 „Fahrzeug wiederfinden“, erste drei Absätze",
+  "prev_context": "Davor steht der Anlernmodus.",
+  "next_context": "Danach folgt das Verhalten ohne GPS-Empfang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b96ac33642fbd836dea94bc7a1756566c01387e27e7b0ab7c457ab3b9d1871a8",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 48, „Retrieving the vehicle“): sachgleich, einschließlich der Angabe zur Hausnummergenauigkeit. Diese Angabe ist in beiden Fassungen unbelegt: Weder wird eine Genauigkeit in Metern genannt noch eine Bedingung, unter der sie gilt. Sie wird deshalb ausdrücklich als Aussage der Quelle gekennzeichnet.",
+  "discrepancy_refs": []
+}

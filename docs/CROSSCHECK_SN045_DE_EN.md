@@ -34,37 +34,36 @@ zwischen den Abschnitten 2.8 und Kapitel 5 auf 23.
 
 | Kapitel / Abschnitt              | DE PDF | DE intern | EN PDF | EN intern | Versatz | Geprüft  |
 | -------------------------------- | -----: | --------: | -----: | --------: | ------: | -------- |
-| Haftungsausschluss, Verwendung   |      5 |         3 |     29 |         3 |      24 | –        |
-| Lieferumfang                     |      6 |         4 |     30 |         4 |      24 | –        |
-| 1 Montage, 1.1 Montageort        |      7 |         5 |     31 |         5 |      24 | –        |
-| 1.2 Anschlüsse und Anzeigen      |      8 |         6 |     32 |         6 |      24 | –        |
-| 1.3 Betriebsart auswählen        |      9 |         7 |     33 |         7 |      24 | Fußzeile |
-| Tabelle der Betriebsarten        |     10 |         8 |     34 |         8 |      24 | Fußzeile |
-| 1.4 Modul anschließen, 1.5/1.5.1 |     11 |         9 |     35 |         9 |      24 | Fußzeile |
-| 1.5.2 GPS-Antenne, 1.5.3         |     12 |        10 |     36 |        10 |      24 | Fußzeile |
+| Haftungsausschluss, Verwendung   |      5 |         3 |     29 |         3 |      24 | **voll** |
+| Lieferumfang                     |      6 |         4 |     30 |         4 |      24 | **voll** |
+| 1 Montage, 1.1 Montageort        |      7 |         5 |     31 |         5 |      24 | **voll** |
+| 1.2 Anschlüsse und Anzeigen      |      8 |         6 |     32 |         6 |      24 | **voll** |
+| 1.3 Betriebsart auswählen        |      9 |         7 |     33 |         7 |      24 | **voll** |
+| Tabelle der Betriebsarten        |     10 |         8 |     34 |         8 |      24 | **voll** |
+| 1.4 Modul anschließen, 1.5/1.5.1 |     11 |         9 |     35 |         9 |      24 | **voll** |
+| 1.5.2 GPS-Antenne, 1.5.3         |     12 |        10 |     36 |        10 |      24 | **voll** |
 | 2 Programmieren, 2.1, 2.2        |     13 |        11 |     37 |        11 |      24 | **voll** |
 | 2.3 App, 2.4 Aktivieren, 2.5     |     14 |        12 |     38 |        12 |      24 | **voll** |
 | 2.6, 2.7, 2.8 Einleitung         |     15 |        13 | **39** |    **13** |      24 | **voll** |
 | 2.8 Syntaxgrafik                 |     16 |        14 | _(39)_ |    _(13)_ |       – | **voll** |
 | Beispieltabelle, 2.9             |     17 |        15 |     40 |        14 |      23 | **voll** |
-| 3 Betriebszustände (Status-LED)  |     18 |        16 |     41 |        15 |      23 | Fußzeile |
-| 4 Berichte und Meldungen         |     19 |        17 |     42 |        16 |      23 | –        |
-| 4 Fortsetzung                    |     20 |        18 |  43+44 |     17+18 |       – | –        |
-| 5 Funktionen, 5.1, 5.2           |     21 |        19 |     45 |        19 |      24 | –        |
-| 5.3 Statusbericht, 5.4 Position  |     22 |        20 |     46 |        20 |      24 | –        |
-| 5.5.1 bis 5.5.3 Ausgänge         |     23 |        21 |     47 |        21 |      24 | –        |
-| 5.6 Anlernmodus, 5.7             |     24 |        22 |     48 |        22 |      24 | –        |
-| 6 Sonstiges, technische Daten    |     25 |        23 |     49 |        23 |      24 | –        |
+| 3 Betriebszustände (Status-LED)  |     18 |        16 |     41 |        15 |      23 | **voll** |
+| 4 Berichte und Meldungen         |     19 |        17 |     42 |        16 |      23 | **voll** |
+| 4 Fortsetzung                    |     20 |        18 |  43+44 |     17+18 |       – | **voll** |
+| 5 Funktionen, 5.1, 5.2           |     21 |        19 |     45 |        19 |      24 | **voll** |
+| 5.3 Statusbericht, 5.4 Position  |     22 |        20 |     46 |        20 |      24 | **voll** |
+| 5.5.1 bis 5.5.3 Ausgänge         |     23 |        21 |     47 |        21 |      24 | **voll** |
+| 5.6 Anlernmodus, 5.7             |     24 |        22 |     48 |        22 |      24 | **voll** |
+| 6 Sonstiges, technische Daten    |     25 |        23 |     49 |        23 |      24 | **voll** |
 
 **Prüfstand der Spalte „Geprüft"**
 
 - **voll** – beide Seiten bei 200 dpi gerendert und Satz für Satz, Zeile für Zeile
-  gegeneinander gelesen (2026-08-23).
-- **Fußzeile** – die interne Seitenzahl wurde am gerenderten Ausschnitt der englischen
-  Seite abgelesen; der Inhalt ist noch nicht gegengelesen.
-- **–** – die Paarung ist aus den Seitenrecords in
-  `sources/pages/DOC-IBA-SN045.json` und den dort erfassten Kapitelüberschriften
-  abgeleitet, aber noch nicht am Rendering bestätigt.
+  gegeneinander gelesen (2026-08-23). Strittige Einzelwerte zusätzlich bei 400 bis 500 dpi
+  nachgerendert.
+
+**Alle 21 Seitenpaare sind vollständig gegengelesen.** Damit ist der deutsche Sprachteil von
+DOC-IBA-SN045 durchgängig gegen eine zweite, unabhängige Quelle geprüft.
 
 ## Die beiden Sprungstellen
 
@@ -93,7 +92,14 @@ typografisch.
 Kein Segment musste wegen eines eigenen Lesefehlers korrigiert werden; die Extraktion der
 fünf Seiten entstand direkt im Gegenlesen.
 
-## Vorgehen für die restlichen Seiten
+## Vorgehen für die nächsten Abschnitte
+
+Der deutsche Teil ab SN-045 ist abgeschlossen. Dieselbe Methode lässt sich als Nächstes auf
+DOC-BMA-SN044 außerhalb der Seiten 3–18 anwenden – dort steht mit dem englischen Teil
+(Seiten 20–36) ebenfalls eine Gegenquelle bereit – oder auf den englischen Teil ab SN-045,
+der dann seinerseits gegen den bereits validierten deutschen Master gelesen wird.
+
+## Vorgehen im Einzelnen
 
 1. Seitenpaar über die Kapitelüberschrift aus dieser Tabelle nehmen, nie über einen festen
    Versatz.

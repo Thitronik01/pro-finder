@@ -205,7 +205,23 @@ beziehungsweise Softwarestände ca. 21 mA der Sollwert? Welche Konformitätsanga
 für die Generation bis SN-044? Ist die 12-V-Angabe nur der typische Fahrzeuganschluss
 innerhalb des zulässigen Bereichs 9–30 V?
 
-_Beleg: DSC-020, DSC-069_
+**Nachtrag 2026-08-23 – der Konflikt steht auch innerhalb der neueren Generation.** Die
+Gegenprüfung der deutschen Seite 25 gegen die englische Seite 49 von DOC-IBA-SN045 (dieselbe
+Auflage, dieselbe interne Seite 23) hat ergeben:
+
+| Fassung ab SN-045      | Stromaufnahme im Normalbetrieb |
+| ---------------------- | ------------------------------ |
+| Deutscher Teil, S. 25  | ca. 16–21 mA                   |
+| Englischer Teil, S. 49 | approx. 21 mA                  |
+
+Hier widersprechen sich nicht zwei Dokumente, sondern **zwei Sprachfassungen desselben
+Dokuments**. Die Zeile darüber (Netzsuche, ca. 37 mA) stimmt dagegen überein, ebenso alle
+übrigen technischen Werte einschließlich der Richtlinie 2014/53/EU. Belegt bei 400 dpi.
+
+**Die zusätzliche Frage:** Gilt ab SN-045 der Bereich oder der Einzelwert – und ist die
+englische Angabe eine Vereinfachung oder eine Korrektur?
+
+_Beleg: DSC-020, DSC-069, DSC-088_
 
 ---
 
@@ -670,6 +686,11 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | **bis SN-044:** alle vier falschen Querverweise des deutschen Teils sind wörtlich in den englischen übernommen – Vorlagenfehler                                                                              | DSC-055, S. 28, 30, 31, 33      |
 | **ab SN-045:** die englische Fassung verbietet in 2.1 die Multi-Operator-SIM-Karte und nennt technische Kartenanforderungen; der deutsche Master schweigt dazu                                               | DSC-086, S. 13 und 37           |
 | **ab SN-045:** die deutsch-englische Seitenverschiebung ist geklärt – keine übersprungene Fußzeilennummer, sondern ein Umbruch bei 2.8, den Kapitel 4 wieder ausgleicht                                      | DSC-021, S. 15–20 und 39–44     |
+| **ab SN-045:** Betriebsart D – der deutsche Master nennt den Produktnamen doppelt und lässt einen Bindesatz aus; die englische Fassung ist an dieser Stelle korrekt                                          | DSC-087, S. 10 und 34           |
+| **ab SN-045:** Stromaufnahme im Normalbetrieb deutsch als Bereich, englisch als Einzelwert – innerhalb derselben Auflage                                                                                     | DSC-088, S. 25 und 49           |
+| **ab SN-045:** die englische Statusbericht-Beispielblase führt zwei Messeingänge in einer Zeile zusammen und zeigt vier statt fünf Spannungszeilen                                                           | DSC-089, S. 42                  |
+| **ab SN-045:** die Gerätemeldung bei fehlender Position lautet deutsch und englisch verschieden – mindestens eine der beiden Zeichenfolgen ist im Feld nicht auffindbar                                      | DSC-090, S. 22 und 46           |
+| **ab SN-045:** die englische Fassung benennt den Anlernmodus auf einer Seite zweifach – Überschrift und Befehl passen nicht zusammen                                                                         | DSC-091, S. 48                  |
 | **bis SN-044:** die englische Konformitätserklärung nennt eine nicht existierende „directive 1995/5/EG" (deutsch: 1999/5/EG)                                                                                 | DSC-071, S. 36                  |
 | **bis SN-044:** der Verweis „(see 2.1, Fig. 1)" nummeriert eine Abbildung, die es nicht gibt – keine der neun trägt eine Nummer                                                                              | DSC-068, S. 22, 30, 31          |
 | **bis SN-044:** der französische Teil enthält sinnverändernde Übersetzungsfehler; die früher hier zugeordnete feste Kabellänge ist nach 400-dpi-Gegenprüfung dagegen ein Sprachwiderspruch DE/FR/SV gegen EN | DSC-073, S. 3/21/38/42/44/55    |

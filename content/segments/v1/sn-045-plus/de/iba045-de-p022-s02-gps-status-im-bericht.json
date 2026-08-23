@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S02-GPS-STATUS-IM-BERICHT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Was der Bericht ohne gültige Position enthält",
+  "body_md": "Der Statusbericht überträgt zusätzlich den GPS-Status. Empfängt der Pro-finder eine gültige Position, wird nur diese angezeigt. Wird keine gültige Position empfangen, weist der Bericht darauf hin und sendet trotzdem die **zuletzt** gültige Position. Außerdem nennt er den Zustand beider Ausgänge und die Umgebungstemperatur in unmittelbarer Nähe des Geräts.\n\nWichtig: Eine zuletzt gültige Position ist nicht der aktuelle Standort. Die Quelle nennt kein Höchstalter und keine Genauigkeit dafür.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.3, Absatz zum GPS-Status",
+  "prev_context": "Davor stehen die beiden Wege, einen Statusbericht anzufordern.",
+  "next_context": "Danach beginnt Abschnitt 5.4 zur Positionsabfrage.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:07ead215c91a64444ec529f3f55c7e4b985e30c34436966fdfa1574fde0f08bf",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 46): Der Sachverhalt stimmt überein. Die im Bericht erscheinende Zeichenfolge lautet jedoch je Fassung anders – deutsch ein Hinweis auf fehlenden GPS-Empfang, englisch ein Hinweis auf eine fehlende Position (DSC-090). Keine der beiden Zeichenfolgen wird deshalb als Erkennungsmerkmal wiedergegeben.",
+  "discrepancy_refs": ["DSC-090"]
+}

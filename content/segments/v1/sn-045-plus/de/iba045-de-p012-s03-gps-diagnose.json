@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S03-GPS-DIAGNOSE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "anschluesse",
+  "title": "Funktion der GPS-Antenne prüfen",
+  "body_md": "Um zu prüfen, ob GPS-Daten empfangen werden, stellen Sie den Betriebsartenschalter auf die Diagnosestellung. Die Status-LED zeigt dann den Zustand des GPS-Empfangs:\n\n| Anzeige | Bedeutung |\n| --- | --- |\n| leuchtet rot | GPS nicht angeschlossen |\n| blinkt gelb | GPS-Daten werden empfangen, aber ohne gültige Position. Blinkt die Anzeige auch nach fünf Minuten noch, sitzt die Antenne an einer Stelle ohne GPS-Empfang oder das Fahrzeug steht überdacht. |\n| leuchtet grün | Die Einbauposition der GPS-Antenne ist in Ordnung. |\n\nStellen Sie den Schalter danach zurück auf die Ausgangsposition. Leuchtet die Anzeige dann rot, ist noch keine SIM-Karte eingesetzt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.3 „Funktion der GPS-Antenne prüfen“, dreizeilige Tabelle und Folgeabsatz",
+  "prev_context": "Davor steht der Speichervorgang der Satellitendaten.",
+  "next_context": "Danach folgt der Absatz zu GPS-Reflexionen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e63b246a39fd80ba60f1e9749a2541d46da5628e728dceac401fb4ced20c9346",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 36, „Checking the function of the GPS antenna“): Alle drei Zeilen und der Folgeabsatz stimmen überein, einschließlich der fünf Minuten. Die Spaltenüberschriften wurden ergänzt. Die Zustände werden in beiden Fassungen **allein** über die Farbe unterschieden; das ist eine Zugänglichkeitsgrenze des Geräts, keine der Anleitung (Rückfrage 12).",
+  "discrepancy_refs": []
+}

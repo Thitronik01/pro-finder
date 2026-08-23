@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S04-AUSGAENGE-EINLEITUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "ausgaenge",
+  "title": "Zwei getrennt steuerbare Ausgänge",
+  "body_md": "Der Pro-finder besitzt zwei getrennt voneinander steuerbare Ausgänge. Sie lassen sich dauerhaft schalten, als Impuls für eine Sekunde oder für eine frei wählbare Zeit.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.5, Einleitungsabsätze",
+  "prev_context": "Davor steht die Positionsabfrage mit dem Smartphone.",
+  "next_context": "Danach folgen auf der nächsten Seite die drei Unterabschnitte 5.5.1 bis 5.5.3.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a963db48eea8037e694053dbe969ad06c0ce4cc2dfa50ea7f19b9d15769f5714",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 46): sachgleich. Die englische Abschnittsüberschrift ist hier wortgleich mit der von 5.1 und benennt damit nicht den Inhalt (DSC-015); der Titel wird nicht zitiert.",
+  "discrepancy_refs": ["DSC-015"]
+}

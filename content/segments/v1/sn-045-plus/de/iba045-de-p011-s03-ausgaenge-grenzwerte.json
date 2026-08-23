@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S03-AUSGAENGE-GRENZWERTE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "ausgaenge",
+  "title": "Belastungsgrenzen der beiden Ausgänge",
+  "body_md": "Pin 6 und Pin 7 sind Transistorausgänge. Sie liefern 12 V und dürfen mit 500 mA belastet werden. Für Verbraucher, die mehr als 500 mA benötigen, muss ein Relais verwendet werden; die Quelle verlangt hochwertige Kfz-Relais mit Freilaufdiode. Bei Überlastung erlischt laut Quelle die Garantie.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.4, dritter Absatz",
+  "prev_context": "Davor steht der Anschluss der Alarmanlage.",
+  "next_context": "Danach folgt die Aufzählung der drei Schaltarten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d2dd2535de1f5f483f599d354545a6ee6da33c0ed242a6ac44a5571f84b93ce3",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 35): sachgleich, einschließlich 12 V, 500 mA, Relaisforderung, Freilaufdiode und Garantieverlust. Keine der beiden Fassungen nennt einen Kurzschluss- oder Übertemperaturschutz, eine Ruhestellung nach dem Neustart oder eine zulässige Lastart – das bleibt eine Lücke.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S01-TECHNISCHE-DATEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "technische-daten",
+  "title": "Technische Daten",
+  "body_md": "| Angabe | Wert laut deutscher Fassung |\n| --- | --- |\n| Spannungsversorgung | 9–30 V |\n| Stromaufnahme bei der Netzsuche | ca. 37 mA |\n| Stromaufnahme im Normalbetrieb | siehe gesonderten Hinweis – die Fassungen weichen ab |\n| Sendefrequenz | 2G/3G/4G (LTE) |\n| 2G-Bänder | Quad |\n| 3G-Bänder | 1, 2, 5, 8 |\n| 4G-Bänder | 1, 2, 3, 4, 5, 7, 8, 18, 19, 20, 26, 28 |\n| Anzahl Zielrufnummern | 10 |\n| Schnittstellen | GPS/QZSS |\n| Ausgänge | 2 × 12 V / 500 mA |\n| Temperaturbereich | −10 bis +80 °C |\n| SIM-Format | Nano-SIM |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.1 „Technische Daten“, Werteliste",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 5.7.",
+  "next_context": "Danach folgen die Entsorgungshinweise.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a063da391027da9f9e4e202a0374f9ec9d765283dddc0c09ced3daeb08b8ea36",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 49, „Technical data“): Alle Zeilen bis auf eine stimmen überein – Spannungsversorgung, Netzsuchstrom, Sendefrequenz, alle Bänder, Anzahl der Zielrufnummern, Schnittstellen, Ausgänge, Temperaturbereich und SIM-Format. Abweichend ist allein die Stromaufnahme im Normalbetrieb (DSC-088); sie steht deshalb als eigener Hinweis. Die Spaltenüberschriften wurden ergänzt.",
+  "discrepancy_refs": ["DSC-088", "DSC-069"]
+}

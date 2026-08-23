@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P005-S01-HAFTUNGSAUSSCHLUSS",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Der Pro-finder meldet einen Diebstahl, er verhindert ihn nicht",
+  "body_md": "Wie jedes Ortungssystem kann der Pro-finder einen erfolgten oder versuchten Diebstahl melden, aber nicht verhindern. Verhalten Sie sich deshalb weiterhin umsichtig: Lassen Sie keine Wertgegenstände offen oder leicht zugänglich im Fahrzeug und schließen Sie das Fahrzeug beim Verlassen immer ab. Der Hersteller übernimmt keine Haftung für entwendete Wertgegenstände, für den Diebstahl des Fahrzeugs oder für Schäden durch Einbruch.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt „Haftungsausschluss“, erster Absatz",
+  "prev_context": null,
+  "next_context": "Danach folgt der Absatz zur Starterbatterie.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:551fd32a3fcb67ce36ab9871f6f7c896440e5981f31fc2b6021321ca5181ffb3",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 29, „Disclaimer“): sachgleich. Kein eigener Lesefehler.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P024-S03-OHNE-GPS-EMPFANG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Verhalten ohne GPS-Empfang",
+  "body_md": "Steht das Fahrzeug in einem Gebäude oder an einem anderen Ort ohne GPS-Empfang, wartet der Pro-finder bis zu zehn Minuten auf eine gültige Position. Wird auch dann keine empfangen, versendet er den Statusbericht mit der zuletzt empfangenen Position.\n\nWeil die Position bei einem Alarm und laufender Lichtmaschine fortlaufend abgefragt wird, stammt diese zuletzt empfangene Position aus dem Moment unmittelbar vor dem Abbruch des GPS-Empfangs. Die in der Meldung genannte Uhrzeit gehört immer zu dieser zuletzt empfangenen Position – nicht zum Versandzeitpunkt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 24,
+  "source_page_end": 24,
+  "source_region": "Abschnitt 5.7, letzte beide Absätze",
+  "prev_context": "Davor steht die Nutzung der Positionsangabe.",
+  "next_context": "Danach beginnt auf der nächsten Seite Kapitel 6.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d3fcdf264b7869ccc788b2b3e3fdd7e49f8784339028b24379cd97e67861ef1f",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 48): sachgleich, einschließlich der zehn Minuten und des Bezugs der Uhrzeit auf die Position statt auf den Versand. Was „laufende Lichtmaschine“ messtechnisch bedeutet, sagt keine der beiden Fassungen; ebenso wenig, wie alt die zuletzt empfangene Position höchstens sein darf.",
+  "discrepancy_refs": []
+}

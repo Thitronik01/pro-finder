@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S01-ANTENNE-ANSCHLIESSEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "GPS-Antenne nur im spannungsfreien Zustand anschließen",
+  "body_md": "Zum Anschließen der optionalen GPS-Antenne muss der Pro-finder spannungsfrei sein. Ziehen Sie dazu den Hauptkabelbaum ab und stecken Sie den Antennenstecker in die vierpolige Buchse. Anschließend kann der Hauptkabelbaum wieder eingesteckt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.2 „GPS-Antenne anschließen“, erster Absatz",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 1.5.1.",
+  "next_context": "Danach folgt die Anforderung an die Betriebsspannung nach der Installation.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:2f0d4cfd3134012307e0908ba5f43e2c0c985102b55d4919ad0a219bd6462776",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 36, „Connecting the GPS antenna“): sachgleich. Der Begriff „Hauptkabelbaum“ wird in keiner der beiden Fassungen erklärt, obwohl mehrere Bedienschritte daran hängen (DSC-050).",
+  "discrepancy_refs": ["DSC-050"]
+}

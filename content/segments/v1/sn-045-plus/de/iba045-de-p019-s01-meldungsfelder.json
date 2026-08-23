@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S01-MELDUNGSFELDER",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "meldungen",
+  "title": "Felder, die eine Meldung enthalten kann",
+  "body_md": "Je nach Vorfall und Schalterstellung kann eine Meldung folgende Angaben enthalten:\n\n| Feld | Bedeutung |\n| --- | --- |\n| GPS | Steht die Antenne im Standby, wird sie bei einem Ereignis selbsttätig reaktiviert. |\n| UTC | Uhrzeit des Vorfalls in koordinierter Weltzeit. |\n| Pos | Aktuelle Fahrzeugposition; die Darstellungsform hängt vom mobilen Endgerät ab. |\n| Geschwindigkeit | Aktuelle Geschwindigkeit des Fahrzeugs. |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Feldliste über den Meldungsbeispielen",
+  "prev_context": "Davor endet auf der vorigen Seite Kapitel 3.",
+  "next_context": "Danach folgen die Meldungsbeispiele.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8ff1ac8c93b09a2511a3c716702d9d2d5553355bac342eb12e7fc1231b7d52d6",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 42, „Reports, messages and warnings“): Alle vier Felder stimmen überein. Die Spaltenüberschriften wurden ergänzt. Die Quelle sagt in keiner Fassung, welche Felder in welcher Meldung zwingend vorkommen (Rückfrage 11).",
+  "discrepancy_refs": []
+}

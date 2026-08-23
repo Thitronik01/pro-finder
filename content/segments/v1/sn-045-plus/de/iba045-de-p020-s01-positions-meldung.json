@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S01-POSITIONS-MELDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Positionsmeldung für Smartphones",
+  "body_md": "Auf eine Positionsabfrage antwortet der Pro-finder mit einer Meldung, die für Smartphones gedacht ist. Sie enthält einen Verweis; wird er geöffnet, erscheint eine Kartenansicht der aktuellen Fahrzeugposition.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Positions-SMS für Smartphones“",
+  "prev_context": "Davor endet auf der vorigen Seite die Spannungswarnung.",
+  "next_context": "Danach folgt die Meldung mit Eingabehilfen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:4ee59cec4e061a6971034f4efa572e5ba3520935ad87a6e26fa34506f01c12d7",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 43, „Position SMS for smartphones“): sachgleich. Der Verweis selbst wird nach BLK-004 nicht wiedergegeben.",
+  "discrepancy_refs": []
+}

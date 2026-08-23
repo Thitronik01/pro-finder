@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S03-GEOFENCING-PRINZIP",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "geofencing",
+  "title": "Was Geofencing bedeutet",
+  "body_md": "Beim Geofencing wird ein virtueller Zaun um das Fahrzeug gelegt. Verlässt das Fahrzeug anschließend den von der Quelle genannten Umkreis um seinen ursprünglichen Standort, erhalten Sie eine Diebstahlmeldung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.2 „Geofencing“, erster Absatz",
+  "prev_context": "Davor steht der Hinweis auf berechtigte Nummern.",
+  "next_context": "Danach folgt, in welchen Schalterstellungen sich Geofencing schalten lässt.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:2bb2eb1bad59abe8e9fd1bc99a89be7d7655fc937e813315198c152cefe6253a",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 45): sachgleich. Beide Fassungen nennen denselben Umkreis; er wird nach BLK-007 und wegen der drei über die Generationen hinweg registrierten Werte (DSC-078, Rückfrage 14) nicht wiedergegeben.",
+  "discrepancy_refs": ["DSC-078"]
+}

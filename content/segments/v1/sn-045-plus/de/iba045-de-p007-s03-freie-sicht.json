@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S03-FREIE-SICHT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "montageort",
+  "title": "Freie Sicht zum Satelliten",
+  "body_md": "Zum Satelliten muss freie Sicht bestehen. Kunststoff, Glas und Holz werden vom GPS-Signal durchdrungen und beeinträchtigen diese Sicht nicht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1, dritter Absatz",
+  "prev_context": "Davor steht die Vorgabe zur Lage im Fahrzeug.",
+  "next_context": "Danach folgt der Absatz zur optionalen externen GPS-Antenne.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a0145cdb6277cf1c4264fed33d6a195618493c048548fb4488a3de6296e7a932",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 31): sachgleich. Beide Fassungen setzen „freie Sicht“ beziehungsweise „unobstructed view“ in Anführungszeichen und lassen offen, welche Materialien das Signal abschirmen – genannt sind nur die durchlässigen. Die Lücke besteht in beiden Fassungen.",
+  "discrepancy_refs": []
+}

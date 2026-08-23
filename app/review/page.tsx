@@ -239,6 +239,45 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                 P0-07 in der Warteschlange öffnen
               </Link>
             </li>
+            <li>
+              <strong>P0-08:</strong> vierzehn Segmente zu Montage, Anschluss und elektrischen
+              Grenzwerten ab SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-08-MONTAGE-ANSCHLUSS-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-08">
+                P0-08 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-09:</strong> zehn Segmente zu Betriebsarten, GPS-Diagnose und Status-LED ab
+              SN-045. Dossier: <code>docs/review-packets/P0-09-BETRIEBSARTEN-GPS-LED-SN045.md</code>
+              .{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-09">
+                P0-09 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-10:</strong> elf Segmente zu Meldungen, Alarmen und Spannungswarnung ab
+              SN-045. Dossier: <code>docs/review-packets/P0-10-MELDUNGEN-ALARME-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-10">
+                P0-10 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-11:</strong> elf Segmente zu Geofencing, Statusbericht und
+              Positionsbewertung ab SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-11-GEOFENCING-POSITION-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-11">
+                P0-11 in der Warteschlange öffnen
+              </Link>
+            </li>
+            <li>
+              <strong>P0-12:</strong> sieben Segmente zu Ausgangssteuerung und technischen Daten ab
+              SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-12-AUSGAENGE-TECHNISCHE-DATEN-SN045.md</code>.{' '}
+              <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-12">
+                P0-12 in der Warteschlange öffnen
+              </Link>
+            </li>
           </ul>
         </aside>
 

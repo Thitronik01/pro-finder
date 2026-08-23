@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S04-GASALARM",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Gasalarm",
+  "body_md": "Meldet ein angelerntes Gaswarngerät über die gekoppelte Alarmanlage einen Gasalarm, versendet der Pro-finder eine entsprechende Meldung. Auch danach ruft er zusätzlich die Masternummer an.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Gasalarm“ samt rotem Zusatz",
+  "prev_context": "Davor steht die Einbruchmeldung.",
+  "next_context": "Danach folgt der manuelle Alarm.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:baaaccae6346decbe3762aebd4fc9c806075d66254875206d108be1df126d7df",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 43, „Gas alarm“): sachgleich. Keine der beiden Fassungen sagt, was geschieht, wenn der Rückruf nicht angenommen wird – das bleibt bei einem Gasalarm eine sicherheitsrelevante Lücke.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S03-EINBRUCHMELDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Einbruchmeldung und Rückruf an die Masternummer",
+  "body_md": "Eine Einbruchmeldung erhalten Sie immer dann, wenn die gekoppelte Alarmanlage einen Alarm meldet. Nach dem Versenden der Meldung ruft der Pro-finder zusätzlich die Masternummer an.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Einbruchmeldung“ samt rotem Zusatz",
+  "prev_context": "Davor steht die Meldung mit Eingabehilfen.",
+  "next_context": "Danach folgt der Gasalarm.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:beb4c3d951734863586c93a81e2778795bd3b2d9c665510159296626467b428c",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 43, „Intrusion report“): sachgleich, einschließlich des roten Zusatzes zum Rückruf. Die deutsche Beispielblase enthält eine nicht geschlossene Klammer (DSC-018); der Fließtext ist davon nicht betroffen.",
+  "discrepancy_refs": ["DSC-018"]
+}

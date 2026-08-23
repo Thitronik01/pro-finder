@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S04-SPANNUNGSWARNUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Spannungswarnung und Standby",
+  "body_md": "Sinkt die Versorgungsspannung dauerhaft unter 11,2 V, wechselt der Pro-finder in den Standby-Modus, um die Batterie zu schonen, und versendet dazu eine Meldung. Erst wenn die Spannung wieder über 12,5 V steigt, kehrt er in den Normalbetrieb zurück. In einer Betriebsart entfällt diese Warnung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Spannungswarnung“",
+  "prev_context": "Davor steht die Diebstahlmeldung.",
+  "next_context": "Danach folgen auf der nächsten Seite weitere Meldungstypen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1a539e37cf6d91a925bd8807d3130be72d972bd7a6ebc20a7f05f6dc8056715b",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 42, „Voltage warning“): sachgleich, einschließlich beider Schwellen und des Ausschlusses einer Betriebsart. Die englische Fassung setzt die Werte als „11.2V“ und „12.5V“ mit Punkt und ohne Leerzeichen (DSC-019); die Zahlen sind dieselben. Was der Standby-Modus für die Ortungsfunktion bedeutet, sagt keine Fassung.",
+  "discrepancy_refs": ["DSC-019"]
+}
