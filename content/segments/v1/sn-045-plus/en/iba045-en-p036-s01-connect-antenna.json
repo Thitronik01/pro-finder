@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P036-S01-CONNECT-ANTENNA",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "wire-connections",
+  "title": "Connect the GPS antenna only when de-energised",
+  "body_md": "To connect the optional GPS antenna, Pro-finder must be de-energised. Disconnect the main wiring harness and plug the antenna connector into the four-pin socket. The main wiring harness can then be plugged back in.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 36,
+  "source_page_end": 36,
+  "source_region": "Section 1.5.2, first paragraph",
+  "prev_context": "Section 1.5.1 ends on the previous page.",
+  "next_context": "The requirement on the operating voltage after installation follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6132373a01f660b9296e91b375162a29cfc57ecf0de2c9dde38242ea00e24435",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 12: equivalent in substance. Neither version explains the term “main wiring harness” although several operating steps depend on it (DSC-050).",
+  "discrepancy_refs": ["DSC-050"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P035-S04-SWITCHING-MODES",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "control-outputs",
+  "title": "Three ways to switch an output",
+  "body_md": "The source names three switching modes:\n\n- switched on continuously until the command is taken back,\n- pulsed for one second,\n- switched on for a freely selectable time.\n\nHow the outputs are controlled by text message is described in a separate section of the source.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 35,
+  "source_page_end": 35,
+  "source_region": "Section 1.4, list and red note box",
+  "prev_context": "Before this stand the load limits of the outputs.",
+  "next_context": "Section 1.5 on the optional GPS antenna follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f067b875678a7ead949c2fcd402d6a2523fcdcb1f50443f34e29069bdc9f8511",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 11: the three switching modes match. The red note box refers to the same section in both versions, but the English one gives it the title of a different section (DSC-015); the title is therefore not quoted here. This is an additional occurrence of DSC-015 found during the cross-reading.",
+  "discrepancy_refs": ["DSC-015"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S05-BEISPIELMELDUNGEN-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "meldungen",
+  "title": "Die abgebildeten Beispielmeldungen werden nicht wiedergegeben",
+  "body_md": "Die Quelle zeigt zu jedem Meldungstyp eine Beispielnachricht mit Uhrzeit, Kartenadresse und Positionswerten. Kartenadressen, Koordinaten und vollständige Beispielnachrichten werden in dieser Anleitung nicht wiedergegeben. Was eine Meldung tatsächlich enthält, steht in der Feldliste.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, schwarze Sprechblasen links neben den Erläuterungen",
+  "prev_context": "Davor steht die Feldliste.",
+  "next_context": "Danach folgen die Erläuterungen der einzelnen Meldungstypen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8a9f3e0f1548ae08fdfe13e5cb8175ebf634e4793dd6c8bb692ee863d55efcc2",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 42): Die Sprechblasen sind bis auf die Übersetzung der Meldungsstichwörter identisch und enthalten dieselben Kartenadressen. Die Auslassung folgt BLK-004 und ist kein Quellenunterschied.",
+  "discrepancy_refs": ["DSC-082"]
+}

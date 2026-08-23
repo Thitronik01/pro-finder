@@ -66,12 +66,41 @@ describe('Reviewpriorität', () => {
     expect(reviewPacketId('BMA044-DE-P017-S01-POSITION-IN-KARTEN-NUTZEN')).toBeNull();
   });
 
-  it('deckt alle 41 sicherheitskritischen Segmente mit genau einem Prüfpaket ab', () => {
+  it('ordnet SIM-Vorbereitung und Aktivierung ab SN-045 P0-06 zu', () => {
+    expect(reviewPacketId('IBA045-DE-P013-S04-SIM-VORBEREITEN')).toBe('P0-06');
+    expect(reviewPacketId('IBA045-DE-P014-S04-AKTIVIERUNG-OHNE-APP')).toBe('P0-06');
+    expect(reviewPacketId('IBA045-DE-P013-S05-IPHONE-IMESSAGES')).toBeNull();
+  });
+
+  it('ordnet Zielrufnummern und Programmiernachricht ab SN-045 P0-07 zu', () => {
+    expect(reviewPacketId('IBA045-DE-P015-S03-ZIELRUFNUMMERNARTEN')).toBe('P0-07');
+    expect(reviewPacketId('IBA045-DE-P016-S02-KENNZEICHEN-LUECKE')).toBe('P0-07');
+    expect(reviewPacketId('IBA045-DE-P017-S04-UEBERSCHREIBEN-MASTERNUMMER')).toBe('P0-07');
+    expect(reviewPacketId('IBA045-DE-P017-S02-SIM-EINGELEGT')).toBeNull();
+  });
+
+  it('ordnet Montage und Anschluss ab SN-045 P0-08 bis P0-12 zu', () => {
+    expect(reviewPacketId('IBA045-DE-P007-S04-EXTERNE-ANTENNE-KABEL')).toBe('P0-08');
+    expect(reviewPacketId('IBA045-DE-P010-S01-BETRIEBSARTENTABELLE')).toBe('P0-09');
+    expect(reviewPacketId('IBA045-DE-P020-S06-DIEBSTAHL-ZUBEHOER')).toBe('P0-10');
+    expect(reviewPacketId('IBA045-DE-P022-S02-GPS-STATUS-IM-BERICHT')).toBe('P0-11');
+    expect(reviewPacketId('IBA045-DE-P025-S02-STROMAUFNAHME-LUECKE')).toBe('P0-12');
+    expect(reviewPacketId('IBA045-DE-P005-S01-HAFTUNGSAUSSCHLUSS')).toBeNull();
+  });
+
+  it('ordnet englische Segmente demselben Paket zu wie ihre deutsche Entsprechung', () => {
+    expect(reviewPacketId('IBA045-EN-P034-S01-MODE-TABLE')).toBe('P0-09');
+    expect(reviewPacketId('IBA045-EN-P049-S02-CURRENT-GAP')).toBe('P0-12');
+    expect(reviewPacketId('IBA045-EN-P046-S02-GPS-STATUS')).toBe('P0-11');
+    expect(reviewPacketId('IBA045-EN-P029-S01-DISCLAIMER')).toBeNull();
+  });
+
+  it('deckt alle 181 sicherheitskritischen Segmente mit genau einem Prüfpaket ab', () => {
     const p0Segments = loadAllContentSegments().filter(
       ({ segment }) => reviewPriority(segment.safety_class) === 'P0',
     );
 
-    expect(p0Segments).toHaveLength(41);
+    expect(p0Segments).toHaveLength(181);
     for (const { file, segment } of p0Segments) {
       expect(reviewPacketId(segment.segment_key), file).not.toBeNull();
     }

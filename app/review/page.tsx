@@ -1,7 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { loadFixtureReviewData, loadSupabaseReviewData, type ReviewItem } from '@/lib/review-data';
+import {
+  loadFixtureReviewData,
+  loadReferencedDiscrepancyIds,
+  loadSupabaseReviewData,
+  type ReviewItem,
+} from '@/lib/review-data';
 import { createServerSupabaseClient, getSupabasePublicConfig } from '@/lib/supabase/server';
 import { REVIEW_PACKET_IDS, reviewPriorityLabel, type ReviewPriority } from '@/lib/review-priority';
 import { signOut } from './actions';
@@ -22,23 +27,31 @@ function first(value: string | string[] | undefined): string {
   return selected?.trim() ?? '';
 }
 
-function filterItems(
-  items: ReviewItem[],
-  generation: string,
-  status: string,
-  priority: string,
-  packet: string,
-  query: string,
-): ReviewItem[] {
-  const normalizedQuery = query.toLocaleLowerCase('de');
+type QueueFilters = {
+  generation: string;
+  status: string;
+  priority: string;
+  packet: string;
+  language: string;
+  dsc: string;
+  pageStatus: string;
+  query: string;
+};
+
+function filterItems(items: ReviewItem[], filters: QueueFilters): ReviewItem[] {
+  const normalizedQuery = filters.query.toLocaleLowerCase('de');
+  const normalizedDsc = filters.dsc.toUpperCase();
   return items.filter(
     (item) =>
-      (!generation || item.generation === generation) &&
-      (!status || item.status === status) &&
-      (!priority || item.priority === priority) &&
-      (!packet || item.packetId === packet) &&
+      (!filters.generation || item.generation === filters.generation) &&
+      (!filters.status || item.status === filters.status) &&
+      (!filters.priority || item.priority === filters.priority) &&
+      (!filters.packet || item.packetId === filters.packet) &&
+      (!filters.language || item.language === filters.language) &&
+      (!normalizedDsc || item.discrepancyRefs.includes(normalizedDsc)) &&
+      (!filters.pageStatus || item.sourcePageStatus === filters.pageStatus) &&
       (!normalizedQuery ||
-        `${item.title} ${item.key} ${item.sourceLabel} ${item.packetId ?? ''}`
+        `${item.title} ${item.key} ${item.sourceLabel} ${item.packetId ?? ''} ${item.discrepancyRefs.join(' ')}`
           .toLocaleLowerCase('de')
           .includes(normalizedQuery)),
   );
@@ -88,8 +101,22 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
   const status = first(params.status);
   const priority = first(params.priority);
   const packet = first(params.packet);
+  const language = first(params.language);
+  const dsc = first(params.dsc);
+  const pageStatus = first(params.pageStatus);
   const query = first(params.q);
-  const filteredItems = filterItems(data.items, generation, status, priority, packet, query);
+  const filteredItems = filterItems(data.items, {
+    generation,
+    status,
+    priority,
+    packet,
+    language,
+    dsc,
+    pageStatus,
+    query,
+  });
+  const languages = [...new Set(data.items.map((item) => item.language))].sort();
+  const discrepancyIds = data.mode === 'fixtures' ? loadReferencedDiscrepancyIds() : [];
   const drafts = data.items.filter((item) => item.placeholder).length;
   const safetyOpen = data.items.filter(
     (item) => item.safetyClass !== 'normal' && item.status !== 'freigegeben',
@@ -189,40 +216,75 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
             <li>
               <strong>P0-01:</strong> sechs Segmente zu Elektrik, Ausgängen, GPS und technischen
               Daten. Dossier: <code>docs/review-packets/P0-01-ELEKTRIK-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-01">
-                P0-01 in der Warteschlange öffnen
-              </Link>
+              <Link href="/review/packet/P0-01">P0-01 als Paket öffnen</Link>
             </li>
             <li>
               <strong>P0-02:</strong> elf Segmente zu SIM, PIN, Zielrufnummern, Programmierung,
               Löschen und Status-LED. Dossier:{' '}
               <code>docs/review-packets/P0-02-SIM-ZIELRUFNUMMERN-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-02">
-                P0-02 in der Warteschlange öffnen
-              </Link>
+              <Link href="/review/packet/P0-02">P0-02 als Paket öffnen</Link>
             </li>
             <li>
               <strong>P0-03:</strong> elf Segmente zu Meldungen, Spannungswarnung, Alarm,
               Berechtigung und Geofencing. Dossier:{' '}
               <code>docs/review-packets/P0-03-MELDUNGEN-ALARM-GEOFENCING-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-03">
-                P0-03 in der Warteschlange öffnen
-              </Link>
+              <Link href="/review/packet/P0-03">P0-03 als Paket öffnen</Link>
             </li>
             <li>
               <strong>P0-04:</strong> acht Segmente zu Montage, Betriebsarten, GPS-Diagnose und
               Reflexionen. Dossier:{' '}
               <code>docs/review-packets/P0-04-MONTAGE-BETRIEBSARTEN-GPS-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-04">
-                P0-04 in der Warteschlange öffnen
-              </Link>
+              <Link href="/review/packet/P0-04">P0-04 als Paket öffnen</Link>
             </li>
             <li>
               <strong>P0-05:</strong> fünf Segmente zu Ausgangssteuerung und Positionsbewertung.
               Dossier: <code>docs/review-packets/P0-05-AUSGAENGE-POSITION-SN044.md</code>.{' '}
-              <Link href="/review?generation=sn-001-044&priority=P0&packet=P0-05">
-                P0-05 in der Warteschlange öffnen
-              </Link>
+              <Link href="/review/packet/P0-05">P0-05 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-06:</strong> sechs Segmente zu SIM-Vorbereitung und Aktivierung ab SN-045.
+              Dossier: <code>docs/review-packets/P0-06-SIM-AKTIVIERUNG-SN045.md</code>.{' '}
+              <Link href="/review/packet/P0-06">P0-06 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-07:</strong> vierzehn Segmente zu Zielrufnummern, Programmiernachricht und
+              Speicherlöschung ab SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-07-ZIELRUFNUMMERN-SN045.md</code>.{' '}
+              <Link href="/review/packet/P0-07">P0-07 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-08:</strong> 28 Segmente zu Montage, Anschluss und elektrischen Grenzwerten
+              ab SN-045. Dossier: <code>docs/review-packets/P0-08-MONTAGE-ANSCHLUSS-SN045.md</code>.{' '}
+              <Link href="/review/packet/P0-08">P0-08 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-09:</strong> 20 Segmente zu Betriebsarten, GPS-Diagnose und Status-LED ab
+              SN-045. Dossier: <code>docs/review-packets/P0-09-BETRIEBSARTEN-GPS-LED-SN045.md</code>
+              . <Link href="/review/packet/P0-09">P0-09 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-10:</strong> 22 Segmente zu Meldungen, Alarmen und Spannungswarnung ab
+              SN-045. Dossier: <code>docs/review-packets/P0-10-MELDUNGEN-ALARME-SN045.md</code>.{' '}
+              <Link href="/review/packet/P0-10">P0-10 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-11:</strong> 22 Segmente zu Geofencing, Statusbericht und
+              Positionsbewertung ab SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-11-GEOFENCING-POSITION-SN045.md</code>.{' '}
+              <Link href="/review/packet/P0-11">P0-11 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-12:</strong> vierzehn Segmente zu Ausgangssteuerung und technischen Daten
+              ab SN-045. Dossier:{' '}
+              <code>docs/review-packets/P0-12-AUSGAENGE-TECHNISCHE-DATEN-SN045.md</code>.{' '}
+              <Link href="/review/packet/P0-12">P0-12 als Paket öffnen</Link>
+            </li>
+            <li>
+              <strong>P0-13:</strong> vierzehn Segmente aus beiden Kurzanleitungen. Das Paket folgt
+              nicht einem Thema, sondern einem Befund: Das Papier, das dem Gerät beiliegt, sagt an
+              fünf Stellen etwas anderes als das Handbuch derselben Generation. Dossier:{' '}
+              <code>docs/review-packets/P0-13-KURZANLEITUNGEN.md</code>.{' '}
+              <Link href="/review/packet/P0-13">P0-13 als Paket öffnen</Link>
             </li>
           </ul>
         </aside>
@@ -277,6 +339,38 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               ))}
             </select>
           </div>
+          <div>
+            <label htmlFor="filter-language">Sprache</label>
+            <select id="filter-language" name="language" defaultValue={language}>
+              <option value="">Alle</option>
+              {languages.map((code) => (
+                <option key={code} value={code}>
+                  {code}
+                </option>
+              ))}
+            </select>
+          </div>
+          {discrepancyIds.length ? (
+            <div>
+              <label htmlFor="filter-dsc">Registerbezug</label>
+              <select id="filter-dsc" name="dsc" defaultValue={dsc}>
+                <option value="">Alle</option>
+                {discrepancyIds.map((id) => (
+                  <option key={id} value={id}>
+                    {id}
+                  </option>
+                ))}
+              </select>
+            </div>
+          ) : null}
+          <div>
+            <label htmlFor="filter-page-status">Quellseite</label>
+            <select id="filter-page-status" name="pageStatus" defaultValue={pageStatus}>
+              <option value="">Alle</option>
+              <option value="validated">unabhängig gegengeprüft</option>
+              <option value="inspected">nur gesichtet</option>
+            </select>
+          </div>
           <button type="submit">Filter anwenden</button>
           <Link href="/review" className={styles.resetLink}>
             Filter zurücksetzen
@@ -293,7 +387,7 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
             <table className={styles.table}>
               <caption id="queue-caption" className={styles.caption}>
                 Segmente der Warteschlange mit Prüfpaket, Priorität, Gerätegeneration, Sprache,
-                Reviewstatus, Sicherheitsklasse und Quelle
+                Reviewstatus, Sicherheitsklasse, Quelle, Prüfstand der Quellseite und Registerbezug
               </caption>
               <thead>
                 <tr>
@@ -304,13 +398,15 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                   <th scope="col">Status</th>
                   <th scope="col">Sicherheit</th>
                   <th scope="col">Quelle</th>
+                  <th scope="col">Quellseite geprüft</th>
+                  <th scope="col">Registerbezug</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredItems.map((item) => (
                   <tr key={item.key}>
                     <th scope="row">
-                      {item.href ? <Link href={item.href}>{item.title}</Link> : item.title}
+                      <Link href={`/review/segment/${item.key}`}>{item.title}</Link>
                       <span className={styles.itemKey}>{item.key}</span>
                     </th>
                     <td>{item.packetId ?? '—'}</td>
@@ -321,6 +417,12 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
                     <td>{item.status}</td>
                     <td>{item.safetyClass}</td>
                     <td>{item.sourceLabel}</td>
+                    <td>
+                      {item.sourcePageStatus === 'validated'
+                        ? 'unabhängig gegengeprüft'
+                        : (item.sourcePageStatus ?? 'unbekannt')}
+                    </td>
+                    <td>{item.discrepancyRefs.length ? item.discrepancyRefs.join(', ') : '—'}</td>
                   </tr>
                 ))}
               </tbody>

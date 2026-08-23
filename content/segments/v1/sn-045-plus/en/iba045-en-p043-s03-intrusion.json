@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P043-S03-INTRUSION",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "understand-messages",
+  "title": "Intrusion report and callback to the master number",
+  "body_md": "An intrusion report is always received when the connected alarm system reports an alarm. After the message has been sent, Pro-finder additionally calls the master number.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 43,
+  "source_page_end": 43,
+  "source_region": "Chapter 4, explanation of the message type “Intrusion report” with red addition",
+  "prev_context": "Before this stands the help message.",
+  "next_context": "The gas alarm follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:cb099d8343e8d60fbc5aab0eb4d333764243ddebc09920d2f725f0e6b5825bfd",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 20: equivalent in substance, including the red addition about the callback. The example bubble contains an unclosed bracket in both versions (DSC-018); the body text is unaffected.",
+  "discrepancy_refs": ["DSC-018"]
+}

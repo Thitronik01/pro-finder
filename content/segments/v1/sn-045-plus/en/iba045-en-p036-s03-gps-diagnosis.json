@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P036-S03-GPS-DIAGNOSIS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "table",
+  "task_slug": "wire-connections",
+  "title": "Checking the function of the GPS antenna",
+  "body_md": "To check whether GPS data are being received, set the operating mode switch to the diagnosis position. The status LED then indicates the state of GPS reception:\n\n| Indication | Meaning |\n| --- | --- |\n| lights up red | GPS not connected |\n| flashes yellow | GPS data are received, but without a valid position. If it is still flashing after five minutes, the antenna is mounted where GPS reception is impossible, or the vehicle is under a roof. |\n| lights up green | The installation position of the GPS antenna is OK. |\n\nSet the switch back to the starting position afterwards. If the indicator then lights up red, no SIM card has been inserted yet.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 36,
+  "source_page_end": 36,
+  "source_region": "Section 1.5.3, three-row table and following paragraph",
+  "prev_context": "Before this stands the storage of the satellite data.",
+  "next_context": "The paragraph on GPS reflections follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:36d45ba8825740d9cf2b3ececbb807028e22d428e277c2ba6564fe13baa2a4cf",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 12: all three rows and the following paragraph match, including the five minutes. Column headers were added. In both versions the states are distinguished **solely** by colour; that is an accessibility limit of the device, not of the manual.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P041-S01-OPERATING-STATES",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "table",
+  "task_slug": "understand-status-led",
+  "title": "Operating states of the status LED",
+  "body_md": "The source distinguishes nine states. Each is represented by a flashing sequence and a colour:\n\n| Indication | Meaning |\n| --- | --- |\n| flashes red and yellow alternately | network scan, no destination numbers available |\n| flashes red | network scan or no mobile network signal |\n| continuous yellow light | connecting with the modem |\n| continuous red light | SIM card missing or defective |\n| flashes red and green alternately | SIM PIN not deactivated |\n| flashes yellow | signed in, last text message could not be sent |\n| continuous green light | Pro-finder is receiving or sending a text message |\n| flashes yellow and green alternately | signed in, no destination numbers available |\n| flashes green | signed in, destination numbers available |\n\nOnce installation and programming are complete, the indicator flashes green during normal operation.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 41,
+  "source_page_end": 41,
+  "source_region": "Chapter 3, nine rows with flashing graphics and red closing box",
+  "prev_context": "Section 2.9 ends on the previous page.",
+  "next_context": "Chapter 4 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3b5c8309f0f83a9ff5ede0fa2ff9ff0e84d15fcaf99c24601790a1d6daeb81be",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 18: all nine states match in order, colour sequence and meaning, as does the closing box. The English source contains two typesetting errors that do not change the meaning: a missing space and an unclosed bracket (DSC-018); both are corrected in this extraction and the correction is named here rather than made silently. Crucially, the nine states are distinguished **solely** by colour and flashing rhythm, with no text alternative in the graphic – which is why the meaning is spelled out.",
+  "discrepancy_refs": ["DSC-018"]
+}

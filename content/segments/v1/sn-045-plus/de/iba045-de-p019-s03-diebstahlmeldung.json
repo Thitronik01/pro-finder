@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P019-S03-DIEBSTAHLMELDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Die Diebstahlmeldung ist ein stiller Alarm",
+  "body_md": "Eine Diebstahlmeldung erhalten Sie, wenn sich das Fahrzeug bei aktivierter Alarmanlage weiter als der von der Quelle genannte Abstand vom ursprünglichen Standort entfernt. Es handelt sich um einen **stillen** Alarm: Weder Blinker noch Sirene werden aktiviert. Beides lässt sich laut Quelle per Kurznachricht nachträglich einschalten.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Diebstahlmeldung“",
+  "prev_context": "Davor steht der Statusbericht.",
+  "next_context": "Danach folgt die Spannungswarnung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:39b6c9e1a3e1e2072a0f855af58c161815599f9dc13e1e11ac52fe6afc64a838",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 42, „Theft report“): sachgleich, einschließlich des stillen Alarms. Beide Fassungen nennen denselben Abstand; er wird hier nicht wiedergegeben, weil über die Generationen hinweg drei verschiedene Werte im Register stehen (DSC-078, Rückfrage 14) und BLK-007 gilt. Der englische Querverweis ist doppelt gesetzt (DSC-089) und führt zudem ins Leere (DSC-041).",
+  "discrepancy_refs": ["DSC-041", "DSC-078", "DSC-089"]
+}

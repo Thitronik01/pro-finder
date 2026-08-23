@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P031-S02-LOCATION-POSITION",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "choose-installation-location",
+  "title": "Never install in the engine compartment; top face upwards",
+  "body_md": "The device must be installed inside the vehicle. It must never be installed in the engine compartment. Because Pro-finder contains a GPS receiver, the top of the device must face upwards.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 31,
+  "source_page_end": 31,
+  "source_region": "Section 1.1, second paragraph",
+  "prev_context": "Before this stands the requirement on accessibility.",
+  "next_context": "The requirement for an unobstructed view of the satellite follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:28c6a3577b43a237643c0d6a526039237a270f26da80faf3cc79713f6af7a8fe",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 7: equivalent in substance, including the explicit prohibition for the engine compartment.",
+  "discrepancy_refs": []
+}

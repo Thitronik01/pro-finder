@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P022-S03-POSITION-SMARTPHONE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "statusbericht",
+  "title": "Position mit dem Smartphone abfragen",
+  "body_md": "Mit einem Smartphone lässt sich eine besonders dafür gestaltete Positionsmeldung anfordern. Der Pro-finder antwortet mit einer Meldung, die einen Verweis enthält; beim Öffnen erscheint die Position in einer Kartenansicht, ohne dass Koordinaten übertragen werden müssen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 22,
+  "source_page_end": 22,
+  "source_region": "Abschnitt 5.4 „Position mit dem Smartphone abfragen“",
+  "prev_context": "Davor steht der Absatz zum GPS-Status im Bericht.",
+  "next_context": "Danach beginnt Abschnitt 5.5 zur Ausgangssteuerung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8b1c9815f1252c533a631680546f49e3bb32a6ec5f5c378f5901a58f7f746799",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 46, „Requesting the position via smartphone“): sachgleich. Die Befehlszeichenfolge wird nach BLK-005 nicht wiedergegeben.",
+  "discrepancy_refs": []
+}

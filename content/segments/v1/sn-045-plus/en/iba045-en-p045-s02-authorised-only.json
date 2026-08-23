@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P045-S02-AUTHORISED-ONLY",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "manage-destination-numbers",
+  "title": "Only authorised numbers have access",
+  "body_md": "At this point the source states in red that only authorised numbers can access Pro-finder.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 45,
+  "source_page_end": 45,
+  "source_region": "Section 5.1, red note box",
+  "prev_context": "Before this stands the control of the alarm system by call.",
+  "next_context": "Section 5.2 on geofencing begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:67045866b528db8f69f59fce1b82cc5d3ebf40212c69d8c8cdfd6a1d3f9ac112",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 21: equivalent in substance and set as a note box in both versions. How the device recognises authorisation remains unstated here as well (DSC-017).",
+  "discrepancy_refs": ["DSC-017"]
+}

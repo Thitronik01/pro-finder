@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P031-S01-LOCATION-ACCESS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "choose-installation-location",
+  "title": "Secure the installation location against unauthorised access",
+  "body_md": "Select an installation location that is adequately secured against unauthorised access but still accessible for service work, for example a later SIM card replacement.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 31,
+  "source_page_end": 31,
+  "source_region": "Section 1.1, first paragraph",
+  "prev_context": "The scope of supply ends on the previous page.",
+  "next_context": "The requirement to install inside the vehicle follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:03f25ee7c42a422cc7fa49f230b22ea8672b65abd65fe5b825b3cccc2d15159e",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 7: equivalent in substance. Neither version states a criterion for when a location counts as adequately secured.",
+  "discrepancy_refs": []
+}

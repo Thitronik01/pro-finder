@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P005-S03-BESTIMMUNGSGEMAESSER-GEBRAUCH",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Wofür der Pro-finder gedacht ist",
+  "body_md": "Der Pro-finder ist ein Ortungssystem für Freizeitfahrzeuge. Er bestimmt die Fahrzeugposition über GPS und Mobilfunk und meldet sie ausschließlich per Kurznachricht; die Darstellungsform hängt vom mobilen Endgerät ab. Das Gerät ist **nicht** zum Aufzeichnen von Routen und **nicht** für eine laufende Verfolgung bestimmt. Zusammen mit weiteren Komponenten meldet es zusätzlich Alarme der gekoppelten Alarmanlage sowie Gasalarme angelernter Gaswarngeräte. Der Pro-finder darf ausschließlich gemäß den Angaben der Anleitung genutzt werden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt „Bestimmungsgemäßer Gebrauch“",
+  "prev_context": "Davor steht der Haftungsausschluss zur Starterbatterie.",
+  "next_context": "Danach folgt auf der nächsten Seite der Lieferumfang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d0d2d5d718595641058a1541221c09453d77d72095afd1c9f2ada87e58ecb76a",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 29, „Intended use“): sachgleich, einschließlich des ausdrücklichen Ausschlusses von Routenaufzeichnung und laufender Verfolgung. Der in der Quelle genannte Name des Kartendienstes wird nach BLK-004 nicht übernommen.",
+  "discrepancy_refs": []
+}

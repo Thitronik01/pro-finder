@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S04-GEOFENCING-SCHALTWEGE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "geofencing",
+  "title": "Wie sich Geofencing schalten lässt",
+  "body_md": "In zwei Schalterstellungen lässt sich das Geofencing über die Spannung an Pin 3 ein- und ausschalten. In allen übrigen Schalterstellungen wird es per Kurznachricht geschaltet. Bevor Sie das Geofencing an einem neuen Standort nutzen können, müssen Sie es am vorherigen Standort zuerst deaktivieren.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.2, zweiter bis vierter Absatz",
+  "prev_context": "Davor steht die Erklärung des Geofencing-Prinzips.",
+  "next_context": "Danach folgt der rote Hinweis auf die automatische Kopplung an die Alarmanlage.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b589b55b455ce51afe247ca4714bf37d1abd3ee809a7822f3e3e8b41c9f9f39e",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 45): sachgleich, einschließlich der Reihenfolge deaktivieren, dann neu aktivieren. Die Befehlszeichenfolgen selbst werden nach BLK-005 nicht wiedergegeben.",
+  "discrepancy_refs": []
+}

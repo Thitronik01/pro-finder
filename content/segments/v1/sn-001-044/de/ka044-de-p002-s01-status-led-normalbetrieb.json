@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P002-S01-STATUS-LED-NORMALBETRIEB",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "status-led",
+  "title": "Normalbetrieb an der Status-LED",
+  "body_md": "Nach abgeschlossener Installation und Programmierung blinkt die Status-LED im Normalbetrieb grün.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 5 „Betriebszustände“, deutscher Schlusssatz unter der LED-Tabelle",
+  "prev_context": null,
+  "next_context": "Danach folgt Abschnitt 6 zur App.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6423b44a3e88d09526076eddf95c5085977fb61bc18ac97b94fdac0fa555f11f",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Sachgleich mit dem Handbuch derselben Generation (DOC-BMA-SN044, deutsche Seite 11). Die neun Zustände selbst sind bereits über den Handbuchbestand erfasst; auf der Karte sind sie zusätzlich von der Sprachlabel-Vertauschung und dem Sachfehler in der schwedischen Zeile betroffen (DSC-001, DSC-002).",
+  "discrepancy_refs": ["DSC-001", "DSC-002"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P039-S01-SMS-COSTS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "manage-destination-numbers",
+  "title": "Every message sent incurs costs",
+  "body_md": "Every text message sent by Pro-finder incurs costs, the amount of which depends on the mobile network operator. If the system is controlled by text message or call, Pro-finder sends a status message back each time.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 39,
+  "source_page_end": 39,
+  "source_region": "Section 2.6",
+  "prev_context": "The note on the country code ends on the previous page.",
+  "next_context": "Section 2.7 with the types of destination numbers follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d5c877e4b8015bcaf992c3140992c940f6d7ed71b2741443e4c1ef961905a463",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 15: equivalent in substance word for word, including the status message returned on every control action.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P031-S03-UNOBSTRUCTED-VIEW",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "choose-installation-location",
+  "title": "Unobstructed view of the satellite",
+  "body_md": "An unobstructed view of the satellite must be ensured. Plastics, glass and wood are penetrated by the GPS signal and do not impair that view.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 31,
+  "source_page_end": 31,
+  "source_region": "Section 1.1, third paragraph",
+  "prev_context": "Before this stands the requirement on the position in the vehicle.",
+  "next_context": "The paragraph on the optional external GPS antenna follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1ec131a5920c1d83ad005640aa69c3dd16be0b1463935d0489d9089f6827bd5f",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 7: equivalent in substance. Both versions place the term in quotation marks and name only the permeable materials, never the shielding ones; the gap exists in both.",
+  "discrepancy_refs": []
+}

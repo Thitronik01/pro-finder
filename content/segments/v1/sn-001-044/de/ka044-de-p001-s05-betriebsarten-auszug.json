@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P001-S05-BETRIEBSARTEN-AUSZUG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Die Kurzanleitung zeigt nur einen Ausschnitt der Betriebsarten",
+  "body_md": "Die Kurzanleitung führt ausschließlich die Betriebsarten 0 bis 3 auf und bezeichnet sie als die am häufigsten verwendeten. Für die übrigen verweist sie auf das ausführliche Handbuch beziehungsweise die App.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Abschnitt 4 „Betriebsarten“, deutscher Sprachblock unter der Matrixtabelle",
+  "prev_context": "Davor steht Abschnitt 3 mit der Anschlusslegende.",
+  "next_context": "Danach endet die Innenseite.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:bdf315465615e982d5b6c25acdaac858a12187836e68b5c6cd56da1f13db22a6",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Gegengelesen gegen die vollständige Betriebsartentabelle des Handbuchs (DOC-BMA-SN044, deutsche Seite 5): Die gezeigten Zeilen stimmen überein. Die übrigen Schalterstellungen fehlen auf der Karte ganz.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P031-S04-ANTENNA-CABLE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "technical_data",
+  "task_slug": "choose-installation-location",
+  "title": "Cable length to the external GPS antenna",
+  "body_md": "If the installation location does not allow GPS reception, an external GPS antenna can be connected. The cable between the mobile module and the GPS antenna is two metres long. The external antenna also needs an unobstructed view of the satellites as far as possible. It can be mounted under the plastic panelling of the dashboard.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 31,
+  "source_page_end": 31,
+  "source_region": "Section 1.1, fourth and fifth paragraphs",
+  "prev_context": "Before this stands the requirement on the unobstructed view.",
+  "next_context": "The illustration of correct and incorrect mounting positions follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b42f070754993434cf2abc4695ca65ab7e5fcc041df7a5d8e112739f8bd2eb17",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 7: both versions state the same **fixed** length of two metres, not an upper limit. For the generation up to SN-044 a fixed-length/upper-limit difference is on record at this very point (DSC-073); it does not occur in this generation. No value is carried across generations.",
+  "discrepancy_refs": ["DSC-073"]
+}

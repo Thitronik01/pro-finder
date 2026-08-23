@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P049-S02-CURRENT-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "technical-data",
+  "title": "The current consumption in normal operation is unresolved in the source",
+  "body_md": "For the current consumption in normal operation the English part names a single value, while the German part of the **same edition** names a range whose lower bound is considerably smaller. This manual therefore reproduces no value. Anyone sizing an energy budget would calculate with markedly different quiescent currents depending on the version. The binding value must be confirmed by the manufacturer.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 49,
+  "source_page_end": 49,
+  "source_region": "Section 6.1, row on the current consumption in normal operation",
+  "prev_context": "Before this stands the remaining value list.",
+  "next_context": "The disposal instructions follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7c6375f94ffb68244ded54f403c26aa407cbcbd7aeec34b30fa061e84a059a96",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 25: the deviation was captured character by character at 400 dpi and is therefore a documented language difference of the source, not a reading error. It lies within **one** edition and is new relative to DSC-069, which records the same value conflict for the older generation between two documents. No value is carried across generations.",
+  "discrepancy_refs": ["DSC-088", "DSC-069"]
+}

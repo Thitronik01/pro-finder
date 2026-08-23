@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P036-S02-STORE-SATELLITE-DATA",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "wire-connections",
+  "title": "Let the satellite data be stored after installation",
+  "body_md": "So that the GPS antenna can receive and store the current satellite data, the operating voltage must be above 13.5 V for at least five minutes after installation; the source names starting the vehicle for this. The storage process must be completed for the position to be determined accurately. GPS reception must be available while it runs, so the vehicle should not stand in a hall or under a roof.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 36,
+  "source_page_end": 36,
+  "source_region": "Section 1.5.2, second and third paragraphs",
+  "prev_context": "Before this stands the de-energised connection of the antenna.",
+  "next_context": "Section 1.5.3 on the function check follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:82f9e7eb0e6feba334739513189ac193811729af88a7fa6c1e20f84ab1066c59",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 12: equivalent in substance, including 13.5 V and five minutes. The English version sets the value without a space and with a decimal point (DSC-019); the number is the same.",
+  "discrepancy_refs": ["DSC-019"]
+}

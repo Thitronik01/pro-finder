@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P019-S01-NOTIZSEITE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Die letzte Seite des deutschen Teils enthält keinen Inhalt",
+  "body_md": "Die letzte Seite des deutschen Teils ist eine Notizseite. Sie trägt nur die Überschrift „Notizen“ und ein leeres Linienfeld. Es gibt hier keine Bedienangabe, die in die Webanleitung übernommen werden könnte.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 19,
+  "source_page_end": 19,
+  "source_region": "Gesamte Seite: Überschrift und seitenfüllendes Linienfeld",
+  "prev_context": "Davor endet auf der vorigen Seite Kapitel 3.",
+  "next_context": "Danach beginnt der englische Sprachteil.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b4c93275eabcca01fb4f479ccdca7795b6afdf34d9709766bae2714ada919a96",
+  "change_reason": "Bei 200 dpi geprüft; die Textebene enthält außer Kopfzeile und Überschrift nichts. Die Seite wird als Lücke belegt statt stillschweigend übergangen, damit der deutsche Teil lückenlos von Seite 1 bis 19 nachweisbar ist.",
+  "discrepancy_refs": []
+}

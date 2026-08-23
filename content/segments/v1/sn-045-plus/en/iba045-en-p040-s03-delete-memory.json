@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P040-S03-DELETE-MEMORY",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "manage-destination-numbers",
+  "title": "Delete the entire destination number memory",
+  "body_md": "To delete the entire destination number memory, proceed as follows:\n\n1. Disconnect the main wiring harness.\n2. Set the operating mode switch to position E.\n3. Re-insert the main wiring harness and wait until the status LED flashes yellow-green.\n4. Set the operating mode switch back to the starting position.\n\nThe memory is then empty and can be reprogrammed with a new programming message.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 40,
+  "source_page_end": 40,
+  "source_region": "Section 2.9, list and following paragraph",
+  "prev_context": "Before this stands the note on the inserted nano SIM card.",
+  "next_context": "The route via the master number without the switch follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:0483c854a9f7c335d7a09daa453971a2f631310d4abb1d58423a614108994131",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 17: all four steps match in order and content, as do switch position E and the yellow-green feedback. The bracketed letter used in the source for the switch is dropped because it refers to the connection illustration and cannot be resolved without it.",
+  "discrepancy_refs": []
+}

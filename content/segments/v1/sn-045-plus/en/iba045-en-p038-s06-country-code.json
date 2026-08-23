@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P038-S06-COUNTRY-CODE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "install-app-and-activate",
+  "title": "Save the number with the country code",
+  "body_md": "Save the number with the country code so that Pro-finder remains reachable from abroad.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 38,
+  "source_page_end": 38,
+  "source_region": "Foot of the page, closing sentence of section 2.5",
+  "prev_context": "Before this stands the tip on the address book entry.",
+  "next_context": "Section 2.6 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7cca0a3f0cd39df3d86044df607c95738488d0d4d40c31f18ab021b2245612a4",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 15: the sentence is equivalent in substance but sits at the head of the following German page – a pure page-break difference. The example country named differs between the versions (DSC-019), so no example is carried over.",
+  "discrepancy_refs": ["DSC-019"]
+}

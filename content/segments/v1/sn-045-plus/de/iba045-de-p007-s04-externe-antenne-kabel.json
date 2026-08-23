@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S04-EXTERNE-ANTENNE-KABEL",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "montageort",
+  "title": "Kabellänge zur externen GPS-Antenne",
+  "body_md": "Ermöglicht der Montageort keinen GPS-Empfang, lässt sich eine externe GPS-Antenne anschließen. Das Kabel zwischen Mobilfunkmodul und GPS-Antenne ist zwei Meter lang. Auch die externe Antenne braucht möglichst freie Sicht zu den Satelliten. Sie kann unter Kunststoffverkleidungen des Armaturenbretts montiert werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1, vierter und fünfter Absatz",
+  "prev_context": "Davor steht die Anforderung an die freie Sicht.",
+  "next_context": "Danach folgt die Abbildung mit erlaubter und verbotener Einbaulage.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e6f9d0b5c1145c31fb7bc1f3b658051943d46e98064d5c1c73ff138845026fa3",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 31): Beide Fassungen nennen dieselbe **feste** Länge von zwei Metern („is two metres“), nicht eine Obergrenze. Für die Generation bis SN-044 ist genau an dieser Stelle ein Unterschied zwischen fester Länge und Obergrenze erfasst (DSC-073); in dieser Generation tritt er nicht auf. Kein Wert wird zwischen den Generationen übertragen.",
+  "discrepancy_refs": ["DSC-073"]
+}

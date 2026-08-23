@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P042-S02-STATUS-REPORT",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "When a status report arrives and what it contains",
+  "body_md": "A status report is received only on request or, depending on the selected operating mode, at fixed intervals. In addition to position, speed and the status of the outputs it contains, depending on the operating mode, the voltages of the measurement inputs and the temperature in the immediate vicinity of the device.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 42,
+  "source_page_end": 42,
+  "source_region": "Chapter 4, explanation of the message type “Status report”",
+  "prev_context": "Before this stands the field list.",
+  "next_context": "The theft report follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:2773f1f3fae2208b15173c30f01ae9701619cc41ce9a9c9c312d5dec857ae754",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 19: the body text is equivalent in substance and names U2 to U5 in both versions. The English example bubble on this page, however, runs two measurement inputs together on one line and therefore shows four instead of five voltage lines (DSC-089); the body text is authoritative and the defect is named rather than reproduced.",
+  "discrepancy_refs": ["DSC-089"]
+}

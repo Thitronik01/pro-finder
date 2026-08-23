@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S07-ESD-FIGURE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "figure_description",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "Illustration of the card holder on the circuit board",
+  "body_md": "The illustration shows a section of the circuit board with the opened holder for the nano SIM card and the card lying next to it. A yellow warning symbol for electrostatically sensitive devices is overlaid on the image; the board must therefore only be touched at its edges and not on the components.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.2, photo in the lower third",
+  "prev_context": "Before this stands the instruction to insert and lock the card.",
+  "next_context": "Section 2.3 on the app follows on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f0e34f9cfc7b5b78ebd0f4fe5a587a9268d714d9cd2a78e31795e2d0a7ccb458",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: the same unchanged illustration without a caption in both versions. The symbol is put into words here because the source never spells out its meaning; the derived handling rule is marked as such and needs technical confirmation.",
+  "discrepancy_refs": []
+}

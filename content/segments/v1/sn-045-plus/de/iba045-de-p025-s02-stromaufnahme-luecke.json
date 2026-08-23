@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S02-STROMAUFNAHME-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "technische-daten",
+  "title": "Stromaufnahme im Normalbetrieb ist quellenseitig ungeklärt",
+  "body_md": "Für die Stromaufnahme im Normalbetrieb nennt der deutsche Teil einen Bereich, der englische Teil derselben Auflage dagegen nur einen Einzelwert in Höhe der Obergrenze. Diese Anleitung gibt deshalb keinen Wert wieder. Wer ein Energiebudget auslegt, würde je nach Fassung mit deutlich verschiedenen Ruheströmen rechnen. Der verbindliche Wert muss von THITRONIK bestätigt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.1, Zeile „Stromaufnahme Normalbetrieb“",
+  "prev_context": "Davor steht die übrige Werteliste.",
+  "next_context": "Danach folgen die Entsorgungshinweise.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:18be1a8f4cf107e27b9988b28d7eb7161015d88b22807336b7e0bb204aeeb4d5",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 49): Die Abweichung wurde bei 400 dpi zeichengenau gesichert und ist damit ein belegter Sprachunterschied der Quelle, kein Lesefehler dieser Extraktion. Sie liegt innerhalb **einer** Auflage und ist neu gegenüber DSC-069, das denselben Wertekonflikt für die ältere Generation zwischen zwei Dokumenten führt. Kein Wert wird zwischen den Generationen übertragen.",
+  "discrepancy_refs": ["DSC-088", "DSC-069"]
+}

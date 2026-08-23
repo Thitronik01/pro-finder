@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P047-S03-OUTPUT-TIMED",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "control-outputs",
+  "title": "Switching an output on for a freely selectable time",
+  "body_md": "An output can be switched on for a duration of your choice between 1 and 120 minutes. The desired number of minutes is inserted into the message. Pro-finder switches the output on for that duration and sends a status report.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 47,
+  "source_page_end": 47,
+  "source_region": "Section 5.5.3",
+  "prev_context": "Before this stands the pulsed mode.",
+  "next_context": "The red note on the second output follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:02a46f0f568a11c1bf18ede90a41cb0e151b49c42f43135df0f46e646e74e6de",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 23: equivalent in substance, including the range of 1 to 120 minutes. Neither version says what happens outside that range. The command structure is not reproduced (BLK-005).",
+  "discrepancy_refs": []
+}

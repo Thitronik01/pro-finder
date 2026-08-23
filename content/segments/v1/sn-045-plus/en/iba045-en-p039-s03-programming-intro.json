@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P039-S03-PROGRAMMING-INTRO",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "manage-destination-numbers",
+  "title": "Basic rules of the programming message",
+  "body_md": "The destination numbers are handed to Pro-finder with a single programming message. Up to ten destination numbers are possible. In the source, spaces serve display purposes only and must not be used in the message itself.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 39,
+  "source_page_end": 39,
+  "source_region": "Section 2.8, introductory paragraph above the syntax graphic",
+  "prev_context": "Before this stands the table with the three types of destination number.",
+  "next_context": "The syntax graphic of the programming message follows on the same page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:61dbe55419d49e7d698652fb1de4ca53bbc9d53f9f3d3696d3b2948782a01043",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 15: equivalent in substance, including the prohibition of spaces and the limit of ten numbers. The example structure itself is not quoted (BLK-005, BLK-006).",
+  "discrepancy_refs": []
+}

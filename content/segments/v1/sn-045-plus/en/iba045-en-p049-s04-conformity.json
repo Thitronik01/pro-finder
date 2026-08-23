@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P049-S04-CONFORMITY",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "technical_data",
+  "task_slug": "technical-data",
+  "title": "Conformity",
+  "body_md": "The manufacturer declares that the product complies with the essential requirements and the relevant provisions of Directive 2014/53/EU. For the detailed declaration of conformity the source points to a download; the address is not reproduced here.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 49,
+  "source_page_end": 49,
+  "source_region": "Section 6.3 with CE mark",
+  "prev_context": "Before this stand the disposal instructions.",
+  "next_context": "The section on technical support follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:86777bcd4d5fd6031c95850a70d3cfc6447bc7597f9231b5f31398ef7fe8cda3",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 25: both versions name the **same** directive, 2014/53/EU. For the generation up to SN-044 a non-existent directive is on record in the English part at this very point (DSC-071); the error does not occur in this generation. The download address differs between the versions and is not carried over in any form (BLK-004).",
+  "discrepancy_refs": ["DSC-071"]
+}

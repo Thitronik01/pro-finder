@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P016-S01-SYNTAXGRAFIK",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "zielrufnummern",
+  "title": "Aufbau der Programmiernachricht laut Syntaxgrafik",
+  "body_md": "Die Seite enthält ausschließlich eine beschriftete Grafik zum Aufbau der Programmiernachricht. Sie zeigt eine fortlaufende Zeichenfolge und ordnet ihr über Linien vier Erläuterungen zu: die mit einem Pluszeichen beginnende Ländervorwahl, ein vorangestelltes Kennzeichen für den Fall, dass das Endgerät ein Smartphone ist, und die Zielrufnummern in ihrer Reihenfolge, wobei die erste die Masternummer ist. Die Grafik erläutert das Smartphone-Kennzeichen als Umschaltung der Positionsübertragung auf einen anklickbaren Verweis und beschränkt seine Verwendung auf Smartphones.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 16,
+  "source_page_end": 16,
+  "source_region": "Ganzseitige Syntaxgrafik im oberen Seitendrittel; die übrige Seite ist leer",
+  "prev_context": "Davor steht auf der vorigen Seite die Einleitung zu Abschnitt 2.8.",
+  "next_context": "Danach folgt auf der nächsten Seite die Beispieltabelle und Abschnitt 2.9.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d873da421ca630bbe836797d35b71f7dc5f1e5dcd22af4d3b78dc9ef4a6d220b",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 39, unteres Seitendrittel): Es ist dieselbe Grafik mit identischen Beispielwerten und identischen Zuordnungslinien; nur die Beschriftungen sind übersetzt und das genannte Beispielland weicht ab (DSC-019). Die Beispielwerte werden nicht wiedergegeben (BLK-006). Wichtiger Befund der Gegenprüfung: Diese Grafik steht im deutschen Teil auf einer eigenen internen Seite, in der englischen Fassung dagegen zusammen mit der Einleitung zu 2.8 auf einer Seite – die Ursache der Seitenverschiebung nach DSC-021.",
+  "discrepancy_refs": ["DSC-019", "DSC-021"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P011-S02-ALARMANLAGE-VERBINDEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Alarmanlage mit dem beiliegenden Kabel verbinden",
+  "body_md": "Soll die Alarmanlage mitgenutzt werden, verbinden Sie sie über das beiliegende Verbindungskabel mit dem Pro-finder.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 11,
+  "source_page_end": 11,
+  "source_region": "Abschnitt 1.4, zweiter Absatz",
+  "prev_context": "Davor steht der Anschluss der Spannungsversorgung.",
+  "next_context": "Danach folgen die Belastungsgrenzen der Ausgänge.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:4cb2db28095432de8214eb4435f8774b4ce4badd923e3993c9c52f3d86423353",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 35): sachgleich. Der Kabelname wird nicht wiedergegeben, solange DSC-036 offen ist.",
+  "discrepancy_refs": ["DSC-036"]
+}

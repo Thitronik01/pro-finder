@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P012-S04-GPS-REFLEXIONEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Reflexionen in Gebäuden können Fehlalarme auslösen",
+  "body_md": "In Hallen, anderen Gebäuden und unter Überdachungen kann das GPS-Signal reflektiert werden. Das kann die Genauigkeit der Positionsbestimmung stark beeinträchtigen und Diebstahlmeldungen auslösen, obwohl das Fahrzeug nicht bewegt wurde. Die Quelle empfiehlt deshalb, das Geofencing zu deaktivieren, wenn das Fahrzeug in einem Gebäude oder unter einem Dach abgestellt wird.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 12,
+  "source_page_end": 12,
+  "source_region": "Abschnitt 1.5.3, vorletzter Absatz",
+  "prev_context": "Davor steht die Tabelle der GPS-Diagnosezustände.",
+  "next_context": "Danach nennt die Quelle die dafür nötige Kurznachricht.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b1d25acfec0bbc67c706d4506f1970064d6bd1e4a8b95abbbd0fac03139784ab",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 36): sachgleich, einschließlich der Empfehlung zur Deaktivierung. Die zugehörige Befehlszeichenfolge steht in beiden Fassungen und wird nach BLK-005 nicht wiedergegeben.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P001-S04-SIM-SCHRITTE-LUECKE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "sim-karte",
+  "title": "Die PIN-Vorgabe dieser Generation bleibt ausgelassen",
+  "body_md": "Die Kurzanleitung verlangt für diese Generation, die PIN-Abfrage der Karte zu **aktivieren** und die PIN auf einen festen, in der Quelle genannten Wert zu ändern. Der Zahlenwert wird hier nicht wiedergegeben, weil seine technische Gültigkeit und seine sicherheitliche Tragweite ungeklärt sind. Übernommen werden nur die unstrittigen Schritte: Mailbox und alle Rufumleitungen deaktivieren, Komfortfunktionen deaktivieren, Roaming aktivieren, das Gerät vor dem Einlegen spannungsfrei schalten.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Abschnitt 2, deutscher Sprachblock, nummerierte Schrittliste",
+  "prev_context": "Davor steht der Achtung-Kasten zum iPhone.",
+  "next_context": "Danach folgen Abschnitt 3 und 4.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:fbdc7e7f520ac78be6a4f6566c10ca607c6e496f0c73368022ed25fc28bd9238",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Sachgleich mit Abschnitt 1.8 des Handbuchs derselben Generation, das dieselbe Vorgabe macht. Die Generation ab SN-045 verlangt das Gegenteil – dort ist die PIN-Abfrage zwingend zu deaktivieren. Zwischen den Generationen wird nichts übertragen; die Auslassung folgt Rückfrage 15.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S05-NUMMER-SPEICHERN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Rufnummer des Pro-finder im Adressbuch speichern",
+  "body_md": "Damit sich eine eingehende Alarmmeldung schnell zuordnen lässt, sollte die Rufnummer des Pro-finder wie jeder andere Eintrag im Adressbuch des Mobiltelefons benannt werden. Die Quelle empfiehlt einen Namen, der den Eintrag an den Anfang des Adressbuchs stellt, und nennt dafür im Fließtext und im nachfolgenden Tipp zwei verschiedene Schreibweisen.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.5 „Nummer des Pro-finder speichern“, Fließtext und rot gesetzter Tipp",
+  "prev_context": "Davor steht die Aktivierung ohne App.",
+  "next_context": "Danach folgt auf der nächsten Seite der Hinweis zur Ländervorwahl und Abschnitt 2.6.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8818a9fee71b20986d20ad0d3c9fe434347a2be70a2e6be2cbef29f244f55e6a",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 38, „Saving the Pro-finder number“): Beide Fassungen setzen im Fließtext und im Tipp unterschiedliche Schreibweisen desselben Namensvorschlags. Der Widerspruch ist damit in beiden Fassungen belegt und wird nicht aufgelöst; deshalb wird hier keine der beiden Schreibweisen als verbindlich wiedergegeben.",
+  "discrepancy_refs": ["DSC-016"]
+}

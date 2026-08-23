@@ -144,6 +144,13 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   Zusätzlich weicht die Liste der abzuschaltenden Zusatzfunktionen ab (FR nennt zusätzlich
   „la mise en attente" und „le double appel par SMS") und die Prepaid-Empfehlung nennt
   französisch zusätzlich das Aufladen „via internet".
+- **Generationenvergleich 2026-08-23:** In der Generation **bis SN-044** empfiehlt die
+  englische Fassung dieselben zwei Anbieter wie die deutsche („We recommend using a card from
+  T-mobile or Vodafone", DOC-BMA-SN044, Seite 26, gegen die deutsche Seite 8). Die Abweichung
+  ist damit **neu ab SN-045**: Erst dort ersetzt die englische Fassung die Anbieternennung
+  durch technische Anforderungen und ein Verbot (DSC-086). Das ist für die Klärung
+  wesentlich – es geht nicht um eine seit jeher andere englische Redaktionslinie, sondern um
+  eine Änderung, die nur eine Sprachfassung mitgemacht hat.
 - **Schwere:** hoch (kommerziell und rechtlich relevant; zudem Beleg dafür, dass die
   Sprachfassungen nicht denselben Inhalt transportieren) · **Status:** offen – Klärung
   durch THITRONIK, ob eine der Empfehlungen verbindlich ist
@@ -344,6 +351,23 @@ zusätzlich als DSC-085 geführt.
   Satzfragment „Programowanie numerów miejsc docelowych."; dadurch beginnen Kapitel 3 bis
   6 eine Seite später als im Inhaltsverzeichnis. Die Schlussseite 224 trägt folgerichtig
   „Strona 25 z 24".
+- **Deutsch-englische Klärung 2026-08-23** (Gegenprüfung an gerenderten Seiten): Die
+  englische Fassung überspringt **keine** interne Seitenzahl. Die Fußzeilen der englischen
+  PDF-Seiten 33 bis 40 laufen lückenlos „Page 7 of 23" bis „Page 14 of 23"; deutscher und
+  englischer Teil umfassen beide 21 Inhaltsseiten und zählen beide 3 bis 23. Verschoben ist
+  nicht die Zählung, sondern der Inhalt, und zwar an genau zwei Stellen:
+  1. **Ursache der Verschiebung – Abschnitt 2.8.** Der deutsche Teil setzt die Syntaxgrafik
+     der Programmiernachricht allein auf die interne Seite 14 (PDF-Seite 16); die
+     Einleitung zu 2.8 steht auf der internen Seite 13 (PDF-Seite 15). Die englische
+     Fassung setzt Einleitung **und** Grafik gemeinsam auf die interne Seite 13
+     (PDF-Seite 39). Ab hier liegt derselbe Inhalt englisch eine interne Seite früher.
+  2. **Ausgleich – Kapitel 4.** Der deutsche Teil setzt Kapitel 4 auf zwei interne Seiten
+     (17 und 18, PDF-Seiten 19 und 20), die englische Fassung auf drei (16 bis 18,
+     PDF-Seiten 42 bis 44). Ab Kapitel 5 stimmen beide wieder überein (interne Seite 19,
+     PDF-Seiten 21 und 45).
+     Damit ist die im Befund genannte Reihe DE/EN 16/15, 17/16, 19/19 vollständig erklärt.
+     Sie ist rein typografisch; es fehlt kein Inhalt. Die belegte Seitenpaarung steht in
+     [CROSSCHECK_SN045_DE_EN.md](CROSSCHECK_SN045_DE_EN.md).
 - **Folge:** Segment-Mapping darf nicht über die interne Seitenzahl erfolgen, sondern nur
   über Kapitelnummer und PDF-Seite. **Status:** offen
 
@@ -406,6 +430,12 @@ zusätzlich als DSC-085 geführt.
 - **Schwere:** mittel (Terminologie; der Begriff steuert Berechtigungen) · **Status:** offen
 
 ### DSC-015 – Überschrift 5.5 ist in Englisch und Dänisch wortgleich mit 5.1 (ab SN-045)
+
+- **Zusätzliche Fundstelle 2026-08-23:** Der Fehler wirkt sich auch auf einen Querverweis
+  aus: Der rote Hinweiskasten auf der englischen Seite 35 (Abschnitt 1.4) verweist auf
+  „chapter _5.5 Controlling the alarm system_ via SMS" – also mit dem Titel von 5.1, während
+  die deutsche Entsprechung auf Seite 11 korrekt „_5.5 Ausgänge per SMS steuern_" nennt.
+  Bestätigt beim vollständigen Gegenlesen der deutschen Seite 11 gegen die englische Seite 35.
 
 - **Dokument:** DOC-IBA-SN045, englische Seite 46 sowie dänische Seiten 102, 110 und 120
 - **Beleg:** Abschnitt 5.5 trägt den Titel „Controlling the alarm system via SMS" – identisch
@@ -1968,6 +1998,255 @@ belegt, nicht aus einer Zusammenfassung.
 - **Schwere:** hoch · **Status:** offen – technischer und schwedischer Sprachreview
 
 <a id="synthese-befehle"></a>
+
+### DSC-086 – Die englische Fassung verbietet in 2.1 eine Kartenart, die der deutsche Master nicht erwähnt (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 2.1 – deutsche Seite 13, englische Seite 37
+  (beide interne Seite 11)
+- **Beleg:** Der englische Empfehlungskasten nennt drei Angaben, die im deutschen
+  Empfehlungskasten an derselben Stelle vollständig fehlen: „We recommend using a nano SIM
+  card that is only compatible with 2G/3G/4G and supports SMS, telephony and mobile data
+  (4G/LTE)", „The use of a multi-operator SIM card is **not allowed**" und „it is not
+  possible to use 4G to check the remaining credit".
+- **Befund:** Anders als DSC-027, das die abweichende **Anbieterempfehlung** führt, geht es
+  hier um eine **Verbotsaussage und eine technische Mindestanforderung**. Der deutsche
+  Master enthält an dieser Stelle weder das Verbot der Multi-Operator-Karte noch eine
+  Anforderung an unterstützte Netzstandards oder Dienste. Eine Nutzerin, die nur den
+  deutschen Teil liest, kann daher eine Karte wählen, die die englische Fassung derselben
+  Auflage ausdrücklich ausschließt.
+- **Prüfweg:** Beide Seiten unabhängig gerendert und Satz für Satz gegeneinander gelesen,
+  2026-08-23. Die übrigen Bestandteile des Kastens (Prepaid-Bedingung) sind sachgleich.
+- **Präzisierung 2026-08-23 (DSC-095):** Das Verbot fehlt **nicht dem Deutschen**, sondern
+  dem deutschen **Handbuch**. Die deutsche Kurzanleitung derselben Generation (DOC-KA-SN045,
+  Seite 2) enthält es wörtlich: „Die Verwendung einer Multi-SIM ist nicht möglich und eine
+  Restguthabenabfrage wird durch 4G nicht unterstützt." Es widersprechen sich damit nicht nur
+  zwei Sprachfassungen, sondern zwei deutschsprachige Dokumente derselben Auflage – und das
+  ausführlichere ist das unvollständigere.
+- **Schwere:** hoch (die Kartenwahl entscheidet über die Funktion des Geräts; die Fassungen
+  widersprechen sich nicht, sondern die eine schweigt) · **Status:** offen – gehört zu
+  Rückfrage 5; THITRONIK muss klären, ob das Verbot und die Anforderungen generell gelten
+  und im deutschen Handbuch fehlen
+
+### DSC-087 – Betriebsart D: doppelter Produktname und fehlender Bindesatz im deutschen Master (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Betriebsartentabelle – deutsche Seite 10 (intern „Seite 8"),
+  Zeile D; Gegenquelle englische Seite 34 (intern „Page 8")
+- **Beleg (DE, bei 500 dpi gesichert):** „8 Minuten (sobald Spannung anliegt und Pro-finder
+  **Pro-finder** hochgefahren ist nach dem GPS-Signal sucht)". Der Produktname steht doppelt
+  und zwischen „hochgefahren ist" und „nach dem GPS-Signal sucht" fehlt die Konjunktion.
+- **Beleg (EN):** „8 minutes (as soon as voltage is applied, and Pro-finder has started up
+  **and** is searching for the GPS signal)" – vollständig und grammatisch korrekt.
+- **Befund:** Der Fehler steht im **deutschen Master**, nicht in der Übersetzung. Die
+  englische Fassung ist an dieser Stelle die bessere Quelle. Die benachbarte Zeile C zeigt
+  denselben fehlenden Bindesatz („90 Sekunden (sobald Spannung anliegt und Pro-finder
+  hochgefahren ist nach dem GPS-Signal sucht)"), aber ohne doppelten Produktnamen.
+- **Wichtig für DSC-066 und Rückfrage 16, ohne Wertübernahme:** In dieser Generation nennen
+  **beide** Fassungen 8 Minuten beziehungsweise 8 minutes. Der Faktor-60-Widerspruch der
+  Generation bis SN-044 wiederholt sich hier also nicht. Das ist ein Hinweis für die
+  THITRONIK-Klärung, **kein** Wert, der auf die ältere Generation übertragen wird.
+- **Prüfweg:** Beide Tabellen vollständig Zelle für Zelle verglichen; alle 16 Zeilen und alle
+  elf Spalten stimmen sonst überein. Zeile D zusätzlich bei 500 dpi nachgerendert, 2026-08-23.
+- **Schwere:** mittel (redaktionell; der Zahlenwert selbst ist unstrittig) · **Status:** offen
+
+### DSC-088 – Stromaufnahme im Normalbetrieb: Bereich gegen Einzelwert innerhalb derselben Auflage (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 6.1 Technische Daten – deutsche Seite 25 (intern
+  „Seite 23"), englische Seite 49 (intern „Page 23")
+- **Beleg (bei 400 dpi gesichert):** DE „Stromaufnahme Normalbetrieb: **ca. 16–21 mA**"
+  gegen EN „Power consumption in normal operation: **approx. 21mA**".
+- **Befund:** Dieselbe Auflage desselben Dokuments nennt für dieselbe Größe einmal einen
+  Bereich und einmal einen Einzelwert. Die englische Fassung nennt allein die Obergrenze;
+  wer nach ihr ein Energiebudget auslegt, rechnet mit bis zu 31 Prozent mehr Ruhestrom als
+  nach der deutschen Untergrenze. Die Zeile darüber (Netzsuche, ca. 37 mA) stimmt dagegen
+  in beiden Fassungen überein, ebenso Spannungsversorgung, Bänder, Ausgänge,
+  Temperaturbereich und SIM-Format.
+- **Bezug:** Dasselbe Werteproblem ist für die Generation bis SN-044 als DSC-069 erfasst
+  (DOC-BMA-SN044 ca. 21 mA gegen DOC-KA-SN044 ca. 16–21 mA). Es tritt damit in **beiden**
+  Generationen auf, dort zwischen zwei Dokumenten, hier zwischen zwei Sprachfassungen
+  desselben Dokuments. Kein Wert wird zwischen den Generationen übertragen.
+- **Schwere:** hoch (technischer Auslegungswert) · **Status:** offen – gehört zu Rückfrage 2
+
+### DSC-089 – Zwei Satzfehler der englischen Fassung in Kapitel 4 (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, englische Seite 42 (intern „Page 16"); Gegenquelle deutsche
+  Seite 19 (intern „Seite 17")
+- **Beleg 1 – Beispiel des Statusberichts:** Die englische Sprechblase setzt „U2: 0 V**U3:**
+  0 V" in einer Zeile; die deutsche Sprechblase führt U2, U3, U4 und U5 auf vier getrennten
+  Zeilen. Das englische Beispiel zeigt dadurch vier statt fünf Zeilen für die Spannungen.
+- **Beleg 2 – Querverweis der Diebstahlmeldung:** „Both can be activated via SMS as described
+  under _5.1 Controlling the alarm system_ **via SMS** _via SMS_." Die Wendung steht doppelt,
+  einmal in stark vergrößerter Schrift. Die deutsche Entsprechung nennt sie einmal.
+- **Befund:** Beides sind Satzfehler der englischen Fassung, nicht der Quelle insgesamt. Der
+  erste betrifft ein technisches Beispiel und kann als vier statt fünf Messeingänge
+  missverstanden werden.
+- **Bezug:** Der Querverweis erbt zusätzlich den Titelfehler nach DSC-015; der Verweis auf
+  5.1 führt nach DSC-041 ohnehin ins Leere.
+- **Schwere:** mittel · **Status:** offen (redaktionell; Beleg 1 gehört in den fachlichen Review)
+
+### DSC-090 – Gerätemeldung bei fehlender Position ist je Sprachfassung anders benannt (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 5.3 – deutsche Seite 22 (intern „Seite 20"),
+  englische Seite 46 (intern „Page 20")
+- **Beleg:** DE „steht im Statusbericht **„GPS kein Empfang"**"; EN „the status report shows
+  **\"No position\"**". Beide Fassungen zitieren eine Zeichenfolge, die das Gerät selbst
+  ausgibt.
+- **Befund:** Die beiden Zitate sind keine Übersetzungen desselben Wortlauts – sie benennen
+  verschiedene Sachverhalte („kein GPS-Empfang" gegen „keine Position"). Gibt das Gerät nur
+  eine feste Zeichenfolge aus, ist mindestens eines der beiden Zitate im Feld nicht
+  auffindbar. Eine Nutzerin, die im Statusbericht nach dem im Handbuch genannten Wortlaut
+  sucht, findet ihn dann nicht.
+- **Bezug:** Verstärkt Rückfrage 17 (in welcher Sprache das Gerät meldet) und DSC-072. Keine
+  der beiden Zeichenfolgen wird als Erkennungsmerkmal veröffentlicht.
+- **Schwere:** hoch (Erkennbarkeit einer sicherheitsrelevanten Gerätemeldung) · **Status:**
+  offen – technische Klärung
+
+### DSC-091 – Englische Fassung benennt den Anlernmodus auf einer Seite zweifach (ab SN-045)
+
+- **Dokument:** DOC-IBA-SN045, Abschnitt 5.6 – englische Seite 48 (intern „Page 22");
+  Gegenquelle deutsche Seite 24 (intern „Seite 22")
+- **Beleg:** Überschrift und Fließtext nennen den Modus „interconnection mode" („Starting the
+  interconnection mode", „If the interconnection mode is activated"), der auf derselben Seite
+  genannte Befehl lautet dagegen „teach mode". Der deutsche Master verwendet durchgängig
+  einen Begriff („Anlernmodus").
+- **Befund:** Wer nach der Überschrift sucht, findet den Befehl nicht, und umgekehrt. Der
+  Fehler ist auf die englische Fassung begrenzt.
+- **Bezug:** Gleiche Fehlerklasse wie DSC-037 (vier tschechische Benennungen) und DSC-083
+  (niederländische Kernbegriffe).
+- **Schwere:** mittel (Terminologie; der Befehl steuert eine sicherheitsrelevante Funktion) ·
+  **Status:** offen – gehört in den englischen Sprachreview EN-03
+
+### DSC-092 – Die beiden Generationen beschreiben verschiedene Verwendungszwecke (generationsübergreifend)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 1 und 2, gegen DOC-IBA-SN045, deutsche Seite 5
+- **Beleg (bis SN-044):** Das Deckblatt nennt den Pro-finder ein „Telemetriemodul zur
+  **Flottenüberwachung** und Steuerung". Ein Abschnitt „Bestimmungsgemäßer Gebrauch" fehlt;
+  der Haftungsausschluss auf Seite 2 umfasst drei Sätze.
+- **Beleg (ab SN-045):** „Der Pro-finder ist ein speziell für **Freizeitfahrzeuge**
+  entwickeltes Ortungssystem … Das Gerät ist **nicht** zum Aufzeichnen von (Reise-)Routen oder
+  Live-Tracking bestimmt." Der Haftungsausschluss ist deutlich länger und nennt zusätzlich
+  Wertgegenstände im Sichtbereich, das Abschließen des Fahrzeugs, die Haftung bei
+  Tiefentladung der Starterbatterie und die Verantwortung des Anwenders.
+- **Befund:** Zwischen den Generationen ändert sich nicht nur der Wortlaut, sondern der
+  beschriebene Zweck. „Flottenüberwachung" setzt eine laufende Beobachtung voraus – genau das,
+  was die neuere Fassung ausdrücklich ausschließt. Das ist datenschutzrechtlich erheblich:
+  Beobachtung von Fahrzeugen und damit mittelbar von Personen ist etwas anderes als das
+  Wiederfinden nach einem Diebstahl. Zugleich fehlen der älteren Fassung mehrere
+  Sorgfaltspflichten, die die neuere ausformuliert.
+- **Folge für den Pilot:** Wer die falsche Generation heranzieht, legt einen anderen
+  Verwendungszweck und einen anderen Haftungsrahmen zugrunde. Die Zweckbestimmung wird
+  deshalb je Generation getrennt geführt; es wird nichts aus der einen in die andere ergänzt.
+- **Prüfweg:** Deckblatt und Inhaltsverzeichnisseite von DOC-BMA-SN044 bei 200 dpi gerendert
+  und gegen die Textebene abgeglichen, anschließend gegen die Zweckbestimmung der Generation
+  ab SN-045 gelesen, 2026-08-23.
+- **Schwere:** hoch (Zweckbestimmung und Haftungsrahmen; datenschutzrechtlich relevant) ·
+  **Status:** offen – THITRONIK muss bestätigen, welcher Verwendungszweck je Generation gilt
+  und ob die ältere Beschreibung noch zutrifft
+
+### DSC-093 – Fünf verschiedene SIM-Empfehlungen über vier Dokumente derselben Produktfamilie
+
+- **Dokumente:** DOC-BMA-SN044 Seite 8 (deutsch) und Seite 26 (englisch), DOC-KA-SN044
+  Seite 1, DOC-IBA-SN045 deutsche Seite 13, englische Seite 37 und französische Seite 62,
+  DOC-KA-SN045 Seite 2
+- **Beleg:**
+
+  | Dokument                                      | Empfehlung                                                                                              |
+  | --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+  | Handbuch bis SN-044, deutsch **und** englisch | Karte von t-mobile oder Vodafone                                                                        |
+  | **Kurzanleitung bis SN-044, deutsch**         | „Besorgen Sie sich eine Micro-SIM bei einem Anbieter **Ihrer Wahl**. Wir empfehlen eine Vertragskarte." |
+  | Handbuch ab SN-045, deutsch                   | Karte von t-mobile oder Vodafone                                                                        |
+  | Handbuch ab SN-045, englisch                  | allgemein eine M2M-Karte mit Verweis auf die Produkt-FAQ                                                |
+  | Handbuch ab SN-045, französisch               | namentlich die Firma DOMOTEC                                                                            |
+  | **Kurzanleitung ab SN-045, deutsch**          | „die vorkonfigurierte THITRONIK® **Vertragskarte der Telekom**"                                         |
+
+- **Befund:** Über beide Generationen und beide Dokumentarten hinweg ergeben sich fünf
+  verschiedene Empfehlungen. Zwei davon nennen einen konkreten Anbieter, den kein anderes
+  Dokument nennt: DOMOTEC (französisches Handbuch) und eine vorkonfigurierte Vertragskarte
+  eines namentlich genannten Netzbetreibers (deutsche Kurzanleitung ab SN-045). Besonders
+  auffällig ist, dass **Handbuch und Kurzanleitung derselben Generation und derselben Sprache**
+  auseinanderlaufen – in beiden Generationen.
+- **Prüfweg:** Deutsche Blöcke beider Kurzanleitungen bei 500 dpi nachgerendert und
+  zeichengenau gesichert, 2026-08-23.
+- **Schwere:** hoch (kommerziell und rechtlich relevant; eine Nutzerin erhält je nach
+  beiliegendem Papier eine andere Kaufempfehlung) · **Status:** offen – erweitert Rückfrage 5
+
+### DSC-094 – Drei Sprachen in einem Textblock der Kurzanleitung ab SN-045 (ab SN-045)
+
+- **Dokument:** DOC-KA-SN045, Seite 2, Abschnitt 2 „SIM Karte vorbereiten"
+- **Beleg 1 – englische Spalte:** Die Überschrift der Schrittliste lautet französisch
+  „Configurer la carte SIM :", die vier Schritte und die folgende Überschrift „Activate
+  Pro-finder:" sind englisch.
+- **Beleg 2 – schwedische Spalte:** Die Überschrift lautet ebenfalls französisch
+  „Configurer la carte SIM :", **Schritt 1** ist schwedisch („Det är obligatoriskt att
+  avaktivera PIN-koden för SIM-kortet!"), die **Schritte 2 bis 4** und die Überschrift
+  „Activer Pro-Finder :" sind französisch.
+- **Befund:** Eine schwedischsprachige Nutzerin erhält drei von vier Vorbereitungsschritten
+  auf Französisch. Das ist keine Formatierungsfrage, sondern ein Verlust der
+  Bedienanweisung. Der Fehler betrifft genau den Abschnitt, der die SIM-Karte konfiguriert –
+  also die Voraussetzung dafür, dass das Gerät überhaupt meldet.
+- **Prüfweg:** Beide Blöcke bei 500 dpi nachgerendert; die Sprachzuordnung der Spalten wurde
+  über die jeweils darüberstehende Zeile bestimmt, nicht über die Position.
+- **Bezug:** Gleiche Fehlerklasse wie DSC-003 (Sprachmischung im SV- und EN-Block der
+  Kurzanleitung bis SN-044), hier jedoch in der neueren Kurzanleitung und mit drei Sprachen
+  in einem Block.
+- **Schwere:** hoch (Bedienanweisung geht für eine Sprachfassung verloren) · **Status:**
+  offen – an THITRONIK zu melden
+
+### DSC-095 – Das Multi-SIM-Verbot steht deutsch in der Kurzanleitung, nicht im Handbuch (ab SN-045)
+
+- **Dokument:** DOC-KA-SN045, Seite 2, gegen DOC-IBA-SN045, deutsche Seite 13
+- **Beleg (Kurzanleitung, deutsch):** „Die SIM Karte muss SMS, Telefonie und mobile Daten
+  unterstützen. Die **Verwendung einer Multi-SIM ist nicht möglich** und eine
+  Restguthabenabfrage wird durch 4G nicht unterstützt."
+- **Befund:** Damit ist DSC-086 zu präzisieren. Das Verbot der Multi-Operator-Karte und die
+  technischen Kartenanforderungen fehlen **nicht dem Deutschen**, sondern dem deutschen
+  **Handbuch**. In der deutschen Kurzanleitung derselben Generation stehen sie. Zwei
+  deutschsprachige Dokumente derselben Auflage widersprechen sich also durch Auslassung – und
+  das Handbuch, das die ausführliche Fassung sein soll, ist das unvollständigere.
+- **Folge:** Wer nur das Handbuch liest, erfährt das Verbot nicht. Wer nur die Kurzanleitung
+  liest, erfährt es, aber ohne den übrigen Kontext der Kartenwahl.
+- **Prüfweg:** Deutscher Block der Kurzanleitung bei 500 dpi gesichert, 2026-08-23.
+- **Schwere:** hoch (die Kartenwahl entscheidet über die Funktion) · **Status:** offen –
+  präzisiert DSC-086, gehört zu Rückfrage 5
+
+### DSC-096 – Kurzanleitung und Handbuch beschreiben verschiedene Statusberichte (generationsübergreifend)
+
+- **Dokumente:** DOC-KA-SN044 Seite 2 und DOC-KA-SN045 Seite 1 gegen DOC-BMA-SN044 Seite 15
+  und DOC-IBA-SN045 deutsche Seite 22
+- **Beleg (beide Kurzanleitungen, wortgleich):** Der Statusbericht enthält „Zustand der
+  Alarmanlage · Zustand des Geofencings · Google Maps Link zum Standort · Aktuelle
+  Geschwindigkeit in km/h · Zustand Ausgang A · Zustand Ausgang B · Aktuelle Temperatur im
+  Gerät".
+- **Beleg (Handbücher):** Der Statusbericht enthält Position, Geschwindigkeit, den Zustand
+  der Ausgänge sowie – je nach Betriebsart – die Spannungen der Messeingänge und die
+  Temperatur.
+- **Befund:** Die beiden Feldlisten decken sich nicht. Die Kurzanleitungen nennen zwei
+  Felder, die die Handbücher an dieser Stelle nicht führen (Zustand der Alarmanlage, Zustand
+  des Geofencings), und lassen die Spannungen der Messeingänge weg, die die Handbücher
+  ausdrücklich nennen. Beide Beschreibungen können nicht zugleich vollständig sein.
+- **Folge für den Pilot:** Solange nicht feststeht, welche Felder ein Statusbericht
+  tatsächlich enthält, kann keine Anleitung erklären, was in einer eingehenden Meldung zu
+  suchen ist. Das betrifft unmittelbar die Erkennbarkeit im Alarmfall.
+- **Schwere:** hoch (Erkennbarkeit sicherheitsrelevanter Meldungsinhalte) · **Status:**
+  offen – erweitert Rückfrage 11
+
+### DSC-097 – Die Kurzanleitung bis SN-044 verbietet das iPhone, das Handbuch erwähnt es nicht (bis SN-044)
+
+- **Dokument:** DOC-KA-SN044, Seite 1, gegen DOC-BMA-SN044 insgesamt
+- **Beleg (Kurzanleitung, deutsch):** „ACHTUNG! Für die Schritte 1 – 6 darf **kein iPhone**
+  verwendet werden!" Dieselbe Aussage steht in allen acht Sprachblöcken der Karte („No iPhone
+  may be used for steps 1 – 6!", „aucun iPhone ne doit être utilisé !" und so weiter).
+- **Beleg (Handbuch):** Das Handbuch derselben Generation nennt **weder iPhone noch
+  iMessage** an irgendeiner Stelle; die maschinelle Suche über alle 72 Seiten liefert keinen
+  Treffer.
+- **Befund:** Die Kurzanleitung enthält damit ein hartes Verbot, von dem das ausführliche
+  Handbuch nichts weiß. Zum Vergleich: Die Generation ab SN-045 verlangt in Handbuch **und**
+  Kurzanleitung lediglich, die Funktion iMessage zu deaktivieren – ein deutlich milderer und
+  begründeter Eingriff. Ob das ältere Vollverbot eine vereinfachte Formulierung desselben
+  Sachverhalts oder eine eigene technische Einschränkung war, sagt keine Quelle.
+- **Prüfweg:** Deutscher Block bei 500 dpi gesichert; das Fehlen im Handbuch durch Volltext-
+  suche über alle Seiten belegt, 2026-08-23.
+- **Schwere:** mittel (Bedienweg; eine Nutzerin mit iPhone erhält je nach Papier
+  gegensätzliche Auskunft) · **Status:** offen
 
 ## Synthese-Auswertung 1: SMS-Befehle im Sprach- und Generationenvergleich
 

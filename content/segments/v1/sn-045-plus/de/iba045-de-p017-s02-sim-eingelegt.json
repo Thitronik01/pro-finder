@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S02-SIM-EINGELEGT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Die Nano-SIM-Karte muss eingelegt sein",
+  "body_md": "Für das Löschen der Zielrufnummern muss die Nano-SIM-Karte im Gerät eingelegt sein.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.9, rot gesetzter Hinweiskasten mit Warndreieck unter der Überschrift",
+  "prev_context": "Davor steht die nicht übernommene Beispieltabelle.",
+  "next_context": "Danach folgt die Schrittfolge zum Löschen des Zielrufnummernspeichers.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:25333c849f2b8d6a754f0454e8dd17d76ec63f5d85ea15e6fc6186589bd646fb",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 40, „Note“): sachgleich. Die Quelle setzt die Aussage in beiden Fassungen als Warnung mit Dreieck; die Warnrolle wird deshalb erhalten und nicht als Fließtext geführt.",
+  "discrepancy_refs": []
+}

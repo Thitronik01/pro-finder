@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P009-S05-ANRUF-WIPRO",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Anruf schaltet die gekoppelte Alarmanlage um",
+  "body_md": "In den dafür vorgesehenen Schalterstellungen beendet der Pro-finder einen Anruf auf die Rufnummer der eingelegten Karte selbsttätig, schaltet die gekoppelte Alarmanlage in den jeweils anderen Zustand und sendet nach erfolgreichem Schaltvorgang einen Statusbericht an den Anrufer. Die Quelle beschränkt das auf berechtigte Nummern.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 9,
+  "source_page_end": 9,
+  "source_region": "Abschnitt 1.3, Funktion „Anruf aktiviert/deaktiviert WiPro“",
+  "prev_context": "Davor steht die Funktion Geofencing.",
+  "next_context": "Danach folgt der manuelle Alarm.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:459ec8034925093bc1ca199d9d0ab4501fa64f14049c485bb2071b4bbfb4d09f",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 33): sachgleich. Die englische Fassung nennt die Alarmanlage hier zusätzlich mit Versionsziffer („The WiPro III changes from disarmed to armed“), die deutsche ohne – ein reiner Benennungsunterschied ohne Sachfolge.",
+  "discrepancy_refs": ["DSC-017"]
+}

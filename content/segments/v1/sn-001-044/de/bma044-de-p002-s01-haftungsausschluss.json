@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P002-S01-HAFTUNGSAUSSCHLUSS",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Haftungsausschluss dieser Generation",
+  "body_md": "Der Pro-finder kann einen Diebstahl laut Quelle lediglich melden, nicht verhindern. Die Quelle verlangt deshalb, sich entsprechend umsichtig zu verhalten und das Fahrzeug ausreichend gegen unbefugte Benutzung zu sichern. Der Hersteller übernimmt keine Haftung für entwendete Wertgegenstände oder Fahrzeuge, für Schäden durch Einbruch am Fahrzeug sowie für unsachgemäße Handhabung oder Installation des Geräts.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Inhaltsverzeichnisseite, Abschnitt „Haftungsausschluß“ unter der Kapitelübersicht",
+  "prev_context": "Davor steht die Kapitelübersicht.",
+  "next_context": "Danach beginnt auf der nächsten Seite Kapitel 1.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f92a679b88d8a6924942f62c4569f29d0cbcc13f2eb484475e0bf814b75f5370",
+  "change_reason": "Bei 200 dpi gerendert und gegen die Textebene abgeglichen. Gegengelesen gegen den Haftungsausschluss der Generation ab SN-045: Dieser ist deutlich ausführlicher und nennt zusätzlich Wertgegenstände im Sichtbereich, das Abschließen des Fahrzeugs, die Haftung bei Tiefentladung der Starterbatterie und die Verantwortung des Anwenders. Die hier fehlenden Aussagen werden **nicht** aus der neueren Generation ergänzt.",
+  "discrepancy_refs": ["DSC-092"]
+}

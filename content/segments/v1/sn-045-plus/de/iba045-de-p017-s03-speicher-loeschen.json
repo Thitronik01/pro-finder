@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S03-SPEICHER-LOESCHEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "zielrufnummern",
+  "title": "Zielrufnummernspeicher vollständig löschen",
+  "body_md": "Um den gesamten Zielrufnummernspeicher zu löschen, gehen Sie wie folgt vor:\n\n1. Ziehen Sie den Hauptkabelbaum ab.\n2. Stellen Sie den Betriebsartenschalter auf die Position E.\n3. Stecken Sie den Hauptkabelbaum wieder ein und warten Sie, bis die Status-LED gelb-grün blinkt.\n4. Stellen Sie den Betriebsartenschalter zurück auf die Ausgangsposition.\n\nDer Speicher ist anschließend leer und kann mit einer neuen Programmiernachricht neu belegt werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Abschnitt 2.9 „Zielrufnummern löschen“, Aufzählung und Folgeabsatz",
+  "prev_context": "Davor steht der Hinweis auf die eingelegte Nano-SIM-Karte.",
+  "next_context": "Danach folgt der Weg über die Masternummer ohne Betriebsartenschalter.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d36caffb33e5691d63f91417c061fd7a7eb6d040613086e10812df7950e6aa0e",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 40, „Deleting destination numbers“): Alle vier Schritte stimmen in Reihenfolge und Inhalt überein, ebenso die Schalterstellung E und die Rückmeldung durch gelb-grünes Blinken. Der Schalter wird in der Quelle mit einem Buchstaben in Klammern bezeichnet; die Klammerangabe entfällt hier, weil sie sich auf die Anschlussabbildung bezieht und ohne diese nicht auflösbar ist.",
+  "discrepancy_refs": []
+}

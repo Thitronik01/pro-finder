@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P039-S02-NUMBER-TYPES",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "table",
+  "task_slug": "manage-destination-numbers",
+  "title": "Three types of destination number",
+  "body_md": "Destination numbers are the telephone numbers to be notified in the event of an alarm. Up to ten numbers can be stored. The source distinguishes three types:\n\n| Type | Meaning according to the source |\n| --- | --- |\n| Master number | The number that comes first when the destination numbers are saved. It can be used to programme new destination numbers at any time without accessing the operating mode switch. |\n| Authorised numbers | May control the outputs of Pro-finder by text message and request status reports. |\n| Unauthorised numbers | Have no access to the functions of the system and receive status messages only. |\n\nHow the device assigns a number to one of these types is not stated at this point.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 39,
+  "source_page_end": 39,
+  "source_region": "Section 2.7, three-row table without a header row",
+  "prev_context": "Before this stands the note on costs from section 2.6.",
+  "next_context": "Section 2.8 on programming the destination numbers begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:75a04a3ed64c1c951a6a06c100c6c813659779d517202975ab4a08110d01c16f",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 15: all three rows and the limit of ten numbers match. The header row was added because the source table has none. The assignment rule is deliberately named as a gap while DSC-017 is open.",
+  "discrepancy_refs": ["DSC-017"]
+}

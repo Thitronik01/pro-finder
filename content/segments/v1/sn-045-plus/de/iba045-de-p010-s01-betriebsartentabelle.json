@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P010-S01-BETRIEBSARTENTABELLE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "anschluesse",
+  "title": "Tabelle der Betriebsarten",
+  "body_md": "Der Drehschalter kennt sechzehn Stellungen. Die Quelle ordnet ihnen folgende Eigenschaften zu:\n\n| Stellung | Anruf löst Statusbericht aus | Anruf schaltet die Alarmanlage | Intervall der automatischen Statusberichte | Enthaltene Spannungen | Geofencing über Pin 3 | Manueller Alarm über Pin 3 |\n| --- | --- | --- | --- | --- | --- | --- |\n| 0 | ja | – | – | – | – | – |\n| 1 | ja | – | – | U1, U2 | – | – |\n| 2 | – | ja | – | – | – | – |\n| 3 | – | ja | – | U1, U2 | – | – |\n| 4 | ja | – | 15 Minuten | U1 bis U5 | – | – |\n| 5 | ja | – | 60 Minuten | U1 bis U5 | – | – |\n| 6 | ja | – | 6 Stunden | U1 bis U5 | – | – |\n| 7 | ja | – | 24 Stunden | U1 bis U5 | – | – |\n| 8 | ja | – | – | – | über 6 V ein, unter 5 V aus | – |\n| 9 | ja | – | – | U1 bis U5 | – | – |\n| A | ja | – | – | – | – | ja |\n| B | ja | – | – | – | über 6 V aus, unter 5 V ein | – |\n| C | ja | – | 90 Sekunden, sobald Spannung anliegt und das Gerät nach dem GPS-Signal sucht | – | – | – |\n| D | ja | – | 8 Minuten, sobald Spannung anliegt und das Gerät nach dem GPS-Signal sucht | – | – | – |\n| E | Löschen der Zielrufnummern | | | | | |\n| F | GPS-Diagnose | | | | | |\n\nZwischen 5 V und 6 V trifft die Quelle in den Stellungen 8 und B keine Aussage.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 10,
+  "source_page_end": 10,
+  "source_region": "Ganzseitige „Tabelle der Betriebsarten“",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 1.3.",
+  "next_context": "Danach beginnt auf der nächsten Seite Abschnitt 1.4.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f0247cd318796bb02b8e3d10bd0ddb6a393b5095fa293f902032b5f0dad0607e",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 34, „Table of operating modes“): Alle sechzehn Zeilen und alle elf Spalten wurden Zelle für Zelle verglichen und stimmen überein – einschließlich der Intervalle, der Spannungsschwellen und der Zuordnung der Messeingänge. Insbesondere nennen **beide** Fassungen in Zeile D 8 Minuten; der Faktor-60-Widerspruch der Generation bis SN-044 (DSC-066) wiederholt sich hier nicht, ohne dass ein Wert übertragen wird. Der deutsche Zellentext der Zeile D enthält einen doppelten Produktnamen und einen fehlenden Bindesatz (DSC-087); hier steht deshalb die inhaltlich eindeutige Fassung. Die Lücke zwischen 5 V und 6 V besteht in beiden Fassungen.",
+  "discrepancy_refs": ["DSC-066", "DSC-087"]
+}

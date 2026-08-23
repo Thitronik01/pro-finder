@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P001-S03-PROGRAMMIERUNG-APP",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Programmierung vor dem ersten Gebrauch",
+  "body_md": "Der Pro-finder muss vor dem ersten Gebrauch programmiert werden. Die Kurzanleitung verweist dafür auf die App und darauf, dass die ausführliche Bedienungsanleitung ebenfalls in der App zu finden ist.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Abschnitt 6, deutscher Sprachblock",
+  "prev_context": "Davor steht der Schlusssatz zum Normalbetrieb der Status-LED.",
+  "next_context": "Danach folgt Abschnitt 7 zum Statusbericht.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a12130cef690629c83427b20b9f264f205689d8ea9b8be497c2deb5575177f91",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Bezugsadressen und der abgebildete maschinenlesbare Code werden nach BLK-004 nicht übernommen. Die Kurzanleitung nennt **keinen** Weg ohne App – anders als das Handbuch, das die Aktivierung per Programmiernachricht beschreibt. Wer nur die Karte hat, erfährt nichts von diesem zweiten Weg.",
+  "discrepancy_refs": ["DSC-043"]
+}

@@ -1,43 +1,157 @@
 # Projektstatus
 
-Stand: 2026-08-11. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
+Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten Daten aus
 `docs/progress.json`. Manuelle Prozentwerte müssen in `progress-input.json` begründet werden.
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 62.4 %**
+**Gesamtfortschritt: 71.7 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 27.5 %      |
-| Content-Modell und deutscher Master      | 20 %    | 90 %        |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 35.1 %      |
+| Content-Modell und deutscher Master      | 20 %    | 95 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
-| Webanleitung und Review-UI               | 20 %    | 68 %        |
-| Übersetzungspilot                        | 10 %    | 75 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 51 %        |
-| Staging und Übergabe                     | 5 %     | 79 %        |
+| Webanleitung und Review-UI               | 20 %    | 84 %        |
+| Übersetzungspilot                        | 10 %    | 85 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 71 %        |
+| Staging und Übergabe                     | 5 %     | 91 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 36.1 %      |
-| DOC-IBA-SN045 | 247    | 25 %        |
-| DOC-KA-SN044  | 2      | 25 %        |
-| DOC-KA-SN045  | 2      | 25 %        |
+| DOC-BMA-SN044 | 72     | 38.2 %      |
+| DOC-IBA-SN045 | 247    | 33.5 %      |
+| DOC-KA-SN044  | 2      | 75 %        |
+| DOC-KA-SN045  | 2      | 75 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 organisatorisch einholen und keine der 14 Aufgaben vorher hoeherstufen. Parallel den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Logo-/Produktassets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern; bis dahin keinen echten QR-Code, keine Braillepunkte und keine Supportkontakte einsetzen.
+Offene Blocker: 6 · Nächste Aktion: Alle deutschsprachigen Quellseiten sind extrahiert und validiert; zusaetzlich der englische Teil ab SN-045. Damit ist die Quellenpruefung ohne Zuarbeit von THITRONIK weitgehend ausgeschoepft. Was bleibt: (1) der englische Teil bis SN-044 (Seiten 20-36) - er ist bereits als Gegenquelle gelesen, fuer eigene Segmente fehlt aber der Aufgabenzweig content/tasks/sn-001-044/en/, der entweder vollstaendig mit allen 14 Aufgaben oder gar nicht anzulegen ist; (2) die franzoesischen und schwedischen Teile von DOC-BMA-SN044 sowie die acht uebrigen Sprachteile von DOC-IBA-SN045 - diese duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7). Die 13 Pruefpakete decken alle 181 sicherheitskritischen Segmente ab und warten auf den realen Fachreview. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden. In der Zugaenglichkeitsmatrix ist automatisiert, was sich automatisieren laesst: Forced Colors, 200- und 400-Prozent-Zoom, Reflow, Reduced Motion und Bilder deaktiviert. Was bleibt, braucht Menschen und Geraete: NVDA, VoiceOver, TalkBack, echter Browserzoom, das Windows-Kontrastdesign und alle physischen Kartentests. Unveraendert offen: EN-01 bis EN-03 und alle Produktionsentscheidungen der Setup-Karte.
 
 <!-- PROGRESS:END -->
+
+## Neu in dieser Sitzung (2026-08-23)
+
+**Erstes abgabefertiges Ergebnis: der Mängelbericht an THITRONIK**
+([MAENGELBERICHT_THITRONIK.md](MAENGELBERICHT_THITRONIK.md)). Er fasst die 41 Befunde der
+Schwere „hoch" zusammen und ordnet sie danach, was sich damit tun lässt. Er unterscheidet
+sich in einem Punkt von allem anderen im Projekt: **Er braucht keine Freigabe.** Jede Aussage
+über das Gerät wartet auf den technischen Review; Aussagen über die Dokumente sind belegte
+eigene Beobachtungen und sofort verwertbar.
+
+Der Bericht trennt ausdrücklich, was THITRONIK **allein** korrigieren kann – zwei einzeilige
+Sicherheitskorrekturen, drei Satzfehler der Kurzanleitung, fehlende Signalwörter,
+nicht lokalisierte Abbildungen – von dem, was eine technische oder eine Produktentscheidung
+braucht.
+
+**Vier Zeilen der Zugänglichkeitsmatrix sind aus dem Status `offen` heraus.** Forced Colors,
+200-Prozent-Zoom, 400-Prozent-Zoom/Reflow und „Bilder deaktiviert" sind jetzt über zehn
+Kernrouten automatisiert. Beide neuen Pfade beginnen mit einer Zusicherung, dass die
+Emulation überhaupt greift – ein Test, der leer durchläuft, wäre schlimmer als keiner.
+
+Genau diese Absicherung hat sich sofort bezahlt gemacht: Beim Test „Bilder deaktiviert"
+wurde **kein einziges Bild blockiert**. Die Anwendung bindet überhaupt keine Bilder ein,
+weder als `img` noch als Hintergrundbild – jede Abbildung der Quelle steht als Text. Der
+Test schreibt jetzt diese stärkere Eigenschaft fest, statt eine Prüfung zu behaupten, die
+nie stattgefunden hat.
+
+**Alle deutschsprachigen Quellseiten des Projekts sind extrahiert und validiert.** 19 von 19
+im Handbuch bis SN-044, 21 von 21 im Handbuch ab SN-045 und 2 von 2 in jeder der beiden
+Kurzanleitungen. Dazu die 21 englischen Seiten ab SN-045. Segmentbestand: 245.
+
+**Die Kurzanleitung widerspricht dem Handbuch an fünf Stellen.** Das Papier, das dem Gerät
+beiliegt, ist für viele Nutzerinnen die einzige Anleitung, die sie je in der Hand halten –
+und es sagt bei Kartenempfehlung, Multi-SIM-Verbot, Feldliste des Statusberichts,
+iPhone-Nutzung und Erstinbetriebnahme etwas anderes als das Handbuch derselben Generation
+und derselben Sprache (DSC-093 bis DSC-097, gebündelt in P0-13). Besonders folgenreich:
+**DSC-095 stellt DSC-086 richtig.** Das Multi-SIM-Verbot fehlt nicht dem Deutschen, sondern
+dem deutschen _Handbuch_ – in der deutschen Kurzanleitung steht es. Das ausführlichere
+Dokument ist das unvollständigere.
+
+**Die Review-UI zeigt die Belege jetzt selbst.** Zwei neue Ansichten machen sichtbar, worauf
+ein Segment ruht: `/review/segment/<key>` mit Änderungsgrund, Prüfvermerk der Quellseite,
+Region, Kontext, Prüfsumme, verlinkten Registerbezügen und dem Gegenstück der anderen
+Sprachfassung im direkten Vergleich; `/review/packet/<id>` mit allen Segmenten eines
+Dossiers, ihren Quellseiten und der Zahl der unabhängig gegengeprüften darunter. Dazu vier
+neue Filter (Sprache, Registerbezug, Prüfstand der Quellseite, erweiterte Suche). Ein
+Fachreview kann ein Paket damit ohne Dateizugriff durcharbeiten.
+
+Bewusst **nicht** gebaut wurde eine Statuswechsel-UI gegen Fixtures: Sie wäre eine Attrappe
+und würde Freigaben vortäuschen, die es nicht gibt.
+
+**Der deutsche und der englische Sprachteil ab SN-045 sind beide abgeschlossen.** Alle 21
+deutschen und alle 21 englischen Inhaltsseiten wurden wechselseitig gegengelesen, in 83 + 83
+Segmente extrahiert und auf `validated` gestuft. Dabei entstanden sechs neue
+Registereinträge (DSC-086 bis DSC-091), von denen fünf in einer Selbstdurchsicht nicht
+sichtbar geworden wären.
+
+Für den Übersetzungspilot ist das der eigentliche Fortschritt: Die englischen Segmente sind
+**Extraktionen der englischen Quelle**, nicht Übersetzungen des deutschen Masters. Eine
+Übersetzung hätte DSC-086, DSC-088, DSC-090 und DSC-091 nie sichtbar gemacht.
+
+- **Der deutsche Master ab SN-045 hat eine unabhängige Gegenquelle.** Alle 21 deutschen
+  Inhaltsseiten von DOC-IBA-SN045 wurden Satz für Satz, Zeile für Zeile gegen die englischen
+  Seiten 29–49 derselben Auflage gelesen und dabei in 83 Segmente extrahiert. Die Prüfung hängt damit nicht davon ab, dass derselbe Bearbeiter seine eigene
+  Arbeit nachliest. Methode, belegte Seitenpaarung und Prüfstand je Seite stehen in
+  [CROSSCHECK_SN045_DE_EN.md](CROSSCHECK_SN045_DE_EN.md).
+- **DSC-021 ist für das Paar Deutsch/Englisch geklärt – und die bisherige Vermutung war
+  falsch.** Die englische Fassung überspringt **keine** interne Seitenzahl: Die Fußzeilen
+  der englischen Seiten 33–40 laufen lückenlos „Page 7 of 23" bis „Page 14 of 23", und
+  beide Teile umfassen 21 Inhaltsseiten. Verschoben ist der Inhalt. Der Versatz entsteht
+  bei Abschnitt 2.8 – Deutsch setzt die Syntaxgrafik allein auf eine eigene interne Seite,
+  Englisch setzt sie zusammen mit der Einleitung – und wird in Kapitel 4 wieder
+  ausgeglichen, das englisch drei statt zwei interne Seiten belegt. Es fehlt kein Inhalt.
+- **Neuer sicherheitsrelevanter Befund DSC-086.** Der englische Abschnitt 2.1 verbietet die
+  Multi-Operator-SIM-Karte („not allowed") und nennt technische Mindestanforderungen an die
+  Karte; der deutsche Master schweigt an derselben Stelle dazu. Das ist kein Widerspruch
+  zweier Werte, sondern eine Aussage, die nur eine Fassung führt – wer nur den deutschen
+  Teil liest, kann eine Karte wählen, die dieselbe Auflage englisch ausschließt. Gehört zu
+  Rückfrage 5.
+- **Kein eigener Lesefehler.** Bei den fünf gegengelesenen Seiten musste kein Segment wegen
+  einer eigenen Fehllesung korrigiert werden. Alle gefundenen Abweichungen sind belegte
+  Sprachunterschiede der Quelle (DSC-016, DSC-017, DSC-019, DSC-027, DSC-086) und wurden
+  nicht angeglichen.
+- **Ein Fehler steht im deutschen Master, nicht in der Übersetzung (DSC-087).** In der
+  Betriebsartentabelle nennt die deutsche Zeile D den Produktnamen doppelt und lässt einen
+  Bindesatz aus; die englische Fassung ist an dieser Stelle korrekt und damit die bessere
+  Quelle. Nebenbefund ohne Wertübernahme: In dieser Generation nennen **beide** Fassungen
+  8 Minuten – der Faktor-60-Widerspruch der Generation bis SN-044 (DSC-066) wiederholt sich
+  hier nicht.
+- **Ein technischer Auslegungswert weicht innerhalb einer Auflage ab (DSC-088).** Für die
+  Stromaufnahme im Normalbetrieb nennt der deutsche Teil einen Bereich, der englische Teil
+  nur die Obergrenze. Es widersprechen sich also nicht zwei Dokumente, sondern zwei
+  Sprachfassungen desselben Dokuments. Gehört zu Rückfrage 2; kein Wert wird veröffentlicht.
+- **Eine Gerätemeldung heißt je Fassung anders (DSC-090).** Bei fehlender Position nennt der
+  deutsche Teil einen Hinweis auf fehlenden GPS-Empfang, der englische einen auf eine
+  fehlende Position. Gibt das Gerät nur eine feste Zeichenfolge aus, ist mindestens eine der
+  beiden im Feld nicht auffindbar. Keine wird als Erkennungsmerkmal veröffentlicht.
+- **Zwei englische Satzfehler und eine uneinheitliche Benennung (DSC-089, DSC-091).** Das
+  englische Statusbericht-Beispiel führt zwei Messeingänge in einer Zeile zusammen und zeigt
+  dadurch vier statt fünf Spannungszeilen; ein Querverweis steht doppelt. Der Anlernmodus
+  heißt in Überschrift und Befehl verschieden.
+- **Eine eigene Fehllesung wurde widerlegt und ist dokumentiert.** Eine zunächst vermutete
+  Kopfzeile mit Seitenzahl in der englischen Fassung existiert nicht; bei 400 dpi ist der
+  Bereich in beiden Fassungen leer. Der Befund steht in
+  [CROSSCHECK_SN045_DE_EN.md](CROSSCHECK_SN045_DE_EN.md), statt stillschweigend zu
+  verschwinden.
+- **Grenze der Methode.** Für die acht übrigen Sprachfassungen endet dieses Verfahren: Ohne
+  muttersprachlichen Review darf keine ihrer Seiten über `inspected` hinaus. Die
+  Quellenprüfung hat damit ohne Zuarbeit von THITRONIK eine harte Obergrenze – das ist keine
+  Umsetzungslücke, sondern Folge der Leitplanken 6 und 7.
+- **Was das nicht bedeutet:** Die 166 Segmente stehen wie alle übrigen auf `entwurf`. Die
+  42 Seiten stehen auf `validated`, nicht auf `approved` – das setzt einen realen
+  THITRONIK-Fachreview voraus, den es weiterhin nicht gibt. Eine Gegenprüfung gegen eine
+  zweite Sprachfassung ersetzt keine technische Freigabe.
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 307 stehen auf
-  `inspected` und die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
-  unabhängigen Segment-Gegenprüfungen auf `validated`; keine Seite steht mehr auf
-  `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 258 stehen auf
+  `inspected` und 65 auf `validated` – die sechzehn deutschen Inhaltsseiten 3–18 von
+  DOC-BMA-SN044 nach fünf unabhängigen Segment-Gegenprüfungen sowie **alle 21 deutschen
+  Inhaltsseiten 5–25 und alle 21 englischen Inhaltsseiten 29–49 von DOC-IBA-SN045** nach
+  wechselseitigem Gegenlesen; keine Seite steht auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
   Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
@@ -215,11 +329,16 @@ Offene Blocker: 6 · Nächste Aktion: Die unabhaengigen englischen Sprachreviews
   UTC-Zeit in 13 Einzelentscheidungen. DOC-BMA-SN044, Seiten 3–7 und 12–17, wurden dafür
   am 2026-08-11 erneut bei 300 beziehungsweise 400 dpi gerendert und vollständig gelesen.
   SMS-Befehle, Radius, Berechtigungszeichen, Koordinaten, Kartenadressen und
-  Beispielkontakte bleiben ausgelassen. Damit sind **41 von 41 P0-Segmenten** genau einem
-  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet;
-- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 41/41,
-  ein Paket-Select filtert P0-01 bis P0-05 unabhängig von der Freitextsuche, und die fünf
-  Direktlinks liefern exakt 6/11/11/8/5 Treffer. Ein Unit-Test bricht ab, sobald ein
+  Beispielkontakte bleiben ausgelassen. Am 2026-08-23 kamen mit P0-06 bis P0-12 sieben
+  Pakete der Generation ab SN-045 hinzu, die alle 63 sicherheitskritischen Segmente des
+  deutschen SN-045-Teils abdecken; jedes ihrer Segmente wurde gegen die englische Fassung
+  derselben Auflage gegengelesen. Damit sind **104 von 104 P0-Segmenten** genau einem
+  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Englische Segmente liegen
+  im selben Paket wie ihre deutsche Entsprechung, sodass eine Entscheidung für beide Fassungen
+  gilt; P0-13 kommt für die Kurzanleitungen hinzu: **181 von 181**;
+- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 181/181,
+  ein Paket-Select filtert P0-01 bis P0-13 unabhängig von der Freitextsuche, und die zwölf
+  Direktlinks führen in die jeweils gefilterte Warteschlange. Ein Unit-Test bricht ab, sobald ein
   sicherheitskritisches Segment kein Paket besitzt; der Browsertest prüft Kennzahl,
   Direktlinks und Select. Kein Segmentstatus wurde dadurch geändert;
 - **eine eigene Fehlklassifikation zur GPS-Kabellänge ist transparent korrigiert:** Die

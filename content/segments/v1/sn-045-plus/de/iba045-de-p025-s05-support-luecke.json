@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S05-SUPPORT-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "support",
+  "title": "Supportkontakte werden nicht wiedergegeben",
+  "body_md": "Die Quelle nennt an dieser Stelle einen Fachhändler als ersten Ansprechpartner sowie Website, Rufnummer und E-Mail-Adresse des technischen Supports. Kontaktdaten und Adressen werden in dieser Anleitung nicht wiedergegeben, weil sie ungeprüft veralten können. Übernommen wird allein die Sachaussage: Halten Sie bei einer Supportanfrage die Seriennummer Ihres Geräts und die Softwareversion bereit; beide finden Sie am Gerät selbst oder in der App.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.4 „Technische Unterstützung“",
+  "prev_context": "Davor steht die Konformitätsangabe.",
+  "next_context": "Danach endet der deutsche Sprachteil.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b420ab42ba471b72b02015213a0889bb2a0d800b3fe193d0d8261771e3fc82df",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 49, „Technical support“): Die Sachaussage zu Seriennummer und Softwareversion ist sachgleich. Website-Adresse und Sprachpfad unterscheiden sich zwischen den Fassungen; Rufnummer und E-Mail-Adresse sind identisch. Die Auslassung folgt BLK-004 und ist kein Quellenunterschied.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S02-EINGABEHILFE-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "meldungen",
+  "title": "Meldung mit Eingabehilfen wird nicht im Wortlaut wiedergegeben",
+  "body_md": "Empfängt der Pro-finder von einer Zielrufnummer eine Nachricht mit ungültigem Inhalt, antwortet er mit einer Meldung, die mögliche gültige Befehle aufzählt. Der Wortlaut dieser Antwort und die darin genannten Befehle werden hier nicht wiedergegeben. Welche Befehle das Gerät tatsächlich annimmt, ist eine offene, sicherheitskritische Angabe.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „SMS mit Eingabehilfen“",
+  "prev_context": "Davor steht die Positionsmeldung für Smartphones.",
+  "next_context": "Danach folgt die Einbruchmeldung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d413dba3dd7724b8c6ddff33c5d3f88657de76b264a5eb066f3ddb6f16565bda",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 43, „Help SMS“): Die Erläuterung ist sachgleich, die aufgezählten Befehle unterscheiden sich jedoch sprachlich. Damit ist erneut belegt, dass die Befehlsliste je Fassung anders lautet; die Auslassung folgt BLK-005 und Rückfrage 1. Der deutsche Beispieltext ersetzt zudem Umlaute durch Vokal plus e – dieselbe Zeichensatzgrenze wie DSC-054.",
+  "discrepancy_refs": ["DSC-054"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P038-S05-SAVE-NUMBER",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "install-app-and-activate",
+  "title": "Save the Pro-finder number in the address book",
+  "body_md": "So that an incoming alarm message can be assigned quickly, the Pro-finder number should be given a name in the address book of the mobile phone like any other entry. The source recommends a name that puts the entry at the beginning of the address book, but gives two different spellings for it – one in the body text and another in the tip that immediately follows.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 38,
+  "source_page_end": 38,
+  "source_region": "Section 2.5, body text and red tip",
+  "prev_context": "Before this stands activation without the app.",
+  "next_context": "The note on the country code and section 2.6 follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6420b8653e36ba570c564cba4b34c60265dbd15c1caaf4da117be18dcaeaff4a",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 14: both versions set different spellings of the same suggested name in the body text and in the tip. The contradiction is therefore documented in both and is not resolved; neither spelling is presented as binding.",
+  "discrepancy_refs": ["DSC-016"]
+}

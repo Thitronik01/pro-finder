@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P047-S01-OUTPUT-PERMANENT",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "control-outputs",
+  "title": "Switching an output on and off permanently",
+  "body_md": "An output can be switched on until further notice by text message and switched off again the same way. Pro-finder carries out the switching operation and replies with a status report each time.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 47,
+  "source_page_end": 47,
+  "source_region": "Section 5.5.1",
+  "prev_context": "The introduction to 5.5 ends on the previous page.",
+  "next_context": "The pulsed mode follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ebacdf77530cc4d0c65847f3baa75a5c336dcb6886ee9a45976fcbe771786b2a",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 23: equivalent in substance, including the feedback by status report. The two command strings are not reproduced (BLK-005).",
+  "discrepancy_refs": []
+}

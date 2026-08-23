@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P042-S01-MESSAGE-FIELDS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "table",
+  "task_slug": "understand-messages",
+  "title": "Fields a message can contain",
+  "body_md": "Depending on the incident and the switch position, a message can contain the following information:\n\n| Field | Meaning |\n| --- | --- |\n| GPS | If the antenna is in standby, it is reactivated automatically in the event of an incident. |\n| UTC | Time of the incident in coordinated universal time. |\n| Pos | Current vehicle position; the format depends on the mobile device. |\n| Speed | Current speed of the vehicle. |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 42,
+  "source_page_end": 42,
+  "source_region": "Chapter 4, field list above the message examples",
+  "prev_context": "Chapter 3 ends on the previous page.",
+  "next_context": "The message examples follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1510cb8859950996347697964a27c7446340e66a1a21d18d3821527093f0bfee",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 19: all four fields match. Column headers were added. Neither version states which fields are mandatory in which message.",
+  "discrepancy_refs": []
+}

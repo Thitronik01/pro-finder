@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P023-S01-AUSGANG-DAUERHAFT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "ausgaenge",
+  "title": "Ausgang dauerhaft ein- und ausschalten",
+  "body_md": "Ein Ausgang lässt sich per Kurznachricht bis auf Widerruf einschalten und ebenso wieder ausschalten. Der Pro-finder führt den Schaltvorgang aus und antwortet jeweils mit einem Statusbericht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 23,
+  "source_page_end": 23,
+  "source_region": "Abschnitt 5.5.1 „Ausgänge dauerhaft einschalten“",
+  "prev_context": "Davor endet auf der vorigen Seite die Einleitung zu 5.5.",
+  "next_context": "Danach folgt der Impulsbetrieb.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7fa5347873750e3ccc033685c407c0cfdf0cb2745104427e5fc45df152396b71",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 47, „Switching on outputs permanently“): sachgleich, einschließlich der Rückmeldung durch einen Statusbericht. Die beiden Befehlszeichenfolgen werden nach BLK-005 nicht wiedergegeben.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S05-IPHONE-IMESSAGES",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "sim-karte",
+  "title": "Bei einem iPhone zuerst iMessages abschalten",
+  "body_md": "Wird ein iPhone zum Vorbereiten der Karte verwendet, muss die Funktion iMessages deaktiviert sein, bevor die vier Einstellungen vorgenommen werden.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, rot gesetzter Achtung-Kasten unterhalb der Schrittliste",
+  "prev_context": "Davor steht die vierschrittige Vorbereitung der Karte.",
+  "next_context": "Danach beginnt Abschnitt 2.2 zum Einsetzen der Karte in das Modul.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:edd950af2aaff3df1882af2dd92abd08d050dd6979a8ba1b13e9d1d6ef8d17da",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37, „Caution“): sachgleich. Die Quelle bezieht die Bedingung in beiden Fassungen auf die Schritte 1 bis 4; die Schrittnummern werden hier durch einen Verweis auf die Liste ersetzt, weil die Nummerierung in der Webfassung von der Reihenfolge der Bedienschritte getrennt ist.",
+  "discrepancy_refs": []
+}

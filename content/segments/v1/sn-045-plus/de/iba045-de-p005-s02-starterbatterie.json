@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P005-S02-STARTERBATTERIE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "anschluesse",
+  "title": "Das Gerät hängt an der Starterbatterie",
+  "body_md": "Die Anlage ist an die Starterbatterie angeschlossen. Der Hersteller haftet nicht für Schäden durch Tiefentladung der Starterbatterie. Ist die Batterie leer, lässt sich das Fahrzeug unter Umständen nicht mehr entriegeln. Die Verantwortung für den bestimmungsgemäßen Betrieb trägt der Anwender.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 5,
+  "source_page_end": 5,
+  "source_region": "Abschnitt „Haftungsausschluss“, zweiter Absatz",
+  "prev_context": "Davor steht der Hinweis, dass das Gerät einen Diebstahl nur melden kann.",
+  "next_context": "Danach beginnt der Abschnitt „Bestimmungsgemäßer Gebrauch“.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:5e52a98d476e859e67d189cd49e1ebc359bdca5daf09170874bb0611e27f5cde",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 29): sachgleich, einschließlich der Folge, dass sich das Fahrzeug bei leerer Batterie nicht entriegeln lässt. Die Quelle nennt in keiner Fassung eine Abschaltschwelle oder eine Schutzmaßnahme gegen die Tiefentladung – das bleibt eine Lücke.",
+  "discrepancy_refs": []
+}

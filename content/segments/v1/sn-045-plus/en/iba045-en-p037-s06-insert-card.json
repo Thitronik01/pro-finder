@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S06-INSERT-CARD",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "Insert the SIM card into the Pro-finder module",
+  "body_md": "Then take the prepared card out of the mobile device, insert it into the holder on the Pro-finder circuit board and lock the holder.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.2, body text above the photo",
+  "prev_context": "Before this stands the caution box on iPhone and iMessages.",
+  "next_context": "Section 2.3 on the app follows on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1ad185ae87b951e9a9d42e94676d5f544d82aa9da34dc8c38f6f74fad98572f7",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: equivalent in substance, including locking the holder.",
+  "discrepancy_refs": []
+}

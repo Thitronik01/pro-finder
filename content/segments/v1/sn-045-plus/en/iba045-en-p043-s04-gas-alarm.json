@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P043-S04-GAS-ALARM",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "understand-messages",
+  "title": "Gas alarm",
+  "body_md": "If a connected gas warning device reports a gas alarm through the connected alarm system, Pro-finder sends a corresponding message. Here too it additionally calls the master number afterwards.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 43,
+  "source_page_end": 43,
+  "source_region": "Chapter 4, explanation of the message type “Gas alarm” with red addition",
+  "prev_context": "Before this stands the intrusion report.",
+  "next_context": "The manual alarm follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b7cc4653e8c55f41363353a38785cbb1a8990ec31fd5f255262a7bfe79ab1b07",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 20: equivalent in substance. Neither version says what happens if the callback is not answered – with a gas alarm this remains a safety-relevant gap.",
+  "discrepancy_refs": []
+}

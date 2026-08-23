@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P038-S03-ACTIVATION-LED",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "install-app-and-activate",
+  "title": "Connect the power supply and activate Pro-finder",
+  "body_md": "Once the card is inserted and the holder is locked, connect the power supply. The status LED then flashes red briefly and afterwards yellow-green. The source recommends carrying out the activation with the app, which guides through the individual steps.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 38,
+  "source_page_end": 38,
+  "source_region": "Section 2.4, first two paragraphs",
+  "prev_context": "Before this stands the omitted way to obtain the app.",
+  "next_context": "The source then describes activation without the app.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ea70d70bc2ecbfcf20b5264bf00040d9fdd30107a75f56e30f598e9b7b6faff4",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 14: the colour sequence matches. The additional claim that the app makes sections 2.5 to 2.8 unnecessary is not carried over as an operating path while DSC-043 is open. The English sentence carrying that claim also contains a typing error (“will be not be required”), which is corrected here rather than reproduced.",
+  "discrepancy_refs": ["DSC-043"]
+}

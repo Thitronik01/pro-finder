@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P045-S03-GEOFENCING-PRINCIPLE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "use-geofencing",
+  "title": "What geofencing means",
+  "body_md": "Geofencing places a virtual fence around the vehicle. If the vehicle then leaves the area around its original location stated by the source, a theft report is received.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 45,
+  "source_page_end": 45,
+  "source_region": "Section 5.2, first paragraph",
+  "prev_context": "Before this stands the note on authorised numbers.",
+  "next_context": "The switch positions in which geofencing can be switched follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:c00b08979318fb0bab8dba669768d5d57138f883ca7ce4bf2e1009bac0603881",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 21: equivalent in substance. Both versions name the same radius; it is not reproduced under BLK-007 and because three values are on record across the generations (DSC-078).",
+  "discrepancy_refs": ["DSC-078"]
+}

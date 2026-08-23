@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S05-EINBAULAGE-ABBILDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "montageort",
+  "title": "Abbildung zur Einbaulage",
+  "body_md": "Drei Bilder stehen nebeneinander. Links ist das Gerät mit der beschrifteten Oberseite nach oben abgebildet und grün umkreist – das ist die richtige Lage. In der Mitte liegt dasselbe Gerät mit der Oberseite nach unten, rot umkreist und rot durchgestrichen – das ist die falsche Lage. Rechts zeigt eine Strichzeichnung eines Reisemobils, wie die externe Antenne im Bereich des Armaturenbretts sitzt und von einem Satellitensymbol angepeilt wird. Richtig und falsch werden in der Quelle **allein** durch Farbe und Durchstreichung unterschieden; es gibt keine Beschriftung.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1, drei Abbildungen im unteren Seitendrittel",
+  "prev_context": "Davor steht der Absatz zur externen GPS-Antenne.",
+  "next_context": "Danach beginnt auf der nächsten Seite Abschnitt 1.2.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f05af07328b37aa1ab3bcc0d00ec5c28f5b9a56949ffe306fa552d0ffcf1cfd1",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 31): identische, unveränderte Abbildungen ohne jede Beschriftung. Die ausschließlich farbliche Unterscheidung ist damit in beiden Fassungen belegt und wird hier in Worte gefasst, weil sie sonst für farbfehlsichtige Nutzerinnen verloren geht.",
+  "discrepancy_refs": []
+}

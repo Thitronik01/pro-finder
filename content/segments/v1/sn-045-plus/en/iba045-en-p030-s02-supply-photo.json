@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P030-S02-SUPPLY-PHOTO",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "figure_description",
+  "task_slug": "determine-device-generation",
+  "title": "Product photo of the scope of supply",
+  "body_md": "The photo shows all parts side by side on a white background: the quick guide as an opened booklet, the rod-shaped antenna, the black device housing, two small blue connectors, a flat fuse, two blue fuse holders, two screws, a black cable with a modular plug, and a multi-coloured wiring harness with a white connector housing. The parts are **not** numbered in the photo; they can only be matched to the list by shape and colour.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 30,
+  "source_page_end": 30,
+  "source_region": "Page “Scope of supply”, product photo in the upper third",
+  "prev_context": "The intended use ends on the previous page.",
+  "next_context": "The numbered list of nine items follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8f5034686aa611f78b863b4930f9a9974aa60cf85e242e01f69106b6dd90f0dc",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 6: identical, unchanged photo without a caption. The missing numbering is therefore a property of the shared template, not a language difference, and it is an accessibility limit because the match remains purely visual.",
+  "discrepancy_refs": []
+}

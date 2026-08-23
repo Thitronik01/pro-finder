@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P042-S05-EXAMPLES-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "understand-messages",
+  "title": "The example messages shown are not reproduced",
+  "body_md": "For each message type the source shows an example message with a time, a map address and position values. Map addresses, coordinates and complete example messages are not reproduced in this manual. What a message actually contains is set out in the field list.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 42,
+  "source_page_end": 42,
+  "source_region": "Chapter 4, black speech bubbles beside the explanations",
+  "prev_context": "Before this stands the field list.",
+  "next_context": "The explanations of the individual message types follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b2fd58ae5b33c514ec8ae63ec4e4d13a15ab291dc4e2668847566a4d48109a82",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 19: apart from the translated message keywords the bubbles are identical and contain the same map addresses. The omission follows BLK-004 and is not a language difference.",
+  "discrepancy_refs": ["DSC-082"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P034-S01-MODE-TABLE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "table",
+  "task_slug": "wire-connections",
+  "title": "Table of operating modes",
+  "body_md": "The rotary switch has sixteen positions. The source assigns them the following properties:\n\n| Position | Call triggers status report | Call switches the alarm system | Interval of automatic status reports | Voltages contained | Geofencing via pin 3 | Manual alarm via pin 3 |\n| --- | --- | --- | --- | --- | --- | --- |\n| 0 | yes | – | – | – | – | – |\n| 1 | yes | – | – | U1, U2 | – | – |\n| 2 | – | yes | – | – | – | – |\n| 3 | – | yes | – | U1, U2 | – | – |\n| 4 | yes | – | 15 minutes | U1 to U5 | – | – |\n| 5 | yes | – | 60 minutes | U1 to U5 | – | – |\n| 6 | yes | – | 6 hours | U1 to U5 | – | – |\n| 7 | yes | – | 24 hours | U1 to U5 | – | – |\n| 8 | yes | – | – | – | above 6 V on, below 5 V off | – |\n| 9 | yes | – | – | U1 to U5 | – | – |\n| A | yes | – | – | – | – | yes |\n| B | yes | – | – | – | above 6 V off, below 5 V on | – |\n| C | yes | – | 90 seconds, once voltage is applied and the device is searching for the GPS signal | – | – | – |\n| D | yes | – | 8 minutes, once voltage is applied and the device is searching for the GPS signal | – | – | – |\n| E | Deleting the destination numbers | | | | | |\n| F | GPS diagnosis | | | | | |\n\nBetween 5 V and 6 V the source makes no statement for positions 8 and B.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 34,
+  "source_page_end": 34,
+  "source_region": "Full-page “Table of operating modes”",
+  "prev_context": "Section 1.3 ends on the previous page.",
+  "next_context": "Section 1.4 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:eae2e5e660a423fdfeed0ec9596a886538f9b080203be7821414d56a99fc7751",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 10: all sixteen rows and eleven columns were compared cell by cell and match, including the intervals, the voltage thresholds and the assignment of the measurement inputs. Row D reads 8 minutes in both versions; the factor-60 contradiction of the generation up to SN-044 (DSC-066) does not recur here, and no value is carried across. The English wording of row D is the sounder one: the German cell duplicates the product name and omits a conjunction (DSC-087). The gap between 5 V and 6 V exists in both versions.",
+  "discrepancy_refs": ["DSC-066", "DSC-087"]
+}

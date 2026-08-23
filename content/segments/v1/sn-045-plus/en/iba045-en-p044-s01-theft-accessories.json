@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P044-S01-THEFT-ACCESSORIES",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "understand-messages",
+  "title": "Theft of secured accessories",
+  "body_md": "If the radio cable loop is triggered – for example when camping accessories secured with it are stolen – the connected alarm system reports this through Pro-finder. An additional callback to the master number is **not** stated for this message type.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 44,
+  "source_page_end": 44,
+  "source_region": "Chapter 4, explanation of the message type “Theft of accessories”",
+  "prev_context": "The manual alarm ends on the previous page.",
+  "next_context": "Chapter 5 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ed42c81797222b90750723e2f26908acc85a8ff7dafe5cdc09a29de5efa72f5f",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 20: equivalent in substance – the red addition about the callback carried by the four preceding message types is missing there too. The omission is therefore independently confirmed and is not a reading error; whether it is intended, the source does not say. In the English version this message type is the only one on a page of its own, and this is the point at which the English part compensates the page displacement recorded in DSC-021.",
+  "discrepancy_refs": ["DSC-021"]
+}

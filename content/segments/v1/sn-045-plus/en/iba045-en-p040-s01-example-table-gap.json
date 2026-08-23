@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P040-S01-EXAMPLE-TABLE-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "manage-destination-numbers",
+  "title": "The example table of programming messages is not reproduced",
+  "body_md": "At this point the source shows three examples of programming messages containing complete telephone numbers. Example telephone numbers and complete message contents are not reproduced in this manual. Only the general statement is carried over: further recipients are entered consecutively and without spaces.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 40,
+  "source_page_end": 40,
+  "source_region": "Head of the page, three-row example table with closing sentence",
+  "prev_context": "The syntax graphic ends on the previous page.",
+  "next_context": "Section 2.9 on deleting the destination numbers begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:dfb1eb97e743f674cf2e3349188df505539bb954b79e7e8f5fc4277554753b4c",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 17: the table has the same three rows with the same example values and the same row labels; the closing sentence is equivalent in substance. The omission follows BLK-005 and BLK-006 and is not a language difference.",
+  "discrepancy_refs": ["DSC-017"]
+}

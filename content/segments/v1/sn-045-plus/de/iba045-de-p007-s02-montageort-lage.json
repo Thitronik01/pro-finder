@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S02-MONTAGEORT-LAGE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "montageort",
+  "title": "Nicht im Motorraum montieren, Oberseite nach oben",
+  "body_md": "Der Montageort muss sich im Fahrzeuginneren befinden. Im Motorraum darf das Gerät keinesfalls montiert werden. Weil der Pro-finder einen GPS-Empfänger enthält, muss die Geräteoberseite nach oben zeigen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1, zweiter Absatz",
+  "prev_context": "Davor steht die Anforderung an die Zugänglichkeit des Montageorts.",
+  "next_context": "Danach folgt die Anforderung an die freie Sicht zum Satelliten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a3345641e741eebc855eac11b7bd7796ef1b73ca3343ad93f9f1dcdd78eb77f3",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 31): sachgleich, einschließlich des ausdrücklichen Verbots im Motorraum („must never be installed in the engine compartment“).",
+  "discrepancy_refs": []
+}

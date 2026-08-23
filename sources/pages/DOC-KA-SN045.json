@@ -5,8 +5,8 @@
   "pages": [
     {
       "page": 1,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 415.0,
       "height_mm": 298.0,
       "extractable_chars": 17770,
@@ -198,12 +198,13 @@
         "'THITRONIK(R)App' ohne Leerzeichen zwischen Markenzeichen und 'App' in der Abschnitt-6-Ueberschrift, an anderer Stelle 'THITRONIK(R) App' mit Leerzeichen",
         "Firmierung wechselt zwischen Logo-Schreibweise 'THITRONIK' und juristischer Schreibweise 'Thitronik GmbH' (letzteres in CE-Text und Adresse - vertretbar)"
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Deutsche Sprachbloecke der Aussenseite aus der Textebene gelesen und visuell gesichert (2026-08-23). Gegengelesen gegen das Handbuch derselben Generation: Der Normalbetrieb der Status-LED stimmt ueberein, die Feldliste des Statusberichts weicht dagegen ab (DSC-096). 3 Segmente."
     },
     {
       "page": 2,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 415.0,
       "height_mm": 298.0,
       "extractable_chars": 18844,
@@ -346,7 +347,8 @@
         "GPS-pro-Aufkleber (Foto): \"Unter Amaturenbrett ...\" - Tippfehler, korrekt 'Armaturenbrett'",
         "\"THITRONIK®\" durchgehend korrekt geschrieben; \"WiPro III\" in Legenden, aber Tabelle Abschnitt 4 nur \"WiPro\""
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Deutsche Sprachbloecke der Innenseite gelesen, strittige Stellen bei 500 dpi nachgerendert (2026-08-23). Drei Funde: die Kartenempfehlung ist eine fuenfte Variante (DSC-093), die technischen Kartenanforderungen samt Multi-SIM-Verbot stehen hier deutsch und fehlen im deutschen Handbuch (DSC-095, praezisiert DSC-086), und in der englischen sowie der schwedischen Nachbarspalte ist dieselbe Schrittliste teilweise franzoesisch gesetzt (DSC-094). 7 Segmente."
     }
   ]
 }

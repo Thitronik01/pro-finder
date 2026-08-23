@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S06-SIM-EINSETZEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "SIM-Karte in das Pro-finder-Modul einsetzen",
+  "body_md": "Nehmen Sie die vorbereitete Karte anschließend aus dem mobilen Endgerät, legen Sie sie in die Halterung auf der Platine des Pro-finder-Moduls ein und verriegeln Sie die Halterung.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.2 „SIM-Karte ins Pro-finder-Modul einsetzen“, Fließtext über der Fotoabbildung",
+  "prev_context": "Davor steht der Achtung-Kasten zu iPhone und iMessages.",
+  "next_context": "Danach folgt auf der nächsten Seite Abschnitt 2.3 zur THITRONIK App.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f3bff329c1a75515beed758952a1cc6b55c31938de6c7cc2658886fa2223824a",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37, „Inserting the SIM card into the Pro-finder module“): sachgleich, einschließlich des Verriegelns der Halterung.",
+  "discrepancy_refs": []
+}

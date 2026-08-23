@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S05-GEOFENCING-AUTOMATIK",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "geofencing",
+  "title": "Geofencing folgt automatisch der Alarmanlage",
+  "body_md": "Ist die gekoppelte Alarmanlage scharfgeschaltet, ist das Geofencing automatisch aktiviert und muss nicht zusätzlich eingeschaltet werden. Ist die Alarmanlage unscharf geschaltet, ist das Geofencing automatisch deaktiviert.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.2, roter Hinweiskasten am Seitenende",
+  "prev_context": "Davor stehen die Schaltwege des Geofencings.",
+  "next_context": "Danach beginnt auf der nächsten Seite Abschnitt 5.3.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6aa6ba570c18819c69bf409f59398d4f307e75064bc4d0988703ffd46941d781",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 45, „NOTE“): sachgleich in beide Richtungen. Die Quelle sagt in keiner Fassung, was gilt, wenn beide Wege einander widersprechen – etwa bei zuvor per Kurznachricht abgeschaltetem Geofencing und anschließend scharfgeschalteter Alarmanlage.",
+  "discrepancy_refs": []
+}

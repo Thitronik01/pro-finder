@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P017-S01-BEISPIELTABELLE-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "zielrufnummern",
+  "title": "Beispieltabelle der Programmiernachrichten wird nicht wiedergegeben",
+  "body_md": "Die Quelle zeigt an dieser Stelle drei Beispiele für Programmiernachrichten mit vollständigen Rufnummern. Beispielrufnummern und vollständige Nachrichteninhalte werden in dieser Anleitung nicht wiedergegeben. Aus der Tabelle übernommen wird allein die allgemeine Angabe, dass mehrere Empfänger fortlaufend und ohne Leerzeichen eingegeben werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 17,
+  "source_page_end": 17,
+  "source_region": "Kopf der Seite, dreizeilige Tabelle „Beispiele für verschiedene Programmier-SMS“ mit Schlusssatz",
+  "prev_context": "Davor steht auf der vorigen Seite die Syntaxgrafik zu Abschnitt 2.8.",
+  "next_context": "Danach beginnt Abschnitt 2.9 zum Löschen der Zielrufnummern.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:10e309be692a87f00094cbef0d6b2e44093a5e89919b886cf81c1434efcf1a91",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 40): Die Tabelle hat dieselben drei Zeilen mit denselben Beispielwerten und denselben Zeilenbezeichnungen; der Schlusssatz zur fortlaufenden Eingabe ist sachgleich. Die Auslassung folgt BLK-005 und BLK-006 und ist kein Quellenunterschied.",
+  "discrepancy_refs": ["DSC-017"]
+}

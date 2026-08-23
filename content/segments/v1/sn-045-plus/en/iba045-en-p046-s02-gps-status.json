@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P046-S02-GPS-STATUS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "What the report contains without a valid position",
+  "body_md": "The status report also transmits the GPS status. If Pro-finder receives a valid position, only that position is shown. If no valid position is received, the report indicates this and still sends the **last** valid position. It also states the status of both outputs and the ambient temperature in the immediate vicinity of the device.\n\nImportant: a last valid position is not the current location. The source gives neither a maximum age nor an accuracy for it.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 46,
+  "source_page_end": 46,
+  "source_region": "Section 5.3, paragraph on the GPS status",
+  "prev_context": "Before this stand the two ways of requesting a status report.",
+  "next_context": "Section 5.4 on the position enquiry begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b4ca59f7eaf370becfe7d98624ef3ee735ebcfb0e1f8a5e81193b9c64e5726bb",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 22: the substance matches, **but** the string actually shown in the report differs between the versions – the English one refers to a missing position, the German one to missing GPS reception (DSC-090). Neither string is therefore reproduced as an identifying feature. This difference was found only by reading both versions side by side.",
+  "discrepancy_refs": ["DSC-090"]
+}

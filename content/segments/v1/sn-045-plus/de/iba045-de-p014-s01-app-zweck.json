@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P014-S01-APP-ZWECK",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Zweck der THITRONIK App",
+  "body_md": "Die THITRONIK App fasst die Funktionen der WiPro III (safe.lock) und des Pro-finder in einer gemeinsamen Bedienoberfläche zusammen.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 14,
+  "source_page_end": 14,
+  "source_region": "Abschnitt 2.3 „THITRONIK App herunterladen“, erster Absatz",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 2.2 mit der Abbildung der Kartenhalterung.",
+  "next_context": "Danach nennt die Quelle die Bezugsquellen der App.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:53e493e90386fc04c2122595731f19c2d13c0f27c9490f47ac5b6fc31a45ef10",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 38, „Downloading the THITRONIK app“): sachgleich.",
+  "discrepancy_refs": []
+}

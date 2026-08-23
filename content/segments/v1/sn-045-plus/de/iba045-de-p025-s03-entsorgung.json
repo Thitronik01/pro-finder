@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S03-ENTSORGUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "technische-daten",
+  "title": "Entsorgungshinweise",
+  "body_md": "Das Gerät gehört bei der Außerbetriebnahme nicht in den Hausmüll. Kommunale Sammelstellen halten geeignete Behälter für elektronische Geräte bereit. Die Verpackungsmaterialien gehören ins Wertstoffrecycling. Die Quelle stellt daneben das durchgestrichene Mülltonnensymbol.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.2 „Entsorgungshinweise“ mit Symbol",
+  "prev_context": "Davor steht die Werteliste der technischen Daten.",
+  "next_context": "Danach folgt die Konformitätsangabe.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:94bcfda9b56acad88d13f1e3eebbd29de3053857e6e40ccfc4dcd5f185ca28c6",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 49, „Disposal instructions“): sachgleich, einschließlich des identischen Symbols ohne Textalternative.",
+  "discrepancy_refs": []
+}

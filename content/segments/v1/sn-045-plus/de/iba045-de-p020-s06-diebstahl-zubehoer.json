@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P020-S06-DIEBSTAHL-ZUBEHOER",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "meldungen",
+  "title": "Diebstahl von gesichertem Zubehör",
+  "body_md": "Löst die Funk-Kabelschleife aus – zum Beispiel beim Diebstahl von damit gesichertem Campingzubehör –, meldet die gekoppelte Alarmanlage das über den Pro-finder. Ein zusätzlicher Rückruf an die Masternummer wird für diesen Meldungstyp **nicht** genannt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 20,
+  "source_page_end": 20,
+  "source_region": "Kapitel 4, Erläuterung zum Meldungstyp „Diebstahl Zubehör“",
+  "prev_context": "Davor steht der manuelle Alarm.",
+  "next_context": "Danach beginnt auf der nächsten Seite Kapitel 5.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7829fab5868e0f0ccbf2682f8090ef948f4c30b225a35c7fdd0ded0df6b23649",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 44, „Theft of accessories“): sachgleich – auch dort fehlt der rote Zusatz zum Rückruf, den die vier vorangehenden Meldungstypen tragen. Die Auslassung ist damit unabhängig bestätigt und kein Lesefehler. Ob sie beabsichtigt ist, sagt die Quelle nicht. Diese Meldung steht englisch als einzige auf einer eigenen Seite – die Stelle, an der die englische Fassung die Seitenverschiebung nach DSC-021 wieder ausgleicht.",
+  "discrepancy_refs": ["DSC-021"]
+}

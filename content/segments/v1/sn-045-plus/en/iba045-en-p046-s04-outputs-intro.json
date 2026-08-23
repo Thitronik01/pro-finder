@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P046-S04-OUTPUTS-INTRO",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "control-outputs",
+  "title": "Two separately controllable outputs",
+  "body_md": "Pro-finder has two separately controllable outputs. They can be switched continuously, pulsed for one second, or for a freely selectable time.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 46,
+  "source_page_end": 46,
+  "source_region": "Section 5.5, introductory paragraphs",
+  "prev_context": "Before this stands the position enquiry via smartphone.",
+  "next_context": "Subsections 5.5.1 to 5.5.3 follow on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:96587b8ec478d2bc6e558ef4ed4682004a3477c270e50f756a4018fb42db33f4",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 22: equivalent in substance. Here the English section heading is identical to that of section 5.1 and therefore does not name the content (DSC-015); the title is not quoted.",
+  "discrepancy_refs": ["DSC-015"]
+}

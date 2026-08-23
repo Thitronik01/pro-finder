@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P029-S03-INTENDED-USE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "determine-device-generation",
+  "title": "What Pro-finder is intended for",
+  "body_md": "Pro-finder is a tracking system for leisure vehicles. It determines the vehicle position using GPS and mobile network technology and reports it exclusively by text message; the format depends on the mobile device. The device is **not** intended for recording routes and **not** for live tracking. Combined with other components it also reports alarms from a connected alarm system and gas alarms from connected gas warning devices. Pro-finder may only be used in accordance with the instructions in this manual.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 29,
+  "source_page_end": 29,
+  "source_region": "Section “Intended use”",
+  "prev_context": "Before this stands the liability note about the starter battery.",
+  "next_context": "The scope of supply follows on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:331e0ba0ecf30f2a17ba6a43b49f4c0f49caa6d1f302e32a647e4021220f2eb0",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 5: equivalent in substance, including the explicit exclusion of route recording and live tracking. The map service named in the source is omitted under BLK-004.",
+  "discrepancy_refs": []
+}

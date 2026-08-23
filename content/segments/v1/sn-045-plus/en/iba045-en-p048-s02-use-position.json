@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P048-S02-USE-POSITION",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "Using the position information to retrieve the vehicle",
+  "body_md": "The position information contained in the messages can be entered into map programmes and navigation devices. Depending on the type of map, the source states that it often shows the vehicle location down to the house number. With a smartphone a position enquiry containing a clickable link can be made instead. After a theft report, further status reports can be requested at any time.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 48,
+  "source_page_end": 48,
+  "source_region": "Section 5.7, first three paragraphs",
+  "prev_context": "Before this stands the teach-in mode.",
+  "next_context": "The behaviour without GPS reception follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:078678fdca279c78e44bfe263451a171803c9cec4f7f4cbf86a5c62bbf4ea7d9",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 24: equivalent in substance, including the claim about house-number accuracy. That claim is unsupported in both versions: no accuracy in metres and no condition under which it holds is given, so it is explicitly marked as a statement of the source.",
+  "discrepancy_refs": []
+}

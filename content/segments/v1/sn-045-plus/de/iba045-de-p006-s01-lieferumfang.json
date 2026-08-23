@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P006-S01-LIEFERUMFANG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Lieferumfang",
+  "body_md": "Die Quelle listet neun Positionen:\n\n| Nr. | Position |\n| --- | --- |\n| 1 | Pro-finder |\n| 2 | Antenne |\n| 3 | Gelverbinder |\n| 4 | Befestigungsschrauben |\n| 5 | Sicherungshalter |\n| 6 | Flachsicherung (3 A) |\n| 7 | Kurzanleitung |\n| 8 | Verbindungskabel zur Alarmanlage |\n| 9 | Anschlusskabel |\n\nStückzahlen nennt die Quelle nicht.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Seite „Lieferumfang“, nummerierte Liste unter dem Produktfoto",
+  "prev_context": "Davor endet auf der vorigen Seite der bestimmungsgemäße Gebrauch.",
+  "next_context": "Danach beginnt Kapitel 1 mit der Wahl des Montageorts.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a7ab54ad03ce141d4f24f7de23b194d31d67cfbca7b535f6bb929a82327f567e",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 30, „Scope of supply“): Alle neun Positionen stimmen in Nummer und Bedeutung überein, einschließlich des Sicherungswerts 3 A. Die Spaltenüberschriften wurden ergänzt, weil die Quellliste keine besitzt. Die Kabelbezeichnung wird ohne Produktnamen wiedergegeben, solange DSC-036 offen ist.",
+  "discrepancy_refs": ["DSC-036"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P043-S01-POSITION-MESSAGE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "Position message for smartphones",
+  "body_md": "In response to a position enquiry, Pro-finder replies with a message designed for smartphones. It contains a link; opening it shows a map view of the current vehicle position.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 43,
+  "source_page_end": 43,
+  "source_region": "Chapter 4, explanation of the message type for smartphones",
+  "prev_context": "The voltage warning ends on the previous page.",
+  "next_context": "The help message follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:fa9b622bdc96f53733f4bf389aa5917dc08ee61ae40d1cc940c4008f18249e78",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 20: equivalent in substance. The link itself is not reproduced (BLK-004).",
+  "discrepancy_refs": []
+}

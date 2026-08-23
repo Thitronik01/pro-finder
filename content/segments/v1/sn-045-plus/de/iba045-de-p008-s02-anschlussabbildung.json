@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P008-S02-ANSCHLUSSABBILDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "anschluesse",
+  "title": "Abbildung der Anschlussseite",
+  "body_md": "Das Foto zeigt die Anschlussseite des Geräts. Von links nach rechts sind zu sehen: der Drehschalter mit den Stellungen 0 bis 9 und A bis F, eine Westernbuchse, ein rot durchgestrichenes Feld, eine vierpolige Buchse und eine achtpolige Buchse, deren Kontakte farbig nummeriert sind. Rechts außen liegt die Status-LED. Gelbe Linien verbinden die Buchsen mit den darüber abgebildeten Zubehörteilen.\n\nZwei Punkte bleiben in der Quelle unerklärt: Das rot durchgestrichene Feld hat **keinen** Legendeneintrag, und die Beschriftung am Antennenbild ist nicht in die jeweilige Sprache übersetzt.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 8,
+  "source_page_end": 8,
+  "source_region": "Abschnitt 1.2, beschriftete Fotoabbildung im oberen Seitenbereich",
+  "prev_context": "Davor endet auf der vorigen Seite Abschnitt 1.1.",
+  "next_context": "Danach folgt die Legende der Markierungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:78bca0e3bf8bb5fab0df5bf4b401966b03f8dda02dcf0bbca0def4a40fecfc70",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 32): identische, unveränderte Abbildung. Der fehlende Legendeneintrag für das rot durchgestrichene Feld und die deutsche Beschriftung am Antennenbild sind damit auch in der englischen Fassung belegt – ein Vorlagenfehler nach DSC-022, kein Lesefehler dieser Extraktion.",
+  "discrepancy_refs": ["DSC-022"]
+}

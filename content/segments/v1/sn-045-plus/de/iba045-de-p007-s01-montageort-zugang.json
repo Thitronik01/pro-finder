@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P007-S01-MONTAGEORT-ZUGANG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "montageort",
+  "title": "Montageort gegen unbefugten Zugriff sichern",
+  "body_md": "Wählen Sie einen Montageort, der ausreichend gegen unbefugten Zugriff gesichert und dennoch für Servicearbeiten zugänglich ist – etwa für einen späteren Kartentausch.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 7,
+  "source_page_end": 7,
+  "source_region": "Abschnitt 1.1 „Montageort wählen“, erster Absatz",
+  "prev_context": "Davor endet auf der vorigen Seite der Lieferumfang.",
+  "next_context": "Danach folgt die Vorgabe, das Gerät im Fahrzeuginneren zu montieren.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:000b188f7c51f918206d24972021378ae6f4dbb14a00c949448e03dbc42da295",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 31, „Selecting the installation location“): sachgleich. Die Quelle nennt in keiner Fassung ein Kriterium dafür, wann ein Ort „ausreichend gesichert“ ist.",
+  "discrepancy_refs": []
+}

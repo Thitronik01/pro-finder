@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P042-S04-VOLTAGE-WARNING",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "understand-messages",
+  "title": "Voltage warning and standby",
+  "body_md": "If the supply voltage falls permanently below 11.2 V, Pro-finder switches to standby mode to save the battery and sends a message about it. It returns to normal operation only when the voltage rises above 12.5 V again. In one operating mode this warning does not apply.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 42,
+  "source_page_end": 42,
+  "source_region": "Chapter 4, explanation of the message type “Voltage warning”",
+  "prev_context": "Before this stands the theft report.",
+  "next_context": "Further message types follow on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a97a59c719b5b846ef6835a71ea0c0d386beb44928886a78eaff57f58a3b5c83",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 19: equivalent in substance, including both thresholds and the excluded operating mode. The English source sets the values without a space (DSC-019); the numbers are the same. Neither version says what standby mode means for the tracking function.",
+  "discrepancy_refs": ["DSC-019"]
+}

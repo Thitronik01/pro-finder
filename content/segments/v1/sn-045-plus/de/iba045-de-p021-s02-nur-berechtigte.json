@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P021-S02-NUR-BERECHTIGTE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "zielrufnummern",
+  "title": "Nur berechtigte Nummern haben Zugriff",
+  "body_md": "Die Quelle hebt an dieser Stelle rot hervor, dass nur berechtigte Nummern auf den Pro-finder zugreifen können.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 21,
+  "source_page_end": 21,
+  "source_region": "Abschnitt 5.1, roter Hinweiskasten",
+  "prev_context": "Davor steht die Alarmanlagensteuerung per Anruf.",
+  "next_context": "Danach beginnt Abschnitt 5.2 zum Geofencing.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b6c67b569433ffe3428899fae68bb2e7f1f7db6bbe93bdcdea6a14a3a7445888",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 45, „Note: Only authorised numbers can access Pro-finder“): sachgleich und in beiden Fassungen als Hinweiskasten gesetzt. Woran das Gerät die Berechtigung erkennt, bleibt auch hier ungesagt (DSC-017, Rückfrage 10).",
+  "discrepancy_refs": ["DSC-017"]
+}

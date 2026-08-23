@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P006-S02-LIEFERUMFANG-ABBILDUNG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Produktfoto des Lieferumfangs",
+  "body_md": "Das Foto zeigt alle Teile nebeneinander auf weißem Grund: die Kurzanleitung als aufgeschlagenes Heft, die stabförmige Antenne, das schwarze Gerätegehäuse, zwei kleine blaue Verbinder, eine Flachsicherung, zwei blaue Sicherungshalter, zwei Schrauben, ein schwarzes Kabel mit Westernstecker sowie einen bunten Kabelbaum mit weißem Steckergehäuse. Die Teile sind im Bild **nicht** nummeriert; die Zuordnung zur Liste ist allein über Form und Farbe möglich.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 6,
+  "source_page_end": 6,
+  "source_region": "Seite „Lieferumfang“, Produktfoto im oberen Seitendrittel",
+  "prev_context": "Davor endet auf der vorigen Seite der bestimmungsgemäße Gebrauch.",
+  "next_context": "Danach folgt die nummerierte Liste der neun Positionen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6be4d95fe1ff8e9c64d5cc0912641d6f593f7206dce46ff98713fbb71ea8e7ba",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 30): identisches, unverändertes Foto ohne Bildunterschrift. Die fehlende Nummerierung im Bild ist damit kein Sprachunterschied, sondern eine Eigenschaft der Vorlage – und eine Zugänglichkeitsgrenze, weil die Zuordnung rein visuell bleibt.",
+  "discrepancy_refs": []
+}

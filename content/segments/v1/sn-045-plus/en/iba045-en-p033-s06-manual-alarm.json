@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P033-S06-MANUAL-ALARM",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "understand-messages",
+  "title": "Manual alarm via a button",
+  "body_md": "In the operating mode provided for it, a voltage on pin 3 produces a manual alarm; the source also calls it a panic alarm. This can be done with a button, for example.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 33,
+  "source_page_end": 33,
+  "source_region": "Section 1.3, function on the manual alarm",
+  "prev_context": "Before this stands the control of the alarm system by call.",
+  "next_context": "The table of operating modes follows on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:47dba19dd112e4837423d49e50ee85770fdad70accd984647b010ae5a05a9832",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 9: equivalent in substance. Neither version names a minimum duration, a voltage threshold or debouncing for the button; that gap remains.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P023-S04-ZWEITER-AUSGANG-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "ausgaenge",
+  "title": "Ersetzungsregel für den zweiten Ausgang wird nicht wiedergegeben",
+  "body_md": "Die Quelle beschreibt alle drei Schaltarten nur für den ersten Ausgang und nennt in einem roten Hinweis eine Regel, mit der sich dieselben Nachrichten auf den zweiten Ausgang übertragen lassen. Diese Regel wird hier nicht wiedergegeben, weil sie Teil der gesperrten Befehlssyntax ist. Dass sich beide Ausgänge gleichwertig schalten lassen, ist damit belegt; der genaue Weg ist eine offene Angabe.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 23,
+  "source_page_end": 23,
+  "source_region": "Abschnitt 5.5.3, roter Hinweiskasten am Seitenende",
+  "prev_context": "Davor steht das Schalten für eine frei wählbare Zeit.",
+  "next_context": "Danach beginnt auf der nächsten Seite Abschnitt 5.6.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:799a435e9ce351ec97a356ead4baab6478cb701fcc43fd2a0e43ab3e6c1976b1",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 47, „NOTE“): sachgleich. Die Auslassung folgt BLK-005 und BLK-006 und ist kein Quellenunterschied.",
+  "discrepancy_refs": []
+}

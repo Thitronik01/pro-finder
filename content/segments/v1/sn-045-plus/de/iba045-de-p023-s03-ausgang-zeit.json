@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P023-S03-AUSGANG-ZEIT",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "ausgaenge",
+  "title": "Ausgang für eine frei wählbare Zeit einschalten",
+  "body_md": "Ein Ausgang lässt sich für eine wählbare Dauer zwischen 1 und 120 Minuten einschalten. Die gewünschte Minutenzahl wird dabei in die Nachricht eingesetzt. Der Pro-finder schaltet den Ausgang für die gewünschte Dauer ein und sendet einen Statusbericht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 23,
+  "source_page_end": 23,
+  "source_region": "Abschnitt 5.5.3 „Ausgänge für eine frei wählbare Zeit einschalten“",
+  "prev_context": "Davor steht der Impulsbetrieb.",
+  "next_context": "Danach folgt der rote Hinweis zum zweiten Ausgang.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ff5057e5518db5a4054b8b5cc943d38f13cb891648c2ba39c7df83aa51fb1e3b",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 47, „Switching on outputs for a freely selectable time“): sachgleich, einschließlich des Bereichs 1 bis 120 Minuten. Was bei einem Wert außerhalb des Bereichs geschieht, sagt keine der beiden Fassungen. Die Befehlsstruktur wird nach BLK-005 nicht wiedergegeben.",
+  "discrepancy_refs": []
+}

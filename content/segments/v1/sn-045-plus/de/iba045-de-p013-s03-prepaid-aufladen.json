@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P013-S03-PREPAID-AUFLADEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "Prepaid-Karte muss im Gerät aufladbar bleiben",
+  "body_md": "Wird eine Prepaid-Karte verwendet, muss sich das Guthaben aufladen lassen, ohne die Karte aus dem Gerät zu nehmen – etwa von einem anderen Mobiltelefon aus.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 13,
+  "source_page_end": 13,
+  "source_region": "Abschnitt 2.1, Schlusssatz des rot gesetzten Empfehlungskastens",
+  "prev_context": "Davor steht die zwischen den Sprachfassungen abweichende Kartenempfehlung.",
+  "next_context": "Danach folgt die vierschrittige Vorbereitung der Karte im Mobiltelefon.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a7ccbf93e79eae7eab650d0a5b39ee6f2a38b17d909797d675e153b889660753",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 37): Die Prepaid-Bedingung ist in beiden Fassungen sachgleich und der einzige unstrittige Teil des Kastens; sie wird deshalb getrennt vom strittigen Teil geführt. Die in der Quelle zusätzlich genannte Auflademöglichkeit an einem Automaten wird als Beispiel weggelassen, nicht als Anforderung.",
+  "discrepancy_refs": ["DSC-027"]
+}

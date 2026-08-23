@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P015-S01-LAENDERVORWAHL",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "app-und-aktivierung",
+  "title": "Rufnummer mit Ländervorwahl speichern",
+  "body_md": "Speichern Sie die Rufnummer mit der Ländervorwahl, damit der Pro-finder auch aus dem Ausland erreichbar bleibt.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 15,
+  "source_page_end": 15,
+  "source_region": "Kopf der Seite, Schlusssatz von Abschnitt 2.5",
+  "prev_context": "Davor steht auf der vorigen Seite die Empfehlung zum Adressbucheintrag.",
+  "next_context": "Danach beginnt Abschnitt 2.6 zur Steuerung per Kurznachricht oder Anruf.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ce87c8f6d6377f2d6a2694b7fe9fa25c27e1cc652aa20311df5f698609a6a761",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 38, Fuß der Seite): Der Satz ist sachgleich, steht dort aber noch auf der vorangehenden internen Seite – ein reiner Umbruchunterschied. Das jeweils genannte Beispielland weicht ab (DSC-019); ein Beispiel wird deshalb nicht übernommen.",
+  "discrepancy_refs": ["DSC-019"]
+}

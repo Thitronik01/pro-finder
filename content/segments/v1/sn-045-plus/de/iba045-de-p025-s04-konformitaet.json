@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-DE-P025-S04-KONFORMITAET",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "technische-daten",
+  "title": "Konformität",
+  "body_md": "Der Hersteller erklärt die Übereinstimmung des Produkts mit den grundlegenden Anforderungen und den relevanten Festlegungen der Richtlinie 2014/53/EU. Die Quelle verweist für die ausführliche Konformitätserklärung auf einen Download; die Adresse wird hier nicht wiedergegeben.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 25,
+  "source_page_end": 25,
+  "source_region": "Abschnitt 6.3 „Konformität/Richtlinien“ mit CE-Zeichen",
+  "prev_context": "Davor stehen die Entsorgungshinweise.",
+  "next_context": "Danach folgt der Abschnitt zur technischen Unterstützung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:81365bfa27afee48a5c88539efa7e2451c7faaed3bd8d51c53091ad77c0f320f",
+  "change_reason": "Gegengelesen gegen die englische Fassung (Seite 49, „Conformity / Directives“): Beide Fassungen nennen **dieselbe** Richtlinie 2014/53/EU. Für die Generation bis SN-044 ist an dieser Stelle eine nicht existierende Richtlinie in der englischen Fassung erfasst (DSC-071); in dieser Generation tritt der Fehler nicht auf. Die Downloadadresse unterscheidet sich zwischen den Fassungen und wird nach BLK-004 in keiner Form übernommen.",
+  "discrepancy_refs": ["DSC-071"]
+}

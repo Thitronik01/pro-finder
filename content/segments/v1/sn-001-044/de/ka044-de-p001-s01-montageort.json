@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P001-S01-MONTAGEORT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "montageort",
+  "title": "Montageort laut Kurzanleitung",
+  "body_md": "Wählen Sie einen Montageort, der gegen unbefugten Zugriff gesichert und dennoch für eventuelle Servicearbeiten zugänglich ist. Der Montageort muss sich im Fahrzeuginneren befinden. Keinesfalls darf das Gerät im Motorraum montiert werden. Die Geräteoberseite muss nach oben zeigen, damit freie Sicht zum Satelliten besteht.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Abschnitt 1 „Montageort wählen“, deutscher Sprachblock",
+  "prev_context": null,
+  "next_context": "Danach folgt Abschnitt 2 zur SIM-Karte.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:83a268bbc3afa1092b59f67640c52e5597341c1bd1c4739f607ffdee25a793d6",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Gegengelesen gegen Abschnitt 1.2 des Handbuchs derselben Generation (DOC-BMA-SN044, deutsche Seite 3): sachgleich, einschließlich der freien Sicht zum Satelliten.",
+  "discrepancy_refs": []
+}
