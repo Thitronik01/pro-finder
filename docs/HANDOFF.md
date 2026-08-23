@@ -85,6 +85,34 @@ Store- oder Downloadadresse und kein QR-Code (BLK-004). Keine Geofencing-Aussage
 Koordinate, keine Kartenadresse. Kein Wert aus DOC-BMA-SN044 wurde in einen
 SN-045-Bestand übernommen.
 
+### Vier Matrixzeilen sind jetzt automatisiert
+
+Von der Zugänglichkeitsmatrix ließen sich vier bisher offene Zeilen automatisieren:
+
+- **Windows Forced Colors** – `forced-colors: active` über zehn Kernrouten, geprüft auf
+  axe-Verstöße, unsichtbar gewordenen Text und eine erhaltene Fokusanzeige.
+- **200 % Zoom** und **400 % Zoom / Reflow** – 640 und 320 CSS-Pixel. Zusätzlich zur
+  Überlaufprüfung wird zugesichert, dass **keine** Überschrift per `display: none`
+  weggeblendet wird, um Platz zu schaffen; damit ist auch Informationsverlust abgedeckt.
+- **Bilder deaktiviert** – siehe unten.
+
+Beide neuen Pfade beginnen mit einer Zusicherung, dass die Emulation im verwendeten Browser
+greift. Ohne sie wäre ein grüner Lauf ohne Aussage.
+
+**Der Bilder-Test hat etwas anderes ergeben als erwartet.** Der erste Anlauf blockierte
+Bildanfragen und prüfte danach die Textalternativen. Die Absicherung schlug an: Es wurde
+**kein einziges Bild** blockiert. Die Anwendung bindet überhaupt keine Bilder ein, weder als
+`img` noch als Hintergrundbild. Abbildungen der Quelle sind durchgängig als Text
+ausgedrückt – dafür gibt es die Segmentart `figure_description`. Der Test schreibt jetzt
+genau diese stärkere Eigenschaft fest; bindet jemand später ein Bild ein, schlägt er an und
+erzwingt eine bewusste Entscheidung über die Textalternative.
+
+**Was diese Zeilen nicht belegen:** Ein emulierter Forced-Colors-Modus ist nicht das
+Windows-Kontrastdesign, und eine geänderte Viewportbreite ist nicht Browserzoom mit
+skalierten Schriften. Die drei zoom- und farbbezogenen Zeilen stehen deshalb auf
+`automatisiert, manuell offen` – nicht auf `bestanden`. Alle Tests mit assistiven
+Technologien bleiben unverändert offen.
+
 ### Alle deutschsprachigen Quellseiten sind extrahiert
 
 Zum Abschluss kamen die letzten offenen deutschen Seiten hinzu: DOC-BMA-SN044 Seiten 1, 2
@@ -593,7 +621,9 @@ abgeleitet ist.
   `inspected`. Die SN-045-Seitenrecords besitzen weiterhin keine zweite Meinung.
 - Alle technischen und sicherheitskritischen Inhalte stehen auf `entwurf`; es gibt keine
   technische Freigabe und keinen muttersprachlichen Review der nichtdeutschen Fassungen.
-- Keine manuelle AT-, Zoom-, Reflow-, Forced-Colors- oder Reduced-Motion-Prüfung.
+- Keine manuelle AT-Prüfung. Zoom, Reflow, Forced Colors, Reduced Motion und der Ausfall
+  von Bildern sind seit dem 2026-08-23 automatisiert abgesichert; die manuelle
+  Betriebssystem- und Browserprüfung bleibt offen.
 - Die deutsche Kartenvariante ist nur ein visuell und automatisch geprüfter Entwurf. Es
   fehlen weiterhin ein freigegebenes druckfähiges THITRONIK-Logo und Produktbild, die
   finale URL, Supportdaten, QR-Code, NFC-Inlayentscheidung, Kerbengeometrie,
@@ -658,37 +688,36 @@ abgeleitet ist.
 
 ```text
 Resume from:
-Gesamtfortschritt 70,9 Prozent, PDF-Audit 35,1 Prozent ueber 323 Seiten.
-ALLE deutschsprachigen Quellseiten des Projekts sind extrahiert und validiert: DOC-BMA-SN044
-19/19, DOC-IBA-SN045 deutsch 21/21, beide Kurzanleitungen 2/2. Dazu DOC-IBA-SN045 englisch
-21/21. Bestand 245 Segmente, alle entwurf. Alle 181 sicherheitskritischen Segmente liegen in
-den dreizehn Dossiers P0-01 bis P0-13.
-Drei Pruefachsen liefern die Befunde: deutsch gegen englisch innerhalb einer Auflage,
-Generation gegen Generation, Handbuch gegen Kurzanleitung. Elf neue Registereintraege
-DSC-086 bis DSC-097. Die wichtigsten: DSC-095 stellt DSC-086 richtig (das Multi-SIM-Verbot
-fehlt nicht dem Deutschen, sondern dem deutschen Handbuch - die deutsche Kurzanleitung hat
-es), DSC-096 (Kurzanleitung und Handbuch beschreiben verschiedene Statusberichte), DSC-092
-(die Generationen beschreiben verschiedene Verwendungszwecke - Flottenueberwachung gegen
-Ortungssystem ohne Live-Tracking, datenschutzrechtlich erheblich), DSC-088 (Stromaufnahme
-Bereich gegen Einzelwert), DSC-087 (Fehler im deutschen Master).
+Gesamtfortschritt 71,5 Prozent, PDF-Audit 35,1 Prozent ueber 323 Seiten.
+ALLE deutschsprachigen Quellseiten sind extrahiert und validiert (19/19, 21/21, 2/2, 2/2),
+dazu DOC-IBA-SN045 englisch 21/21. Bestand 245 Segmente, alle entwurf. Alle 181
+sicherheitskritischen Segmente liegen in den dreizehn Dossiers P0-01 bis P0-13.
+Drei Quellen-Pruefachsen liefern die Befunde: deutsch gegen englisch innerhalb einer
+Auflage, Generation gegen Generation, Handbuch gegen Kurzanleitung. Zwoelf neue
+Registereintraege DSC-086 bis DSC-097.
 Die Review-UI zeigt die Belege selbst: /review/segment/<key> und /review/packet/<id>.
-51 Unit-Tests, 78 Browser-/axe-Tests.
+Von der Zugaenglichkeitsmatrix sind vier weitere Zeilen automatisiert: Forced Colors,
+200- und 400-Prozent-Zoom sowie Bilder deaktiviert. 51 Unit-Tests, 86 Browser-/axe-Tests.
 
 First action:
-Die Quellenpruefung ist ohne Zuarbeit von THITRONIK weitgehend ausgeschoepft. Was bleibt:
-- Der englische Teil bis SN-044 (Seiten 20-36) ist als Gegenquelle bereits gelesen und hat
-  DSC-027 ergaenzt. Fuer eigene Segmente fehlt der Aufgabenzweig content/tasks/sn-001-044/en/
-  - entweder vollstaendig mit allen 14 Aufgaben anlegen oder gar nicht.
+Alles, was ohne Zuarbeit von THITRONIK geht, ist weitgehend ausgeschoepft. Es bleiben zwei
+echte Optionen:
+1. Den englischen Teil bis SN-044 (Seiten 20-36) extrahieren. Er ist als Gegenquelle bereits
+   gelesen. Voraussetzung: der Aufgabenzweig content/tasks/sn-001-044/en/ - entweder
+   vollstaendig mit allen 14 Aufgaben oder gar nicht.
+2. Die Review-UI weiter ausbauen, etwa eine Ansicht je Registereintrag, die alle Segmente
+   und Quellseiten zu einer DSC-Nummer zusammenfuehrt.
 HARTE GRENZEN, nicht uebergehen:
 - Franzoesische und schwedische Teile von DOC-BMA-SN044 sowie die acht uebrigen Sprachteile
   von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus
   (Leitplanken 6 und 7). Das sind 258 der 323 Seiten.
 - Keine Statuswechsel-UI gegen Fixtures. Sie waere eine Attrappe.
+- Kein Test ohne Absicherung gegen einen leeren Durchlauf. Beim Bilder-Test hat genau diese
+  Absicherung gezeigt, dass gar nichts geprueft wurde.
 - Kein Fortschritt, der nur aus einer geaenderten Messung stammt.
-Unveraendert offen und ohne THITRONIK nicht loesbar: EN-01 bis EN-03, der erste dokumentierte
-manuelle QA-Batch fuer Tastatur, Zoom, Reflow, Forced Colors und Reduced Motion sowie alle
-Produktionsentscheidungen der Setup-Karte. Die dreizehn Pruefpakete warten auf den realen
-Fachreview; keine der vorbereiteten Einzelentscheidungen ist beantwortet.
+Was Menschen und Geraete braucht und deshalb offen bleibt: NVDA, VoiceOver, TalkBack,
+echter Browserzoom, das Windows-Kontrastdesign, EN-01 bis EN-03, der reale Fachreview der
+dreizehn Pruefpakete und alle physischen Kartentests.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

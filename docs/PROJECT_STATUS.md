@@ -5,7 +5,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 70.9 %**
+**Gesamtfortschritt: 71.5 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
@@ -15,7 +15,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 84 %        |
 | Übersetzungspilot                        | 10 %    | 85 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 65 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 71 %        |
 | Staging und Übergabe                     | 5 %     | 88 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
@@ -27,11 +27,22 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 75 %        |
 | DOC-KA-SN045  | 2      | 75 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Alle deutschsprachigen Quellseiten sind extrahiert und validiert; zusaetzlich der englische Teil ab SN-045. Damit ist die Quellenpruefung ohne Zuarbeit von THITRONIK weitgehend ausgeschoepft. Was bleibt: (1) der englische Teil bis SN-044 (Seiten 20-36) - er ist bereits als Gegenquelle gelesen, fuer eigene Segmente fehlt aber der Aufgabenzweig content/tasks/sn-001-044/en/, der entweder vollstaendig mit allen 14 Aufgaben oder gar nicht anzulegen ist; (2) die franzoesischen und schwedischen Teile von DOC-BMA-SN044 sowie die acht uebrigen Sprachteile von DOC-IBA-SN045 - diese duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7). Die 13 Pruefpakete decken alle 181 sicherheitskritischen Segmente ab und warten auf den realen Fachreview. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
+Offene Blocker: 6 · Nächste Aktion: Alle deutschsprachigen Quellseiten sind extrahiert und validiert; zusaetzlich der englische Teil ab SN-045. Damit ist die Quellenpruefung ohne Zuarbeit von THITRONIK weitgehend ausgeschoepft. Was bleibt: (1) der englische Teil bis SN-044 (Seiten 20-36) - er ist bereits als Gegenquelle gelesen, fuer eigene Segmente fehlt aber der Aufgabenzweig content/tasks/sn-001-044/en/, der entweder vollstaendig mit allen 14 Aufgaben oder gar nicht anzulegen ist; (2) die franzoesischen und schwedischen Teile von DOC-BMA-SN044 sowie die acht uebrigen Sprachteile von DOC-IBA-SN045 - diese duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7). Die 13 Pruefpakete decken alle 181 sicherheitskritischen Segmente ab und warten auf den realen Fachreview. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden. In der Zugaenglichkeitsmatrix ist automatisiert, was sich automatisieren laesst: Forced Colors, 200- und 400-Prozent-Zoom, Reflow, Reduced Motion und Bilder deaktiviert. Was bleibt, braucht Menschen und Geraete: NVDA, VoiceOver, TalkBack, echter Browserzoom, das Windows-Kontrastdesign und alle physischen Kartentests. Unveraendert offen: EN-01 bis EN-03 und alle Produktionsentscheidungen der Setup-Karte.
 
 <!-- PROGRESS:END -->
 
 ## Neu in dieser Sitzung (2026-08-23)
+
+**Vier Zeilen der Zugänglichkeitsmatrix sind aus dem Status `offen` heraus.** Forced Colors,
+200-Prozent-Zoom, 400-Prozent-Zoom/Reflow und „Bilder deaktiviert" sind jetzt über zehn
+Kernrouten automatisiert. Beide neuen Pfade beginnen mit einer Zusicherung, dass die
+Emulation überhaupt greift – ein Test, der leer durchläuft, wäre schlimmer als keiner.
+
+Genau diese Absicherung hat sich sofort bezahlt gemacht: Beim Test „Bilder deaktiviert"
+wurde **kein einziges Bild blockiert**. Die Anwendung bindet überhaupt keine Bilder ein,
+weder als `img` noch als Hintergrundbild – jede Abbildung der Quelle steht als Text. Der
+Test schreibt jetzt diese stärkere Eigenschaft fest, statt eine Prüfung zu behaupten, die
+nie stattgefunden hat.
 
 **Alle deutschsprachigen Quellseiten des Projekts sind extrahiert und validiert.** 19 von 19
 im Handbuch bis SN-044, 21 von 21 im Handbuch ab SN-045 und 2 von 2 in jeder der beiden
