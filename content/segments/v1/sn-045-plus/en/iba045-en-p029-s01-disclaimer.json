@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P029-S01-DISCLAIMER",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "determine-device-generation",
+  "title": "Pro-finder reports a theft, it does not prevent one",
+  "body_md": "Like any tracking system, Pro-finder can only report a theft or an attempted theft; it cannot prevent one. Continue to act carefully: never leave valuables in sight or easily accessible in the vehicle, and always lock the vehicle when you leave it. The manufacturer accepts no liability for stolen valuables, for theft of the vehicle, or for damage caused by burglary.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 29,
+  "source_page_end": 29,
+  "source_region": "Section “Disclaimer”, first paragraph",
+  "prev_context": null,
+  "next_context": "The paragraph about the starter battery follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a6cc185ddfad9ce9015b3e7bffa90b229a45ff447373144a3e5a128c8ad58cfc",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 5. Both versions are equivalent in substance; no reading error found.",
+  "discrepancy_refs": []
+}

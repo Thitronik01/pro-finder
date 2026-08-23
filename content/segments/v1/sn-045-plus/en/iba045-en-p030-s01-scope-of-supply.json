@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P030-S01-SCOPE-OF-SUPPLY",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "table",
+  "task_slug": "determine-device-generation",
+  "title": "Scope of supply",
+  "body_md": "The source lists nine items:\n\n| No. | Item |\n| --- | --- |\n| 1 | Pro-finder |\n| 2 | Antenna |\n| 3 | Gel connector |\n| 4 | Fastening screws |\n| 5 | Fuse holder |\n| 6 | Flat fuse (3 A) |\n| 7 | Quick guide |\n| 8 | Connection cable to the alarm system |\n| 9 | Connection cable |\n\nThe source does not state quantities.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 30,
+  "source_page_end": 30,
+  "source_region": "Page “Scope of supply”, numbered list below the product photo",
+  "prev_context": "The intended use ends on the previous page.",
+  "next_context": "Chapter 1 begins with the choice of installation location.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d7213e5bac549edb4b95c7ce7c31bc8ef416bcc75b30c26ad03be0d08e9e3f60",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 6: all nine items match in number and meaning, including the 3 A fuse rating. Column headers were added because the source list has none. The cable name is given without the product name while DSC-036 is open.",
+  "discrepancy_refs": ["DSC-036"]
+}

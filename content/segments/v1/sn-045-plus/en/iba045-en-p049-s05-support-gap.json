@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P049-S05-SUPPORT-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "get-help-and-support",
+  "title": "Support contacts are not reproduced",
+  "body_md": "At this point the source names a specialist dealer as the first point of contact as well as a website, a telephone number and an email address for technical support. Contact details and addresses are not reproduced in this manual because they can go out of date unchecked. Only the substantive statement is carried over: have the serial number of your device and the software version ready for a support enquiry; both can be found on the device itself or in the app.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 49,
+  "source_page_end": 49,
+  "source_region": "Section 6.4",
+  "prev_context": "Before this stands the conformity statement.",
+  "next_context": "The English language part ends here.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1ce6c8cbd23f9125e497ee6538b408d40c4cc3d54ea6c2b7c2977d4eb29c8f7b",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 25: the statement about serial number and software version is equivalent in substance. The website address and language path differ between the versions; telephone number and email address are identical. The omission follows BLK-004 and is not a language difference.",
+  "discrepancy_refs": []
+}

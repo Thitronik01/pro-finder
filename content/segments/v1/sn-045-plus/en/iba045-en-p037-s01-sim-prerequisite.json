@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S01-SIM-PREREQUISITE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "Have an activated nano SIM card ready",
+  "body_md": "Pro-finder requires a SIM card in nano SIM format that has been activated by the mobile phone provider.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.1, introductory sentence",
+  "prev_context": null,
+  "next_context": "The red recommendation box on card choice follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:ee562061ad9bf396652efe40baa1d7dd73add083acea60945d9dc8929f321f21",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: card format and activation match word for word.",
+  "discrepancy_refs": []
+}

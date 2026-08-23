@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P046-S03-POSITION-SMARTPHONE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "Requesting the position via smartphone",
+  "body_md": "With a smartphone a position message designed for that purpose can be requested. Pro-finder replies with a message containing a link; opening it shows the position in a map view without coordinates having to be transferred.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 46,
+  "source_page_end": 46,
+  "source_region": "Section 5.4",
+  "prev_context": "Before this stands the paragraph on the GPS status in the report.",
+  "next_context": "Section 5.5 on output control begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d1765c5f6165787aee350cc1050d0f07045ecee25c4076c5210494913f9520e8",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 22: equivalent in substance. The command string is not reproduced (BLK-005).",
+  "discrepancy_refs": []
+}

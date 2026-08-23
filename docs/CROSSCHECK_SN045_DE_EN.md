@@ -92,12 +92,32 @@ typografisch.
 Kein Segment musste wegen eines eigenen Lesefehlers korrigiert werden; die Extraktion der
 fünf Seiten entstand direkt im Gegenlesen.
 
+## Beide Fassungen sind extrahiert
+
+Am selben Tag wurde auch der **englische** Sprachteil (Seiten 29–49) extrahiert – als
+Extraktion der englischen Quelle selbst, nicht als Übersetzung des deutschen Masters. Jede
+englische Seite trägt in ihrem `crosscheck_note` den Verweis auf die deutsche Parallelseite,
+gegen die sie gelesen wurde. Beide Fassungen sind damit wechselseitig geprüft: 42 von 247
+Seiten des Dokuments stehen auf `validated`.
+
+Das ist für den Übersetzungspilot der eigentliche Gewinn. Die englischen Aufgabenentwürfe
+waren bisher belegte KI-Übersetzungen des deutschen Masters. Jetzt existiert daneben ein
+Segmentbestand, der aus der englischen Quelle stammt – und die sechs neuen Registereinträge
+zeigen, dass die beiden Fassungen eben **nicht** denselben Inhalt transportieren. Eine
+Übersetzung des deutschen Masters hätte DSC-086, DSC-088, DSC-090 und DSC-091 nie sichtbar
+gemacht.
+
+## Grenze der Methode
+
+Für die acht übrigen Sprachfassungen von DOC-IBA-SN045 endet dieses Verfahren. Sie lassen
+sich zwar ebenso gegen den deutschen Master lesen, aber ohne muttersprachlichen Review darf
+keine ihrer Seiten über `inspected` hinaus – Leitplanke 6 und 7 des Projektauftrags. Die
+Quellenprüfung hat damit ohne Zuarbeit von THITRONIK eine harte Obergrenze.
+
 ## Vorgehen für die nächsten Abschnitte
 
-Der deutsche Teil ab SN-045 ist abgeschlossen. Dieselbe Methode lässt sich als Nächstes auf
-DOC-BMA-SN044 außerhalb der Seiten 3–18 anwenden – dort steht mit dem englischen Teil
-(Seiten 20–36) ebenfalls eine Gegenquelle bereit – oder auf den englischen Teil ab SN-045,
-der dann seinerseits gegen den bereits validierten deutschen Master gelesen wird.
+Nächster Bereich ist DOC-BMA-SN044 außerhalb der Seiten 3–18: Dort steht mit dem englischen
+Teil (Seiten 20–36) eine Gegenquelle zum bereits validierten deutschen Teil bereit.
 
 ## Vorgehen im Einzelnen
 

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S02-CARD-REQUIREMENTS-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "The card requirements are unresolved in the source",
+  "body_md": "At this point the English source states requirements on the card that the German master of the **same edition** does not contain at all: a minimum requirement on the supported network standards and services, a note that the remaining credit cannot be checked over 4G, and an explicit prohibition of multi-operator SIM cards. The French version names yet another, differently worded recommendation. This manual therefore reproduces no card recommendation and no prohibition. Only a release by the manufacturer is binding.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.1, red recommendation box",
+  "prev_context": "Before this stands the requirement for an activated nano SIM card.",
+  "next_context": "The four-step preparation of the card follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e4cc7dbc13c74f162eab336a02541ecd130c6ac9256ac262013a5444ed9d80f8",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: the box sits in the same place but carries different content. The difference is therefore a documented language difference of the source, not a reading error – and it is the finding that led to DSC-086. Provider names are omitted while DSC-027 is open.",
+  "discrepancy_refs": ["DSC-027", "DSC-086"]
+}

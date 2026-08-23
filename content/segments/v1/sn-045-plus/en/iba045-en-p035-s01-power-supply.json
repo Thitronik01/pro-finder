@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P035-S01-POWER-SUPPLY",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "wire-connections",
+  "title": "Connecting and fusing the power supply",
+  "body_md": "Connect pin 1 and pin 8 with the correct polarity to a suitable power supply of 12 V DC. Secure the positive cable with the enclosed fuse. Pins 2 to 5 are measurement inputs for voltages from 0 to 30 V. Depending on the operating mode, geofencing can also be activated via pin 3.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 35,
+  "source_page_end": 35,
+  "source_region": "Section 1.4, first paragraph",
+  "prev_context": "The table of operating modes ends on the previous page.",
+  "next_context": "The connection of the alarm system follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:87a13d0f0ccf3a336915af51ef1e70f6ed57fda076144ca3eb6e74c58702bd97",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 11: equivalent in substance, including 12 V DC and the measurement range of 0 to 30 V. Both versions name the fuse without a rating; the 3 A value appears only in the scope of supply. “Suitable power supply” remains undefined in both and stands alongside the 9 to 30 V range of the technical data (DSC-069).",
+  "discrepancy_refs": ["DSC-069"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P049-S03-DISPOSAL",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "technical-data",
+  "title": "Disposal instructions",
+  "body_md": "When taken out of service the device does not belong in household waste. Municipal collection centres provide suitable containers for electronic devices. Packaging materials belong in materials recycling. Alongside this the source shows the crossed-out wheelie bin symbol.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 49,
+  "source_page_end": 49,
+  "source_region": "Section 6.2 with symbol",
+  "prev_context": "Before this stands the value list of the technical data.",
+  "next_context": "The conformity statement follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:8531a015eadd3d4c891036365f468efafd91153cae1a7d085aba8c04d1fb87f5",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 25: equivalent in substance, including the identical symbol without a text alternative.",
+  "discrepancy_refs": []
+}

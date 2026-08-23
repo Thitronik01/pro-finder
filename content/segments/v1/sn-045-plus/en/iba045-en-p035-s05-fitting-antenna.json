@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P035-S05-FITTING-ANTENNA",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "choose-installation-location",
+  "title": "Fitting the optional GPS antenna",
+  "body_md": "The optional GPS antenna is mounted in a sabotage-protected location inside the vehicle using the adhesive pad already attached. The side with the adhesive pad is the receiving side and must face upwards. The mounting surface must be dry, clean and free of grease. At temperatures below 15 °C the bonding surface should be warmed up. The receiving side must be aligned as horizontally as possible.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 35,
+  "source_page_end": 35,
+  "source_region": "Section 1.5.1, body text beside the illustration",
+  "prev_context": "Before this stand the three switching modes of the outputs.",
+  "next_context": "Section 1.5.2 follows on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a134970c1f165a3b1256d1d948d38b9aa92243f40085c3a4646190fe4e60741c",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 11: equivalent in substance, including the 15 °C limit and the horizontal alignment.",
+  "discrepancy_refs": []
+}

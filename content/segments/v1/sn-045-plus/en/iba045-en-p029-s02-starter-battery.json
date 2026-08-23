@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P029-S02-STARTER-BATTERY",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "wire-connections",
+  "title": "The device is connected to the starter battery",
+  "body_md": "The alarm system is connected to the starter battery. The manufacturer is not liable for damage caused by deep discharge of the starter battery. If the battery is flat, the vehicle may no longer be unlocked. The user is responsible for using the device as intended.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 29,
+  "source_page_end": 29,
+  "source_region": "Section “Disclaimer”, second paragraph",
+  "prev_context": "Before this, the source states that the device can only report a theft.",
+  "next_context": "The section “Intended use” follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7d244b0b8261c488da5b6c53855a1c88885406b3b51f34a3a32ca19c0cc6cf91",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 5: equivalent in substance, including the consequence that the vehicle cannot be unlocked. Neither version names a cut-off threshold or a protective measure against deep discharge; that gap exists in both.",
+  "discrepancy_refs": []
+}

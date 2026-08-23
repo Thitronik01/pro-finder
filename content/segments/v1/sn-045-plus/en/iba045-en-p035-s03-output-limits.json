@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P035-S03-OUTPUT-LIMITS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "technical_data",
+  "task_slug": "control-outputs",
+  "title": "Load limits of the two outputs",
+  "body_md": "Pin 6 and pin 7 are transistor outputs. They supply 12 V and may be loaded with 500 mA. For loads requiring more than 500 mA a relay must be used; the source requires high-quality automotive relays with a free-wheeling diode. According to the source, overloading voids the warranty.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 35,
+  "source_page_end": 35,
+  "source_region": "Section 1.4, third paragraph",
+  "prev_context": "Before this stands the connection of the alarm system.",
+  "next_context": "The list of the three switching modes follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:d2c529ba45a2dfac5a9ee7afb622f1475dae6a009dd758e562ff3041a8209edf",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 11: equivalent in substance, including 12 V, 500 mA, the relay requirement, the free-wheeling diode and the warranty consequence. Neither version names short-circuit or over-temperature protection, a resting state after restart, or a permissible load type; that gap remains.",
+  "discrepancy_refs": []
+}

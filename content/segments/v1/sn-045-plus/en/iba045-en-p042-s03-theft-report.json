@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P042-S03-THEFT-REPORT",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "use-geofencing",
+  "title": "The theft report is a silent alarm",
+  "body_md": "A theft report is received if the vehicle moves further from its original location than the distance stated by the source while the connected alarm system is activated. It is a **silent** alarm: neither the indicators nor the siren are activated. According to the source, both can be switched on afterwards by text message.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 42,
+  "source_page_end": 42,
+  "source_region": "Chapter 4, explanation of the message type “Theft report”",
+  "prev_context": "Before this stands the status report.",
+  "next_context": "The voltage warning follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:000a60fca43e85e5d52b7f075a7baa86bbf2677407b97eb7964dd802f3fed64d",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 19: equivalent in substance, including the silent alarm. Both versions name the same distance; it is not reproduced because three different values are on record across the generations (DSC-078) and BLK-007 applies. The English cross-reference is set twice (DSC-089) and leads nowhere in either version (DSC-041).",
+  "discrepancy_refs": ["DSC-041", "DSC-078", "DSC-089"]
+}

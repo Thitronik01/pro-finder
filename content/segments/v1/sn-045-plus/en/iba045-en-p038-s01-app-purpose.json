@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P038-S01-APP-PURPOSE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "install-app-and-activate",
+  "title": "Purpose of the manufacturer app",
+  "body_md": "The app brings the functions of the connected alarm system and of Pro-finder together in one interface.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 38,
+  "source_page_end": 38,
+  "source_region": "Section 2.3, first paragraph",
+  "prev_context": "Section 2.2 ends with the illustration on the previous page.",
+  "next_context": "The source then names where the app can be obtained.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:929ff56410a1bcca925192469bb7f55477693609dbfa9bf8fcf3315c7f9b5ad5",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 14: equivalent in substance.",
+  "discrepancy_refs": []
+}

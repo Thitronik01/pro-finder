@@ -11,6 +11,12 @@ in [CROSSCHECK_SN045_DE_EN.md](../CROSSCHECK_SN045_DE_EN.md).
 
 Das Paket gilt ausschließlich ab SN-045. Kein Wert aus DOC-BMA-SN044 wird herangezogen.
 
+**Nachtrag 2026-08-23:** Seit der Extraktion des englischen Sprachteils sind diesem Paket
+zusätzlich die englischen Segmente derselben Fundstellen zugeordnet. Sie sind Extraktionen
+der englischen Quelle selbst, keine Übersetzungen des deutschen Masters. Eine Entscheidung
+dieses Pakets gilt damit für beide Fassungen; wo sie auseinanderlaufen, ist das in der
+jeweiligen Zeile vermerkt.
+
 ## Zugeordnete Segmente
 
 | Segment                                        | Thema                                                   | Quelle |

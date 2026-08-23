@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P045-S05-GEOFENCING-AUTOMATIC",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "use-geofencing",
+  "title": "Geofencing follows the alarm system automatically",
+  "body_md": "When the connected alarm system is armed, geofencing is automatically activated and does not need to be switched on separately. When the alarm system is disarmed, geofencing is automatically deactivated.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 45,
+  "source_page_end": 45,
+  "source_region": "Section 5.2, red note box at the foot of the page",
+  "prev_context": "Before this stand the switching paths of geofencing.",
+  "next_context": "Section 5.3 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7ad8e31a7fb2a2936dcdf48c646ca6339a18006bb45ce34334e94feff8656225",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 21: equivalent in substance in both directions. Neither version says what applies when the two paths contradict each other.",
+  "discrepancy_refs": []
+}

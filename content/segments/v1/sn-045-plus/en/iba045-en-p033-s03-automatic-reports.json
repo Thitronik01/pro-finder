@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P033-S03-AUTOMATIC-REPORTS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "Automatic status reports and their content",
+  "body_md": "Depending on the operating mode, Pro-finder sends status reports to the stored destination numbers at fixed intervals. The report additionally contains the operating voltage and the voltages at the measurement inputs. Which voltages appear depends on the switch position.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 33,
+  "source_page_end": 33,
+  "source_region": "Section 1.3, functions on automatic reports and voltages",
+  "prev_context": "Before this stands the function “Call triggers status report”.",
+  "next_context": "The geofencing function follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6d76ea9df0b2b64e966617ba4db81b28e43bfc2e2e0b7cbdaa7413d1560e44de",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 9: equivalent in substance. The intervals themselves are held in the table on the following page.",
+  "discrepancy_refs": []
+}

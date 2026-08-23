@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S05-IPHONE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "With an iPhone, switch off iMessages first",
+  "body_md": "If an iPhone is used to prepare the card, the iMessages function must be deactivated before the four settings are made.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.1, red caution box",
+  "prev_context": "Before this stands the four-step preparation of the card.",
+  "next_context": "Section 2.2 on inserting the card into the module begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a787396065658aa5d9c46284af8381d84fbf6b6158f8d5df57b8d3f370de8a77",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: equivalent in substance. Both versions tie the condition to the four steps; the step numbers are replaced by a reference to the list because the web version separates numbering from the order of operating steps.",
+  "discrepancy_refs": []
+}

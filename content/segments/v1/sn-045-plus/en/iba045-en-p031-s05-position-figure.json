@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P031-S05-POSITION-FIGURE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "figure_description",
+  "task_slug": "choose-installation-location",
+  "title": "Illustration of the mounting position",
+  "body_md": "Three images stand side by side. On the left the device is shown with its labelled top face upwards, circled in green: the correct position. In the middle the same device lies top face down, circled in red and struck through: the incorrect position. On the right a line drawing of a motorhome shows the external antenna near the dashboard being reached by a satellite symbol. Correct and incorrect are distinguished **solely** by colour and the strike-through; there is no caption.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 31,
+  "source_page_end": 31,
+  "source_region": "Section 1.1, three illustrations in the lower third",
+  "prev_context": "Before this stands the paragraph on the external GPS antenna.",
+  "next_context": "Section 1.2 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:504e349ce22ad7c1471c3d6da570a3867519a2f6917c4b2fd53593a14e7453cc",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 7: identical, unchanged illustrations without any labelling. The purely colour-based distinction is therefore confirmed in both versions and is put into words here because it would otherwise be lost for colour-blind readers.",
+  "discrepancy_refs": []
+}

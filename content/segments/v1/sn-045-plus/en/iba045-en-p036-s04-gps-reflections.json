@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P036-S04-GPS-REFLECTIONS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "use-geofencing",
+  "title": "Reflections inside buildings can trigger false alarms",
+  "body_md": "In halls, other buildings and under canopies the GPS signal can be reflected. This can severely impair the accuracy of position determination and can trigger theft reports even though the vehicle has not been moved. The source therefore recommends deactivating geofencing when the vehicle is parked in a building or under a roof.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 36,
+  "source_page_end": 36,
+  "source_region": "Section 1.5.3, penultimate paragraph",
+  "prev_context": "Before this stands the table of GPS diagnosis states.",
+  "next_context": "The source then names the text message required for this.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:2dc3e2015e631975d54dfc04f920f2ae6b188c8d1ddfab4202218d037b03a860",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 12: equivalent in substance, including the recommendation to deactivate. The associated command string appears in both versions and is not reproduced under BLK-005.",
+  "discrepancy_refs": []
+}

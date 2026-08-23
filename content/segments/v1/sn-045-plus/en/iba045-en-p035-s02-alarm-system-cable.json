@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P035-S02-ALARM-SYSTEM-CABLE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "wire-connections",
+  "title": "Connecting the alarm system with the enclosed cable",
+  "body_md": "If the alarm system is to be used as well, connect it to Pro-finder with the enclosed connection cable.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 35,
+  "source_page_end": 35,
+  "source_region": "Section 1.4, second paragraph",
+  "prev_context": "Before this stands the connection of the power supply.",
+  "next_context": "The load limits of the outputs follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:4a14ae352945c179724ebf8f122893237589f1171dbd4c3482f9fbe03231572e",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 11: equivalent in substance. The cable name is not reproduced while DSC-036 is open.",
+  "discrepancy_refs": ["DSC-036"]
+}

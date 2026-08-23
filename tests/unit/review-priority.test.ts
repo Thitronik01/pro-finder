@@ -88,12 +88,19 @@ describe('Reviewpriorität', () => {
     expect(reviewPacketId('IBA045-DE-P005-S01-HAFTUNGSAUSSCHLUSS')).toBeNull();
   });
 
-  it('deckt alle 104 sicherheitskritischen Segmente mit genau einem Prüfpaket ab', () => {
+  it('ordnet englische Segmente demselben Paket zu wie ihre deutsche Entsprechung', () => {
+    expect(reviewPacketId('IBA045-EN-P034-S01-MODE-TABLE')).toBe('P0-09');
+    expect(reviewPacketId('IBA045-EN-P049-S02-CURRENT-GAP')).toBe('P0-12');
+    expect(reviewPacketId('IBA045-EN-P046-S02-GPS-STATUS')).toBe('P0-11');
+    expect(reviewPacketId('IBA045-EN-P029-S01-DISCLAIMER')).toBeNull();
+  });
+
+  it('deckt alle 167 sicherheitskritischen Segmente mit genau einem Prüfpaket ab', () => {
     const p0Segments = loadAllContentSegments().filter(
       ({ segment }) => reviewPriority(segment.safety_class) === 'P0',
     );
 
-    expect(p0Segments).toHaveLength(104);
+    expect(p0Segments).toHaveLength(167);
     for (const { file, segment } of p0Segments) {
       expect(reviewPacketId(segment.segment_key), file).not.toBeNull();
     }

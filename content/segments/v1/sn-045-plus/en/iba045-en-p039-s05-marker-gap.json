@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P039-S05-MARKER-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "manage-destination-numbers",
+  "title": "How authorised and unauthorised numbers are marked is not explained",
+  "body_md": "In the syntax graphic the source explains only the country code and the smartphone marker. How a destination number is marked as authorised or unauthorised follows solely from an example and is never written out as a rule. This manual derives no rule from the example. The marking is an open, safety-critical item.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 39,
+  "source_page_end": 39,
+  "source_region": "Section 2.8, explanations of the syntax graphic",
+  "prev_context": "Before this stands the description of the syntax graphic.",
+  "next_context": "The example table and section 2.9 follow on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a3e362996cebc3fda0521143706627604d6b6f68bf0e336771ec89809f9f0135",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 16: the German graphic explains exactly the same two characters and likewise not the marking of authorisation. The gap is therefore independently confirmed and is not a reading error. BLK-006 remains binding.",
+  "discrepancy_refs": ["DSC-017"]
+}

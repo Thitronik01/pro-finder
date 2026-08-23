@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P032-S02-CONNECTION-FIGURE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "figure_description",
+  "task_slug": "wire-connections",
+  "title": "Illustration of the connection side",
+  "body_md": "The photo shows the connection side of the device. From left to right: the rotary switch with positions 0 to 9 and A to F, a modular socket, a red struck-through field, a four-pin socket and an eight-pin socket whose contacts are numbered in colour. The status LED sits on the far right. Yellow lines connect the sockets to the accessories shown above them.\n\nTwo points remain unexplained in the source: the red struck-through field has **no** legend entry, and the label on the antenna image is not localised.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 32,
+  "source_page_end": 32,
+  "source_region": "Section 1.2, labelled photo in the upper part of the page",
+  "prev_context": "Section 1.1 ends on the previous page.",
+  "next_context": "The legend of the markings follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e0a2ea1ce5a09e1bf79a97d7cc9cf990ff3c33884e69a89b2cc61297ba47557f",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 8: identical, unchanged illustration. The missing legend entry and the German label on the antenna image are therefore present in the English version too – a template error under DSC-022, not a reading error of this extraction.",
+  "discrepancy_refs": ["DSC-022"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P040-S02-SIM-INSERTED",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "manage-destination-numbers",
+  "title": "The nano SIM card must be inserted",
+  "body_md": "For deleting the destination numbers, the nano SIM card must be inserted in the device.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 40,
+  "source_page_end": 40,
+  "source_region": "Section 2.9, red note box with warning triangle",
+  "prev_context": "Before this stands the omitted example table.",
+  "next_context": "The steps for deleting the destination number memory follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f99ca023202ad5876224c1487fee9695a42d5254a6279951c2ab559540f60b4d",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 17: equivalent in substance. Both versions set the statement as a warning with a triangle, so the warning role is preserved rather than flattened into body text.",
+  "discrepancy_refs": []
+}

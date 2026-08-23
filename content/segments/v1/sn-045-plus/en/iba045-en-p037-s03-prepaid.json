@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S03-PREPAID",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "A prepaid card must remain rechargeable inside the device",
+  "body_md": "If a prepaid card is used, it must be possible to top up the credit without removing the card from the device, for example from another mobile phone.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.1, closing sentence of the red box",
+  "prev_context": "Before this stands the card recommendation that differs between versions.",
+  "next_context": "The four-step preparation of the card follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:af2ae1d7cb55426538c5b3c505af435f65864b1bae9f6520083432a488058d65",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: the prepaid condition is equivalent in substance and is the only undisputed part of the box; it is therefore kept separate from the disputed part.",
+  "discrepancy_refs": ["DSC-027"]
+}

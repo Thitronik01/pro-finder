@@ -1754,8 +1754,8 @@
     },
     {
       "page": 29,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1795,12 +1795,12 @@
         "'Pro-finder' und 'WiPro III (safe.lock)' entsprechen der Soll-Schreibweise; 'Thitronik GmbH' ist der juristische Firmenname im Fliesstext."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 5 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 5 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 3 Segment(e)."
     },
     {
       "page": 30,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1846,12 +1846,12 @@
         "'Pro-finder' und 'WiPro III connection cable' sind konsistent; die Serienbereichsnotation 'SN 0699-045+' weicht von 'ab SN-045' ab."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 6 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 6 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 2 Segment(e)."
     },
     {
       "page": 31,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 1,
@@ -1896,12 +1896,12 @@
         "'Pro-finder', 'GPS receiver', 'GSM module' und 'GPS antenna' sind konsistent verwendet."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 7 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 7 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 32,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1960,12 +1960,12 @@
         "'WiPro III' und 'Pro-finder' entsprechen der Soll-Schreibweise."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 8 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 8 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 2 Segment(e)."
     },
     {
       "page": 33,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2026,12 +2026,12 @@
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Geofencing' sind konsistent; 'Nano SIM card' weicht von 'Nano-SIM' ab."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 9 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 9 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 6 Segment(e)."
     },
     {
       "page": 34,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2092,12 +2092,12 @@
         "Spaltenkopf verwendet nur 'WiPro' statt 'WiPro III (safe.lock)'; 'Pro-finder' ist korrekt."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 10 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 10 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 1 Segment(e)."
     },
     {
       "page": 35,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2162,12 +2162,12 @@
         "'Pro-finder' und 'WiPro III (safe.lock)' sind korrekt; Kapitelname 'Controlling the alarm system via SMS' ist fuer die Ausgangssteuerung terminologisch falsch."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 11 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 11 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 36,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2231,12 +2231,12 @@
         "'Status LED' erscheint ohne Bindestrich; 'Pro-finder' und 'Geofencing' sind konsistent. Der Befehl 'fence off' ist vor Uebersetzung zu schuetzen, muss aber gegen die Firmware geprueft werden."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 12 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 12 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 4 Segment(e)."
     },
     {
       "page": 37,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2291,12 +2291,12 @@
         "'Pro-finder' und 'THITRONIK' sind korrekt geschrieben; 'nano SIM' erscheint auf dieser Seite klein, auf PDF-Seite 40 dagegen als 'nano SIM card' im Warnhinweis."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 13 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 13 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 7 Segment(e)."
     },
     {
       "page": 38,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2351,12 +2351,12 @@
         "'THITRONIK app' hier klein geschrieben; das Projektglossar fuehrt 'THITRONIK App'."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 14 vollstaendig gelesen (2026-08-23). Status bleibt inspected."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 14 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 6 Segment(e)."
     },
     {
       "page": 39,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2429,12 +2429,12 @@
         "Britisches Englisch ('Authorised', 'programme') konsistent verwendet."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutschen Seiten 15 und 16 vollstaendig gelesen (2026-08-23). Traegt Einleitung und Syntaxgrafik zu 2.8 auf einer Seite. Status bleibt inspected."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 15 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 40,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 10,
@@ -2500,12 +2500,12 @@
       ],
       "terminology_findings": [],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 17 vollstaendig gelesen (2026-08-23). Status bleibt inspected."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 17 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 4 Segment(e)."
     },
     {
       "page": 41,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2569,12 +2569,12 @@
         "'SIM-card' hier mit Bindestrich, auf PDF-Seite 37 und 40 dagegen 'SIM card' bzw. 'nano SIM card'."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 18 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 18 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 1 Segment(e)."
     },
     {
       "page": 42,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2646,12 +2646,12 @@
         "'WiPro III (safe.lock)' korrekt geschrieben. Spannungsangaben uneinheitlich gesetzt: '11.2V' und '12.5V' ohne Leerzeichen im Fliesstext, '11.2 V' mit Leerzeichen in der Sprechblase."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 19 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 19 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 43,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2702,12 +2702,12 @@
       ],
       "terminology_findings": [],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 20 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 20 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 44,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2741,12 +2741,12 @@
       ],
       "terminology_findings": [],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 20 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 20 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 1 Segment(e)."
     },
     {
       "page": 45,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2797,12 +2797,12 @@
         "'WiPro III (safe.lock)' in 5.1 vollstaendig, in der Geofencing-Notiz nur 'WiPro III'."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 21 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 21 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 46,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2853,12 +2853,12 @@
         "Die Ueberschrift von 5.5 ist terminologisch falsch und darf nicht in den englischen Master uebernommen werden."
       ],
       "inspected_note": "Batch 3, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 22 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 22 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 4 Segment(e)."
     },
     {
       "page": 47,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2910,12 +2910,12 @@
       ],
       "terminology_findings": [],
       "inspected_note": "Batch 4, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 23 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 23 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 4 Segment(e)."
     },
     {
       "page": 48,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -2957,12 +2957,12 @@
         "Englisch 'interconnection mode' fuer den deutschen 'Anlernmodus'; die Kurzanleitung und die Referenzplattform sind auf abweichende Benennungen zu pruefen."
       ],
       "inspected_note": "Batch 4, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 24 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 24 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 3 Segment(e)."
     },
     {
       "page": 49,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -3055,7 +3055,7 @@
         "'Nano SIM' hier ohne Bindestrich, deutsch 'Nano-SIM'; die Firmierung erscheint als 'Thitronik GmbH', die Marke sonst als 'THITRONIK'."
       ],
       "inspected_note": "Batch 4, Sitzung 2026-08-07: mit PyMuPDF 1.27.2 bei 150 dpi gerendert und vollstaendig visuell geprueft; Textebene je Seite gemessen. Kein unabhaengiger Review, daher Status nur inspected.",
-      "crosscheck_note": "Als unabhaengige Gegenquelle fuer die deutsche Seite 25 vollstaendig gelesen (2026-08-23). Status bleibt inspected: die Seite ist Referenz, nicht Extraktionsgrundlage."
+      "crosscheck_note": "Vollstaendig gelesen und gegen die deutsche Seite 25 gegengeprueft (2026-08-23). Die Segmente dieser Seite sind Extraktionen der englischen Quelle selbst, keine Uebersetzungen des deutschen Masters. 5 Segment(e)."
     },
     {
       "page": 50,

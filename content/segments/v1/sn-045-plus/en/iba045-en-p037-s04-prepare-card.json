@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P037-S04-PREPARE-CARD",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "prepare-and-insert-sim-card",
+  "title": "Prepare the SIM card in a mobile phone",
+  "body_md": "Insert the SIM card into a mobile device first and make four settings there:\n\n1. Deactivate the PIN request.\n2. Deactivate the mailbox and all call diversions.\n3. Deactivate all convenience functions, among them callback requests and reminders by text message.\n4. Activate roaming if it is not preset.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 37,
+  "source_page_end": 37,
+  "source_region": "Section 2.1, numbered list below the red box",
+  "prev_context": "Before this stands the prepaid condition.",
+  "next_context": "The red caution box on iPhone and iMessages follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6bd5b35fcfc2181860db0c600fa26238eb6de6533fcc5bc8c63f4a774e1c1181",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 13: all four steps match in order and content. The list of convenience functions to be deactivated is longer in other language versions (DSC-027); only what German and English state alike is carried over.",
+  "discrepancy_refs": ["DSC-027"]
+}

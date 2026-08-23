@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P043-S05-MANUAL-ALARM-MESSAGE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "warning",
+  "task_slug": "understand-messages",
+  "title": "Manual alarm",
+  "body_md": "If the connected alarm system is activated by triggering a panic alarm, Pro-finder sends a corresponding message and then additionally calls the master number.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 43,
+  "source_page_end": 43,
+  "source_region": "Chapter 4, explanation of the message type “Manual alarm” with red addition",
+  "prev_context": "Before this stands the gas alarm.",
+  "next_context": "The message about theft of accessories follows on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:390e89534e43db858efb2f1aba1cd4d493aad19cb023b538ccb077cecc6245c6",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 20: equivalent in substance.",
+  "discrepancy_refs": []
+}

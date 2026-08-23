@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P047-S02-OUTPUT-PULSE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "control-outputs",
+  "title": "Switching an output on for one second",
+  "body_md": "An output can be switched on for one second by text message. Pro-finder switches it accordingly and sends a status report.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 47,
+  "source_page_end": 47,
+  "source_region": "Section 5.5.2",
+  "prev_context": "Before this stands permanent switching.",
+  "next_context": "Switching for a freely selectable time follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b1a74c1dfb483b5639ce99656595d5d75811e9aa89f875807e71b34fc2636c94",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 23: equivalent in substance, including the one second. Neither version names a tolerance or a repeat lock-out.",
+  "discrepancy_refs": []
+}

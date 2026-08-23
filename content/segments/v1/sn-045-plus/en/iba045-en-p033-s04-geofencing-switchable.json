@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P033-S04-GEOFENCING-SWITCHABLE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "use-geofencing",
+  "title": "Geofencing can be switched via a measurement input",
+  "body_md": "In certain switch positions, geofencing can be switched on and off in a controlled manner by the voltage on pin 3, for example by switching on the ignition or the interior lighting. Which voltages mean which state is stated in the table of operating modes.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 33,
+  "source_page_end": 33,
+  "source_region": "Section 1.3, function “Geofencing”",
+  "prev_context": "Before this stand the automatic status reports.",
+  "next_context": "The function for controlling the alarm system by call follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:1be6ce44848ec69be03baba05bbdd9646c4bf5c3f2a9bc951e8f36d8b89bc5c4",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 9: equivalent in substance, including both examples. Nothing is asserted here about geofencing beyond what the source states (BLK-007).",
+  "discrepancy_refs": []
+}

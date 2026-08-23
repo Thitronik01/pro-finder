@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P039-S04-SYNTAX-FIGURE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "figure_description",
+  "task_slug": "manage-destination-numbers",
+  "title": "Structure of the programming message according to the syntax graphic",
+  "body_md": "The graphic shows a continuous character string and assigns four explanations to it by means of lines: the country code beginning with a plus sign, a leading marker for the case where the end device is a smartphone, and the destination numbers in their order, the first of which is the master number. The graphic explains the smartphone marker as switching the position transmission to a clickable link and limits its use to smartphones.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 39,
+  "source_page_end": 39,
+  "source_region": "Section 2.8, syntax graphic in the lower third of the page",
+  "prev_context": "Before this stands the introduction to section 2.8.",
+  "next_context": "The example table and section 2.9 follow on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e1a43b3b35551e227264303a381e82a6298350579761e246c5028144ba00d575",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 16: the same graphic with identical example values and identical assignment lines; only the labels are translated and the example country differs (DSC-019). The example values are not reproduced (BLK-006). Important layout finding: in the German part this graphic occupies an internal page of its own, whereas the English version places it together with the introduction to 2.8 – the cause of the page displacement recorded in DSC-021.",
+  "discrepancy_refs": ["DSC-019", "DSC-021"]
+}

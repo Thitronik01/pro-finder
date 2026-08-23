@@ -3,7 +3,7 @@
 Stand: 2026-08-13 (vierundzwanzigste Fortsetzung). Der Pilot ist nicht freigabefähig; Details und
 Prozentwerte stehen in `PROJECT_STATUS.md`.
 
-## Sitzung 2026-08-23 – deutscher SN-045-Teil vollständig gegen Englisch gegengelesen
+## Sitzung 2026-08-23 – deutscher und englischer SN-045-Teil wechselseitig gegengelesen
 
 ### Vorbemerkung zum Ausgangsstand
 
@@ -85,6 +85,27 @@ Store- oder Downloadadresse und kein QR-Code (BLK-004). Keine Geofencing-Aussage
 Koordinate, keine Kartenadresse. Kein Wert aus DOC-BMA-SN044 wurde in einen
 SN-045-Bestand übernommen.
 
+### Der englische Sprachteil ist ebenfalls extrahiert
+
+Nach Abschluss des deutschen Teils wurde derselbe Bestand für die englische Fassung erzeugt:
+**83 englische Segmente** aus den Seiten 29–49, alle 21 Seiten auf `validated`. Entscheidend
+für den Übersetzungspilot: Diese Segmente sind **Extraktionen der englischen Quelle**, nicht
+Übersetzungen des deutschen Masters. Jede englische Seite nennt in ihrem `crosscheck_note`
+die deutsche Parallelseite, gegen die sie gelesen wurde.
+
+Der Gewinn ist inhaltlich, nicht nur zählbar: Eine Übersetzung des deutschen Masters hätte
+DSC-086 (englisches Verbot der Multi-Operator-Karte), DSC-088 (abweichende Stromaufnahme),
+DSC-090 (abweichende Gerätemeldung) und DSC-091 (zweifach benannter Anlernmodus) nie sichtbar
+gemacht. Die englischen Aufgabenentwürfe der bisherigen Vertical Slices bleiben davon
+unberührt und weiterhin `entwurf`; sie werden nicht höhergestuft, solange EN-01 bis EN-03
+offen sind.
+
+**Grenze der Methode.** Für die acht übrigen Sprachfassungen endet dieses Verfahren: Ohne
+muttersprachlichen Review darf keine ihrer Seiten über `inspected` hinaus (Leitplanken 6
+und 7). Die Quellenprüfung hat damit ohne Zuarbeit von THITRONIK eine harte Obergrenze.
+Von 247 Seiten des Dokuments sind 42 validiert; die restlichen 205 sind ohne Zuarbeit nicht
+höherstufbar.
+
 ### Prüfpakete
 
 Die 63 sicherheitskritischen Segmente des deutschen SN-045-Teils sind sieben neuen Dossiers
@@ -95,8 +116,9 @@ Spannungswarnung, 11), **P0-11** (Geofencing, Statusbericht, Positionsbewertung,
 **P0-12** (Ausgangssteuerung, technische Daten, 7). Alle stehen auf „bereit für Fachreview",
 weil ihre Seiten vollständig gegengelesen und auf `validated` gestuft sind.
 
-Die Review-UI zeigt damit **104/104** und filtert 6/11/11/8/5/3/7/14/10/11/11/7 Treffer;
-Unit- und Browsertest sind entsprechend nachgezogen.
+Seit der Extraktion des englischen Teils liegen die englischen Segmente im selben Paket wie
+ihre deutsche Entsprechung – eine Entscheidung des Pakets gilt damit für beide Fassungen.
+Die Review-UI zeigt **167/167**; Unit- und Browsertest sind entsprechend nachgezogen.
 
 ### Neu angelegt
 
@@ -481,16 +503,17 @@ abgeleitet ist.
 
 ## Was weiterhin offen ist
 
-- Alle 139 deutschen Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
+- Alle 222 Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
   eine technische oder rechtliche Freigabe. Die 83 Segmente ab SN-045 besitzen zusätzlich
   eine unabhängige Gegenprüfung gegen die englische Fassung – das ersetzt keinen
   technischen Review.
-- P0-01 bis P0-12 sind intern reviewbereit und decken alle 104 P0-Segmente ab, warten aber
+- P0-01 bis P0-12 sind intern reviewbereit und decken alle 167 P0-Segmente ab, warten aber
   auf den realen THITRONIK-Fachreview. Keine der vorbereiteten Einzelentscheidungen ist
   beantwortet und kein Segmentstatus wurde geändert.
-- Der deutsche Teil ab SN-045 ist mit 21 von 21 Inhaltsseiten abgeschlossen. Nicht
-  extrahiert sind weiterhin DOC-BMA-SN044 außerhalb der Seiten 3–18, der englische Teil ab
-  SN-045 und die acht übrigen Sprachteile.
+- Der deutsche **und** der englische Teil ab SN-045 sind mit je 21 von 21 Inhaltsseiten
+  abgeschlossen. Nicht extrahiert sind weiterhin DOC-BMA-SN044 außerhalb der Seiten 3–18 und
+  die acht übrigen Sprachteile – letztere dürfen ohne muttersprachlichen Review auch nicht
+  höhergestuft werden.
 - Die unabhängigen englischen Sprachreviews von EN-01 bis EN-03 sind organisatorisch
   offen. Keine der vierzehn Aufgaben darf vorher höhergestuft werden.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
@@ -563,30 +586,32 @@ abgeleitet ist.
 
 ```text
 Resume from:
-Der deutsche Sprachteil von DOC-IBA-SN045 ist abgeschlossen. Alle 21 Inhaltsseiten (deutsch
-5-25) wurden vollstaendig gegen die englischen Seiten 29-49 gegengelesen, in 83 Segmente
-extrahiert und auf validated gestuft; Segmentbestand gesamt 139, alle entwurf. Alle 63
-sicherheitskritischen SN-045-Segmente sind den sieben neuen Dossiers P0-06 bis P0-12
-zugeordnet, die Review-UI zeigt 104/104. Sechs neue Registereintraege: DSC-086 (englisches
-Verbot der Multi-Operator-SIM-Karte), DSC-087 (Fehler im deutschen Master, Betriebsart D),
-DSC-088 (Stromaufnahme Bereich gegen Einzelwert), DSC-089 (zwei englische Satzfehler),
-DSC-090 (Geraetemeldung je Fassung anders), DSC-091 (Anlernmodus zweifach benannt). Kein
-Segment musste wegen eines eigenen Lesefehlers korrigiert werden; eine eigene Fehlvermutung
-(Kopfzeile mit Seitenzahl) wurde widerlegt und dokumentiert. Keine Freigabe erteilt.
+Der deutsche UND der englische Sprachteil von DOC-IBA-SN045 sind abgeschlossen und
+wechselseitig gegengelesen: 21 deutsche Seiten (5-25) gegen 21 englische (29-49), 83 + 83
+Segmente, alle 42 Seiten validated. Segmentbestand gesamt 222, alle entwurf. Die englischen
+Segmente sind Extraktionen der englischen Quelle, keine Uebersetzungen des deutschen
+Masters - das ist der eigentliche Fortschritt fuer den Uebersetzungspilot. Alle 167
+sicherheitskritischen Segmente liegen in den zwoelf Dossiers P0-01 bis P0-12; englische
+Segmente im selben Paket wie ihre deutsche Entsprechung, die Review-UI zeigt 167/167.
+Sechs neue Registereintraege: DSC-086 (englisches Verbot der Multi-Operator-SIM-Karte),
+DSC-087 (Fehler im deutschen Master, Betriebsart D), DSC-088 (Stromaufnahme Bereich gegen
+Einzelwert), DSC-089 (zwei englische Satzfehler), DSC-090 (Geraetemeldung je Fassung
+anders), DSC-091 (Anlernmodus zweifach benannt). Vier davon waeren aus einer Uebersetzung
+des deutschen Masters nie sichtbar geworden.
+Gesamtfortschritt 66,2 Prozent, PDF-Audit 34 Prozent.
 
 First action:
-Naechster Extraktionsbereich nach docs/CROSSCHECK_SN045_DE_EN.md: entweder DOC-BMA-SN044
-ausserhalb der Seiten 3-18 mit dem englischen Teil (Seiten 20-36) als Gegenquelle, oder der
-englische Teil ab SN-045, der dann gegen den jetzt validierten deutschen Master gelesen wird.
-Dieselbe Methode: Seitenpaar ueber die Kapitelueberschrift bilden, nie ueber einen festen
-Versatz; beide Seiten rendern; jede Zahl, Tabellenzeile und Aufzaehlung vergleichen;
-Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als
-Sprachunterschied ins Register nehmen; eine Seite steigt erst nach vollstaendigem
-Gegenlesen auf validated, mit crosscheck_note.
-Unveraendert offen und ohne THITRONIK nicht loesbar: die unabhaengigen englischen
-Sprachreviews EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch fuer Tastatur,
-Zoom, Reflow, Forced Colors und Reduced Motion sowie alle Produktionsentscheidungen der
-Setup-Karte.
+DOC-BMA-SN044 ausserhalb der Seiten 3-18 extrahieren; der englische Teil (Seiten 20-36)
+dient als Gegenquelle zum bereits validierten deutschen Teil. Methode unveraendert nach
+docs/CROSSCHECK_SN045_DE_EN.md.
+HARTE GRENZE, nicht uebergehen: Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne
+muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7). 205 der 247
+Seiten sind ohne Zuarbeit von THITRONIK nicht hoeherstufbar. Wer die Quellenpruefung weiter
+treiben will, braucht entweder DOC-BMA-SN044 oder eine Zuarbeit - nicht eine geaenderte
+Messung.
+Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch fuer
+Tastatur, Zoom, Reflow, Forced Colors und Reduced Motion sowie alle
+Produktionsentscheidungen der Setup-Karte.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

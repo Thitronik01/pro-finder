@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P038-S02-APP-SOURCE-GAP",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "omission_note",
+  "task_slug": "install-app-and-activate",
+  "title": "The way to obtain the app is not reproduced here",
+  "body_md": "At this point the source names two app platforms and shows a QR code for each. Store names, download addresses and machine-readable codes are not reproduced in this manual because they can go out of date unchecked. The way to obtain the app is an open item and must be confirmed by the manufacturer.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 38,
+  "source_page_end": 38,
+  "source_region": "Section 2.3, paragraph with the two platform logos and QR codes",
+  "prev_context": "Before this stands the purpose of the app.",
+  "next_context": "Section 2.4 on activating Pro-finder begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f0a173962d6ad2dc5a769ecb7398fdd999a56c6beaf6407f59f70260a59e0d75",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 14: both versions show the same two logos and the same two QR codes and then point to the website. The omission follows BLK-004 and is not a language difference.",
+  "discrepancy_refs": []
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P048-S03-NO-GPS",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "Behaviour without GPS reception",
+  "body_md": "If the vehicle is inside a building or at another location without GPS reception, Pro-finder waits up to ten minutes for a valid position. If none is received by then, it sends the status report with the last position received.\n\nBecause the position is queried continuously during an alarm while the alternator is running, that last position comes from the moment immediately before GPS reception ended. The time given in the message always belongs to that last received position – not to the time of sending.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 48,
+  "source_page_end": 48,
+  "source_region": "Section 5.7, last two paragraphs",
+  "prev_context": "Before this stands the use of the position information.",
+  "next_context": "Chapter 6 begins on the next page.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3ff783e189b4534cfb0295c9c2b9f51cebae09105e2aea130b0028a87060ed30",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 24: equivalent in substance, including the ten minutes and the fact that the time refers to the position rather than to sending. Neither version defines what an active alternator means in measurable terms, nor how old the last received position may be.",
+  "discrepancy_refs": []
+}

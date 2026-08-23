@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P045-S01-ALARM-BY-CALL",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "wire-connections",
+  "title": "Switching the alarm system by call",
+  "body_md": "In the operating modes provided for it, the connected alarm system can be switched to its next state by a call. Call Pro-finder to do so. The device ends the call automatically before a chargeable connection is established and sends a status report to the caller after successful switching.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 45,
+  "source_page_end": 45,
+  "source_region": "Section 5.1, body text",
+  "prev_context": "Chapter 4 ends on the previous page.",
+  "next_context": "The red note on authorised numbers follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:531aabde423e9ecf8e7255f85ce5dd51b05e353429ad3b1b484874706f4248a2",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 21: equivalent in substance. In both versions the section heading announces control by text message while the section describes only the call (DSC-041); the contradiction is not resolved. In the English version the heading is additionally identical to that of section 5.5 (DSC-015).",
+  "discrepancy_refs": ["DSC-015", "DSC-041"]
+}

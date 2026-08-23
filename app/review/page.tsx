@@ -225,14 +225,14 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               </Link>
             </li>
             <li>
-              <strong>P0-06:</strong> drei Segmente zu SIM-Vorbereitung und Aktivierung ab SN-045.
+              <strong>P0-06:</strong> sechs Segmente zu SIM-Vorbereitung und Aktivierung ab SN-045.
               Dossier: <code>docs/review-packets/P0-06-SIM-AKTIVIERUNG-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-06">
                 P0-06 in der Warteschlange öffnen
               </Link>
             </li>
             <li>
-              <strong>P0-07:</strong> sieben Segmente zu Zielrufnummern, Programmiernachricht und
+              <strong>P0-07:</strong> vierzehn Segmente zu Zielrufnummern, Programmiernachricht und
               Speicherlöschung ab SN-045. Dossier:{' '}
               <code>docs/review-packets/P0-07-ZIELRUFNUMMERN-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-07">
@@ -240,15 +240,14 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               </Link>
             </li>
             <li>
-              <strong>P0-08:</strong> vierzehn Segmente zu Montage, Anschluss und elektrischen
-              Grenzwerten ab SN-045. Dossier:{' '}
-              <code>docs/review-packets/P0-08-MONTAGE-ANSCHLUSS-SN045.md</code>.{' '}
+              <strong>P0-08:</strong> 28 Segmente zu Montage, Anschluss und elektrischen Grenzwerten
+              ab SN-045. Dossier: <code>docs/review-packets/P0-08-MONTAGE-ANSCHLUSS-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-08">
                 P0-08 in der Warteschlange öffnen
               </Link>
             </li>
             <li>
-              <strong>P0-09:</strong> zehn Segmente zu Betriebsarten, GPS-Diagnose und Status-LED ab
+              <strong>P0-09:</strong> 20 Segmente zu Betriebsarten, GPS-Diagnose und Status-LED ab
               SN-045. Dossier: <code>docs/review-packets/P0-09-BETRIEBSARTEN-GPS-LED-SN045.md</code>
               .{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-09">
@@ -256,14 +255,14 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               </Link>
             </li>
             <li>
-              <strong>P0-10:</strong> elf Segmente zu Meldungen, Alarmen und Spannungswarnung ab
+              <strong>P0-10:</strong> 22 Segmente zu Meldungen, Alarmen und Spannungswarnung ab
               SN-045. Dossier: <code>docs/review-packets/P0-10-MELDUNGEN-ALARME-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-10">
                 P0-10 in der Warteschlange öffnen
               </Link>
             </li>
             <li>
-              <strong>P0-11:</strong> elf Segmente zu Geofencing, Statusbericht und
+              <strong>P0-11:</strong> 22 Segmente zu Geofencing, Statusbericht und
               Positionsbewertung ab SN-045. Dossier:{' '}
               <code>docs/review-packets/P0-11-GEOFENCING-POSITION-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-11">
@@ -271,8 +270,8 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               </Link>
             </li>
             <li>
-              <strong>P0-12:</strong> sieben Segmente zu Ausgangssteuerung und technischen Daten ab
-              SN-045. Dossier:{' '}
+              <strong>P0-12:</strong> vierzehn Segmente zu Ausgangssteuerung und technischen Daten
+              ab SN-045. Dossier:{' '}
               <code>docs/review-packets/P0-12-AUSGAENGE-TECHNISCHE-DATEN-SN045.md</code>.{' '}
               <Link href="/review?generation=sn-045-plus&priority=P0&packet=P0-12">
                 P0-12 in der Warteschlange öffnen

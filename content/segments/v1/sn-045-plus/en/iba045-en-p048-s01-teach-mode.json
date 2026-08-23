@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P048-S01-TEACH-MODE",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "wire-connections",
+  "title": "Starting the teach-in mode of the alarm system",
+  "body_md": "The teach-in mode of the connected alarm system can be activated through Pro-finder by text message. While it is active, new radio components can be connected to the alarm system. Once all components have been connected, the mode can be deactivated again with a further message.\n\nNote on naming: the source uses two different names for this mode on the same page. This manual uses one name and does not present either source term as binding.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 48,
+  "source_page_end": 48,
+  "source_region": "Section 5.6",
+  "prev_context": "Section 5.5.3 ends on the previous page.",
+  "next_context": "Section 5.7 on retrieving the vehicle begins.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:a397a755d1ec025e51802ab7ca6e7b5bc58801457f90cd87aafad10e40876cbd",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 24: the substance matches, but the English version names the mode twice on the same page – the heading and body text use one term, the command another, while the German master uses a single term throughout (DSC-091). This inconsistency exists only in the English version and was found by the cross-reading. Neither version states a time limit for the mode. The command strings are not reproduced (BLK-005).",
+  "discrepancy_refs": ["DSC-091"]
+}

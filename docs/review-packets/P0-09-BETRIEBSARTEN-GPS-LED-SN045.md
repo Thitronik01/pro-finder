@@ -12,6 +12,12 @@ und elf Spalten verglichen.
 Dieses Paket entscheidet, was der Drehschalter tatsächlich schaltet und was die Status-LED
 tatsächlich anzeigt. Beides ist am Gerät nur visuell zugänglich.
 
+**Nachtrag 2026-08-23:** Seit der Extraktion des englischen Sprachteils sind diesem Paket
+zusätzlich die englischen Segmente derselben Fundstellen zugeordnet. Sie sind Extraktionen
+der englischen Quelle selbst, keine Übersetzungen des deutschen Masters. Eine Entscheidung
+dieses Pakets gilt damit für beide Fassungen; wo sie auseinanderlaufen, ist das in der
+jeweiligen Zeile vermerkt.
+
 ## Zugeordnete Segmente
 
 | Segment                                     | Thema                                  | Quelle |

@@ -11,6 +11,12 @@ gelesen.
 Der Radius des Geofencings wird nicht wiedergegeben, solange Rückfrage 14 offen ist
 (BLK-007). Befehlszeichenfolgen bleiben ausgelassen (BLK-005).
 
+**Nachtrag 2026-08-23:** Seit der Extraktion des englischen Sprachteils sind diesem Paket
+zusätzlich die englischen Segmente derselben Fundstellen zugeordnet. Sie sind Extraktionen
+der englischen Quelle selbst, keine Übersetzungen des deutschen Masters. Eine Entscheidung
+dieses Pakets gilt damit für beide Fassungen; wo sie auseinanderlaufen, ist das in der
+jeweiligen Zeile vermerkt.
+
 ## Zugeordnete Segmente
 
 | Segment                                      | Thema                                  | Quelle |

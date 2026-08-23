@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P049-S01-TECHNICAL-DATA",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "technical_data",
+  "task_slug": "technical-data",
+  "title": "Technical data",
+  "body_md": "| Item | Value according to the English version |\n| --- | --- |\n| Power supply | 9–30 V |\n| Power consumption during network search | approx. 37 mA |\n| Power consumption in normal operation | see the separate note – the versions differ |\n| Transmission frequency | 2G/3G/4G (LTE) |\n| 2G bands | Quad |\n| 3G bands | 1, 2, 5, 8 |\n| 4G bands | 1, 2, 3, 4, 5, 7, 8, 18, 19, 20, 26, 28 |\n| Number of destination numbers | 10 |\n| Interfaces | GPS/QZSS |\n| Outputs | 2 × 12 V / 500 mA |\n| Temperature range | −10 to +80 °C |\n| SIM format | Nano SIM |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 49,
+  "source_page_end": 49,
+  "source_region": "Section 6.1, value list",
+  "prev_context": "Section 5.7 ends on the previous page.",
+  "next_context": "The disposal instructions follow.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:266a35bd313e7860c0ae608e50ccc897b48ab411710a2a0957d97a27769337f2",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 25: every row matches except one – power supply, network-search current, transmission frequency, all bands, number of destination numbers, interfaces, outputs, temperature range and SIM format. The only deviation is the current consumption in normal operation (DSC-088), which is therefore held as a separate note. Column headers were added.",
+  "discrepancy_refs": ["DSC-088", "DSC-069"]
+}

@@ -5,38 +5,43 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 64.2 %**
+**Gesamtfortschritt: 66.2 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 30.7 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 34 %        |
 | Content-Modell und deutscher Master      | 20 %    | 93 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 68 %        |
-| Übersetzungspilot                        | 10 %    | 75 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 56 %        |
-| Staging und Übergabe                     | 5 %     | 82 %        |
+| Übersetzungspilot                        | 10 %    | 85 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 58 %        |
+| Staging und Übergabe                     | 5 %     | 84 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 36.1 %      |
-| DOC-IBA-SN045 | 247    | 29.3 %      |
+| DOC-IBA-SN045 | 247    | 33.5 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Der deutsche Sprachteil ab SN-045 ist abgeschlossen. Naechster Extraktionsbereich nach docs/CROSSCHECK_SN045_DE_EN.md: entweder DOC-BMA-SN044 ausserhalb der Seiten 3-18 mit dem englischen Teil (Seiten 20-36) als Gegenquelle, oder der englische Teil ab SN-045 gegen den jetzt validierten deutschen Master. Dieselbe Methode beibehalten: Seitenpaar ueber die Kapitelueberschrift bilden, nie ueber einen festen Versatz; beide Seiten rendern; jede Zahl, Tabellenzeile und Aufzaehlung vergleichen; Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als Sprachunterschied ins Register nehmen; eine Seite steigt erst nach vollstaendigem Gegenlesen auf validated, mit crosscheck_note. Unveraendert offen und ohne THITRONIK nicht loesbar: die unabhaengigen englischen Sprachreviews EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
+Offene Blocker: 6 · Nächste Aktion: Der deutsche und der englische Sprachteil von DOC-IBA-SN045 sind beide abgeschlossen und wechselseitig gegengelesen (42 von 247 Seiten validated). Naechster Extraktionsbereich: DOC-BMA-SN044 ausserhalb der Seiten 3-18 - der englische Teil (Seiten 20-36) dient dabei als Gegenquelle zum bereits validierten deutschen Teil. Dieselbe Methode nach docs/CROSSCHECK_SN045_DE_EN.md: Seitenpaar ueber die Kapitelueberschrift bilden, nie ueber einen festen Versatz; beide Seiten rendern; jede Zahl, Tabellenzeile und Aufzaehlung vergleichen; Abweichungen nicht angleichen, sondern als eigenen Lesefehler korrigieren oder als Sprachunterschied ins Register nehmen; eine Seite steigt erst nach vollstaendigem Gegenlesen auf validated, mit crosscheck_note. Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus - das ist die harte Obergrenze der Quellenpruefung ohne Zuarbeit. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
 
 <!-- PROGRESS:END -->
 
 ## Neu in dieser Sitzung (2026-08-23)
 
-**Der deutsche Sprachteil ab SN-045 ist abgeschlossen.** Alle 21 Inhaltsseiten sind gegen
-die englische Fassung gegengelesen, in 83 Segmente extrahiert und auf `validated` gestuft.
-Dabei entstanden sechs neue Registereinträge (DSC-086 bis DSC-091), von denen fünf in einer
-Selbstdurchsicht nicht sichtbar geworden wären.
+**Der deutsche und der englische Sprachteil ab SN-045 sind beide abgeschlossen.** Alle 21
+deutschen und alle 21 englischen Inhaltsseiten wurden wechselseitig gegengelesen, in 83 + 83
+Segmente extrahiert und auf `validated` gestuft. Dabei entstanden sechs neue
+Registereinträge (DSC-086 bis DSC-091), von denen fünf in einer Selbstdurchsicht nicht
+sichtbar geworden wären.
+
+Für den Übersetzungspilot ist das der eigentliche Fortschritt: Die englischen Segmente sind
+**Extraktionen der englischen Quelle**, nicht Übersetzungen des deutschen Masters. Eine
+Übersetzung hätte DSC-086, DSC-088, DSC-090 und DSC-091 nie sichtbar gemacht.
 
 - **Der deutsche Master ab SN-045 hat eine unabhängige Gegenquelle.** Alle 21 deutschen
   Inhaltsseiten von DOC-IBA-SN045 wurden Satz für Satz, Zeile für Zeile gegen die englischen
@@ -83,19 +88,23 @@ Selbstdurchsicht nicht sichtbar geworden wären.
   Bereich in beiden Fassungen leer. Der Befund steht in
   [CROSSCHECK_SN045_DE_EN.md](CROSSCHECK_SN045_DE_EN.md), statt stillschweigend zu
   verschwinden.
-- **Was das nicht bedeutet:** Die 83 Segmente stehen wie alle übrigen auf `entwurf`. Die
-  21 Seiten stehen auf `validated`, nicht auf `approved` – das setzt einen realen
+- **Grenze der Methode.** Für die acht übrigen Sprachfassungen endet dieses Verfahren: Ohne
+  muttersprachlichen Review darf keine ihrer Seiten über `inspected` hinaus. Die
+  Quellenprüfung hat damit ohne Zuarbeit von THITRONIK eine harte Obergrenze – das ist keine
+  Umsetzungslücke, sondern Folge der Leitplanken 6 und 7.
+- **Was das nicht bedeutet:** Die 166 Segmente stehen wie alle übrigen auf `entwurf`. Die
+  42 Seiten stehen auf `validated`, nicht auf `approved` – das setzt einen realen
   THITRONIK-Fachreview voraus, den es weiterhin nicht gibt. Eine Gegenprüfung gegen eine
   zweite Sprachfassung ersetzt keine technische Freigabe.
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 286 stehen auf
-  `inspected` und 37 auf `validated` – die sechzehn deutschen Inhaltsseiten 3–18 von
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 265 stehen auf
+  `inspected` und 58 auf `validated` – die sechzehn deutschen Inhaltsseiten 3–18 von
   DOC-BMA-SN044 nach fünf unabhängigen Segment-Gegenprüfungen sowie **alle 21 deutschen
-  Inhaltsseiten 5–25 von DOC-IBA-SN045** nach vollständigem Gegenlesen gegen die englische
-  Fassung derselben Auflage; keine Seite steht auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
+  Inhaltsseiten 5–25 und alle 21 englischen Inhaltsseiten 29–49 von DOC-IBA-SN045** nach
+  wechselseitigem Gegenlesen; keine Seite steht auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
   Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
@@ -277,10 +286,12 @@ Selbstdurchsicht nicht sichtbar geworden wären.
   Pakete der Generation ab SN-045 hinzu, die alle 63 sicherheitskritischen Segmente des
   deutschen SN-045-Teils abdecken; jedes ihrer Segmente wurde gegen die englische Fassung
   derselben Auflage gegengelesen. Damit sind **104 von 104 P0-Segmenten** genau einem
-  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet;
-- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 104/104,
+  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Seit der Extraktion des
+  englischen Teils liegen die englischen Segmente im selben Paket wie ihre deutsche
+  Entsprechung, sodass eine Entscheidung für beide Fassungen gilt: **167 von 167**;
+- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 167/167,
   ein Paket-Select filtert P0-01 bis P0-12 unabhängig von der Freitextsuche, und die zwölf
-  Direktlinks liefern exakt 6/11/11/8/5/3/7/14/10/11/11/7 Treffer. Ein Unit-Test bricht ab, sobald ein
+  Direktlinks führen in die jeweils gefilterte Warteschlange. Ein Unit-Test bricht ab, sobald ein
   sicherheitskritisches Segment kein Paket besitzt; der Browsertest prüft Kennzahl,
   Direktlinks und Select. Kein Segmentstatus wurde dadurch geändert;
 - **eine eigene Fehlklassifikation zur GPS-Kabellänge ist transparent korrigiert:** Die

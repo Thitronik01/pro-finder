@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "IBA045-EN-P046-S01-REQUEST-REPORT",
+  "serial_range": "sn-045-plus",
+  "language": "en",
+  "segment_type": "instruction",
+  "task_slug": "request-status-report",
+  "title": "Requesting a status report",
+  "body_md": "A status report can be requested at any time – either by text message to the Pro-finder number or, outside the two operating modes reserved for the alarm system, by a call. On a call, Pro-finder ends it after a few dial tones and responds with a status report.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-IBA-SN045",
+  "source_page_start": 46,
+  "source_page_end": 46,
+  "source_region": "Section 5.3, first paragraphs",
+  "prev_context": "Section 5.2 ends on the previous page.",
+  "next_context": "The explanation of the GPS status in the report follows.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:f020d36173a7aa82e35690aa51c9d363e95983d894d26135b4291680f17134e1",
+  "change_reason": "Extracted from the English source page itself, not translated from the German master, and cross-read against the German page 22: equivalent in substance, including the exclusion of the two operating modes. The command string is not reproduced (BLK-005).",
+  "discrepancy_refs": []
+}
