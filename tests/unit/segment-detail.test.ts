@@ -60,3 +60,26 @@ describe('Prüfstand der Quellseite in der Warteschlange', () => {
     expect(sn045.every((item) => item.sourcePageStatus === 'validated')).toBe(true);
   });
 });
+
+describe('Paketübersicht', () => {
+  it('bündelt beide Sprachfassungen und zählt die gegengeprüften Quellseiten', async () => {
+    const { loadFixturePacketOverview } = await import('@/lib/review-data');
+    const overview = loadFixturePacketOverview('P0-12');
+    expect(overview).not.toBeNull();
+    expect(overview?.languages).toEqual(['de', 'en']);
+    // Alle Quellseiten dieses Pakets sind gegengelesen.
+    expect(overview?.crossCheckedCount).toBe(overview?.segments.length);
+    expect(overview?.discrepancyRefs).toContain('DSC-088');
+  });
+
+  it('erfindet kein Paket zu einem unbekannten Schlüssel', async () => {
+    const { loadFixturePacketOverview } = await import('@/lib/review-data');
+    expect(loadFixturePacketOverview('P0-99')).toBeNull();
+  });
+
+  it('weist für ein Paket bis SN-044 nur die deutsche Fassung aus', async () => {
+    const { loadFixturePacketOverview } = await import('@/lib/review-data');
+    const overview = loadFixturePacketOverview('P0-01');
+    expect(overview?.languages).toEqual(['de']);
+  });
+});

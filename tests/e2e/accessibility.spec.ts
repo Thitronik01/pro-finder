@@ -33,6 +33,7 @@ const PAGES = [
   '/dashboard',
   '/review',
   '/review/segment/IBA045-DE-P010-S01-BETRIEBSARTENTABELLE',
+  '/review/packet/P0-09',
 ];
 
 for (const path of PAGES) {
@@ -154,6 +155,28 @@ test('Segmentdetail zeigt Beleg, Gegenprüfung und Gegenstück der anderen Sprac
   await expect(page.locator('h1')).toHaveCount(1);
 });
 
+test('Paketansicht zeigt beide Sprachfassungen und den Prüfstand der Quellseiten', async ({
+  page,
+}) => {
+  await page.goto('/review/packet/P0-12');
+  await expect(page.locator('h1')).toHaveText('P0-12');
+  // Ein SN-045-Paket enthaelt beide Fassungen; das ist der Kern der Gegenpruefung.
+  await expect(page.getByText(/Deutsch und Englisch/)).toBeVisible();
+  const rows = page.locator('table').first().locator('tbody tr');
+  await expect(rows.filter({ hasText: 'IBA045-DE-' }).first()).toBeVisible();
+  await expect(rows.filter({ hasText: 'IBA045-EN-' }).first()).toBeVisible();
+  // Alle Quellseiten dieses Pakets sind gegengelesen - die Ansicht muss das ausweisen.
+  await expect(page.getByText(/von 14 Segmenten/)).toBeVisible();
+  // Registerbezuege sind verlinkt.
+  await page.getByRole('link', { name: 'DSC-088' }).first().click();
+  await expect(page).toHaveURL(/dsc=DSC-088/);
+});
+
+test('Paketansicht weist einen unbekannten Schlüssel als 404 aus', async ({ page }) => {
+  const response = await page.goto('/review/packet/P0-99');
+  expect(response?.status()).toBe(404);
+});
+
 test('Quellseiten-Filter trennt gegengeprüfte von nur gesichteten Segmenten', async ({ page }) => {
   await page.goto('/review?pageStatus=validated&language=de&generation=sn-045-plus');
   // Auf die Tabelle einschraenken: das Filterformular enthaelt dieselben Begriffe
@@ -186,30 +209,45 @@ test('Reviewoberfläche ist im Fixture-Modus lesend und filterbar', async ({ pag
     'sn-001-044',
   );
 
-  await page.getByRole('link', { name: 'P0-01 in der Warteschlange öffnen' }).click();
+  await page.getByRole('link', { name: 'P0-01 als Paket öffnen' }).click();
+  await expect(page).toHaveURL(/\/review\/packet\/P0-01/);
+  await expect(page.locator('h1')).toHaveText('P0-01');
+  await page.getByRole('link', { name: 'Als gefilterte Warteschlange öffnen' }).click();
   await expect(page).toHaveURL(/packet=P0-01/);
   await expect(page.getByText('6 Treffer', { exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-01');
+  await page.goto('/review?generation=sn-001-044');
 
-  await page.getByRole('link', { name: 'P0-02 in der Warteschlange öffnen' }).click();
+  await page.getByRole('link', { name: 'P0-02 als Paket öffnen' }).click();
+  await expect(page).toHaveURL(/\/review\/packet\/P0-02/);
+  await expect(page.locator('h1')).toHaveText('P0-02');
+  await page.getByRole('link', { name: 'Als gefilterte Warteschlange öffnen' }).click();
   await expect(page).toHaveURL(/packet=P0-02/);
   await expect(page.getByText('11 Treffer', { exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-02');
+  await page.goto('/review?generation=sn-001-044');
 
-  await page.getByRole('link', { name: 'P0-03 in der Warteschlange öffnen' }).click();
+  await page.getByRole('link', { name: 'P0-03 als Paket öffnen' }).click();
+  await expect(page).toHaveURL(/\/review\/packet\/P0-03/);
+  await expect(page.locator('h1')).toHaveText('P0-03');
+  await page.getByRole('link', { name: 'Als gefilterte Warteschlange öffnen' }).click();
   await expect(page).toHaveURL(/packet=P0-03/);
   await expect(page.getByText('11 Treffer', { exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-03');
+  await page.goto('/review?generation=sn-001-044');
 
-  await page.getByRole('link', { name: 'P0-04 in der Warteschlange öffnen' }).click();
+  await page.getByRole('link', { name: 'P0-04 als Paket öffnen' }).click();
+  await expect(page).toHaveURL(/\/review\/packet\/P0-04/);
+  await expect(page.locator('h1')).toHaveText('P0-04');
+  await page.getByRole('link', { name: 'Als gefilterte Warteschlange öffnen' }).click();
   await expect(page).toHaveURL(/packet=P0-04/);
   await expect(page.getByText('8 Treffer', { exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-04');
+  await page.goto('/review?generation=sn-001-044');
 
-  await page.getByRole('link', { name: 'P0-05 in der Warteschlange öffnen' }).click();
+  await page.getByRole('link', { name: 'P0-05 als Paket öffnen' }).click();
+  await expect(page).toHaveURL(/\/review\/packet\/P0-05/);
+  await expect(page.locator('h1')).toHaveText('P0-05');
+  await page.getByRole('link', { name: 'Als gefilterte Warteschlange öffnen' }).click();
   await expect(page).toHaveURL(/packet=P0-05/);
   await expect(page.getByText('5 Treffer', { exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: 'Content-Warteschlange' })).toContainText('P0-05');
+  await page.goto('/review?generation=sn-001-044');
 
   await page.getByLabel('Prüfpaket', { exact: true }).selectOption('P0-01');
   await page.getByRole('button', { name: 'Filter anwenden' }).click();

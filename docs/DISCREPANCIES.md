@@ -144,6 +144,13 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   Zusätzlich weicht die Liste der abzuschaltenden Zusatzfunktionen ab (FR nennt zusätzlich
   „la mise en attente" und „le double appel par SMS") und die Prepaid-Empfehlung nennt
   französisch zusätzlich das Aufladen „via internet".
+- **Generationenvergleich 2026-08-23:** In der Generation **bis SN-044** empfiehlt die
+  englische Fassung dieselben zwei Anbieter wie die deutsche („We recommend using a card from
+  T-mobile or Vodafone", DOC-BMA-SN044, Seite 26, gegen die deutsche Seite 8). Die Abweichung
+  ist damit **neu ab SN-045**: Erst dort ersetzt die englische Fassung die Anbieternennung
+  durch technische Anforderungen und ein Verbot (DSC-086). Das ist für die Klärung
+  wesentlich – es geht nicht um eine seit jeher andere englische Redaktionslinie, sondern um
+  eine Änderung, die nur eine Sprachfassung mitgemacht hat.
 - **Schwere:** hoch (kommerziell und rechtlich relevant; zudem Beleg dafür, dass die
   Sprachfassungen nicht denselben Inhalt transportieren) · **Status:** offen – Klärung
   durch THITRONIK, ob eine der Empfehlungen verbindlich ist

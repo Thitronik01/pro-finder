@@ -6,6 +6,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 import { loadAllContentSegments } from './content/segment-schema.mjs';
 import {
   compareReviewPriority,
+  REVIEW_PACKET_IDS,
   reviewPacketId,
   reviewPriority,
   type ReviewPacketId,
@@ -419,4 +420,66 @@ export function loadReferencedDiscrepancyIds(): string[] {
   return [
     ...new Set(loadAllContentSegments().flatMap(({ segment }) => segment.discrepancy_refs ?? [])),
   ].sort();
+}
+
+export type PacketSegment = {
+  key: string;
+  title: string;
+  language: string;
+  segmentType: string;
+  safetyClass: string;
+  sourceLabel: string;
+  sourcePageStatus: string | null;
+  discrepancyRefs: string[];
+};
+
+export type PacketOverview = {
+  id: ReviewPacketId;
+  segments: PacketSegment[];
+  /** Wie viele Segmente auf einer unabhaengig gegengeprueften Quellseite ruhen. */
+  crossCheckedCount: number;
+  languages: string[];
+  discrepancyRefs: string[];
+  sourcePages: string[];
+};
+
+/**
+ * Buendelt ein Pruefpaket fuer den Fachreview: alle zugeordneten Segmente beider
+ * Sprachfassungen, ihre Quellseiten und deren Pruefstand sowie alle beruehrten
+ * Registereintraege. Das Dossier selbst liegt als Markdown in docs/review-packets/;
+ * diese Ansicht macht den zugehoerigen Segmentbestand ohne Dateizugriff sichtbar.
+ */
+export function loadFixturePacketOverview(packetId: string): PacketOverview | null {
+  const match = REVIEW_PACKET_IDS.find((id) => id === packetId);
+  if (!match) return null;
+
+  const pageStatusIndex = new Map(
+    loadPageFiles().flatMap((file) =>
+      file.pages.map((page) => [`${file.doc_id}:${page.page}`, page.status] as const),
+    ),
+  );
+
+  const segments = loadAllContentSegments()
+    .filter(({ segment }) => reviewPacketId(segment.segment_key) === match)
+    .map(({ segment }) => ({
+      key: segment.segment_key,
+      title: segment.title,
+      language: segment.language,
+      segmentType: segment.segment_type,
+      safetyClass: segment.safety_class,
+      sourceLabel: `${segment.source_doc_key}, S. ${segment.source_page_start}`,
+      sourcePageStatus:
+        pageStatusIndex.get(`${segment.source_doc_key}:${segment.source_page_start}`) ?? null,
+      discrepancyRefs: segment.discrepancy_refs ?? [],
+    }))
+    .sort((a, b) => a.language.localeCompare(b.language) || a.key.localeCompare(b.key));
+
+  return {
+    id: match,
+    segments,
+    crossCheckedCount: segments.filter((s) => s.sourcePageStatus === 'validated').length,
+    languages: [...new Set(segments.map((s) => s.language))].sort(),
+    discrepancyRefs: [...new Set(segments.flatMap((s) => s.discrepancyRefs))].sort(),
+    sourcePages: [...new Set(segments.map((s) => s.sourceLabel))].sort(),
+  };
 }

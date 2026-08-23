@@ -289,6 +289,12 @@ Karte wählen, die dieselbe Auflage englisch ausschließt.
 Und gelten das Verbot der Multi-Operator-Karte sowie die technischen Kartenanforderungen
 generell – fehlen sie also im deutschen Master –, oder gelten sie nur für bestimmte Märkte?
 
+**Nachtrag 2026-08-23 – die Abweichung ist neu.** Der englische Teil der Generation **bis
+SN-044** empfiehlt dieselben zwei Anbieter wie der deutsche. Erst ab SN-045 ersetzt die
+englische Fassung die Anbieternennung durch technische Anforderungen und ein Verbot. Es geht
+also nicht um eine seit jeher andere englische Redaktionslinie, sondern um eine Änderung, die
+nur eine Sprachfassung mitgemacht hat.
+
 _Beleg: DSC-027, DSC-086_
 
 ---

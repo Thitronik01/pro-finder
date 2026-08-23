@@ -5,7 +5,7 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 69.1 %**
+**Gesamtfortschritt: 70 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
@@ -13,9 +13,9 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Quelleninventar und PDF-Prüfung          | 20 %    | 34 %        |
 | Content-Modell und deutscher Master      | 20 %    | 93 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
-| Webanleitung und Review-UI               | 20 %    | 80 %        |
+| Webanleitung und Review-UI               | 20 %    | 84 %        |
 | Übersetzungspilot                        | 10 %    | 85 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 62 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 63 %        |
 | Staging und Übergabe                     | 5 %     | 86 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
@@ -27,11 +27,22 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die Review-UI zeigt jetzt je Segment den vollstaendigen Beleg samt Gegenstueck der anderen Sprachfassung. Naechste sinnvolle Schritte ohne Zuarbeit von THITRONIK: (1) DOC-BMA-SN044 ausserhalb der Seiten 3-18 extrahieren, mit dem englischen Teil (Seiten 20-36) als Gegenquelle; (2) eine Paketansicht /review/packet/<id>, die ein Dossier mit allen Segmenten beider Fassungen und ihren Belegen an einem Ort zeigt. HARTE GRENZE: Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7); 205 der 247 Seiten sind ohne Zuarbeit nicht hoeherstufbar. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden - sie waere eine Attrappe und wuerde Freigaben vortaeuschen. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
+Offene Blocker: 6 · Nächste Aktion: Naechster Extraktionsbereich ohne Zuarbeit: DOC-BMA-SN044 ausserhalb der Seiten 3-18. Der englische Teil (Seiten 20-36) ist bereits als Gegenquelle gelesen und hat DSC-027 um den Generationenvergleich ergaenzt; fuer eigene englische Segmente dieser Generation fehlt jedoch der englische Aufgabenzweig unter content/tasks/sn-001-044/en/. Der wurde bewusst NICHT halbfertig angelegt - entweder vollstaendig mit allen 14 Aufgaben oder gar nicht. Ohne ihn bleiben die deutschen Seiten 1, 2 und 19 sowie die beiden Kurzanleitungen die einzigen offenen Extraktionsziele der Quellenpruefung. HARTE GRENZE: Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7); 205 der 247 Seiten sind ohne Zuarbeit nicht hoeherstufbar. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden - sie waere eine Attrappe. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Karte.
 
 <!-- PROGRESS:END -->
 
 ## Neu in dieser Sitzung (2026-08-23)
+
+**Die Review-UI zeigt die Belege jetzt selbst.** Zwei neue Ansichten machen sichtbar, worauf
+ein Segment ruht: `/review/segment/<key>` mit Änderungsgrund, Prüfvermerk der Quellseite,
+Region, Kontext, Prüfsumme, verlinkten Registerbezügen und dem Gegenstück der anderen
+Sprachfassung im direkten Vergleich; `/review/packet/<id>` mit allen Segmenten eines
+Dossiers, ihren Quellseiten und der Zahl der unabhängig gegengeprüften darunter. Dazu vier
+neue Filter (Sprache, Registerbezug, Prüfstand der Quellseite, erweiterte Suche). Ein
+Fachreview kann ein Paket damit ohne Dateizugriff durcharbeiten.
+
+Bewusst **nicht** gebaut wurde eine Statuswechsel-UI gegen Fixtures: Sie wäre eine Attrappe
+und würde Freigaben vortäuschen, die es nicht gibt.
 
 **Der deutsche und der englische Sprachteil ab SN-045 sind beide abgeschlossen.** Alle 21
 deutschen und alle 21 englischen Inhaltsseiten wurden wechselseitig gegengelesen, in 83 + 83

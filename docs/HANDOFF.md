@@ -85,6 +85,39 @@ Store- oder Downloadadresse und kein QR-Code (BLK-004). Keine Geofencing-Aussage
 Koordinate, keine Kartenadresse. Kein Wert aus DOC-BMA-SN044 wurde in einen
 SN-045-Bestand übernommen.
 
+### Die Review-UI zeigt die Belege jetzt selbst
+
+Die Gegenprüfungsbelege lagen bisher nur in den JSON-Dateien. Zwei neue Ansichten holen sie
+in die Oberfläche:
+
+- **`/review/segment/<key>`** – Änderungsgrund mit dem Ergebnis der Gegenprüfung,
+  `crosscheck_note` der Quellseite, Region, Vor- und Nachkontext, Prüfsumme, verlinkte
+  Registerbezüge und das Gegenstück der anderen Sprachfassung im direkten Textvergleich. Die
+  Seitenpaarung stammt aus der belegten Tabelle, nicht aus einem festen Versatz.
+- **`/review/packet/<id>`** – alle Segmente eines Dossiers in beiden Fassungen, ihre
+  Quellseiten, wie viele davon unabhängig gegengeprüft sind und welche Registereinträge
+  berührt werden. Ein unbekannter Paketschlüssel liefert 404 statt einer erfundenen Seite.
+
+Dazu vier neue Filter in der Warteschlange: Sprache, Registerbezug, Prüfstand der Quellseite
+und die erweiterte Freitextsuche. Der Testbestand liegt bei 51 Unit- und 78 Browsertests;
+der Dark-Mode-axe-Lauf hat dabei einen realen Kontrastfehler der neuen Fläche gefunden, weil
+sie zunächst eigene Hexwerte statt der Design-Tokens verwendete.
+
+**Bewusst nicht gebaut:** eine Statuswechsel-UI gegen Fixtures. Sie wäre eine Attrappe und
+würde Freigaben vortäuschen, die es nicht gibt.
+
+### Der englische SN-044-Teil wurde gelesen, aber nicht extrahiert
+
+Für den Generationenvergleich wurde der englische Teil von DOC-BMA-SN044 (Seiten 20–36)
+vollständig gelesen. Ergebnis: Er bestätigt die deutschen Segmente durchgehend und liefert
+einen wichtigen Nachtrag zu DSC-027 – die englische Fassung **bis SN-044** empfiehlt
+dieselben zwei Anbieter wie die deutsche. Die in DSC-086 erfasste Abweichung ist damit neu
+ab SN-045 und keine seit jeher andere englische Redaktionslinie.
+
+Eigene englische Segmente dieser Generation wurden **nicht** angelegt: Dafür fehlt der
+englische Aufgabenzweig unter `content/tasks/sn-001-044/en/`. Ihn halbfertig anzulegen wäre
+schlechter als ihn wegzulassen – entweder vollständig mit allen 14 Aufgaben oder gar nicht.
+
 ### Der englische Sprachteil ist ebenfalls extrahiert
 
 Nach Abschluss des deutschen Teils wurde derselbe Bestand für die englische Fassung erzeugt:
@@ -586,32 +619,34 @@ abgeleitet ist.
 
 ```text
 Resume from:
+Gesamtfortschritt 70,0 Prozent, PDF-Audit 34 Prozent ueber 323 Seiten.
 Der deutsche UND der englische Sprachteil von DOC-IBA-SN045 sind abgeschlossen und
-wechselseitig gegengelesen: 21 deutsche Seiten (5-25) gegen 21 englische (29-49), 83 + 83
-Segmente, alle 42 Seiten validated. Segmentbestand gesamt 222, alle entwurf. Die englischen
-Segmente sind Extraktionen der englischen Quelle, keine Uebersetzungen des deutschen
-Masters - das ist der eigentliche Fortschritt fuer den Uebersetzungspilot. Alle 167
-sicherheitskritischen Segmente liegen in den zwoelf Dossiers P0-01 bis P0-12; englische
-Segmente im selben Paket wie ihre deutsche Entsprechung, die Review-UI zeigt 167/167.
-Sechs neue Registereintraege: DSC-086 (englisches Verbot der Multi-Operator-SIM-Karte),
-DSC-087 (Fehler im deutschen Master, Betriebsart D), DSC-088 (Stromaufnahme Bereich gegen
-Einzelwert), DSC-089 (zwei englische Satzfehler), DSC-090 (Geraetemeldung je Fassung
-anders), DSC-091 (Anlernmodus zweifach benannt). Vier davon waeren aus einer Uebersetzung
-des deutschen Masters nie sichtbar geworden.
-Gesamtfortschritt 66,2 Prozent, PDF-Audit 34 Prozent.
+wechselseitig gegengelesen: 21 + 21 Seiten validated, 83 + 83 Segmente, Bestand 222, alle
+entwurf. Die englischen Segmente sind Extraktionen der englischen Quelle, keine
+Uebersetzungen. Alle 167 sicherheitskritischen Segmente liegen in den zwoelf Dossiers P0-01
+bis P0-12; englische Segmente im selben Paket wie ihre deutsche Entsprechung.
+Sechs neue Registereintraege DSC-086 bis DSC-091; vier davon waeren aus einer Uebersetzung
+des deutschen Masters nie sichtbar geworden. DSC-027 hat einen Generationenvergleich
+bekommen: die englische Anbieterempfehlung weicht erst ab SN-045 ab.
+Die Review-UI zeigt die Belege jetzt selbst: /review/segment/<key> und /review/packet/<id>,
+dazu vier neue Filter. 51 Unit-Tests, 78 Browser-/axe-Tests.
 
 First action:
-DOC-BMA-SN044 ausserhalb der Seiten 3-18 extrahieren; der englische Teil (Seiten 20-36)
-dient als Gegenquelle zum bereits validierten deutschen Teil. Methode unveraendert nach
-docs/CROSSCHECK_SN045_DE_EN.md.
-HARTE GRENZE, nicht uebergehen: Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne
-muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7). 205 der 247
-Seiten sind ohne Zuarbeit von THITRONIK nicht hoeherstufbar. Wer die Quellenpruefung weiter
-treiben will, braucht entweder DOC-BMA-SN044 oder eine Zuarbeit - nicht eine geaenderte
-Messung.
-Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch fuer
-Tastatur, Zoom, Reflow, Forced Colors und Reduced Motion sowie alle
-Produktionsentscheidungen der Setup-Karte.
+Es gibt ohne Zuarbeit von THITRONIK nur noch wenige echte Extraktionsziele:
+DOC-BMA-SN044 deutsche Seiten 1, 2 und 19 sowie die beiden Kurzanleitungen. Fuer eigene
+englische SN-044-Segmente fehlt der Aufgabenzweig content/tasks/sn-001-044/en/ - entweder
+vollstaendig mit allen 14 Aufgaben anlegen oder gar nicht.
+HARTE GRENZEN, nicht uebergehen:
+- Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review
+  NICHT ueber inspected hinaus (Leitplanken 6 und 7). 205 der 247 Seiten sind ohne Zuarbeit
+  nicht hoeherstufbar.
+- Keine Statuswechsel-UI gegen Fixtures. Sie waere eine Attrappe und wuerde Freigaben
+  vortaeuschen.
+- Kein Fortschritt, der nur aus einer geaenderten Messung stammt. Jeder Prozentpunkt dieser
+  Sitzung steht gegen validierte Seiten, extrahierte Segmente oder getestete Features.
+Unveraendert offen und ohne THITRONIK nicht loesbar: EN-01 bis EN-03, der erste
+dokumentierte manuelle QA-Batch fuer Tastatur, Zoom, Reflow, Forced Colors und Reduced
+Motion sowie alle Produktionsentscheidungen der Setup-Karte.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten
