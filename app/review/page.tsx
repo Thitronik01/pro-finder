@@ -279,6 +279,13 @@ export default async function ReviewPage({ searchParams }: ReviewPageProps) {
               <code>docs/review-packets/P0-12-AUSGAENGE-TECHNISCHE-DATEN-SN045.md</code>.{' '}
               <Link href="/review/packet/P0-12">P0-12 als Paket öffnen</Link>
             </li>
+            <li>
+              <strong>P0-13:</strong> vierzehn Segmente aus beiden Kurzanleitungen. Das Paket folgt
+              nicht einem Thema, sondern einem Befund: Das Papier, das dem Gerät beiliegt, sagt an
+              fünf Stellen etwas anderes als das Handbuch derselben Generation. Dossier:{' '}
+              <code>docs/review-packets/P0-13-KURZANLEITUNGEN.md</code>.{' '}
+              <Link href="/review/packet/P0-13">P0-13 als Paket öffnen</Link>
+            </li>
           </ul>
         </aside>
 

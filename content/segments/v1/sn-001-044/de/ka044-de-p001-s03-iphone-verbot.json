@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P001-S03-IPHONE-VERBOT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "sim-karte",
+  "title": "Die Kurzanleitung schließt das iPhone für die Kartenvorbereitung aus",
+  "body_md": "Für die Vorbereitungsschritte an der Karte darf laut Kurzanleitung **kein iPhone** verwendet werden. Das Handbuch derselben Generation erwähnt weder das iPhone noch die Funktion iMessage an irgendeiner Stelle. Ob es sich um eine vereinfachte Formulierung oder um eine eigene technische Einschränkung handelt, sagt keine Quelle. Die Aussage bleibt deshalb als Widerspruch benannt und wird nicht als Bedienregel übernommen.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Abschnitt 2, deutscher Sprachblock, rot gesetzter Achtung-Kasten",
+  "prev_context": "Davor steht die Kartenempfehlung.",
+  "next_context": "Danach folgt die Schrittliste zur Kartenkonfiguration.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:84134879251c7908e2b244b55a266b16c51378a0e273f1d188841f62368b219b",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Das Fehlen im Handbuch wurde durch eine Volltextsuche über alle 72 Seiten belegt: kein Treffer. Das Verbot steht in allen acht Sprachblöcken der Karte gleichlautend. Erfasst als DSC-097.",
+  "discrepancy_refs": ["DSC-097"]
+}

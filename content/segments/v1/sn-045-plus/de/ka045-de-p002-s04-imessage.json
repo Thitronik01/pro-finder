@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P002-S04-IMESSAGE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "warning",
+  "task_slug": "sim-karte",
+  "title": "Bei einem iPhone iMessage deaktivieren",
+  "body_md": "Wird ein iPhone zum Vorbereiten der Karte verwendet, muss die Funktion iMessage für die Vorbereitungsschritte deaktiviert sein.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 2, deutscher Sprachblock, rot gesetzter Achtung-Kasten",
+  "prev_context": "Davor stehen die technischen Kartenanforderungen.",
+  "next_context": "Danach folgt die Schrittliste zur Kartenkonfiguration.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:fd79b8b61f8a9200995bc112c0a989e484ce6d5a473f837e3e9cd268c9a2db53",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Sachgleich mit dem Handbuch derselben Generation. Die Kurzanleitung **bis SN-044** verlangt an derselben Stelle dagegen, überhaupt kein iPhone zu verwenden (DSC-097); zwischen den Generationen wird nichts übertragen.",
+  "discrepancy_refs": ["DSC-097"]
+}

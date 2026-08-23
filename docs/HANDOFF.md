@@ -85,6 +85,44 @@ Store- oder Downloadadresse und kein QR-Code (BLK-004). Keine Geofencing-Aussage
 Koordinate, keine Kartenadresse. Kein Wert aus DOC-BMA-SN044 wurde in einen
 SN-045-Bestand übernommen.
 
+### Alle deutschsprachigen Quellseiten sind extrahiert
+
+Zum Abschluss kamen die letzten offenen deutschen Seiten hinzu: DOC-BMA-SN044 Seiten 1, 2
+und 19 sowie beide Kurzanleitungen vollständig. Damit gilt ein überprüfbarer Stand: **jede
+deutschsprachige Quellseite des Projekts ist extrahiert und validiert** – 19/19, 21/21, 2/2
+und 2/2. Segmentbestand 245.
+
+### Die Kurzanleitung widerspricht dem Handbuch an fünf Stellen
+
+Die dritte Prüfachse – Handbuch gegen Kurzanleitung derselben Generation und Sprache – hat
+allein fünf neue Registereinträge geliefert:
+
+- **DSC-093** – fünf verschiedene SIM-Empfehlungen über vier Dokumente. Die Kurzanleitung ab
+  SN-045 nennt eine vorkonfigurierte Vertragskarte eines namentlich genannten Netzbetreibers,
+  die in keinem Handbuch vorkommt.
+- **DSC-094** – drei Sprachen in einem Textblock: In der schwedischen Spalte der
+  Kurzanleitung ab SN-045 ist die Überschrift französisch, Schritt 1 schwedisch und die
+  Schritte 2 bis 4 sind französisch. Die englische Spalte trägt ebenfalls eine französische
+  Überschrift.
+- **DSC-095** – **stellt DSC-086 richtig.** Das Multi-SIM-Verbot und die technischen
+  Kartenanforderungen fehlen nicht dem Deutschen, sondern dem deutschen _Handbuch_. In der
+  deutschen Kurzanleitung derselben Auflage stehen sie wörtlich.
+- **DSC-096** – Kurzanleitung und Handbuch beschreiben verschiedene Statusberichte. Die Karte
+  nennt zwei Felder, die das Handbuch nicht führt, und lässt die Spannungen der Messeingänge
+  weg, die das Handbuch ausdrücklich nennt.
+- **DSC-097** – die Kurzanleitung bis SN-044 verbietet das iPhone für die Kartenvorbereitung
+  in allen acht Sprachblöcken; das Handbuch derselben Generation erwähnt weder iPhone noch
+  iMessage an irgendeiner Stelle (durch Volltextsuche über alle 72 Seiten belegt).
+
+Dazu **DSC-092**: Die beiden Generationen beschreiben verschiedene Verwendungszwecke – bis
+SN-044 ein „Telemetriemodul zur Flottenüberwachung", ab SN-045 ein Ortungssystem für
+Freizeitfahrzeuge, das Live-Tracking ausdrücklich ausschließt. Das ist datenschutzrechtlich
+erheblich.
+
+Alles gebündelt in **P0-13**, das bewusst nicht nach Thema, sondern nach Befund geschnitten
+ist und neben den fünf Abweichungen auch die vier doppelt belegten Übereinstimmungen und drei
+Angaben nennt, die der Kurzanleitung ganz fehlen.
+
 ### Die Review-UI zeigt die Belege jetzt selbst
 
 Die Gegenprüfungsbelege lagen bisher nur in den JSON-Dateien. Zwei neue Ansichten holen sie
@@ -151,7 +189,7 @@ weil ihre Seiten vollständig gegengelesen und auf `validated` gestuft sind.
 
 Seit der Extraktion des englischen Teils liegen die englischen Segmente im selben Paket wie
 ihre deutsche Entsprechung – eine Entscheidung des Pakets gilt damit für beide Fassungen.
-Die Review-UI zeigt **167/167**; Unit- und Browsertest sind entsprechend nachgezogen.
+Die Review-UI zeigt **181/181**; Unit- und Browsertest sind entsprechend nachgezogen.
 
 ### Neu angelegt
 
@@ -536,17 +574,18 @@ abgeleitet ist.
 
 ## Was weiterhin offen ist
 
-- Alle 222 Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
+- Alle 245 Segmente sind quellenvalidiert, bleiben aber `entwurf`. Keines besitzt
   eine technische oder rechtliche Freigabe. Die 83 Segmente ab SN-045 besitzen zusätzlich
   eine unabhängige Gegenprüfung gegen die englische Fassung – das ersetzt keinen
   technischen Review.
-- P0-01 bis P0-12 sind intern reviewbereit und decken alle 167 P0-Segmente ab, warten aber
+- P0-01 bis P0-13 sind intern reviewbereit und decken alle 181 P0-Segmente ab, warten aber
   auf den realen THITRONIK-Fachreview. Keine der vorbereiteten Einzelentscheidungen ist
   beantwortet und kein Segmentstatus wurde geändert.
-- Der deutsche **und** der englische Teil ab SN-045 sind mit je 21 von 21 Inhaltsseiten
-  abgeschlossen. Nicht extrahiert sind weiterhin DOC-BMA-SN044 außerhalb der Seiten 3–18 und
-  die acht übrigen Sprachteile – letztere dürfen ohne muttersprachlichen Review auch nicht
-  höhergestuft werden.
+- **Jede deutschsprachige Quellseite des Projekts ist extrahiert und validiert**, dazu der
+  englische Teil ab SN-045. Nicht extrahiert sind der englische Teil bis SN-044 (dafür fehlt
+  der englische Aufgabenzweig), die französischen und schwedischen Teile von DOC-BMA-SN044 und
+  die acht übrigen Sprachteile von DOC-IBA-SN045 – letztere dürfen ohne muttersprachlichen
+  Review auch nicht höhergestuft werden.
 - Die unabhängigen englischen Sprachreviews von EN-01 bis EN-03 sind organisatorisch
   offen. Keine der vierzehn Aufgaben darf vorher höhergestuft werden.
 - Von den 67 neu erfassten DOC-BMA-SN044-Seitenrecords besitzen sechzehn jetzt eine
@@ -619,34 +658,37 @@ abgeleitet ist.
 
 ```text
 Resume from:
-Gesamtfortschritt 70,0 Prozent, PDF-Audit 34 Prozent ueber 323 Seiten.
-Der deutsche UND der englische Sprachteil von DOC-IBA-SN045 sind abgeschlossen und
-wechselseitig gegengelesen: 21 + 21 Seiten validated, 83 + 83 Segmente, Bestand 222, alle
-entwurf. Die englischen Segmente sind Extraktionen der englischen Quelle, keine
-Uebersetzungen. Alle 167 sicherheitskritischen Segmente liegen in den zwoelf Dossiers P0-01
-bis P0-12; englische Segmente im selben Paket wie ihre deutsche Entsprechung.
-Sechs neue Registereintraege DSC-086 bis DSC-091; vier davon waeren aus einer Uebersetzung
-des deutschen Masters nie sichtbar geworden. DSC-027 hat einen Generationenvergleich
-bekommen: die englische Anbieterempfehlung weicht erst ab SN-045 ab.
-Die Review-UI zeigt die Belege jetzt selbst: /review/segment/<key> und /review/packet/<id>,
-dazu vier neue Filter. 51 Unit-Tests, 78 Browser-/axe-Tests.
+Gesamtfortschritt 70,9 Prozent, PDF-Audit 35,1 Prozent ueber 323 Seiten.
+ALLE deutschsprachigen Quellseiten des Projekts sind extrahiert und validiert: DOC-BMA-SN044
+19/19, DOC-IBA-SN045 deutsch 21/21, beide Kurzanleitungen 2/2. Dazu DOC-IBA-SN045 englisch
+21/21. Bestand 245 Segmente, alle entwurf. Alle 181 sicherheitskritischen Segmente liegen in
+den dreizehn Dossiers P0-01 bis P0-13.
+Drei Pruefachsen liefern die Befunde: deutsch gegen englisch innerhalb einer Auflage,
+Generation gegen Generation, Handbuch gegen Kurzanleitung. Elf neue Registereintraege
+DSC-086 bis DSC-097. Die wichtigsten: DSC-095 stellt DSC-086 richtig (das Multi-SIM-Verbot
+fehlt nicht dem Deutschen, sondern dem deutschen Handbuch - die deutsche Kurzanleitung hat
+es), DSC-096 (Kurzanleitung und Handbuch beschreiben verschiedene Statusberichte), DSC-092
+(die Generationen beschreiben verschiedene Verwendungszwecke - Flottenueberwachung gegen
+Ortungssystem ohne Live-Tracking, datenschutzrechtlich erheblich), DSC-088 (Stromaufnahme
+Bereich gegen Einzelwert), DSC-087 (Fehler im deutschen Master).
+Die Review-UI zeigt die Belege selbst: /review/segment/<key> und /review/packet/<id>.
+51 Unit-Tests, 78 Browser-/axe-Tests.
 
 First action:
-Es gibt ohne Zuarbeit von THITRONIK nur noch wenige echte Extraktionsziele:
-DOC-BMA-SN044 deutsche Seiten 1, 2 und 19 sowie die beiden Kurzanleitungen. Fuer eigene
-englische SN-044-Segmente fehlt der Aufgabenzweig content/tasks/sn-001-044/en/ - entweder
-vollstaendig mit allen 14 Aufgaben anlegen oder gar nicht.
+Die Quellenpruefung ist ohne Zuarbeit von THITRONIK weitgehend ausgeschoepft. Was bleibt:
+- Der englische Teil bis SN-044 (Seiten 20-36) ist als Gegenquelle bereits gelesen und hat
+  DSC-027 ergaenzt. Fuer eigene Segmente fehlt der Aufgabenzweig content/tasks/sn-001-044/en/
+  - entweder vollstaendig mit allen 14 Aufgaben anlegen oder gar nicht.
 HARTE GRENZEN, nicht uebergehen:
-- Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review
-  NICHT ueber inspected hinaus (Leitplanken 6 und 7). 205 der 247 Seiten sind ohne Zuarbeit
-  nicht hoeherstufbar.
-- Keine Statuswechsel-UI gegen Fixtures. Sie waere eine Attrappe und wuerde Freigaben
-  vortaeuschen.
-- Kein Fortschritt, der nur aus einer geaenderten Messung stammt. Jeder Prozentpunkt dieser
-  Sitzung steht gegen validierte Seiten, extrahierte Segmente oder getestete Features.
-Unveraendert offen und ohne THITRONIK nicht loesbar: EN-01 bis EN-03, der erste
-dokumentierte manuelle QA-Batch fuer Tastatur, Zoom, Reflow, Forced Colors und Reduced
-Motion sowie alle Produktionsentscheidungen der Setup-Karte.
+- Franzoesische und schwedische Teile von DOC-BMA-SN044 sowie die acht uebrigen Sprachteile
+  von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus
+  (Leitplanken 6 und 7). Das sind 258 der 323 Seiten.
+- Keine Statuswechsel-UI gegen Fixtures. Sie waere eine Attrappe.
+- Kein Fortschritt, der nur aus einer geaenderten Messung stammt.
+Unveraendert offen und ohne THITRONIK nicht loesbar: EN-01 bis EN-03, der erste dokumentierte
+manuelle QA-Batch fuer Tastatur, Zoom, Reflow, Forced Colors und Reduced Motion sowie alle
+Produktionsentscheidungen der Setup-Karte. Die dreizehn Pruefpakete warten auf den realen
+Fachreview; keine der vorbereiteten Einzelentscheidungen ist beantwortet.
 
 Vorgehen, Werkzeuge und verbindliche Regeln stehen in docs/HANDOVER_PROMPT.md.
 RUECKFRAGEN_THITRONIK.md enthaelt siebzehn entscheidungsreife Fragen; nicht auf Antworten

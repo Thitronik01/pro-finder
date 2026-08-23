@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P001-S02-SIM-EMPFEHLUNG-LUECKE",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "sim-karte",
+  "title": "Die Kartenempfehlung weicht vom Handbuch derselben Generation ab",
+  "body_md": "Die Kurzanleitung dieser Generation empfiehlt allgemein eine Vertragskarte eines Anbieters eigener Wahl und verlangt, dass der Tarif Telefonie und Kurznachrichten unterstützt; mobile Daten nennt sie ausdrücklich als nicht erforderlich. Das Handbuch derselben Generation empfiehlt dagegen zwei Anbieter namentlich. Diese Anleitung gibt keine der beiden Empfehlungen wieder.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Abschnitt 2 „SIM-Karte vorbereiten“, deutscher Sprachblock, Einleitungsabsatz",
+  "prev_context": "Davor steht der Montageort.",
+  "next_context": "Danach folgt der Achtung-Kasten zum iPhone.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:b253c833df4e3bf5571361937d9a08f079d070a04f31f2e1c02219f60d7cf8f3",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Der Widerspruch zwischen Kurzanleitung und Handbuch derselben Generation und Sprache ist als DSC-093 erfasst. Bemerkenswert ist die entgegengesetzte Aussage zu mobilen Daten: Hier sind sie nicht erforderlich, in der Generation ab SN-045 sind sie Voraussetzung. Zwischen den Generationen wird nichts übertragen.",
+  "discrepancy_refs": ["DSC-027", "DSC-093"]
+}

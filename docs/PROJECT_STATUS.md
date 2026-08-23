@@ -5,33 +5,46 @@ Stand: 2026-08-23. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 70 %**
+**Gesamtfortschritt: 70.9 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 34 %        |
-| Content-Modell und deutscher Master      | 20 %    | 93 %        |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 35.1 %      |
+| Content-Modell und deutscher Master      | 20 %    | 95 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 84 %        |
 | Übersetzungspilot                        | 10 %    | 85 %        |
-| Accessibility-, Security- und Content-QA | 10 %    | 63 %        |
-| Staging und Übergabe                     | 5 %     | 86 %        |
+| Accessibility-, Security- und Content-QA | 10 %    | 65 %        |
+| Staging und Übergabe                     | 5 %     | 88 %        |
 
 **PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Anzahl aller Seiten):
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
-| DOC-BMA-SN044 | 72     | 36.1 %      |
+| DOC-BMA-SN044 | 72     | 38.2 %      |
 | DOC-IBA-SN045 | 247    | 33.5 %      |
-| DOC-KA-SN044  | 2      | 25 %        |
-| DOC-KA-SN045  | 2      | 25 %        |
+| DOC-KA-SN044  | 2      | 75 %        |
+| DOC-KA-SN045  | 2      | 75 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Naechster Extraktionsbereich ohne Zuarbeit: DOC-BMA-SN044 ausserhalb der Seiten 3-18. Der englische Teil (Seiten 20-36) ist bereits als Gegenquelle gelesen und hat DSC-027 um den Generationenvergleich ergaenzt; fuer eigene englische Segmente dieser Generation fehlt jedoch der englische Aufgabenzweig unter content/tasks/sn-001-044/en/. Der wurde bewusst NICHT halbfertig angelegt - entweder vollstaendig mit allen 14 Aufgaben oder gar nicht. Ohne ihn bleiben die deutschen Seiten 1, 2 und 19 sowie die beiden Kurzanleitungen die einzigen offenen Extraktionsziele der Quellenpruefung. HARTE GRENZE: Die acht uebrigen Sprachteile von DOC-IBA-SN045 duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7); 205 der 247 Seiten sind ohne Zuarbeit nicht hoeherstufbar. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden - sie waere eine Attrappe. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Karte.
+Offene Blocker: 6 · Nächste Aktion: Alle deutschsprachigen Quellseiten sind extrahiert und validiert; zusaetzlich der englische Teil ab SN-045. Damit ist die Quellenpruefung ohne Zuarbeit von THITRONIK weitgehend ausgeschoepft. Was bleibt: (1) der englische Teil bis SN-044 (Seiten 20-36) - er ist bereits als Gegenquelle gelesen, fuer eigene Segmente fehlt aber der Aufgabenzweig content/tasks/sn-001-044/en/, der entweder vollstaendig mit allen 14 Aufgaben oder gar nicht anzulegen ist; (2) die franzoesischen und schwedischen Teile von DOC-BMA-SN044 sowie die acht uebrigen Sprachteile von DOC-IBA-SN045 - diese duerfen ohne muttersprachlichen Review NICHT ueber inspected hinaus (Leitplanken 6 und 7). Die 13 Pruefpakete decken alle 181 sicherheitskritischen Segmente ab und warten auf den realen Fachreview. Eine Statuswechsel-UI gegen Fixtures ist bewusst nicht gebaut worden. Unveraendert offen: EN-01 bis EN-03, der erste dokumentierte manuelle QA-Batch und alle Produktionsentscheidungen der Setup-Karte.
 
 <!-- PROGRESS:END -->
 
 ## Neu in dieser Sitzung (2026-08-23)
+
+**Alle deutschsprachigen Quellseiten des Projekts sind extrahiert und validiert.** 19 von 19
+im Handbuch bis SN-044, 21 von 21 im Handbuch ab SN-045 und 2 von 2 in jeder der beiden
+Kurzanleitungen. Dazu die 21 englischen Seiten ab SN-045. Segmentbestand: 245.
+
+**Die Kurzanleitung widerspricht dem Handbuch an fünf Stellen.** Das Papier, das dem Gerät
+beiliegt, ist für viele Nutzerinnen die einzige Anleitung, die sie je in der Hand halten –
+und es sagt bei Kartenempfehlung, Multi-SIM-Verbot, Feldliste des Statusberichts,
+iPhone-Nutzung und Erstinbetriebnahme etwas anderes als das Handbuch derselben Generation
+und derselben Sprache (DSC-093 bis DSC-097, gebündelt in P0-13). Besonders folgenreich:
+**DSC-095 stellt DSC-086 richtig.** Das Multi-SIM-Verbot fehlt nicht dem Deutschen, sondern
+dem deutschen _Handbuch_ – in der deutschen Kurzanleitung steht es. Das ausführlichere
+Dokument ist das unvollständigere.
 
 **Die Review-UI zeigt die Belege jetzt selbst.** Zwei neue Ansichten machen sichtbar, worauf
 ein Segment ruht: `/review/segment/<key>` mit Änderungsgrund, Prüfvermerk der Quellseite,
@@ -111,8 +124,8 @@ Für den Übersetzungspilot ist das der eigentliche Fortschritt: Die englischen 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
-- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 265 stehen auf
-  `inspected` und 58 auf `validated` – die sechzehn deutschen Inhaltsseiten 3–18 von
+- 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 258 stehen auf
+  `inspected` und 65 auf `validated` – die sechzehn deutschen Inhaltsseiten 3–18 von
   DOC-BMA-SN044 nach fünf unabhängigen Segment-Gegenprüfungen sowie **alle 21 deutschen
   Inhaltsseiten 5–25 und alle 21 englischen Inhaltsseiten 29–49 von DOC-IBA-SN045** nach
   wechselseitigem Gegenlesen; keine Seite steht auf `extracted`. DOC-IBA-SN045 ist 247/247, DOC-BMA-SN044 72/72 und beide
@@ -297,11 +310,11 @@ Für den Übersetzungspilot ist das der eigentliche Fortschritt: Die englischen 
   Pakete der Generation ab SN-045 hinzu, die alle 63 sicherheitskritischen Segmente des
   deutschen SN-045-Teils abdecken; jedes ihrer Segmente wurde gegen die englische Fassung
   derselben Auflage gegengelesen. Damit sind **104 von 104 P0-Segmenten** genau einem
-  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Seit der Extraktion des
-  englischen Teils liegen die englischen Segmente im selben Paket wie ihre deutsche
-  Entsprechung, sodass eine Entscheidung für beide Fassungen gilt: **167 von 167**;
-- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 167/167,
-  ein Paket-Select filtert P0-01 bis P0-12 unabhängig von der Freitextsuche, und die zwölf
+  entscheidungsreifen, aber vollständig offenen Dossier zugeordnet. Englische Segmente liegen
+  im selben Paket wie ihre deutsche Entsprechung, sodass eine Entscheidung für beide Fassungen
+  gilt; P0-13 kommt für die Kurzanleitungen hinzu: **181 von 181**;
+- **die Review-UI weist diese Abdeckung prüfbar aus:** Eine eigene Kennzahl zeigt 181/181,
+  ein Paket-Select filtert P0-01 bis P0-13 unabhängig von der Freitextsuche, und die zwölf
   Direktlinks führen in die jeweils gefilterte Warteschlange. Ein Unit-Test bricht ab, sobald ein
   sicherheitskritisches Segment kein Paket besitzt; der Browsertest prüft Kennzahl,
   Direktlinks und Select. Kein Segmentstatus wurde dadurch geändert;

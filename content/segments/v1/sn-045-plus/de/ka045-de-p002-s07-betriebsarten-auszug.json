@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P002-S07-BETRIEBSARTEN-AUSZUG",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "anschluesse",
+  "title": "Die Kurzanleitung zeigt nur einen Ausschnitt der Betriebsarten",
+  "body_md": "Die Kurzanleitung führt ausschließlich die Betriebsarten 0 bis 3 auf und bezeichnet sie als die am häufigsten verwendeten. Für die übrigen Betriebsarten verweist sie auf das ausführliche Handbuch beziehungsweise die App.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 4 „Betriebsarten“, deutscher Sprachblock mit Matrixtabelle",
+  "prev_context": "Davor steht die Anschlusslegende.",
+  "next_context": "Danach endet die Innenseite der Kurzanleitung.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:e74104845569a0932445f4d43f53c31be8d13d08f6f933b63179175fc1fa27d9",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Die vier gezeigten Zeilen stimmen mit den entsprechenden Zeilen der vollständigen Betriebsartentabelle des Handbuchs überein. Die übrigen zwölf Schalterstellungen fehlen in der Kurzanleitung ganz – wer nur die Karte hat, kennt weder die Intervall-Betriebsarten noch die Stellungen zum Löschen und zur GPS-Diagnose.",
+  "discrepancy_refs": []
+}

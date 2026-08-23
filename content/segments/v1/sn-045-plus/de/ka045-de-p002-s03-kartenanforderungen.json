@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P002-S03-KARTENANFORDERUNGEN",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "sim-karte",
+  "title": "Technische Anforderungen an die Karte",
+  "body_md": "Die Kurzanleitung nennt drei Anforderungen an die verwendete Karte:\n\n- Sie muss Kurznachrichten, Telefonie und mobile Daten unterstützen.\n- Eine Multi-SIM lässt sich **nicht** verwenden.\n- Eine Restguthabenabfrage wird über den Mobilfunkstandard 4G nicht unterstützt.\n\nWird eine andere als die empfohlene Karte verwendet, muss sie zuvor konfiguriert werden.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 2, deutscher Sprachblock, Einleitungsabsatz",
+  "prev_context": "Davor steht die Kartenempfehlung.",
+  "next_context": "Danach folgt der Achtung-Kasten zu iMessage.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:6a6a78697204f0519d26189666c48cc8f4547d367f97733cde87956cbbb145a6",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Wichtigster Befund dieser Seite: Genau diese drei Angaben **fehlen** im deutschen Handbuch derselben Generation und stehen dort nur in der englischen Fassung. Damit ist DSC-086 zu präzisieren – nicht das Deutsche schweigt, sondern das deutsche Handbuch (DSC-095). Die Anforderungen werden hier wiedergegeben, weil sie in einer deutschsprachigen Quelle derselben Auflage belegt sind; ihre technische Verbindlichkeit bleibt offen.",
+  "discrepancy_refs": ["DSC-086", "DSC-095"]
+}

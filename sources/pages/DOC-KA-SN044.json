@@ -5,8 +5,8 @@
   "pages": [
     {
       "page": 1,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 413.0,
       "height_mm": 296.0,
       "extractable_chars": 16767,
@@ -116,12 +116,13 @@
         "Keinerlei Angabe 'bis SN-044' oder 'ab SN-045' im Dokument vorhanden — die Generationenzuordnung ist nur extern (Dateiname/Dokument-ID) erkennbar.",
         "'Pro-finder' wird durchgehend korrekt geschrieben; Herstellername im Fliesstext als 'Thitronik' (Logo: THITRONIK)."
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Deutsche Sprachbloecke der Innenseite gelesen und bei 500 dpi gesichert (2026-08-23). Gegengelesen gegen das Handbuch derselben Generation: Montageort, PIN-Vorgabe und Betriebsarten 0 bis 3 stimmen ueberein; die Kartenempfehlung weicht ab (DSC-093) und das iPhone-Verbot hat im Handbuch keine Entsprechung (DSC-097, durch Volltextsuche ueber alle 72 Seiten belegt). 5 Segmente."
     },
     {
       "page": 2,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 413.0,
       "height_mm": 296.0,
       "extractable_chars": 17214,
@@ -272,7 +273,8 @@
         "'Pro-finder' auf der gesamten Seite konsistent korrekt (Titel, Fliesstext, alle Sprachen).",
         "Keine Erwaehnung von 'bis SN-044' oder 'ab SN-045' im Dokument; Versionskennung nur als 'Rev. 1.1'."
       ],
-      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle)."
+      "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
+      "crosscheck_note": "Deutsche Sprachbloecke der Aussenseite gelesen und visuell gesichert (2026-08-23). Der Normalbetrieb der Status-LED stimmt mit dem Handbuch ueberein; die Feldliste des Statusberichts weicht ab und ist mit der neueren Kurzanleitung wortgleich (DSC-096). 3 Segmente."
     }
   ]
 }

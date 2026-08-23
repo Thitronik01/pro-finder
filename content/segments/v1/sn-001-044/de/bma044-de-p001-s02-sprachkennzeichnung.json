@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P001-S02-SPRACHKENNZEICHNUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "figure_description",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Sprachen sind auf dem Deckblatt nur an Flaggen erkennbar",
+  "body_md": "Die vier Sprachfassungen sind auf dem Deckblatt jeweils durch ein Flaggensymbol vor dem Titel gekennzeichnet. Ein Sprachname steht nicht daneben. Wer die Flaggen nicht sehen oder unterscheiden kann, erkennt allein am Titel, um welche Sprache es sich handelt.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Deckblatt, unterer Bereich: vier Flaggensymbole mit den Titeln der Anleitung",
+  "prev_context": "Davor steht der viersprachige Untertitel.",
+  "next_context": "Danach folgt das Inhaltsverzeichnis.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:5a81d993e1a3346663836709842bc9f0e8a5b4fa453e8c29eb7a6c4b4997f5cd",
+  "change_reason": "Bei 200 dpi geprüft. Dieselbe Zugänglichkeitsgrenze ist für das mehrsprachige Deckblatt der Generation ab SN-045 und für die Kurzanleitungen bereits erfasst; sie wird hier benannt, nicht neu bewertet.",
+  "discrepancy_refs": []
+}

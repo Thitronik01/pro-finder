@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P002-S02-SIM-EMPFEHLUNG-LUECKE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "omission_note",
+  "task_slug": "sim-karte",
+  "title": "Die Kartenempfehlung der Kurzanleitung ist eine fünfte Variante",
+  "body_md": "Die Kurzanleitung empfiehlt an dieser Stelle eine vorkonfigurierte Vertragskarte eines namentlich genannten Netzbetreibers. Diese Empfehlung steht in keinem der Handbücher; über beide Generationen und beide Dokumentarten hinweg gibt es fünf verschiedene Empfehlungen. Diese Anleitung gibt deshalb keine Kartenempfehlung wieder. Verbindlich ist allein eine Freigabe durch THITRONIK.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 2 „SIM Karte vorbereiten“, deutscher Sprachblock, Einleitungsabsatz",
+  "prev_context": "Davor steht der Montageort.",
+  "next_context": "Danach folgen die technischen Kartenanforderungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:94b683af9554bdb94d5fcf65c25d32d91e714e6746fb97393bbed42451949449",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Der Widerspruch zu den Handbüchern ist als DSC-093 erfasst. Anbieternamen werden nicht übernommen, solange DSC-027, DSC-093 und Rückfrage 5 offen sind.",
+  "discrepancy_refs": ["DSC-027", "DSC-093"]
+}

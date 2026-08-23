@@ -5,8 +5,8 @@
   "pages": [
     {
       "page": 1,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 150,
       "height_mm": 210,
       "extractable_chars": 347,
@@ -57,12 +57,13 @@
         "Kein Hinweis auf WiPro III, safe.lock oder die THITRONIK App auf dem Deckblatt."
       ],
       "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
-      "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi, Detailausschnitte (Flaggen, Fußzeile) bei 400-500 dpi nachgerendert; Textebene aus tmp/bma-sn044-text.txt gegengelesen; PDF-Katalog mit PyMuPDF geprüft (MarkInfo, Lang, Metadaten, Outline, Link-Annotationen). Vorbehalt: Grammatik und Stil der englischen, französischen und schwedischen Titelzeilen kann ich nicht abschließend beurteilen; geprüft habe ich nur Struktur, Terminologie, Flaggenzuordnung und Layout."
+      "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi, Detailausschnitte (Flaggen, Fußzeile) bei 400-500 dpi nachgerendert; Textebene aus tmp/bma-sn044-text.txt gegengelesen; PDF-Katalog mit PyMuPDF geprüft (MarkInfo, Lang, Metadaten, Outline, Link-Annotationen). Vorbehalt: Grammatik und Stil der englischen, französischen und schwedischen Titelzeilen kann ich nicht abschließend beurteilen; geprüft habe ich nur Struktur, Terminologie, Flaggenzuordnung und Layout.",
+      "crosscheck_note": "Deckblatt bei 200 dpi gerendert und gegen die Textebene abgeglichen (2026-08-23). Gegengelesen gegen das Deckblatt und die Zweckbestimmung der Generation ab SN-045: Die Produktbezeichnung weicht grundlegend ab (DSC-092). 2 Segmente."
     },
     {
       "page": 2,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 149,
       "height_mm": 210,
       "extractable_chars": 1108,
@@ -108,7 +109,8 @@
         "\"Alarmanlage\" (Einträge 2.2, 2.3) als Bezeichnung für das angeschlossene WiPro-System, während ab PDF-Seite 5 durchgängig \"WiPro\" verwendet wird."
       ],
       "next_action": "Segmente extrahieren und gegen sichtbare Seite validieren (extracted -> validated)",
-      "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Textebene aus tmp/bma-sn044-text.txt zeilenweise gegen das Seitenbild gestellt; Link-Annotationen mit PyMuPDF geprüft (keine vorhanden). Sprache Deutsch, vollständig beurteilbar."
+      "inspected_note": "Batch 16, 2026-08-07, PNG-Rendering 150 dpi; Textebene aus tmp/bma-sn044-text.txt zeilenweise gegen das Seitenbild gestellt; Link-Annotationen mit PyMuPDF geprüft (keine vorhanden). Sprache Deutsch, vollständig beurteilbar.",
+      "crosscheck_note": "Inhaltsverzeichnis und Haftungsausschluss bei 200 dpi gerendert und Zeile fuer Zeile gegen die Textebene abgeglichen (2026-08-23); alle 22 Verzeichniseintraege stimmen ueberein. Der Haftungsausschluss ist gegen den der Generation ab SN-045 gelesen und deutlich kuerzer (DSC-092). 2 Segmente."
     },
     {
       "page": 3,
@@ -1698,8 +1700,8 @@
     },
     {
       "page": 19,
-      "status": "inspected",
-      "progress_percent": 25,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 148,
       "height_mm": 210,
       "extractable_chars": 32,
@@ -1721,7 +1723,8 @@
       ],
       "terminology_findings": [],
       "next_action": "keine Inhalte zu extrahieren; Seite bleibt dokumentiert",
-      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Vollständig angesehen; bis auf Kopfzeile, Rahmen und das Wort \"Notizen\" leer. Sprache Deutsch."
+      "inspected_note": "Batch 18, 2026-08-08, PNG-Rendering 150 dpi. Vollständig angesehen; bis auf Kopfzeile, Rahmen und das Wort \"Notizen\" leer. Sprache Deutsch.",
+      "crosscheck_note": "Bei 200 dpi geprueft (2026-08-23): reine Notizseite ohne Bedieninhalt. Als Luecke belegt, damit der deutsche Teil lueckenlos von Seite 1 bis 19 nachweisbar ist. 1 Segment."
     },
     {
       "page": 20,

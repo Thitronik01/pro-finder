@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P001-S01-PRODUKTBEZEICHNUNG",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "technical_data",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Wie diese Generation das Gerät bezeichnet",
+  "body_md": "Das Deckblatt dieser Anleitung bezeichnet den Pro-finder als **Telemetriemodul zur Flottenüberwachung und Steuerung**. Die Anleitung trägt die Revision 2.6 und liegt in vier Sprachen vor: Deutsch, Englisch, Französisch und Schwedisch.\n\nWichtig für die Zuordnung: Die Anleitung der Generation ab Seriennummer 045 beschreibt dasselbe Produkt anders – als Ortungssystem für Freizeitfahrzeuge, das ausdrücklich **nicht** zum Aufzeichnen von Routen oder zur laufenden Verfolgung bestimmt ist. Wer die falsche Anleitung heranzieht, legt damit einen anderen Verwendungszweck zugrunde.",
+  "safety_class": "sicherheitsrelevant",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 1,
+  "source_page_end": 1,
+  "source_region": "Deckblatt: Produkttitel, viersprachiger Untertitel, Revisionsvermerk unten links",
+  "prev_context": null,
+  "next_context": "Danach folgt das Inhaltsverzeichnis.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:504f3f5a26fae15f3ad0c368d9010e33ff0c769e885f84a1265074df3f638ae4",
+  "change_reason": "Deckblatt bei 200 dpi gerendert und gegen die Textebene abgeglichen. Der Unterschied zur Generation ab SN-045 wurde beim Gegenlesen der beiden Deckblätter und der jeweiligen Zweckbestimmung gefunden und ist als DSC-092 im Register erfasst. Kein Wert und keine Aussage wird zwischen den Generationen übertragen.",
+  "discrepancy_refs": ["DSC-092"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "BMA044-DE-P002-S02-KAPITELUEBERSICHT",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "geraetegeneration-bestimmen",
+  "title": "Aufbau dieser Anleitung",
+  "body_md": "Die Anleitung gliedert sich in drei Kapitel:\n\n| Kapitel | Inhalt laut Verzeichnis |\n| --- | --- |\n| 1 Installation | Lieferumfang, Montageort, Anschlüsse und Anzeigen, Auswahl der Betriebsart, Anschluss des Moduls, Montage und Anschluss der optionalen GPS-Antenne, Programmieren und Löschen der Zielrufnummern, Anzeige der Betriebszustände |\n| 2 Handhabung des Moduls | Erklärung der empfangenen Meldungen, Steuerung der Alarmanlage per Kurznachricht und per Anruf, Geofencing, Statusbericht anfordern, Positionsabfrage mit dem Smartphone, Ausgänge steuern, Fahrzeug wiederfinden |\n| 3 Verschiedenes | Technische Daten, Konformität, Entsorgungshinweise, technische Unterstützung |\n\nDie im Verzeichnis genannten Seitenzahlen sind die aufgedruckten Seitenzahlen des Handbuchs, nicht die Seitenzahlen der PDF-Datei.",
+  "safety_class": "normal",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-BMA-SN044",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Inhaltsverzeichnisseite, dreispaltige Kapitelübersicht",
+  "prev_context": "Davor steht die Kopfzeile „Handbuch Pro-finder“.",
+  "next_context": "Danach folgt der Haftungsausschluss.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:17c9ce533432c27dee675e25fc3dd34b401249c744f4ee6a3a8e403d88071513",
+  "change_reason": "Bei 200 dpi gerendert und Zeile für Zeile gegen die Textebene abgeglichen; alle 22 Einträge stimmen überein. Die aufgedruckte Zählung läuft von 1 bis 16 und weicht damit von der PDF-Zählung ab – dieselbe Doppelzählung, die für den englischen Teil bereits erfasst ist (DSC-068). Das Verzeichnis ist im PDF nicht verlinkt.",
+  "discrepancy_refs": ["DSC-068"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P002-S05-SIM-SCHRITTE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "instruction",
+  "task_slug": "sim-karte",
+  "title": "Karte konfigurieren",
+  "body_md": "1. Die PIN-Abfrage der Karte ist zwingend zu deaktivieren.\n2. Deaktivieren Sie die Mailbox und alle Rufumleitungen.\n3. Deaktivieren Sie die Komfortfunktionen, unter anderem Rückruf bei besetzt und Erinnerungen per Kurznachricht.\n4. Aktivieren Sie das Roaming, falls es nicht voreingestellt ist.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 2, deutscher Sprachblock, nummerierte Schrittliste",
+  "prev_context": "Davor steht der Achtung-Kasten zu iMessage.",
+  "next_context": "Danach folgt die Aktivierung des Pro-finder.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:5a376a0b30298117b58c9c98400875d036be6964a5bc030cea87776b0c07d843",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Sachgleich mit Abschnitt 2.1 des Handbuchs derselben Generation. Gegenteilig zur Generation bis SN-044, die die PIN-Abfrage ausdrücklich **aktiviert** und einen festen PIN-Wert verlangt (Rückfrage 15); zwischen den Generationen wird nichts übertragen. Beim Gegenlesen der Nachbarspalten fiel auf, dass dieselbe Liste in der englischen und der schwedischen Spalte teilweise französisch gesetzt ist (DSC-094) – die deutsche Spalte ist davon nicht betroffen.",
+  "discrepancy_refs": ["DSC-094"]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA044-DE-P002-S02-STATUSBERICHT-FELDER",
+  "serial_range": "sn-001-044",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "statusbericht",
+  "title": "Welche Felder der Statusbericht laut Kurzanleitung enthält",
+  "body_md": "Die Kurzanleitung nennt sieben Felder:\n\n| Feld |\n| --- |\n| Zustand der Alarmanlage |\n| Zustand des Geofencings |\n| Verweis auf den Standort in einer Kartenanwendung |\n| Aktuelle Geschwindigkeit in km/h |\n| Zustand Ausgang A |\n| Zustand Ausgang B |\n| Aktuelle Temperatur im Gerät |\n\nDiesen Bericht erhalten Sie laut Quelle nur auf Anforderung oder – je nach Betriebsart – in Intervallen.",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN044",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 7, deutscher Sprachblock: Einleitungssatz und Aufzählung",
+  "prev_context": "Davor steht Abschnitt 6 zur App.",
+  "next_context": "Danach folgen die Beispiele für Alarmmeldungen.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:7694ad26466bdf16579989aef12b478f405d22e969aac3c7d4ecff7ce4d76537",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Die Liste ist mit der Kurzanleitung der neueren Generation wortgleich und weicht in **beiden** Generationen vom jeweiligen Handbuch ab (DSC-096): Sie nennt zwei Felder, die das Handbuch nicht führt, und lässt die Spannungen der Messeingänge weg. Keine der beiden Listen wird als vollständig ausgegeben.",
+  "discrepancy_refs": ["DSC-096"]
+}

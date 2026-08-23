@@ -2016,10 +2016,16 @@ belegt, nicht aus einer Zusammenfassung.
   Auflage ausdrücklich ausschließt.
 - **Prüfweg:** Beide Seiten unabhängig gerendert und Satz für Satz gegeneinander gelesen,
   2026-08-23. Die übrigen Bestandteile des Kastens (Prepaid-Bedingung) sind sachgleich.
+- **Präzisierung 2026-08-23 (DSC-095):** Das Verbot fehlt **nicht dem Deutschen**, sondern
+  dem deutschen **Handbuch**. Die deutsche Kurzanleitung derselben Generation (DOC-KA-SN045,
+  Seite 2) enthält es wörtlich: „Die Verwendung einer Multi-SIM ist nicht möglich und eine
+  Restguthabenabfrage wird durch 4G nicht unterstützt." Es widersprechen sich damit nicht nur
+  zwei Sprachfassungen, sondern zwei deutschsprachige Dokumente derselben Auflage – und das
+  ausführlichere ist das unvollständigere.
 - **Schwere:** hoch (die Kartenwahl entscheidet über die Funktion des Geräts; die Fassungen
   widersprechen sich nicht, sondern die eine schweigt) · **Status:** offen – gehört zu
   Rückfrage 5; THITRONIK muss klären, ob das Verbot und die Anforderungen generell gelten
-  und im deutschen Master fehlen
+  und im deutschen Handbuch fehlen
 
 ### DSC-087 – Betriebsart D: doppelter Produktname und fehlender Bindesatz im deutschen Master (ab SN-045)
 
@@ -2108,6 +2114,139 @@ belegt, nicht aus einer Zusammenfassung.
   (niederländische Kernbegriffe).
 - **Schwere:** mittel (Terminologie; der Befehl steuert eine sicherheitsrelevante Funktion) ·
   **Status:** offen – gehört in den englischen Sprachreview EN-03
+
+### DSC-092 – Die beiden Generationen beschreiben verschiedene Verwendungszwecke (generationsübergreifend)
+
+- **Dokument:** DOC-BMA-SN044, Seiten 1 und 2, gegen DOC-IBA-SN045, deutsche Seite 5
+- **Beleg (bis SN-044):** Das Deckblatt nennt den Pro-finder ein „Telemetriemodul zur
+  **Flottenüberwachung** und Steuerung". Ein Abschnitt „Bestimmungsgemäßer Gebrauch" fehlt;
+  der Haftungsausschluss auf Seite 2 umfasst drei Sätze.
+- **Beleg (ab SN-045):** „Der Pro-finder ist ein speziell für **Freizeitfahrzeuge**
+  entwickeltes Ortungssystem … Das Gerät ist **nicht** zum Aufzeichnen von (Reise-)Routen oder
+  Live-Tracking bestimmt." Der Haftungsausschluss ist deutlich länger und nennt zusätzlich
+  Wertgegenstände im Sichtbereich, das Abschließen des Fahrzeugs, die Haftung bei
+  Tiefentladung der Starterbatterie und die Verantwortung des Anwenders.
+- **Befund:** Zwischen den Generationen ändert sich nicht nur der Wortlaut, sondern der
+  beschriebene Zweck. „Flottenüberwachung" setzt eine laufende Beobachtung voraus – genau das,
+  was die neuere Fassung ausdrücklich ausschließt. Das ist datenschutzrechtlich erheblich:
+  Beobachtung von Fahrzeugen und damit mittelbar von Personen ist etwas anderes als das
+  Wiederfinden nach einem Diebstahl. Zugleich fehlen der älteren Fassung mehrere
+  Sorgfaltspflichten, die die neuere ausformuliert.
+- **Folge für den Pilot:** Wer die falsche Generation heranzieht, legt einen anderen
+  Verwendungszweck und einen anderen Haftungsrahmen zugrunde. Die Zweckbestimmung wird
+  deshalb je Generation getrennt geführt; es wird nichts aus der einen in die andere ergänzt.
+- **Prüfweg:** Deckblatt und Inhaltsverzeichnisseite von DOC-BMA-SN044 bei 200 dpi gerendert
+  und gegen die Textebene abgeglichen, anschließend gegen die Zweckbestimmung der Generation
+  ab SN-045 gelesen, 2026-08-23.
+- **Schwere:** hoch (Zweckbestimmung und Haftungsrahmen; datenschutzrechtlich relevant) ·
+  **Status:** offen – THITRONIK muss bestätigen, welcher Verwendungszweck je Generation gilt
+  und ob die ältere Beschreibung noch zutrifft
+
+### DSC-093 – Fünf verschiedene SIM-Empfehlungen über vier Dokumente derselben Produktfamilie
+
+- **Dokumente:** DOC-BMA-SN044 Seite 8 (deutsch) und Seite 26 (englisch), DOC-KA-SN044
+  Seite 1, DOC-IBA-SN045 deutsche Seite 13, englische Seite 37 und französische Seite 62,
+  DOC-KA-SN045 Seite 2
+- **Beleg:**
+
+  | Dokument                                      | Empfehlung                                                                                              |
+  | --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+  | Handbuch bis SN-044, deutsch **und** englisch | Karte von t-mobile oder Vodafone                                                                        |
+  | **Kurzanleitung bis SN-044, deutsch**         | „Besorgen Sie sich eine Micro-SIM bei einem Anbieter **Ihrer Wahl**. Wir empfehlen eine Vertragskarte." |
+  | Handbuch ab SN-045, deutsch                   | Karte von t-mobile oder Vodafone                                                                        |
+  | Handbuch ab SN-045, englisch                  | allgemein eine M2M-Karte mit Verweis auf die Produkt-FAQ                                                |
+  | Handbuch ab SN-045, französisch               | namentlich die Firma DOMOTEC                                                                            |
+  | **Kurzanleitung ab SN-045, deutsch**          | „die vorkonfigurierte THITRONIK® **Vertragskarte der Telekom**"                                         |
+
+- **Befund:** Über beide Generationen und beide Dokumentarten hinweg ergeben sich fünf
+  verschiedene Empfehlungen. Zwei davon nennen einen konkreten Anbieter, den kein anderes
+  Dokument nennt: DOMOTEC (französisches Handbuch) und eine vorkonfigurierte Vertragskarte
+  eines namentlich genannten Netzbetreibers (deutsche Kurzanleitung ab SN-045). Besonders
+  auffällig ist, dass **Handbuch und Kurzanleitung derselben Generation und derselben Sprache**
+  auseinanderlaufen – in beiden Generationen.
+- **Prüfweg:** Deutsche Blöcke beider Kurzanleitungen bei 500 dpi nachgerendert und
+  zeichengenau gesichert, 2026-08-23.
+- **Schwere:** hoch (kommerziell und rechtlich relevant; eine Nutzerin erhält je nach
+  beiliegendem Papier eine andere Kaufempfehlung) · **Status:** offen – erweitert Rückfrage 5
+
+### DSC-094 – Drei Sprachen in einem Textblock der Kurzanleitung ab SN-045 (ab SN-045)
+
+- **Dokument:** DOC-KA-SN045, Seite 2, Abschnitt 2 „SIM Karte vorbereiten"
+- **Beleg 1 – englische Spalte:** Die Überschrift der Schrittliste lautet französisch
+  „Configurer la carte SIM :", die vier Schritte und die folgende Überschrift „Activate
+  Pro-finder:" sind englisch.
+- **Beleg 2 – schwedische Spalte:** Die Überschrift lautet ebenfalls französisch
+  „Configurer la carte SIM :", **Schritt 1** ist schwedisch („Det är obligatoriskt att
+  avaktivera PIN-koden för SIM-kortet!"), die **Schritte 2 bis 4** und die Überschrift
+  „Activer Pro-Finder :" sind französisch.
+- **Befund:** Eine schwedischsprachige Nutzerin erhält drei von vier Vorbereitungsschritten
+  auf Französisch. Das ist keine Formatierungsfrage, sondern ein Verlust der
+  Bedienanweisung. Der Fehler betrifft genau den Abschnitt, der die SIM-Karte konfiguriert –
+  also die Voraussetzung dafür, dass das Gerät überhaupt meldet.
+- **Prüfweg:** Beide Blöcke bei 500 dpi nachgerendert; die Sprachzuordnung der Spalten wurde
+  über die jeweils darüberstehende Zeile bestimmt, nicht über die Position.
+- **Bezug:** Gleiche Fehlerklasse wie DSC-003 (Sprachmischung im SV- und EN-Block der
+  Kurzanleitung bis SN-044), hier jedoch in der neueren Kurzanleitung und mit drei Sprachen
+  in einem Block.
+- **Schwere:** hoch (Bedienanweisung geht für eine Sprachfassung verloren) · **Status:**
+  offen – an THITRONIK zu melden
+
+### DSC-095 – Das Multi-SIM-Verbot steht deutsch in der Kurzanleitung, nicht im Handbuch (ab SN-045)
+
+- **Dokument:** DOC-KA-SN045, Seite 2, gegen DOC-IBA-SN045, deutsche Seite 13
+- **Beleg (Kurzanleitung, deutsch):** „Die SIM Karte muss SMS, Telefonie und mobile Daten
+  unterstützen. Die **Verwendung einer Multi-SIM ist nicht möglich** und eine
+  Restguthabenabfrage wird durch 4G nicht unterstützt."
+- **Befund:** Damit ist DSC-086 zu präzisieren. Das Verbot der Multi-Operator-Karte und die
+  technischen Kartenanforderungen fehlen **nicht dem Deutschen**, sondern dem deutschen
+  **Handbuch**. In der deutschen Kurzanleitung derselben Generation stehen sie. Zwei
+  deutschsprachige Dokumente derselben Auflage widersprechen sich also durch Auslassung – und
+  das Handbuch, das die ausführliche Fassung sein soll, ist das unvollständigere.
+- **Folge:** Wer nur das Handbuch liest, erfährt das Verbot nicht. Wer nur die Kurzanleitung
+  liest, erfährt es, aber ohne den übrigen Kontext der Kartenwahl.
+- **Prüfweg:** Deutscher Block der Kurzanleitung bei 500 dpi gesichert, 2026-08-23.
+- **Schwere:** hoch (die Kartenwahl entscheidet über die Funktion) · **Status:** offen –
+  präzisiert DSC-086, gehört zu Rückfrage 5
+
+### DSC-096 – Kurzanleitung und Handbuch beschreiben verschiedene Statusberichte (generationsübergreifend)
+
+- **Dokumente:** DOC-KA-SN044 Seite 2 und DOC-KA-SN045 Seite 1 gegen DOC-BMA-SN044 Seite 15
+  und DOC-IBA-SN045 deutsche Seite 22
+- **Beleg (beide Kurzanleitungen, wortgleich):** Der Statusbericht enthält „Zustand der
+  Alarmanlage · Zustand des Geofencings · Google Maps Link zum Standort · Aktuelle
+  Geschwindigkeit in km/h · Zustand Ausgang A · Zustand Ausgang B · Aktuelle Temperatur im
+  Gerät".
+- **Beleg (Handbücher):** Der Statusbericht enthält Position, Geschwindigkeit, den Zustand
+  der Ausgänge sowie – je nach Betriebsart – die Spannungen der Messeingänge und die
+  Temperatur.
+- **Befund:** Die beiden Feldlisten decken sich nicht. Die Kurzanleitungen nennen zwei
+  Felder, die die Handbücher an dieser Stelle nicht führen (Zustand der Alarmanlage, Zustand
+  des Geofencings), und lassen die Spannungen der Messeingänge weg, die die Handbücher
+  ausdrücklich nennen. Beide Beschreibungen können nicht zugleich vollständig sein.
+- **Folge für den Pilot:** Solange nicht feststeht, welche Felder ein Statusbericht
+  tatsächlich enthält, kann keine Anleitung erklären, was in einer eingehenden Meldung zu
+  suchen ist. Das betrifft unmittelbar die Erkennbarkeit im Alarmfall.
+- **Schwere:** hoch (Erkennbarkeit sicherheitsrelevanter Meldungsinhalte) · **Status:**
+  offen – erweitert Rückfrage 11
+
+### DSC-097 – Die Kurzanleitung bis SN-044 verbietet das iPhone, das Handbuch erwähnt es nicht (bis SN-044)
+
+- **Dokument:** DOC-KA-SN044, Seite 1, gegen DOC-BMA-SN044 insgesamt
+- **Beleg (Kurzanleitung, deutsch):** „ACHTUNG! Für die Schritte 1 – 6 darf **kein iPhone**
+  verwendet werden!" Dieselbe Aussage steht in allen acht Sprachblöcken der Karte („No iPhone
+  may be used for steps 1 – 6!", „aucun iPhone ne doit être utilisé !" und so weiter).
+- **Beleg (Handbuch):** Das Handbuch derselben Generation nennt **weder iPhone noch
+  iMessage** an irgendeiner Stelle; die maschinelle Suche über alle 72 Seiten liefert keinen
+  Treffer.
+- **Befund:** Die Kurzanleitung enthält damit ein hartes Verbot, von dem das ausführliche
+  Handbuch nichts weiß. Zum Vergleich: Die Generation ab SN-045 verlangt in Handbuch **und**
+  Kurzanleitung lediglich, die Funktion iMessage zu deaktivieren – ein deutlich milderer und
+  begründeter Eingriff. Ob das ältere Vollverbot eine vereinfachte Formulierung desselben
+  Sachverhalts oder eine eigene technische Einschränkung war, sagt keine Quelle.
+- **Prüfweg:** Deutscher Block bei 500 dpi gesichert; das Fehlen im Handbuch durch Volltext-
+  suche über alle Seiten belegt, 2026-08-23.
+- **Schwere:** mittel (Bedienweg; eine Nutzerin mit iPhone erhält je nach Papier
+  gegensätzliche Auskunft) · **Status:** offen
 
 ## Synthese-Auswertung 1: SMS-Befehle im Sprach- und Generationenvergleich
 

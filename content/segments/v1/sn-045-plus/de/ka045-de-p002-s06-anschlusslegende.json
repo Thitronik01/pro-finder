@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "segment_key": "KA045-DE-P002-S06-ANSCHLUSSLEGENDE",
+  "serial_range": "sn-045-plus",
+  "language": "de",
+  "segment_type": "table",
+  "task_slug": "anschluesse",
+  "title": "Anschlüsse, Anzeigen und Bedienelemente laut Kurzanleitung",
+  "body_md": "| Markierung | Bedeutung |\n| --- | --- |\n| A | Betriebsartenschalter |\n| B | Anschluss für die Alarmanlage |\n| C | Externe GPS-Antenne (optional) |\n| D | Status-LED |\n| Pin 1 | Masse |\n| Pin 2 | Messeingang U2 |\n| Pin 3 | Messeingang U3 |\n| Pin 4 | Messeingang U4 |\n| Pin 5 | Messeingang U5 |\n| Pin 6 | Ausgang B |\n| Pin 7 | Ausgang A |\n| Pin 8 | Betriebsspannung U1 |",
+  "safety_class": "sicherheitskritisch",
+  "review_status": "entwurf",
+  "source_doc_key": "DOC-KA-SN045",
+  "source_page_start": 2,
+  "source_page_end": 2,
+  "source_region": "Abschnitt 3 „Anschlüsse, Anzeigen und Bedienelemente“, deutscher Sprachblock",
+  "prev_context": "Davor endet Abschnitt 2.",
+  "next_context": "Danach folgt Abschnitt 4 zu den Betriebsarten.",
+  "glossary_version": "glossary-core-v1",
+  "checksum": "sha256:3412aaaf0eb05d23b79e90bf0b279a87bfe5c91fc407efa9de621aaca54ad75e",
+  "change_reason": "Deutscher Block der Kurzanleitung aus der Textebene gelesen und bei 500 dpi visuell gesichert (2026-08-23). Alle zwölf Zeilen gegen die Legende des Handbuchs (DOC-IBA-SN045, deutsche Seite 8) gelesen: gleiche Zuordnung. Ein Unterschied in der Benennung: Die Kurzanleitung nennt Pin 8 „Betriebsspannung (U1)“, das Handbuch „Dauerplus 12 V“. Beide Bezeichnungen werden hier nicht vermischt; wiedergegeben ist die der Kurzanleitung.",
+  "discrepancy_refs": []
+}
