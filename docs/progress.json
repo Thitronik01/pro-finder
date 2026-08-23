@@ -1,6 +1,6 @@
 {
   "generated_at_note": "Erzeugt durch scripts/progress.mjs; Datum siehe Git-Historie dieser Datei.",
-  "overall_percent": 65.5,
+  "overall_percent": 65.7,
   "weights": {
     "bootstrap": 0.05,
     "source_audit": 0.2,
@@ -19,13 +19,13 @@
     },
     "source_audit": {
       "label": "Quelleninventar und PDF-Prüfung",
-      "percent": 43.4,
-      "note": "Automatisch berechnet aus 72 von 323 Seitenrecords (Bezugsmenge siehe source_audit_scope). Ueber alle 323 Seiten waeren es 29.1 %."
+      "percent": 44.4,
+      "note": "Automatisch berechnet aus 72 von 323 Seitenrecords (Bezugsmenge siehe source_audit_scope). Ueber alle 323 Seiten waeren es 29.3 %."
     },
     "german_master": {
       "label": "Content-Modell und deutscher Master",
       "percent": 90,
-      "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. 56 versionierte Segmente aus DOC-BMA-SN044 Seiten 3-18 sind quellenvalidiert. Seit 2026-08-22 ist der **deutsche Teil ab SN-045 vollstaendig extrahiert**: 80 Segmente aus DOC-IBA-SN045, Seiten 5 bis 25, in drei Batches - von Haftungsausschluss und Lieferumfang ueber Montage, Anschluss, Betriebsartentabelle, GPS-Diagnose, SIM-Konfiguration, Zielrufnummern und Programmier-SMS bis zu Meldungen, Geofencing, Ausgaengen und technischen Daten. Der Gesamtbestand steht bei 136 Segmenten; alle bleiben entwurf. Die 21 Seiten stehen auf extracted, nicht auf validated: Die unabhaengige zweite Durchsicht steht aus. Alle 101 sicherheitskritischen Segmente sind zehn entscheidungsreifen Pruefpaketen zugeordnet - P0-01 bis P0-05 fuer bis SN-044, P0-06 bis P0-10 fuer ab SN-045. BLK-004/005/006/007 bleiben eingehalten: keine SMS-Zeichenfolgen, keine Berechtigungszeichen, keine Beispielrufnummern, keine Koordinaten oder Kartenlinks, keine Kontaktdaten. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review und alle Freigaben fehlen."
+      "note": "Beide deutschen Generationszweige sind mit jeweils 14 Aufgaben vollstaendig gefuellt: 28 von 28 Dateien, kein Platzhalter. 56 versionierte Segmente aus DOC-BMA-SN044 Seiten 3-18 sind quellenvalidiert. Seit 2026-08-22 ist der **deutsche Teil ab SN-045 vollstaendig extrahiert**: 80 Segmente aus DOC-IBA-SN045, Seiten 5 bis 25, in drei Batches - von Haftungsausschluss und Lieferumfang ueber Montage, Anschluss, Betriebsartentabelle, GPS-Diagnose, SIM-Konfiguration, Zielrufnummern und Programmier-SMS bis zu Meldungen, Geofencing, Ausgaengen und technischen Daten. Der Gesamtbestand steht bei 136 Segmenten; alle bleiben entwurf. Am 2026-08-22 wurde eine Gegenpruefung gegen die englische Fassung durchgefuehrt: Weil alle zehn Sprachfassungen dasselbe Layout teilen, muesste eine abweichende Zahl in der deutschen Extraktion dort auffallen. Geprueft wurden neun Seitenpaare mit saemtlichen Zahlenwerten des Bestands - Pinbelegung, Betriebsartentabelle, neun LED-Zustaende, 900-Meter-Radius, 11,2/12,5 V, 12 V DC, 0-30 V, 500 mA, 13,5 V ueber fuenf Minuten, 1 bis 120 Minuten, zehn Minuten Wartezeit und die technischen Daten. Ergebnis: kein einziger Extraktionsfehler; die einzige Abweichung ist die bereits belegte Sprachdifferenz DSC-020 beim Normalstrom. Drei Seiten, deren gesamter inhaltlicher Kern damit abgedeckt ist, stehen jetzt auf validated; die uebrigen 18 bleiben auf extracted, weil die Gegenpruefung dort nur Teile der Seite erfasst hat. Alle 101 sicherheitskritischen Segmente sind zehn entscheidungsreifen Pruefpaketen zugeordnet - P0-01 bis P0-05 fuer bis SN-044, P0-06 bis P0-10 fuer ab SN-045. BLK-004/005/006/007 bleiben eingehalten: keine SMS-Zeichenfolgen, keine Berechtigungszeichen, keine Beispielrufnummern, keine Koordinaten oder Kartenlinks, keine Kontaktdaten. Nicht bei 100 Prozent, weil realer technischer beziehungsweise rechtlicher Review und alle Freigaben fehlen."
     },
     "card": {
       "label": "Setup-Karte",
@@ -66,10 +66,11 @@
     {
       "doc_id": "DOC-IBA-SN045",
       "page_count": 247,
-      "percent": 27.1,
+      "percent": 27.4,
       "status_counts": {
         "inspected": 226,
-        "extracted": 21
+        "extracted": 18,
+        "validated": 3
       }
     },
     {
@@ -125,7 +126,7 @@
       }
     ],
     "pages_in_scope": 72,
-    "percent_all_pages": 29.1
+    "percent_all_pages": 29.3
   },
   "blockers": [
     {
@@ -201,5 +202,5 @@
     "Der Anlernmodus der Alarmanlage laesst sich ab SN-045 per SMS aus der Ferne starten (Seite 24). Die Quelle nennt weder Zeitbegrenzung noch Rueckmeldung noch eine Beschraenkung darauf, welche Zielrufnummer ihn starten darf (DSC-052).",
     "Dieselbe LED-Blinkfolge rot/gruen bedeutet ab SN-045 'SIM-PIN nicht deaktiviert' und bis SN-044 'PIN ist nicht 0000' - gegenlaeufige Erwartung bei identischer Anzeige (DSC-047, Rueckfrage 15)."
   ],
-  "next_action": "Die Seiten 5 bis 25 von DOC-IBA-SN045 unabhaengig gegenlesen - nicht die vorhandenen Segmente pruefen, sondern aus dem Seitenbild neu ableiten und danach vergleichen. Erst wenn das ohne Abweichung gelingt, steigen die 21 Seiten von extracted auf validated und P0-06 bis P0-10 von in Vorbereitung auf bereit fuer Fachreview. Besonders genau zu pruefen sind die Betriebsartentabelle auf Seite 10, die Pinlegende auf Seite 8, die Programmier-SMS-Abbildung auf Seite 16 mit der Beispieltabelle auf Seite 17 sowie die neun LED-Zustaende auf Seite 18. Danach ist der deutsche Teil ab SN-045 fertig; der naechste Extraktionsbereich waere DOC-BMA-SN044 ausserhalb der Seiten 3 bis 18 oder der englische Teil ab SN-045. Parallel die Entscheidungsvorlage an THITRONIK geben und die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 einholen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Assets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern."
+  "next_action": "Die Gegenpruefung gegen die englische Fassung auf die restlichen 18 Seiten ausweiten. Die Methode hat sich bewaehrt und ist der bisherigen Selbstdurchsicht ueberlegen, weil sie nicht davon abhaengt, dass derselbe Agent seine eigene Arbeit nachliest: Die zehn Sprachfassungen teilen dasselbe Layout, eine abweichende Zeile faellt deshalb auf. Offen sind vor allem die Textseiten 5, 6, 7, 9, 13 bis 17 und 20 bis 22 sowie die noch nicht gegengelesenen Abschnitte 1.5.1, 1.5.3, 5.5.1, 5.5.2 und 5.6. Erst wenn eine Seite vollstaendig gegengelesen ist, steigt sie auf validated; erst wenn alle Seiten eines Pruefpakets dort stehen, wechselt es von in Vorbereitung auf bereit fuer Fachreview. Nebenbei zu klaeren: Zwischen Abschnitt 1.3 und Kapitel 3 verliert die englische Fassung gegenueber der deutschen eine interne Seitenzahl - die Fussleisten der englischen Seiten 33 bis 40 klaeren, wo (DSC-021). Parallel die Entscheidungsvorlage an THITRONIK geben, die englischen Sprachreviews EN-01 bis EN-03 einholen, den ersten dokumentierten manuellen QA-Batch vorbereiten und fuer die Karte freigegebene Assets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern."
 }

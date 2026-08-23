@@ -427,8 +427,8 @@
     },
     {
       "page": 8,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -446,7 +446,7 @@
         "Im Foto markiert ein rotes X einen Anschluss zwischen B und C, die Legende umfasst aber nur A-D und Pin 1-8 - das Symbol bleibt unerklaert.",
         "Uneinheitliche Benennung der optionalen Antenne auf derselben Seite: \"GPS-pro\" (Etikett), \"GPS-Antenne (Optional)\" (Foto-Beschriftung), \"Externe GPS-Antenne (Optional)\" (Legende C)."
       ],
-      "next_action": "2 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
+      "next_action": "Inhaltlich abgeschlossen. Offen bleibt der technische Fachreview der zugehoerigen Segmente (validated -> approved).",
       "headings": ["1.2 Anschluesse, Anzeigen und Bedienelemente"],
       "figures": [
         {
@@ -492,7 +492,8 @@
         "\"GPS-pro\" (Produktname auf dem Antennenetikett) neben der Bezeichnung \"GPS-Antenne (Optional)\" bzw. \"Externe GPS-Antenne (Optional)\" - drei Bezeichnungsvarianten fuer dasselbe Teil auf einer Seite"
       ],
       "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
-      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-01, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 17 Segmente aus den Seiten 5 bis 9) und gegen das 300-dpi-Seitenbild geprueft; sicherheitskritische Werte zusaetzlich bei 500 dpi im Ausschnitt gegengelesen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 32), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Legendentabelle vollstaendig: Marken A-D und Pin 1-8 zeichengenau identisch, einschliesslich der gegenlaeufigen Zuordnung Pin 6 = Ausgang B und Pin 7 = Ausgang A."
     },
     {
       "page": 9,
@@ -558,8 +559,8 @@
     },
     {
       "page": 10,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -578,7 +579,7 @@
         "Betriebsart 8 und B haben exakt invertierte Geofencing-Schwellenlogik (>6 V: ein/<5 V: aus vs. >6 V: aus/<5 V: ein) ohne erlaeuternden Hinweis; Spannungsbereich 5-6 V bleibt in beiden Faellen undefiniert",
         "Betriebsart 9 (Statusbericht mit U1-U5, aber ohne Intervall) unterscheidet sich von Betriebsart 1 nur durch U3-U5; der Zweck von 9 gegenueber 4-7 (kein Intervall) wird nicht erklaert"
       ],
-      "next_action": "3 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
+      "next_action": "Inhaltlich abgeschlossen. Offen bleibt der technische Fachreview der zugehoerigen Segmente (validated -> approved).",
       "headings": ["Tabelle der Betriebsarten:"],
       "figures": [],
       "tables": [
@@ -627,7 +628,8 @@
         "'WiPro' in Spaltenkopf ohne Zusatz 'III' bzw. '(safe.lock)', waehrend Seite 9 und 11 'WiPro III (safe.lock)' schreiben"
       ],
       "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
-      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 3 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 3 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 34), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Betriebsartentabelle vollstaendig: alle 16 Zeilen, Intervalle 15/60 Minuten, 6/24 Stunden, 90 Sekunden und 8 Minuten, die gegenlaeufigen Pin-3-Schwellen der Stellungen 8 und B sowie die Sonderfunktionen E und F identisch."
     },
     {
       "page": 11,
@@ -700,7 +702,8 @@
         "'Pro-finder' korrekt; 'WiPro III (safe.lock)' korrekt; 'Verbindungskabel WiPro III' kursiv als Produktname"
       ],
       "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
-      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 35), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Alle Werte identisch: 12 V DC, Messeingaenge 0-30 V, Pin 6/7 als Transistorausgaenge mit 12 V und 500 mA, Relais mit Freilaufdiode, Garantieverlust bei Ueberlastung, drei Schaltarten. Auch der auffaellige Verweis auf Abschnitt 1.3 steht in beiden Fassungen - er ist Vorlage, kein deutscher Ausrutscher. Abschnitt 1.5.1 wurde nicht gegengelesen."
     },
     {
       "page": 12,
@@ -765,7 +768,8 @@
         "'Pro-finder' korrekt geschrieben"
       ],
       "inspected_note": "Batch 1, Sitzung 2026-08-06: visuell + Textextraktion geprueft (Workflow-Agenten, adversarial verifiziert fuer LED-Tabelle).",
-      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 6 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-02, Sitzung 2026-08-22: 6 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 21 Segmente aus den Seiten 10 bis 14) und gegen das 300-dpi-Seitenbild geprueft; Betriebsartentabelle, Pin-3-Schwellen, Versorgungsangaben und die Adressbuchempfehlung zusaetzlich bei 500 bis 600 dpi im Ausschnitt gegengelesen. Die englische Betriebsartentabelle auf PDF-Seite 34 wurde bei 400 dpi als unabhaengige Gegenquelle herangezogen. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 36), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Abschnitt 1.5.2 vollstaendig identisch: spannungsfrei, Hauptkabelbaum abziehen, vierpoliger Anschluss, 13,5 V ueber mindestens fuenf Minuten, Fahrzeug starten, Speichervorgang abschliessen. Bestaetigt zugleich die Korrektur an DSC-050, dass der Hauptkabelbaum auch in 1.5.2 vorkommt. Abschnitt 1.5.3 wurde nicht gegengelesen."
     },
     {
       "page": 13,
@@ -1097,8 +1101,8 @@
     },
     {
       "page": 18,
-      "status": "extracted",
-      "progress_percent": 50,
+      "status": "validated",
+      "progress_percent": 75,
       "width_mm": 210,
       "height_mm": 297,
       "extractable_chars": 0,
@@ -1113,7 +1117,7 @@
         "Paginierungs-Diskrepanz: PDF-Seite 18 ist intern 'Seite 16 von 23'."
       ],
       "discrepancies": [],
-      "next_action": "2 Segment(e) angelegt. Naechster Schritt: unabhaengige Gegenpruefung aller Segmente gegen das Seitenbild (extracted -> validated).",
+      "next_action": "Inhaltlich abgeschlossen. Offen bleibt der technische Fachreview der zugehoerigen Segmente (validated -> approved).",
       "headings": ["3 Betriebszustaende (Status-LED)"],
       "figures": [
         {
@@ -1149,7 +1153,8 @@
         "'Status-LED' und 'Pro-finder' entsprechen der Soll-Terminologie; 'SIM-PIN' ist eindeutig geschrieben."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 41), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Alle neun Betriebszustaende identisch in Reihenfolge und Bedeutung, einschliesslich 'SIM-PIN not deactivated' fuer rot/gruen und des roten Schlusshinweises zum Normalbetrieb."
     },
     {
       "page": 19,
@@ -1217,7 +1222,8 @@
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Geofencing' entsprechen der Soll-Schreibweise."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 42), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Diebstahlmeldung mit ca. 900 m, stillem Alarm und WiPro-III-Bindung identisch; Spannungswarnung mit 11,2 V und 12,5 V identisch; Statusberichtsinhalt einschliesslich der angekuendigten Temperaturangabe identisch. Die Feldliste am Seitenanfang wurde nicht gegengelesen."
     },
     {
       "page": 20,
@@ -1453,7 +1459,8 @@
         "'Pro-finder' ist korrekt; die Kleinbuchstaben und Leerzeichen in den SMS-Befehlen sind als exakte, nicht zu uebersetzende Syntax zu behandeln."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 2 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 47), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Wirkung der Zeitschaltung und die Ersetzungsregel fuer den zweiten Ausgang identisch. Die Abschnitte 5.5.1 und 5.5.2 wurden nicht gegengelesen."
     },
     {
       "page": 24,
@@ -1502,7 +1509,8 @@
         "'Pro-finder', 'WiPro III (safe.lock)' und 'Anlernmodus' sind konsistent; SMS-Befehle sind vor Uebersetzung zu schuetzen."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 5 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 48), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Abschnitt 5.7 identisch: bis zu zehn Minuten Wartezeit, danach die zuletzt empfangene Position; aktive Lichtmaschine, UTC-Zeit gehoert zur Position. Abschnitt 5.6 wurde nicht gegengelesen."
     },
     {
       "page": 25,
@@ -1581,7 +1589,8 @@
         "'Pro-finder', 'THITRONIK App' und 'Nano-SIM' entsprechen der Soll-Schreibweise; im juristischen Firmenname steht 'Thitronik GmbH'."
       ],
       "inspected_note": "Batch 2, Sitzung 2026-08-06: mit gebuendeltem Poppler bei 180 dpi gerendert und vollstaendig visuell geprueft; Textebene, Tags, Sprache und Annotationen mit pdfinfo/pypdf kontrolliert. Kein unabhaengiger Review, daher Status nur inspected.",
-      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus."
+      "extracted_note": "Batch SN-045-03, Sitzung 2026-08-22: 4 versionierte Segment(e) aus dieser Seite angelegt (Batch insgesamt 42 Segmente aus den Seiten 15 bis 25) und gegen das 300-dpi-Seitenbild geprueft. Damit ist der deutsche Teil ab SN-045 von Seite 5 bis 25 vollstaendig extrahiert. Status extracted, nicht validated: Die unabhaengige zweite Durchsicht aller Segmente steht aus.",
+      "crosscheck_note": "Gegenpruefung 2026-08-22 gegen die englische Fassung (PDF-Seite 49), bei 400 bis 500 dpi gelesen. Methode: Die zehn Sprachfassungen teilen dasselbe Layout; eine abweichende Zahl oder Zeile in der deutschen Extraktion muesste dort auffallen. Ergebnis: Technische Daten Zeile fuer Zeile identisch bis auf einen Wert: Deutsch nennt ca. 16-21 mA Normalstrom, Englisch approx. 21 mA - das ist die bereits belegte Sprachabweichung DSC-020. Alle uebrigen zwoelf Zeilen stimmen ueberein, einschliesslich der Sendeangabe 2G/3G/4G mit Bandlisten. Die Abschnitte 6.2 bis 6.4 wurden nicht gegengelesen."
     },
     {
       "page": 26,

@@ -66,6 +66,50 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   „SIM-Karte"; das Segment nennt neutral die eingelegte SIM-Karte, das Kartenformat bleibt
   bei DSC-069.
 
+### Gegenprüfung gegen einen unabhängigen Zeugen statt Selbstdurchsicht
+
+- **Das Problem mit der bisherigen Methode:** Die Segmente werden von einem Agenten aus dem
+  Seitenbild extrahiert, und derselbe Agent liest sie später gegen – im günstigsten Fall in
+  einer anderen Sitzung. Das bestätigt eher, als dass es prüft.
+- **Der bessere Weg:** Alle zehn Sprachfassungen von DOC-IBA-SN045 teilen dasselbe Layout –
+  das ist durch die Vorlagenfehler in DSC-022, DSC-040 und DSC-046 bereits nachgewiesen.
+  Eine falsch abgelesene Zahl oder eine übersehene Tabellenzeile müsste in der englischen
+  Fassung auffallen. Diese Prüfung hängt **nicht** davon ab, dass jemand seine eigene Arbeit
+  nachliest.
+- **Durchgeführt:** neun Seitenpaare bei 400 bis 500 dpi. Das Mapping läuft über die
+  Überschriften, nicht über einen festen Seitenversatz – der Versatz ist nicht konstant.
+
+  | Deutsch | Englisch | geprüft                                                         |
+  | ------: | -------: | --------------------------------------------------------------- |
+  |       8 |       32 | Legendentabelle, zwölf Zeilen, Marken A–D und Pin 1–8           |
+  |      10 |       34 | Betriebsartentabelle, sechzehn Zeilen, Intervalle und Schwellen |
+  |      11 |       35 | 12 V DC, 0–30 V, 500 mA, Relais, Garantie, drei Schaltarten     |
+  |      12 |       36 | spannungsfrei, Hauptkabelbaum, 13,5 V über fünf Minuten         |
+  |      18 |       41 | neun LED-Zustände in Reihenfolge und Bedeutung                  |
+  |      19 |       42 | 900 m, stiller Alarm, 11,2 V / 12,5 V, Statusberichtsinhalt     |
+  |      23 |       47 | Zeitschaltung und Ersetzungsregel für den zweiten Ausgang       |
+  |      24 |       48 | zehn Minuten, aktive Lichtmaschine, UTC-Bezug                   |
+  |      25 |       49 | technische Daten, dreizehn Zeilen                               |
+
+- **Ergebnis: kein einziger Extraktionsfehler.** Die einzige Abweichung in dreizehn Zeilen
+  technischer Daten ist der Normalstrom – Deutsch „ca. 16–21 mA", Englisch „approx. 21mA".
+  Genau das ist DSC-020. Dass alle zwölf übrigen Zeilen zeichengenau übereinstimmen, macht
+  daraus einen **belegten Quellenunterschied statt eines Lesefehlers** – eine Bestätigung,
+  die die Selbstdurchsicht nicht hätte liefern können.
+- **Was bestätigt wurde, war das Riskanteste:** die gegenläufige Zuordnung Pin 6 = Ausgang B
+  und Pin 7 = Ausgang A, die gegenläufigen Pin-3-Schwellen der Stellungen 8 und B, die
+  Bedeutung „SIM-PIN nicht deaktiviert" für rot/grün und die Korrektur an DSC-050 zum
+  Hauptkabelbaum in Abschnitt 1.5.2.
+- **Statusfolge, bewusst zurückhaltend:** Nur die Seiten 8, 10 und 18 steigen auf
+  `validated` – dort deckt die Gegenprüfung den gesamten inhaltlichen Kern der Seite ab. Die
+  übrigen achtzehn bleiben auf `extracted`; bei ihnen wurden nur Teile gegengelesen, und das
+  steht je Seite im Feld `crosscheck_note`.
+- **Drei Nebenfunde:** Die englische interne Seitenzählung liegt ab Kapitel 3 um eins unter
+  der deutschen, obwohl beide „von 23" behaupten – wo die Abweichung entsteht, ist offen
+  (DSC-021). Die englische Seite 42 setzt einen Verweis dreifach, teils in großer blauer
+  Schrift, und der englischen LED-Zeile „Flashes yellow-green" fehlt die schließende Klammer
+  (DSC-018).
+
 ### Bezugsmenge der Fortschrittsmetrik umgestellt
 
 - **Der Befund:** Der Masterplan definiert 100 Prozent unter anderem als „alle 323 Seiten
@@ -682,15 +726,17 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
   600 dpi als Ausschnitt. Zusätzlich die **englische Seite 34** bei 400 dpi als unabhängige
   Gegenquelle zur Betriebsartentabelle. Alle 21 deutschen Seiten von `inspected` auf
   `extracted` gehoben. Seiten 3–18 von DOC-BMA-SN044 bleiben unverändert quellenvalidiert.
-- **Gesamtstand Quellen:** 286 von 323 Seiten `inspected`, 21 `extracted`, 16 `validated`;
-  DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 226 `inspected`/21
-  `extracted`, beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne Segmentdatei
-  hochgestuft.
+- **Gesamtstand Quellen:** 286 von 323 Seiten `inspected`, 18 `extracted`, 19 `validated`;
+  DOC-BMA-SN044 56 `inspected`/16 `validated`, DOC-IBA-SN045 226 `inspected`/18
+  `extracted`/3 `validated`, beide Kurzanleitungen je 2 `inspected`. Keine Seite wurde ohne
+  Segmentdatei hochgestuft, und keine ohne abgeschlossene Gegenprüfung auf `validated`.
 - **Fortschritt, in zwei getrennten Schritten:** Durch die Extraktion selbst stieg der
   PDF-Audit von 27,5 auf 29,1 Prozent und der Gesamtfortschritt von 62,4 auf 62,7 Prozent.
   Die anschließende Umstellung der Bezugsmenge hob den PDF-Audit auf 43,4 Prozent und den
   Gesamtfortschritt auf 65,5 Prozent – **ohne dass dadurch eine einzige Seite fertiger
-  wurde**. Beide Schritte sind bewusst getrennt ausgewiesen; der Wert über alle 323 Seiten
+  wurde**. Die Gegenprüfung gegen die englische Fassung hob dann drei Seiten von `extracted`
+  auf `validated` und damit den PDF-Audit auf 44,4 Prozent und den Gesamtfortschritt auf
+  65,7 Prozent; dieser letzte Schritt ist echte Substanz. Beide Schritte sind bewusst getrennt ausgewiesen; der Wert über alle 323 Seiten
   bleibt in `progress.json` und im Statusblock sichtbar.
 - **Segmente:** Schema v1 und jetzt **136 deutsche Segmente** – 56 aus DOC-BMA-SN044
   (Seiten 3–18, unabhängig gegengeprüft) und 80 aus DOC-IBA-SN045 (Seiten 5–25, drei
@@ -732,6 +778,10 @@ Prozentwerte stehen in `PROJECT_STATUS.md`.
 - **Werkzeuge:** `scripts/render-pdf-pages.py` (300 dpi, Seiten 5–25) und
   `scripts/crop-pdf-region.py` (400 bis 600 dpi, mehrere Ausschnitte). PyMuPDF musste in
   dieser Umgebung nachinstalliert werden; die Original-PDFs wurden ausschließlich gelesen.
+- **Methodennotiz für die Fortsetzung:** Die Gegenprüfung gegen eine zweite Sprachfassung
+  ist der Selbstdurchsicht vorzuziehen und sollte auf die restlichen achtzehn Seiten
+  ausgeweitet werden. Sie ersetzt keinen Fachreview – sie beweist nur, dass die
+  Extraktion die Quelle korrekt wiedergibt, nicht dass die Quelle recht hat.
 - **Abschlussläufe:** `npm run progress` → `npm run format` → `npm run check` grün; darin
   39 Unit-Tests sowie Segment-, Content-, Referenz-, Secret-, Token-, Lockfile- und
   Fortschrittsprüfung. Zusätzlich `npm run build` und der vollständige E2E-Lauf mit 64 von

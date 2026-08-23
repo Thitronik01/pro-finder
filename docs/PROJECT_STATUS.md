@@ -5,12 +5,12 @@ Stand: 2026-08-22. Das Dashboard unter `/dashboard` liest dieselben generierten 
 
 <!-- PROGRESS:START (generiert durch scripts/progress.mjs – nicht von Hand editieren) -->
 
-**Gesamtfortschritt: 65.5 %**
+**Gesamtfortschritt: 65.7 %**
 
 | Workstream                               | Gewicht | Fortschritt |
 | ---------------------------------------- | ------- | ----------- |
 | Bootstrap                                | 5 %     | 90 %        |
-| Quelleninventar und PDF-Prüfung          | 20 %    | 43.4 %      |
+| Quelleninventar und PDF-Prüfung          | 20 %    | 44.4 %      |
 | Content-Modell und deutscher Master      | 20 %    | 90 %        |
 | Setup-Karte                              | 10 %    | 42 %        |
 | Webanleitung und Review-UI               | 20 %    | 68 %        |
@@ -18,16 +18,16 @@ Stand: 2026-08-22. Das Dashboard unter `/dashboard` liest dieselben generierten 
 | Accessibility-, Security- und Content-QA | 10 %    | 51 %        |
 | Staging und Übergabe                     | 5 %     | 79 %        |
 
-**PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Seitenzahl). Der Workstream „Quelleninventar und PDF-Prüfung" rechnet über die 72 Seiten, die der Pilot veröffentlicht; über alle 323 Seiten wären es 29.1 %. Die Tabelle zeigt jedes Dokument vollständig:
+**PDF-Seitenprüfung** (Summe der Seitenstatuswerte / Seitenzahl). Der Workstream „Quelleninventar und PDF-Prüfung" rechnet über die 72 Seiten, die der Pilot veröffentlicht; über alle 323 Seiten wären es 29.3 %. Die Tabelle zeigt jedes Dokument vollständig:
 
 | Dokument      | Seiten | Fortschritt |
 | ------------- | ------ | ----------- |
 | DOC-BMA-SN044 | 72     | 36.1 %      |
-| DOC-IBA-SN045 | 247    | 27.1 %      |
+| DOC-IBA-SN045 | 247    | 27.4 %      |
 | DOC-KA-SN044  | 2      | 25 %        |
 | DOC-KA-SN045  | 2      | 25 %        |
 
-Offene Blocker: 6 · Nächste Aktion: Die Seiten 5 bis 25 von DOC-IBA-SN045 unabhaengig gegenlesen - nicht die vorhandenen Segmente pruefen, sondern aus dem Seitenbild neu ableiten und danach vergleichen. Erst wenn das ohne Abweichung gelingt, steigen die 21 Seiten von extracted auf validated und P0-06 bis P0-10 von in Vorbereitung auf bereit fuer Fachreview. Besonders genau zu pruefen sind die Betriebsartentabelle auf Seite 10, die Pinlegende auf Seite 8, die Programmier-SMS-Abbildung auf Seite 16 mit der Beispieltabelle auf Seite 17 sowie die neun LED-Zustaende auf Seite 18. Danach ist der deutsche Teil ab SN-045 fertig; der naechste Extraktionsbereich waere DOC-BMA-SN044 ausserhalb der Seiten 3 bis 18 oder der englische Teil ab SN-045. Parallel die Entscheidungsvorlage an THITRONIK geben und die unabhaengigen englischen Sprachreviews fuer EN-01 bis EN-03 einholen; den ersten dokumentierten manuellen QA-Batch fuer Tastatur, 200/400-Prozent-Zoom, Reflow, Forced Colors und Reduced Motion vorbereiten und nur tatsaechlich ausgefuehrte Pruefungen als bestanden markieren. Fuer die Karte weiterhin freigegebene Assets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern.
+Offene Blocker: 6 · Nächste Aktion: Die Gegenpruefung gegen die englische Fassung auf die restlichen 18 Seiten ausweiten. Die Methode hat sich bewaehrt und ist der bisherigen Selbstdurchsicht ueberlegen, weil sie nicht davon abhaengt, dass derselbe Agent seine eigene Arbeit nachliest: Die zehn Sprachfassungen teilen dasselbe Layout, eine abweichende Zeile faellt deshalb auf. Offen sind vor allem die Textseiten 5, 6, 7, 9, 13 bis 17 und 20 bis 22 sowie die noch nicht gegengelesenen Abschnitte 1.5.1, 1.5.3, 5.5.1, 5.5.2 und 5.6. Erst wenn eine Seite vollstaendig gegengelesen ist, steigt sie auf validated; erst wenn alle Seiten eines Pruefpakets dort stehen, wechselt es von in Vorbereitung auf bereit fuer Fachreview. Nebenbei zu klaeren: Zwischen Abschnitt 1.3 und Kapitel 3 verliert die englische Fassung gegenueber der deutschen eine interne Seitenzahl - die Fussleisten der englischen Seiten 33 bis 40 klaeren, wo (DSC-021). Parallel die Entscheidungsvorlage an THITRONIK geben, die englischen Sprachreviews EN-01 bis EN-03 einholen, den ersten dokumentierten manuellen QA-Batch vorbereiten und fuer die Karte freigegebene Assets sowie Entscheidungen zu URL, Supportdaten und Kerbengeometrie anfordern.
 
 <!-- PROGRESS:END -->
 
@@ -54,16 +54,17 @@ ab, wenn sie fehlt oder auf nicht vorhandene Seiten zeigt.
 
 | Bezugsmenge                         | Seiten |  Stand |
 | ----------------------------------- | -----: | -----: |
-| Pilotseiten (Metrik)                |     72 | 43,4 % |
-| alle Seiten der vier Quelldokumente |    323 | 29,1 % |
+| Pilotseiten (Metrik)                |     72 | 44,4 % |
+| alle Seiten der vier Quelldokumente |    323 | 29,3 % |
 
 ## Belastbar verifiziert
 
 - vier Original-PDFs mit Dateigröße, SHA-256, Seitenzahl und PDF-Metadaten inventarisiert;
 - 323 Seitenrecords angelegt und **alle 323 mindestens visuell geprüft**: 286 stehen auf
   `inspected`, die sechzehn deutschen Inhaltsseiten 3–18 von DOC-BMA-SN044 nach fünf
-  unabhängigen Segment-Gegenprüfungen auf `validated` und seit dem 2026-08-22 die
-  **einundzwanzig deutschen Seiten 5–25 von DOC-IBA-SN045** auf `extracted`. DOC-IBA-SN045 ist 247/247,
+  unabhängigen Segment-Gegenprüfungen auf `validated`, seit dem 2026-08-22 achtzehn
+  deutsche Seiten von DOC-IBA-SN045 auf `extracted` und drei weitere (8, 10 und 18) nach
+  der Gegenprüfung gegen die englische Fassung auf `validated`. DOC-IBA-SN045 ist 247/247,
   DOC-BMA-SN044 72/72 und beide Kurzanleitungen sind je 2/2 geprüft.
   **Alle zehn Sprachteile** (Deutsch, Englisch, Französisch, Tschechisch, Dänisch,
   Spanisch, Italienisch, Niederländisch, Polnisch und Schwedisch) von DOC-IBA-SN045 sind
@@ -241,6 +242,23 @@ ab, wenn sie fehlt oder auf nicht vorhandene Seiten zeigt.
   BLK-007 bleibt bestehen, verengt sich aber auf zwei Punkte: ob ein Pro-finder **ohne**
   WiPro III überhaupt eine Diebstahlmeldung sendet, und was gewinnt, wenn die automatische
   Kopplung und der ausdrückliche Schaltweg einander widersprechen;
+- **die Extraktion ist gegen einen unabhängigen Zeugen geprüft:** Statt die eigenen
+  Segmente nachzulesen, wurde die deutsche Extraktion gegen die **englische Fassung**
+  gehalten. Alle zehn Sprachfassungen teilen dasselbe Layout – eine abweichende Zahl oder
+  Zeile müsste dort auffallen, und die Prüfung hängt nicht davon ab, dass derselbe Agent
+  seine eigene Arbeit bestätigt. Geprüft wurden neun Seitenpaare bei 400 bis 500 dpi und
+  damit **sämtliche Zahlenwerte des Bestands**: Pinbelegung mit den zwölf Legendenzeilen,
+  die Betriebsartentabelle mit allen sechzehn Zeilen, die neun LED-Zustände, der
+  900-Meter-Radius, 11,2 V und 12,5 V, 12 V DC, 0–30 V, 500 mA, 13,5 V über fünf Minuten,
+  die Ersetzungsregel für den zweiten Ausgang, die zehn Minuten Wartezeit und die dreizehn
+  Zeilen der technischen Daten. **Ergebnis: kein einziger Extraktionsfehler.** Die einzige
+  Abweichung ist die bereits belegte Sprachdifferenz beim Normalstrom – Deutsch nennt
+  ca. 16–21 mA, Englisch approx. 21 mA (DSC-020), und dass alle zwölf übrigen Zeilen
+  übereinstimmen, macht daraus einen belegten Quellenunterschied statt eines Lesefehlers.
+  Drei Seiten, deren gesamter inhaltlicher Kern damit abgedeckt ist, stehen jetzt auf
+  `validated`; die übrigen achtzehn bleiben auf `extracted`, weil die Gegenprüfung dort nur
+  Teile der Seite erfasst hat. Nebenbei fielen zwei englische Layoutfehler und eine
+  abweichende interne Seitenzählung auf (DSC-018, DSC-021);
 - **die Generation ab SN-045 hat fünf eigene technische Prüfpakete:** `P0-06` Montage,
   Pinbelegung, Versorgung, Ausgänge und technische Daten (15 Segmente, 24 Entscheidungen);
   `P0-07` Betriebsarten, Pin-3-Schaltschwellen, Geofencing, GPS-Diagnose und

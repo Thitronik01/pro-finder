@@ -107,6 +107,11 @@ Status: `offen` · `in_klaerung` · `geloest` · `akzeptiert`
   fortführt. Das stützt die Lesart, dass die englische SN-045-Tabelle den Wert der älteren
   Generation unverändert übernommen hat und nie auf die Spanne 16–21 mA aktualisiert
   wurde. Siehe auch DSC-069.
+- **Unabhängig bestätigt 2026-08-22.** Bei der Gegenprüfung der deutschen Seite 25 gegen die
+  englische Seite 49 (450 dpi) war dies die **einzige** von dreizehn Zeilen der technischen
+  Daten, die abweicht: Deutsch „ca. 16–21 mA", Englisch „approx. 21mA". Alle zwölf übrigen
+  Zeilen stimmen zeichengenau überein. Das schließt einen Extraktionsfehler aus und macht
+  die Abweichung zu einem belegten Unterschied der Quelle.
 - **Schwere:** hoch (technische Spezifikation; relevant für Strombudget und Auslegung der
   Absicherung) · **Status:** offen – technischer Review
 
@@ -346,6 +351,22 @@ zusätzlich als DSC-085 geführt.
   „Strona 25 z 24".
 - **Folge:** Segment-Mapping darf nicht über die interne Seitenzahl erfolgen, sondern nur
   über Kapitelnummer und PDF-Seite. **Status:** offen
+- **Nachtrag 2026-08-22 – auch die englische Fassung zählt abweichend.** Bei der
+  Gegenprüfung fiel auf, dass die aufgedruckte interne Seitenzahl der englischen Fassung ab
+  Kapitel 3 **um eins unter** der deutschen liegt, obwohl beide Teile „von 23" beziehungsweise
+  „of 23" behaupten:
+
+  | Stelle                 | Deutsch         | Englisch      |
+  | ---------------------- | --------------- | ------------- |
+  | Abschnitt 1.2          | Seite 6 von 23  | Page 6 of 23  |
+  | Kapitel 3 (Status-LED) | Seite 16 von 23 | Page 15 of 23 |
+  | Kapitel 4 (Meldungen)  | Seite 17 von 23 | Page 16 of 23 |
+
+  Bei Abschnitt 1.2 stimmen beide noch überein; die Abweichung entsteht also zwischen
+  Abschnitt 1.3 und Kapitel 3. **Wo genau, ist noch nicht bestimmt** – dafür müssten die
+  englischen Seiten 33 bis 40 einzeln auf ihre Fußzeile geprüft werden. Der Befund gehört
+  zur selben Familie wie die vier bereits belegten Fassungen und ist hier vermerkt, damit er
+  nicht verloren geht.
 
 ### DSC-022 – Eingebettete Bildbeschriftung in keiner Sprachfassung lokalisiert (ab SN-045)
 
@@ -544,6 +565,12 @@ zusätzlich als DSC-085 geführt.
   („…with the text _fence off_" / „. Before you can use geofencing…").
 - **Status:** offen (redaktionell); die Klammerfehler betreffen technische Aussagen und
   gehören mit in den fachlichen Review.
+- **Nachtrag 2026-08-22 – zwei weitere Satzfehler auf der englischen Seite 42.** Der Verweis
+  im Abschnitt „Theft report" ist dreifach gesetzt und dabei teilweise in großer blauer
+  Schrift: „as described under _5.1 Controlling the alarm system_ **via SMS** _via SMS_."
+  Zusätzlich fehlt in der LED-Übersicht auf Seite 41 in der Zeile „Flashes yellow-green"
+  die schließende Klammer – die deutsche Fassung setzt an derselben Stelle „(Empfang)"
+  korrekt geschlossen.
 
 ### DSC-019 – Deutsche Lokalisierungsreste in der englischen Fassung (ab SN-045)
 

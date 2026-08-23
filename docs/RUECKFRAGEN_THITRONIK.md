@@ -739,6 +739,8 @@ die Arbeit aufhalten. Sie sind gegenüber den acht Punkten oben nachrangig, aber
 | Der manuelle Alarm hat zwei verschiedene Auslöser: Pin 3 am Pro-finder (Kapitel 1) gegen Panikalarm der WiPro III (Kapitel 4)                                                                                | DSC-052, S. 9 und 20            |
 | Der Anlernmodus der Alarmanlage lässt sich per SMS aus der Ferne starten – ohne Zeitbegrenzung und ohne Rückmeldung                                                                                          | DSC-052, S. 24                  |
 | Drei von neun Meldungen rufen zusätzlich die Masternummer an – ausgerechnet die Diebstahlmeldung nicht                                                                                                       | DSC-052, S. 20                  |
+| **Gegenprüfung:** Die englische interne Seitenzählung liegt ab Kapitel 3 um eins unter der deutschen, beide behaupten „von 23" – wo die Abweichung entsteht, ist offen                                       | DSC-021, S. 32/41/42            |
+| Englische Seite 42 setzt den Verweis im Abschnitt „Theft report" dreifach, teils in großer blauer Schrift                                                                                                    | DSC-018, S. 42                  |
 
 Die PDF-Seitenprüfung ist abgeschlossen. Neue Funde entstehen jetzt aus der
 Aufgabenextraktion, den noch offenen Synthese-Auswertungen und den fachlichen Reviews;
